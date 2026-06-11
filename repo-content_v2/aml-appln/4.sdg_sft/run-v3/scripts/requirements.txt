@@ -1,0 +1,24 @@
+# SFT data generation pipeline runtime dependencies.
+# Install with:
+#     ./env/bin/pip install -r requirements.txt
+
+# NeMo Data Designer (umbrella package; pulls in data-designer-config + data-designer-engine).
+# Pin >=0.5.4 — the litellm supply-chain incident (PyPI 2026-03-24) only affected 0.2.2/0.2.3,
+# both yanked. From 0.5.4 onward DD no longer depends on litellm.
+data-designer>=0.5.4,<0.6
+
+# Core data-handling stack
+pydantic>=2.5,<3
+pandas>=2.0,<3
+pyarrow>=14
+numpy>=1.26
+
+# Validators + dedup
+rapidfuzz>=3.6
+datasketch>=1.6                 # MinHash for RULE-9-DEDUP
+
+# Misc utilities
+tqdm>=4.66
+jinja2>=3.1
+psutil>=5.9                     # NUMA-aware affinity hints
+openai>=1.40                    # OpenAI-compatible client for the local NIM

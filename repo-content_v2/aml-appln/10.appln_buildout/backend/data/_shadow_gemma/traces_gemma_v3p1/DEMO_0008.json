@@ -1,0 +1,185 @@
+{
+  "case_id": "DEMO_0008",
+  "alert_id": "ALT_2421229",
+  "entity_id": "SYN_8d0a925b",
+  "started_at": "2026-05-27T15:21:11.691024+00:00",
+  "finished_at": "2026-05-27T15:21:38.902464+00:00",
+  "wall_clock_ms": 27211.5,
+  "transactions": [
+    {
+      "amount": 60676.68,
+      "channel": "wire",
+      "counterparty": "MPM Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 193534.59,
+      "channel": "wire",
+      "counterparty": "DYA Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 174520.9,
+      "channel": "wire",
+      "counterparty": "YA Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 216492.22,
+      "channel": "card",
+      "counterparty": "Linda Wilson",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 242910.38,
+      "channel": "ach",
+      "counterparty": "ZD Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 57895.15,
+      "channel": "ach",
+      "counterparty": "SJZCC Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_8d0a925b",
+    "entity_type": "business",
+    "expected_monthly_volume": 205197.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$205,197.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "ach": 0.333,
+      "card": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'card': 0.16666666666666666, 'ach': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=242910.38, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 6 with a tx_total_usd of 946030.0. The channel_mix includes 'wire': 3, indicating a reliance on electronic transfers. A velocity_24h_max of 242910.38 was observed, reflecting high single-day movement. There are unique_counterparties_7d of 1, though the overall period shows diverse counterparties. The vs_declared_volume_ratio of 4.61 suggests activity significantly exceeding the expected monthly volume. This pattern of rapid movement is consistent with pass-through behavior and warrants further review.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 946030.0,
+          "channel_mix": {
+            "wire": 3,
+            "card": 1,
+            "ach": 2
+          },
+          "velocity_24h_max": 242910.38,
+          "unique_counterparties_7d": 1,
+          "vs_declared_volume_ratio": 4.61
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 946030.00 vs expected monthly volume 205197.0",
+      "calculation": "1. Sum all transaction amounts: 60676.68 (transactions[0]) + 193534.59 (transactions[1]) + 174520.90 (transactions[2]) + 216492.22 (transactions[3]) + 242910.38 (transactions[4]) + 57895.15 (transactions[5]) = 946029.92. 2. Round to 946030.00. 3. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 205197.0.",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 946030.00 vs expected monthly volume 205197.0",
+        "calculation": "1. Sum all transaction amounts: 60676.68 (transactions[0]) + 193534.59 (transactions[1]) + 174520.90 (transactions[2]) + 216492.22 (transactions[3]) + 242910.38 (transactions[4]) + 57895.15 (transactions[5]) = 946029.92. 2. Round to 946030.00. 3. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 205197.0.",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 60676.68, \"channel\": \"wire\", \"counterparty\": \"MPM Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"outbound wire\"}, {\"amount\": 193534.59, \"channel\": \"wire\", \"counterparty\": \"DYA Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 174520.9, \"channel\": \"wire\", \"counterparty\": \"YA Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 216492.22, \"channel\": \"card\", \"counterparty\": \"Linda Wilson\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 242910.38, \"channel\": \"ach\", \"counterparty\": \"ZD Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 57895.15, \"channel\": \"ach\", \"counterparty\": \"SJZCC Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_8d0a925b\", \"entity_type\": \"business\", \"expected_monthly_volume\": 205197.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$205,197.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 946030.00 vs expected monthly volume 205197.0\", \"calculation\": \"1. Sum all transaction amounts: 60676.68 (transactions[0]) + 193534.59 (transactions[1]) + 174520.90 (transactions[2]) + 216492.22 (transactions[3]) + 242910.38 (transactions[4]) + 57895.15 (transactions[5]) = 946029.92. 2. Round to 946030.00. 3. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 205197.0.\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account exhibits a significant volume spike inconsistent with the entity's declared profile. Between 2026-02-12 and 2026-04-30, the entity conducted six transactions totaling $946,029.92, which is approximately 4.6 times the expected monthly volume of $205,197.00. Notable activity includes large outbound transfers to various LLCs, such as $242,910.38 via ACH to ZD Exports LLC on 2026-04-09 and $193,534.59 via wire to DYA Industries LLC on 2026-02-26. Given the entity's business purpose as a money services business, this rapid movement of funds and high volume ratio suggests potential layering or pass-through activity. This pattern warrants further review for potential money laundering. Final filing decision is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account exhibits a significant volume spike inconsistent with the entity's declared profile. Between 2026-02-12 and 2026-04-30, the entity conducted six transactions totaling $946,029.92, which is approximately 4.6 times the expected monthly volume of $205,197.00. Notable activity includes large outbound transfers to various LLCs, such as $242,910.38 via ACH to ZD Exports LLC on 2026-04-09 and $193,534.59 via wire to DYA Industries LLC on 2026-02-26. Given the entity's business purpose as a money services business, this rapid movement of funds and high volume ratio suggests potential layering or pass-through activity. This pattern warrants further review for potential money laundering. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account exhibits a significant volume spike inconsistent with the entity's declared profile. Between 2026-02-12 and 2026-04-30, the entity conducted six transactions totaling $946,029.92, which is approximately 4.6 times the expected monthly volume of $205,197.00. Notable activity includes large outbound transfers to various LLCs, such as $242,910.38 via ACH to ZD Exports LLC on 2026-04-09 and $193,534.59 via wire to DYA Industries LLC on 2026-02-26. Given the entity's business purpose as a money services business, this rapid movement of funds and high volume ratio suggests potential layering or pass-through activity. This pattern warrants further review for potential money laundering. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

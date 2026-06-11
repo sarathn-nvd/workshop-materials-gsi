@@ -1,0 +1,286 @@
+{
+  "case_id": "DEMO_0051",
+  "entity_id": "SYN_5bb738ab",
+  "started_at": "2026-05-23T13:14:12.458752+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 20971.2,
+  "sar_is_suspicious": null,
+  "sar_parse_error": "no JSON found in model output",
+  "sar_narrative": "",
+  "sar_output": null,
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 349.7, \"channel\": \"card\", \"counterparty\": \"David Wilson\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}, {\"amount\": 304.68, \"channel\": \"ach\", \"counterparty\": \"JXUYM Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 322.85, \"channel\": \"wire\", \"counterparty\": \"FSO Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 420.12, \"channel\": \"wire\", \"counterparty\": \"EK Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 452.39, \"channel\": \"wire\", \"counterparty\": \"RDE Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 115.2, \"channel\": \"card\", \"counterparty\": \"David Moore\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 132.37, \"channel\": \"ach\", \"counterparty\": \"CYB Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-21\", \"notes\": \"\"}, {\"amount\": 210.88, \"channel\": \"wire\", \"counterparty\": \"RIOIL Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 289.05, \"channel\": \"ach\", \"counterparty\": \"TV Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 438.47, \"channel\": \"ach\", \"counterparty\": \"GUXVL Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 482.78, \"channel\": \"ach\", \"counterparty\": \"PYZBS Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 399.58, \"channel\": \"ach\", \"counterparty\": \"SGQW Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 116.25, \"channel\": \"ach\", \"counterparty\": \"DZCIS Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 216.06, \"channel\": \"wire\", \"counterparty\": \"YYGV Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 198.15, \"channel\": \"card\", \"counterparty\": \"Michael Martin\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 125.08, \"channel\": \"card\", \"counterparty\": \"Karen Miller\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 405.47, \"channel\": \"wire\", \"counterparty\": \"ZY Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 190.86, \"channel\": \"ach\", \"counterparty\": \"LIC Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 319.79, \"channel\": \"ach\", \"counterparty\": \"ETCN Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 254.42, \"channel\": \"card\", \"counterparty\": \"David White\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 344.5, \"channel\": \"card\", \"counterparty\": \"Patricia Harris\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 296.5, \"channel\": \"cheque\", \"counterparty\": \"BO Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 301.12, \"channel\": \"card\", \"counterparty\": \"Sarah Moore\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 366.84, \"channel\": \"ach\", \"counterparty\": \"BXAY Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 314.73, \"channel\": \"wire\", \"counterparty\": \"TPDV Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_5bb738ab\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2016, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,016.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-AZ\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_5bb738ab, a retired individual with an expected monthly volume of $2,016, shows a total of 24 transactions. The total volume is $7,434.31, resulting in a vs_declared_volume_ratio of approximately 3.69. Activity is spread across multiple channels, with ACH being the most frequent (10), followed by wire (7) and card (7). The highest single transaction was $482.78, and the maximum velocity in 24 hours was 3. The account interacts with 19 unique counterparties over 7 days. Risk indicators are low, with a country_risk_max of 0.0 and no loop detected.\", \"metrics\": {\"tx_count\": 24, \"tx_total_usd\": 7434.31, \"channel_mix\": {\"wire\": 0.29166666666666663, \"ach\": 0.4166666666666667, \"card\": 0.29166666666666663, \"cheque\": 0.008333333333333333}, \"velocity_24h_max\": 3, \"velocity_24h_avg_30d\": 0.8, \"unique_counterparties_7d\": 19, \"amount_z_score_max\": 1.81, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.0}, \"evidence\": \"transactions[0..23]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $6,432.31, which is 3.2x the declared monthly volume of $2,016.00.\", \"calculation\": \"1. Sum all transaction amounts: 349.70 + 304.68 + 322.85 + 420.12 + 452.39 + 115.20 + 132.37 + 210.88 + 289.05 + 438.47 + 116.25 + 198.15 + 125.08 + 405.47 + 190.86 + 319.79 + 254.42 + 344.50 + 296.50 + 301.12 + 366.84 + 314.73 = 6,432.31\\n2. Compare to KYC profile: 6,432.31 / 2,016.00 = 3.19x\", \"evidence\": \"Transaction list (amount column); KYC profile (expected_monthly_volume)\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\", \"_decision_target\": \"not_suspicious\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle says _regulatory_frame \"benign\" and decision_target \"not_suspicious\". Also auxiliary_findings includes behavioral and numeric. Need to verify consistency. The numeric finding says total volume $6,432.31 vs declared $2,016 => 3.19x. But earlier behavioral says total volume $7,434.31. There's inconsistency. Also the numeric answer says sum of amounts = 6,432.31, but earlier behavioral says total volume $7,434.31. Let's compute sum of listed amounts: Let's sum quickly: I'll add:\n\n349.70\n+304.68 = 654.38\n+322.85 = 977.23\n+420.12 = 1,397.35\n+452.39 = 1,849.74\n+115.20 = 1,964.94\n+132.37 = 2,097.31\n+210.88 = 2,308.19\n+289.05 = 2,597.24\n+438.47 = 3,035.71\n+116.25 = 3,151.96\n+198.15 = 3,350.11\n+125.08 = 3,475.19\n+405.47 = 3,880.66\n+190.86 = 4,071.52\n+319.79 = 4,391.31\n+254.42 = 4,645.73\n+344.50 = 4,990.23\n+296.50 = 5,286.73\n+301.12 = 5,587.85\n+366.84 = 5,954.69\n+314.73 = 6,269.42\n\nWait my sum is 6,269.42, not 6,432.31. Let's double-check maybe I missed some entries. The list has 24 transactions? Let's count entries: I see 24? Let's count indices: Provided list includes many entries; let's count quickly: 1 349.7, 2 304.68, 3 322.85, 4 420.12, 5 452.39, 6 115.2, 7 132.37, 8 210.88, 9 289.05, 10 438.47, 11 116.25, 12 198.15, 13 125.08, 14 405.47, 15 190.86, 16 319.79, 17 254.42, 18 344.5, 19 296.5, 20 301.12, 21 366.84, 22 314.73, 23 399.58? Wait there is also 399.58 earlier? Actually I see 399.58 appears in transaction list: after 438.47? Let's scroll: The list includes \"amount\": 399.58, channel: \"ach\", counterparty: \"SGQW Ventures LLC\", date: \"2026-02-05\". I missed that in my sum. Also there is 482.78? Actually there is 482.78? I see \"amount\": 482.78, channel: \"ach\", counterparty: \"PYZBS Solutions LLC\", date: \"2026-02-12\". Also 438.47 etc. Let's recount properly.\n\nList of transactions (I'll enumerate with amounts):\n\n1 349.70\n2 304.68\n3 322.85\n4 420.12\n5 452.39\n6 115.20\n7 132.37\n8 210.88\n9 289",
+  "transactions": [
+    {
+      "amount": 349.7,
+      "channel": "card",
+      "counterparty": "David Wilson",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    },
+    {
+      "amount": 304.68,
+      "channel": "ach",
+      "counterparty": "JXUYM Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 322.85,
+      "channel": "wire",
+      "counterparty": "FSO Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 420.12,
+      "channel": "wire",
+      "counterparty": "EK Group LLC",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 452.39,
+      "channel": "wire",
+      "counterparty": "RDE Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 115.2,
+      "channel": "card",
+      "counterparty": "David Moore",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 132.37,
+      "channel": "ach",
+      "counterparty": "CYB Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-21",
+      "notes": ""
+    },
+    {
+      "amount": 210.88,
+      "channel": "wire",
+      "counterparty": "RIOIL Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 289.05,
+      "channel": "ach",
+      "counterparty": "TV Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 438.47,
+      "channel": "ach",
+      "counterparty": "GUXVL Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 482.78,
+      "channel": "ach",
+      "counterparty": "PYZBS Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 399.58,
+      "channel": "ach",
+      "counterparty": "SGQW Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 116.25,
+      "channel": "ach",
+      "counterparty": "DZCIS Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 216.06,
+      "channel": "wire",
+      "counterparty": "YYGV Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 198.15,
+      "channel": "card",
+      "counterparty": "Michael Martin",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 125.08,
+      "channel": "card",
+      "counterparty": "Karen Miller",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 405.47,
+      "channel": "wire",
+      "counterparty": "ZY Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 190.86,
+      "channel": "ach",
+      "counterparty": "LIC Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 319.79,
+      "channel": "ach",
+      "counterparty": "ETCN Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 254.42,
+      "channel": "card",
+      "counterparty": "David White",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 344.5,
+      "channel": "card",
+      "counterparty": "Patricia Harris",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 296.5,
+      "channel": "cheque",
+      "counterparty": "BO Group LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 301.12,
+      "channel": "card",
+      "counterparty": "Sarah Moore",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 366.84,
+      "channel": "ach",
+      "counterparty": "BXAY Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 314.73,
+      "channel": "wire",
+      "counterparty": "TPDV Group LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_5bb738ab",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2016.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,016.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-AZ"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.4,
+      "card": 0.28,
+      "wire": 0.28,
+      "cheque": 0.04
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_5bb738ab, a retired individual with an expected monthly volume of $2,016, shows a total of 24 transactions. The total volume is $7,434.31, resulting in a vs_declared_volume_ratio of approximately 3.69. Activity is spread across multiple channels, with ACH being the most frequent (10), followed by wire (7) and card (7). The highest single transaction was $482.78, and the maximum velocity in 24 hours was 3. The account interacts with 19 unique counterparties over 7 days. Risk indicators are low, with a country_risk_max of 0.0 and no loop detected.",
+        "metrics": {
+          "tx_count": 24,
+          "tx_total_usd": 7434.31,
+          "channel_mix": {
+            "wire": 0.29166666666666663,
+            "ach": 0.4166666666666667,
+            "card": 0.29166666666666663,
+            "cheque": 0.008333333333333333
+          },
+          "velocity_24h_max": 3,
+          "velocity_24h_avg_30d": 0.8,
+          "unique_counterparties_7d": 19,
+          "amount_z_score_max": 1.81,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.0
+        },
+        "evidence": "transactions[0..23]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $6,432.31, which is 3.2x the declared monthly volume of $2,016.00.",
+        "calculation": "1. Sum all transaction amounts: 349.70 + 304.68 + 322.85 + 420.12 + 452.39 + 115.20 + 132.37 + 210.88 + 289.05 + 438.47 + 116.25 + 198.15 + 125.08 + 405.47 + 190.86 + 319.79 + 254.42 + 344.50 + 296.50 + 301.12 + 366.84 + 314.73 = 6,432.31\n2. Compare to KYC profile: 6,432.31 / 2,016.00 = 3.19x",
+        "evidence": "Transaction list (amount column); KYC profile (expected_monthly_volume)"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "nvidia/nemotron-3-nano",
+    "endpoint": "http://localhost:8089/v1"
+  }
+}

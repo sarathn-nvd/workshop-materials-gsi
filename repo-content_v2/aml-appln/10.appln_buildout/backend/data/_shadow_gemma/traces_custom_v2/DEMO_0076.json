@@ -1,0 +1,316 @@
+{
+  "case_id": "DEMO_0076",
+  "entity_id": "SYN_5e45df1f",
+  "started_at": "2026-05-23T13:14:38.982417+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 3724.0,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The account of SYN_5e45df1f exhibited a pattern of structured transactions consistent with efforts to evade reporting requirements. Between 2026-04-21 and 2026-04-29, the entity received 26 inbound transactions from various counterparties, including AC128276, AC513160, AC720644, AC691807, AC795205, AC128418, and AC188025. These transactions were consistently below $10,000, such as $3,594.69 on 2026-04-21 and $5,867.50 on 2026-04-29. The total inbound volume of $120,126.00 matches the declared monthly volume, but the use of multiple small deposits from distinct senders appears to be a smurfing pattern. This activity warrants further review by a human investigator.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_5e45df1f exhibited a pattern of structured transactions consistent with efforts to evade reporting requirements. Between 2026-04-21 and 2026-04-29, the entity received 26 inbound transactions from various counterparties, including AC128276, AC513160, AC720644, AC691807, AC795205, AC128418, and AC188025. These transactions were consistently below $10,000, such as $3,594.69 on 2026-04-21 and $5,867.50 on 2026-04-29. The total inbound volume of $120,126.00 matches the declared monthly volume, but the use of multiple small deposits from distinct senders appears to be a smurfing pattern. This activity warrants further review by a human investigator."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3594.69, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC128276\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 3218.91, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC128276\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 7355.0, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC128276\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 3743.5, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC128276\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8134.42, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC513160\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6857.37, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC513160\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 2916.15, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC513160\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 9716.8, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC513160\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 2205.4, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC720644\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 7418.1, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC720644\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5172.84, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC720644\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 2607.9, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC720644\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 7017.31, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC691807\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8179.07, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC691807\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6802.69, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC691807\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 9869.77, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC691807\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4777.28, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC795205\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4964.2, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC795205\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4729.51, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC795205\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8577.83, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC795205\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 9685.34, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC128418\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8628.83, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC128418\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5483.46, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC128418\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 9722.82, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC128418\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8464.79, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC188025\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5867.5, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC188025\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"smurfing fan-in deposit\"}], \"kyc_profile\": {\"entity_id\": \"SYN_5e45df1f\", \"entity_type\": \"business\", \"expected_monthly_volume\": 120126, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$120,126.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/plett\", \"url\": \"\", \"text\": \"UNITED STATES OF AMERICA\\nDEPARTMENT OF THE TREASURY\\nFINANCIAL CRIMES ENFORCEMENT NETWORK\\nIN THE MATTER OF No. 2001 - 02\\nANGELINA PLETT\\nASSESSMENT OF CIVIL MONEY PENALTIES\\nAGAINST ANGELINA PLETT\\nI. INTRODUCTION\\nThe Secretary of the United States Department of the Treasury has delegated to\\nthe Director of the Financial Crimes Enforcement Network (“FinCEN”) the authority to\\ndetermine whether a financial institution has violated the Bank Secrecy Act, 31 U.S.C.\\n§§5311 et seq. and 31 CFR Part 103 thereunder (“BSA”), and what, if any, sanction is\\nappropriate.\\nII. JURISDICTION\\nAngelina Plett (“Plett”) was, at all relevant times, an owner and the manager of\\nCash For Checks Inc. (“Cash For Checks”). Cash For Checks was, at all relevant times, a\\nlicensed check casher located in Oklahoma City, Oklahoma and was a “financial\\ninstitution” within the meaning of 31 U.S.C. §5312(a)(2) and 31 CFR §103.11(n).1\\nIII. FINCEN’S DETERMINATIONS\\nA. Structuring\\nFinCEN has determined that between July 11, 1995, and April 26, 1996, Plett\\nwillfully structured or willfully assisted in structuring check cashing transactions for\\nJoseph A. Sivigliano (“Sivigliano”) through a domestic financial institution in violation\\nof 31 U.S.C. §5324(a)(3) and 31 CFR §103.63(c). During the relevant time period,\\nSivigliano cashed 136 checks totaling more than $1.17 million at Cash For Checks. On\\neach of 43 days, Sivigliano cashed a series of checks that individually totaled less than\\n$10,000, but that together exceeded $10,0\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"ux and Mahum constitute loans. III. Conclusions of La/iv A person is required to file a currency transaction report when said person or his agent, “knowingly transports, is *1228 about to transport, or has transported, monetary instruments of more than $10,000 at one time from a place in the United States to or through a place outside the United States.” 31 U.S.C. § 5316 (a)(1)(A). This reporting requirement applies to [e]ach person who physically transports ... or causes to be physically transported ... currency or other monetary instruments in an aggregate amount exceeding $10,000 at one time from the United States to any place outside the United States .... A person is deemed to have caused such transportation ... when he aids, abets, counsels, commands, procures, or requests it to be done by a financial institution or another person. 31 C.F.R. § 103.23 (2005). In fleshing out what it means for a person to transport currency “at one time,” 31 C.F.R. § 103.11 (2005) sets forth the following criteria: (1) That person either alone, in conjunction with or on behalf of others; (2) Transports, mails, ships or receives in any manner; is about to transport, mail or ship in any manner; or causes the transportation, mailing, shipment or receipt in any manner of; (3) Monetary instruments; (4) Into the United States or out of the United States; (5) Totaling more than $10,000; (6) (i) On one calendar day or (ii) if for the purpose of evading the reporting requirements of section 103.23\"}, {\"source\": \"OFAC\", \"section\": \"pdfs/sdnew06\", \"url\": \"\", \"text\": \"olivar La Victoria, Jose Felix\\nRivas, Estado de Aragua, Venezuela; DOB 9 Apr\\n1949; POB Frontino, Antioquia, Colombia;\\nCedula No. 171493523-4 (Ecuador); alt. Cedula\\nNo. 19104578 (Colombia); Electoral Registry No.\\n22942118 (Venezuela); Passport PO16104\\n(Colombia) (individual) [SDNTK]\\nGONZALEZ, Ruben (a.k.a. ALVIS PATINO,\\nGentil; a.k.a. LOPEZ, Angel Leopoldo; a.k.a.\\nMARTINEZ VEGA, Juan Jose; a.k.a. PATINO\\nORTIZ, Alvis; a.k.a. \\\"CHIGUIRO\\\"); DOB 4 Jun\\n1961; POB El Doncello, Caqueta, Colombia;\\nCedula No. 17669391 (Colombia); alt. Cedula\\nNo. 12059198 (Venezuela) (individual) [SDNTK]\\nGRANDA ESCOBAR, Rodrigo (a.k.a. \\\"CAMPOS,\\nArturo\\\"; a.k.a. \\\"GALLOPINTO\\\"; a.k.a.\\n\\\"GONZALEZ, Ricardo\\\"), Avenida Victoria No. 36,\\nUrbanizacion Bolivar La Victoria, Jose Felix\\nRivas, Estado de Aragua, Venezuela; DOB 9 Apr\\n1949; POB Frontino, Antioquia, Colombia;\\nCedula No. 171493523-4 (Ecuador); alt. Cedula\\nNo. 19104578 (Colombia); Electoral Registry No.\\n22942118 (Venezuela); Passport PO16104\\n(Colombia) (individual) [SDNTK]\\nGUTIERREZ, Jhon (a.k.a. GARCIA MOLINA,\\nGener; a.k.a. \\\"HERNANDEZ, John\\\"; a.k.a.\\n\\\"JHON 40\\\"; a.k.a. \\\"JOHN 40\\\"; a.k.a. \\\"JOHNNY\\n40\\\"); DOB 23 Aug 1963; POB San Martin, Meta,\\nColombia; Cedula No. 17353242 (Colombia)\\n(individual) [SDNTK]\\nHERNANDEZ, John (a.k.a. GARCIA MOLINA,\\nGener; a.k.a. \\\"GUTIERREZ, Jhon\\\"; a.k.a. \\\"JHON\\n40\\\"; a.k.a. \\\"JOHN 40\\\"; a.k.a. \\\"JOHNNY 40\\\");\\nDOB 23 Aug 1963; POB San Martin, Meta,\\nColombia; Cedula No. 17353242 (Colombia)\\n(individual) [SDNTK]\\nIVAN RIOS (a.k.a. JUVENAL VELANDIA, \"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-SMURFING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all cash and ACH transactions for the entity in the prior 90 days.\\n2. Identify fan-in patterns: ≥3 distinct sender accounts converging on a single beneficiary with sub-$10,000 amounts.\\n3. Map sender-account graph; flag clusters that share counterparty names or branches.\\n4. Cross-reference with KYC declared volume.\\n5. Escalate to SAR review if fan-in pattern exceeds ≥4 unique senders.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5324?\", \"answer\": \"Yes, the conduct described falls within 5324 as the entity engaged in a pattern of structuring transactions to evade reporting requirements by using multiple small deposits and transfers across various accounts.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5324 prohibits structuring transactions to evade the reporting requirements of 31 U.S.C. § 5313. The fact pattern describes 26 transactions involving multiple inbound deposits from various counterparties (AC128276, AC513160, AC720644, AC691807, AC795205) in amounts consistently below typical reporting thresholds (e.g., $3,218.91, $3,594.69), which is indicative of smurfing to avoid detection.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Sum the inbound transactions from distinct sender accounts and compare to KYC declared monthly volume.\", \"answer\": \"The total inbound volume from distinct senders is $120,126.00, which matches the declared monthly volume.\", \"calculation\": \"1. Identify distinct sender accounts: AC128276, AC513160, AC720644, AC691807, AC795205, AC128418, AC188025.\\n2. Sum all amounts from these senders:\\n 3594.69 + 3218.91 + 7355.00 + 3743.50 + 8134.42 + 6857.37 + 2916.15 + 9716.80 + 2205.40 + 7418.10 + 5172.84 + 2607.90 + 7017.31 + 8179.07 + 6802.69 + 9869.77 + 4777.28 + 4964.20 + 4729.51 + 8577.83 + 9685.34 + 8628.83 + 5483.46 + 9722.82 + 8464.79 + 5867.50 = 120,126.00\", \"evidence\": \"Transaction list rows for each distinct counterparty (sender)\"}], \"citation\": [{\"question\": \"What does pdfs/plett say about the activity described?\", \"answer\": \"FinCEN has determined that between July 11, 1995, and April 26, 1996, Plett willfully structured or willfully assisted in structuring check cashing transactions for Joseph A. Sivigliano through a domestic financial institution in violation of 31 U.S.C. §5324(a)(3) and 31 CFR §103.63(c).\", \"evidence_span\": \"FinCEN has determined that between July 11, 1995, and April 26, 1996, Plett willfully structured or willfully assisted in structuring check cashing transactions for Joseph A. Sivigliano\"}]}, \"_regulatory_frame\": \"ctr_structuring\", \"_typology_inferred\": \"smurfing\"}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account of SYN_5e45df1f exhibited a pattern of structured transactions consistent with efforts to evade reporting requirements. Between 2026-04-21 and 2026-04-29, the entity received 26 inbound transactions from various counterparties, including AC128276, AC513160, AC720644, AC691807, AC795205, AC128418, and AC188025. These transactions were consistently below $10,000, such as $3,594.69 on 2026-04-21 and $5,867.50 on 2026-04-29. The total inbound volume of $120,126.00 matches the declared monthly volume, but the use of multiple small deposits from distinct senders appears to be a smurfing pattern. This activity warrants further review by a human investigator.\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred"
+    ],
+    "v1_sar_is_suspicious": true,
+    "agreement_with_v1": true,
+    "v1_decision_target": null
+  },
+  "transactions": [
+    {
+      "amount": 3594.69,
+      "channel": "cash",
+      "counterparty": "Inbound from AC128276",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 3218.91,
+      "channel": "cash",
+      "counterparty": "Inbound from AC128276",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 7355.0,
+      "channel": "cash",
+      "counterparty": "Inbound from AC128276",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 3743.5,
+      "channel": "ach",
+      "counterparty": "Inbound from AC128276",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8134.42,
+      "channel": "cash",
+      "counterparty": "Inbound from AC513160",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6857.37,
+      "channel": "ach",
+      "counterparty": "Inbound from AC513160",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 2916.15,
+      "channel": "ach",
+      "counterparty": "Inbound from AC513160",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 9716.8,
+      "channel": "cash",
+      "counterparty": "Inbound from AC513160",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 2205.4,
+      "channel": "cash",
+      "counterparty": "Inbound from AC720644",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 7418.1,
+      "channel": "ach",
+      "counterparty": "Inbound from AC720644",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5172.84,
+      "channel": "ach",
+      "counterparty": "Inbound from AC720644",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 2607.9,
+      "channel": "ach",
+      "counterparty": "Inbound from AC720644",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 7017.31,
+      "channel": "cash",
+      "counterparty": "Inbound from AC691807",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8179.07,
+      "channel": "ach",
+      "counterparty": "Inbound from AC691807",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6802.69,
+      "channel": "cash",
+      "counterparty": "Inbound from AC691807",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 9869.77,
+      "channel": "ach",
+      "counterparty": "Inbound from AC691807",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4777.28,
+      "channel": "cash",
+      "counterparty": "Inbound from AC795205",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4964.2,
+      "channel": "cash",
+      "counterparty": "Inbound from AC795205",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4729.51,
+      "channel": "ach",
+      "counterparty": "Inbound from AC795205",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8577.83,
+      "channel": "cash",
+      "counterparty": "Inbound from AC795205",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 9685.34,
+      "channel": "cash",
+      "counterparty": "Inbound from AC128418",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8628.83,
+      "channel": "ach",
+      "counterparty": "Inbound from AC128418",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5483.46,
+      "channel": "ach",
+      "counterparty": "Inbound from AC128418",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 9722.82,
+      "channel": "cash",
+      "counterparty": "Inbound from AC128418",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8464.79,
+      "channel": "cash",
+      "counterparty": "Inbound from AC188025",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5867.5,
+      "channel": "cash",
+      "counterparty": "Inbound from AC188025",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "smurfing fan-in deposit"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_5e45df1f",
+    "entity_type": "business",
+    "expected_monthly_volume": 120126.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$120,126.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/plett",
+      "url": "",
+      "text": "UNITED STATES OF AMERICA\nDEPARTMENT OF THE TREASURY\nFINANCIAL CRIMES ENFORCEMENT NETWORK\nIN THE MATTER OF No. 2001 - 02\nANGELINA PLETT\nASSESSMENT OF CIVIL MONEY PENALTIES\nAGAINST ANGELINA PLETT\nI. INTRODUCTION\nThe Secretary of the United States Department of the Treasury has delegated to\nthe Director of the Financial Crimes Enforcement Network (“FinCEN”) the authority to\ndetermine whether a financial institution has violated the Bank Secrecy Act, 31 U.S.C.\n§§5311 et seq. and 31 CFR Part 103 thereunder (“BSA”), and what, if any, sanction is\nappropriate.\nII. JURISDICTION\nAngelina Plett (“Plett”) was, at all relevant times, an owner and the manager of\nCash For Checks Inc. (“Cash For Checks”). Cash For Checks was, at all relevant times, a\nlicensed check casher located in Oklahoma City, Oklahoma and was a “financial\ninstitution” within the meaning of 31 U.S.C. §5312(a)(2) and 31 CFR §103.11(n).1\nIII. FINCEN’S DETERMINATIONS\nA. Structuring\nFinCEN has determined that between July 11, 1995, and April 26, 1996, Plett\nwillfully structured or willfully assisted in structuring check cashing transactions for\nJoseph A. Sivigliano (“Sivigliano”) through a domestic financial institution in violation\nof 31 U.S.C. §5324(a)(3) and 31 CFR §103.63(c). During the relevant time period,\nSivigliano cashed 136 checks totaling more than $1.17 million at Cash For Checks. On\neach of 43 days, Sivigliano cashed a series of checks that individually totaled less than\n$10,000, but that together exceeded $10,0"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "ux and Mahum constitute loans. III. Conclusions of La/iv A person is required to file a currency transaction report when said person or his agent, “knowingly transports, is *1228 about to transport, or has transported, monetary instruments of more than $10,000 at one time from a place in the United States to or through a place outside the United States.” 31 U.S.C. § 5316 (a)(1)(A). This reporting requirement applies to [e]ach person who physically transports ... or causes to be physically transported ... currency or other monetary instruments in an aggregate amount exceeding $10,000 at one time from the United States to any place outside the United States .... A person is deemed to have caused such transportation ... when he aids, abets, counsels, commands, procures, or requests it to be done by a financial institution or another person. 31 C.F.R. § 103.23 (2005). In fleshing out what it means for a person to transport currency “at one time,” 31 C.F.R. § 103.11 (2005) sets forth the following criteria: (1) That person either alone, in conjunction with or on behalf of others; (2) Transports, mails, ships or receives in any manner; is about to transport, mail or ship in any manner; or causes the transportation, mailing, shipment or receipt in any manner of; (3) Monetary instruments; (4) Into the United States or out of the United States; (5) Totaling more than $10,000; (6) (i) On one calendar day or (ii) if for the purpose of evading the reporting requirements of section 103.23"
+    },
+    {
+      "source": "OFAC",
+      "section": "pdfs/sdnew06",
+      "url": "",
+      "text": "olivar La Victoria, Jose Felix\nRivas, Estado de Aragua, Venezuela; DOB 9 Apr\n1949; POB Frontino, Antioquia, Colombia;\nCedula No. 171493523-4 (Ecuador); alt. Cedula\nNo. 19104578 (Colombia); Electoral Registry No.\n22942118 (Venezuela); Passport PO16104\n(Colombia) (individual) [SDNTK]\nGONZALEZ, Ruben (a.k.a. ALVIS PATINO,\nGentil; a.k.a. LOPEZ, Angel Leopoldo; a.k.a.\nMARTINEZ VEGA, Juan Jose; a.k.a. PATINO\nORTIZ, Alvis; a.k.a. \"CHIGUIRO\"); DOB 4 Jun\n1961; POB El Doncello, Caqueta, Colombia;\nCedula No. 17669391 (Colombia); alt. Cedula\nNo. 12059198 (Venezuela) (individual) [SDNTK]\nGRANDA ESCOBAR, Rodrigo (a.k.a. \"CAMPOS,\nArturo\"; a.k.a. \"GALLOPINTO\"; a.k.a.\n\"GONZALEZ, Ricardo\"), Avenida Victoria No. 36,\nUrbanizacion Bolivar La Victoria, Jose Felix\nRivas, Estado de Aragua, Venezuela; DOB 9 Apr\n1949; POB Frontino, Antioquia, Colombia;\nCedula No. 171493523-4 (Ecuador); alt. Cedula\nNo. 19104578 (Colombia); Electoral Registry No.\n22942118 (Venezuela); Passport PO16104\n(Colombia) (individual) [SDNTK]\nGUTIERREZ, Jhon (a.k.a. GARCIA MOLINA,\nGener; a.k.a. \"HERNANDEZ, John\"; a.k.a.\n\"JHON 40\"; a.k.a. \"JOHN 40\"; a.k.a. \"JOHNNY\n40\"); DOB 23 Aug 1963; POB San Martin, Meta,\nColombia; Cedula No. 17353242 (Colombia)\n(individual) [SDNTK]\nHERNANDEZ, John (a.k.a. GARCIA MOLINA,\nGener; a.k.a. \"GUTIERREZ, Jhon\"; a.k.a. \"JHON\n40\"; a.k.a. \"JOHN 40\"; a.k.a. \"JOHNNY 40\");\nDOB 23 Aug 1963; POB San Martin, Meta,\nColombia; Cedula No. 17353242 (Colombia)\n(individual) [SDNTK]\nIVAN RIOS (a.k.a. JUVENAL VELANDIA, "
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-SMURFING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all cash and ACH transactions for the entity in the prior 90 days.\n2. Identify fan-in patterns: ≥3 distinct sender accounts converging on a single beneficiary with sub-$10,000 amounts.\n3. Map sender-account graph; flag clusters that share counterparty names or branches.\n4. Cross-reference with KYC declared volume.\n5. Escalate to SAR review if fan-in pattern exceeds ≥4 unique senders."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.577,
+      "ach": 0.423
+    },
+    "cash_present": true,
+    "regulatory_frame": "ctr_structuring",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "smurfing"
+  },
+  "typology_hypothesis": "smurfing",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5324?",
+        "answer": "Yes, the conduct described falls within 5324 as the entity engaged in a pattern of structuring transactions to evade reporting requirements by using multiple small deposits and transfers across various accounts.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5324 prohibits structuring transactions to evade the reporting requirements of 31 U.S.C. § 5313. The fact pattern describes 26 transactions involving multiple inbound deposits from various counterparties (AC128276, AC513160, AC720644, AC691807, AC795205) in amounts consistently below typical reporting thresholds (e.g., $3,218.91, $3,594.69), which is indicative of smurfing to avoid detection."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Sum the inbound transactions from distinct sender accounts and compare to KYC declared monthly volume.",
+        "answer": "The total inbound volume from distinct senders is $120,126.00, which matches the declared monthly volume.",
+        "calculation": "1. Identify distinct sender accounts: AC128276, AC513160, AC720644, AC691807, AC795205, AC128418, AC188025.\n2. Sum all amounts from these senders:\n 3594.69 + 3218.91 + 7355.00 + 3743.50 + 8134.42 + 6857.37 + 2916.15 + 9716.80 + 2205.40 + 7418.10 + 5172.84 + 2607.90 + 7017.31 + 8179.07 + 6802.69 + 9869.77 + 4777.28 + 4964.20 + 4729.51 + 8577.83 + 9685.34 + 8628.83 + 5483.46 + 9722.82 + 8464.79 + 5867.50 = 120,126.00",
+        "evidence": "Transaction list rows for each distinct counterparty (sender)"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/plett say about the activity described?",
+        "answer": "FinCEN has determined that between July 11, 1995, and April 26, 1996, Plett willfully structured or willfully assisted in structuring check cashing transactions for Joseph A. Sivigliano through a domestic financial institution in violation of 31 U.S.C. §5324(a)(3) and 31 CFR §103.63(c).",
+        "evidence_span": "FinCEN has determined that between July 11, 1995, and April 26, 1996, Plett willfully structured or willfully assisted in structuring check cashing transactions for Joseph A. Sivigliano"
+      }
+    ]
+  }
+}

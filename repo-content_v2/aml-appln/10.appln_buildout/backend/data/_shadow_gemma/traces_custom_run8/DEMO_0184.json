@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0184",
+  "alert_id": "ALT_2443292",
+  "entity_id": "SYN_9218a845",
+  "started_at": "2026-05-23T11:22:57.896070+00:00",
+  "finished_at": "2026-05-23T11:23:01.220814+00:00",
+  "wall_clock_ms": 3324.8,
+  "transactions": [
+    {
+      "amount": 9442.17,
+      "channel": "cash",
+      "counterparty": "Cash deposit, ORD Branch #82",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "one-time sub-CTR cash receipt (benign: customer paid in cash)"
+    },
+    {
+      "amount": 106761.9,
+      "channel": "card",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 151687.97,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 254632.62,
+      "channel": "ach",
+      "counterparty": "OUJXN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 77978.28,
+      "channel": "cash",
+      "counterparty": "Elizabeth Davis",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 187189.37,
+      "channel": "card",
+      "counterparty": "Christopher Moore",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 77235.13,
+      "channel": "cash",
+      "counterparty": "Patricia Lewis",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_9218a845",
+    "entity_type": "business",
+    "expected_monthly_volume": 271233.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.429,
+      "card": 0.429,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The entity SYN_9218a845 exhibited a high volume of activity in April 2026, including a cash deposit of $9,442.17 and an ACH transfer of $254,632.62. Activity is spread across multiple channels including card (e.g., $106,761.90 to Maria Jackson), ACH ($254,632.62 to OUJXN Enterprises LLC), and cash (e.g., $77,235.13 to Patricia Lewis). The total transaction count is 7 with a total volume of $722,907.44, which is significantly higher than the declared monthly volume of $271,233.00. The velocity and counterparty diversity suggest a pattern of high-value inflows.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 722907.44,
+        "channel_mix": {
+          "card": 0.42857142857142855,
+          "ach": 0.14285714285714285,
+          "cash": 0.42857142857142855
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23333333333333334,
+        "unique_counterparties_7d": 6,
+        "amount_z_score_max": 1.96,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.6652
+      },
+      "evidence": "transactions[0..6]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "The total transaction volume is $824,907.44, which is approximately 3.04 times the declared monthly volume of $271,233.00.",
+      "calculation": "1. Identify all transaction amounts: $94,421.17, $106,761.90, $151,687.97, $254,632.62, $77,978.28, $187,189.37, $77,235.13.\n2. Sum the amounts: 94,421.17 + 106,761.90 + 151,687.97 + 254,632.62 + 77,978.28 + 187,189.37 + 77,235.13 = 824,907.44\n3. Compare to KYC declared volume: 824,907.44 / 271,233.00 = 3.041 (approximately 3.04x)",
+      "evidence": "Transaction amounts listed in the 'amount' column for dates 2026-04-20, 2026-03-11, 2026-02-10, 2026-04-06, 2026-02-11, 2026-04-24, and 2026-03-28; KYC declared monthly volume of 271233.0"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant policy excerpt is available to provide a citation.",
+      "evidence_span": "no policy excerpts were retrieved"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The request cannot be fulfilled as no statute was provided in the input.",
+      "label": "neutral",
+      "reasoning": "The input explicitly states 'No statute mapped for this typology' and provides no statute text to analyze."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The request cannot be fulfilled as no statute was provided in the input.",
+        "label": "neutral",
+        "reasoning": "The input explicitly states 'No statute mapped for this typology' and provides no statute text to analyze."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_9218a845 exhibited a high volume of activity in April 2026, including a cash deposit of $9,442.17 and an ACH transfer of $254,632.62. Activity is spread across multiple channels including card (e.g., $106,761.90 to Maria Jackson), ACH ($254,632.62 to OUJXN Enterprises LLC), and cash (e.g., $77,235.13 to Patricia Lewis). The total transaction count is 7 with a total volume of $722,907.44, which is significantly higher than the declared monthly volume of $271,233.00. The velocity and counterparty diversity suggest a pattern of high-value inflows.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 722907.44,
+          "channel_mix": {
+            "card": 0.42857142857142855,
+            "ach": 0.14285714285714285,
+            "cash": 0.42857142857142855
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23333333333333334,
+          "unique_counterparties_7d": 6,
+          "amount_z_score_max": 1.96,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.6652
+        },
+        "evidence": "transactions[0..6]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $824,907.44, which is approximately 3.04 times the declared monthly volume of $271,233.00.",
+        "calculation": "1. Identify all transaction amounts: $94,421.17, $106,761.90, $151,687.97, $254,632.62, $77,978.28, $187,189.37, $77,235.13.\n2. Sum the amounts: 94,421.17 + 106,761.90 + 151,687.97 + 254,632.62 + 77,978.28 + 187,189.37 + 77,235.13 = 824,907.44\n3. Compare to KYC declared volume: 824,907.44 / 271,233.00 = 3.041 (approximately 3.04x)",
+        "evidence": "Transaction amounts listed in the 'amount' column for dates 2026-04-20, 2026-03-11, 2026-02-10, 2026-04-06, 2026-02-11, 2026-04-24, and 2026-03-28; KYC declared monthly volume of 271233.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant policy excerpt is available to provide a citation.",
+        "evidence_span": "no policy excerpts were retrieved"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 9442.17, \"channel\": \"cash\", \"counterparty\": \"Cash deposit, ORD Branch #82\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"one-time sub-CTR cash receipt (benign: customer paid in cash)\"}, {\"amount\": 106761.9, \"channel\": \"card\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 151687.97, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 254632.62, \"channel\": \"ach\", \"counterparty\": \"OUJXN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 77978.28, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Davis\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 187189.37, \"channel\": \"card\", \"counterparty\": \"Christopher Moore\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 77235.13, \"channel\": \"cash\", \"counterparty\": \"Patricia Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_9218a845\", \"entity_type\": \"business\", \"expected_monthly_volume\": 271233, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The request cannot be fulfilled as no statute was provided in the input.\", \"label\": \"neutral\", \"reasoning\": \"The input explicitly states 'No statute mapped for this typology' and provides no statute text to analyze.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_9218a845 exhibited a high volume of activity in April 2026, including a cash deposit of $9,442.17 and an ACH transfer of $254,632.62. Activity is spread across multiple channels including card (e.g., $106,761.90 to Maria Jackson), ACH ($254,632.62 to OUJXN Enterprises LLC), and cash (e.g., $77,235.13 to Patricia Lewis). The total transaction count is 7 with a total volume of $722,907.44, which is significantly higher than the declared monthly volume of $271,233.00. The velocity and counterparty diversity suggest a pattern of high-value inflows.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 722907.44, \"channel_mix\": {\"card\": 0.42857142857142855, \"ach\": 0.14285714285714285, \"cash\": 0.42857142857142855}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23333333333333334, \"unique_counterparties_7d\": 6, \"amount_z_score_max\": 1.96, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.6652}, \"evidence\": \"transactions[0..6]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $824,907.44, which is approximately 3.04 times the declared monthly volume of $271,233.00.\", \"calculation\": \"1. Identify all transaction amounts: $94,421.17, $106,761.90, $151,687.97, $254,632.62, $77,978.28, $187,189.37, $77,235.13.\\n2. Sum the amounts: 94,421.17 + 106,761.90 + 151,687.97 + 254,632.62 + 77,978.28 + 187,189.37 + 77,235.13 = 824,907.44\\n3. Compare to KYC declared volume: 824,907.44 / 271,233.00 = 3.041 (approximately 3.04x)\", \"evidence\": \"Transaction amounts listed in the 'amount' column for dates 2026-04-20, 2026-03-11, 2026-02-10, 2026-04-06, 2026-02-11, 2026-04-24, and 2026-03-28; KYC declared monthly volume of 271233.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant policy excerpt is available to provide a citation.\", \"evidence_span\": \"no policy excerpts were retrieved\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

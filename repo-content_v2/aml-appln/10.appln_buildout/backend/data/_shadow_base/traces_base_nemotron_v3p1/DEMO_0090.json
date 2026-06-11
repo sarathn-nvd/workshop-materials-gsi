@@ -1,0 +1,167 @@
+{
+  "case_id": "DEMO_0090",
+  "alert_id": "ALT_2466731",
+  "entity_id": "SYN_55f27e71",
+  "started_at": "2026-05-27T15:14:58.723169+00:00",
+  "finished_at": "2026-05-27T15:15:32.730789+00:00",
+  "wall_clock_ms": 34007.6,
+  "transactions": [
+    {
+      "amount": 45035.88,
+      "channel": "wire",
+      "counterparty": "BWEE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 45035.88,
+      "channel": "wire",
+      "counterparty": "BWEE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 184360.87,
+      "channel": "wire",
+      "counterparty": "FN Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 79680.55,
+      "channel": "wire",
+      "counterparty": "XEYAU Services LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 107846.64,
+      "channel": "ach",
+      "counterparty": "XIVOD Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 69174.59,
+      "channel": "card",
+      "counterparty": "Mary Jackson",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 181577.22,
+      "channel": "card",
+      "counterparty": "Jennifer Moore",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_55f27e71",
+    "entity_type": "business",
+    "expected_monthly_volume": 167830.0,
+    "business_purpose": "Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$167,830.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "Nevada-US"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.571,
+      "card": 0.286,
+      "ach": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5714285714285714, 'ach': 0.14285714285714285, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe must echo the user's question verbatim as question value.\n\nSummary: 4-8 sentences prose. Every quantitative claim in summary must be a verbatim copy of a value from the precomputed metrics block. The summary must mention, as their exact stored values, AT LEAST these six metric keys when present: tx_count, tx_total_usd, channel_mix (one entry suffices), velocity_24h_max, unique_counterparties_7d, vs_declared_volume_ratio."
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nWe must echo the user's question verbatim as question field.\n\nAnswer must be a numeric finding, with a contiguous 3-word phrase that names the specific quantity computed, and the numeric result. So answer must contain something like \"total transaction volume $X\" but must be exactly a contiguous 3-word phrase that names the specific quantity computed AND the numeric result. The phrase must be contiguous 3 words that inclu"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute mapped",
+      "label": "neutral",
+      "reasoning": "Statute: § 0. No statute identifier provided; thus no applicability determination can be made. No statute mapped"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute mapped",
+        "label": "neutral",
+        "reasoning": "Statute: § 0. No statute identifier provided; thus no applicability determination can be made. No statute mapped"
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 45035.88, \"channel\": \"wire\", \"counterparty\": \"BWEE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"outbound wire\"}, {\"amount\": 45035.88, \"channel\": \"wire\", \"counterparty\": \"BWEE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 184360.87, \"channel\": \"wire\", \"counterparty\": \"FN Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 79680.55, \"channel\": \"wire\", \"counterparty\": \"XEYAU Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 107846.64, \"channel\": \"ach\", \"counterparty\": \"XIVOD Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 69174.59, \"channel\": \"card\", \"counterparty\": \"Mary Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 181577.22, \"channel\": \"card\", \"counterparty\": \"Jennifer Moore\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_55f27e71\", \"entity_type\": \"business\", \"expected_monthly_volume\": 167830.0, \"business_purpose\": \"Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$167,830.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"Nevada-US\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute mapped\", \"label\": \"neutral\", \"reasoning\": \"Statute: § 0. No statute identifier provided; thus no applicability determination can be made. No statute mapped\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive is_suspicious based on evidence.\n\nWe have transactions list, kyc_profile, sanctions_pep_hits empty, policy_excerpts empty, sop_excerpts empty, auxiliary_findings includes statutory with no mapping, behavioral empty, numeric empty, citation empty.\n\nWe need to decide if suspicious.\n\nLook at transactions: multiple wires to BWEE Ventures LLC same amount 45035.88 on 2026-03-29 and 2026-03-31, returned wire note \"cancelled invoice\". Then wires to FN Trading LLC 184360.87 on 2026-02-14, to XEYAU Services LLC 79680.55 on 2026-02-02, ACH to XIVOD Enterprises LLC 107846.64 on 2026-04-25, card payments to Mary Jackson 181577.22 on 2026-02-07 and Jennifer Moore 181577.22 on 2026-02-09.\n\nkyc_profile: business purpose \"Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$167,830.\" risk enhanced. Expected monthly volume 167,830.\n\nTotal transaction amounts: let's sum:\n\n- 45035.88 + 45035.88 = 90071.76\n- +184360.87 = 274432.63\n- +79680.55 = 354113.18\n- +107846.64 = 461959.82\n- +181577.22 = 643537.04\n- +181577.22 = 825114.26\n\nTotal ~ $825,114 across listed transactions. That's about 5x expected monthly volume (~167k). That's high.\n\nBut need to see if pattern suggests suspicious. There's repeated wires to same counterparty BWEE Ventures LLC with returned wire note. Could be structuring? But amounts are just under 50k each, not near 10k CTR threshold. However multiple wires maybe structuring? Not exactly.\n\nBut we have a large wire to FN Trading LLC 184k, and to XEYAU 79k, ACH to XIVOD 107k, card payments to individuals 181k each. Could be layering.\n\nBut we have no policy excerpts, no sanctions hits. No auxiliary findings.\n\nWe must decide is_suspicious based on evidence. The bundle includes high total volume relative to expected monthly volume, but no explicit structuring or sanctions hit. However the volume is 5x expected, which could be suspicious. But also could be legitimate if they have large transactions.\n\nThe decision rule: set is_suspicious=true only when evidence warrants filing a SAR. Strong-positive signals include confident sanctions hit, peel-chain, rapid-pass-through, structuring pattern inconsistent with declared activity, TBML signals, auxiliary findings that support SAR.\n\nHere we have no sanctions hit, no clear structuring pattern (amounts not near 10k, but multiple wires). Could be considered \"peel-chain\"? Not exactly. Could be \"rapid-pass-through\"? Not clear.\n\nBut the volume is high relative to expected monthly volume, but the business purpose is \"Domestic holding LLC; opaque-ownership vehicle\". That may be consistent with large movements.\n\nGiven lack of clear red flags, maybe is_suspicious=false, with disposition rationale naming the surface red flag (high total volume relative to expected) and citing KYC expected monthly volume as disambiguator.\n\nWe need to produce a narrative 400-800 characters, grounded, citing specific evidence.\n\nWe must not invent metrics not present. We can compute total volume from transactions. That's allowed as computable from transactions[]. We can mention that total is approx $825k, about 5x expected monthly volume of $167,830.\n\nWe must cite the expected monthly volume from kyc_profile.\n\nWe must name the surface red flag: \"Total transaction volume of approximately $825,114 across the reported period, which is roughly five times the declared expected monthly volume of $167,830.\" That's a numeric finding, but numeric findings must be from auxiliary_findings numeric array; but we can compute ourselves and cite as derived from transactions; it's allowed as \"computable from transactions[]\". So we can mention the computed ratio.\n\nWe must not claim any policy excerpt; there are none.\n\nWe must not cite any regulation unless present; none.\n\nThus narrative: \"Surface red flag: aggregate transaction amount of $825,114 across multiple wires, ACH, and card payments. This volume is roughly five times the declared expected monthly volume of $167,830 for a domestic holding LLC. The activity includes repeated wires to BWEE Ventures LLC with a returned invoice note, but the overall pattern aligns with a holding entity's investment flows and does not exhibit structuring or layering typical of money laundering. No sanctions or PEP hits are present. Accordingly, the evidence resolves the alert; no SAR is warranted, but the matter should be deferred to a human investigator for final disposition.\"\n\nNeed 400-800 characters. Let's count approximate characters. Let's draft ~600 characters.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still within string. Probably fine.\n\nNow craft narrative length. Let's count characters roughly.\n\nDraft:\n\n\"Surface red flag: aggregate transaction amount of $825,114 across multiple wires, ACH, and card payments, which is roughly five times the declared expected monthly volume of $167,830 for a domestic holding LLC. The activity includes repeated wires to BWEE Ventures LLC with a returned invoice note, but the overall pattern aligns with a holding entity's investment flows and does not exhibit structuring or layering typical of money laundering. No sanctions or PEP hits are present. Accordingly, the evidence resolves the alert; no SAR is warranted, but the matter should be deferred to a human investigator for final disposition.\"\n\nNow count characters. Let's approximate: each word ~5 chars plus spaces. Let's count precisely? Rough estimate: The string length maybe around 500-600 characters. Should be within 400-800.\n\nWe must ensure it's grounded: we cited amounts, counterparties, expected monthly volume. All present.\n\nNow output JSON exactly, no extra text.\n\nLet's produce final.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: aggregate transaction amount of $825,114 across multiple wires, ACH, and card payments, which is roughly five times the declared expected monthly volume of $167,830 for a domestic holding LLC. The activity includes repeated wires to BWEE Ventures LLC with a returned invoice note, but the overall pattern aligns with a holding entity's investment flows and does not exhibit structuring or layering typical of money laundering. No sanctions or PEP hits are present. Accordingly, the evidence resolves the alert; no SAR is warranted, but the matter should be deferred to a human investigator for final disposition.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: aggregate transaction amount of $825,114 across multiple wires, ACH, and card payments, which is roughly five times the declared expected monthly volume of $167,830 for a domestic holding LLC. The activity includes repeated wires to BWEE Ventures LLC with a returned invoice note, but the overall pattern aligns with a holding entity's investment flows and does not exhibit structuring or layering typical of money laundering. No sanctions or PEP hits are present. Accordingly, the evidence resolves the alert; no SAR is warranted, but the matter should be deferred to a human investigator for final disposition."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: aggregate transaction amount of $825,114 across multiple wires, ACH, and card payments, which is roughly five times the declared expected monthly volume of $167,830 for a domestic holding LLC. The activity includes repeated wires to BWEE Ventures LLC with a returned invoice note, but the overall pattern aligns with a holding entity's investment flows and does not exhibit structuring or layering typical of money laundering. No sanctions or PEP hits are present. Accordingly, the evidence resolves the alert; no SAR is warranted, but the matter should be deferred to a human investigator for final disposition.",
+  "judge_enabled": false,
+  "error": null
+}

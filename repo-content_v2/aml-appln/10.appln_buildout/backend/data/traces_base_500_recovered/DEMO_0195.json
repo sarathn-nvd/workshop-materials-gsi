@@ -1,0 +1,235 @@
+{
+  "case_id": "DEMO_0195",
+  "alert_id": "ALT_2414064",
+  "entity_id": "SYN_81a6d896",
+  "started_at": "2026-05-29T03:05:51.905229+00:00",
+  "finished_at": "2026-05-29T03:06:36.991972+00:00",
+  "wall_clock_ms": 45086.8,
+  "transactions": [
+    {
+      "amount": 675.29,
+      "channel": "wire",
+      "counterparty": "Donor Karen Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 201.76,
+      "channel": "ach",
+      "counterparty": "Donor Susan Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 284.99,
+      "channel": "ach",
+      "counterparty": "Donor Michael Thompson",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 818.5,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Jackson",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 662.05,
+      "channel": "wire",
+      "counterparty": "Donor Karen Miller",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 410.83,
+      "channel": "ach",
+      "counterparty": "Donor Sarah Walker",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 245.51,
+      "channel": "wire",
+      "counterparty": "Donor Patricia Smith",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 883.87,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Walker",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 434.46,
+      "channel": "ach",
+      "counterparty": "Donor Patricia Anderson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_81a6d896",
+    "entity_type": "business",
+    "expected_monthly_volume": 14372.0,
+    "business_purpose": "Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-DC"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Patricia Smith",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.3333,
+      "ach": 0.6667
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.6666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_81a6d896 executed 9 transactions totaling $4,617.26 USD with channel mix {\"ach\": 0.667, \"wire\": 0.333}. The 24-hour velocity peak is 2 against a 30-day average of 0.69. Volume vs declared monthly is 0.74x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 9,
+        "tx_total_usd": 4617.26,
+        "channel_mix": {
+          "ach": 0.667,
+          "wire": 0.333
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.69,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 1.55,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.74
+      },
+      "evidence": "transactions[0..8]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "difference amount 9354.74",
+      "calculation": "1. transactions[0..8].amount sum = 5017.26\n2. kyc_profile.expected_monthly_volume - 5017.26 = 9354.74",
+      "evidence": "transactions[0..8]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts were retrieved.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute identified.",
+      "label": "neutral",
+      "reasoning": "No statutory provision is provided; thus the statutory elements cannot be evaluated. No applicable statute."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_81a6d896 executed 9 transactions totaling $4,617.26 USD with channel mix {\"ach\": 0.667, \"wire\": 0.333}. The 24-hour velocity peak is 2 against a 30-day average of 0.69. Volume vs declared monthly is 0.74x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 9,
+          "tx_total_usd": 4617.26,
+          "channel_mix": {
+            "ach": 0.667,
+            "wire": 0.333
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.69,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.55,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.74
+        },
+        "evidence": "transactions[0..8]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "difference amount 9354.74",
+        "calculation": "1. transactions[0..8].amount sum = 5017.26\n2. kyc_profile.expected_monthly_volume - 5017.26 = 9354.74",
+        "evidence": "transactions[0..8]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts were retrieved.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute identified.",
+        "label": "neutral",
+        "reasoning": "No statutory provision is provided; thus the statutory elements cannot be evaluated. No applicable statute."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 675.29, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 201.76, \"channel\": \"ach\", \"counterparty\": \"Donor Susan Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 284.99, \"channel\": \"ach\", \"counterparty\": \"Donor Michael Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"small inbound donation\"}, {\"amount\": 818.5, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"small inbound donation\"}, {\"amount\": 662.05, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Miller\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"small inbound donation\"}, {\"amount\": 410.83, \"channel\": \"ach\", \"counterparty\": \"Donor Sarah Walker\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"small inbound donation\"}, {\"amount\": 245.51, \"channel\": \"wire\", \"counterparty\": \"Donor Patricia Smith\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"small inbound donation\"}, {\"amount\": 883.87, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Walker\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"small inbound donation\"}, {\"amount\": 434.46, \"channel\": \"ach\", \"counterparty\": \"Donor Patricia Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_81a6d896\", \"entity_type\": \"business\", \"expected_monthly_volume\": 14372.0, \"business_purpose\": \"Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-DC\"}, \"sanctions_pep_hits\": [{\"name\": \"Patricia Smith\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_81a6d896 executed 9 transactions totaling $4,617.26 USD with channel mix {\\\"ach\\\": 0.667, \\\"wire\\\": 0.333}. The 24-hour velocity peak is 2 against a 30-day average of 0.69. Volume vs declared monthly is 0.74x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 9, \"tx_total_usd\": 4617.26, \"channel_mix\": {\"ach\": 0.667, \"wire\": 0.333}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.69, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.55, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.74}, \"evidence\": \"transactions[0..8]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"difference amount 9354.74\", \"calculation\": \"1. transactions[0..8].amount sum = 5017.26\\n2. kyc_profile.expected_monthly_volume - 5017.26 = 9354.74\", \"evidence\": \"transactions[0..8]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts were retrieved.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute identified.\", \"label\": \"neutral\", \"reasoning\": \"No statutory provision is provided; thus the statutory elements cannot be evaluated. No applicable statute.\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must decide based on evidence.\n\nWe have transactions: 9 small donations, total $4,617.26. KYC expected monthly volume $14,372. Ratio 0.74x. Channel mix ach 2/3, wire 1/3. Velocity peak 2 vs avg 0.69. Sanctions hit on Patricia Smith match_score 1.0. That's a direct hit on a counterparty. That's a strong positive. However need to see if it's a common name pattern? It's a match_score 1.0, confident hit. That likely warrants SAR. Also the volume is lower than expected monthly but still within range? 0.74x maybe okay but combined with sanctions hit maybe suspicious.\n\nThe question: is_suspicious true? The presence of a confident sanctions hit on a counterparty (Patricia Smith) with match_score 1.0 is a strong signal. Also the transaction pattern is small donations, but the hit is on a counterparty. That could be suspicious. The narrative must be 400-800 characters.\n\nWe must include evidence: mention the sanctions hit, the transaction amounts, channel mix, ratio, etc. Must cite metrics from auxiliary_findings. Must not invent new info. Must keep within 400-800 characters.\n\nLet's craft narrative ~600 characters.\n\nCount characters roughly. Let's draft:\n\n\"On 2026‑04‑13 through 2026‑04‑26 the entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, and the activity represents 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review.\"\n\nNow count characters. Let's approximate: each character includes spaces. Let's count quickly.\n\nI'll count characters:\n\n\"On 2026‑04‑13 through 2026‑04‑26 the entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire), totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire).\" Wait I repeated. Let's rewrite more concisely.\n\nBetter to count after final string.\n\nI'll write final narrative:\n\n\"On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review.\"\n\nNow count characters. Let's approximate using rough count: I'll count manually.\n\nString:\n\n\"On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review.\"\n\nLet's count characters including spaces. I'll use approximate: I'll copy into a counting tool mentally? Let's count words length.\n\nI'll count characters manually:\n\nStart counting:\n\n\"On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). \" Let's count:\n\n\"On\"=2, space=1 =>3\n\"2026‑04‑13\"=10? Actually characters: 2 0 2 6 – 0 4 – 1 3 = 10? Let's count: 2(1)0(2)2(3)6(4)‑(5)0(6)4(7)‑(8)1(9)3(10). So 10. plus space =1 => total 14.\n\"through\"=7 =>21, space=1 =>22\n\"2026‑04‑26\"=10 =>32, space=1 =>33\n\"entity\"=6 =>39, space=1 =>40\n\"SYN_81a6d896\"=10 =>50, space=1 =>51\n\"received\"=8 =>59, space=1 =>60\n\"nine\"=4 =>64, space=1 =>65\n\"inbound\"=7 =>72, space=1 =>73\n\"donations\"=9 =>82, space=1 =>83\n\"via\"=3 =>86, space=1 =>87\n\"ACH\"=3 =>90, space=1 =>91\n\"and\"=3 =>94, space=1 =>95\n\"wire,\"=5 =>100, space=1 =>101\n\"totaling\"=8 =>109, space=1 =>110\n\"$4,617.26\"=7 =>117, space=1 =>118\n\"(channel\"=8 =>126, space=1 =>127\n\"mix\"=3 =>130, space=1 =>131\n\"66.7%\"=5 =>136, space=1 =>137\n\"ACH,\"=4 =>141, space=1 =>142\n\"33.3%\"=5 =>147, space=1 =>148\n\"wire).\"=6 =>154, space=1 =>155\n\nNow next sentence: \"The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. \"\n\nCount: space already counted? We have a space after previous period? Actually we ended with space then \"The\". So add space =1 =>156\n\n\"The\"=3 =>159, space=1 =>160\n\"24‑hour\"=7? characters: 2 4 – h o u r =6? Actually \"24‑hour\": 2(1)4(2)‑(3)h(4)o(5)u(6)r(7) =>7. =>167, space=1 =>168\n\"velocity\"=8 =>176, space=1 =>177\n\"peaked\"=6 =>183, space=1 =>184\n\"at\"=2 =>186, space=1 =>187\n\"2\"=1 =>188, space=1 =>189\n\"versus\"=6 =>195, space=1 =>196\n\"a\"=1 =>197, space=1 =>198\n\"30‑day\"=6? 3 0 – d a y =5? Actually \"30‑day\": 3(1)0(2)‑(3)d(4)a(5)y(6) =>6 =>204, space=1 =>205\n\"average\"=7 =>212, space=1 =>213\n\"of\"=2 =>215, space=1 =>216\n\"0.69,\"=5 =>221, space=1 =>222\n\"representing\"=12 =>234, space=1 =>235\n\"0.74×\"=4? 0 . 7 4 × =4 =>239, space=1 =>240\n\"the\"=3 =>243, space=1 =>244\n\"declared\"=8 =>252, space=1 =>253\n\"monthly\"=7 =>260, space=1 =>261\n\"volume\"=6 =>267, space=1 =>268\n\"of\"=2 =>270, space=1 =>271\n\"$14,372.\"=7 =>278, space=1 =>279\n\nNext: \"A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. \"\n\nSpace after period? There's a space before \"A\". So add space =1 =>280\n\n\"A\"=1 =>281, space=1 =>282\n\"confident\"=9 =>291, space=1 =>292\n\"sanctions\"=9 =>301, space=1 =>302\n\"match\"=5 =>307, space=1 =>308\n\"(OpenSanctions,\"=14? Let's count: '('=1, 'OpenSanctions'=13? Actually \"OpenSanctions\" length 13, plus ',' =1 => total 15? Wait count: '('1, O2, p3, e4, n5, S6, a7, n8, c9, t10, i11, o12, n13, s14, ','15. So 15 characters. =>323, space=1 =>324\n\"match_score 1.0\" includes a non-breaking space? We'll count characters: \"match_score 1.0\" length? \"match_score\"=11, space? there is a non-breaking space maybe but count as 1, \"1.0\"=3 => total 15? Actually \"match_score 1.0\": characters: m1,a2,t3,c4,h5, _6, s7, c8, o9, r10, e11, (space?)12, 1=13, .14, 0=15. So 15. =>339, \")\"=1 =>340, space=1 =>341\n\"on\"=2 =>343, space=1 =>344\n\"counterparty\"=12 =>356, space=1 =>357\n\"“Patricia\" includes opening quote? We'll count characters: “ =1, P=2, a3, t4, r5, i6, c7, i8, a9 =>9? Actually need to count precisely: opening double quote “ is one char, then Patricia =8 letters => total 9. =>366, space=1 =>367\n\"Smith”\" includes Smith (5) and closing quote ” =1 =>6 =>373, space=1 =>374\n\"further\"=7 =>381, space=1 =>382\n\"elevates\"=8 =>390, space=1 =>391\n\"concern.\"=8 =>399, space=1 =>400\n\nNext: \"These factors collectively support a SAR filing, pending human review.\"\n\nAdd space? After period there is space before \"These\". So add space =1 =>401\n\n\"These\"=5 =>406, space=1 =>407\n\"factors\"=7 =>414, space=1 =>415\n\"collectively\"=12 =>427, space=1 =>428\n\"support\"=7 =>435, space=1 =>436\n\"a\"=1 =>437, space=1 =>438\n\"SAR\"=3 =>441, space=1 =>442\n\"filing,\"=7 =>449, space=1 =>450\n\"pending\"=7 =>457, space=1 =>458\n\"human\"=5 =>463, space=1 =>464\n\"review.\"=7 =>471\n\nTotal approx 471 characters. That's within 400-800. Good.\n\nNow we need to output JSON with is_suspicious true and the narrative string.\n\nMake sure to escape quotes properly in JSON string. Use double quotes for JSON, need to escape inner double quotes. The narrative contains double quotes around “Patricia Smith”? Actually we used curly quotes “Patricia Smith”. Those are not straight double quotes, they are Unicode characters, but they are not double quote characters, so they are fine. However we have double quotes around \"OpenSanctions\"? Actually we have \"(OpenSanctions,\" includes parentheses and comma, no double quotes. The narrative includes double quotes? It includes “ and ” which are not ASCII double quotes, but JSON string can contain them as is, as they are not special. However we have a double quote after \"match_score 1.0)\"? No. So we can output as is.\n\nBut we need to ensure we escape any backslashes or control characters. There's a non-breaking space maybe, but it's okay.\n\nWe must output exactly JSON object with two fields.\n\nThus final answer:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review.\"\n}\n\nMake sure no extra whitespace? It's fine.\n\nNow produce final.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑13 through 2026‑04‑26 entity SYN_81a6d896 received nine inbound donations via ACH and wire, totaling $4,617.26 (channel mix 66.7% ACH, 33.3% wire). The 24‑hour velocity peaked at 2 versus a 30‑day average of 0.69, representing 0.74× the declared monthly volume of $14,372. A confident sanctions match (OpenSanctions, match_score 1.0) on counterparty “Patricia Smith” further elevates concern. These factors collectively support a SAR filing, pending human review.",
+  "judge_enabled": false,
+  "error": null
+}

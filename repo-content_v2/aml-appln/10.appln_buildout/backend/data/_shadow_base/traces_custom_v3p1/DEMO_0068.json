@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0068",
+  "alert_id": "ALT_2478317",
+  "entity_id": "SYN_3a9e1931",
+  "started_at": "2026-05-27T16:06:18.838202+00:00",
+  "finished_at": "2026-05-27T16:06:26.286714+00:00",
+  "wall_clock_ms": 7448.5,
+  "transactions": [
+    {
+      "amount": 9442.17,
+      "channel": "cash",
+      "counterparty": "Cash deposit, ORD Branch #82",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "one-time sub-CTR cash receipt (benign: customer paid in cash)"
+    },
+    {
+      "amount": 106761.9,
+      "channel": "card",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 151687.97,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 254632.62,
+      "channel": "ach",
+      "counterparty": "OUJXN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 77978.28,
+      "channel": "cash",
+      "counterparty": "Elizabeth Davis",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 187189.37,
+      "channel": "card",
+      "counterparty": "Christopher Moore",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 77235.13,
+      "channel": "cash",
+      "counterparty": "Patricia Lewis",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3a9e1931",
+    "entity_type": "business",
+    "expected_monthly_volume": 271233.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.429,
+      "card": 0.429,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 6 with a tx_total_usd of 705247.44. The channel_mix shows a reliance on card transactions at 0.5, alongside cash and ach activity. Activity peaked with a velocity_24h_max of 2. Over the last week, the account interacted with unique_counterparties_7d of 1. The vs_declared_volume_ratio is 8.25, indicating volume significantly above the expected monthly profile. The presence of cash deposits is consistent with the business purpose of a restaurant, though the overall volume warrants further review.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 705247.44,
+        "channel_mix": {
+          "card": 0.5,
+          "cash": 0.333,
+          "ach": 0.167
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.6,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 8.25
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 765227.44",
+      "calculation": "1. Identify all transaction amounts from the [transactions] block: 9,442.17, 106,761.90, 151,687.97, 254,632.62, 77,978.28, 77,235.13, 187,189.37. 2. Sum these values: 9,442.17 + 106,761.90 + 151,687.97 + 254,632.62 + 77,978.28 + 77,235.13 + 187,189.37 = 765,227.44.",
+      "evidence": "transactions[0..6].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account recorded a tx_count of 6 with a tx_total_usd of 705247.44. The channel_mix shows a reliance on card transactions at 0.5, alongside cash and ach activity. Activity peaked with a velocity_24h_max of 2. Over the last week, the account interacted with unique_counterparties_7d of 1. The vs_declared_volume_ratio is 8.25, indicating volume significantly above the expected monthly profile. The presence of cash deposits is consistent with the business purpose of a restaurant, though the overall volume warrants further review.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 705247.44,
+          "channel_mix": {
+            "card": 0.5,
+            "cash": 0.333,
+            "ach": 0.167
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.6,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 8.25
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 765227.44",
+        "calculation": "1. Identify all transaction amounts from the [transactions] block: 9,442.17, 106,761.90, 151,687.97, 254,632.62, 77,978.28, 77,235.13, 187,189.37. 2. Sum these values: 9,442.17 + 106,761.90 + 151,687.97 + 254,632.62 + 77,978.28 + 77,235.13 + 187,189.37 = 765,227.44.",
+        "evidence": "transactions[0..6].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 9442.17, \"channel\": \"cash\", \"counterparty\": \"Cash deposit, ORD Branch #82\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"one-time sub-CTR cash receipt (benign: customer paid in cash)\"}, {\"amount\": 106761.9, \"channel\": \"card\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 151687.97, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 254632.62, \"channel\": \"ach\", \"counterparty\": \"OUJXN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 77978.28, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Davis\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 187189.37, \"channel\": \"card\", \"counterparty\": \"Christopher Moore\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 77235.13, \"channel\": \"cash\", \"counterparty\": \"Patricia Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3a9e1931\", \"entity_type\": \"business\", \"expected_monthly_volume\": 271233.0, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account recorded a tx_count of 6 with a tx_total_usd of 705247.44. The channel_mix shows a reliance on card transactions at 0.5, alongside cash and ach activity. Activity peaked with a velocity_24h_max of 2. Over the last week, the account interacted with unique_counterparties_7d of 1. The vs_declared_volume_ratio is 8.25, indicating volume significantly above the expected monthly profile. The presence of cash deposits is consistent with the business purpose of a restaurant, though the overall volume warrants further review.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 705247.44, \"channel_mix\": {\"card\": 0.5, \"cash\": 0.333, \"ach\": 0.167}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.6, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 8.25}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 765227.44\", \"calculation\": \"1. Identify all transaction amounts from the [transactions] block: 9,442.17, 106,761.90, 151,687.97, 254,632.62, 77,978.28, 77,235.13, 187,189.37. 2. Sum these values: 9,442.17 + 106,761.90 + 151,687.97 + 254,632.62 + 77,978.28 + 77,235.13 + 187,189.37 = 765,227.44.\", \"evidence\": \"transactions[0..6].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a high volume of activity, with a total transaction volume of $765,227.44 across six transactions, resulting in a vs_declared_volume_ratio of 8.25. This triggered an alert for volume exceeding the expected monthly profile of $271,233. However, the activity is consistent with the entity's declared business purpose as a restaurant/hospitality establishment. The transactions include a mix of card payments (e.g., $106,761.90 to Maria Jackson on 2026-03-11) and cash deposits (e.g., $9,442.17 on 2026-04-20), which aligns with the nature of a hospitality business. While the volume is elevated, the activity is consistent with declared business operations and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a high volume of activity, with a total transaction volume of $765,227.44 across six transactions, resulting in a vs_declared_volume_ratio of 8.25. This triggered an alert for volume exceeding the expected monthly profile of $271,233. However, the activity is consistent with the entity's declared business purpose as a restaurant/hospitality establishment. The transactions include a mix of card payments (e.g., $106,761.90 to Maria Jackson on 2026-03-11) and cash deposits (e.g., $9,442.17 on 2026-04-20), which aligns with the nature of a hospitality business. While the volume is elevated, the activity is consistent with declared business operations and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a high volume of activity, with a total transaction volume of $765,227.44 across six transactions, resulting in a vs_declared_volume_ratio of 8.25. This triggered an alert for volume exceeding the expected monthly profile of $271,233. However, the activity is consistent with the entity's declared business purpose as a restaurant/hospitality establishment. The transactions include a mix of card payments (e.g., $106,761.90 to Maria Jackson on 2026-03-11) and cash deposits (e.g., $9,442.17 on 2026-04-20), which aligns with the nature of a hospitality business. While the volume is elevated, the activity is consistent with declared business operations and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

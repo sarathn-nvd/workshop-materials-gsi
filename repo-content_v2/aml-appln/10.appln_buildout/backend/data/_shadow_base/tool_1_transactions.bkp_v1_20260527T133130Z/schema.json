@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "date": {
+      "title": "Date",
+      "type": "string"
+    },
+    "amount": {
+      "title": "Amount",
+      "type": "number"
+    },
+    "currency": {
+      "title": "Currency",
+      "type": "string"
+    },
+    "counterparty": {
+      "title": "Counterparty",
+      "type": "string"
+    },
+    "channel": {
+      "enum": [
+        "wire",
+        "ach",
+        "cash",
+        "card",
+        "cheque",
+        "crypto"
+      ],
+      "title": "Channel",
+      "type": "string"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "amount",
+    "currency",
+    "counterparty",
+    "channel"
+  ],
+  "title": "Transaction",
+  "type": "object"
+}

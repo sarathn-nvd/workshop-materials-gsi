@@ -1,0 +1,148 @@
+{
+  "case_id": "DEMO_0200",
+  "alert_id": "ALT_2461344",
+  "entity_id": "SYN_05b779ec",
+  "started_at": "2026-05-27T15:20:26.970242+00:00",
+  "finished_at": "2026-05-27T15:20:53.262536+00:00",
+  "wall_clock_ms": 26292.3,
+  "transactions": [
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "Deutsche Bank Trust Company Americas",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "round-number outbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_05b779ec",
+    "entity_type": "business",
+    "expected_monthly_volume": 111844.0,
+    "business_purpose": "Legal / accounting gatekeeper firm; trust and escrow services; declared monthly volume ~$111,844.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Deutsche Bank Trust Company Americas",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Sanctions counterparty hit on wire flow (Deutsche Bank Trust Company Americas)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have input bundle: [transactions] and [kyc_profile] and presumably metrics block? The user says \"precomputed metrics block\" but not provided. However we must output metrics block verbatim. But we don't have it. Possibly we need to infer metrics from the given data? The task: \"Provide a behavioral summary with the metrics described in the schema.\" The schema likely expects certain metric keys: tx_count, tx_total_usd, chan"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence. Must echo question verbatim. Need to compute total volume passing through any detected cycle; compare to KYC declared monthly volume. Input is a transaction bundle with one transaction: amount 100,000.00 USD. Also KYC profile has expected_monthly_volume: 111844.0. Need to compute total volume passing through any detected cycle. There's only one transaction; maybe cycle detection? Probably total volume = amount? Or maybe su"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The excerpt says the activity is certainly worthy of FinCEN’s attention.",
+      "evidence_span": "is certainly worthy of FinCEN’s attention."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "§ 5318(g) requires",
+      "label": "entailment",
+      "reasoning": "The transaction is a single outbound wire of $100,000, a round-number amount, which raises suspicion of structuring; the entity is a business with enhanced risk and operates as a trust and escrow gatekeeper, fitting the definition of a covered institution under 31 U.S.C. § 5318(g). § 5318(g) requires reporting of any suspicious activity, and the observed wire meets that threshold, thereby triggering the reporting obligation."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "§ 5318(g) requires",
+        "label": "entailment",
+        "reasoning": "The transaction is a single outbound wire of $100,000, a round-number amount, which raises suspicion of structuring; the entity is a business with enhanced risk and operates as a trust and escrow gatekeeper, fitting the definition of a covered institution under 31 U.S.C. § 5318(g). § 5318(g) requires reporting of any suspicious activity, and the observed wire meets that threshold, thereby triggering the reporting obligation."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The excerpt says the activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"Deutsche Bank Trust Company Americas\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"round-number outbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_05b779ec\", \"entity_type\": \"business\", \"expected_monthly_volume\": 111844.0, \"business_purpose\": \"Legal / accounting gatekeeper firm; trust and escrow services; declared monthly volume ~$111,844.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [{\"name\": \"Deutsche Bank Trust Company Americas\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"§ 5318(g) requires\", \"label\": \"entailment\", \"reasoning\": \"The transaction is a single outbound wire of $100,000, a round-number amount, which raises suspicion of structuring; the entity is a business with enhanced risk and operates as a trust and escrow gatekeeper, fitting the definition of a covered institution under 31 U.S.C. § 5318(g). § 5318(g) requires reporting of any suspicious activity, and the observed wire meets that threshold, thereby triggering the reporting obligation.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The excerpt says the activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have a single transaction: $100,000 wire to Deutsche Bank Trust Company Americas, round-number outbound wire. Sanctions hit on that counterparty with match_score 1.0 (confident). Entity is a business with expected monthly volume $111,844, risk enhanced. Business purpose: legal/accounting gatekeeper firm; trust and escrow services. So transaction amount $100k is close to expected monthly volume (~111k). It's a single wire, round-number, to a sanctioned entity (OFAC hit). That is strong positive. Also policy excerpt says activity is worthy of FinCEN's attention. Also statutory finding says it triggers reporting under 5318(g). So likely is_suspicious = true.\n\nWe need to produce a narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive? Probably length of string. Must be between 400 and 800 characters. Let's craft about 550 characters.\n\nNarrative: mention the $100k outbound wire to OFAC-listed Deutsche Bank Trust Company Americas, match_score 1.0, round-number, entity is a trust/escrow gatekeeper with expected monthly volume $111,844, risk enhanced. This exceeds declared volume (close to 90% of monthly). The transaction pattern is a single high-value wire inconsistent with typical gatekeeper activity, and the OFAC hit is confident. Also statutory finding indicates it falls under 5318(g). Therefore SAR warranted. End with defer to human investigator.\n\nNeed to ensure length 400-800 characters. Let's count approximate characters.\n\nDraft:\n\n\"The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator.\"\n\nNow count characters. Let's count manually (including spaces). I'll copy text and count.\n\nText:\n\n\"The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator.\"\n\nNow count characters. I'll approximate using a tool mentally: Let's count.\n\nI'll write with indices.\n\nI'll count characters including spaces and punctuation.\n\nI'll copy into a counting method: I'll count words length.\n\nBetter to approximate: It's likely around 400-500 characters. Let's count precisely.\n\nI'll write the string and count.\n\nString:\n\nThe $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator.\n\nNow count characters.\n\nI'll count using groups.\n\nI'll write each character count.\n\nI'll use an online mental method: count length of each sentence.\n\nBut maybe easier: approximate length: It's probably around 560 characters. Let's quickly estimate: The first sentence length: \"The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844.\" That's about 150 characters? Let's count: \"The \" (4) + \"$100,000\" (8) =12, space (1)=13, \"outbound\" (8)=21, space=22, \"wire\" (4)=26, space=27, \"to\" (2)=29, space=30, \"'Deutsche\" (8 inc apostrophe?) Actually \"'Deutsche\" includes apostrophe and D, that's 8? Let's just approximate. This is tedious.\n\nGiven we need 400-800 characters, we are likely within range. Let's quickly use rough estimate: The whole string maybe ~650 characters. Should be fine.\n\nWe must ensure it's exactly JSON with two fields. Provide no extra text.\n\nThus output:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator.\"\n}\n\nMake sure JSON is valid, no extra whitespace? It's okay.\n\nCheck length of narrative: need 400-800 characters. Let's quickly approximate length: I think it's around 560-600 characters, which is fine.\n\nThus final answer.\n</think>\n{\"is_suspicious\":true,\"suspicious_activity_report\":\"The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The $100,000 outbound wire to 'Deutsche Bank Trust Company Americas' (OFAC hit, match_score 1.0) is a round‑number transaction from an enhanced‑risk legal/escrow firm whose declared monthly volume is $111,844. The single wire represents ~90 % of expected volume and targets a sanctioned counterparty, a pattern inconsistent with normal gatekeeper activity. The statutory finding notes that § 5318(g) requires reporting of such suspicious activity. Accordingly, a SAR is warranted; final filing decision should be deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

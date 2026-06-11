@@ -1,0 +1,415 @@
+{
+  "ran_at": "2026-05-27T16:14:21.116391+00:00",
+  "demo_size": 200,
+  "demo_version": "v3.1 (prod-mimic v2)",
+  "notes": "3-way: custom SFT-trained NIM vs base Nemotron vs frontier Gemma. 200-case v2 prod-mimic demo with v3.1 7-key SAR bundle (no hint fields).",
+  "endpoints": [
+    {
+      "label": "aml-custom-task-nim (v3.1 SFT)",
+      "eval_path": "data/traces_custom_v3p1/eval.json",
+      "traces_dir": "data/traces_custom_v3p1",
+      "n_total_keys": 200
+    },
+    {
+      "label": "nemotron-3-nano (base)",
+      "eval_path": "data/traces_base_nemotron_v3p1/eval.json",
+      "traces_dir": "data/traces_base_nemotron_v3p1",
+      "n_total_keys": 200
+    },
+    {
+      "label": "gemma-4-31b-it (frontier)",
+      "eval_path": "data/traces_gemma_v3p1/eval.json",
+      "traces_dir": "data/traces_gemma_v3p1",
+      "n_total_keys": 200
+    }
+  ],
+  "coverage": [
+    {
+      "field": "n_scored",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 200,
+        "nemotron-3-nano (base)": 160,
+        "gemma-4-31b-it (frontier)": 200
+      }
+    },
+    {
+      "field": "n_parse_failures",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0,
+        "nemotron-3-nano (base)": 40,
+        "gemma-4-31b-it (frontier)": 0
+      }
+    },
+    {
+      "field": "n_errors",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0,
+        "nemotron-3-nano (base)": 0,
+        "gemma-4-31b-it (frontier)": 0
+      }
+    }
+  ],
+  "headline_metrics": [
+    {
+      "metric": "f1",
+      "higher_is_better": true,
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.52,
+        "nemotron-3-nano (base)": 0.468,
+        "gemma-4-31b-it (frontier)": 0.31
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "metric": "precision",
+      "higher_is_better": true,
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.371,
+        "nemotron-3-nano (base)": 0.34,
+        "gemma-4-31b-it (frontier)": 0.188
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "metric": "recall",
+      "higher_is_better": true,
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.867,
+        "nemotron-3-nano (base)": 0.75,
+        "gemma-4-31b-it (frontier)": 0.9
+      },
+      "winner_label": "gemma-4-31b-it (frontier)"
+    },
+    {
+      "metric": "near_miss_specificity",
+      "higher_is_better": true,
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.6,
+        "nemotron-3-nano (base)": 0.5,
+        "gemma-4-31b-it (frontier)": 0.3
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "metric": "clean_fpr",
+      "higher_is_better": false,
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.229,
+        "nemotron-3-nano (base)": 0.2,
+        "gemma-4-31b-it (frontier)": 0.686
+      },
+      "winner_label": "nemotron-3-nano (base)"
+    }
+  ],
+  "confusion": [
+    {
+      "label": "aml-custom-task-nim (v3.1 SFT)",
+      "tp": 26,
+      "fp": 44,
+      "tn": 126,
+      "fn": 4
+    },
+    {
+      "label": "nemotron-3-nano (base)",
+      "tp": 18,
+      "fp": 35,
+      "tn": 101,
+      "fn": 6
+    },
+    {
+      "label": "gemma-4-31b-it (frontier)",
+      "tp": 27,
+      "fp": 117,
+      "tn": 53,
+      "fn": 3
+    }
+  ],
+  "per_typology_recall": [
+    {
+      "typology": "elder_exploitation",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.75,
+        "nemotron-3-nano (base)": 0.667,
+        "gemma-4-31b-it (frontier)": 0.75
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "human_trafficking",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 0.667,
+        "gemma-4-31b-it (frontier)": 0.75
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "typology": "layering",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 1.0,
+        "gemma-4-31b-it (frontier)": 1.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "shell_company",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 1.0,
+        "gemma-4-31b-it (frontier)": 1.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 4,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "smurfing",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.667,
+        "nemotron-3-nano (base)": 1.0,
+        "gemma-4-31b-it (frontier)": 1.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 3,
+        "nemotron-3-nano (base)": 1,
+        "gemma-4-31b-it (frontier)": 3
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "structuring",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 0.333,
+        "gemma-4-31b-it (frontier)": 1.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 3,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 3
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "terrorist_financing",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.5,
+        "nemotron-3-nano (base)": 0.5,
+        "gemma-4-31b-it (frontier)": 0.75
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 4,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "gemma-4-31b-it (frontier)"
+    },
+    {
+      "typology": "trade_based_ml",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 1.0,
+        "gemma-4-31b-it (frontier)": 1.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": null
+    }
+  ],
+  "per_typology_nm_specificity": [
+    {
+      "typology": "elder_exploitation",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 0.333,
+        "gemma-4-31b-it (frontier)": 0.25
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "typology": "human_trafficking",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 1.0,
+        "nemotron-3-nano (base)": 0.333,
+        "gemma-4-31b-it (frontier)": 0.333
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 3,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 3
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "typology": "layering",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.75,
+        "nemotron-3-nano (base)": 0.5,
+        "gemma-4-31b-it (frontier)": 0.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 4,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "typology": "shell_company",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.25,
+        "nemotron-3-nano (base)": 0.0,
+        "gemma-4-31b-it (frontier)": 0.25
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 1,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "smurfing",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.667,
+        "nemotron-3-nano (base)": 0.333,
+        "gemma-4-31b-it (frontier)": 0.333
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 3,
+        "nemotron-3-nano (base)": 3,
+        "gemma-4-31b-it (frontier)": 3
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    },
+    {
+      "typology": "structuring",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.25,
+        "nemotron-3-nano (base)": 1.0,
+        "gemma-4-31b-it (frontier)": 0.75
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 4,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "nemotron-3-nano (base)"
+    },
+    {
+      "typology": "terrorist_financing",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.75,
+        "nemotron-3-nano (base)": 1.0,
+        "gemma-4-31b-it (frontier)": 0.5
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 4,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "nemotron-3-nano (base)"
+    },
+    {
+      "typology": "trade_based_ml",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 0.25,
+        "nemotron-3-nano (base)": 0.0,
+        "gemma-4-31b-it (frontier)": 0.0
+      },
+      "n_per_endpoint": {
+        "aml-custom-task-nim (v3.1 SFT)": 4,
+        "nemotron-3-nano (base)": 4,
+        "gemma-4-31b-it (frontier)": 4
+      },
+      "winner_label": "aml-custom-task-nim (v3.1 SFT)"
+    }
+  ],
+  "narrative_stats": [
+    {
+      "field": "n_non_empty",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 200,
+        "nemotron-3-nano (base)": 160,
+        "gemma-4-31b-it (frontier)": 200
+      }
+    },
+    {
+      "field": "mean_chars",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 743.7,
+        "nemotron-3-nano (base)": 617.1,
+        "gemma-4-31b-it (frontier)": 756.1
+      }
+    },
+    {
+      "field": "median_chars",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 744.5,
+        "nemotron-3-nano (base)": 604.5,
+        "gemma-4-31b-it (frontier)": 754.0
+      }
+    },
+    {
+      "field": "min_chars",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 590,
+        "nemotron-3-nano (base)": 401,
+        "gemma-4-31b-it (frontier)": 562
+      }
+    },
+    {
+      "field": "max_chars",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 948,
+        "nemotron-3-nano (base)": 877,
+        "gemma-4-31b-it (frontier)": 904
+      }
+    }
+  ],
+  "wall_clock_ms": [
+    {
+      "field": "mean",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 9462.5,
+        "nemotron-3-nano (base)": 44502.6,
+        "gemma-4-31b-it (frontier)": 30360.1
+      }
+    },
+    {
+      "field": "median",
+      "values": {
+        "aml-custom-task-nim (v3.1 SFT)": 8636.0,
+        "nemotron-3-nano (base)": 43328.6,
+        "gemma-4-31b-it (frontier)": 29657.4
+      }
+    }
+  ]
+}

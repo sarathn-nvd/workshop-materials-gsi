@@ -1,0 +1,208 @@
+{
+  "case_id": "DEMO_0025",
+  "alert_id": "ALT_2484076",
+  "entity_id": "SYN_3b572516",
+  "started_at": "2026-05-29T02:57:31.755390+00:00",
+  "finished_at": "2026-05-29T02:57:39.198244+00:00",
+  "wall_clock_ms": 7442.9,
+  "transactions": [
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "ZF Exports LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "intercompany funding (benign: documented holding-entity transfer)"
+    },
+    {
+      "amount": 1586721.98,
+      "channel": "ach",
+      "counterparty": "FVTTW Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 1420233.8,
+      "channel": "ach",
+      "counterparty": "SKUN Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 786397.41,
+      "channel": "card",
+      "counterparty": "James Johnson",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 525340.36,
+      "channel": "ach",
+      "counterparty": "SHVN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1728129.7,
+      "channel": "ach",
+      "counterparty": "PEWPJ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3b572516",
+    "entity_type": "business",
+    "expected_monthly_volume": 1933188.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$1,933,188.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.1667,
+      "ach": 0.6667,
+      "card": 0.1667
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'ach': 0.6666666666666666, 'card': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_3b572516 executed 6 transactions totaling $6,546,823.25 USD with channel mix {\"ach\": 0.667, \"wire\": 0.167, \"card\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.27x. country_risk_max is 0.2; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 6546823.25,
+        "channel_mix": {
+          "ach": 0.667,
+          "wire": 0.167,
+          "card": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.26,
+        "country_risk_max": 0.2,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.27
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 6,546,823.25",
+      "calculation": "1) Sum all listed transaction amounts: 500,000.00 + 1,586,721.98 + 1,420,233.80 + 786,397.41 + 525,340.36 + 1,728,129.70 = 6,546,823.25 (transactions[0..5]).\n2) KYC declared expected monthly volume = 1,933,188.0 (kyc_profile.expected_monthly_volume).\n3) Compute multiple vs KYC: 6,546,823.25 / 1,933,188.0 = 3.386 (transactions[0..5]; kyc_profile.expected_monthly_volume).\n4) Compute absolute difference: 6,546,823.25 - 1,933,188.0 = 4,613,635.25 (transactions[0..5]; kyc_profile.expected_monthly_volume).",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; therefore I cannot provide a verbatim citation or evidence span from source material.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided; cannot assess statutory applicability.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided, so there are no elements to test against the fact pattern and no way to determine applicability. No statute provided; cannot assess."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_3b572516 executed 6 transactions totaling $6,546,823.25 USD with channel mix {\"ach\": 0.667, \"wire\": 0.167, \"card\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.27x. country_risk_max is 0.2; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 6546823.25,
+          "channel_mix": {
+            "ach": 0.667,
+            "wire": 0.167,
+            "card": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.26,
+          "country_risk_max": 0.2,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.27
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 6,546,823.25",
+        "calculation": "1) Sum all listed transaction amounts: 500,000.00 + 1,586,721.98 + 1,420,233.80 + 786,397.41 + 525,340.36 + 1,728,129.70 = 6,546,823.25 (transactions[0..5]).\n2) KYC declared expected monthly volume = 1,933,188.0 (kyc_profile.expected_monthly_volume).\n3) Compute multiple vs KYC: 6,546,823.25 / 1,933,188.0 = 3.386 (transactions[0..5]; kyc_profile.expected_monthly_volume).\n4) Compute absolute difference: 6,546,823.25 - 1,933,188.0 = 4,613,635.25 (transactions[0..5]; kyc_profile.expected_monthly_volume).",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; therefore I cannot provide a verbatim citation or evidence span from source material.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided; cannot assess statutory applicability.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided, so there are no elements to test against the fact pattern and no way to determine applicability. No statute provided; cannot assess."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"ZF Exports LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"intercompany funding (benign: documented holding-entity transfer)\"}, {\"amount\": 1586721.98, \"channel\": \"ach\", \"counterparty\": \"FVTTW Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 1420233.8, \"channel\": \"ach\", \"counterparty\": \"SKUN Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 786397.41, \"channel\": \"card\", \"counterparty\": \"James Johnson\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 525340.36, \"channel\": \"ach\", \"counterparty\": \"SHVN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1728129.7, \"channel\": \"ach\", \"counterparty\": \"PEWPJ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3b572516\", \"entity_type\": \"business\", \"expected_monthly_volume\": 1933188.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$1,933,188.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_3b572516 executed 6 transactions totaling $6,546,823.25 USD with channel mix {\\\"ach\\\": 0.667, \\\"wire\\\": 0.167, \\\"card\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.27x. country_risk_max is 0.2; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 6546823.25, \"channel_mix\": {\"ach\": 0.667, \"wire\": 0.167, \"card\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.26, \"country_risk_max\": 0.2, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.27}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 6,546,823.25\", \"calculation\": \"1) Sum all listed transaction amounts: 500,000.00 + 1,586,721.98 + 1,420,233.80 + 786,397.41 + 525,340.36 + 1,728,129.70 = 6,546,823.25 (transactions[0..5]).\\n2) KYC declared expected monthly volume = 1,933,188.0 (kyc_profile.expected_monthly_volume).\\n3) Compute multiple vs KYC: 6,546,823.25 / 1,933,188.0 = 3.386 (transactions[0..5]; kyc_profile.expected_monthly_volume).\\n4) Compute absolute difference: 6,546,823.25 - 1,933,188.0 = 4,613,635.25 (transactions[0..5]; kyc_profile.expected_monthly_volume).\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; therefore I cannot provide a verbatim citation or evidence span from source material.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided; cannot assess statutory applicability.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided, so there are no elements to test against the fact pattern and no way to determine applicability. No statute provided; cannot assess.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Review identified high-value non-cash outflows inconsistent with the customer’s stated profile. SYN_3b572516 (BVI offshore holding company; expected monthly volume $1,933,188) executed 6 transactions totaling $6,546,823.25 (ACH to FVTTW Associates LLC $1,586,721.98 on 2026-03-26; ACH to PEWPJ Logistics LLC $1,728,129.70 on 2026-02-16; ACH to SKUN Solutions LLC $1,420,233.80 on 2026-02-08; card to James Johnson $786,397.41 on 2026-02-04; plus others), materially above expected volume (aux behavioral vs_declared_volume_ratio 1.27 appears inconsistent; recomputed 3.386x). No sanctions hits provided. Pattern warrants SAR consideration for unexplained large payments/possible layering; final filing decision deferred to investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Review identified high-value non-cash outflows inconsistent with the customer’s stated profile. SYN_3b572516 (BVI offshore holding company; expected monthly volume $1,933,188) executed 6 transactions totaling $6,546,823.25 (ACH to FVTTW Associates LLC $1,586,721.98 on 2026-03-26; ACH to PEWPJ Logistics LLC $1,728,129.70 on 2026-02-16; ACH to SKUN Solutions LLC $1,420,233.80 on 2026-02-08; card to James Johnson $786,397.41 on 2026-02-04; plus others), materially above expected volume (aux behavioral vs_declared_volume_ratio 1.27 appears inconsistent; recomputed 3.386x). No sanctions hits provided. Pattern warrants SAR consideration for unexplained large payments/possible layering; final filing decision deferred to investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Review identified high-value non-cash outflows inconsistent with the customer’s stated profile. SYN_3b572516 (BVI offshore holding company; expected monthly volume $1,933,188) executed 6 transactions totaling $6,546,823.25 (ACH to FVTTW Associates LLC $1,586,721.98 on 2026-03-26; ACH to PEWPJ Logistics LLC $1,728,129.70 on 2026-02-16; ACH to SKUN Solutions LLC $1,420,233.80 on 2026-02-08; card to James Johnson $786,397.41 on 2026-02-04; plus others), materially above expected volume (aux behavioral vs_declared_volume_ratio 1.27 appears inconsistent; recomputed 3.386x). No sanctions hits provided. Pattern warrants SAR consideration for unexplained large payments/possible layering; final filing decision deferred to investigator.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,331 @@
+{
+  "case_id": "DEMO_0281",
+  "alert_id": "ALT_1326765",
+  "entity_id": "SYN_f53e3ed6",
+  "started_at": "2026-05-29T03:07:24.505223+00:00",
+  "finished_at": "2026-05-29T03:07:40.192611+00:00",
+  "wall_clock_ms": 15687.4,
+  "transactions": [
+    {
+      "amount": 4054.4,
+      "channel": "card",
+      "counterparty": "Jennifer Wilson",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 7245.2,
+      "channel": "ach",
+      "counterparty": "BN Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 5256.38,
+      "channel": "wire",
+      "counterparty": "WDRCB Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 10596.44,
+      "channel": "wire",
+      "counterparty": "OIXWX Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 8549.91,
+      "channel": "ach",
+      "counterparty": "BA Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 3572.09,
+      "channel": "card",
+      "counterparty": "John Anderson",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 7449.81,
+      "channel": "card",
+      "counterparty": "Sarah Jackson",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    },
+    {
+      "amount": 7778.38,
+      "channel": "card",
+      "counterparty": "Andrew Thompson",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 10485.29,
+      "channel": "wire",
+      "counterparty": "XP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 4715.82,
+      "channel": "wire",
+      "counterparty": "II Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 2417.6,
+      "channel": "wire",
+      "counterparty": "XMBY Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 7313.72,
+      "channel": "wire",
+      "counterparty": "FGSL Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 7854.67,
+      "channel": "wire",
+      "counterparty": "SDI Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 7102.44,
+      "channel": "ach",
+      "counterparty": "SENW Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 4773.87,
+      "channel": "cash",
+      "counterparty": "Susan Thomas",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 5229.04,
+      "channel": "cash",
+      "counterparty": "David Thompson",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 2273.16,
+      "channel": "wire",
+      "counterparty": "UREZI Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 9683.91,
+      "channel": "ach",
+      "counterparty": "ETRKZ Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 6853.71,
+      "channel": "card",
+      "counterparty": "Michael Johnson",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": ""
+    },
+    {
+      "amount": 10400.85,
+      "channel": "ach",
+      "counterparty": "VBGI Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 10635.53,
+      "channel": "ach",
+      "counterparty": "NIR Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f53e3ed6",
+    "entity_type": "business",
+    "expected_monthly_volume": 38417.0,
+    "business_purpose": "Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$38,417.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.2381,
+      "ach": 0.2857,
+      "wire": 0.381,
+      "cash": 0.0952
+    },
+    "cash_present": true,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'card': 0.23809523809523808, 'ach': 0.2857142857142857, 'wire': 0.38095238095238093, 'cash': 0.09523809523809523})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_f53e3ed6 executed 21 transactions totaling $144,242.22 USD with channel mix {\"wire\": 0.381, \"ach\": 0.286, \"card\": 0.238, \"cash\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.34x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 21,
+        "tx_total_usd": 144242.22,
+        "channel_mix": {
+          "wire": 0.381,
+          "ach": 0.286,
+          "card": 0.238,
+          "cash": 0.095
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.7,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 1.77,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.34
+      },
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 148,244.44",
+      "calculation": "1. Sum all transaction amounts from transactions[0..20]: 4,054.40 + 7,245.20 + 5,256.38 + 10,596.44 + 8,549.91 + 3,572.09 + 7,449.81 + 7,778.38 + 10,485.29 + 4,715.82 + 2,417.60 + 7,313.72 + 7,854.67 + 7,102.44 + 4,773.87 + 5,229.04 + 2,273.16 + 9,683.91 + 6,853.71 + 10,400.85 + 10,635.53 = 148,244.44.",
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided for analysis.",
+      "label": "neutral",
+      "reasoning": "The request provides a fact pattern and a question, but the statute field is empty. Because no statute was provided, it is impossible to determine if any specific legal requirements are met or violated. Since no statute provided for analysis, the facts are insufficient to reach a conclusion of entailment or contradiction."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_f53e3ed6 executed 21 transactions totaling $144,242.22 USD with channel mix {\"wire\": 0.381, \"ach\": 0.286, \"card\": 0.238, \"cash\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.34x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 21,
+          "tx_total_usd": 144242.22,
+          "channel_mix": {
+            "wire": 0.381,
+            "ach": 0.286,
+            "card": 0.238,
+            "cash": 0.095
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.7,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.77,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.34
+        },
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 148,244.44",
+        "calculation": "1. Sum all transaction amounts from transactions[0..20]: 4,054.40 + 7,245.20 + 5,256.38 + 10,596.44 + 8,549.91 + 3,572.09 + 7,449.81 + 7,778.38 + 10,485.29 + 4,715.82 + 2,417.60 + 7,313.72 + 7,854.67 + 7,102.44 + 4,773.87 + 5,229.04 + 2,273.16 + 9,683.91 + 6,853.71 + 10,400.85 + 10,635.53 = 148,244.44.",
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided for analysis.",
+        "label": "neutral",
+        "reasoning": "The request provides a fact pattern and a question, but the statute field is empty. Because no statute was provided, it is impossible to determine if any specific legal requirements are met or violated. Since no statute provided for analysis, the facts are insufficient to reach a conclusion of entailment or contradiction."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 4054.4, \"channel\": \"card\", \"counterparty\": \"Jennifer Wilson\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 7245.2, \"channel\": \"ach\", \"counterparty\": \"BN Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 5256.38, \"channel\": \"wire\", \"counterparty\": \"WDRCB Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 10596.44, \"channel\": \"wire\", \"counterparty\": \"OIXWX Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 8549.91, \"channel\": \"ach\", \"counterparty\": \"BA Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 3572.09, \"channel\": \"card\", \"counterparty\": \"John Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 7449.81, \"channel\": \"card\", \"counterparty\": \"Sarah Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}, {\"amount\": 7778.38, \"channel\": \"card\", \"counterparty\": \"Andrew Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 10485.29, \"channel\": \"wire\", \"counterparty\": \"XP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 4715.82, \"channel\": \"wire\", \"counterparty\": \"II Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 2417.6, \"channel\": \"wire\", \"counterparty\": \"XMBY Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 7313.72, \"channel\": \"wire\", \"counterparty\": \"FGSL Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 7854.67, \"channel\": \"wire\", \"counterparty\": \"SDI Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 7102.44, \"channel\": \"ach\", \"counterparty\": \"SENW Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 4773.87, \"channel\": \"cash\", \"counterparty\": \"Susan Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 5229.04, \"channel\": \"cash\", \"counterparty\": \"David Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 2273.16, \"channel\": \"wire\", \"counterparty\": \"UREZI Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 9683.91, \"channel\": \"ach\", \"counterparty\": \"ETRKZ Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 6853.71, \"channel\": \"card\", \"counterparty\": \"Michael Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"\"}, {\"amount\": 10400.85, \"channel\": \"ach\", \"counterparty\": \"VBGI Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 10635.53, \"channel\": \"ach\", \"counterparty\": \"NIR Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f53e3ed6\", \"entity_type\": \"business\", \"expected_monthly_volume\": 38417.0, \"business_purpose\": \"Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$38,417.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_f53e3ed6 executed 21 transactions totaling $144,242.22 USD with channel mix {\\\"wire\\\": 0.381, \\\"ach\\\": 0.286, \\\"card\\\": 0.238, \\\"cash\\\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.34x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 21, \"tx_total_usd\": 144242.22, \"channel_mix\": {\"wire\": 0.381, \"ach\": 0.286, \"card\": 0.238, \"cash\": 0.095}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.7, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.77, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.34}, \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 148,244.44\", \"calculation\": \"1. Sum all transaction amounts from transactions[0..20]: 4,054.40 + 7,245.20 + 5,256.38 + 10,596.44 + 8,549.91 + 3,572.09 + 7,449.81 + 7,778.38 + 10,485.29 + 4,715.82 + 2,417.60 + 7,313.72 + 7,854.67 + 7,102.44 + 4,773.87 + 5,229.04 + 2,273.16 + 9,683.91 + 6,853.71 + 10,400.85 + 10,635.53 = 148,244.44.\", \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"The request provides a fact pattern and a question, but the statute field is empty. Because no statute was provided, it is impossible to determine if any specific legal requirements are met or violated. Since no statute provided for analysis, the facts are insufficient to reach a conclusion of entailment or contradiction.\"}]}}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"The account triggered an alert based on transaction volume and the presence of cash activity. Specifically, 21 transactions totaling $148,244.44 were observed between 2026-02-04 and 2026-04-29, including two cash transactions to Susan Thomas ($4,773.87) and David Thompson ($5,229.04). However, the KYC profile identifies the entity as a professional B2B services firm with an expected monthly volume of $38,417. The observed total volume over approximately three months is consistent with this declaration, and the auxiliary behavioral finding notes a volume ratio of 1.34x relative to the monthly expectation. The activity is consistent with declared business operations and warrants no filing. Final disposition is deferred to the human investigator.\"\n}\n```",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert based on transaction volume and the presence of cash activity. Specifically, 21 transactions totaling $148,244.44 were observed between 2026-02-04 and 2026-04-29, including two cash transactions to Susan Thomas ($4,773.87) and David Thompson ($5,229.04). However, the KYC profile identifies the entity as a professional B2B services firm with an expected monthly volume of $38,417. The observed total volume over approximately three months is consistent with this declaration, and the auxiliary behavioral finding notes a volume ratio of 1.34x relative to the monthly expectation. The activity is consistent with declared business operations and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert based on transaction volume and the presence of cash activity. Specifically, 21 transactions totaling $148,244.44 were observed between 2026-02-04 and 2026-04-29, including two cash transactions to Susan Thomas ($4,773.87) and David Thompson ($5,229.04). However, the KYC profile identifies the entity as a professional B2B services firm with an expected monthly volume of $38,417. The observed total volume over approximately three months is consistent with this declaration, and the auxiliary behavioral finding notes a volume ratio of 1.34x relative to the monthly expectation. The activity is consistent with declared business operations and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

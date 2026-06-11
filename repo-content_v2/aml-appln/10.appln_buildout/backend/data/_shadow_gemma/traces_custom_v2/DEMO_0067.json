@@ -1,0 +1,144 @@
+{
+  "case_id": "DEMO_0067",
+  "entity_id": "SYN_3fe71b68",
+  "started_at": "2026-05-23T13:14:28.748116+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 1682.6,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The entity SYN_3fe71b68 conducted a wire transfer of $100,000.00 on 2026-04-16 to MID-SHIP Group LLC. This transaction is concerning as MID-SHIP Group LLC is identified as an OFAC sanctions hit. Furthermore, the transaction represents 0.89x of the entity's declared monthly volume of $111,844.00. The activity appears consistent with sanctions risk and warrants further review. This matter is referred for human investigator review.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The entity SYN_3fe71b68 conducted a wire transfer of $100,000.00 on 2026-04-16 to MID-SHIP Group LLC. This transaction is concerning as MID-SHIP Group LLC is identified as an OFAC sanctions hit. Furthermore, the transaction represents 0.89x of the entity's declared monthly volume of $111,844.00. The activity appears consistent with sanctions risk and warrants further review. This matter is referred for human investigator review."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"MID-SHIP Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"round-number outbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3fe71b68\", \"entity_type\": \"business\", \"expected_monthly_volume\": 111844, \"business_purpose\": \"Legal / accounting gatekeeper firm; trust and escrow services; declared monthly volume ~$111,844.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [{\"name\": \"MID-SHIP Group LLC\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the conduct may fall within 5318(g) if the transaction is deemed suspicious.\", \"label\": \"neutral\", \"reasoning\": \"31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity. The transaction of $100,000.00 to MID-SHIP Group LLC via wire, described as a 'round-number outbound wire,' could be considered suspicious due to the large amount and the lack of clear business purpose, especially given the entity's declared monthly volume of $111,844.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_3fe71b68, a business with an enhanced risk rating, conducted a single wire transaction on 2026-04-16 for $100,000.00 to MID-SHIP Group LLC. This activity represents a significant portion of the expected monthly volume of $111,844.00. The transaction is noted as a 'round-number outbound wire'.\", \"metrics\": {\"tx_count\": 1, \"tx_total_usd\": 100000.0, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.033, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.89}, \"evidence\": \"transactions[0]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYK declared monthly volume.\", \"answer\": \"The total volume is $100,000.00, which is 0.89x the declared monthly volume of $111,844.00.\", \"calculation\": \"1. Identify the transaction amount: $100,000.00 on 2026-04-16.\\n2. Compare this amount to the expected monthly volume: $100,000.00 / $111,844.00 = 0.8939...\\n3. Round to two decimal places for comparison: 0.89x.\", \"evidence\": \"Transaction date 2026-04-16, amount 100000.00, USD; KYC profile expected monthly volume 111844.0\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"sanctions\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The entity SYN_3fe71b68 conducted a wire transfer of $100,000.00 on 2026-04-16 to MID-SHIP Group LLC. This transaction is concerning as MID-SHIP Group LLC is identified as an OFAC sanctions hit. Furthermore, the transaction represents 0.89x of the entity's declared monthly volume of $111,844.00. The activity appears consistent with sanctions risk and warrants further review. This matter is referred for human investigator review.\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred",
+      "_decision_target"
+    ],
+    "v1_sar_is_suspicious": true,
+    "agreement_with_v1": true,
+    "v1_decision_target": "suspicious"
+  },
+  "transactions": [
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "MID-SHIP Group LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "round-number outbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3fe71b68",
+    "entity_type": "business",
+    "expected_monthly_volume": 111844.0,
+    "business_purpose": "Legal / accounting gatekeeper firm; trust and escrow services; declared monthly volume ~$111,844.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "MID-SHIP Group LLC",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the conduct may fall within 5318(g) if the transaction is deemed suspicious.",
+        "label": "neutral",
+        "reasoning": "31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity. The transaction of $100,000.00 to MID-SHIP Group LLC via wire, described as a 'round-number outbound wire,' could be considered suspicious due to the large amount and the lack of clear business purpose, especially given the entity's declared monthly volume of $111,844."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_3fe71b68, a business with an enhanced risk rating, conducted a single wire transaction on 2026-04-16 for $100,000.00 to MID-SHIP Group LLC. This activity represents a significant portion of the expected monthly volume of $111,844.00. The transaction is noted as a 'round-number outbound wire'.",
+        "metrics": {
+          "tx_count": 1,
+          "tx_total_usd": 100000.0,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.033,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.89
+        },
+        "evidence": "transactions[0]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYK declared monthly volume.",
+        "answer": "The total volume is $100,000.00, which is 0.89x the declared monthly volume of $111,844.00.",
+        "calculation": "1. Identify the transaction amount: $100,000.00 on 2026-04-16.\n2. Compare this amount to the expected monthly volume: $100,000.00 / $111,844.00 = 0.8939...\n3. Round to two decimal places for comparison: 0.89x.",
+        "evidence": "Transaction date 2026-04-16, amount 100000.00, USD; KYC profile expected monthly volume 111844.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  }
+}

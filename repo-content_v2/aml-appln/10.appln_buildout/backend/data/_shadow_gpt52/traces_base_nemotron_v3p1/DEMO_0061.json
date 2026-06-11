@@ -1,0 +1,322 @@
+{
+  "case_id": "DEMO_0061",
+  "alert_id": "ALT_2465191",
+  "entity_id": "SYN_62defd67",
+  "started_at": "2026-05-27T15:13:32.892566+00:00",
+  "finished_at": "2026-05-27T15:14:11.745472+00:00",
+  "wall_clock_ms": 38852.9,
+  "transactions": [
+    {
+      "amount": 1144148.79,
+      "channel": "ach",
+      "counterparty": "QRP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 848582.98,
+      "channel": "wire",
+      "counterparty": "LTZC Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 817190.83,
+      "channel": "card",
+      "counterparty": "Linda Davis",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 393717.39,
+      "channel": "ach",
+      "counterparty": "RS Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 373071.59,
+      "channel": "wire",
+      "counterparty": "KEC Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 601677.96,
+      "channel": "cash",
+      "counterparty": "Christopher Miller",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 1111779.72,
+      "channel": "cash",
+      "counterparty": "Daniel Davis",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 1210871.56,
+      "channel": "ach",
+      "counterparty": "WO Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 928991.87,
+      "channel": "wire",
+      "counterparty": "GHQ Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 519241.4,
+      "channel": "cash",
+      "counterparty": "Jennifer Anderson",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 677492.91,
+      "channel": "ach",
+      "counterparty": "EHDD Services LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 710183.8,
+      "channel": "ach",
+      "counterparty": "WHLD Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 733941.56,
+      "channel": "wire",
+      "counterparty": "YRRX Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 939888.74,
+      "channel": "wire",
+      "counterparty": "GD Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 492496.91,
+      "channel": "ach",
+      "counterparty": "FLGE Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 304562.13,
+      "channel": "ach",
+      "counterparty": "SQJ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 1270287.45,
+      "channel": "ach",
+      "counterparty": "KNI Group LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 319447.82,
+      "channel": "ach",
+      "counterparty": "TRVZW Services LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 523898.43,
+      "channel": "card",
+      "counterparty": "Patricia Garcia",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 359134.08,
+      "channel": "ach",
+      "counterparty": "ZK Group LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 1322402.88,
+      "channel": "ach",
+      "counterparty": "VXZU Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_62defd67",
+    "entity_type": "business",
+    "expected_monthly_volume": 4930705.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$4,930,705.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "MID-SHIP Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    },
+    {
+      "name": "Córdoba Music Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.524,
+      "wire": 0.238,
+      "cash": 0.143,
+      "card": 0.095
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.5238095238095238, 'wire': 0.23809523809523808, 'card': 0.09523809523809523, 'cash': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The transaction set includes a variety of channels such as ACH, wire, card, and cash. Behavior patterns show use of both corporate and individual counterparties. Risk rating is assessed as medium based on the profile. The activity is consistent with a money services business model. No immediate structuring indicators are evident given the channel mix.",
+      "metrics": {
+        "tx_count": 0,
+        "tx_total_usd": 0.0,
+        "channel_mix": {},
+        "velocity_24h_max": 0,
+        "velocity_24h_avg_30d": 0.0,
+        "unique_counterparties_7d": 0,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.0
+      },
+      "evidence": "transactions; kyc_profile"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to produce a strict-JSON numeric finding for downstream financial-crime analysis.\n\nWe must echo the question verbatim as question field.\n\nAnswer must be numeric value derivable from input, within rounding tolerance ±5%. Also must include a contiguous 3-word phrase that names the specific quantity computed, e.g., \"total cash dep"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "no statute provided",
+      "label": "neutral",
+      "reasoning": "no statute provided; § 0 cannot be cited."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "no statute provided",
+        "label": "neutral",
+        "reasoning": "no statute provided; § 0 cannot be cited."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The transaction set includes a variety of channels such as ACH, wire, card, and cash. Behavior patterns show use of both corporate and individual counterparties. Risk rating is assessed as medium based on the profile. The activity is consistent with a money services business model. No immediate structuring indicators are evident given the channel mix.",
+        "metrics": {
+          "tx_count": 0,
+          "tx_total_usd": 0.0,
+          "channel_mix": {},
+          "velocity_24h_max": 0,
+          "velocity_24h_avg_30d": 0.0,
+          "unique_counterparties_7d": 0,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.0
+        },
+        "evidence": "transactions; kyc_profile"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1144148.79, \"channel\": \"ach\", \"counterparty\": \"QRP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 848582.98, \"channel\": \"wire\", \"counterparty\": \"LTZC Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 817190.83, \"channel\": \"card\", \"counterparty\": \"Linda Davis\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 393717.39, \"channel\": \"ach\", \"counterparty\": \"RS Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 373071.59, \"channel\": \"wire\", \"counterparty\": \"KEC Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 601677.96, \"channel\": \"cash\", \"counterparty\": \"Christopher Miller\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 1111779.72, \"channel\": \"cash\", \"counterparty\": \"Daniel Davis\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 1210871.56, \"channel\": \"ach\", \"counterparty\": \"WO Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 928991.87, \"channel\": \"wire\", \"counterparty\": \"GHQ Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 519241.4, \"channel\": \"cash\", \"counterparty\": \"Jennifer Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 677492.91, \"channel\": \"ach\", \"counterparty\": \"EHDD Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 710183.8, \"channel\": \"ach\", \"counterparty\": \"WHLD Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 733941.56, \"channel\": \"wire\", \"counterparty\": \"YRRX Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 939888.74, \"channel\": \"wire\", \"counterparty\": \"GD Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 492496.91, \"channel\": \"ach\", \"counterparty\": \"FLGE Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 304562.13, \"channel\": \"ach\", \"counterparty\": \"SQJ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 1270287.45, \"channel\": \"ach\", \"counterparty\": \"KNI Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 319447.82, \"channel\": \"ach\", \"counterparty\": \"TRVZW Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 523898.43, \"channel\": \"card\", \"counterparty\": \"Patricia Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 359134.08, \"channel\": \"ach\", \"counterparty\": \"ZK Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 1322402.88, \"channel\": \"ach\", \"counterparty\": \"VXZU Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_62defd67\", \"entity_type\": \"business\", \"expected_monthly_volume\": 4930705.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$4,930,705.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [{\"name\": \"MID-SHIP Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}, {\"name\": \"Córdoba Music Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"no statute provided\", \"label\": \"neutral\", \"reasoning\": \"no statute provided; § 0 cannot be cited.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The transaction set includes a variety of channels such as ACH, wire, card, and cash. Behavior patterns show use of both corporate and individual counterparties. Risk rating is assessed as medium based on the profile. The activity is consistent with a money services business model. No immediate structuring indicators are evident given the channel mix.\", \"metrics\": {\"tx_count\": 0, \"tx_total_usd\": 0.0, \"channel_mix\": {}, \"velocity_24h_max\": 0, \"velocity_24h_avg_30d\": 0.0, \"unique_counterparties_7d\": 0, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.0}, \"evidence\": \"transactions; kyc_profile\"}], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string (400-800 chars). Must derive from evidence.\n\nWe have transactions list, kyc_profile: business MSB, expected monthly volume 4,930,705 USD. Transactions amounts sum? Let's compute approximate total USD.\n\nI'll sum amounts:\n\n1) 1,144,148.79\n2) 848,582.98\n3) 817,190.83\n4) 393,717.39\n5) 373,071.59\n6) 601,677.96\n7) 1,111,779.72\n8) 1,210,871.56\n9) 928,991.87\n10) 519,241.40\n11) 677,492.91\n12) 710,183.80\n13) 733,941.56\n14) 939,888.74\n15) 492,496.91\n16) 304,562.13\n17) 1,270,287.45\n18) 319,447.82\n19) 523,898.43\n20) 359,134.08\n21) 1,322,402.88\n\nLet's sum stepwise.\n\nI'll add:\n\n1) 1,144,148.79\n+2) 848,582.98 = 1,992,731.77\n+3) 817,190.83 = 2,809,922.60\n+4) 393,717.39 = 3,203,640. - actually 3,203,640 - let's compute precisely: 2,809,922.60 + 393,717.39 = 3,203,639.99\n+5) 373,071.59 = 3,576,711.58\n+6) 601,677.96 = 4,178,389.54\n+7) 1,111,779.72 = 5,290,169.26\n+8) 1,210,871.56 = 6,501,040.82\n+9) 928,991.87 = 7,430,032.69\n+10) 519,241.40 = 7,949,274.09\n+11) 677,492.91 = 8,626,767.00\n+12) 710,183.80 = 9,336,950.80\n+13) 733,941.56 = 10,070,892.36\n+14) 939,888.74 = 11,010,781.10\n+15) 492,496.91 = 11,503,278.01\n+16) 304,562.13 = 11,807,840.14\n+17) 1,270,287.45 = 13,078,127.59\n+18) 319,447.82 = 13,397,575.41\n+19) 523,898.43 = 13,921,473.84\n+20) 359,134.08 = 14,280,607.92\n+21) 1,322,402.88 = 15,603,010.80\n\nTotal approx $15,603,011.\n\nExpected monthly volume is $4,930,705. So observed total is about 3.16 times declared volume. That's high.\n\nBut we need to see if activity consistent with declared business purpose: Money services business (currency exchange / transmitter). That can involve large transfers, but typical volume is declared monthly. Observed total across maybe a few weeks? The transactions dates range from 2026-02-01 to 2026-04-28 (approx 3 months). If it's monthly, then 3 months would be about 3 * 4.93M = 14.79M, which is close to observed 15.6M. So maybe within expected range over quarter. But we need to see if pattern is suspicious: large number of counterparties, many wires/ach, cash etc. There's also sanctions hits: \"MID-SHIP Group LLC\" and \"Córdoba Music Group LLC\" with match_score 0.857. Are any of the counterparties matching these? The counterparties list: QRP Ventures LLC, LTZC Ventures LLC, Linda Davis, RS Solutions LLC, KEC Solutions LLC, Christopher Miller, Daniel Davis, WO Associates LLC, GHQ Ventures LLC, Jennifer Anderson, EHDD Services LLC, WHLD Capital LLC, YRRX Associates LLC, GD Enterprises LLC, FLGE Capital LLC, SQJ Logistics LLC, KNI Group LLC, TRVZW Services LLC, Patricia Garcia, ZK Group LLC, VXZU Imports LLC. None of these appear to be \"MID-SHIP Group LLC\" or \"Córdoba Music Group LLC\". So no direct hit on counterparties. But sanctions hits are separate entities; they may be unrelated.\n\nWe have auxiliary_findings.behavioral: summary says no immediate structuring indicators; metrics all zero because not provided. So no numeric metrics.\n\nThus we need to decide is_suspicious.\n\nPotential red flags: high volume relative to declared monthly volume (3.16x). That could be suspicious if it's within short period. But the timeframe spans ~2.5 months? Actually from 2026-02-01 to 2026-04-28 ~ 2.9 months. So maybe consistent.\n\nBut there is also a pattern of many counterparties (many unique). Could be structuring? Not necessarily.\n\nNo clear structuring (cash under 10k?) There are cash transactions: amounts: 601,677.96, 1,111,779.72, 519,241.40, 359,134.08. All >10k, so not structuring.\n\nNo sub-CTR cash deposits.\n\nSanctions hit is moderate match_score 0.857 but not on counterparties.\n\nThus maybe not SAR-warranted; but we must be careful: The instructions say set is_suspicious=true only when evidence warrants filing a SAR. Here we have high volume but also declared business purpose is MSB which can handle large volumes. The observed total is about 3x monthly expectation; but could be legitimate spikes. No other strong red flags.\n\nThus likely is_suspicious = false, with disposition rationale.\n\nWe must produce a negative narrative (disposition rationale) 400-800 characters, grounded, naming surface red flag (high volume relative to declared monthly volume? Or maybe the pattern of many wires to new payees? Let's pick \"high transaction total of $15.6M across March-April 2026, approximately 3.2× the declared monthly volume of $4.93M\"). Then cite bundle evidence that resolves: KYC business purpose is MSB with declared monthly volume ~$4.93M, and the activity spans roughly three months, aligning with expected quarterly volume; also the counterparties are typical corporate entities, no structuring, no sanctions hit on counterparties. So disposition: no SAR warranted.\n\nNeed to ensure narrative length 400-800 characters. Let's craft about 550 characters.\n\nCount characters roughly. We'll write:\n\n\"Surface red flag: aggregate transaction value of $15,603,011 across the provided dates, roughly 3.2 × the customer’s declared monthly volume of $4,930,705. The activity is explained by the kyc_profile, which identifies the entity as a money‑services business with expected monthly throughput of that magnitude; the transaction dates span February through April, consistent with a three‑month period, and the counterparties are corporate entities typical for an MSB. No structuring, sub‑CTR cash pattern, or sanctions hit on counterparties is present. Therefore, based on the bundle, no SAR is warranted.\"\n\nNow count characters. Let's approximate: each char includes spaces. Let's count quickly.\n\nI'll count characters manually (approx). Use a rough estimate: The text length seems maybe ~350-400 characters. Need 400-800. Let's expand a bit.\n\nAdd more detail: mention that the risk rating is medium, and that the channel mix includes ACH, wire, card, cash, but no structuring indicators. Also mention that the sanctions hits are on unrelated entities with match_score 0.857, not on any counterparty.\n\nLet's craft final narrative ~560 characters.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It's okay to have line breaks but better keep as one line.\n\nNow produce final answer.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: aggregate transaction value of $15,603,011 across the provided dates, roughly 3.2 × the customer’s declared monthly volume of $4,930,705. The kyc_profile identifies the entity as a money‑services business with an expected monthly throughput of that magnitude, and the transaction dates span February through April, consistent with a three‑month period. The counterparties are corporate entities typical for an MSB, and the channel mix (ACH, wire, card, cash) shows no structuring or sub‑CTR cash pattern. The sanctions hits reference unrelated entities (MID‑SHIP Group LLC, Córdoba Music Group LLC) with match_score 0.857 and do not appear among the counterparties. Given this context, the activity aligns with the declared business purpose and no SAR is warranted.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: aggregate transaction value of $15,603,011 across the provided dates, roughly 3.2 × the customer’s declared monthly volume of $4,930,705. The kyc_profile identifies the entity as a money‑services business with an expected monthly throughput of that magnitude, and the transaction dates span February through April, consistent with a three‑month period. The counterparties are corporate entities typical for an MSB, and the channel mix (ACH, wire, card, cash) shows no structuring or sub‑CTR cash pattern. The sanctions hits reference unrelated entities (MID‑SHIP Group LLC, Córdoba Music Group LLC) with match_score 0.857 and do not appear among the counterparties. Given this context, the activity aligns with the declared business purpose and no SAR is warranted."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: aggregate transaction value of $15,603,011 across the provided dates, roughly 3.2 × the customer’s declared monthly volume of $4,930,705. The kyc_profile identifies the entity as a money‑services business with an expected monthly throughput of that magnitude, and the transaction dates span February through April, consistent with a three‑month period. The counterparties are corporate entities typical for an MSB, and the channel mix (ACH, wire, card, cash) shows no structuring or sub‑CTR cash pattern. The sanctions hits reference unrelated entities (MID‑SHIP Group LLC, Córdoba Music Group LLC) with match_score 0.857 and do not appear among the counterparties. Given this context, the activity aligns with the declared business purpose and no SAR is warranted.",
+  "judge_enabled": false,
+  "error": null
+}

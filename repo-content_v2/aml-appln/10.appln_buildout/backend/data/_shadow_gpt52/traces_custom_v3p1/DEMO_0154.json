@@ -1,0 +1,349 @@
+{
+  "case_id": "DEMO_0154",
+  "alert_id": "ALT_2415974",
+  "entity_id": "SYN_eef463ea",
+  "started_at": "2026-05-27T16:07:10.767562+00:00",
+  "finished_at": "2026-05-27T16:07:19.986875+00:00",
+  "wall_clock_ms": 9219.3,
+  "transactions": [
+    {
+      "amount": 92921.07,
+      "channel": "card",
+      "counterparty": "Daniel Anderson",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 76260.88,
+      "channel": "ach",
+      "counterparty": "TQFPR Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    },
+    {
+      "amount": 57424.95,
+      "channel": "card",
+      "counterparty": "Elizabeth Thompson",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 137527.2,
+      "channel": "wire",
+      "counterparty": "YGJN Services LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 92946.95,
+      "channel": "ach",
+      "counterparty": "YO Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 78832.95,
+      "channel": "card",
+      "counterparty": "Sarah Garcia",
+      "currency": "USD",
+      "date": "2026-03-19",
+      "notes": ""
+    },
+    {
+      "amount": 150520.92,
+      "channel": "wire",
+      "counterparty": "KJVZ Services LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 130101.91,
+      "channel": "card",
+      "counterparty": "Elizabeth Miller",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 63491.39,
+      "channel": "card",
+      "counterparty": "Elizabeth Walker",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 69969.45,
+      "channel": "ach",
+      "counterparty": "BCHD Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 98192.2,
+      "channel": "card",
+      "counterparty": "Robert Johnson",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 150161.36,
+      "channel": "card",
+      "counterparty": "Daniel White",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 42316.25,
+      "channel": "ach",
+      "counterparty": "BGNSG Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 130582.28,
+      "channel": "cash",
+      "counterparty": "David White",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 149871.49,
+      "channel": "wire",
+      "counterparty": "ZF Group LLC",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 39521.15,
+      "channel": "card",
+      "counterparty": "John Lewis",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 51801.81,
+      "channel": "card",
+      "counterparty": "Sarah Garcia",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 60564.89,
+      "channel": "card",
+      "counterparty": "Jennifer Moore",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 155670.09,
+      "channel": "card",
+      "counterparty": "Michael Walker",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 109186.12,
+      "channel": "ach",
+      "counterparty": "YGHS Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 143573.94,
+      "channel": "ach",
+      "counterparty": "XWD Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 114033.93,
+      "channel": "ach",
+      "counterparty": "WKX Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_eef463ea",
+    "entity_type": "business",
+    "expected_monthly_volume": 581530.0,
+    "business_purpose": "Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$581,530.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "MID-SHIP Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    },
+    {
+      "name": "Córdoba Music Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.5,
+      "ach": 0.318,
+      "wire": 0.136,
+      "cash": 0.045
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'card': 0.5, 'ach': 0.3181818181818182, 'wire': 0.13636363636363635, 'cash': 0.045454545454545456})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 23 with a tx_total_usd of 2113133.23. The channel_mix shows a reliance on card transactions at 0.478, alongside ACH and wire activity. Activity is characterized by a velocity_24h_max of 2 and a limited reach of unique_counterparties_7d of 2. The vs_declared_volume_ratio of 12.13 indicates volume significantly exceeding the expected monthly profile. The presence of a cash transaction of 130582.28 on 2026-03-13 warrants review for potential structuring under 31 USC 5324. This pattern of rapid movement and high volume relative to declared expectations appears consistent with atypical business activity.",
+      "metrics": {
+        "tx_count": 23,
+        "tx_total_usd": 2113133.23,
+        "channel_mix": {
+          "card": 0.478,
+          "ach": 0.348,
+          "wire": 0.13,
+          "cash": 0.043
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 1.15,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 12.13
+      },
+      "evidence": "transactions[0..22]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 2433133.21",
+      "calculation": "1. Sum all transaction amounts from the [transactions] block: 92,921.07 + 76,260.88 + 57,424.95 + 137,527.20 + 92,946.95 + 78,832.95 + 150,520.92 + 130,101.91 + 63,491.39 + 69,969.45 + 98,192.20 + 150,161.36 + 42,316.25 + 130,582.28 + 149,871.49 + 39,521.15 + 51,801.81 + 60,564.89 + 155,670.09 + 109,186.12 + 143,573.94 + 114,033.93 = 2,433,133.21",
+      "evidence": "transactions[0..21].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no applicability finding can be made.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute is mapped for this typology. Without a statutory reference, it is impossible to determine if the facts satisfy any legal elements or if the statute applies."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no applicability finding can be made.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute is mapped for this typology. Without a statutory reference, it is impossible to determine if the facts satisfy any legal elements or if the statute applies."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 23 with a tx_total_usd of 2113133.23. The channel_mix shows a reliance on card transactions at 0.478, alongside ACH and wire activity. Activity is characterized by a velocity_24h_max of 2 and a limited reach of unique_counterparties_7d of 2. The vs_declared_volume_ratio of 12.13 indicates volume significantly exceeding the expected monthly profile. The presence of a cash transaction of 130582.28 on 2026-03-13 warrants review for potential structuring under 31 USC 5324. This pattern of rapid movement and high volume relative to declared expectations appears consistent with atypical business activity.",
+        "metrics": {
+          "tx_count": 23,
+          "tx_total_usd": 2113133.23,
+          "channel_mix": {
+            "card": 0.478,
+            "ach": 0.348,
+            "wire": 0.13,
+            "cash": 0.043
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 1.15,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 12.13
+        },
+        "evidence": "transactions[0..22]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 2433133.21",
+        "calculation": "1. Sum all transaction amounts from the [transactions] block: 92,921.07 + 76,260.88 + 57,424.95 + 137,527.20 + 92,946.95 + 78,832.95 + 150,520.92 + 130,101.91 + 63,491.39 + 69,969.45 + 98,192.20 + 150,161.36 + 42,316.25 + 130,582.28 + 149,871.49 + 39,521.15 + 51,801.81 + 60,564.89 + 155,670.09 + 109,186.12 + 143,573.94 + 114,033.93 = 2,433,133.21",
+        "evidence": "transactions[0..21].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 92921.07, \"channel\": \"card\", \"counterparty\": \"Daniel Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 76260.88, \"channel\": \"ach\", \"counterparty\": \"TQFPR Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}, {\"amount\": 57424.95, \"channel\": \"card\", \"counterparty\": \"Elizabeth Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 137527.2, \"channel\": \"wire\", \"counterparty\": \"YGJN Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 92946.95, \"channel\": \"ach\", \"counterparty\": \"YO Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 78832.95, \"channel\": \"card\", \"counterparty\": \"Sarah Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-19\", \"notes\": \"\"}, {\"amount\": 150520.92, \"channel\": \"wire\", \"counterparty\": \"KJVZ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 130101.91, \"channel\": \"card\", \"counterparty\": \"Elizabeth Miller\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 63491.39, \"channel\": \"card\", \"counterparty\": \"Elizabeth Walker\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 69969.45, \"channel\": \"ach\", \"counterparty\": \"BCHD Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 98192.2, \"channel\": \"card\", \"counterparty\": \"Robert Johnson\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 150161.36, \"channel\": \"card\", \"counterparty\": \"Daniel White\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 42316.25, \"channel\": \"ach\", \"counterparty\": \"BGNSG Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 130582.28, \"channel\": \"cash\", \"counterparty\": \"David White\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 149871.49, \"channel\": \"wire\", \"counterparty\": \"ZF Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 39521.15, \"channel\": \"card\", \"counterparty\": \"John Lewis\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 51801.81, \"channel\": \"card\", \"counterparty\": \"Sarah Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 60564.89, \"channel\": \"card\", \"counterparty\": \"Jennifer Moore\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 155670.09, \"channel\": \"card\", \"counterparty\": \"Michael Walker\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 109186.12, \"channel\": \"ach\", \"counterparty\": \"YGHS Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 143573.94, \"channel\": \"ach\", \"counterparty\": \"XWD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 114033.93, \"channel\": \"ach\", \"counterparty\": \"WKX Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_eef463ea\", \"entity_type\": \"business\", \"expected_monthly_volume\": 581530.0, \"business_purpose\": \"Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$581,530.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [{\"name\": \"MID-SHIP Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}, {\"name\": \"Córdoba Music Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no applicability finding can be made.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute is mapped for this typology. Without a statutory reference, it is impossible to determine if the facts satisfy any legal elements or if the statute applies.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits a tx_count of 23 with a tx_total_usd of 2113133.23. The channel_mix shows a reliance on card transactions at 0.478, alongside ACH and wire activity. Activity is characterized by a velocity_24h_max of 2 and a limited reach of unique_counterparties_7d of 2. The vs_declared_volume_ratio of 12.13 indicates volume significantly exceeding the expected monthly profile. The presence of a cash transaction of 130582.28 on 2026-03-13 warrants review for potential structuring under 31 USC 5324. This pattern of rapid movement and high volume relative to declared expectations appears consistent with atypical business activity.\", \"metrics\": {\"tx_count\": 23, \"tx_total_usd\": 2113133.23, \"channel_mix\": {\"card\": 0.478, \"ach\": 0.348, \"wire\": 0.13, \"cash\": 0.043}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 1.15, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": true, \"vs_declared_volume_ratio\": 12.13}, \"evidence\": \"transactions[0..22]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 2433133.21\", \"calculation\": \"1. Sum all transaction amounts from the [transactions] block: 92,921.07 + 76,260.88 + 57,424.95 + 137,527.20 + 92,946.95 + 78,832.95 + 150,520.92 + 130,101.91 + 63,491.39 + 69,969.45 + 98,192.20 + 150,161.36 + 42,316.25 + 130,582.28 + 149,871.49 + 39,521.15 + 51,801.81 + 60,564.89 + 155,670.09 + 109,186.12 + 143,573.94 + 114,033.93 = 2,433,133.21\", \"evidence\": \"transactions[0..21].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account of SYN_eef463ea exhibits a significant volume spike and rapid movement of funds inconsistent with its declared business purpose. Between 2026-02-14 and 2026-04-30, the entity processed 23 transactions totaling $2,113,133.23, which represents a vs_declared_volume_ratio of 12.13 relative to the expected monthly volume of $581,530. Notable activity includes a cash transaction of $130,582.28 on 2026-03-13 and multiple high-value wires and ACH transfers to various counterparties, such as $150,520.92 to KJVZ Services LLC on 2026-02-16. This pattern of high-volume, rapid pass-through activity is atypical for a professional B2B services firm. The activity warrants review for potential layering or structuring under 31 USC 5324. Final filing decision is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_eef463ea exhibits a significant volume spike and rapid movement of funds inconsistent with its declared business purpose. Between 2026-02-14 and 2026-04-30, the entity processed 23 transactions totaling $2,113,133.23, which represents a vs_declared_volume_ratio of 12.13 relative to the expected monthly volume of $581,530. Notable activity includes a cash transaction of $130,582.28 on 2026-03-13 and multiple high-value wires and ACH transfers to various counterparties, such as $150,520.92 to KJVZ Services LLC on 2026-02-16. This pattern of high-volume, rapid pass-through activity is atypical for a professional B2B services firm. The activity warrants review for potential layering or structuring under 31 USC 5324. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account of SYN_eef463ea exhibits a significant volume spike and rapid movement of funds inconsistent with its declared business purpose. Between 2026-02-14 and 2026-04-30, the entity processed 23 transactions totaling $2,113,133.23, which represents a vs_declared_volume_ratio of 12.13 relative to the expected monthly volume of $581,530. Notable activity includes a cash transaction of $130,582.28 on 2026-03-13 and multiple high-value wires and ACH transfers to various counterparties, such as $150,520.92 to KJVZ Services LLC on 2026-02-16. This pattern of high-volume, rapid pass-through activity is atypical for a professional B2B services firm. The activity warrants review for potential layering or structuring under 31 USC 5324. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

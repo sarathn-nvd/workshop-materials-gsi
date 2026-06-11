@@ -1,0 +1,184 @@
+{
+  "case_id": "DEMO_0026",
+  "entity_id": "SYN_e04aac21",
+  "started_at": "2026-05-23T13:13:48.417645+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 586.0,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 675.29, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 201.76, \"channel\": \"ach\", \"counterparty\": \"Donor Susan Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 284.99, \"channel\": \"ach\", \"counterparty\": \"Donor Michael Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"small inbound donation\"}, {\"amount\": 818.5, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"small inbound donation\"}, {\"amount\": 662.05, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Miller\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"small inbound donation\"}, {\"amount\": 410.83, \"channel\": \"ach\", \"counterparty\": \"Donor Sarah Walker\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"small inbound donation\"}, {\"amount\": 245.51, \"channel\": \"wire\", \"counterparty\": \"Donor Patricia Smith\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"small inbound donation\"}, {\"amount\": 883.87, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Walker\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"small inbound donation\"}, {\"amount\": 434.46, \"channel\": \"ach\", \"counterparty\": \"Donor Patricia Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_e04aac21\", \"entity_type\": \"business\", \"expected_monthly_volume\": 14372, \"business_purpose\": \"Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-DC\"}, \"sanctions_pep_hits\": [{\"name\": \"Patricia Smith\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The request cannot be fulfilled as no statute was provided in the input.\", \"label\": \"neutral\", \"reasoning\": \"The input explicitly states 'No statute mapped for this typology' and provides no statute text to analyze.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account recorded 8 transactions between 2026-04-13 and 2026-04-26, totaling $5,617.27. The activity consists primarily of small inbound donations via ACH and wire, with a maximum single transaction of $883.87. Behavioral metrics indicate a velocity of 8 transactions in 24 hours and 8 unique counterparties over 7 days. The observed volume is significantly lower than the declared monthly volume of $14,372.00, resulting in a vs_declared_volume_ratio of approximately 0.39. No loop activity was detected.\", \"metrics\": {\"tx_count\": 8, \"tx_total_usd\": 5617.27, \"channel_mix\": {\"wire\": 0.375, \"ach\": 0.625, \"cash\": 0.0}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.29, \"unique_counterparties_7d\": 8, \"amount_z_score_max\": 1.68, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.39}, \"evidence\": \"transactions[0..7]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume for April 2026 is $4,617.27, which is significantly lower than the expected monthly volume of $14,372.00.\", \"calculation\": \"1. Identify all transaction amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46.\\n2. Sum the amounts: 675.29 + 201.76 + 284.99 + 818.50 + 662.05 + 410.83 + 245.51 + 883.87 + 434.46 = 4,617.27.\\n3. Compare to KYC declared monthly volume of 14,372.00.\", \"evidence\": \"Transaction list rows with amounts and date range 2026-04-13 to 2026-04-26; KYC profile field 'expected_monthly_volume' = 14372.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant policy excerpt is available to provide a citation.\", \"evidence_span\": \"no policy excerpts were retrieved\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred",
+      "_decision_target"
+    ],
+    "v1_sar_is_suspicious": false,
+    "agreement_with_v1": true,
+    "v1_decision_target": "not_suspicious"
+  },
+  "transactions": [
+    {
+      "amount": 675.29,
+      "channel": "wire",
+      "counterparty": "Donor Karen Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 201.76,
+      "channel": "ach",
+      "counterparty": "Donor Susan Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 284.99,
+      "channel": "ach",
+      "counterparty": "Donor Michael Thompson",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 818.5,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Jackson",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 662.05,
+      "channel": "wire",
+      "counterparty": "Donor Karen Miller",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 410.83,
+      "channel": "ach",
+      "counterparty": "Donor Sarah Walker",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 245.51,
+      "channel": "wire",
+      "counterparty": "Donor Patricia Smith",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 883.87,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Walker",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 434.46,
+      "channel": "ach",
+      "counterparty": "Donor Patricia Anderson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_e04aac21",
+    "entity_type": "business",
+    "expected_monthly_volume": 14372.0,
+    "business_purpose": "Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-DC"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Patricia Smith",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.667,
+      "wire": 0.333
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The request cannot be fulfilled as no statute was provided in the input.",
+        "label": "neutral",
+        "reasoning": "The input explicitly states 'No statute mapped for this typology' and provides no statute text to analyze."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account recorded 8 transactions between 2026-04-13 and 2026-04-26, totaling $5,617.27. The activity consists primarily of small inbound donations via ACH and wire, with a maximum single transaction of $883.87. Behavioral metrics indicate a velocity of 8 transactions in 24 hours and 8 unique counterparties over 7 days. The observed volume is significantly lower than the declared monthly volume of $14,372.00, resulting in a vs_declared_volume_ratio of approximately 0.39. No loop activity was detected.",
+        "metrics": {
+          "tx_count": 8,
+          "tx_total_usd": 5617.27,
+          "channel_mix": {
+            "wire": 0.375,
+            "ach": 0.625,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.29,
+          "unique_counterparties_7d": 8,
+          "amount_z_score_max": 1.68,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.39
+        },
+        "evidence": "transactions[0..7]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume for April 2026 is $4,617.27, which is significantly lower than the expected monthly volume of $14,372.00.",
+        "calculation": "1. Identify all transaction amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46.\n2. Sum the amounts: 675.29 + 201.76 + 284.99 + 818.50 + 662.05 + 410.83 + 245.51 + 883.87 + 434.46 = 4,617.27.\n3. Compare to KYC declared monthly volume of 14,372.00.",
+        "evidence": "Transaction list rows with amounts and date range 2026-04-13 to 2026-04-26; KYC profile field 'expected_monthly_volume' = 14372.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant policy excerpt is available to provide a citation.",
+        "evidence_span": "no policy excerpts were retrieved"
+      }
+    ]
+  }
+}

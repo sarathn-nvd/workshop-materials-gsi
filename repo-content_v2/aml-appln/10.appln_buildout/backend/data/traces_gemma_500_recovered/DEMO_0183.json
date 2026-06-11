@@ -1,0 +1,211 @@
+{
+  "case_id": "DEMO_0183",
+  "alert_id": "ALT_2484659",
+  "entity_id": "SYN_e2418bd1",
+  "started_at": "2026-05-29T03:03:49.831155+00:00",
+  "finished_at": "2026-05-29T03:04:06.870971+00:00",
+  "wall_clock_ms": 17039.8,
+  "transactions": [
+    {
+      "amount": 2403128.89,
+      "channel": "wire",
+      "counterparty": "EQR Exports LLC, Hong Kong",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": "trade-finance over-invoiced"
+    },
+    {
+      "amount": 226642.2,
+      "channel": "wire",
+      "counterparty": "MLHTC Capital LLC, Singapore",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "supporting trade wire"
+    },
+    {
+      "amount": 146804.69,
+      "channel": "wire",
+      "counterparty": "NIFZB Imports LLC, Singapore",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "supporting trade wire"
+    },
+    {
+      "amount": 192591.4,
+      "channel": "wire",
+      "counterparty": "TTH Holdings LLC, Singapore",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "supporting trade wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_e2418bd1",
+    "entity_type": "business",
+    "expected_monthly_volume": 615037.0,
+    "business_purpose": "Import-export trading firm; trade-finance flows; declared monthly volume ~$615,037.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Peel-chain pattern with 4 descending wire amounts",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_e2418bd1 executed 4 transactions totaling $2,969,167.18 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.44. Volume vs declared monthly is 16.09x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 4,
+        "tx_total_usd": 2969167.18,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.44,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.73,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 16.09
+      },
+      "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+      "answer": "total volume 2,969,167.18",
+      "calculation": "1. Sum all transaction amounts in transactions[0..3]: 2,403,128.89 + 226,642.20 + 146,804.69 + 192,591.40 = 2,969,167.18.",
+      "evidence": "transactions[0..3]"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The document notes that virtual currencies are a growing concern but have yet to overtake more traditional methods to move funds.",
+      "evidence_span": "While of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 31 U.S.C. § 5318(g) — Suspicious activity reporting requirements?",
+      "answer": "Yes, 31 U.S.C. § 5318(g) requires reporting because the transactions are suspicious.",
+      "label": "entailment",
+      "reasoning": "Under 31 U.S.C. § 5318(g) requires reporting of transactions that the financial institution knows, suspects, or has reason to suspect are suspicious. The fact pattern indicates that Entity SYN_e2418bd1 engaged in a wire transfer of $2,403,128.89 to EQR Exports LLC in Hong Kong which is explicitly noted as 'trade-finance over-invoiced'. This over-invoicing is a classic red flag for trade-based money laundering. Furthermore, the total volume of the four transactions (~$3 million) vastly exceeds the entity's declared monthly volume of $615,037. Because the activity involves suspected over-invoicing and significant deviations from the KYC profile, it meets the criteria for a suspicious activity report."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_e2418bd1 executed 4 transactions totaling $2,969,167.18 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.44. Volume vs declared monthly is 16.09x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 4,
+          "tx_total_usd": 2969167.18,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.44,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.73,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 16.09
+        },
+        "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "total volume 2,969,167.18",
+        "calculation": "1. Sum all transaction amounts in transactions[0..3]: 2,403,128.89 + 226,642.20 + 146,804.69 + 192,591.40 = 2,969,167.18.",
+        "evidence": "transactions[0..3]"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The document notes that virtual currencies are a growing concern but have yet to overtake more traditional methods to move funds.",
+        "evidence_span": "While of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 31 U.S.C. § 5318(g) — Suspicious activity reporting requirements?",
+        "answer": "Yes, 31 U.S.C. § 5318(g) requires reporting because the transactions are suspicious.",
+        "label": "entailment",
+        "reasoning": "Under 31 U.S.C. § 5318(g) requires reporting of transactions that the financial institution knows, suspects, or has reason to suspect are suspicious. The fact pattern indicates that Entity SYN_e2418bd1 engaged in a wire transfer of $2,403,128.89 to EQR Exports LLC in Hong Kong which is explicitly noted as 'trade-finance over-invoiced'. This over-invoicing is a classic red flag for trade-based money laundering. Furthermore, the total volume of the four transactions (~$3 million) vastly exceeds the entity's declared monthly volume of $615,037. Because the activity involves suspected over-invoicing and significant deviations from the KYC profile, it meets the criteria for a suspicious activity report."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2403128.89, \"channel\": \"wire\", \"counterparty\": \"EQR Exports LLC, Hong Kong\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"trade-finance over-invoiced\"}, {\"amount\": 226642.2, \"channel\": \"wire\", \"counterparty\": \"MLHTC Capital LLC, Singapore\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"supporting trade wire\"}, {\"amount\": 146804.69, \"channel\": \"wire\", \"counterparty\": \"NIFZB Imports LLC, Singapore\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"supporting trade wire\"}, {\"amount\": 192591.4, \"channel\": \"wire\", \"counterparty\": \"TTH Holdings LLC, Singapore\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"supporting trade wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_e2418bd1\", \"entity_type\": \"business\", \"expected_monthly_volume\": 615037.0, \"business_purpose\": \"Import-export trading firm; trade-finance flows; declared monthly volume ~$615,037.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN\\u2019s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. \\u00a7 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. \\u00a7 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                \\u00a7 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. \\u00a7 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. \\u00a7 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation\\u2019s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO\\u2019s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A\\u2192B\\u2192C\\u2192A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with \\u22653% trim.\"}], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_e2418bd1 executed 4 transactions totaling $2,969,167.18 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.44. Volume vs declared monthly is 16.09x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 4, \"tx_total_usd\": 2969167.18, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.44, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.73, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 16.09}, \"evidence\": \"transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"total volume 2,969,167.18\", \"calculation\": \"1. Sum all transaction amounts in transactions[0..3]: 2,403,128.89 + 226,642.20 + 146,804.69 + 192,591.40 = 2,969,167.18.\", \"evidence\": \"transactions[0..3]\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The document notes that virtual currencies are a growing concern but have yet to overtake more traditional methods to move funds.\", \"evidence_span\": \"While of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}], \"statutory\": [{\"question\": \"Does the conduct described fall within 31 U.S.C. \\u00a7 5318(g) \\u2014 Suspicious activity reporting requirements?\", \"answer\": \"Yes, 31 U.S.C. \\u00a7 5318(g) requires reporting because the transactions are suspicious.\", \"label\": \"entailment\", \"reasoning\": \"Under 31 U.S.C. \\u00a7 5318(g) requires reporting of transactions that the financial institution knows, suspects, or has reason to suspect are suspicious. The fact pattern indicates that Entity SYN_e2418bd1 engaged in a wire transfer of $2,403,128.89 to EQR Exports LLC in Hong Kong which is explicitly noted as 'trade-finance over-invoiced'. This over-invoicing is a classic red flag for trade-based money laundering. Furthermore, the total volume of the four transactions (~$3 million) vastly exceeds the entity's declared monthly volume of $615,037. Because the activity involves suspected over-invoicing and significant deviations from the KYC profile, it meets the criteria for a suspicious activity report.\"}]}}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Entity SYN_e2418bd1 exhibited activity indicative of trade-based money laundering. A wire transfer of $2,403,128.89 to EQR Exports LLC (Hong Kong) on 2026-04-18 was explicitly flagged as 'trade-finance over-invoiced'. This was accompanied by three supporting wires to Singaporean entities (MLHTC Capital LLC, NIFZB Imports LLC, and TTH Holdings LLC) between 2026-04-19 and 2026-04-27. Total volume of $2,969,167.18 is 16.09x the declared monthly volume of $615,037. This pattern of over-invoicing and extreme volume deviation warrants reporting under 31 U.S.C. § 5318(g). Final filing decision is deferred to the human investigator.\"\n}\n```",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Entity SYN_e2418bd1 exhibited activity indicative of trade-based money laundering. A wire transfer of $2,403,128.89 to EQR Exports LLC (Hong Kong) on 2026-04-18 was explicitly flagged as 'trade-finance over-invoiced'. This was accompanied by three supporting wires to Singaporean entities (MLHTC Capital LLC, NIFZB Imports LLC, and TTH Holdings LLC) between 2026-04-19 and 2026-04-27. Total volume of $2,969,167.18 is 16.09x the declared monthly volume of $615,037. This pattern of over-invoicing and extreme volume deviation warrants reporting under 31 U.S.C. § 5318(g). Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Entity SYN_e2418bd1 exhibited activity indicative of trade-based money laundering. A wire transfer of $2,403,128.89 to EQR Exports LLC (Hong Kong) on 2026-04-18 was explicitly flagged as 'trade-finance over-invoiced'. This was accompanied by three supporting wires to Singaporean entities (MLHTC Capital LLC, NIFZB Imports LLC, and TTH Holdings LLC) between 2026-04-19 and 2026-04-27. Total volume of $2,969,167.18 is 16.09x the declared monthly volume of $615,037. This pattern of over-invoicing and extreme volume deviation warrants reporting under 31 U.S.C. § 5318(g). Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

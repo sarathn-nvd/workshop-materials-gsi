@@ -1,0 +1,320 @@
+{
+  "case_id": "DEMO_0471",
+  "alert_id": "ALT_3950888",
+  "entity_id": "SYN_cb2439e6",
+  "started_at": "2026-05-28T10:58:33.022889+00:00",
+  "finished_at": "2026-05-28T10:58:40.433287+00:00",
+  "wall_clock_ms": 7410.4,
+  "transactions": [
+    {
+      "amount": 2667.01,
+      "channel": "ach",
+      "counterparty": "NMKFE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 1457.55,
+      "channel": "ach",
+      "counterparty": "JET Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1107.09,
+      "channel": "wire",
+      "counterparty": "WWZ Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 1760.79,
+      "channel": "ach",
+      "counterparty": "PU Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 1371.73,
+      "channel": "ach",
+      "counterparty": "BC Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 3762.24,
+      "channel": "ach",
+      "counterparty": "CNXZ Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 3608.38,
+      "channel": "wire",
+      "counterparty": "QX Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 1809.19,
+      "channel": "card",
+      "counterparty": "Patricia Harris",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    },
+    {
+      "amount": 2763.76,
+      "channel": "ach",
+      "counterparty": "UEOX Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 1869.74,
+      "channel": "ach",
+      "counterparty": "DGNFP Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 2151.6,
+      "channel": "wire",
+      "counterparty": "ZY Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 2493.87,
+      "channel": "wire",
+      "counterparty": "JSP Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    },
+    {
+      "amount": 3571.58,
+      "channel": "wire",
+      "counterparty": "OCW Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 1536.11,
+      "channel": "ach",
+      "counterparty": "GO Services LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 1091.06,
+      "channel": "ach",
+      "counterparty": "ZJNC Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 1110.82,
+      "channel": "card",
+      "counterparty": "Sarah White",
+      "currency": "USD",
+      "date": "2026-04-05",
+      "notes": ""
+    },
+    {
+      "amount": 1769.44,
+      "channel": "ach",
+      "counterparty": "VLKI Services LLC",
+      "currency": "USD",
+      "date": "2026-03-19",
+      "notes": ""
+    },
+    {
+      "amount": 1276.26,
+      "channel": "ach",
+      "counterparty": "XEPGH Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 3573.75,
+      "channel": "ach",
+      "counterparty": "XVMGR Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 2622.92,
+      "channel": "wire",
+      "counterparty": "ERNB Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_cb2439e6",
+    "entity_type": "individual",
+    "expected_monthly_volume": 13419.0,
+    "business_purpose": "Self-employed proprietor; small-business cash flow; expected monthly throughput ~$13,419.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.6,
+      "wire": 0.3,
+      "card": 0.1
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.6, 'wire': 0.3, 'card': 0.1})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_cb2439e6 executed 20 transactions totaling $43,374.89 USD with channel mix {\"ach\": 0.6, \"wire\": 0.3, \"card\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.17x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 20,
+        "tx_total_usd": 43374.89,
+        "channel_mix": {
+          "ach": 0.6,
+          "wire": 0.3,
+          "card": 0.1
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.67,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.17
+      },
+      "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 41433.31",
+      "calculation": "1. Identify all transaction amounts from the [transactions] block: 2667.01, 1457.55, 1107.09, 1760.79, 1371.73, 3762.24, 3608.38, 1809.19, 2763.76, 1869.74, 2151.60, 2493.87, 3571.58, 1536.11, 1091.06, 1110.82, 1769.44, 1276.26, 3573.75, 2622.92. 2. Sum these values: 2667.01 + 1457.55 + 1107.09 + 1760.79 + 1371.73 + 3762.24 + 3608.38 + 1809.19 + 2763.76 + 1869.74 + 2151.60 + 2493.87 + 3571.58 + 1536.11 + 1091.06 + 1110.82 + 1769.44 + 1276.26 + 3573.75 + 2622.92 = 41433.31.",
+      "evidence": "transactions[0..19].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute was provided for this typology; therefore, no legal analysis can be performed.",
+      "label": "neutral",
+      "reasoning": "The request is for a statutory applicability finding, but the input contains an empty statute field. Without a specific statute to evaluate against the fact pattern, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral due to insufficient information."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute was provided for this typology; therefore, no legal analysis can be performed.",
+        "label": "neutral",
+        "reasoning": "The request is for a statutory applicability finding, but the input contains an empty statute field. Without a specific statute to evaluate against the fact pattern, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral due to insufficient information."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_cb2439e6 executed 20 transactions totaling $43,374.89 USD with channel mix {\"ach\": 0.6, \"wire\": 0.3, \"card\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.17x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 43374.89,
+          "channel_mix": {
+            "ach": 0.6,
+            "wire": 0.3,
+            "card": 0.1
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.17
+        },
+        "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 41433.31",
+        "calculation": "1. Identify all transaction amounts from the [transactions] block: 2667.01, 1457.55, 1107.09, 1760.79, 1371.73, 3762.24, 3608.38, 1809.19, 2763.76, 1869.74, 2151.60, 2493.87, 3571.58, 1536.11, 1091.06, 1110.82, 1769.44, 1276.26, 3573.75, 2622.92. 2. Sum these values: 2667.01 + 1457.55 + 1107.09 + 1760.79 + 1371.73 + 3762.24 + 3608.38 + 1809.19 + 2763.76 + 1869.74 + 2151.60 + 2493.87 + 3571.58 + 1536.11 + 1091.06 + 1110.82 + 1769.44 + 1276.26 + 3573.75 + 2622.92 = 41433.31.",
+        "evidence": "transactions[0..19].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2667.01, \"channel\": \"ach\", \"counterparty\": \"NMKFE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 1457.55, \"channel\": \"ach\", \"counterparty\": \"JET Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1107.09, \"channel\": \"wire\", \"counterparty\": \"WWZ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 1760.79, \"channel\": \"ach\", \"counterparty\": \"PU Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 1371.73, \"channel\": \"ach\", \"counterparty\": \"BC Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 3762.24, \"channel\": \"ach\", \"counterparty\": \"CNXZ Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 3608.38, \"channel\": \"wire\", \"counterparty\": \"QX Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 1809.19, \"channel\": \"card\", \"counterparty\": \"Patricia Harris\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}, {\"amount\": 2763.76, \"channel\": \"ach\", \"counterparty\": \"UEOX Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 1869.74, \"channel\": \"ach\", \"counterparty\": \"DGNFP Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 2151.6, \"channel\": \"wire\", \"counterparty\": \"ZY Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 2493.87, \"channel\": \"wire\", \"counterparty\": \"JSP Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}, {\"amount\": 3571.58, \"channel\": \"wire\", \"counterparty\": \"OCW Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 1536.11, \"channel\": \"ach\", \"counterparty\": \"GO Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 1091.06, \"channel\": \"ach\", \"counterparty\": \"ZJNC Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 1110.82, \"channel\": \"card\", \"counterparty\": \"Sarah White\", \"currency\": \"USD\", \"date\": \"2026-04-05\", \"notes\": \"\"}, {\"amount\": 1769.44, \"channel\": \"ach\", \"counterparty\": \"VLKI Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-19\", \"notes\": \"\"}, {\"amount\": 1276.26, \"channel\": \"ach\", \"counterparty\": \"XEPGH Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 3573.75, \"channel\": \"ach\", \"counterparty\": \"XVMGR Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 2622.92, \"channel\": \"wire\", \"counterparty\": \"ERNB Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_cb2439e6\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 13419.0, \"business_purpose\": \"Self-employed proprietor; small-business cash flow; expected monthly throughput ~$13,419.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute was provided for this typology; therefore, no legal analysis can be performed.\", \"label\": \"neutral\", \"reasoning\": \"The request is for a statutory applicability finding, but the input contains an empty statute field. Without a specific statute to evaluate against the fact pattern, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral due to insufficient information.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_cb2439e6 executed 20 transactions totaling $43,374.89 USD with channel mix {\\\"ach\\\": 0.6, \\\"wire\\\": 0.3, \\\"card\\\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.17x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 43374.89, \"channel_mix\": {\"ach\": 0.6, \"wire\": 0.3, \"card\": 0.1}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.17}, \"evidence\": \"transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 41433.31\", \"calculation\": \"1. Identify all transaction amounts from the [transactions] block: 2667.01, 1457.55, 1107.09, 1760.79, 1371.73, 3762.24, 3608.38, 1809.19, 2763.76, 1869.74, 2151.60, 2493.87, 3571.58, 1536.11, 1091.06, 1110.82, 1769.44, 1276.26, 3573.75, 2622.92. 2. Sum these values: 2667.01 + 1457.55 + 1107.09 + 1760.79 + 1371.73 + 3762.24 + 3608.38 + 1809.19 + 2763.76 + 1869.74 + 2151.60 + 2493.87 + 3571.58 + 1536.11 + 1091.06 + 1110.82 + 1769.44 + 1276.26 + 3573.75 + 2622.92 = 41433.31.\", \"evidence\": \"transactions[0..19].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a transaction volume of $43,374.89 across 20 transactions between 2026-02-01 and 2026-04-25, which triggered an alert for volume monitoring. However, the KYC profile identifies the entity as a self-employed proprietor with an expected monthly volume of $13,419.00. The observed total volume is approximately 1.17x the declared monthly volume, which is within an acceptable variance for a small-business cash flow profile. The transaction mix of ACH, wire, and card payments is consistent with the declared business purpose of a small-business proprietor. No sanctions hits or behavioral anomalies were identified. Therefore, the activity is consistent with declared business and no SAR is warranted. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a transaction volume of $43,374.89 across 20 transactions between 2026-02-01 and 2026-04-25, which triggered an alert for volume monitoring. However, the KYC profile identifies the entity as a self-employed proprietor with an expected monthly volume of $13,419.00. The observed total volume is approximately 1.17x the declared monthly volume, which is within an acceptable variance for a small-business cash flow profile. The transaction mix of ACH, wire, and card payments is consistent with the declared business purpose of a small-business proprietor. No sanctions hits or behavioral anomalies were identified. Therefore, the activity is consistent with declared business and no SAR is warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a transaction volume of $43,374.89 across 20 transactions between 2026-02-01 and 2026-04-25, which triggered an alert for volume monitoring. However, the KYC profile identifies the entity as a self-employed proprietor with an expected monthly volume of $13,419.00. The observed total volume is approximately 1.17x the declared monthly volume, which is within an acceptable variance for a small-business cash flow profile. The transaction mix of ACH, wire, and card payments is consistent with the declared business purpose of a small-business proprietor. No sanctions hits or behavioral anomalies were identified. Therefore, the activity is consistent with declared business and no SAR is warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

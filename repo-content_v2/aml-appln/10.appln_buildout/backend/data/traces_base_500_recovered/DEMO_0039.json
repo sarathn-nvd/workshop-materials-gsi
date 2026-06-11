@@ -1,0 +1,187 @@
+{
+  "case_id": "DEMO_0039",
+  "alert_id": "ALT_2463471",
+  "entity_id": "SYN_d497f933",
+  "started_at": "2026-05-29T02:59:24.638743+00:00",
+  "finished_at": "2026-05-29T03:00:19.767920+00:00",
+  "wall_clock_ms": 55129.2,
+  "transactions": [
+    {
+      "amount": 1776322.5,
+      "channel": "wire",
+      "counterparty": "LL Holdings LLC, Hong Kong",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "trade-finance over-invoiced"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_d497f933",
+    "entity_type": "business",
+    "expected_monthly_volume": 436962.0,
+    "business_purpose": "Import-export trading firm; trade-finance flows; declared monthly volume ~$436,962.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Concentrated wire flow (1 txns, top counterparty share 100%)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_d497f933 executed 1 transactions totaling $1,776,322.50 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 1.0. Volume vs declared monthly is 121.95x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 1,
+        "tx_total_usd": 1776322.5,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 1.0,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 121.95
+      },
+      "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+      "answer": "total volume $1,776,322.50",
+      "calculation": "1. transactions[0..0].amount = 1,776,322.50\n2. total volume = 1,776,322.50",
+      "evidence": "transactions[0..0].amount; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The excerpt says the activity is of FinCEN’s attention.",
+      "evidence_span": "worthy of FinCEN’s attention"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 31 U.S.C. \\u00a7 5318(g) \\u2014 Suspicious activity reporting requirements?",
+      "answer": "Yes it is",
+      "label": "entailment",
+      "reasoning": "31 U.S.C. \\u00a7 5318(g) requires reporting of suspicious activity, including transactions that exceed expected volume or indicate structuring or misinvoicing. The observed wire of $1,776,322.50 far surpasses the declared monthly volume of $436,962, indicating potential over‑invoicing and possible money‑laundering, which satisfies the 'suspicious activity' element. Therefore, the entity must file a suspicious activity report. Yes it is required to file a report under 31 U.S.C. \\u00a7 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_d497f933 executed 1 transactions totaling $1,776,322.50 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 1.0. Volume vs declared monthly is 121.95x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 1,
+          "tx_total_usd": 1776322.5,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 1.0,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 121.95
+        },
+        "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "total volume $1,776,322.50",
+        "calculation": "1. transactions[0..0].amount = 1,776,322.50\n2. total volume = 1,776,322.50",
+        "evidence": "transactions[0..0].amount; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The excerpt says the activity is of FinCEN’s attention.",
+        "evidence_span": "worthy of FinCEN’s attention"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 31 U.S.C. \\u00a7 5318(g) \\u2014 Suspicious activity reporting requirements?",
+        "answer": "Yes it is",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. \\u00a7 5318(g) requires reporting of suspicious activity, including transactions that exceed expected volume or indicate structuring or misinvoicing. The observed wire of $1,776,322.50 far surpasses the declared monthly volume of $436,962, indicating potential over‑invoicing and possible money‑laundering, which satisfies the 'suspicious activity' element. Therefore, the entity must file a suspicious activity report. Yes it is required to file a report under 31 U.S.C. \\u00a7 5318(g)."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1776322.5, \"channel\": \"wire\", \"counterparty\": \"LL Holdings LLC, Hong Kong\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"trade-finance over-invoiced\"}], \"kyc_profile\": {\"entity_id\": \"SYN_d497f933\", \"entity_type\": \"business\", \"expected_monthly_volume\": 436962.0, \"business_purpose\": \"Import-export trading firm; trade-finance flows; declared monthly volume ~$436,962.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN\\u2019s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. \\u00a7 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. \\u00a7 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                \\u00a7 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. \\u00a7 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. \\u00a7 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation\\u2019s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO\\u2019s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A\\u2192B\\u2192C\\u2192A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with \\u22653% trim.\"}], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_d497f933 executed 1 transactions totaling $1,776,322.50 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 1.0. Volume vs declared monthly is 121.95x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 1, \"tx_total_usd\": 1776322.5, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 1.0, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 121.95}, \"evidence\": \"transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"total volume $1,776,322.50\", \"calculation\": \"1. transactions[0..0].amount = 1,776,322.50\\n2. total volume = 1,776,322.50\", \"evidence\": \"transactions[0..0].amount; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The excerpt says the activity is of FinCEN\\u2019s attention.\", \"evidence_span\": \"worthy of FinCEN\\u2019s attention\"}], \"statutory\": [{\"question\": \"Does the conduct described fall within 31 U.S.C. \\\\u00a7 5318(g) \\\\u2014 Suspicious activity reporting requirements?\", \"answer\": \"Yes it is\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. \\\\u00a7 5318(g) requires reporting of suspicious activity, including transactions that exceed expected volume or indicate structuring or misinvoicing. The observed wire of $1,776,322.50 far surpasses the declared monthly volume of $436,962, indicating potential over\\u2011invoicing and possible money\\u2011laundering, which satisfies the 'suspicious activity' element. Therefore, the entity must file a suspicious activity report. Yes it is required to file a report under 31 U.S.C. \\\\u00a7 5318(g).\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string (400-800 characters). Must decide based on evidence.\n\nWe have a transaction: $1,776,322.50 wire to LL Holdings LLC, Hong Kong, notes \"trade-finance over-invoiced\". KYC expected monthly volume $436,962. Ratio 121.95x. Behavioral metrics show volume vs declared volume ratio 121.95x. Also auxiliary findings include statutory answer \"Yes it is\" regarding 31 USC 5318(g). Also citation says \"worthy of FinCEN’s attention\". Also policy excerpts include FinCEN text about suspicious activity. Also SOP mentions peel chain detection etc. There's no sanctions hit. But the transaction is over-invoiced, high volume relative to declared. This suggests suspicious activity. Also the statutory finding says yes it is required to file SAR. So likely is_suspicious = true.\n\nWe need to produce a narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive. Let's craft about 550 characters.\n\nWe must ensure every claim is sourced from bundle. Use transaction amount, channel, counterparty, notes, KYC expected monthly volume, ratio, channel mix, velocity, etc. Also mention statutory citation. Must not exceed 800 characters.\n\nLet's draft ~600 characters.\n\nCount characters roughly. We'll write:\n\n\"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review.\"\n\nNow count characters. Let's count precisely.\n\nI'll count characters including spaces.\n\nString:\n\n\"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review.\"\n\nLet's count. I'll use approximate count.\n\nI'll copy into a counting method mentally.\n\nI'll count characters:\n\n\"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review.\"\n\nLet's count using groups.\n\nI'll write with indices.\n\nI'll count characters including spaces.\n\nI'll use a tool mental: I'll count words length.\n\nBetter to approximate: It's likely around 500-600 characters. Let's quickly estimate: The sentence is long but maybe within 600.\n\nWe need 400-800 characters, so okay.\n\nBut must ensure every claim is sourced. We referenced \"trade‑finance over‑invoiced note\" which is from transaction notes. Good. We referenced \"$1,776,322.50\" from transaction amount. We referenced \"wire\" channel. We referenced \"LL Holdings LLC, Hong Kong\". We referenced \"121.95× the KYC‑declared monthly volume of $436,962\" which is from auxiliary numeric finding (ratio). We referenced \"24‑hour velocity peak of 1 against a 30‑day average of 1.0\" from behavioral metrics. We referenced \"FinCEN attention (pdfs/20140220)\" from policy excerpt. We referenced \"31 U.S.C. § 5318(g) SAR obligations\" from statutory finding. All are present.\n\nNow ensure we didn't claim anything not in bundle. We said \"over‑invoiced note\" which is present. Good.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<the narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It's okay.\n\nNow output exactly JSON, no extra text.\n\nLet's craft final narrative exactly as above but ensure it's within 400-800 characters. Let's count approximate characters: I think it's around 560. Let's quickly count more precisely.\n\nI'll count characters manually:\n\nI'll write the string and count.\n\n\"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review.\"\n\nLet's count using rough method: I'll count characters per segment.\n\nSegment1: \"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note.\"\n\nCount characters including spaces.\n\nI'll count each character:\n\n\"On\"=2, space=1 =>3\n\"2026-04-28\"=10 =>13\nspace=1 =>14\n\"the\"=3 =>17\nspace=1 =>18\n\"entity\"=6 =>24\nspace=1 =>25\n\"SYN_d497f933\"=10 =>35\nspace=1 =>36\n\"transferred\"=11 =>47\nspace=1 =>48\n\"$1,776,322.50\"=11 =>59\nspace=1 =>60\n\"via\"=3 =>63\nspace=1 =>64\n\"wire\"=4 =>68\nspace=1 =>69\n\"to\"=2 =>71\nspace=1 =>72\n\"LL\"=2 =>74\nspace=1 =>75\n\"Holdings\"=8 =>83\nspace=1 =>84\n\"LLC,\"=4 =>88\nspace=1 =>89\n\"Hong\"=4 =>93\nspace=1 =>94\n\"Kong,\"=5 =>99\nspace=1 =>100\n\"with\"=4 =>104\nspace=1 =>105\n\"a\"=1 =>106\nspace=1 =>107\n\"trade‑finance\"=13? Let's count: \"trade‑finance\" includes hyphen (maybe special char). Count letters: t r a d e =5, hyphen =1 =>6, f i n a n c e =7 => total 13. =>120\nspace=1 =>121\n\"over‑invoiced\" length: \"over‑invoiced\": o v e r =4, hyphen=1 =>5, i n v o i c e d =8 =>13? Actually \"invoiced\" 8 letters. So total 4+1+8=13. =>134\nspace=1 =>135\n\"note.\"=5 =>140\n\nSo segment1 length ~140 characters.\n\nSegment2: \" The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0.\"\n\nNote there is a leading space after period. We'll include that space as part of string. Let's count from \" The...\" including leading space.\n\nStart with space =1 =>141\n\nNow count rest.\n\n\"The\"=3 =>144\nspace=1 =>145\n\"single\"=6 =>151\nspace=1 =>152\n\"wire\"=4 =>156\nspace=1 =>157\n\"represents\"=10 =>167\nspace=1 =>168\n\"121.95×\" length: \"121.95×\" =6? Actually characters: 1 2 1 . 9 5 × =6. =>174\nspace=1 =>175\n\"the\"=3 =>178\nspace=1 =>179\n\"KYC‑declared\" length: \"KYC‑declared\": K Y C =3, hyphen=1 =>4, d e c l a r e d =8 =>12? Actually \"declared\" 8 letters. So total 3+1+8=12. =>191\nspace=1 =>192\n\"monthly\"=7 =>199\nspace=1 =>200\n\"volume\"=6 =>206\nspace=1 =>207\n\"of\"=2 =>209\nspace=1 =>210\n\"$436,962\"=8 =>218\nspace=1 =>219\n\"and\"=3 =>222\nspace=1 =>223\n\"accounts\"=8 =>231\nspace=1 =>232\n\"for\"=3 =>235\nspace=1 =>236\n\"100%\"=4 =>240\nspace=1 =>241\n\"of\"=2 =>243\nspace=1 =>244\n\"the\"=3 =>247\nspace=1 =>248\n\"channel\"=7 =>255\nspace=1 =>256\n\"mix,\"=4 =>260\nspace=1 =>261\n\"yielding\"=8 =>269\nspace=1 =>270\n\"a\"=1 =>271\nspace=1 =>272\n\"24‑hour\" length: \"24‑hour\": 2 4 =2, hyphen=1 =>3, \"hour\"=4 =>7 total? Actually \"24‑hour\" includes hyphen, so characters: '2','4','‑','h','o','u','r' =7. =>279\nspace=1 =>280\n\"velocity\"=8 =>288\nspace=1 =>289\n\"peak\"=4 =>293\nspace=1 =>294\n\"of\"=2 =>296\nspace=1 =>297\n\"1\"=1 =>298\nspace=1 =>299\n\"against\"=7 =>306\nspace=1 =>307\n\"a\"=1 =>308\nspace=1 =>309\n\"30‑day\" length: \"30‑day\": 2 digits + hyphen + 3 letters =6? Actually \"30‑day\": '3','0','‑','d','a','y' =6. =>315\nspace=1 =>316\n\"average\"=7 =>323\nspace=1 =>324\n\"of\"=2 =>326\nspace=1 =>327\n\"1.0.\"=4 =>331\n\nSo segment2 length approx 331-140? Actually we started counting from 141, ended at 331, so added about 190 characters. So total so far ~140+190=330.\n\nSegment3: \" The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review.\"\n\nAgain leading space.\n\nStart with space =1 =>332\n\nNow count rest.\n\n\"The\"=3 =>335\nspace=1 =>336\n\"volume\"=6 =>342\nspace=1 =>343\n\"ratio\"=5 =>348\nspace=1 =>349\n\"and\"=3 =>352\nspace=1 =>353\n\"over‑invoicing\" length: \"over‑invoicing\": \"over\"=4, hyphen=1 =>5, \"invoicing\"=9 =>14? Actually \"invoicing\" 9 letters. So total 4+1+9=14. =>367\nspace=1 =>368\n\"label\"=5 =>373\nspace=1 =>374\n\"satisfy\"=7 =>381\nspace=1 =>382\n\"FinCEN\"=6 =>388\nspace=1 =>389\n\"attention\"=9 =>398\nspace=1 =>399\n\"(pdfs/20140220)\" length: \"(\"=1, \"pdfs/20140220\"=13? Let's count: p d f s / 2 0 1 4 0 2 2 0 =11? Actually \"20140220\" is 8 digits, plus \"pdfs/\" 5 characters, total 13? Let's count precisely: \"pdfs/20140220\" characters: p(1) d2 f3 s4 /5 2 6 0 7 1 8 4 9 0 10 2 11 2 12 0 13. So 13. Then \")\" =1 => total 14. So add 14 =>413\nspace=1 =>414\n\"and\"=3 =>417\nspace=1 =>418\n\"31 U.S.C. § 5318(g)\" length: let's count characters: \"31\"=2, space? Actually there is a non-breaking space? The text shows \"31 U.S.C. § 5318(g)\". There are spaces around? We'll count as characters: \"31\"=2, space? Actually there is a narrow space? We'll approximate 1 space =>3, \"U.S.C.\"=5? Actually \"U.S.C.\" includes periods: U (1) . (2) S (3) . (4) C (5) . (6) =>6? Wait \"U.S.C.\" is 5 characters? Let's count: U (1), . (2), S (3), . (4), C (5), . (6) =>6. So after \"31 \" we have \"U.S.C.\" (6) => total 2+1+6=9? Actually we had \"31 \" (3 characters: '3','1',' ') then \"U.S.C.\" (6) =>9. Then space? There is a space after? Actually there is a space before \"§\". So add space =1 =>10. Then \"§\" =1 =>11. Then space? There is a space after? Actually \"§ 5318(g)\" includes a space then \"5318(g)\". So add space =1 =>12. Then \"5318(g)\" length: \"5318(g)\" =6? characters: 5 3 1 8 ( )? Actually \"5318(g)\" includes '(' and ')'? It is \"5318(g)\" => characters: '5','3','1','8','(','g',')'? Actually parentheses included: '(' and ')'? The string is \"5318(g)\" includes '(' and ')'? It is \"5318(g)\" includes '(' and ')'? Actually it's \"5318(g)\" includes '(' and ')'? The parentheses are part of the string: '(' and ')'? The string is \"5318(g)\" includes '(' and ')'? Let's count: '5'(1) '3'(2) '1'(3) '8'(4) '('(5) 'g'(6) ')'? Actually there is a ')' after g? The original \"5318(g)\" includes '(' and ')'? It is \"5318(g)\" includes '(' and ')'? The string is \"5318(g)\" includes '(' and ')'? I think it's \"5318(g)\" includes '(' and ')'? Actually it's \"5318(g)\" includes '(' and ')'? The parentheses are part of the string: '(' and ')'? The string is \"5318(g)\" includes '(' and ')'? I'm overthinking. Let's approximate length 6. So add 6 =>18. Then space? There is a space before \"SAR\"? Actually \"SAR obligations\" after that. So after \"5318(g)\" there is space then \"SAR\". So add space =1 =>19. Then \"SAR\"=3 =>22. Then space=1 =>23. Then \"obligations,\"=12? Actually \"obligations,\" length: o b l i g a t i o n s , =11? Let's count: obligations =10 letters, plus comma =1 =>11. So add 11 =>34. Then space=1 =>35. Then \"warranting\"=10 =>45. Then space=1 =>46. Then \"SAR\"=3 =>49. Then space=1 =>50. Then \"review.\"=7 =>57.\n\nSo segment3 length approx 57 characters added to previous total 332 => total ~389? Actually we started at 332 after segment2 ended at 331? Wait we had total 331 after segment2? Actually we counted up to 331 after segment2. Then we added a space =>332 start of segment3. Then we added about 57 characters to reach ~389. So total narrative length ~389 characters. That's within 400-800? It's slightly below 400. Need at least 400 characters. So we need to add a few more characters to reach 400. Let's add a short phrase at end, maybe \"This pattern meets the threshold for SAR filing.\" That's about 38 characters.\n\nAdd at end: \" This pattern meets the threshold for SAR filing.\"\n\nInclude leading space before \"This\". That adds maybe 44 characters.\n\nLet's append: \" This pattern meets the threshold for SAR filing.\"\n\nCount characters: space=1, \"This\"=4 =>5, space=1 =>6, \"pattern\"=7 =>13, space=1 =>14, \"meets\"=5 =>19, space=1 =>20, \"the\"=3 =>23, space=1 =>24, \"threshold\"=9 =>33, space=1 =>34, \"for\"=3 =>37, space=1 =>38, \"SAR\"=3 =>41, space=1 =>42, \"filing.\"=7 =>49. So about 49 characters including leading space. That will bring total to ~389+49=438, within 400-800.\n\nNow final narrative length ~438 characters, good.\n\nNow ensure we didn't add any unsupported claim. The added phrase \"This pattern meets the threshold for SAR filing.\" is a conclusion but it's still grounded? It's a statement that the pattern meets threshold; but that is an interpretation, but it's okay as part of narrative? The instruction says narrative must be grounded, but can include interpretation as long as it's based on evidence. Saying \"meets the threshold for SAR filing\" is a conclusion but not a factual claim about regulation; it's okay as a narrative. It doesn't assert a regulation not in bundle. It's fine.\n\nNow produce final JSON.\n\nMake sure to escape any quotes inside string. The narrative contains double quotes? It doesn't contain double quotes. It contains apostrophes? No. It contains parentheses and punctuation, fine.\n\nBut it contains the character \"“\" maybe? We used straight quotes. It's fine.\n\nNow produce final JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review. This pattern meets the threshold for SAR filing.\"\n}\n\nCheck length: Should be within 400-800 characters. Let's approximate length now: earlier we had ~438 characters, plus maybe some extra due to added phrase. Should be around 440-460. Good.\n\nNow output exactly that JSON, no extra text.\n</think>\n{\"is_suspicious\":true,\"suspicious_activity_report\":\"On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review. This pattern meets the threshold for SAR filing.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review. This pattern meets the threshold for SAR filing."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026-04-28 the entity SYN_d497f933 transferred $1,776,322.50 via wire to LL Holdings LLC, Hong Kong, with a trade‑finance over‑invoiced note. The single wire represents 121.95× the KYC‑declared monthly volume of $436,962 and accounts for 100% of the channel mix, yielding a 24‑hour velocity peak of 1 against a 30‑day average of 1.0. The volume ratio and over‑invoicing label satisfy FinCEN attention (pdfs/20140220) and 31 U.S.C. § 5318(g) SAR obligations, warranting SAR review. This pattern meets the threshold for SAR filing.",
+  "judge_enabled": false,
+  "error": null
+}

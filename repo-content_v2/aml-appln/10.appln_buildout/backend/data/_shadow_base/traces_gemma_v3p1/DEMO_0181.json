@@ -1,0 +1,191 @@
+{
+  "case_id": "DEMO_0181",
+  "alert_id": "ALT_2426143",
+  "entity_id": "SYN_dc33f305",
+  "started_at": "2026-05-27T15:26:41.821856+00:00",
+  "finished_at": "2026-05-27T15:27:08.829575+00:00",
+  "wall_clock_ms": 27007.8,
+  "transactions": [
+    {
+      "amount": 2398.3,
+      "channel": "wire",
+      "counterparty": "Mercy Corps",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": "charitable donation (benign: 501(c)(3) recipient, single occurrence)"
+    },
+    {
+      "amount": 9034.99,
+      "channel": "wire",
+      "counterparty": "OJCX Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 16375.98,
+      "channel": "wire",
+      "counterparty": "CPEYK Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 14770.97,
+      "channel": "ach",
+      "counterparty": "BQRDX Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 12823.41,
+      "channel": "ach",
+      "counterparty": "ATOLP Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 14389.47,
+      "channel": "ach",
+      "counterparty": "CRP Group LLC",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 17285.84,
+      "channel": "ach",
+      "counterparty": "HZZ Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dc33f305",
+    "entity_type": "business",
+    "expected_monthly_volume": 19098.0,
+    "business_purpose": "Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$19,098.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "Switzerland"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.429
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.5714285714285714})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=16375.98, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 transactions with a tx_total_usd of 87078.96. The channel_mix is composed of wire: 3 and ach: 4, indicating a purely electronic movement of funds. The velocity_24h_max is 16375.98, reflecting the highest single-day activity. Over the observed period, the account interacted with unique_counterparties_7d of 7 distinct entities. The vs_declared_volume_ratio is 4.56, which indicates activity significantly exceeding the expected monthly volume. This pattern of rapid movement and high volume relative to the profile warrants further review for pass-through activity.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 87078.96,
+          "channel_mix": {
+            "wire": 3,
+            "ach": 4
+          },
+          "velocity_24h_max": 16375.98,
+          "unique_counterparties_7d": 7,
+          "vs_declared_volume_ratio": 4.56
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 97078.96",
+      "calculation": "1. Sum all transaction amounts: 2,398.30 (transactions[0]) + 9,034.99 (transactions[1]) + 16,375.98 (transactions[2]) + 14,770.97 (transactions[3]) + 12,823.41 (transactions[4]) + 14,389.47 (transactions[5]) + 17,285.84 (transactions[6]) = 97,078.96.",
+      "evidence": "transactions[0..6]"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 97078.96",
+        "calculation": "1. Sum all transaction amounts: 2,398.30 (transactions[0]) + 9,034.99 (transactions[1]) + 16,375.98 (transactions[2]) + 14,770.97 (transactions[3]) + 12,823.41 (transactions[4]) + 14,389.47 (transactions[5]) + 17,285.84 (transactions[6]) = 97,078.96.",
+        "evidence": "transactions[0..6]"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2398.3, \"channel\": \"wire\", \"counterparty\": \"Mercy Corps\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"charitable donation (benign: 501(c)(3) recipient, single occurrence)\"}, {\"amount\": 9034.99, \"channel\": \"wire\", \"counterparty\": \"OJCX Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 16375.98, \"channel\": \"wire\", \"counterparty\": \"CPEYK Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 14770.97, \"channel\": \"ach\", \"counterparty\": \"BQRDX Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 12823.41, \"channel\": \"ach\", \"counterparty\": \"ATOLP Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 14389.47, \"channel\": \"ach\", \"counterparty\": \"CRP Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 17285.84, \"channel\": \"ach\", \"counterparty\": \"HZZ Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dc33f305\", \"entity_type\": \"business\", \"expected_monthly_volume\": 19098.0, \"business_purpose\": \"Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$19,098.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"Switzerland\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 97078.96\", \"calculation\": \"1. Sum all transaction amounts: 2,398.30 (transactions[0]) + 9,034.99 (transactions[1]) + 16,375.98 (transactions[2]) + 14,770.97 (transactions[3]) + 12,823.41 (transactions[4]) + 14,389.47 (transactions[5]) + 17,285.84 (transactions[6]) = 97,078.96.\", \"evidence\": \"transactions[0..6]\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The account exhibits a rapid-pass-through pattern inconsistent with its declared business purpose as a non-governmental organization. Between 2026-02-01 and 2026-04-26, the entity conducted six high-value transfers to various LLCs, including OJCX Partners LLC ($9,034.99), CPEYK Partners LLC ($16,375.98), and HZZ Partners LLC ($17,285.84). Total transaction volume reached $97,078.96, significantly exceeding the expected monthly volume of $19,098.00. The concentration of payments to multiple 'Partners LLC' entities suggests layering or diversion of funds rather than charitable operations. This activity warrants further review for potential misuse of a non-profit entity. Final filing decision is deferred to the human investigator.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account exhibits a rapid-pass-through pattern inconsistent with its declared business purpose as a non-governmental organization. Between 2026-02-01 and 2026-04-26, the entity conducted six high-value transfers to various LLCs, including OJCX Partners LLC ($9,034.99), CPEYK Partners LLC ($16,375.98), and HZZ Partners LLC ($17,285.84). Total transaction volume reached $97,078.96, significantly exceeding the expected monthly volume of $19,098.00. The concentration of payments to multiple 'Partners LLC' entities suggests layering or diversion of funds rather than charitable operations. This activity warrants further review for potential misuse of a non-profit entity. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account exhibits a rapid-pass-through pattern inconsistent with its declared business purpose as a non-governmental organization. Between 2026-02-01 and 2026-04-26, the entity conducted six high-value transfers to various LLCs, including OJCX Partners LLC ($9,034.99), CPEYK Partners LLC ($16,375.98), and HZZ Partners LLC ($17,285.84). Total transaction volume reached $97,078.96, significantly exceeding the expected monthly volume of $19,098.00. The concentration of payments to multiple 'Partners LLC' entities suggests layering or diversion of funds rather than charitable operations. This activity warrants further review for potential misuse of a non-profit entity. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

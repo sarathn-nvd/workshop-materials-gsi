@@ -1,0 +1,216 @@
+{
+  "case_id": "DEMO_0084",
+  "alert_id": "ALT_2480090",
+  "entity_id": "SYN_ac5595db",
+  "started_at": "2026-05-28T11:03:59.281013+00:00",
+  "finished_at": "2026-05-28T11:04:36.431907+00:00",
+  "wall_clock_ms": 37150.9,
+  "transactions": [
+    {
+      "amount": 3377.68,
+      "channel": "wire",
+      "counterparty": "Maria Brown (family member)",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 2995.15,
+      "channel": "wire",
+      "counterparty": "Maria Brown (family member)",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "wire to family (benign, similar amount)"
+    },
+    {
+      "amount": 475.72,
+      "channel": "ach",
+      "counterparty": "OOFG Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 1295.4,
+      "channel": "ach",
+      "counterparty": "KD Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 1427.95,
+      "channel": "ach",
+      "counterparty": "SB Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 794.47,
+      "channel": "card",
+      "counterparty": "Daniel Thomas",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 929.24,
+      "channel": "wire",
+      "counterparty": "MN Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ac5595db",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1533.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,533.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-AZ"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.429,
+      "ach": 0.429,
+      "card": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.42857142857142855, 'card': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_ac5595db executed 7 transactions totaling $11,295.61 USD with channel mix {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 3.11x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 11295.61,
+        "channel_mix": {
+          "wire": 0.429,
+          "ach": 0.429,
+          "card": 0.143
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.69,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 3.11
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 7.36",
+      "calculation": "1. Sum amounts in transactions[0..6] = 11,295.61\n2. Divide by kyc_profile.expected_monthly_volume (1,533.0) = 7.363\n3. Round to two decimals = 7.36",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts were retrieved",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute identified.",
+      "label": "neutral",
+      "reasoning": "N/A No applicable statute"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute identified.",
+        "label": "neutral",
+        "reasoning": "N/A No applicable statute"
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_ac5595db executed 7 transactions totaling $11,295.61 USD with channel mix {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 3.11x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 11295.61,
+          "channel_mix": {
+            "wire": 0.429,
+            "ach": 0.429,
+            "card": 0.143
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.69,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.11
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 7.36",
+        "calculation": "1. Sum amounts in transactions[0..6] = 11,295.61\n2. Divide by kyc_profile.expected_monthly_volume (1,533.0) = 7.363\n3. Round to two decimals = 7.36",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts were retrieved",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3377.68, \"channel\": \"wire\", \"counterparty\": \"Maria Brown (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 2995.15, \"channel\": \"wire\", \"counterparty\": \"Maria Brown (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"wire to family (benign, similar amount)\"}, {\"amount\": 475.72, \"channel\": \"ach\", \"counterparty\": \"OOFG Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 1295.4, \"channel\": \"ach\", \"counterparty\": \"KD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 1427.95, \"channel\": \"ach\", \"counterparty\": \"SB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 794.47, \"channel\": \"card\", \"counterparty\": \"Daniel Thomas\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 929.24, \"channel\": \"wire\", \"counterparty\": \"MN Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ac5595db\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1533.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,533.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-AZ\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute identified.\", \"label\": \"neutral\", \"reasoning\": \"N/A No applicable statute\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_ac5595db executed 7 transactions totaling $11,295.61 USD with channel mix {\\\"wire\\\": 0.429, \\\"ach\\\": 0.429, \\\"card\\\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 3.11x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 11295.61, \"channel_mix\": {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.69, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.11}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 7.36\", \"calculation\": \"1. Sum amounts in transactions[0..6] = 11,295.61\\n2. Divide by kyc_profile.expected_monthly_volume (1,533.0) = 7.363\\n3. Round to two decimals = 7.36\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts were retrieved\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have:\n\n- transactions: 7 entries. Mostly wires to family member Maria Brown (benign), plus ACH to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, card to Daniel Thomas, wire to MN Logistics LLC. Amounts sum to 11295.61.\n\n- kyc_profile: individual, retired, expected monthly volume $1533, business purpose retired individual on fixed pension income. risk_rating high.\n\n- sanctions_pep_hits: empty.\n\n- policy_excerpts: empty.\n\n- sop_excerpts: empty.\n\n- auxiliary_findings: behavioral summary: tx_total_usd 11295.61, channel mix wire 0.429, ach 0.429, card 0.143. 24h velocity peak 1 vs 30d avg 0.23. Volume vs declared monthly is 3.11x. country_risk_max 0.1; loop_detected false.\n\n- numeric: total transaction volume 7.36 (ratio). evidence: sum amounts = 11295.61, divide by expected monthly volume 1533 = 7.363 => 7.36.\n\n- statutory: no applicable.\n\nWe need to decide is_suspicious true or false.\n\nWe must consider SAR-warranted signals: strong-positive signals include confident sanctions hit (none), peel-chain, rapid-pass-through, structuring pattern inconsistent with declared business purpose, trade-based laundering, auxiliary findings that collectively support SAR.\n\nHere we have high volume vs declared monthly (3.11x). That's above 1.5x threshold? The rule says transaction total within 0.5–1.5× declared monthly volume on a customer profile that explains the activity is disposition false. Here it's 3.11x, far above 1.5x, so likely suspicious. Also behavioral metrics: velocity peak 1 vs avg 0.23 (spike). That suggests unusual activity. Also channel mix includes wires, ACH, card; but not all cash. However, the entity is a retired individual with expected monthly volume $1,533, but observed total $11,295, about 7.36 times. That's high.\n\nBut we need to see if there is any context that resolves it. The kyc business purpose is \"Retired individual on fixed pension income; expected monthly throughput ~$1,533.\" No other explanation. The transactions include wires to family member, and to some LLCs. Could be legitimate? But the volume is far above expected. That suggests suspicious.\n\nAlso the auxiliary findings include \"volume vs declared monthly is 3.11x\". That is a strong signal. There's no policy excerpt to cite, but we can mention that the behavior is inconsistent with declared purpose.\n\nThus is_suspicious likely true.\n\nNow we need to produce a narrative 400-800 characters, grounded, citing evidence.\n\nWe must not invent any data not in bundle. Must cite transaction amounts, dates, counterparties, channel mix, volume ratio, velocity spike, etc. Must not cite policy excerpts because none retrieved. But we can refer to regulatory framework? The instructions: \"Cite the regulatory framework that applies (see REGULATORY FRAMING below).\" But we have no policy_excerpts; however we can still mention a framework that matches channel mix: Mixed cash + non-cash? Actually we have wires, ACH, card. That's mixed non-cash. The appropriate framing is \"Layering / pass-through / rapid-movement framing\". We can mention that.\n\nWe must not invent policy excerpt text. But we can refer to \"FinCEN guidance on rapid-pass-through patterns\" maybe? But must be derived from bundle; we have no policy excerpts, but we can still mention \"FinCEN Advisory FIN-2022-A002\" maybe? That might be invented. Safer to avoid citing specific policy if not present. But the instruction says \"Cite the regulatory framework that applies (see REGULATORY FRAMING below).\" It expects us to choose a framework based on channel mix. We can mention \"layering / rapid-pass-through pattern\" which is a framework, but not a specific regulation citation. That might be okay.\n\nWe must keep narrative 400-800 characters. Let's craft about 550 characters.\n\nNarrative should open with salient evidence: high volume vs declared, velocity spike, multiple wires to family and to LLCs. Then cite transaction facts: amounts, dates, counterparties. Then surface the most notable behavioral finding: volume ratio 3.11x, velocity peak 1 vs 0.23 average. Then cite regulatory framing: mixed non-cash channels indicate layering / rapid-pass-through. Then close with deferring final filing decision.\n\nMake sure length 400-800 characters. Let's count approximate characters.\n\nDraft:\n\n\"On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments. Additional wires and ACH credits to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, and a card purchase to Daniel Thomas total $11,295.61 across seven transactions, yielding a 3.11‑fold excess over the KYC‑declared monthly volume of $1,533. The 24‑hour velocity peaked at 1 versus a 30‑day average of 0.23, indicating a sudden activity surge. Channel mix (wire, ACH, card) reflects a rapid‑pass‑through pattern inconsistent with a retired pensioner’s expected low‑value activity, warranting SAR consideration. Final filing decision should be left to the reviewing analyst.\"\n\nNow count characters. Let's approximate: each character includes spaces. Let's count quickly.\n\nI'll count using rough method. I'll copy text and count manually? Let's approximate: It's probably around 500-560 characters. Should be within 400-800.\n\nWe must ensure we don't exceed 800 characters. Let's count more precisely.\n\nI'll count characters including spaces.\n\nText:\n\n\"On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments. Additional wires and ACH credits to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, and a card purchase to Daniel Thomas total $11,295.61 across seven transactions, yielding a 3.11‑fold excess over the KYC‑declared monthly volume of $1,533. The 24‑hour velocity peaked at 1 versus a 30‑day average of 0.23, indicating a sudden activity surge. Channel mix (wire, ACH, card) reflects a rapid‑pass‑through pattern inconsistent with a retired pensioner’s expected low‑value activity, warranting SAR consideration. Final filing decision should be left to the reviewing analyst.\"\n\nLet's count characters. I'll use approximate counting: I'll count words and estimate. Better to count precisely.\n\nI'll write with indices.\n\nI'll copy into a counting tool mentally? Let's do manual count: I'll count characters per segment.\n\nSegment1: \"On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments.\"\n\nCount characters including spaces.\n\nI'll write it out with numbers:\n\n\"On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments.\"\n\nLet's count:\n\nO(1)n2 (space3)2(4)0(5)2(6)6(7)‑(8)0(9)4(10)‑(11)0(12)3(13) (14)a15n16d17 (18) (space?) Actually let's do systematic: maybe easier to approximate length ~350 characters for first sentence. The whole narrative likely ~600. Should be fine.\n\nWe must ensure it's 400-800 characters. Let's approximate total length: I think it's around 620 characters. Good.\n\nNow ensure we didn't cite any policy excerpt that doesn't exist. We mentioned \"warranting SAR consideration\" and \"Final filing decision should be left to the reviewing analyst.\" That's fine.\n\nWe must not mention any policy excerpt text. We referenced \"KYC‑declared monthly volume\" which is from bundle. Good.\n\nWe must not mention any regulation number not present. We said \"rapid‑pass‑through pattern\". That's a framework, not a specific regulation. Acceptable.\n\nNow produce final JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still part of string. Probably fine.\n\nNow output exactly JSON with no extra text.\n\nLet's craft final narrative exactly as drafted, ensuring it's within char limit.\n\nI'll rewrite slightly to be safe about character count.\n\nNarrative:\n\n\"On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments. Additional wires and ACH credits to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, and a card purchase to Daniel Thomas total $11,295.61 across seven transactions, yielding a 3.11‑fold excess over the KYC‑declared monthly volume of $1,533. The 24‑hour velocity peaked at 1 versus a 30‑day average of 0.23, indicating a sudden activity surge. Channel mix (wire, ACH, card) reflects a rapid‑pass‑through pattern inconsistent with a retired pensioner’s expected low‑value activity, warranting SAR consideration. Final filing decision should be left to the reviewing analyst.\"\n\nCheck for any invented data: We mention \"3.11‑fold excess\" which is derived from auxiliary findings (vs_declared_volume_ratio 3.11). That's fine. We mention \"24‑hour velocity peaked at 1 versus a 30‑day average of 0.23\" derived from behavioral metrics. Good. We mention \"seven transactions\" which is from tx_count 7. Good. We mention \"$11,295.61\" sum, correct. We mention \"OOFG Capital LLC\", \"KD Trading LLC\", \"SB Industries LLC\", \"Daniel Thomas\", \"Maria Brown (family member)\" all appear in transactions. Good.\n\nWe mention \"wire, ACH, card\" channel mix, correct.\n\nWe mention \"rapid‑pass‑through pattern\" which is a framework appropriate for mixed non-cash. That's okay.\n\nNow produce JSON.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments. Additional wires and ACH credits to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, and a card purchase to Daniel Thomas total $11,295.61 across seven transactions, yielding a 3.11‑fold excess over the KYC‑declared monthly volume of $1,533. The 24‑hour velocity peaked at 1 versus a 30‑day average of 0.23, indicating a sudden activity surge. Channel mix (wire, ACH, card) reflects a rapid‑pass‑through pattern inconsistent with a retired pensioner’s expected low‑value activity, warranting SAR consideration. Final filing decision should be left to the reviewing analyst.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments. Additional wires and ACH credits to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, and a card purchase to Daniel Thomas total $11,295.61 across seven transactions, yielding a 3.11‑fold excess over the KYC‑declared monthly volume of $1,533. The 24‑hour velocity peaked at 1 versus a 30‑day average of 0.23, indicating a sudden activity surge. Channel mix (wire, ACH, card) reflects a rapid‑pass‑through pattern inconsistent with a retired pensioner’s expected low‑value activity, warranting SAR consideration. Final filing decision should be left to the reviewing analyst."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑03 and 2026‑04‑23 the entity transferred $3,377.68 and $2,995.15 via wire to “Maria Brown (family member)”, notes describing benign family payments. Additional wires and ACH credits to OOFG Capital LLC, KD Trading LLC, SB Industries LLC, and a card purchase to Daniel Thomas total $11,295.61 across seven transactions, yielding a 3.11‑fold excess over the KYC‑declared monthly volume of $1,533. The 24‑hour velocity peaked at 1 versus a 30‑day average of 0.23, indicating a sudden activity surge. Channel mix (wire, ACH, card) reflects a rapid‑pass‑through pattern inconsistent with a retired pensioner’s expected low‑value activity, warranting SAR consideration. Final filing decision should be left to the reviewing analyst.",
+  "judge_enabled": false,
+  "error": null
+}

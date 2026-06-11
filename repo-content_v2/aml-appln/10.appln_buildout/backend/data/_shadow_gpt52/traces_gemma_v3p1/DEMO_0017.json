@@ -1,0 +1,146 @@
+{
+  "case_id": "DEMO_0017",
+  "alert_id": "ALT_2412245",
+  "entity_id": "SYN_cc82dac8",
+  "started_at": "2026-05-27T15:21:38.905560+00:00",
+  "finished_at": "2026-05-27T15:21:55.732521+00:00",
+  "wall_clock_ms": 16827.0,
+  "transactions": [],
+  "kyc_profile": {
+    "entity_id": "SYN_cc82dac8",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1536.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,536.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {},
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No transactions in investigation window",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits no transactional activity during the analyzed period. The tx_count is 0 and the tx_total_usd is 0.0. Consequently, the channel_mix is empty, and the velocity_24h_max is 0.0. There are 0 unique_counterparties_7d recorded. The vs_declared_volume_ratio is 0.0, indicating no movement relative to the expected monthly volume. This lack of activity is consistent with a dormant account state.",
+      "metrics": {
+        "tx_count": 0,
+        "tx_total_usd": 0.0,
+        "channel_mix": {},
+        "velocity_24h_max": 0,
+        "velocity_24h_avg_30d": 0.0,
+        "unique_counterparties_7d": 0,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.0
+      },
+      "evidence": "transactions; kyc_profile.expected_monthly_volume"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 0.0 compared to expected monthly volume 1536.0",
+      "calculation": "1. Identify total transaction volume from transactions[].amount: 0.0. 2. Identify expected monthly volume from kyc_profile.expected_monthly_volume: 1536.0.",
+      "evidence": "transactions; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits no transactional activity during the analyzed period. The tx_count is 0 and the tx_total_usd is 0.0. Consequently, the channel_mix is empty, and the velocity_24h_max is 0.0. There are 0 unique_counterparties_7d recorded. The vs_declared_volume_ratio is 0.0, indicating no movement relative to the expected monthly volume. This lack of activity is consistent with a dormant account state.",
+        "metrics": {
+          "tx_count": 0,
+          "tx_total_usd": 0.0,
+          "channel_mix": {},
+          "velocity_24h_max": 0,
+          "velocity_24h_avg_30d": 0.0,
+          "unique_counterparties_7d": 0,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.0
+        },
+        "evidence": "transactions; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 0.0 compared to expected monthly volume 1536.0",
+        "calculation": "1. Identify total transaction volume from transactions[].amount: 0.0. 2. Identify expected monthly volume from kyc_profile.expected_monthly_volume: 1536.0.",
+        "evidence": "transactions; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [], \"kyc_profile\": {\"entity_id\": \"SYN_cc82dac8\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1536.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,536.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits no transactional activity during the analyzed period. The tx_count is 0 and the tx_total_usd is 0.0. Consequently, the channel_mix is empty, and the velocity_24h_max is 0.0. There are 0 unique_counterparties_7d recorded. The vs_declared_volume_ratio is 0.0, indicating no movement relative to the expected monthly volume. This lack of activity is consistent with a dormant account state.\", \"metrics\": {\"tx_count\": 0, \"tx_total_usd\": 0.0, \"channel_mix\": {}, \"velocity_24h_max\": 0, \"velocity_24h_avg_30d\": 0.0, \"unique_counterparties_7d\": 0, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.0}, \"evidence\": \"transactions; kyc_profile.expected_monthly_volume\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 0.0 compared to expected monthly volume 1536.0\", \"calculation\": \"1. Identify total transaction volume from transactions[].amount: 0.0. 2. Identify expected monthly volume from kyc_profile.expected_monthly_volume: 1536.0.\", \"evidence\": \"transactions; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account was flagged for review; however, there are no transactions recorded in the provided dataset. Behavioral metrics confirm a tx_count of 0 and a tx_total_usd of 0.0, resulting in a vs_declared_volume_ratio of 0.0 relative to the expected monthly volume of $1,536.00. There are no sanctions or PEP hits associated with entity SYN_cc82dac8. The lack of activity is consistent with a dormant account state and does not exhibit any red flags or suspicious patterns. Consequently, no SAR is warranted. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account was flagged for review; however, there are no transactions recorded in the provided dataset. Behavioral metrics confirm a tx_count of 0 and a tx_total_usd of 0.0, resulting in a vs_declared_volume_ratio of 0.0 relative to the expected monthly volume of $1,536.00. There are no sanctions or PEP hits associated with entity SYN_cc82dac8. The lack of activity is consistent with a dormant account state and does not exhibit any red flags or suspicious patterns. Consequently, no SAR is warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account was flagged for review; however, there are no transactions recorded in the provided dataset. Behavioral metrics confirm a tx_count of 0 and a tx_total_usd of 0.0, resulting in a vs_declared_volume_ratio of 0.0 relative to the expected monthly volume of $1,536.00. There are no sanctions or PEP hits associated with entity SYN_cc82dac8. The lack of activity is consistent with a dormant account state and does not exhibit any red flags or suspicious patterns. Consequently, no SAR is warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

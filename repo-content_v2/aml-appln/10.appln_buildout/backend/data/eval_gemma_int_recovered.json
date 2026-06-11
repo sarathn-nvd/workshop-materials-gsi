@@ -1,0 +1,117 @@
+{
+  "label": "gemma-4-31b-it (recovered, intersection)",
+  "traces_dir": "data/traces_gemma_500_recovered",
+  "n_total_keys": 464,
+  "n_traces_present": 464,
+  "n_scored": 464,
+  "n_errors": 0,
+  "n_parse_failures": 0,
+  "confusion": {
+    "tp": 38,
+    "fp": 110,
+    "tn": 311,
+    "fn": 5
+  },
+  "metrics": {
+    "f1": 0.398,
+    "precision": 0.257,
+    "recall": 0.884,
+    "near_miss_specificity": 0.486,
+    "clean_fpr": 0.238
+  },
+  "per_typology_recall": {
+    "terrorist_financing": {
+      "tp": 4,
+      "fn": 2,
+      "recall": 0.667
+    },
+    "elder_exploitation": {
+      "tp": 5,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "human_trafficking": {
+      "tp": 4,
+      "fn": 2,
+      "recall": 0.667
+    },
+    "trade_based_ml": {
+      "tp": 5,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "layering": {
+      "tp": 5,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "structuring": {
+      "tp": 5,
+      "fn": 1,
+      "recall": 0.833
+    },
+    "smurfing": {
+      "tp": 6,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "shell_company": {
+      "tp": 4,
+      "fn": 0,
+      "recall": 1.0
+    }
+  },
+  "per_typology_nm_specificity": {
+    "layering": {
+      "correct": 2,
+      "wrong": 3,
+      "specificity": 0.4
+    },
+    "shell_company": {
+      "correct": 1,
+      "wrong": 3,
+      "specificity": 0.25
+    },
+    "structuring": {
+      "correct": 4,
+      "wrong": 0,
+      "specificity": 1.0
+    },
+    "smurfing": {
+      "correct": 4,
+      "wrong": 1,
+      "specificity": 0.8
+    },
+    "terrorist_financing": {
+      "correct": 3,
+      "wrong": 0,
+      "specificity": 1.0
+    },
+    "elder_exploitation": {
+      "correct": 1,
+      "wrong": 4,
+      "specificity": 0.2
+    },
+    "human_trafficking": {
+      "correct": 1,
+      "wrong": 4,
+      "specificity": 0.2
+    },
+    "trade_based_ml": {
+      "correct": 1,
+      "wrong": 3,
+      "specificity": 0.25
+    }
+  },
+  "narrative_stats": {
+    "n_non_empty": 464,
+    "mean_chars": 770.2,
+    "median_chars": 769.0,
+    "min_chars": 616,
+    "max_chars": 944
+  },
+  "wall_clock_ms": {
+    "mean": 18584.4,
+    "median": 18270.9
+  }
+}

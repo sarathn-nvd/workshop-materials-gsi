@@ -1,0 +1,154 @@
+{
+  "case_id": "DEMO_0034",
+  "alert_id": "ALT_2481851",
+  "entity_id": "SYN_e4a0a90b",
+  "started_at": "2026-05-23T12:02:15.014401+00:00",
+  "finished_at": "2026-05-23T12:02:22.050569+00:00",
+  "wall_clock_ms": 7036.2,
+  "transactions": [],
+  "kyc_profile": {
+    "entity_id": "SYN_e4a0a90b",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1536.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,536.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {},
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No transactions in investigation window",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity has 0 transactions with a total USD volume of 0.0, a 24‑hour velocity maximum of 0, a 30‑day average velocity of 0.0, and 0 unique counterparties in the last 7 days; the amount Z‑score maximum is 0.0, the country risk maximum is 0.0, no loop was detected, and the observed‑to‑declared volume ratio is 0.0. The channel mix shows 0.0 for wire, ach, and cash. Evidence: transactions[]: [].",
+      "metrics": {
+        "tx_count": 0,
+        "tx_total_usd": 0.0,
+        "channel_mix": {
+          "wire": 0.0,
+          "ach": 0.0,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 0,
+        "velocity_24h_avg_30d": 0.0,
+        "unique_counterparties_7d": 0,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.0
+      },
+      "evidence": "transactions[]: []"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "No transaction volume reported; expected monthly volume is $1,536.",
+      "calculation": "1. Expected monthly volume = 1536.0; 2. Actual transaction volume = 0 (no transactions listed); 3. Comparison: 0 is less than 1536.0.",
+      "evidence": "expected_monthly_volume: 1536.0; Transactions (no transactions) => actual volume = 0"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The request cannot be evaluated due to lack of statutory text.",
+      "label": "neutral",
+      "reasoning": "No statute identifier provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The request cannot be evaluated due to lack of statutory text.",
+        "label": "neutral",
+        "reasoning": "No statute identifier provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity has 0 transactions with a total USD volume of 0.0, a 24‑hour velocity maximum of 0, a 30‑day average velocity of 0.0, and 0 unique counterparties in the last 7 days; the amount Z‑score maximum is 0.0, the country risk maximum is 0.0, no loop was detected, and the observed‑to‑declared volume ratio is 0.0. The channel mix shows 0.0 for wire, ach, and cash. Evidence: transactions[]: [].",
+        "metrics": {
+          "tx_count": 0,
+          "tx_total_usd": 0.0,
+          "channel_mix": {
+            "wire": 0.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 0,
+          "velocity_24h_avg_30d": 0.0,
+          "unique_counterparties_7d": 0,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.0
+        },
+        "evidence": "transactions[]: []"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "No transaction volume reported; expected monthly volume is $1,536.",
+        "calculation": "1. Expected monthly volume = 1536.0; 2. Actual transaction volume = 0 (no transactions listed); 3. Comparison: 0 is less than 1536.0.",
+        "evidence": "expected_monthly_volume: 1536.0; Transactions (no transactions) => actual volume = 0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [], \"kyc_profile\": {\"entity_id\": \"SYN_e4a0a90b\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1536, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,536.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The request cannot be evaluated due to lack of statutory text.\", \"label\": \"neutral\", \"reasoning\": \"No statute identifier provided.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity has 0 transactions with a total USD volume of 0.0, a 24‑hour velocity maximum of 0, a 30‑day average velocity of 0.0, and 0 unique counterparties in the last 7 days; the amount Z‑score maximum is 0.0, the country risk maximum is 0.0, no loop was detected, and the observed‑to‑declared volume ratio is 0.0. The channel mix shows 0.0 for wire, ach, and cash. Evidence: transactions[]: [].\", \"metrics\": {\"tx_count\": 0, \"tx_total_usd\": 0.0, \"channel_mix\": {\"wire\": 0.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 0, \"velocity_24h_avg_30d\": 0.0, \"unique_counterparties_7d\": 0, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.0}, \"evidence\": \"transactions[]: []\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"No transaction volume reported; expected monthly volume is $1,536.\", \"calculation\": \"1. Expected monthly volume = 1536.0; 2. Actual transaction volume = 0 (no transactions listed); 3. Comparison: 0 is less than 1536.0.\", \"evidence\": \"expected_monthly_volume: 1536.0; Transactions (no transactions) => actual volume = 0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle is benign, regulatory_frame benign, typology none, no transactions. So is_suspicious should be false, and suspicious_activity_report empty string.\n\nWe must ensure no extra text. Output just JSON.\n\nThus:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"\"\n}\n\nMake sure it's valid JSON, no extra whitespace? It's fine.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

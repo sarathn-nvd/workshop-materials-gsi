@@ -1,0 +1,177 @@
+{
+  "case_id": "DEMO_0012",
+  "entity_id": "SYN_880e9cd0",
+  "started_at": "2026-05-23T13:13:34.588614+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 5124.3,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The entity SYN_880e9cd0 exhibited suspicious activity characterized by rapid movement of funds and potential layering. Between 2026-02-18 and 2026-04-20, the entity conducted five wire transfers totaling $2,275,218.04, significantly exceeding the declared monthly volume of $632,650. Notable transactions include a $731,534.73 transfer to XBZF Enterprises LLC on 2026-03-30 and a $643,358.69 transfer to DYBY Capital LLC on 2026-03-29. Upon verification, the auxiliary behavioral finding stating the total volume was $2,275,218.04 is inconsistent with the underlying transactions; the re-derived total is $2,275,218.04, which is approximately 3.59x the declared volume, not 4.4x. Despite this, the volume and velocity of transfers to multiple counterparties appear consistent with layering. This matter is referred for further human investigation.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The entity SYN_880e9cd0 exhibited suspicious activity characterized by rapid movement of funds and potential layering. Between 2026-02-18 and 2026-04-20, the entity conducted five wire transfers totaling $2,275,218.04, significantly exceeding the declared monthly volume of $632,650. Notable transactions include a $731,534.73 transfer to XBZF Enterprises LLC on 2026-03-30 and a $643,358.69 transfer to DYBY Capital LLC on 2026-03-29. Upon verification, the auxiliary behavioral finding stating the total volume was $2,275,218.04 is inconsistent with the underlying transactions; the re-derived total is $2,275,218.04, which is approximately 3.59x the declared volume, not 4.4x. Despite this, the volume and velocity of transfers to multiple counterparties appear consistent with layering. This matter is referred for further human investigation."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 731534.73, \"channel\": \"wire\", \"counterparty\": \"XBZF Enterprises LLC, Germany\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"trade-finance wire (benign: matches declared invoice value)\"}, {\"amount\": 643358.69, \"channel\": \"wire\", \"counterparty\": \"DYBY Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 453155.39, \"channel\": \"wire\", \"counterparty\": \"EFEHW Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-23\", \"notes\": \"\"}, {\"amount\": 527889.16, \"channel\": \"wire\", \"counterparty\": \"MWMC Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 406455.75, \"channel\": \"wire\", \"counterparty\": \"QUU Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 443169.47, \"channel\": \"wire\", \"counterparty\": \"XNKE Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_880e9cd0\", \"entity_type\": \"business\", \"expected_monthly_volume\": 632650, \"business_purpose\": \"Import-export trading firm; trade-finance flows; declared monthly volume ~$632,650.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the conduct falls within 5318(g) because the entity SYN_880e9cd0 is engaged in trade-finance flows and has conducted multiple wire transfers that may be indicative of suspicious activity.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity, and the provided fact pattern describes an entity conducting several wire transfers (including one of $731,534.73) as part of its trade-finance business, which aligns with the reporting requirements for suspicious activity.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_880e9cd0 exhibited high transaction activity in March 2026, with a total volume of $2,275,218.04 across five wire transfers. Notable transactions include a wire of $731,534.73 to XBZF Enterprises LLC on 2026-03-30 and $643,358.69 to DYBY Capital LLC on 2026-03-29. The activity shows a significant deviation from the expected monthly volume of $632,650, with a vs_declared_volume_ratio of approximately 3.59. The velocity is high, with a velocity_24h_max of 2 and a unique_counterparties_7d of 5.\", \"metrics\": {\"tx_count\": 5, \"tx_total_usd\": 2275218.04, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.17, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.64, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.59}, \"evidence\": \"transactions[0..4]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"The total volume passing through the detected cycle is $2,777,503.44, which is approximately 4.4x the declared monthly volume of $632,650.\", \"calculation\": \"1. Identify the cycle: The transactions form a cycle involving XBZF Enterprises LLC, DYBY Capital LLC, EFEHW Trading LLC, MWMC Capital LLC, QUU Capital LLC, and XNKE Group LLC.\\n2. Sum the amounts in the cycle: 731,534.73 + 643,358.69 + 453,155.39 + 527,889.16 + 406,455.75 + 443,169.47 = 2,777,503.44\", \"evidence\": \"Transactions dated 2026-03-30, 2026-03-29, 2026-03-23, 2026-04-20, 2026-02-18, and 2026-03-18\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The entity SYN_880e9cd0 exhibited suspicious activity characterized by rapid movement of funds and potential layering. Between 2026-02-18 and 2026-04-20, the entity conducted five wire transfers totaling $2,275,218.04, significantly exceeding the declared monthly volume of $632,650. Notable transactions include a $731,534.73 transfer to XBZF Enterprises LLC on 2026-03-30 and a $643,358.69 transfer to DYBY Capital LLC on 2026-03-29. Upon verification, the auxiliary behavioral finding stating the total volume was $2,275,218.04 is inconsistent with the underlying transactions; the re-derived total is $2,275,218.04, which is approximately 3.59x the declared volume, not 4.4x. Despite this, the volume and velocity of transfers to multiple counterparties appear consistent with layering. This matter is referred for further human investigation.\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred"
+    ],
+    "v1_sar_is_suspicious": true,
+    "agreement_with_v1": true,
+    "v1_decision_target": null
+  },
+  "transactions": [
+    {
+      "amount": 731534.73,
+      "channel": "wire",
+      "counterparty": "XBZF Enterprises LLC, Germany",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": "trade-finance wire (benign: matches declared invoice value)"
+    },
+    {
+      "amount": 643358.69,
+      "channel": "wire",
+      "counterparty": "DYBY Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 453155.39,
+      "channel": "wire",
+      "counterparty": "EFEHW Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-23",
+      "notes": ""
+    },
+    {
+      "amount": 527889.16,
+      "channel": "wire",
+      "counterparty": "MWMC Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 406455.75,
+      "channel": "wire",
+      "counterparty": "QUU Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 443169.47,
+      "channel": "wire",
+      "counterparty": "XNKE Group LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_880e9cd0",
+    "entity_type": "business",
+    "expected_monthly_volume": 632650.0,
+    "business_purpose": "Import-export trading firm; trade-finance flows; declared monthly volume ~$632,650.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the conduct falls within 5318(g) because the entity SYN_880e9cd0 is engaged in trade-finance flows and has conducted multiple wire transfers that may be indicative of suspicious activity.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity, and the provided fact pattern describes an entity conducting several wire transfers (including one of $731,534.73) as part of its trade-finance business, which aligns with the reporting requirements for suspicious activity."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_880e9cd0 exhibited high transaction activity in March 2026, with a total volume of $2,275,218.04 across five wire transfers. Notable transactions include a wire of $731,534.73 to XBZF Enterprises LLC on 2026-03-30 and $643,358.69 to DYBY Capital LLC on 2026-03-29. The activity shows a significant deviation from the expected monthly volume of $632,650, with a vs_declared_volume_ratio of approximately 3.59. The velocity is high, with a velocity_24h_max of 2 and a unique_counterparties_7d of 5.",
+        "metrics": {
+          "tx_count": 5,
+          "tx_total_usd": 2275218.04,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.17,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.64,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.59
+        },
+        "evidence": "transactions[0..4]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "The total volume passing through the detected cycle is $2,777,503.44, which is approximately 4.4x the declared monthly volume of $632,650.",
+        "calculation": "1. Identify the cycle: The transactions form a cycle involving XBZF Enterprises LLC, DYBY Capital LLC, EFEHW Trading LLC, MWMC Capital LLC, QUU Capital LLC, and XNKE Group LLC.\n2. Sum the amounts in the cycle: 731,534.73 + 643,358.69 + 453,155.39 + 527,889.16 + 406,455.75 + 443,169.47 = 2,777,503.44",
+        "evidence": "Transactions dated 2026-03-30, 2026-03-29, 2026-03-23, 2026-04-20, 2026-02-18, and 2026-03-18"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "n_suspicious": 48,
+  "n_near_miss": 40,
+  "n_counterparty_injections": 10,
+  "per_typology_seeded": {
+    "structuring": 6,
+    "smurfing": 6,
+    "layering": 6,
+    "trade_based_ml": 6,
+    "shell_company": 6,
+    "human_trafficking": 6,
+    "terrorist_financing": 6,
+    "elder_exploitation": 6
+  },
+  "per_near_miss_surface": {
+    "structuring": 5,
+    "smurfing": 5,
+    "layering": 5,
+    "trade_based_ml": 5,
+    "shell_company": 5,
+    "human_trafficking": 5,
+    "terrorist_financing": 5,
+    "elder_exploitation": 5
+  },
+  "synthesis_mode": "fresh (no SFT bundle re-anchoring)",
+  "alignment": "SFT run-v3 (v3.1 typology\u00d7label decoupling)",
+  "per_typology_near_miss_floor": 3
+}

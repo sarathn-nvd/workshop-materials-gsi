@@ -1,0 +1,214 @@
+{
+  "case_id": "DEMO_0078",
+  "alert_id": "ALT_2476460",
+  "entity_id": "SYN_dfeea1a4",
+  "started_at": "2026-05-23T13:14:40.589276+00:00",
+  "finished_at": "2026-05-23T13:14:43.084623+00:00",
+  "wall_clock_ms": 2495.4,
+  "transactions": [
+    {
+      "amount": 27774.72,
+      "channel": "wire",
+      "counterparty": "KDJEQ Services LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 27774.72,
+      "channel": "wire",
+      "counterparty": "KDJEQ Services LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 3400590.71,
+      "channel": "ach",
+      "counterparty": "MDI Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 874449.11,
+      "channel": "ach",
+      "counterparty": "MF Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 2175782.61,
+      "channel": "wire",
+      "counterparty": "KVMCA Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 1561305.85,
+      "channel": "ach",
+      "counterparty": "ELTT Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1046105.9,
+      "channel": "ach",
+      "counterparty": "OTTL Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dfeea1a4",
+    "entity_type": "business",
+    "expected_monthly_volume": 3000167.0,
+    "business_purpose": "Virtual asset service provider (crypto exchange); declared monthly volume ~$3,000,167.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "Malta"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.429
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.5714285714285714})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The entity SYN_dfeea1a4, a virtual asset service provider based in Malta, exhibited a high volume of activity with a total of 6 transactions amounting to $7,043,413.91. The activity is characterized by a significant reliance on ACH transfers (50.0%) and wires (50.0%), with a notable outlier transaction of $3,400,590.71 to MDI Partners LLC. The velocity is low, with a maximum of 1 transaction in 24 hours and 1.57 unique counterparties in 7 days. The amount z-score maximum is 2.11, and the country risk is 0.0. The observed volume is 2.35 times the declared monthly volume of $3,000,167.00.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 7043413.91,
+        "channel_mix": {
+          "wire": 0.5,
+          "ach": 0.5,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 2.11,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.35
+      },
+      "evidence": "transactions[0..5]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "The total transaction volume is $8,043,483.62, which is approximately 2.68x the declared monthly volume of $3,000,167.00.",
+      "calculation": "1. Identify all transaction amounts: 27,774.72, 27,774.72, 3,400,590.71, 874,449.11, 2,175,782.61, 1,561,305.85, 1,046,105.90.\n2. Sum the amounts: 27,774.72 + 27,774.72 + 3,400,590.71 + 874,449.11 + 2,175,782.61 + 1,561,305.85 + 1,046,105.90 = 8,043,483.62.\n3. Compare to KYC declared monthly volume: 8,043,483.62 / 3,000,167.00 = 2.68.",
+      "evidence": "Transaction list rows with amounts in USD column."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant passage was provided to extract a citation from.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+      "label": "neutral",
+      "reasoning": "No statute text was provided to analyze against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+        "label": "neutral",
+        "reasoning": "No statute text was provided to analyze against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_dfeea1a4, a virtual asset service provider based in Malta, exhibited a high volume of activity with a total of 6 transactions amounting to $7,043,413.91. The activity is characterized by a significant reliance on ACH transfers (50.0%) and wires (50.0%), with a notable outlier transaction of $3,400,590.71 to MDI Partners LLC. The velocity is low, with a maximum of 1 transaction in 24 hours and 1.57 unique counterparties in 7 days. The amount z-score maximum is 2.11, and the country risk is 0.0. The observed volume is 2.35 times the declared monthly volume of $3,000,167.00.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 7043413.91,
+          "channel_mix": {
+            "wire": 0.5,
+            "ach": 0.5,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 2.11,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.35
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $8,043,483.62, which is approximately 2.68x the declared monthly volume of $3,000,167.00.",
+        "calculation": "1. Identify all transaction amounts: 27,774.72, 27,774.72, 3,400,590.71, 874,449.11, 2,175,782.61, 1,561,305.85, 1,046,105.90.\n2. Sum the amounts: 27,774.72 + 27,774.72 + 3,400,590.71 + 874,449.11 + 2,175,782.61 + 1,561,305.85 + 1,046,105.90 = 8,043,483.62.\n3. Compare to KYC declared monthly volume: 8,043,483.62 / 3,000,167.00 = 2.68.",
+        "evidence": "Transaction list rows with amounts in USD column."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 27774.72, \"channel\": \"wire\", \"counterparty\": \"KDJEQ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"outbound wire\"}, {\"amount\": 27774.72, \"channel\": \"wire\", \"counterparty\": \"KDJEQ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 3400590.71, \"channel\": \"ach\", \"counterparty\": \"MDI Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 874449.11, \"channel\": \"ach\", \"counterparty\": \"MF Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 2175782.61, \"channel\": \"wire\", \"counterparty\": \"KVMCA Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 1561305.85, \"channel\": \"ach\", \"counterparty\": \"ELTT Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1046105.9, \"channel\": \"ach\", \"counterparty\": \"OTTL Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dfeea1a4\", \"entity_type\": \"business\", \"expected_monthly_volume\": 3000167, \"business_purpose\": \"Virtual asset service provider (crypto exchange); declared monthly volume ~$3,000,167.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"Malta\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"No statute text was provided to analyze against the fact pattern.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_dfeea1a4, a virtual asset service provider based in Malta, exhibited a high volume of activity with a total of 6 transactions amounting to $7,043,413.91. The activity is characterized by a significant reliance on ACH transfers (50.0%) and wires (50.0%), with a notable outlier transaction of $3,400,590.71 to MDI Partners LLC. The velocity is low, with a maximum of 1 transaction in 24 hours and 1.57 unique counterparties in 7 days. The amount z-score maximum is 2.11, and the country risk is 0.0. The observed volume is 2.35 times the declared monthly volume of $3,000,167.00.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 7043413.91, \"channel_mix\": {\"wire\": 0.5, \"ach\": 0.5, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 2.11, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.35}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $8,043,483.62, which is approximately 2.68x the declared monthly volume of $3,000,167.00.\", \"calculation\": \"1. Identify all transaction amounts: 27,774.72, 27,774.72, 3,400,590.71, 874,449.11, 2,175,782.61, 1,561,305.85, 1,046,105.90.\\n2. Sum the amounts: 27,774.72 + 27,774.72 + 3,400,590.71 + 874,449.11 + 2,175,782.61 + 1,561,305.85 + 1,046,105.90 = 8,043,483.62.\\n3. Compare to KYC declared monthly volume: 8,043,483.62 / 3,000,167.00 = 2.68.\", \"evidence\": \"Transaction list rows with amounts in USD column.\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

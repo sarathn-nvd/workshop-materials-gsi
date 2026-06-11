@@ -1,0 +1,175 @@
+{
+  "case_id": "DEMO_0078",
+  "alert_id": "ALT_2476460",
+  "entity_id": "SYN_dfeea1a4",
+  "started_at": "2026-05-23T12:07:35.370406+00:00",
+  "finished_at": "2026-05-23T12:08:00.478114+00:00",
+  "wall_clock_ms": 25107.7,
+  "transactions": [
+    {
+      "amount": 27774.72,
+      "channel": "wire",
+      "counterparty": "KDJEQ Services LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 27774.72,
+      "channel": "wire",
+      "counterparty": "KDJEQ Services LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 3400590.71,
+      "channel": "ach",
+      "counterparty": "MDI Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 874449.11,
+      "channel": "ach",
+      "counterparty": "MF Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 2175782.61,
+      "channel": "wire",
+      "counterparty": "KVMCA Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 1561305.85,
+      "channel": "ach",
+      "counterparty": "ELTT Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1046105.9,
+      "channel": "ach",
+      "counterparty": "OTTL Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dfeea1a4",
+    "entity_type": "business",
+    "expected_monthly_volume": 3000167.0,
+    "business_purpose": "Virtual asset service provider (crypto exchange); declared monthly volume ~$3,000,167.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "Malta"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.429
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.5714285714285714})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_dfeea1a4, business purpose crypto exchange, expected monthly volume 3000167.0 USD. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute metrics:\n\n- tx_count: number of transactions listed. Let's count: lines: 2026-04-17, 2026-04-20, 2026-04-24, 2026-04-21, 2026-04-13, 2026-03-01, 2026-04-07. That's 7 transactions.\n\n- tx_total_usd: sum of amounts. Let's sum amounts:"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$9,113,783.62 total transaction volume, about 3.0x the declared $3,000,167.",
+      "calculation": "1. Sum of all transaction amounts: 27774.72 + 27774.72 + 3400590.71 + 874449.11 + 2175782.61 + 1561305.85 + 1046105.90 = 9,113,783.62.\n2. Declared monthly volume: 3,000,167.\n3. Ratio: 9,113,783.62 / 3,000,167 ≈ 3.04 (≈3.0x).",
+      "evidence": "Transaction amounts from rows: 27774.72, 27774.72, 3400590.71, 874449.11, 2175782.61, 1561305.85, 1046105.90; declared monthly volume field: 3000167.0"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute is provided, so the conduct cannot be evaluated for compliance.",
+      "label": "neutral",
+      "reasoning": "Statute identifier is '' (empty), leaving no statutory text to compare, thus the classification is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute is provided, so the conduct cannot be evaluated for compliance.",
+        "label": "neutral",
+        "reasoning": "Statute identifier is '' (empty), leaving no statutory text to compare, thus the classification is neutral."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$9,113,783.62 total transaction volume, about 3.0x the declared $3,000,167.",
+        "calculation": "1. Sum of all transaction amounts: 27774.72 + 27774.72 + 3400590.71 + 874449.11 + 2175782.61 + 1561305.85 + 1046105.90 = 9,113,783.62.\n2. Declared monthly volume: 3,000,167.\n3. Ratio: 9,113,783.62 / 3,000,167 ≈ 3.04 (≈3.0x).",
+        "evidence": "Transaction amounts from rows: 27774.72, 27774.72, 3400590.71, 874449.11, 2175782.61, 1561305.85, 1046105.90; declared monthly volume field: 3000167.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 27774.72, \"channel\": \"wire\", \"counterparty\": \"KDJEQ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"outbound wire\"}, {\"amount\": 27774.72, \"channel\": \"wire\", \"counterparty\": \"KDJEQ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 3400590.71, \"channel\": \"ach\", \"counterparty\": \"MDI Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 874449.11, \"channel\": \"ach\", \"counterparty\": \"MF Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 2175782.61, \"channel\": \"wire\", \"counterparty\": \"KVMCA Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 1561305.85, \"channel\": \"ach\", \"counterparty\": \"ELTT Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1046105.9, \"channel\": \"ach\", \"counterparty\": \"OTTL Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dfeea1a4\", \"entity_type\": \"business\", \"expected_monthly_volume\": 3000167, \"business_purpose\": \"Virtual asset service provider (crypto exchange); declared monthly volume ~$3,000,167.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"Malta\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute is provided, so the conduct cannot be evaluated for compliance.\", \"label\": \"neutral\", \"reasoning\": \"Statute identifier is '' (empty), leaving no statutory text to compare, thus the classification is neutral.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$9,113,783.62 total transaction volume, about 3.0x the declared $3,000,167.\", \"calculation\": \"1. Sum of all transaction amounts: 27774.72 + 27774.72 + 3400590.71 + 874449.11 + 2175782.61 + 1561305.85 + 1046105.90 = 9,113,783.62.\\n2. Declared monthly volume: 3,000,167.\\n3. Ratio: 9,113,783.62 / 3,000,167 ≈ 3.04 (≈3.0x).\", \"evidence\": \"Transaction amounts from rows: 27774.72, 27774.72, 3400590.71, 874449.11, 2175782.61, 1561305.85, 1046105.90; declared monthly volume field: 3000167.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle says _regulatory_frame \"benign\" and _typology_inferred \"none\". Also auxiliary_findings numeric says total volume ~3x declared, but regulatory frame benign suggests no SAR. However we must decide based on evidence and behavioral findings. The decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. When false, report must be empty string.\n\nGiven _regulatory_frame benign indicates no SAR. Also typology none. So likely not suspicious. However numeric finding shows volume 3x declared; but that may not be enough to deem suspicious given benign frame. The instruction: \"When false, suspicious_activity_report MUST be the empty string.\" So we output {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}.\n\nBut need to ensure we follow constraints: output only JSON, no extra text. Provide boolean true/false. So answer: {\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}.\n\nCheck if any requirement about formatting: must be a single JSON object, no preamble. So just that.\n\nThus final.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

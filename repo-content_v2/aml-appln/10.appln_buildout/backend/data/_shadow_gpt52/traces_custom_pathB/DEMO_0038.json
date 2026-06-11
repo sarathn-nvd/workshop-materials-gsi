@@ -1,0 +1,211 @@
+{
+  "case_id": "DEMO_0038",
+  "alert_id": "ALT_2457619",
+  "entity_id": "SYN_95cc23e7",
+  "started_at": "2026-05-27T16:48:53.024393+00:00",
+  "finished_at": "2026-05-27T16:49:00.162035+00:00",
+  "wall_clock_ms": 7137.7,
+  "transactions": [
+    {
+      "amount": 3660.57,
+      "channel": "wire",
+      "counterparty": "Michael Thomas (family member)",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 1638.6,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 6722.24,
+      "channel": "ach",
+      "counterparty": "FXWD Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 4868.43,
+      "channel": "ach",
+      "counterparty": "EU Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 6185.39,
+      "channel": "cheque",
+      "counterparty": "QBRGF Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 6747.85,
+      "channel": "ach",
+      "counterparty": "CQX Group LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_95cc23e7",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5850.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$5,850.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.5,
+      "wire": 0.167,
+      "card": 0.167,
+      "cheque": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'card': 0.16666666666666666, 'ach': 0.5, 'cheque': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 6 with a tx_total_usd of 29823.08. The channel_mix shows a distribution including ach at 0.5, with no cash activity present. Activity is characterized by a velocity_24h_max of 1 and interaction with unique_counterparties_7d of 2. The vs_declared_volume_ratio of 2.22 indicates volume significantly exceeding the expected monthly throughput. These patterns, combined with a loop_detected status of false, appear consistent with rapid movement of funds. The observed activity warrants further review against the declared business purpose of a retired individual.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 29823.08,
+        "channel_mix": {
+          "ach": 0.5,
+          "wire": 0.167,
+          "card": 0.167,
+          "cheque": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.22
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 29823.09",
+      "calculation": "1. Identify all transaction amounts: 3660.57 (2026-04-17), 1638.60 (2026-02-16), 6722.24 (2026-04-12), 4868.43 (2026-03-01), 6185.39 (2026-02-07), 6747.85 (2026-04-04). 2. Sum the amounts: 3660.57 + 1638.60 + 6722.24 + 4868.43 + 6185.39 + 6747.85 = 29823.08. 3. Rounding to two decimal places: 29823.09.",
+      "evidence": "transactions[0..5].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute is mapped for this typology. Without a statutory reference, it is impossible to determine if the facts satisfy any legal elements or if the statute prohibits any conduct. Consequently, the answer is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute is mapped for this typology. Without a statutory reference, it is impossible to determine if the facts satisfy any legal elements or if the statute prohibits any conduct. Consequently, the answer is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 29823.08,
+          "channel_mix": {
+            "ach": 0.5,
+            "wire": 0.167,
+            "card": 0.167,
+            "cheque": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.22
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 29823.09",
+        "calculation": "1. Identify all transaction amounts: 3660.57 (2026-04-17), 1638.60 (2026-02-16), 6722.24 (2026-04-12), 4868.43 (2026-03-01), 6185.39 (2026-02-07), 6747.85 (2026-04-04). 2. Sum the amounts: 3660.57 + 1638.60 + 6722.24 + 4868.43 + 6185.39 + 6747.85 = 29823.08. 3. Rounding to two decimal places: 29823.09.",
+        "evidence": "transactions[0..5].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3660.57, \"channel\": \"wire\", \"counterparty\": \"Michael Thomas (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 1638.6, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 6722.24, \"channel\": \"ach\", \"counterparty\": \"FXWD Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 4868.43, \"channel\": \"ach\", \"counterparty\": \"EU Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 6185.39, \"channel\": \"cheque\", \"counterparty\": \"QBRGF Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 6747.85, \"channel\": \"ach\", \"counterparty\": \"CQX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_95cc23e7\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5850.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$5,850.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute is mapped for this typology. Without a statutory reference, it is impossible to determine if the facts satisfy any legal elements or if the statute prohibits any conduct. Consequently, the answer is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\\\"ach\\\": 0.5, \\\"wire\\\": 0.167, \\\"card\\\": 0.167, \\\"cheque\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 29823.08, \"channel_mix\": {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.22}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 29823.09\", \"calculation\": \"1. Identify all transaction amounts: 3660.57 (2026-04-17), 1638.60 (2026-02-16), 6722.24 (2026-04-12), 4868.43 (2026-03-01), 6185.39 (2026-02-07), 6747.85 (2026-04-04). 2. Sum the amounts: 3660.57 + 1638.60 + 6722.24 + 4868.43 + 6185.39 + 6747.85 = 29823.08. 3. Rounding to two decimal places: 29823.09.\", \"evidence\": \"transactions[0..5].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a volume spike, with total transactions of $29,823.08 across six events between 2026-02-07 and 2026-04-17, representing 2.22x the declared monthly volume of $5,850. However, the activity consists of standard non-cash channels including ACH, wire, and cheque payments to various LLCs and a family member. The transactions are consistent with the entity's profile as a retired individual managing fixed income, and no sanctions hits or high-risk jurisdictions were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a volume spike, with total transactions of $29,823.08 across six events between 2026-02-07 and 2026-04-17, representing 2.22x the declared monthly volume of $5,850. However, the activity consists of standard non-cash channels including ACH, wire, and cheque payments to various LLCs and a family member. The transactions are consistent with the entity's profile as a retired individual managing fixed income, and no sanctions hits or high-risk jurisdictions were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a volume spike, with total transactions of $29,823.08 across six events between 2026-02-07 and 2026-04-17, representing 2.22x the declared monthly volume of $5,850. However, the activity consists of standard non-cash channels including ACH, wire, and cheque payments to various LLCs and a family member. The transactions are consistent with the entity's profile as a retired individual managing fixed income, and no sanctions hits or high-risk jurisdictions were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

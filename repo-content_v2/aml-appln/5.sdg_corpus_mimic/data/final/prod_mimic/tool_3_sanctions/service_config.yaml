@@ -1,0 +1,11 @@
+host: 0.0.0.0
+port: 8801
+sources:
+- path: /data/swami/gsi-training/2.data_processing/data/transactional/ofac_enforcement/targets.simple.csv
+  list_tag: OFAC
+- path: /data/swami/gsi-training/2.data_processing/data/transactional/pep_starter/names.csv
+  list_tag: OpenSanctions
+match:
+  algorithm: rapidfuzz.token_set_ratio
+  min_score: 0.55
+  country_boost: 1.05

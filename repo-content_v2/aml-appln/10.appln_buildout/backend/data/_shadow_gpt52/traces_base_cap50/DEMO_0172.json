@@ -1,0 +1,167 @@
+{
+  "case_id": "DEMO_0172",
+  "alert_id": "ALT_2485979",
+  "entity_id": "SYN_ad2a9355",
+  "started_at": "2026-05-23T12:40:32.951676+00:00",
+  "finished_at": "2026-05-23T12:40:40.280622+00:00",
+  "wall_clock_ms": 7329.0,
+  "transactions": [
+    {
+      "amount": 49501.46,
+      "channel": "wire",
+      "counterparty": "PTQQI Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 49501.46,
+      "channel": "wire",
+      "counterparty": "PTQQI Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 1231694.82,
+      "channel": "ach",
+      "counterparty": "DPBRR Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 1050720.49,
+      "channel": "ach",
+      "counterparty": "EY Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 4132186.74,
+      "channel": "card",
+      "counterparty": "Sarah Martin",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 3999336.2,
+      "channel": "card",
+      "counterparty": "Linda Smith",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 4228675.28,
+      "channel": "ach",
+      "counterparty": "GZ Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ad2a9355",
+    "entity_type": "business",
+    "expected_monthly_volume": 4166907.0,
+    "business_purpose": "Virtual asset service provider (crypto exchange); declared monthly volume ~$4,166,907.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "Malta"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "wire": 0.286,
+      "card": 0.286
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'ach': 0.42857142857142855, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_ad2a9355, business purpose crypto exchange, declared monthly volume ~4,166,907 USD.\n\nTransactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count: lines: 2026-04-07, 2026-04-08, 2026-03-03, 2026-02-16, 2026-04-08, 2026-02-17, 2026-03-15. That's 7 transactions.\n\n- tx_total_usd: sum of amounts. Let's sum:\n\nAmounts:\n1) "
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to compute sum of transaction amounts, compare to declared monthly volume (~$4,166,907). Provide JSON with fields: question (echo), answer (short summary), calculation (step-by-step), evidence (which rows/fields contributed). Need to output only JSON.\n\nFirst, parse amounts:\n\nList:\n- 2026-04-07, 49501.46 USD\n- 2026-04-08, 49501.46 USD\n- 2026-03-03, 1231694.82 USD\n- 2026-02-16, 1050720.49 USD\n- 2026-04-08, 4132186.74 USD\n- 2026-02-17, 3999336.20 USD\n- 2026-03-15, 4228675.28 USD\n\nSum them.\n"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be determined to fall within any statute.",
+      "label": "neutral",
+      "reasoning": "No statute identifier provided (\"\")."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be determined to fall within any statute.",
+        "label": "neutral",
+        "reasoning": "No statute identifier provided (\"\")."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 49501.46, \"channel\": \"wire\", \"counterparty\": \"PTQQI Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"outbound wire\"}, {\"amount\": 49501.46, \"channel\": \"wire\", \"counterparty\": \"PTQQI Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 1231694.82, \"channel\": \"ach\", \"counterparty\": \"DPBRR Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 1050720.49, \"channel\": \"ach\", \"counterparty\": \"EY Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 4132186.74, \"channel\": \"card\", \"counterparty\": \"Sarah Martin\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 3999336.2, \"channel\": \"card\", \"counterparty\": \"Linda Smith\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 4228675.28, \"channel\": \"ach\", \"counterparty\": \"GZ Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ad2a9355\", \"entity_type\": \"business\", \"expected_monthly_volume\": 4166907, \"business_purpose\": \"Virtual asset service provider (crypto exchange); declared monthly volume ~$4,166,907.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"Malta\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be determined to fall within any statute.\", \"label\": \"neutral\", \"reasoning\": \"No statute identifier provided (\\\"\\\").\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also _typology_inferred is \"none\". So likely not suspicious. However we must follow decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. Here regulatory frame benign => likely not suspicious. Also auxiliary_findings are empty, no metrics. So is_suspicious should be false, and suspicious_activity_report must be empty string.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nMake sure no extra text.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

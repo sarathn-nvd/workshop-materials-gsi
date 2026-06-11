@@ -1,0 +1,216 @@
+{
+  "case_id": "DEMO_0031",
+  "alert_id": "ALT_2471509",
+  "entity_id": "SYN_cc6e88ef",
+  "started_at": "2026-05-29T02:57:40.278245+00:00",
+  "finished_at": "2026-05-29T02:57:47.077102+00:00",
+  "wall_clock_ms": 6798.9,
+  "transactions": [
+    {
+      "amount": 1887.26,
+      "channel": "cash",
+      "counterparty": "Robert Walker (family contribution)",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "small cash deposit (benign: documented family contribution)"
+    },
+    {
+      "amount": 2187.94,
+      "channel": "cash",
+      "counterparty": "Elizabeth Walker (family contribution)",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": "small cash deposit (benign: documented family contribution)"
+    },
+    {
+      "amount": 2116509.71,
+      "channel": "ach",
+      "counterparty": "ZCV Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 1147749.05,
+      "channel": "cash",
+      "counterparty": "Andrew Taylor",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 2330665.03,
+      "channel": "ach",
+      "counterparty": "UG Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 1967997.26,
+      "channel": "card",
+      "counterparty": "Maria Davis",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 815659.62,
+      "channel": "ach",
+      "counterparty": "UON Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_cc6e88ef",
+    "entity_type": "business",
+    "expected_monthly_volume": 2182860.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$2,182,860.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.4286,
+      "ach": 0.4286,
+      "card": 0.1429
+    },
+    "cash_present": true,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'ach': 0.42857142857142855, 'card': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_cc6e88ef executed 7 transactions totaling $8,382,655.87 USD with channel mix {\"cash\": 0.429, \"ach\": 0.429, \"card\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 1.39x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 8382655.87,
+        "channel_mix": {
+          "cash": 0.429,
+          "ach": 0.429,
+          "card": 0.143
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.32,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.39
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 8,400,656.87",
+      "calculation": "1) Sum all transaction amounts in transactions[0..6]: 1,887.26 + 2,187.94 + 2,116,509.71 + 1,147,749.05 + 2,330,665.03 + 1,967,997.26 + 815,659.62 = 8,400,656.87.\n2) KYC declared monthly volume from kyc_profile.expected_monthly_volume = 2,182,860.0.\n3) Compare: 8,400,656.87 / 2,182,860.0 = 3.85x declared monthly volume (approx).",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided; cannot assess applicability.",
+      "label": "neutral",
+      "reasoning": "No statute section identifier (e.g., 31 U.S.C. § 5324) was provided in the STATUTE field, so statutory elements cannot be evaluated against the fact pattern. Because there is no cited provision to apply, the determination is indeterminate: No statute provided; cannot assess applicability."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_cc6e88ef executed 7 transactions totaling $8,382,655.87 USD with channel mix {\"cash\": 0.429, \"ach\": 0.429, \"card\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 1.39x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 8382655.87,
+          "channel_mix": {
+            "cash": 0.429,
+            "ach": 0.429,
+            "card": 0.143
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.32,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.39
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 8,400,656.87",
+        "calculation": "1) Sum all transaction amounts in transactions[0..6]: 1,887.26 + 2,187.94 + 2,116,509.71 + 1,147,749.05 + 2,330,665.03 + 1,967,997.26 + 815,659.62 = 8,400,656.87.\n2) KYC declared monthly volume from kyc_profile.expected_monthly_volume = 2,182,860.0.\n3) Compare: 8,400,656.87 / 2,182,860.0 = 3.85x declared monthly volume (approx).",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided; cannot assess applicability.",
+        "label": "neutral",
+        "reasoning": "No statute section identifier (e.g., 31 U.S.C. § 5324) was provided in the STATUTE field, so statutory elements cannot be evaluated against the fact pattern. Because there is no cited provision to apply, the determination is indeterminate: No statute provided; cannot assess applicability."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1887.26, \"channel\": \"cash\", \"counterparty\": \"Robert Walker (family contribution)\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"small cash deposit (benign: documented family contribution)\"}, {\"amount\": 2187.94, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Walker (family contribution)\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"small cash deposit (benign: documented family contribution)\"}, {\"amount\": 2116509.71, \"channel\": \"ach\", \"counterparty\": \"ZCV Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 1147749.05, \"channel\": \"cash\", \"counterparty\": \"Andrew Taylor\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 2330665.03, \"channel\": \"ach\", \"counterparty\": \"UG Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 1967997.26, \"channel\": \"card\", \"counterparty\": \"Maria Davis\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 815659.62, \"channel\": \"ach\", \"counterparty\": \"UON Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_cc6e88ef\", \"entity_type\": \"business\", \"expected_monthly_volume\": 2182860.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$2,182,860.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_cc6e88ef executed 7 transactions totaling $8,382,655.87 USD with channel mix {\\\"cash\\\": 0.429, \\\"ach\\\": 0.429, \\\"card\\\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 1.39x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 8382655.87, \"channel_mix\": {\"cash\": 0.429, \"ach\": 0.429, \"card\": 0.143}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.32, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.39}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 8,400,656.87\", \"calculation\": \"1) Sum all transaction amounts in transactions[0..6]: 1,887.26 + 2,187.94 + 2,116,509.71 + 1,147,749.05 + 2,330,665.03 + 1,967,997.26 + 815,659.62 = 8,400,656.87.\\n2) KYC declared monthly volume from kyc_profile.expected_monthly_volume = 2,182,860.0.\\n3) Compare: 8,400,656.87 / 2,182,860.0 = 3.85x declared monthly volume (approx).\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided; cannot assess applicability.\", \"label\": \"neutral\", \"reasoning\": \"No statute section identifier (e.g., 31 U.S.C. \\u00a7 5324) was provided in the STATUTE field, so statutory elements cannot be evaluated against the fact pattern. Because there is no cited provision to apply, the determination is indeterminate: No statute provided; cannot assess applicability.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_cc6e88ef (MSB currency exchange/transmitter; expected monthly volume $2,182,860) shows elevated activity: 7 transactions totaling $8,382,655.87 across ACH/cash/card between 2026-02-06 and 2026-04-30. Notable items include a $1,147,749.05 cash transaction (2026-03-04, Andrew Taylor) and large ACH credits from ZCV Ventures LLC ($2,116,509.71, 2026-02-06) and UG Ventures LLC ($2,330,665.03, 2026-03-17). Verified total is 3.84x declared monthly volume (aux numeric appears overstated; re-sum supports SAR consideration). No sanctions hits. Recommend investigator review for source of funds/third-party funding and MSB activity consistency.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_cc6e88ef (MSB currency exchange/transmitter; expected monthly volume $2,182,860) shows elevated activity: 7 transactions totaling $8,382,655.87 across ACH/cash/card between 2026-02-06 and 2026-04-30. Notable items include a $1,147,749.05 cash transaction (2026-03-04, Andrew Taylor) and large ACH credits from ZCV Ventures LLC ($2,116,509.71, 2026-02-06) and UG Ventures LLC ($2,330,665.03, 2026-03-17). Verified total is 3.84x declared monthly volume (aux numeric appears overstated; re-sum supports SAR consideration). No sanctions hits. Recommend investigator review for source of funds/third-party funding and MSB activity consistency."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_cc6e88ef (MSB currency exchange/transmitter; expected monthly volume $2,182,860) shows elevated activity: 7 transactions totaling $8,382,655.87 across ACH/cash/card between 2026-02-06 and 2026-04-30. Notable items include a $1,147,749.05 cash transaction (2026-03-04, Andrew Taylor) and large ACH credits from ZCV Ventures LLC ($2,116,509.71, 2026-02-06) and UG Ventures LLC ($2,330,665.03, 2026-03-17). Verified total is 3.84x declared monthly volume (aux numeric appears overstated; re-sum supports SAR consideration). No sanctions hits. Recommend investigator review for source of funds/third-party funding and MSB activity consistency.",
+  "judge_enabled": false,
+  "error": null
+}

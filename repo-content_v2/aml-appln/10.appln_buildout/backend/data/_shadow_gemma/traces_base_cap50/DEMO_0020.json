@@ -1,0 +1,163 @@
+{
+  "case_id": "DEMO_0020",
+  "alert_id": "ALT_2421581",
+  "entity_id": "SYN_b511b639",
+  "started_at": "2026-05-23T12:34:22.436461+00:00",
+  "finished_at": "2026-05-23T12:34:39.685231+00:00",
+  "wall_clock_ms": 17248.8,
+  "transactions": [
+    {
+      "amount": 2893.15,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 9958.81,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 24006.18,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 88578.88,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "wire to newly-added payee"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_b511b639",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2670.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,670.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/312factsheet",
+      "url": "",
+      "text": "owners of such foreign bank, if its shares are not publicly traded;\nThe original proposed rulemaking issued in 2002 sought to create an exception to\nthe enhanced due diligence requirement for those offshore banks that were branches of\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\ndiligence those foreign banks operating under an offshore banking license that are\nbranches of banks licensed in a jurisdiction where one or more banks had been\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\na different approach, focusing instead on clarifying that U.S. financial institutions have\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\naccount. Comments are sought on all aspects of this proposed rulemaking.\nII. Private Banking Provisions\nThe final rule requires certain U.S. financial institutions to establish and maintain\na due diligence program for private banking accounts that is reasonably designed to\ndetect and report any known or suspected money laundering or suspicious activity.\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\nbanking account that is maintained for senior foreign political figures, their immediate\nfamily members, or persons widely and publicly known to"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "PUBLISHED\nUNITED STATES COURT OF APPEALS\n              FOR THE FOURTH CIRCUIT\nUNITED STATES OF AMERICA,             \n                Plaintiff-Appellee,\n               v.                           No. 10-4478\nWALTER LLOYD BLAIR,\n             Defendant-Appellant.\n                                      \n        Appeal from the United States District Court\n         for the District of Maryland, at Greenbelt.\n          Peter J. Messitte, Senior District Judge.\n                   (8:08-cr-00505-PJM-1)\n                  Argued: March 25, 2011\n                Decided: September 21, 2011\n  Before TRAXLER, Chief Judge, and WILKINSON and\n              WYNN, Circuit Judges.\nAffirmed in part, reversed in part, and remanded by published\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\nson wrote the majority opinion as to Section IV, in which\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\nopinion as to Section IV.\n                         COUNSEL\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\nMAN, Washington, D.C., for Appellant. Michael Richard\n\f2\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\nstein, United States Attorney, Baltimore, Maryland, Jonathan\nC. Su, Assistant United States Attorney, OFFICE OF THE\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\nAppellee.\n                               OPINION\nPER CURIAM:\n   Walter L. Blair, a Maryland attorne"
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "ing beneficiaries)\nAdvanced systems (for\nmore developed\norganisations)\n◼ Sound investment policies\n◼ Resource generation plan\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\nRECOMMENDATION 8\n75\n© 2023 FATF/OECD\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\nencompasses a statement of principles of development as well as a code of conduct,\nand outlines the ethical principles that must be adhered to, and promoted, by the\norganisation and its members. Below is an excerpt from the Code related to\norganisational integrity:\nGovernance\n Each Organisation shall be governed fairly and responsibly by an\nindependent, active and informed governing body (e.g., the Board of\nDirectors).\n All voting members of the governing body shall serve without compensation,\nexcept for reasonable expenses incurred to fulfil their organisational duties.\n Each Organisation shall establish and periodically review a governance\nframework suitable for fulfilling its mandate. The structure shall enable the\nOrganisation to make timely decisions and to meet its responsibilities. The\nframework shall include an appropriate governance structure and operations;\nrelationship of senior staff and the governing body; and clear decision-making\nprocesses. […]\nOrganisational Integrity\n The affairs of the Organisation shall be conducted with integrity and\ntransparency. The Organisa"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-ELDER-EXPLOITATION-01",
+      "section": "Investigation Steps",
+      "text": "1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "elder",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "elder_exploitation"
+  },
+  "typology_hypothesis": "elder_exploitation",
+  "activity_descriptor": "Retiree with 4 escalating wires to (Robert Johnson (new payee))",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_b511b639, individual, expected monthly volume 2670.0 USD. Transactions list 4 entries with dates in 2026-04-... amounts: 2893.15, 9958.81, 24006.18, 88578.88 all USD, counterparty Robert Johnson (new payee), channel wire.\n\nWe need to compute metrics:\n\n- tx_count: number of transactions = 4\n- tx_total_usd: sum of amounts = let's calculate: 2893.15 + 9958.81 = 12851.96; +24006.18 = 36858.14; +88578.88 = 125437"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to compute escalation rate of wires to any newly-added payee. Passage includes transactions with amounts. Likely escalation rate means growth rate? Possibly ratio of successive amounts? Or compute rate of increase per day? Let's interpret: \"escalation rate of wires to any newly-added payee.\" Could be the rate at which amounts increase across the wires. Maybe compute the growth factor from first to last? Or compute average increase per transaction? Let's examine amounts: 2893.15, 9958.81,"
+    },
+    "citation": {
+      "question": "What does pdfs/312factsheet say about the activity described?",
+      "answer": "The excerpt notes that owners of foreign banks whose shares are not publicly traded are subject to the described due diligence requirements.",
+      "evidence_span": "owners of such foreign bank, if its shares are not publicly traded;"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "No, the described conduct does not trigger the reporting obligations under 5318(g).",
+      "label": "contradiction",
+      "reasoning": "The statute imposes reporting duties on financial institutions, not on individuals, and the conduct lacks the statutory nexus required by 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "No, the described conduct does not trigger the reporting obligations under 5318(g).",
+        "label": "contradiction",
+        "reasoning": "The statute imposes reporting duties on financial institutions, not on individuals, and the conduct lacks the statutory nexus required by 5318(g)."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/312factsheet say about the activity described?",
+        "answer": "The excerpt notes that owners of foreign banks whose shares are not publicly traded are subject to the described due diligence requirements.",
+        "evidence_span": "owners of such foreign bank, if its shares are not publicly traded;"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2893.15, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 9958.81, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 24006.18, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 88578.88, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"wire to newly-added payee\"}], \"kyc_profile\": {\"entity_id\": \"SYN_b511b639\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2670, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,670.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/312factsheet\", \"url\": \"\", \"text\": \"owners of such foreign bank, if its shares are not publicly traded;\\nThe original proposed rulemaking issued in 2002 sought to create an exception to\\nthe enhanced due diligence requirement for those offshore banks that were branches of\\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\\ndiligence those foreign banks operating under an offshore banking license that are\\nbranches of banks licensed in a jurisdiction where one or more banks had been\\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\\na different approach, focusing instead on clarifying that U.S. financial institutions have\\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\\naccount. Comments are sought on all aspects of this proposed rulemaking.\\nII. Private Banking Provisions\\nThe final rule requires certain U.S. financial institutions to establish and maintain\\na due diligence program for private banking accounts that is reasonably designed to\\ndetect and report any known or suspected money laundering or suspicious activity.\\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\\nbanking account that is maintained for senior foreign political figures, their immediate\\nfamily members, or persons widely and publicly known to\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"PUBLISHED\\nUNITED STATES COURT OF APPEALS\\n              FOR THE FOURTH CIRCUIT\\nUNITED STATES OF AMERICA,             \\n                Plaintiff-Appellee,\\n               v.                           No. 10-4478\\nWALTER LLOYD BLAIR,\\n             Defendant-Appellant.\\n                                      \\n        Appeal from the United States District Court\\n         for the District of Maryland, at Greenbelt.\\n          Peter J. Messitte, Senior District Judge.\\n                   (8:08-cr-00505-PJM-1)\\n                  Argued: March 25, 2011\\n                Decided: September 21, 2011\\n  Before TRAXLER, Chief Judge, and WILKINSON and\\n              WYNN, Circuit Judges.\\nAffirmed in part, reversed in part, and remanded by published\\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\\nson wrote the majority opinion as to Section IV, in which\\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\\nopinion as to Section IV.\\n                         COUNSEL\\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\\nMAN, Washington, D.C., for Appellant. Michael Richard\\n\\f2\\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\\nstein, United States Attorney, Baltimore, Maryland, Jonathan\\nC. Su, Assistant United States Attorney, OFFICE OF THE\\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\\nAppellee.\\n                               OPINION\\nPER CURIAM:\\n   Walter L. Blair, a Maryland attorne\"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"ing beneficiaries)\\nAdvanced systems (for\\nmore developed\\norganisations)\\n◼ Sound investment policies\\n◼ Resource generation plan\\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\\nRECOMMENDATION 8\\n75\\n© 2023 FATF/OECD\\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\\nencompasses a statement of principles of development as well as a code of conduct,\\nand outlines the ethical principles that must be adhered to, and promoted, by the\\norganisation and its members. Below is an excerpt from the Code related to\\norganisational integrity:\\nGovernance\\n Each Organisation shall be governed fairly and responsibly by an\\nindependent, active and informed governing body (e.g., the Board of\\nDirectors).\\n All voting members of the governing body shall serve without compensation,\\nexcept for reasonable expenses incurred to fulfil their organisational duties.\\n Each Organisation shall establish and periodically review a governance\\nframework suitable for fulfilling its mandate. The structure shall enable the\\nOrganisation to make timely decisions and to meet its responsibilities. The\\nframework shall include an appropriate governance structure and operations;\\nrelationship of senior staff and the governing body; and clear decision-making\\nprocesses. […]\\nOrganisational Integrity\\n The affairs of the Organisation shall be conducted with integrity and\\ntransparency. The Organisa\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-ELDER-EXPLOITATION-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"No, the described conduct does not trigger the reporting obligations under 5318(g).\", \"label\": \"contradiction\", \"reasoning\": \"The statute imposes reporting duties on financial institutions, not on individuals, and the conduct lacks the statutory nexus required by 5318(g).\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/312factsheet say about the activity described?\", \"answer\": \"The excerpt notes that owners of foreign banks whose shares are not publicly traded are subject to the described due diligence requirements.\", \"evidence_span\": \"owners of such foreign bank, if its shares are not publicly traded;\"}]}, \"_regulatory_frame\": \"elder\", \"_typology_inferred\": \"elder_exploitation\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since is_suspicious likely true because elder exploitation typology inferred, regulatory frame elder, and auxiliary_findings includes statutory contradiction but also behavioral? Actually behavioral empty, numeric empty, citation present. But we need to verify consistency. The auxiliary_findings includes statutory finding that says \"No, the described conduct does not trigger reporting obligations under 5318(g).\" That's contradictory to SAR filing? But the regulatory frame is elder, and we have SOP excerpt about elder exploitation. The transaction pattern: multiple wires to newly added payee, amounts increasing: 2893, 9958, 24006, 88578. That's escalating amounts, consistent with elder exploitation pattern (new payee, escalating amounts). The SOP says confirm beneficiary age >=65, identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K). Here amounts are 2.8K, 9.9K, 24K, 88K, which is escalating. So we have evidence. Also risk rating high, expected monthly volume 2670, but transactions sum to about 130k, far above. So suspicious.\n\nWe must ensure grounding: every claim must be sourced from bundle. We can mention amounts, dates, counterparty, channel, newly-added payee, escalating amounts, high risk rating, expected monthly volume, etc. Must cite behavioral finding if present; but behavioral array is empty. However we can still mention metric values that are computable from transactions. For example, we can compute total amount, count, velocity (four wires in 16 days). Those can be derived from transactions, so it's okay. Must not invent metric values; we can compute ourselves but must state them as derived from transactions. The rule says \"Every metric value cited (velocity, ratios, counts, channel mix) MUST appear verbatim in auxiliary_findings.behavioral[*].metrics if present, otherwise be computable from transactions[]. Do NOT invent metric values.\" So we can compute and cite them, but we must not claim they appear in auxiliary_findings because there are none. We can just state the computed values as part of narrative, but we must not claim they are from auxiliary_findings. That's fine.\n\nWe must ensure we don't mention any entity not in kyc_profile, transactions, or sanctions_pep_hits. We have entity_id SYN_b511b639, counterparty Robert Johnson (new payee). That's in transactions. So okay.\n\nWe must not use \"structuring\" language because regulatory frame is elder, not layering. So we must not mention layering or CTR threshold. Must use \"elder financial exploitation\" framing. Must cite SOP excerpt maybe. The SOP excerpt is in sop_excerpts, but the rule says \"When auxiliary_findings has any populated sub-array: verify each finding against raw inputs.\" We have statutory finding that is contradictory; we need to verify it. The statutory finding says \"No, the described conduct does not trigger reporting obligations under 5318(g).\" That is inconsistent with our suspicion? The statutory finding is about 5318(g) which is about reporting by financial institutions? Actually 5318(g) maybe about something else. But we need to check consistency: The finding says \"No, the described conduct does not trigger the reporting obligations under 5318(g).\" That is a finding that says it's not a reporting obligation. But we are filing SAR under elder exploitation, not 5318(g). So maybe it's inconsistent with the bundle? The statutory finding is part of auxiliary_findings; we must verify it. It says \"The statute imposes reporting duties on financial institutions, not on individuals, and the conduct lacks the statutory nexus required by 5318(g).\" That seems to be a conclusion that the conduct does not trigger reporting obligations. That would contradict filing a SAR? But the SAR is about suspicious activity, not necessarily about 5318(g). However the regulatory frame is elder, and the SOP mentions elder exploitation. The statutory finding might be irrelevant but we need to verify consistency. Since it says \"No, the described conduct does not trigger the reporting obligations under 5318(g).\" That is a statement that the conduct does NOT trigger reporting obligations. That is consistent with the fact that the conduct is not covered by that statute, but we can still file SAR under other frameworks. So it's not inconsistent with our decision to file SAR? The question: \"If a finding is INCONSISTENT, flag the inconsistency explicitly (e.g., \"Upon verification, the auxiliary numeric finding appears inconsistent with the underlying transactions; re-derived value: X.\") and re-derive from the raw inputs.\" So we need to check if any finding is inconsistent. The statutory finding says \"No, the described conduct does not trigger the reporting obligations under 5318(g).\" Is that inconsistent with the bundle? The bundle includes kyc_profile risk_rating high, and the transaction pattern. There's no direct mention of 5318(g) in the bundle. The finding is an interpretation; it's not contradictory to the presence of the data. It just says it does not trigger reporting obligations under that statute. That is not inconsistent with the data; it's just a legal interpretation. So we can ignore it, but we must verify it. It's consistent (the finding is about a legal interpretation, not about the data). So we can proceed.\n\nWe must produce a narrative 250-800 characters, objective, qualified language, cite specific transaction facts, surface most salient behavioral finding (the metric that drives decision). Since no behavioral metrics provided, we can compute a metric: number of wires (4) to same new payee, amounts escalating, total $131,466.92, average per wire $32,866.73, etc. We can mention \"four wires in 16 days to a newly added payee, with amounts increasing from $2,893 to $88,579, exceeding typical monthly volume of $2,670.\" That's a metric. We can phrase \"The activity shows a four‑transaction escalation to a newly added payee, totaling approximately $131 k, far above the expected monthly volume of $2,670.\" That's a derived metric, but we must not claim it appears in auxiliary_findings; we can just state it as part of narrative. That's okay.\n\nWe must end with a complete sentence and refer the matter to the human investigator. Something like \"The case should be referred to a senior AML analyst for SAR filing.\" That's a complete sentence.\n\nWe must output JSON with is_suspicious true and suspicious_activity_report string (the narrative). Must be within 250-800 characters. Let's craft about 400 characters.\n\nCount characters roughly. Let's draft:\n\n\"Four wire transfers to a newly added payee, Robert Johnson, total $131,466.92 across dates 2026‑04‑12, 04‑16, 04‑28, 04‑29, with amounts rising from $2,893 to $88,579, far exceeding the account’s expected monthly volume of $2,670 and the high‑risk rating. This escalation aligns with elder‑exploitation patterns and warrants a SAR; refer to a senior analyst for filing.\"\n\nNow count characters. Let's count roughly: \n\n\"Four wire transfers to a newly added payee, Robert Johnson, total $131,466.92 across dates 2026‑04‑12, 04‑16, 04‑28, 04‑29, with amounts rising from $2,893 to $88,579, far exceeding the account’s expected monthly volume of $2,670 and the high‑risk rating. This escalation aligns with elder‑exploitation patterns and warrants a SAR; refer to a senior analyst for filing.\"\n\nLet's count characters including spaces. I'll approximate: \n\n\"Four wire transfers to a newly added payee, Robert Johnson, total $131,466.92 across dates 2026‑04‑12, 04‑16, 04‑28, 04‑29, with amounts rising from $2,893 to $88,579, far exceeding the account’s expected monthly volume of $2,670 and the high‑risk rating. This escalation aligns with elder‑exploitation patterns and warrants a SAR; refer to a senior analyst for filing.\"\n\nCount: \n- \"Four wire transfers to a newly added payee, \" = 38? Let's just approximate total length maybe ~350-380 characters. Should be within 250-800. Good.\n\nWe must ensure we don't use any invented metric values not derived from transactions. We used total $131,466.92 (sum of",
+  "sar_output": null,
+  "sar_parse_error": "no JSON found in model output",
+  "sar_is_suspicious": null,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

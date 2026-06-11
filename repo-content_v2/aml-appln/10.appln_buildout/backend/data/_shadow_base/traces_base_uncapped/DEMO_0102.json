@@ -1,0 +1,176 @@
+{
+  "case_id": "DEMO_0102",
+  "alert_id": "ALT_2426090",
+  "entity_id": "SYN_f6a4c562",
+  "started_at": "2026-05-23T12:10:24.091067+00:00",
+  "finished_at": "2026-05-23T12:10:50.507956+00:00",
+  "wall_clock_ms": 26416.9,
+  "transactions": [
+    {
+      "amount": 2616.65,
+      "channel": "wire",
+      "counterparty": "Sarah Johnson (family member)",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 2569.95,
+      "channel": "wire",
+      "counterparty": "Sarah Johnson (family member)",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "wire to family (benign, similar amount)"
+    },
+    {
+      "amount": 1314.82,
+      "channel": "card",
+      "counterparty": "Robert Thomas",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 659.48,
+      "channel": "ach",
+      "counterparty": "DJLHR Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 608.25,
+      "channel": "ach",
+      "counterparty": "QZM Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 1399.82,
+      "channel": "card",
+      "counterparty": "Robert Brown",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 1074.17,
+      "channel": "ach",
+      "counterparty": "JLGMF Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f6a4c562",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1409.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,409.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-AZ"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "wire": 0.286,
+      "card": 0.286
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'card': 0.2857142857142857, 'ach': 0.42857142857142855})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_f6a4c562, individual, expected monthly volume 1409.0 USD. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count: entries: 2026-03-31, 2026-04-25, 2026-04-12, 2026-03-11, 2026-04-03, 2026-03-12, 2026-04-24. That's 7 transactions.\n\n- tx_total_usd: sum of amounts. Let's sum: 2616.65 + 2569.95 + 1314.82 + 659.48 +"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$10,243.14 total transaction amount, about 7.3× the declared $1,409 monthly volume.",
+      "calculation": "1. Extract transaction amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17.\n2. Sum them: 2616.65+2569.95=5186.60; +1314.82=6501.42; +659.48=7160.90; +608.25=7769.15; +1399.82=9168.97; +1074.17=10243.14.\n3. Divide total by declared monthly volume: 10243.14 / 1409 ≈ 7.27.\n4. Conclude total is roughly 7.3 times the declared volume.",
+      "evidence": "Transaction amounts from rows: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17; declared monthly volume field 'expected_monthly_volume: 1409.0'"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage indicates that no policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be evaluated for statutory coverage because no statute is provided.",
+      "label": "neutral",
+      "reasoning": ""
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be evaluated for statutory coverage because no statute is provided.",
+        "label": "neutral",
+        "reasoning": ""
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$10,243.14 total transaction amount, about 7.3× the declared $1,409 monthly volume.",
+        "calculation": "1. Extract transaction amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17.\n2. Sum them: 2616.65+2569.95=5186.60; +1314.82=6501.42; +659.48=7160.90; +608.25=7769.15; +1399.82=9168.97; +1074.17=10243.14.\n3. Divide total by declared monthly volume: 10243.14 / 1409 ≈ 7.27.\n4. Conclude total is roughly 7.3 times the declared volume.",
+        "evidence": "Transaction amounts from rows: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17; declared monthly volume field 'expected_monthly_volume: 1409.0'"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage indicates that no policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2616.65, \"channel\": \"wire\", \"counterparty\": \"Sarah Johnson (family member)\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 2569.95, \"channel\": \"wire\", \"counterparty\": \"Sarah Johnson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"wire to family (benign, similar amount)\"}, {\"amount\": 1314.82, \"channel\": \"card\", \"counterparty\": \"Robert Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 659.48, \"channel\": \"ach\", \"counterparty\": \"DJLHR Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 608.25, \"channel\": \"ach\", \"counterparty\": \"QZM Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 1399.82, \"channel\": \"card\", \"counterparty\": \"Robert Brown\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 1074.17, \"channel\": \"ach\", \"counterparty\": \"JLGMF Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f6a4c562\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1409, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,409.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-AZ\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be evaluated for statutory coverage because no statute is provided.\", \"label\": \"neutral\", \"reasoning\": \"\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$10,243.14 total transaction amount, about 7.3× the declared $1,409 monthly volume.\", \"calculation\": \"1. Extract transaction amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17.\\n2. Sum them: 2616.65+2569.95=5186.60; +1314.82=6501.42; +659.48=7160.90; +608.25=7769.15; +1399.82=9168.97; +1074.17=10243.14.\\n3. Divide total by declared monthly volume: 10243.14 / 1409 ≈ 7.27.\\n4. Conclude total is roughly 7.3 times the declared volume.\", \"evidence\": \"Transaction amounts from rows: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17; declared monthly volume field 'expected_monthly_volume: 1409.0'\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage indicates that no policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also _typology_inferred is \"none\". So likely not suspicious. However we must check decision rule: set is_suspicious=true if evidence warrants filing SAR; otherwise false. Since regulatory_frame is benign, likely not suspicious. Also auxiliary_findings numeric shows total transaction amount 7.3x declared volume, but that might be suspicious? But regulatory_frame benign indicates classification as benign, meaning no SAR. The instruction says \"When false, suspicious_activity_report MUST be the empty string.\" So we output {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}. Ensure JSON format exactly, no extra text.\n\nCheck constraints: Must not include any extra fields. Just that object.\n\nThus final answer.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

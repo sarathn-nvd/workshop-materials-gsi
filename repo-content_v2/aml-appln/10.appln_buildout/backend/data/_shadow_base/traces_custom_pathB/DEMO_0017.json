@@ -1,0 +1,147 @@
+{
+  "case_id": "DEMO_0017",
+  "alert_id": "ALT_2412245",
+  "entity_id": "SYN_cc82dac8",
+  "started_at": "2026-05-27T16:48:44.098007+00:00",
+  "finished_at": "2026-05-27T16:48:50.625447+00:00",
+  "wall_clock_ms": 6527.5,
+  "transactions": [],
+  "kyc_profile": {
+    "entity_id": "SYN_cc82dac8",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1536.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,536.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {},
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No transactions in investigation window",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits no activity during the observed period, as indicated by a tx_count of 0 and a tx_total_usd of 0.0. The channel_mix is empty, reflecting the absence of any recorded transactions. Consequently, the velocity_24h_max is 0, and there are no unique_counterparties_7d. The vs_declared_volume_ratio is 0.0, which is consistent with the lack of transactional data. This behavior is consistent with a dormant account or a period prior to any activity.",
+      "metrics": {
+        "tx_count": 0,
+        "tx_total_usd": 0.0,
+        "channel_mix": {},
+        "velocity_24h_max": 0,
+        "velocity_24h_avg_30d": 0.0,
+        "unique_counterparties_7d": 0,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.0
+      },
+      "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume $0.00",
+      "calculation": "1. Identify total transaction amount from [transactions] block. No transactions are present, so total volume = $0.00.",
+      "evidence": "[transactions] (no transactions)"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits no activity during the observed period, as indicated by a tx_count of 0 and a tx_total_usd of 0.0. The channel_mix is empty, reflecting the absence of any recorded transactions. Consequently, the velocity_24h_max is 0, and there are no unique_counterparties_7d. The vs_declared_volume_ratio is 0.0, which is consistent with the lack of transactional data. This behavior is consistent with a dormant account or a period prior to any activity.",
+        "metrics": {
+          "tx_count": 0,
+          "tx_total_usd": 0.0,
+          "channel_mix": {},
+          "velocity_24h_max": 0,
+          "velocity_24h_avg_30d": 0.0,
+          "unique_counterparties_7d": 0,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.0
+        },
+        "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume $0.00",
+        "calculation": "1. Identify total transaction amount from [transactions] block. No transactions are present, so total volume = $0.00.",
+        "evidence": "[transactions] (no transactions)"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [], \"kyc_profile\": {\"entity_id\": \"SYN_cc82dac8\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1536.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,536.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits no activity during the observed period, as indicated by a tx_count of 0 and a tx_total_usd of 0.0. The channel_mix is empty, reflecting the absence of any recorded transactions. Consequently, the velocity_24h_max is 0, and there are no unique_counterparties_7d. The vs_declared_volume_ratio is 0.0, which is consistent with the lack of transactional data. This behavior is consistent with a dormant account or a period prior to any activity.\", \"metrics\": {\"tx_count\": 0, \"tx_total_usd\": 0.0, \"channel_mix\": {}, \"velocity_24h_max\": 0, \"velocity_24h_avg_30d\": 0.0, \"unique_counterparties_7d\": 0, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.0}, \"evidence\": \"transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume $0.00\", \"calculation\": \"1. Identify total transaction amount from [transactions] block. No transactions are present, so total volume = $0.00.\", \"evidence\": \"[transactions] (no transactions)\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account triggered an alert due to a lack of activity, with a total transaction volume of $0.00 and a tx_count of 0. However, the KYC profile for entity SYN_cc82dac8 identifies the customer as a retired individual on a fixed pension income with an expected monthly volume of $1,536. The observed inactivity is consistent with a dormant account or a period prior to any expected activity, and there are no sanctions hits or behavioral anomalies present. Consequently, the activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert due to a lack of activity, with a total transaction volume of $0.00 and a tx_count of 0. However, the KYC profile for entity SYN_cc82dac8 identifies the customer as a retired individual on a fixed pension income with an expected monthly volume of $1,536. The observed inactivity is consistent with a dormant account or a period prior to any expected activity, and there are no sanctions hits or behavioral anomalies present. Consequently, the activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert due to a lack of activity, with a total transaction volume of $0.00 and a tx_count of 0. However, the KYC profile for entity SYN_cc82dac8 identifies the customer as a retired individual on a fixed pension income with an expected monthly volume of $1,536. The observed inactivity is consistent with a dormant account or a period prior to any expected activity, and there are no sanctions hits or behavioral anomalies present. Consequently, the activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

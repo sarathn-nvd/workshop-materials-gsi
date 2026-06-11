@@ -1,0 +1,339 @@
+{
+  "case_id": "DEMO_0154",
+  "alert_id": "ALT_2415974",
+  "entity_id": "SYN_eef463ea",
+  "started_at": "2026-05-29T03:00:24.474152+00:00",
+  "finished_at": "2026-05-29T03:00:32.430252+00:00",
+  "wall_clock_ms": 7956.1,
+  "transactions": [
+    {
+      "amount": 92921.07,
+      "channel": "card",
+      "counterparty": "Daniel Anderson",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 76260.88,
+      "channel": "ach",
+      "counterparty": "TQFPR Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    },
+    {
+      "amount": 57424.95,
+      "channel": "card",
+      "counterparty": "Elizabeth Thompson",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 137527.2,
+      "channel": "wire",
+      "counterparty": "YGJN Services LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 92946.95,
+      "channel": "ach",
+      "counterparty": "YO Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 78832.95,
+      "channel": "card",
+      "counterparty": "Sarah Garcia",
+      "currency": "USD",
+      "date": "2026-03-19",
+      "notes": ""
+    },
+    {
+      "amount": 150520.92,
+      "channel": "wire",
+      "counterparty": "KJVZ Services LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 130101.91,
+      "channel": "card",
+      "counterparty": "Elizabeth Miller",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 63491.39,
+      "channel": "card",
+      "counterparty": "Elizabeth Walker",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 69969.45,
+      "channel": "ach",
+      "counterparty": "BCHD Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 98192.2,
+      "channel": "card",
+      "counterparty": "Robert Johnson",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 150161.36,
+      "channel": "card",
+      "counterparty": "Daniel White",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 42316.25,
+      "channel": "ach",
+      "counterparty": "BGNSG Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 130582.28,
+      "channel": "cash",
+      "counterparty": "David White",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 149871.49,
+      "channel": "wire",
+      "counterparty": "ZF Group LLC",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 39521.15,
+      "channel": "card",
+      "counterparty": "John Lewis",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 51801.81,
+      "channel": "card",
+      "counterparty": "Sarah Garcia",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 60564.89,
+      "channel": "card",
+      "counterparty": "Jennifer Moore",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 155670.09,
+      "channel": "card",
+      "counterparty": "Michael Walker",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 109186.12,
+      "channel": "ach",
+      "counterparty": "YGHS Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 143573.94,
+      "channel": "ach",
+      "counterparty": "XWD Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 114033.93,
+      "channel": "ach",
+      "counterparty": "WKX Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_eef463ea",
+    "entity_type": "business",
+    "expected_monthly_volume": 581530.0,
+    "business_purpose": "Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$581,530.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.5,
+      "ach": 0.3182,
+      "wire": 0.1364,
+      "cash": 0.0455
+    },
+    "cash_present": true,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'card': 0.5, 'ach': 0.3181818181818182, 'wire': 0.13636363636363635, 'cash': 0.045454545454545456})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_eef463ea executed 22 transactions totaling $2,195,473.18 USD with channel mix {\"card\": 0.5, \"ach\": 0.318, \"wire\": 0.136, \"cash\": 0.045}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.32x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 22,
+        "tx_total_usd": 2195473.18,
+        "channel_mix": {
+          "card": 0.5,
+          "ach": 0.318,
+          "wire": 0.136,
+          "cash": 0.045
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.73,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.58,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.32
+      },
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 2,045,475.38; vs KYC expected_monthly_volume 581,530.00; ratio 3.52x",
+      "calculation": "1) Sum all listed transaction amounts to get total transaction volume: transactions[0..21] = 92,921.07 + 76,260.88 + 57,424.95 + 137,527.20 + 92,946.95 + 78,832.95 + 150,520.92 + 130,101.91 + 63,491.39 + 69,969.45 + 98,192.20 + 150,161.36 + 42,316.25 + 130,582.28 + 149,871.49 + 39,521.15 + 51,801.81 + 60,564.89 + 155,670.09 + 109,186.12 + 143,573.94 + 114,033.93 = 2,045,475.38.\n2) Take declared monthly volume from KYC: kyc_profile.expected_monthly_volume = 581,530.00.\n3) Compute ratio of observed total to declared monthly volume: 2,045,475.38 / 581,530.00 = 3.52 (rounded to 2 decimals).",
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided; cannot assess statutory applicability.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so the elements of any offense/regulatory requirement cannot be evaluated against the fact pattern. Because there is no cited section (e.g., 31 U.S.C. § 5324 or 18 U.S.C. § 1956) to apply, applicability is indeterminable. No statute provided; cannot assess statutory applicability."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_eef463ea executed 22 transactions totaling $2,195,473.18 USD with channel mix {\"card\": 0.5, \"ach\": 0.318, \"wire\": 0.136, \"cash\": 0.045}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.32x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 22,
+          "tx_total_usd": 2195473.18,
+          "channel_mix": {
+            "card": 0.5,
+            "ach": 0.318,
+            "wire": 0.136,
+            "cash": 0.045
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.73,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.58,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.32
+        },
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 2,045,475.38; vs KYC expected_monthly_volume 581,530.00; ratio 3.52x",
+        "calculation": "1) Sum all listed transaction amounts to get total transaction volume: transactions[0..21] = 92,921.07 + 76,260.88 + 57,424.95 + 137,527.20 + 92,946.95 + 78,832.95 + 150,520.92 + 130,101.91 + 63,491.39 + 69,969.45 + 98,192.20 + 150,161.36 + 42,316.25 + 130,582.28 + 149,871.49 + 39,521.15 + 51,801.81 + 60,564.89 + 155,670.09 + 109,186.12 + 143,573.94 + 114,033.93 = 2,045,475.38.\n2) Take declared monthly volume from KYC: kyc_profile.expected_monthly_volume = 581,530.00.\n3) Compute ratio of observed total to declared monthly volume: 2,045,475.38 / 581,530.00 = 3.52 (rounded to 2 decimals).",
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided; cannot assess statutory applicability.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so the elements of any offense/regulatory requirement cannot be evaluated against the fact pattern. Because there is no cited section (e.g., 31 U.S.C. § 5324 or 18 U.S.C. § 1956) to apply, applicability is indeterminable. No statute provided; cannot assess statutory applicability."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 92921.07, \"channel\": \"card\", \"counterparty\": \"Daniel Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 76260.88, \"channel\": \"ach\", \"counterparty\": \"TQFPR Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}, {\"amount\": 57424.95, \"channel\": \"card\", \"counterparty\": \"Elizabeth Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 137527.2, \"channel\": \"wire\", \"counterparty\": \"YGJN Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 92946.95, \"channel\": \"ach\", \"counterparty\": \"YO Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 78832.95, \"channel\": \"card\", \"counterparty\": \"Sarah Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-19\", \"notes\": \"\"}, {\"amount\": 150520.92, \"channel\": \"wire\", \"counterparty\": \"KJVZ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 130101.91, \"channel\": \"card\", \"counterparty\": \"Elizabeth Miller\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 63491.39, \"channel\": \"card\", \"counterparty\": \"Elizabeth Walker\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 69969.45, \"channel\": \"ach\", \"counterparty\": \"BCHD Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 98192.2, \"channel\": \"card\", \"counterparty\": \"Robert Johnson\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 150161.36, \"channel\": \"card\", \"counterparty\": \"Daniel White\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 42316.25, \"channel\": \"ach\", \"counterparty\": \"BGNSG Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 130582.28, \"channel\": \"cash\", \"counterparty\": \"David White\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 149871.49, \"channel\": \"wire\", \"counterparty\": \"ZF Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 39521.15, \"channel\": \"card\", \"counterparty\": \"John Lewis\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 51801.81, \"channel\": \"card\", \"counterparty\": \"Sarah Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 60564.89, \"channel\": \"card\", \"counterparty\": \"Jennifer Moore\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 155670.09, \"channel\": \"card\", \"counterparty\": \"Michael Walker\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 109186.12, \"channel\": \"ach\", \"counterparty\": \"YGHS Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 143573.94, \"channel\": \"ach\", \"counterparty\": \"XWD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 114033.93, \"channel\": \"ach\", \"counterparty\": \"WKX Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_eef463ea\", \"entity_type\": \"business\", \"expected_monthly_volume\": 581530.0, \"business_purpose\": \"Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$581,530.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_eef463ea executed 22 transactions totaling $2,195,473.18 USD with channel mix {\\\"card\\\": 0.5, \\\"ach\\\": 0.318, \\\"wire\\\": 0.136, \\\"cash\\\": 0.045}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.32x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 22, \"tx_total_usd\": 2195473.18, \"channel_mix\": {\"card\": 0.5, \"ach\": 0.318, \"wire\": 0.136, \"cash\": 0.045}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.73, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.58, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.32}, \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 2,045,475.38; vs KYC expected_monthly_volume 581,530.00; ratio 3.52x\", \"calculation\": \"1) Sum all listed transaction amounts to get total transaction volume: transactions[0..21] = 92,921.07 + 76,260.88 + 57,424.95 + 137,527.20 + 92,946.95 + 78,832.95 + 150,520.92 + 130,101.91 + 63,491.39 + 69,969.45 + 98,192.20 + 150,161.36 + 42,316.25 + 130,582.28 + 149,871.49 + 39,521.15 + 51,801.81 + 60,564.89 + 155,670.09 + 109,186.12 + 143,573.94 + 114,033.93 = 2,045,475.38.\\n2) Take declared monthly volume from KYC: kyc_profile.expected_monthly_volume = 581,530.00.\\n3) Compute ratio of observed total to declared monthly volume: 2,045,475.38 / 581,530.00 = 3.52 (rounded to 2 decimals).\", \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided; cannot assess statutory applicability.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided (no U.S.C./CFR citation), so the elements of any offense/regulatory requirement cannot be evaluated against the fact pattern. Because there is no cited section (e.g., 31 U.S.C. \\u00a7 5324 or 18 U.S.C. \\u00a7 1956) to apply, applicability is indeterminable. No statute provided; cannot assess statutory applicability.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_eef463ea (Professional/B2B services; expected monthly volume $581,530) shows elevated, mixed-channel activity: 22 transactions totaling ~$2.20MM (behavioral metric tx_total_usd 2,195,473.18; vs_declared_volume_ratio 1.32x). Activity includes large wires $150,520.92 (2026-02-16, KJVZ Services LLC), $149,871.49 (2026-02-19, ZF Group LLC), and $137,527.20 (2026-02-22, YGJN Services LLC), plus a $130,582.28 cash transaction (2026-03-13). No sanctions hits. Pattern/scale appears inconsistent enough to warrant SAR consideration; final filing decision deferred to investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_eef463ea (Professional/B2B services; expected monthly volume $581,530) shows elevated, mixed-channel activity: 22 transactions totaling ~$2.20MM (behavioral metric tx_total_usd 2,195,473.18; vs_declared_volume_ratio 1.32x). Activity includes large wires $150,520.92 (2026-02-16, KJVZ Services LLC), $149,871.49 (2026-02-19, ZF Group LLC), and $137,527.20 (2026-02-22, YGJN Services LLC), plus a $130,582.28 cash transaction (2026-03-13). No sanctions hits. Pattern/scale appears inconsistent enough to warrant SAR consideration; final filing decision deferred to investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_eef463ea (Professional/B2B services; expected monthly volume $581,530) shows elevated, mixed-channel activity: 22 transactions totaling ~$2.20MM (behavioral metric tx_total_usd 2,195,473.18; vs_declared_volume_ratio 1.32x). Activity includes large wires $150,520.92 (2026-02-16, KJVZ Services LLC), $149,871.49 (2026-02-19, ZF Group LLC), and $137,527.20 (2026-02-22, YGJN Services LLC), plus a $130,582.28 cash transaction (2026-03-13). No sanctions hits. Pattern/scale appears inconsistent enough to warrant SAR consideration; final filing decision deferred to investigator.",
+  "judge_enabled": false,
+  "error": null
+}

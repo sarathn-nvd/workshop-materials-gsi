@@ -1,0 +1,345 @@
+{
+  "case_id": "DEMO_0343",
+  "alert_id": "ALT_1841248",
+  "entity_id": "SYN_5791604e",
+  "started_at": "2026-05-28T10:57:26.478807+00:00",
+  "finished_at": "2026-05-28T10:57:31.448688+00:00",
+  "wall_clock_ms": 4969.9,
+  "transactions": [
+    {
+      "amount": 270.03,
+      "channel": "ach",
+      "counterparty": "OQK Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 301.75,
+      "channel": "ach",
+      "counterparty": "DRAU Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 610.05,
+      "channel": "card",
+      "counterparty": "Michael Brown",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 806.67,
+      "channel": "ach",
+      "counterparty": "BN Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 591.52,
+      "channel": "wire",
+      "counterparty": "GJL Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 383.41,
+      "channel": "ach",
+      "counterparty": "MF Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 633.82,
+      "channel": "ach",
+      "counterparty": "YGQ Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 596.28,
+      "channel": "card",
+      "counterparty": "Michael Brown",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 642.67,
+      "channel": "ach",
+      "counterparty": "PSOSN Group LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 179.29,
+      "channel": "card",
+      "counterparty": "Maria Lewis",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 458.01,
+      "channel": "cheque",
+      "counterparty": "JAH Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 415.67,
+      "channel": "ach",
+      "counterparty": "UBUWF Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 409.63,
+      "channel": "ach",
+      "counterparty": "VAP Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 415.97,
+      "channel": "ach",
+      "counterparty": "DKD Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 430.28,
+      "channel": "ach",
+      "counterparty": "VHVQ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 426.26,
+      "channel": "ach",
+      "counterparty": "HPSCQ Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    },
+    {
+      "amount": 520.47,
+      "channel": "cheque",
+      "counterparty": "CNSO Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    },
+    {
+      "amount": 793.55,
+      "channel": "ach",
+      "counterparty": "YIGKR Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 700.49,
+      "channel": "ach",
+      "counterparty": "FV Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 751.54,
+      "channel": "ach",
+      "counterparty": "VHUO Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 301.2,
+      "channel": "ach",
+      "counterparty": "SDR Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 521.24,
+      "channel": "cheque",
+      "counterparty": "ZEYA Group LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_5791604e",
+    "entity_type": "individual",
+    "expected_monthly_volume": 3009.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$3,009.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Michael Brown",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.682,
+      "card": 0.136,
+      "cheque": 0.136,
+      "wire": 0.045
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.6818181818181818, 'card': 0.13636363636363635, 'wire': 0.045454545454545456, 'cheque': 0.13636363636363635})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_5791604e executed 22 transactions totaling $11,159.80 USD with channel mix {\"ach\": 0.682, \"card\": 0.136, \"cheque\": 0.136, \"wire\": 0.045}. The 24-hour velocity peak is 3 against a 30-day average of 0.73. Volume vs declared monthly is 1.28x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 22,
+        "tx_total_usd": 11159.8,
+        "channel_mix": {
+          "ach": 0.682,
+          "card": 0.136,
+          "cheque": 0.136,
+          "wire": 0.045
+        },
+        "velocity_24h_max": 3,
+        "velocity_24h_avg_30d": 0.73,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.93,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.28
+      },
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 10333.33",
+      "calculation": "1. Sum all transaction amounts from the [transactions] block: 270.03 + 301.75 + 610.05 + 806.67 + 591.52 + 383.41 + 633.82 + 596.28 + 642.67 + 179.29 + 458.01 + 415.67 + 409.63 + 415.97 + 430.28 + 426.26 + 520.47 + 793.55 + 700.49 + 751.54 + 301.20 + 521.24 = 10333.33",
+      "evidence": "transactions[0..22].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_5791604e executed 22 transactions totaling $11,159.80 USD with channel mix {\"ach\": 0.682, \"card\": 0.136, \"cheque\": 0.136, \"wire\": 0.045}. The 24-hour velocity peak is 3 against a 30-day average of 0.73. Volume vs declared monthly is 1.28x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 22,
+          "tx_total_usd": 11159.8,
+          "channel_mix": {
+            "ach": 0.682,
+            "card": 0.136,
+            "cheque": 0.136,
+            "wire": 0.045
+          },
+          "velocity_24h_max": 3,
+          "velocity_24h_avg_30d": 0.73,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.93,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.28
+        },
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 10333.33",
+        "calculation": "1. Sum all transaction amounts from the [transactions] block: 270.03 + 301.75 + 610.05 + 806.67 + 591.52 + 383.41 + 633.82 + 596.28 + 642.67 + 179.29 + 458.01 + 415.67 + 409.63 + 415.97 + 430.28 + 426.26 + 520.47 + 793.55 + 700.49 + 751.54 + 301.20 + 521.24 = 10333.33",
+        "evidence": "transactions[0..22].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 270.03, \"channel\": \"ach\", \"counterparty\": \"OQK Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 301.75, \"channel\": \"ach\", \"counterparty\": \"DRAU Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 610.05, \"channel\": \"card\", \"counterparty\": \"Michael Brown\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 806.67, \"channel\": \"ach\", \"counterparty\": \"BN Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 591.52, \"channel\": \"wire\", \"counterparty\": \"GJL Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 383.41, \"channel\": \"ach\", \"counterparty\": \"MF Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 633.82, \"channel\": \"ach\", \"counterparty\": \"YGQ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 596.28, \"channel\": \"card\", \"counterparty\": \"Michael Brown\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 642.67, \"channel\": \"ach\", \"counterparty\": \"PSOSN Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 179.29, \"channel\": \"card\", \"counterparty\": \"Maria Lewis\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 458.01, \"channel\": \"cheque\", \"counterparty\": \"JAH Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 415.67, \"channel\": \"ach\", \"counterparty\": \"UBUWF Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 409.63, \"channel\": \"ach\", \"counterparty\": \"VAP Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 415.97, \"channel\": \"ach\", \"counterparty\": \"DKD Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 430.28, \"channel\": \"ach\", \"counterparty\": \"VHVQ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 426.26, \"channel\": \"ach\", \"counterparty\": \"HPSCQ Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}, {\"amount\": 520.47, \"channel\": \"cheque\", \"counterparty\": \"CNSO Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}, {\"amount\": 793.55, \"channel\": \"ach\", \"counterparty\": \"YIGKR Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 700.49, \"channel\": \"ach\", \"counterparty\": \"FV Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 751.54, \"channel\": \"ach\", \"counterparty\": \"VHUO Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 301.2, \"channel\": \"ach\", \"counterparty\": \"SDR Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 521.24, \"channel\": \"cheque\", \"counterparty\": \"ZEYA Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_5791604e\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 3009.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$3,009.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [{\"name\": \"Michael Brown\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_5791604e executed 22 transactions totaling $11,159.80 USD with channel mix {\\\"ach\\\": 0.682, \\\"card\\\": 0.136, \\\"cheque\\\": 0.136, \\\"wire\\\": 0.045}. The 24-hour velocity peak is 3 against a 30-day average of 0.73. Volume vs declared monthly is 1.28x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 22, \"tx_total_usd\": 11159.8, \"channel_mix\": {\"ach\": 0.682, \"card\": 0.136, \"cheque\": 0.136, \"wire\": 0.045}, \"velocity_24h_max\": 3, \"velocity_24h_avg_30d\": 0.73, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.93, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.28}, \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 10333.33\", \"calculation\": \"1. Sum all transaction amounts from the [transactions] block: 270.03 + 301.75 + 610.05 + 806.67 + 591.52 + 383.41 + 633.82 + 596.28 + 642.67 + 179.29 + 458.01 + 415.67 + 409.63 + 415.97 + 430.28 + 426.26 + 520.47 + 793.55 + 700.49 + 751.54 + 301.20 + 521.24 = 10333.33\", \"evidence\": \"transactions[0..22].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"A sanctions screening hit was identified for counterparty 'Michael Brown' (match_score 1.0, OpenSanctions list) alongside a transaction total of $11,159.80 across 22 transactions. However, the sanctions hit is a common-name pattern with no additional corroborating risk factors. The transaction volume is 1.28x the declared monthly volume of $3,009, which is within an acceptable variance for a salaried wage earner. The activity consists of small-dollar ACH, card, and cheque payments to various LLCs, which is consistent with the declared business purpose of a service-industry employee. No SAR warranted; final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "A sanctions screening hit was identified for counterparty 'Michael Brown' (match_score 1.0, OpenSanctions list) alongside a transaction total of $11,159.80 across 22 transactions. However, the sanctions hit is a common-name pattern with no additional corroborating risk factors. The transaction volume is 1.28x the declared monthly volume of $3,009, which is within an acceptable variance for a salaried wage earner. The activity consists of small-dollar ACH, card, and cheque payments to various LLCs, which is consistent with the declared business purpose of a service-industry employee. No SAR warranted; final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "A sanctions screening hit was identified for counterparty 'Michael Brown' (match_score 1.0, OpenSanctions list) alongside a transaction total of $11,159.80 across 22 transactions. However, the sanctions hit is a common-name pattern with no additional corroborating risk factors. The transaction volume is 1.28x the declared monthly volume of $3,009, which is within an acceptable variance for a salaried wage earner. The activity consists of small-dollar ACH, card, and cheque payments to various LLCs, which is consistent with the declared business purpose of a service-industry employee. No SAR warranted; final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

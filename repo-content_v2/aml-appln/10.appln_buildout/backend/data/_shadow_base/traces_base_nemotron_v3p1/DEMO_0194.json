@@ -1,0 +1,206 @@
+{
+  "case_id": "DEMO_0194",
+  "alert_id": "ALT_2474443",
+  "entity_id": "SYN_b9cd6940",
+  "started_at": "2026-05-27T15:20:12.652414+00:00",
+  "finished_at": "2026-05-27T15:20:50.193588+00:00",
+  "wall_clock_ms": 37541.2,
+  "transactions": [
+    {
+      "amount": 5325.78,
+      "channel": "cash",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5360.73,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6672.05,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8853.0,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5042.67,
+      "channel": "cash",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4813.72,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8826.73,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5351.75,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6368.51,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 3764.09,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5486.25,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4688.7,
+      "channel": "ach",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_b9cd6940",
+    "entity_type": "business",
+    "expected_monthly_volume": 747759.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$747,759.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.583,
+      "cash": 0.417
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "under",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.4166666666666667, 'ach': 0.5833333333333334})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have bundle: transactions list, kyc_profile with fields. Also we have precomputed metrics block? The user says \"precomputed metrics block\" but not provided. However we need to output metrics block verbatim. But we don't have it. Possibly the metrics block is derived from the bundle? The instruction: \"You receive a transactional bundle ([transactions] + [kyc_profile]) AND a precomputed metrics block.\" But the user only ga"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to produce a strict-JSON numeric finding. Must include answer numeric value derivable from input, within rounding tolerance ±5%. Must include a contiguous 3-word phrase that names the specific quantity computed, and the numeric result. So answer must contain a phrase like \"total cash deposits 12345.67\"? Must be contiguous 3-wo"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The system indicates that no policy excerpts were retrieved.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute mapped",
+      "label": "neutral",
+      "reasoning": "No statute mapped; § 0; thus no statutory elements to evaluate, leading to neutral outcome."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute mapped",
+        "label": "neutral",
+        "reasoning": "No statute mapped; § 0; thus no statutory elements to evaluate, leading to neutral outcome."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The system indicates that no policy excerpts were retrieved.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 5325.78, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5360.73, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6672.05, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8853.0, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5042.67, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4813.72, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8826.73, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5351.75, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6368.51, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 3764.09, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5486.25, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4688.7, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}], \"kyc_profile\": {\"entity_id\": \"SYN_b9cd6940\", \"entity_type\": \"business\", \"expected_monthly_volume\": 747759.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$747,759.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute mapped\", \"label\": \"neutral\", \"reasoning\": \"No statute mapped; § 0; thus no statutory elements to evaluate, leading to neutral outcome.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The system indicates that no policy excerpts were retrieved.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to decide is_suspicious based on evidence. The bundle includes transactions: many smurfing fan-in deposits, amounts around $5k-$9k, some cash, some ACH, multiple counterparties (AC399607, AC345884, AC384913). The entity is a money services business with expected monthly volume $747,759. The transactions are within a few days, amounts around $5k each, many under $10k but some above. The pattern looks like structuring (multiple sub-10k deposits). However, the expected monthly volume is $747k, and these deposits sum maybe less? Let's compute total amounts: list amounts:\n\n1 5325.78\n2 5360.73\n3 6672.05\n4 8853.0\n5 5042.67\n6 4813.72\n7 8826.73\n8 5351.75\n9 6368.51\n10 3764.09\n11 5486.25\n11 4688.70\n\nSum: let's approximate: 5.33+5.36=10.69; +6.67=17.36; +8.85=26.21; +5.04=31.25; +4.81=36.06; +8.83=44.89; +5.35=50.24; +6.37=56.61; +3.76=60.37; +5.49=65.86; +4.69=70.55 (in thousands). So total ~ $70,550 across 11 transactions over 6 days. That's about $70k, which is far below expected monthly volume $747k, but it's a short period. However, the pattern is many sub-10k deposits, possibly structuring to avoid CTR. But the entity is a money services business, which may have legitimate high volume. The deposits are inbound from various counterparties (maybe customers). The notes say \"smurfing fan-in deposit\". That suggests suspicious.\n\nBut we need to see if there is any sanctions hit? None. No policy excerpts. Auxiliary findings: statutory neutral, no behavioral or numeric findings. So we have to derive is_suspicious based on evidence alone. The pattern of multiple sub-10k deposits (some above 10k? Actually 8853, 8826 are below 10k, but 6672 also below 10k; all under 10k? Actually 8853 < 10k, 8826 < 10k, 6672 < 10k, 5486 < 10k, etc. So all under 10k. So structuring detection: multiple deposits under 10k in a short period. That could be structuring. However, the entity's declared business is money services business with high volume; these deposits may be normal customer deposits. But the notes say \"smurfing fan-in deposit\", which is suspicious.\n\nGiven the instructions: Set is_suspicious=true only when evidence warrants filing a SAR. Strong-positive signals include structuring pattern inconsistent with declared business purpose and volume. Here declared monthly volume is $747k, but we see only $70k in 6 days, which is about $140k monthly if extrapolated, still lower but maybe plausible. However, the pattern of multiple sub-10k deposits could be structuring. The question: Should we file SAR? The instructions say we must decide based on evidence. The presence of structuring pattern (multiple sub-10k deposits) is a red flag. But also the entity is a money services business, which may have legitimate high volume; but these deposits are inbound from multiple counterparties, maybe customers. The notes indicate \"smurfing fan-in deposit\", which suggests suspicious. I think we should set is_suspicious=true.\n\nNow we need to produce a narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive. Must end with a complete sentence. Must not exceed. Must be grounded: every claim must be sourced from bundle. So we can mention the transaction amounts, dates, counterparties, channel types, notes \"smurfing fan-in deposit\". Also mention that the entity is a money services business with expected monthly volume $747,759, and that the observed total across these 11 transactions is about $70,550 over 6 days, which is a structuring pattern of multiple sub-$10,000 deposits consistent with smurfing. Also mention that the pattern is inconsistent with typical cash-intensive business? Actually it's a money services business, but still structuring. We can cite that the deposits are all under $10,000 and occur across multiple days, indicating possible structuring to avoid CTR. Also mention that the notes label them \"smurfing fan-in deposit\". That's part of evidence.\n\nWe must not invent any regulation citation unless it's in policy_excerpts, but there are none. So we cannot cite regulation. We can just mention \"structuring\" as a pattern but not cite statute. That's okay.\n\nWe need to produce JSON with is_suspicious true and suspicious_activity_report string.\n\nNow craft narrative ~ 400-800 characters. Let's count approximate characters. We'll aim for ~550 characters.\n\nDraft:\n\n\"On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH. The total of these sub‑$10,000 deposits equals roughly $70,500, a pattern of multiple low‑value transfers that aligns with structuring behavior. The entity is a money‑services business with a declared monthly volume near $748,000, yet the observed activity consists of many small, rapid inflows from distinct counterparties, a configuration that raises a structuring red flag.\"\n\nNow count characters. Let's count roughly. I'll count characters including spaces.\n\nI'll copy text and count manually approximate.\n\n\"On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH. The total of these sub‑$10,000 deposits equals roughly $70,500, a pattern of multiple low‑value transfers that aligns with structuring behavior. The entity is a money‑services business with a declared monthly volume near $748,000, yet the observed activity consists of many small, rapid inflows from distinct counterparties, a configuration that raises a structuring red flag.\"\n\nLet's count characters. I'll use rough estimate: each word ~5 chars plus spaces. But better to count precisely? Let's approximate length: It's probably around 400-500 characters. Let's count more systematically.\n\nI'll write it without line breaks.\n\nString:\n\nOn 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH. The total of these sub‑$10,000 deposits equals roughly $70,500, a pattern of multiple low‑value transfers that aligns with structuring behavior. The entity is a money‑services business with a declared monthly volume near $748,000, yet the observed activity consists of many small, rapid inflows from distinct counterparties, a configuration that raises a structuring red flag.\n\nNow count characters including spaces. I'll count using groups.\n\nI'll copy into a counting tool mentally: Let's count per sentence.\n\nSentence1: \"On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH.\"\n\nCount characters:\n\nI'll count each character including spaces.\n\nI'll write with indices.\n\n\"On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH.\"\n\nLet's count:\n\nO(1)n2 (space3)2(4)0(5)2(6)6(7)‑(8)0(9)4(10)‑(11)1(12)5(13) (14)t15h16r17o18u19g20h21 (22)t23h24e25 (26)a27c28c29o30u31n32t33 (34)r35e36c37e38i39v40e41d42 (43)e44l45e46v47e48n49 (50)i51n52b53o54u55n56d57 (58)t59r60a61n62s63f64e65r66s67,68 (69)a70l71l72 (73)l74a75b76e77l78e79d80 (81)“82s83m84u85r86f87i88n89g90 (91)f92a93n94‑95i96n97 (98)d99e100p101o102s103i104t105”106,107 (108)r109a110n111g112i113n114g115 (116)f117r118o119m120 (121)$122 4 ,? Actually \"$4,688\" includes characters: $ (122) 4 (123) , (124) 6 (125) 8 (126) 8 (127). Then (space) t? Let's continue.\n\nI think it's too tedious. Probably the length is around 500-600 characters. Should be within 400-800. So okay.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still part of string. Probably fine.\n\nNow output exactly JSON with no extra text.\n\nLet's craft final narrative maybe slightly shorter to ensure within 800 characters. Let's count approximate characters: The draft seems maybe ~560 characters. Should be fine.\n\nNow produce final answer.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH. The total of these sub‑$10,000 deposits equals roughly $70,500, a pattern of multiple low‑value transfers that aligns with structuring behavior. The entity is a money‑services business with a declared monthly volume near $748,000, yet the observed activity consists of many small, rapid inflows from distinct counterparties, a configuration that raises a structuring red flag.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH. The total of these sub‑$10,000 deposits equals roughly $70,500, a pattern of multiple low‑value transfers that aligns with structuring behavior. The entity is a money‑services business with a declared monthly volume near $748,000, yet the observed activity consists of many small, rapid inflows from distinct counterparties, a configuration that raises a structuring red flag."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑15 through 2026‑04‑21 the account received eleven inbound transfers, all labeled “smurfing fan‑in deposit,” ranging from $4,688 to $8,853 and delivered via cash or ACH. The total of these sub‑$10,000 deposits equals roughly $70,500, a pattern of multiple low‑value transfers that aligns with structuring behavior. The entity is a money‑services business with a declared monthly volume near $748,000, yet the observed activity consists of many small, rapid inflows from distinct counterparties, a configuration that raises a structuring red flag.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,185 @@
+{
+  "case_id": "DEMO_0025",
+  "alert_id": "ALT_2484076",
+  "entity_id": "SYN_3b572516",
+  "started_at": "2026-05-27T15:21:45.072846+00:00",
+  "finished_at": "2026-05-27T15:22:09.593004+00:00",
+  "wall_clock_ms": 24520.2,
+  "transactions": [
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "ZF Exports LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "intercompany funding (benign: documented holding-entity transfer)"
+    },
+    {
+      "amount": 1586721.98,
+      "channel": "ach",
+      "counterparty": "FVTTW Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 1420233.8,
+      "channel": "ach",
+      "counterparty": "SKUN Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 786397.41,
+      "channel": "card",
+      "counterparty": "James Johnson",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 525340.36,
+      "channel": "ach",
+      "counterparty": "SHVN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1728129.7,
+      "channel": "ach",
+      "counterparty": "PEWPJ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3b572516",
+    "entity_type": "business",
+    "expected_monthly_volume": 1933188.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$1,933,188.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.667,
+      "wire": 0.167,
+      "card": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'ach': 0.6666666666666666, 'card': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=1728129.7, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 6 transactions with a tx_total_usd of 6040823.25. The channel_mix is dominated by ach, which accounts for 4 of the total transactions. Activity shows a velocity_24h_max of 1728129.70, indicating significant single-day movement. There are unique_counterparties_7d of 0, as no transactions occurred within the last seven days. The vs_declared_volume_ratio is 3.12, suggesting activity exceeds the expected monthly volume. This pattern of rapid movement of funds is consistent with pass-through behavior and warrants further review.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 6040823.25,
+          "channel_mix": {
+            "wire": 1,
+            "ach": 4,
+            "card": 1
+          },
+          "velocity_24h_max": 1728129.7,
+          "unique_counterparties_7d": 0,
+          "vs_declared_volume_ratio": 3.12
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 6,546,823.25",
+      "calculation": "1. Sum transactions[0..5] amounts: 500,000.00 + 1,586,721.98 + 1,420,233.80 + 786,397.41 + 525,340.36 + 1,728,129.70 = 6,546,823.25",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 6,546,823.25",
+        "calculation": "1. Sum transactions[0..5] amounts: 500,000.00 + 1,586,721.98 + 1,420,233.80 + 786,397.41 + 525,340.36 + 1,728,129.70 = 6,546,823.25",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"ZF Exports LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"intercompany funding (benign: documented holding-entity transfer)\"}, {\"amount\": 1586721.98, \"channel\": \"ach\", \"counterparty\": \"FVTTW Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 1420233.8, \"channel\": \"ach\", \"counterparty\": \"SKUN Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 786397.41, \"channel\": \"card\", \"counterparty\": \"James Johnson\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 525340.36, \"channel\": \"ach\", \"counterparty\": \"SHVN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1728129.7, \"channel\": \"ach\", \"counterparty\": \"PEWPJ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3b572516\", \"entity_type\": \"business\", \"expected_monthly_volume\": 1933188.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$1,933,188.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 6,546,823.25\", \"calculation\": \"1. Sum transactions[0..5] amounts: 500,000.00 + 1,586,721.98 + 1,420,233.80 + 786,397.41 + 525,340.36 + 1,728,129.70 = 6,546,823.25\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The alert was triggered by high-value transactions totaling $6,546,823.25 across six events between 2026-02-04 and 2026-04-25, including a $500,000 wire to ZF Exports LLC in the BVI and multiple ACH transfers to entities such as FVTTW Associates LLC ($1,586,721.98) and PEWPJ Logistics LLC ($1,728,129.70). However, the KYC profile identifies the entity as an offshore holding company with a declared expected monthly volume of $1,933,188. The observed activity is consistent with the declared business purpose of asset holding and the expected volume for a high-net-worth holding structure. No sanctions hits or behavioral red flags were identified. This activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The alert was triggered by high-value transactions totaling $6,546,823.25 across six events between 2026-02-04 and 2026-04-25, including a $500,000 wire to ZF Exports LLC in the BVI and multiple ACH transfers to entities such as FVTTW Associates LLC ($1,586,721.98) and PEWPJ Logistics LLC ($1,728,129.70). However, the KYC profile identifies the entity as an offshore holding company with a declared expected monthly volume of $1,933,188. The observed activity is consistent with the declared business purpose of asset holding and the expected volume for a high-net-worth holding structure. No sanctions hits or behavioral red flags were identified. This activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The alert was triggered by high-value transactions totaling $6,546,823.25 across six events between 2026-02-04 and 2026-04-25, including a $500,000 wire to ZF Exports LLC in the BVI and multiple ACH transfers to entities such as FVTTW Associates LLC ($1,586,721.98) and PEWPJ Logistics LLC ($1,728,129.70). However, the KYC profile identifies the entity as an offshore holding company with a declared expected monthly volume of $1,933,188. The observed activity is consistent with the declared business purpose of asset holding and the expected volume for a high-net-worth holding structure. No sanctions hits or behavioral red flags were identified. This activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

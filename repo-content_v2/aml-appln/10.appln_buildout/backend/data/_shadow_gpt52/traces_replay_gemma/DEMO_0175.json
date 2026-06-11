@@ -1,0 +1,181 @@
+{
+  "case_id": "DEMO_0175",
+  "entity_id": "SYN_c2e9a586",
+  "started_at": "2026-05-23T13:16:18.130901+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 7515.1,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "Entity SYN_c2e9a586, a Panama-based offshore holding company, exhibited suspicious activity consistent with layering and pass-through behavior. Between 2026-03-25 and 2026-03-30, the entity conducted eight wire transfers totaling $4,820,125.22 to various counterparties, including VYCGA Industries LLC ($778,884.92), QQM Services LLC ($745,050.26), and CFQZB Group LLC ($593,834.14). The transactions follow a 'peel-chain hop' pattern with descending amounts. Upon verification, the auxiliary behavioral finding of 7 transactions is inconsistent with the underlying transactions; the re-derived count is 8. The total volume of $4,820,125.22 represents a vs_declared_volume_ratio of approximately 8.09x the declared monthly volume of $597,008.0. This rapid movement of funds through multiple LLCs warrants further investigation. This matter is referred to a human investigator.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Entity SYN_c2e9a586, a Panama-based offshore holding company, exhibited suspicious activity consistent with layering and pass-through behavior. Between 2026-03-25 and 2026-03-30, the entity conducted eight wire transfers totaling $4,820,125.22 to various counterparties, including VYCGA Industries LLC ($778,884.92), QQM Services LLC ($745,050.26), and CFQZB Group LLC ($593,834.14). The transactions follow a 'peel-chain hop' pattern with descending amounts. Upon verification, the auxiliary behavioral finding of 7 transactions is inconsistent with the underlying transactions; the re-derived count is 8. The total volume of $4,820,125.22 represents a vs_declared_volume_ratio of approximately 8.09x the declared monthly volume of $597,008.0. This rapid movement of funds through multiple LLCs warrants further investigation. This matter is referred to a human investigator."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 778884.92, \"channel\": \"wire\", \"counterparty\": \"VYCGA Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 745050.26, \"channel\": \"wire\", \"counterparty\": \"QQM Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"peel-chain hop\"}, {\"amount\": 712300.68, \"channel\": \"wire\", \"counterparty\": \"DBAZD Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"peel-chain hop\"}, {\"amount\": 689325.55, \"channel\": \"wire\", \"counterparty\": \"KJY Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"peel-chain hop\"}, {\"amount\": 667900.95, \"channel\": \"wire\", \"counterparty\": \"PSXRV Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"peel-chain hop\"}, {\"amount\": 639957.52, \"channel\": \"wire\", \"counterparty\": \"AJLY Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"peel-chain hop\"}, {\"amount\": 612601.72, \"channel\": \"wire\", \"counterparty\": \"OZJK Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"peel-chain hop\"}, {\"amount\": 593834.14, \"channel\": \"wire\", \"counterparty\": \"CFQZB Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"peel-chain hop\"}], \"kyc_profile\": {\"entity_id\": \"SYN_c2e9a586\", \"entity_type\": \"business\", \"expected_monthly_volume\": 597008, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$597,008.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"Panama\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the conduct likely falls within 5318(g) because the entity exhibited a pattern of high-value wire transfers to multiple counterparties using a 'peel-chain hop' method, which is indicative of suspicious activity and potential structuring to avoid reporting thresholds.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity that may involve money laundering or other criminal activity. The observed transactions, characterized by rapid movement of large sums (ranging from $593,834.14 to $778,884.92) to various LLCs via a 'peel-chain hop' channel, suggest an attempt to obscure the origin or destination of funds, meeting the criteria for suspicious activity reporting.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_c2e9a586, an offshore holding company based in Panama, exhibited high-velocity activity between 2026-03-25 and 2026-03-30. During this period, the entity conducted seven wire transfers to various counterparties, including VYCGA Industries LLC and QQM Services LLC, with amounts ranging from 593,834.14 USD to 778,884.92 USD. The activity is characterized by a rapid succession of high-value transfers, suggesting a 'peel-chain hop' pattern. The total transaction volume significantly exceeds the declared monthly volume of 597,008.0.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 4720455.74, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 3, \"velocity_24h_avg_30d\": 0.7, \"unique_counterparties_7d\": 6, \"amount_z_score_max\": 2.1, \"country_risk_max\": 0.7, \"loop_detected\": false, \"vs_declared_volume_ratio\": 7.88}, \"evidence\": \"transactions[0..6]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"The total volume of the detected cycle is $4,820,125.22, which is approximately 8.09x the declared monthly volume of $597,008.0.\", \"calculation\": \"1. Identify the total sum of the amounts in the Transactions table: 778,884.92 + 745,050.26 + 712,300.68 + 689,325.55 + 667,900.95 + 639,957.52 + 612,601.72 + 593,834.14 = 4,820,125.22\", \"evidence\": \"All rows in the 'amount' column of the Transactions table\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Entity SYN_c2e9a586, a Panama-based offshore holding company, exhibited suspicious activity consistent with layering and pass-through behavior. Between 2026-03-25 and 2026-03-30, the entity conducted eight wire transfers totaling $4,820,125.22 to various counterparties, including VYCGA Industries LLC ($778,884.92), QQM Services LLC ($745,050.26), and CFQZB Group LLC ($593,834.14). The transactions follow a 'peel-chain hop' pattern with descending amounts. Upon verification, the auxiliary behavioral finding of 7 transactions is inconsistent with the underlying transactions; the re-derived count is 8. The total volume of $4,820,125.22 represents a vs_declared_volume_ratio of approximately 8.09x the declared monthly volume of $597,008.0. This rapid movement of funds through multiple LLCs warrants further investigation. This matter is referred to a human investigator.\"\n}\n```",
+  "transactions": [
+    {
+      "amount": 778884.92,
+      "channel": "wire",
+      "counterparty": "VYCGA Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 745050.26,
+      "channel": "wire",
+      "counterparty": "QQM Services LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 712300.68,
+      "channel": "wire",
+      "counterparty": "DBAZD Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 689325.55,
+      "channel": "wire",
+      "counterparty": "KJY Services LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 667900.95,
+      "channel": "wire",
+      "counterparty": "PSXRV Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 639957.52,
+      "channel": "wire",
+      "counterparty": "AJLY Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 612601.72,
+      "channel": "wire",
+      "counterparty": "OZJK Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 593834.14,
+      "channel": "wire",
+      "counterparty": "CFQZB Group LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": "peel-chain hop"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_c2e9a586",
+    "entity_type": "business",
+    "expected_monthly_volume": 597008.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$597,008.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "Panama"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the conduct likely falls within 5318(g) because the entity exhibited a pattern of high-value wire transfers to multiple counterparties using a 'peel-chain hop' method, which is indicative of suspicious activity and potential structuring to avoid reporting thresholds.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity that may involve money laundering or other criminal activity. The observed transactions, characterized by rapid movement of large sums (ranging from $593,834.14 to $778,884.92) to various LLCs via a 'peel-chain hop' channel, suggest an attempt to obscure the origin or destination of funds, meeting the criteria for suspicious activity reporting."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_c2e9a586, an offshore holding company based in Panama, exhibited high-velocity activity between 2026-03-25 and 2026-03-30. During this period, the entity conducted seven wire transfers to various counterparties, including VYCGA Industries LLC and QQM Services LLC, with amounts ranging from 593,834.14 USD to 778,884.92 USD. The activity is characterized by a rapid succession of high-value transfers, suggesting a 'peel-chain hop' pattern. The total transaction volume significantly exceeds the declared monthly volume of 597,008.0.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 4720455.74,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 3,
+          "velocity_24h_avg_30d": 0.7,
+          "unique_counterparties_7d": 6,
+          "amount_z_score_max": 2.1,
+          "country_risk_max": 0.7,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 7.88
+        },
+        "evidence": "transactions[0..6]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "The total volume of the detected cycle is $4,820,125.22, which is approximately 8.09x the declared monthly volume of $597,008.0.",
+        "calculation": "1. Identify the total sum of the amounts in the Transactions table: 778,884.92 + 745,050.26 + 712,300.68 + 689,325.55 + 667,900.95 + 639,957.52 + 612,601.72 + 593,834.14 = 4,820,125.22",
+        "evidence": "All rows in the 'amount' column of the Transactions table"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "google/gemma-4-31b-it",
+    "endpoint": "http://localhost:8090/v1"
+  }
+}

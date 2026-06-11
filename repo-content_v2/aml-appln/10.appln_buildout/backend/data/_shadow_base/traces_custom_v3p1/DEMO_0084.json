@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0084",
+  "alert_id": "ALT_2480090",
+  "entity_id": "SYN_ac5595db",
+  "started_at": "2026-05-27T16:06:28.812687+00:00",
+  "finished_at": "2026-05-27T16:06:36.241438+00:00",
+  "wall_clock_ms": 7428.8,
+  "transactions": [
+    {
+      "amount": 3377.68,
+      "channel": "wire",
+      "counterparty": "Maria Brown (family member)",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 2995.15,
+      "channel": "wire",
+      "counterparty": "Maria Brown (family member)",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "wire to family (benign, similar amount)"
+    },
+    {
+      "amount": 475.72,
+      "channel": "ach",
+      "counterparty": "OOFG Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 1295.4,
+      "channel": "ach",
+      "counterparty": "KD Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 1427.95,
+      "channel": "ach",
+      "counterparty": "SB Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 794.47,
+      "channel": "card",
+      "counterparty": "Daniel Thomas",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 929.24,
+      "channel": "wire",
+      "counterparty": "MN Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ac5595db",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1533.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,533.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-AZ"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.429,
+      "ach": 0.429,
+      "card": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.42857142857142855, 'card': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 7 with a tx_total_usd of 11295.61. The channel_mix shows a distribution including wire: 0.429, indicating a reliance on non-cash transfers. Activity peaked with a velocity_24h_max of 1. The account interacted with unique_counterparties_7d of 6. A vs_declared_volume_ratio of 23.32 indicates volume significantly exceeding the expected monthly throughput. This pattern of rapid movement and high volume relative to the profile warrants further review.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 11295.61,
+        "channel_mix": {
+          "wire": 0.429,
+          "ach": 0.429,
+          "card": 0.143
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.29,
+        "unique_counterparties_7d": 6,
+        "amount_z_score_max": 2.0,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 23.32
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 10895.64",
+      "calculation": "1. Identify all transaction amounts: 3,377.68 (2026-04-03), 2,995.15 (2026-04-23), 475.72 (2026-02-12), 1,295.40 (2026-03-30), 1,427.95 (2026-04-24), 794.47 (2026-02-14), 929.24 (2026-03-29). 2. Sum the amounts: 3,377.68 + 2,995.15 + 475.72 + 1,295.40 + 1,427.95 + 794.47 + 929.24 = 10,895.64.",
+      "evidence": "transactions[0..6].amount; [kyc_profile].expected_monthly_volume"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute was provided for this typology; therefore, no legal analysis can be performed.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute was mapped for this typology, making it impossible to determine if the statute applies to the facts."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute was provided for this typology; therefore, no legal analysis can be performed.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute was mapped for this typology, making it impossible to determine if the statute applies to the facts."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account recorded a tx_count of 7 with a tx_total_usd of 11295.61. The channel_mix shows a distribution including wire: 0.429, indicating a reliance on non-cash transfers. Activity peaked with a velocity_24h_max of 1. The account interacted with unique_counterparties_7d of 6. A vs_declared_volume_ratio of 23.32 indicates volume significantly exceeding the expected monthly throughput. This pattern of rapid movement and high volume relative to the profile warrants further review.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 11295.61,
+          "channel_mix": {
+            "wire": 0.429,
+            "ach": 0.429,
+            "card": 0.143
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.29,
+          "unique_counterparties_7d": 6,
+          "amount_z_score_max": 2.0,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 23.32
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 10895.64",
+        "calculation": "1. Identify all transaction amounts: 3,377.68 (2026-04-03), 2,995.15 (2026-04-23), 475.72 (2026-02-12), 1,295.40 (2026-03-30), 1,427.95 (2026-04-24), 794.47 (2026-02-14), 929.24 (2026-03-29). 2. Sum the amounts: 3,377.68 + 2,995.15 + 475.72 + 1,295.40 + 1,427.95 + 794.47 + 929.24 = 10,895.64.",
+        "evidence": "transactions[0..6].amount; [kyc_profile].expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3377.68, \"channel\": \"wire\", \"counterparty\": \"Maria Brown (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 2995.15, \"channel\": \"wire\", \"counterparty\": \"Maria Brown (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"wire to family (benign, similar amount)\"}, {\"amount\": 475.72, \"channel\": \"ach\", \"counterparty\": \"OOFG Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 1295.4, \"channel\": \"ach\", \"counterparty\": \"KD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 1427.95, \"channel\": \"ach\", \"counterparty\": \"SB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 794.47, \"channel\": \"card\", \"counterparty\": \"Daniel Thomas\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 929.24, \"channel\": \"wire\", \"counterparty\": \"MN Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ac5595db\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1533.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,533.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-AZ\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute was provided for this typology; therefore, no legal analysis can be performed.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute was mapped for this typology, making it impossible to determine if the statute applies to the facts.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account recorded a tx_count of 7 with a tx_total_usd of 11295.61. The channel_mix shows a distribution including wire: 0.429, indicating a reliance on non-cash transfers. Activity peaked with a velocity_24h_max of 1. The account interacted with unique_counterparties_7d of 6. A vs_declared_volume_ratio of 23.32 indicates volume significantly exceeding the expected monthly throughput. This pattern of rapid movement and high volume relative to the profile warrants further review.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 11295.61, \"channel_mix\": {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.29, \"unique_counterparties_7d\": 6, \"amount_z_score_max\": 2.0, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 23.32}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 10895.64\", \"calculation\": \"1. Identify all transaction amounts: 3,377.68 (2026-04-03), 2,995.15 (2026-04-23), 475.72 (2026-02-12), 1,295.40 (2026-03-30), 1,427.95 (2026-04-24), 794.47 (2026-02-14), 929.24 (2026-03-29). 2. Sum the amounts: 3,377.68 + 2,995.15 + 475.72 + 1,295.40 + 1,427.95 + 794.47 + 929.24 = 10,895.64.\", \"evidence\": \"transactions[0..6].amount; [kyc_profile].expected_monthly_volume\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a high volume of activity, with a total transaction volume of $11,295.61 across seven transactions, which triggered an alert due to a vs_declared_volume_ratio of 23.32. However, the activity is primarily composed of benign family transfers, including two wires to 'Maria Brown' for $3,377.68 on 2026-04-03 and $2,995.15 on 2026-04-23. Other transactions consist of small ACH and card payments to various LLCs, which are consistent with the routine spending of a retired individual. While the total volume exceeds the expected monthly throughput, the nature of the payments is consistent with declared business and personal maintenance. No SAR warranted; final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a high volume of activity, with a total transaction volume of $11,295.61 across seven transactions, which triggered an alert due to a vs_declared_volume_ratio of 23.32. However, the activity is primarily composed of benign family transfers, including two wires to 'Maria Brown' for $3,377.68 on 2026-04-03 and $2,995.15 on 2026-04-23. Other transactions consist of small ACH and card payments to various LLCs, which are consistent with the routine spending of a retired individual. While the total volume exceeds the expected monthly throughput, the nature of the payments is consistent with declared business and personal maintenance. No SAR warranted; final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a high volume of activity, with a total transaction volume of $11,295.61 across seven transactions, which triggered an alert due to a vs_declared_volume_ratio of 23.32. However, the activity is primarily composed of benign family transfers, including two wires to 'Maria Brown' for $3,377.68 on 2026-04-03 and $2,995.15 on 2026-04-23. Other transactions consist of small ACH and card payments to various LLCs, which are consistent with the routine spending of a retired individual. While the total volume exceeds the expected monthly throughput, the nature of the payments is consistent with declared business and personal maintenance. No SAR warranted; final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

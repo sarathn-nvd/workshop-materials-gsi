@@ -1,0 +1,178 @@
+{
+  "case_id": "DEMO_0052",
+  "alert_id": "ALT_2406632",
+  "entity_id": "SYN_ddbcc620",
+  "started_at": "2026-05-29T02:59:58.700363+00:00",
+  "finished_at": "2026-05-29T03:00:31.491508+00:00",
+  "wall_clock_ms": 32791.2,
+  "transactions": [
+    {
+      "amount": 710.16,
+      "channel": "wire",
+      "counterparty": "Donor Susan Anderson",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ddbcc620",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4145.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,145.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Concentrated wire flow (1 txns, top counterparty share 100%)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_ddbcc620 executed 1 transactions totaling $710.16 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 1.0. Volume vs declared monthly is 5.14x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 1,
+        "tx_total_usd": 710.16,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 1.0,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 5.14
+      },
+      "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nWe have input: a transactional bundle with one transaction: amount 710.16 USD. Then kyc_profile with expected_monthly_volume: 4145.0.\n\nQuestion: \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\"\n\nWe need to compute total volume passing through any detected cycle. There's only one transaction of 710.16. Probably total volume is sum of amounts? But \"any detected cycle\" ma"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The activity involves laundering funds over several years.",
+      "evidence_span": "laundering more than $6 billion over several years."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 31 U.S.C. § 5318(g) — Suspicious activity reporting requirements?",
+      "answer": "No, § 5318(g) requires",
+      "label": "contradiction",
+      "reasoning": "The transaction is a single inbound donation of $710.16, well below any structuring threshold, and there is no indication of placement, layering, or integration. Under 31 U.S.C. § 5318(g), a covered entity must file a suspicious activity report when it knows, suspects, or has reason to suspect that a transaction involves suspicious activity, and the facts do not satisfy that requirement. Thus, the conduct does not trigger the reporting obligation. § 5318(g) requires"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_ddbcc620 executed 1 transactions totaling $710.16 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 1.0. Volume vs declared monthly is 5.14x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 1,
+          "tx_total_usd": 710.16,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 1.0,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 5.14
+        },
+        "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity involves laundering funds over several years.",
+        "evidence_span": "laundering more than $6 billion over several years."
+      }
+    ],
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 31 U.S.C. § 5318(g) — Suspicious activity reporting requirements?",
+        "answer": "No, § 5318(g) requires",
+        "label": "contradiction",
+        "reasoning": "The transaction is a single inbound donation of $710.16, well below any structuring threshold, and there is no indication of placement, layering, or integration. Under 31 U.S.C. § 5318(g), a covered entity must file a suspicious activity report when it knows, suspects, or has reason to suspect that a transaction involves suspicious activity, and the facts do not satisfy that requirement. Thus, the conduct does not trigger the reporting obligation. § 5318(g) requires"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 710.16, \"channel\": \"wire\", \"counterparty\": \"Donor Susan Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ddbcc620\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4145.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,145.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN\\u2019s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. \\u00a7 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. \\u00a7 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                \\u00a7 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. \\u00a7 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. \\u00a7 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation\\u2019s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO\\u2019s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A\\u2192B\\u2192C\\u2192A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with \\u22653% trim.\"}], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_ddbcc620 executed 1 transactions totaling $710.16 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 1.0. Volume vs declared monthly is 5.14x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 1, \"tx_total_usd\": 710.16, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 1.0, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 5.14}, \"evidence\": \"transactions[0..0]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity involves laundering funds over several years.\", \"evidence_span\": \"laundering more than $6 billion over several years.\"}], \"statutory\": [{\"question\": \"Does the conduct described fall within 31 U.S.C. \\u00a7 5318(g) \\u2014 Suspicious activity reporting requirements?\", \"answer\": \"No, \\u00a7 5318(g) requires\", \"label\": \"contradiction\", \"reasoning\": \"The transaction is a single inbound donation of $710.16, well below any structuring threshold, and there is no indication of placement, layering, or integration. Under 31 U.S.C. \\u00a7 5318(g), a covered entity must file a suspicious activity report when it knows, suspects, or has reason to suspect that a transaction involves suspicious activity, and the facts do not satisfy that requirement. Thus, the conduct does not trigger the reporting obligation. \\u00a7 5318(g) requires\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string (400-800 characters). Must decide based on evidence.\n\nWe have a single transaction: $710.16 inbound wire donation from \"Donor Susan Anderson\". Entity is individual, expected monthly volume $4145, business purpose \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,145.\" Risk rating medium. No sanctions hits. Policy excerpts include FinCEN text about virtual currency, but not directly relevant. SOP about layering etc. Auxiliary findings: behavioral summary says tx_total_usd 710.16, channel_mix wire 1.0, velocity 1, volume vs declared monthly is 5.14x. That's >5x declared monthly volume? Actually declared monthly volume is $4145, observed total $710, ratio 0.171? Wait they computed vs_declared_volume_ratio 5.14x. That seems reversed: maybe they computed declared / observed? Actually they said \"Volume vs declared monthly is 5.14x\". If observed is 710, declared is 4145, ratio observed/declared = 0.171, not 5.14. So maybe they computed declared/observed = 5.83? Not sure. But they claim 5.14x, maybe they used some other metric. Anyway, it's a single transaction, small amount, inbound donation, not structuring. No other red flags. The auxiliary numeric findings empty. Citation says \"The activity involves laundering funds over several years.\" But that is from policy excerpt about laundering $6bn over several years, not directly relevant. Statutory finding says \"No, §5318(g) requires\" and says does not trigger reporting requirement. So likely not suspicious.\n\nThus is_suspicious = false.\n\nWe need to produce a narrative 400-800 characters, grounded, naming the surface red flag, citing bundle evidence that resolves it, and disposition phrase.\n\nSurface red flag: single inbound wire donation $710.16 to an individual with expected monthly volume $4,145, business purpose salaried wage earner. Could be considered unusual? But it's small relative to expected volume, within range? Actually it's about 17% of monthly expected, not huge. The narrative must name the red flag: \"Inbound wire of $710.16 from 'Donor Susan Anderson'\". Then cite KYC business purpose and expected monthly volume, and that the transaction is a small donation consistent with occasional contributions, no structuring, no layering, no high-risk jurisdiction, no sanctions hit. Also mention that the behavioral metric vs_declared_volume_ratio is 5.14x but that appears to be misinterpreted; we can say \"Observed total $710.16 is well below the declared monthly volume of $4,145 and does not indicate structuring.\" Must not invent disambiguating evidence not present. We can use the KYC profile's expected monthly volume and business purpose as disambiguator. Also we can reference the policy excerpt about confidentiality? Not needed. Must not cite any regulation not in bundle. We can cite the SOP? Not needed. Could mention that the auxiliary finding indicates velocity 1 and no loop, consistent with single transaction.\n\nWe need 400-800 characters. Let's craft about 550 characters.\n\nStructure: 1) Name surface red flag. 2) Cite bundle evidence that resolves. 3) State disposition. 4) Defer to human.\n\nLet's draft:\n\n\"Surface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator.\"\n\nCount characters: Let's approximate. Need 400-800 characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\nSurface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator.\n\nLet's count roughly: I'll approximate using a tool mentally. Might be around 460-500 characters. Should be okay.\n\nWe must output JSON with is_suspicious false and the string.\n\nMake sure no extra whitespace or newlines? It's okay.\n\nReturn:\n\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"Surface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator.\"}\n\nCheck character count: Let's quickly count more precisely.\n\nI'll count characters manually (including spaces). Use approximate: I'll copy text and count.\n\n\"Surface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator.\"\n\nLet's count using rough method: I'll count words and approximate. Better to trust it's within 400-800. It seems maybe ~500-560 characters. Should be fine.\n\nMake sure JSON is valid, no trailing commas. Provide exactly as required.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"Surface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: a single inbound wire of $710.16 from counterparty 'Donor Susan Anderson' on 2026-04-29. This transaction triggered the alert due to its amount and channel. The bundle’s KYC profile shows the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of regular employment income; the observed $710.16 wire represents only ~17 % of the declared monthly volume and fits a one‑time donation pattern, with no structuring, peel‑chain, or sanctions match. Accordingly, the activity is consistent with the declared business and no SAR is warranted. The final filing decision rests with the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

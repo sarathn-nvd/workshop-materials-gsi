@@ -1,0 +1,211 @@
+{
+  "case_id": "DEMO_0038",
+  "alert_id": "ALT_2457619",
+  "entity_id": "SYN_95cc23e7",
+  "started_at": "2026-05-29T02:57:49.031186+00:00",
+  "finished_at": "2026-05-29T02:57:55.316367+00:00",
+  "wall_clock_ms": 6285.2,
+  "transactions": [
+    {
+      "amount": 3660.57,
+      "channel": "wire",
+      "counterparty": "Michael Thomas (family member)",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 1638.6,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 6722.24,
+      "channel": "ach",
+      "counterparty": "FXWD Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 4868.43,
+      "channel": "ach",
+      "counterparty": "EU Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 6185.39,
+      "channel": "cheque",
+      "counterparty": "QBRGF Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 6747.85,
+      "channel": "ach",
+      "counterparty": "CQX Group LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_95cc23e7",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5850.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$5,850.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.1667,
+      "card": 0.1667,
+      "ach": 0.5,
+      "cheque": 0.1667
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'card': 0.16666666666666666, 'ach': 0.5, 'cheque': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 29823.08,
+        "channel_mix": {
+          "ach": 0.5,
+          "wire": 0.167,
+          "card": 0.167,
+          "cheque": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.22
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 29823.08",
+      "calculation": "1) Sum all listed transaction amounts: 3,660.57 + 1,638.60 + 6,722.24 + 4,868.43 + 6,185.39 + 6,747.85 = 29,823.08 (transactions[0..5]).\n2) KYC declared expected monthly volume = 5,850.0 (kyc_profile.expected_monthly_volume).\n3) Compute multiple vs KYC: 29,823.08 / 5,850.0 = 5.0988 ≈ 5.10x (transactions[0..5]; kyc_profile.expected_monthly_volume).\n4) Compute absolute difference: 29,823.08 - 5,850.0 = 23,973.08 (transactions[0..5]; kyc_profile.expected_monthly_volume).",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; I cannot provide a verbatim citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided; cannot assess applicability.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided, so there are no statutory elements to compare against the fact pattern. Without a cited section (e.g., a specific U.S.C. or C.F.R. provision), it is not possible to determine whether any statute applies. Contiguous phrase from answer: \"No statute provided\"."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 29823.08,
+          "channel_mix": {
+            "ach": 0.5,
+            "wire": 0.167,
+            "card": 0.167,
+            "cheque": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.22
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 29823.08",
+        "calculation": "1) Sum all listed transaction amounts: 3,660.57 + 1,638.60 + 6,722.24 + 4,868.43 + 6,185.39 + 6,747.85 = 29,823.08 (transactions[0..5]).\n2) KYC declared expected monthly volume = 5,850.0 (kyc_profile.expected_monthly_volume).\n3) Compute multiple vs KYC: 29,823.08 / 5,850.0 = 5.0988 ≈ 5.10x (transactions[0..5]; kyc_profile.expected_monthly_volume).\n4) Compute absolute difference: 29,823.08 - 5,850.0 = 23,973.08 (transactions[0..5]; kyc_profile.expected_monthly_volume).",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; I cannot provide a verbatim citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided; cannot assess applicability.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided, so there are no statutory elements to compare against the fact pattern. Without a cited section (e.g., a specific U.S.C. or C.F.R. provision), it is not possible to determine whether any statute applies. Contiguous phrase from answer: \"No statute provided\"."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3660.57, \"channel\": \"wire\", \"counterparty\": \"Michael Thomas (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 1638.6, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 6722.24, \"channel\": \"ach\", \"counterparty\": \"FXWD Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 4868.43, \"channel\": \"ach\", \"counterparty\": \"EU Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 6185.39, \"channel\": \"cheque\", \"counterparty\": \"QBRGF Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 6747.85, \"channel\": \"ach\", \"counterparty\": \"CQX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_95cc23e7\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5850.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$5,850.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\\\"ach\\\": 0.5, \\\"wire\\\": 0.167, \\\"card\\\": 0.167, \\\"cheque\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 29823.08, \"channel_mix\": {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.22}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 29823.08\", \"calculation\": \"1) Sum all listed transaction amounts: 3,660.57 + 1,638.60 + 6,722.24 + 4,868.43 + 6,185.39 + 6,747.85 = 29,823.08 (transactions[0..5]).\\n2) KYC declared expected monthly volume = 5,850.0 (kyc_profile.expected_monthly_volume).\\n3) Compute multiple vs KYC: 29,823.08 / 5,850.0 = 5.0988 \\u2248 5.10x (transactions[0..5]; kyc_profile.expected_monthly_volume).\\n4) Compute absolute difference: 29,823.08 - 5,850.0 = 23,973.08 (transactions[0..5]; kyc_profile.expected_monthly_volume).\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; I cannot provide a verbatim citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided; cannot assess applicability.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided, so there are no statutory elements to compare against the fact pattern. Without a cited section (e.g., a specific U.S.C. or C.F.R. provision), it is not possible to determine whether any statute applies. Contiguous phrase from answer: \\\"No statute provided\\\".\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_95cc23e7 (retired individual; expected monthly throughput ~$5,850; low risk) conducted 6 outbound transactions totaling $29,823.08 between 2026-02-07 and 2026-04-17 (ACH to multiple LLCs incl. FXWD Logistics LLC $6,722.24 on 2026-04-12; CQX Group LLC $6,747.85 on 2026-04-04; cheque $6,185.39 on 2026-02-07; plus a $3,660.57 wire to a family member). Verified total is ~5.10x KYC (aux metric 2.22x appears inconsistent). Pattern is inconsistent with fixed pension profile and warrants SAR consideration; no policy/statute citations provided.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_95cc23e7 (retired individual; expected monthly throughput ~$5,850; low risk) conducted 6 outbound transactions totaling $29,823.08 between 2026-02-07 and 2026-04-17 (ACH to multiple LLCs incl. FXWD Logistics LLC $6,722.24 on 2026-04-12; CQX Group LLC $6,747.85 on 2026-04-04; cheque $6,185.39 on 2026-02-07; plus a $3,660.57 wire to a family member). Verified total is ~5.10x KYC (aux metric 2.22x appears inconsistent). Pattern is inconsistent with fixed pension profile and warrants SAR consideration; no policy/statute citations provided."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_95cc23e7 (retired individual; expected monthly throughput ~$5,850; low risk) conducted 6 outbound transactions totaling $29,823.08 between 2026-02-07 and 2026-04-17 (ACH to multiple LLCs incl. FXWD Logistics LLC $6,722.24 on 2026-04-12; CQX Group LLC $6,747.85 on 2026-04-04; cheque $6,185.39 on 2026-02-07; plus a $3,660.57 wire to a family member). Verified total is ~5.10x KYC (aux metric 2.22x appears inconsistent). Pattern is inconsistent with fixed pension profile and warrants SAR consideration; no policy/statute citations provided.",
+  "judge_enabled": false,
+  "error": null
+}

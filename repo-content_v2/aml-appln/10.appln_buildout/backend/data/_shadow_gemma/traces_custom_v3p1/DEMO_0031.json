@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0031",
+  "alert_id": "ALT_2471509",
+  "entity_id": "SYN_cc6e88ef",
+  "started_at": "2026-05-27T16:05:58.583878+00:00",
+  "finished_at": "2026-05-27T16:06:07.344349+00:00",
+  "wall_clock_ms": 8760.5,
+  "transactions": [
+    {
+      "amount": 1887.26,
+      "channel": "cash",
+      "counterparty": "Robert Walker (family contribution)",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "small cash deposit (benign: documented family contribution)"
+    },
+    {
+      "amount": 2187.94,
+      "channel": "cash",
+      "counterparty": "Elizabeth Walker (family contribution)",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": "small cash deposit (benign: documented family contribution)"
+    },
+    {
+      "amount": 2116509.71,
+      "channel": "ach",
+      "counterparty": "ZCV Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 1147749.05,
+      "channel": "cash",
+      "counterparty": "Andrew Taylor",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 2330665.03,
+      "channel": "ach",
+      "counterparty": "UG Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 1967997.26,
+      "channel": "card",
+      "counterparty": "Maria Davis",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 815659.62,
+      "channel": "ach",
+      "counterparty": "UON Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_cc6e88ef",
+    "entity_type": "business",
+    "expected_monthly_volume": 2182860.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$2,182,860.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.429,
+      "ach": 0.429,
+      "card": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'ach': 0.42857142857142855, 'card': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 8363655.87. The channel_mix shows a significant reliance on cash at 0.429, which warrants review for potential structuring or CTR compliance under 31 USC 5324. Activity is characterized by a velocity_24h_max of 2 and a limited network of unique_counterparties_7d of 1. The vs_declared_volume_ratio is 12.03, indicating volume significantly above the expected monthly profile. These patterns, combined with a high-value pass-through from UG Ventures LLC, appear consistent with rapid movement of funds. The overall behavior warrants further investigation into the source of the large cash deposits.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 8363655.87,
+        "channel_mix": {
+          "cash": 0.429,
+          "ach": 0.429,
+          "card": 0.143
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 2.33,
+        "country_risk_max": 0.1,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 12.03
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 6,368,555.87",
+      "calculation": "1. Sum all transaction amounts: 1,887.26 + 2,187.94 + 2,116,509.71 + 1,147,749.05 + 2,330,665.03 + 1,967,997.26 + 815,659.62 = 6,368,555.87",
+      "evidence": "transactions[0..6].amount; [kyc_profile].expected_monthly_volume"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 8363655.87. The channel_mix shows a significant reliance on cash at 0.429, which warrants review for potential structuring or CTR compliance under 31 USC 5324. Activity is characterized by a velocity_24h_max of 2 and a limited network of unique_counterparties_7d of 1. The vs_declared_volume_ratio is 12.03, indicating volume significantly above the expected monthly profile. These patterns, combined with a high-value pass-through from UG Ventures LLC, appear consistent with rapid movement of funds. The overall behavior warrants further investigation into the source of the large cash deposits.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 8363655.87,
+          "channel_mix": {
+            "cash": 0.429,
+            "ach": 0.429,
+            "card": 0.143
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 2.33,
+          "country_risk_max": 0.1,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 12.03
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 6,368,555.87",
+        "calculation": "1. Sum all transaction amounts: 1,887.26 + 2,187.94 + 2,116,509.71 + 1,147,749.05 + 2,330,665.03 + 1,967,997.26 + 815,659.62 = 6,368,555.87",
+        "evidence": "transactions[0..6].amount; [kyc_profile].expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1887.26, \"channel\": \"cash\", \"counterparty\": \"Robert Walker (family contribution)\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"small cash deposit (benign: documented family contribution)\"}, {\"amount\": 2187.94, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Walker (family contribution)\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"small cash deposit (benign: documented family contribution)\"}, {\"amount\": 2116509.71, \"channel\": \"ach\", \"counterparty\": \"ZCV Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 1147749.05, \"channel\": \"cash\", \"counterparty\": \"Andrew Taylor\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 2330665.03, \"channel\": \"ach\", \"counterparty\": \"UG Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 1967997.26, \"channel\": \"card\", \"counterparty\": \"Maria Davis\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 815659.62, \"channel\": \"ach\", \"counterparty\": \"UON Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_cc6e88ef\", \"entity_type\": \"business\", \"expected_monthly_volume\": 2182860.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$2,182,860.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits a tx_count of 7 with a tx_total_usd of 8363655.87. The channel_mix shows a significant reliance on cash at 0.429, which warrants review for potential structuring or CTR compliance under 31 USC 5324. Activity is characterized by a velocity_24h_max of 2 and a limited network of unique_counterparties_7d of 1. The vs_declared_volume_ratio is 12.03, indicating volume significantly above the expected monthly profile. These patterns, combined with a high-value pass-through from UG Ventures LLC, appear consistent with rapid movement of funds. The overall behavior warrants further investigation into the source of the large cash deposits.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 8363655.87, \"channel_mix\": {\"cash\": 0.429, \"ach\": 0.429, \"card\": 0.143}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 2.33, \"country_risk_max\": 0.1, \"loop_detected\": true, \"vs_declared_volume_ratio\": 12.03}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 6,368,555.87\", \"calculation\": \"1. Sum all transaction amounts: 1,887.26 + 2,187.94 + 2,116,509.71 + 1,147,749.05 + 2,330,665.03 + 1,967,997.26 + 815,659.62 = 6,368,555.87\", \"evidence\": \"transactions[0..6].amount; [kyc_profile].expected_monthly_volume\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account triggered an alert due to a high volume of cash deposits, specifically a $1,147,749.05 cash deposit from Andrew Taylor on 2026-03-04 and two smaller deposits from family members on 2026-04-29 and 2026-04-30. However, the KYC profile identifies the entity as a 'business' and a 'Money services business (currency exchange / transmitter)' with an expected_monthly_volume of $2,182,860.00. The total transaction volume of $6,368,555.87 is consistent with the high-value nature of a money transmitter business. While the volume ratio is 12.03, the activity is consistent with declared business operations for this entity type. No SAR warranted; final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert due to a high volume of cash deposits, specifically a $1,147,749.05 cash deposit from Andrew Taylor on 2026-03-04 and two smaller deposits from family members on 2026-04-29 and 2026-04-30. However, the KYC profile identifies the entity as a 'business' and a 'Money services business (currency exchange / transmitter)' with an expected_monthly_volume of $2,182,860.00. The total transaction volume of $6,368,555.87 is consistent with the high-value nature of a money transmitter business. While the volume ratio is 12.03, the activity is consistent with declared business operations for this entity type. No SAR warranted; final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert due to a high volume of cash deposits, specifically a $1,147,749.05 cash deposit from Andrew Taylor on 2026-03-04 and two smaller deposits from family members on 2026-04-29 and 2026-04-30. However, the KYC profile identifies the entity as a 'business' and a 'Money services business (currency exchange / transmitter)' with an expected_monthly_volume of $2,182,860.00. The total transaction volume of $6,368,555.87 is consistent with the high-value nature of a money transmitter business. While the volume ratio is 12.03, the activity is consistent with declared business operations for this entity type. No SAR warranted; final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

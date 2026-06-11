@@ -1,0 +1,205 @@
+{
+  "case_id": "DEMO_0199",
+  "alert_id": "ALT_2417589",
+  "entity_id": "SYN_dfb9c858",
+  "started_at": "2026-05-31T06:06:18.398783+00:00",
+  "finished_at": "2026-05-31T06:06:23.981072+00:00",
+  "wall_clock_ms": 5582.3,
+  "transactions": [
+    {
+      "amount": 250000.0,
+      "channel": "wire",
+      "counterparty": "EBYZI Solutions LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "intercompany funding (benign: documented holding-entity transfer)"
+    },
+    {
+      "amount": 4581448.63,
+      "channel": "ach",
+      "counterparty": "ECFES Services LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 1979684.18,
+      "channel": "ach",
+      "counterparty": "CKO Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 1169929.47,
+      "channel": "ach",
+      "counterparty": "HR Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 1727682.82,
+      "channel": "ach",
+      "counterparty": "QZM Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 3976069.97,
+      "channel": "wire",
+      "counterparty": "COEX Group LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dfb9c858",
+    "entity_type": "business",
+    "expected_monthly_volume": 4002158.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$4,002,158.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.3333,
+      "ach": 0.6667
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.6666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_dfb9c858 executed 6 transactions totaling $13,684,815.07 USD with channel mix {\"ach\": 0.667, \"wire\": 0.333}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.05x. country_risk_max is 0.2; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 13684815.07,
+        "channel_mix": {
+          "ach": 0.667,
+          "wire": 0.333
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.51,
+        "country_risk_max": 0.2,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.05
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 13,684,815.07",
+      "calculation": "1) Sum all transaction amounts in transactions[0..5]: 250,000.00 + 4,581,448.63 + 1,979,684.18 + 1,169,929.47 + 1,727,682.82 + 3,976,069.97 = 13,684,815.07.\n2) KYC declared monthly volume from kyc_profile.expected_monthly_volume = 4,002,158.0.\n3) Compare: 13,684,815.07 / 4,002,158.0 = 3.4197 (~3.42x declared monthly volume).",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; there is no provided source text to quote for this question.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "Neutral — no statute provided/mapped, so statutory applicability cannot be determined.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so there are no statutory elements to test against the listed transactions and KYC profile. Because the statute is missing, it is not possible to determine whether any specific prohibition or requirement applies. Contiguous phrase in answer: \"no statute provided\"."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_dfb9c858 executed 6 transactions totaling $13,684,815.07 USD with channel mix {\"ach\": 0.667, \"wire\": 0.333}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.05x. country_risk_max is 0.2; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 13684815.07,
+          "channel_mix": {
+            "ach": 0.667,
+            "wire": 0.333
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.51,
+          "country_risk_max": 0.2,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.05
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 13,684,815.07",
+        "calculation": "1) Sum all transaction amounts in transactions[0..5]: 250,000.00 + 4,581,448.63 + 1,979,684.18 + 1,169,929.47 + 1,727,682.82 + 3,976,069.97 = 13,684,815.07.\n2) KYC declared monthly volume from kyc_profile.expected_monthly_volume = 4,002,158.0.\n3) Compare: 13,684,815.07 / 4,002,158.0 = 3.4197 (~3.42x declared monthly volume).",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; there is no provided source text to quote for this question.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "Neutral — no statute provided/mapped, so statutory applicability cannot be determined.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so there are no statutory elements to test against the listed transactions and KYC profile. Because the statute is missing, it is not possible to determine whether any specific prohibition or requirement applies. Contiguous phrase in answer: \"no statute provided\"."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 250000.0, \"channel\": \"wire\", \"counterparty\": \"EBYZI Solutions LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"intercompany funding (benign: documented holding-entity transfer)\"}, {\"amount\": 4581448.63, \"channel\": \"ach\", \"counterparty\": \"ECFES Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 1979684.18, \"channel\": \"ach\", \"counterparty\": \"CKO Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 1169929.47, \"channel\": \"ach\", \"counterparty\": \"HR Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 1727682.82, \"channel\": \"ach\", \"counterparty\": \"QZM Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 3976069.97, \"channel\": \"wire\", \"counterparty\": \"COEX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dfb9c858\", \"entity_type\": \"business\", \"expected_monthly_volume\": 4002158.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$4,002,158.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_dfb9c858 executed 6 transactions totaling $13,684,815.07 USD with channel mix {\\\"ach\\\": 0.667, \\\"wire\\\": 0.333}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.05x. country_risk_max is 0.2; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 13684815.07, \"channel_mix\": {\"ach\": 0.667, \"wire\": 0.333}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.51, \"country_risk_max\": 0.2, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.05}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 13,684,815.07\", \"calculation\": \"1) Sum all transaction amounts in transactions[0..5]: 250,000.00 + 4,581,448.63 + 1,979,684.18 + 1,169,929.47 + 1,727,682.82 + 3,976,069.97 = 13,684,815.07.\\n2) KYC declared monthly volume from kyc_profile.expected_monthly_volume = 4,002,158.0.\\n3) Compare: 13,684,815.07 / 4,002,158.0 = 3.4197 (~3.42x declared monthly volume).\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; there is no provided source text to quote for this question.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"Neutral \\u2014 no statute provided/mapped, so statutory applicability cannot be determined.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided (no U.S.C./CFR citation), so there are no statutory elements to test against the listed transactions and KYC profile. Because the statute is missing, it is not possible to determine whether any specific prohibition or requirement applies. Contiguous phrase in answer: \\\"no statute provided\\\".\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_dfb9c858 (BVI offshore holding company; expected monthly volume $4,002,158) executed 6 ACH/wire transactions totaling $13,684,815.07 between 2026-02-20 and 2026-04-11, including ACH $4,581,448.63 (ECFES Services LLC) and wire $3,976,069.97 (COEX Group LLC). Activity is inconsistent with stated volume/purpose. Auxiliary behavioral metric cites 2.05x vs declared, but recalculation shows ~$13.68MM/$4.00MM = ~3.42x. No sanctions hits or policy/statute excerpts provided. Pattern warrants SAR consideration pending investigator review.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_dfb9c858 (BVI offshore holding company; expected monthly volume $4,002,158) executed 6 ACH/wire transactions totaling $13,684,815.07 between 2026-02-20 and 2026-04-11, including ACH $4,581,448.63 (ECFES Services LLC) and wire $3,976,069.97 (COEX Group LLC). Activity is inconsistent with stated volume/purpose. Auxiliary behavioral metric cites 2.05x vs declared, but recalculation shows ~$13.68MM/$4.00MM = ~3.42x. No sanctions hits or policy/statute excerpts provided. Pattern warrants SAR consideration pending investigator review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_dfb9c858 (BVI offshore holding company; expected monthly volume $4,002,158) executed 6 ACH/wire transactions totaling $13,684,815.07 between 2026-02-20 and 2026-04-11, including ACH $4,581,448.63 (ECFES Services LLC) and wire $3,976,069.97 (COEX Group LLC). Activity is inconsistent with stated volume/purpose. Auxiliary behavioral metric cites 2.05x vs declared, but recalculation shows ~$13.68MM/$4.00MM = ~3.42x. No sanctions hits or policy/statute excerpts provided. Pattern warrants SAR consideration pending investigator review.",
+  "judge_enabled": false,
+  "error": null
+}

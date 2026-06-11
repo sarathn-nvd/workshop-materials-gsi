@@ -1,0 +1,117 @@
+{
+  "label": "aml-custom-task-nim (SFT, recovered)",
+  "traces_dir": "data/traces_custom_500_recovered",
+  "n_total_keys": 500,
+  "n_traces_present": 500,
+  "n_scored": 495,
+  "n_errors": 0,
+  "n_parse_failures": 5,
+  "confusion": {
+    "tp": 40,
+    "fp": 32,
+    "tn": 417,
+    "fn": 6
+  },
+  "metrics": {
+    "f1": 0.678,
+    "precision": 0.556,
+    "recall": 0.87,
+    "near_miss_specificity": 0.725,
+    "clean_fpr": 0.051
+  },
+  "per_typology_recall": {
+    "terrorist_financing": {
+      "tp": 2,
+      "fn": 4,
+      "recall": 0.333
+    },
+    "elder_exploitation": {
+      "tp": 6,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "layering": {
+      "tp": 6,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "human_trafficking": {
+      "tp": 5,
+      "fn": 1,
+      "recall": 0.833
+    },
+    "trade_based_ml": {
+      "tp": 6,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "structuring": {
+      "tp": 6,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "smurfing": {
+      "tp": 5,
+      "fn": 1,
+      "recall": 0.833
+    },
+    "shell_company": {
+      "tp": 4,
+      "fn": 0,
+      "recall": 1.0
+    }
+  },
+  "per_typology_nm_specificity": {
+    "layering": {
+      "correct": 5,
+      "wrong": 0,
+      "specificity": 1.0
+    },
+    "trade_based_ml": {
+      "correct": 2,
+      "wrong": 3,
+      "specificity": 0.4
+    },
+    "shell_company": {
+      "correct": 2,
+      "wrong": 3,
+      "specificity": 0.4
+    },
+    "structuring": {
+      "correct": 2,
+      "wrong": 3,
+      "specificity": 0.4
+    },
+    "smurfing": {
+      "correct": 3,
+      "wrong": 2,
+      "specificity": 0.6
+    },
+    "terrorist_financing": {
+      "correct": 5,
+      "wrong": 0,
+      "specificity": 1.0
+    },
+    "elder_exploitation": {
+      "correct": 5,
+      "wrong": 0,
+      "specificity": 1.0
+    },
+    "human_trafficking": {
+      "correct": 5,
+      "wrong": 0,
+      "specificity": 1.0
+    }
+  },
+  "narrative_stats": {
+    "n_non_empty": 495,
+    "mean_chars": 689.8,
+    "median_chars": 691,
+    "min_chars": 528,
+    "max_chars": 875
+  },
+  "wall_clock_ms": {
+    "mean": 10198.3,
+    "median": 7561.6
+  }
+}

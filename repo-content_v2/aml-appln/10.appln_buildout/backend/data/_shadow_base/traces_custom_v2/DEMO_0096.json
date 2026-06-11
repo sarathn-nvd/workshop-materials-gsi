@@ -1,0 +1,314 @@
+{
+  "case_id": "DEMO_0096",
+  "entity_id": "SYN_dea84ad0",
+  "started_at": "2026-05-23T13:14:56.890614+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 246.1,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 638.41, \"channel\": \"ach\", \"counterparty\": \"RNZL Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 399.75, \"channel\": \"wire\", \"counterparty\": \"NY Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 454.26, \"channel\": \"ach\", \"counterparty\": \"BRBOU Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 236.46, \"channel\": \"ach\", \"counterparty\": \"FUWMZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 462.91, \"channel\": \"ach\", \"counterparty\": \"AO Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}, {\"amount\": 175.11, \"channel\": \"ach\", \"counterparty\": \"XJNUR Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 576.61, \"channel\": \"ach\", \"counterparty\": \"HVXOU Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 257.22, \"channel\": \"ach\", \"counterparty\": \"DO Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 506.76, \"channel\": \"card\", \"counterparty\": \"Karen Brown\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 668.63, \"channel\": \"card\", \"counterparty\": \"Christopher Moore\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 687.19, \"channel\": \"ach\", \"counterparty\": \"RSVVV Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 237.38, \"channel\": \"ach\", \"counterparty\": \"HX Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 539.29, \"channel\": \"card\", \"counterparty\": \"Jennifer Miller\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 500.71, \"channel\": \"card\", \"counterparty\": \"Sarah Miller\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 429.9, \"channel\": \"wire\", \"counterparty\": \"VZ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 526.82, \"channel\": \"ach\", \"counterparty\": \"RRN Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 634.96, \"channel\": \"ach\", \"counterparty\": \"XTFGA Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 372.11, \"channel\": \"ach\", \"counterparty\": \"YRS Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}, {\"amount\": 390.85, \"channel\": \"ach\", \"counterparty\": \"RGDS Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 209.88, \"channel\": \"card\", \"counterparty\": \"Michael White\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 557.21, \"channel\": \"ach\", \"counterparty\": \"SU Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 704.02, \"channel\": \"wire\", \"counterparty\": \"PCIL Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"\"}, {\"amount\": 656.35, \"channel\": \"cheque\", \"counterparty\": \"RRV Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 533.56, \"channel\": \"card\", \"counterparty\": \"Robert Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 443.57, \"channel\": \"card\", \"counterparty\": \"James Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dea84ad0\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 3122, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$3,122.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [{\"name\": \"MID-SHIP Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}, {\"name\": \"Córdoba Music Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account exhibits a high volume of activity with 25 transactions totaling $12,424.43. The channel mix is heavily weighted towards ACH (64.0%) and card (24.0%), with minimal use of wire (8.0%) and cheque (4.0%). Activity is frequent, with a velocity of 24h_max of 2 and an average of 1.39 per 30 days. The account interacted with 17 unique counterparties over 7 days. The highest single transaction z-score is 1.87, and the highest country risk is 0.2. The observed volume is 3.98 times the declared monthly volume of $3,122.00.\", \"metrics\": {\"tx_count\": 25, \"tx_total_usd\": 12424.43, \"channel_mix\": {\"wire\": 0.08, \"ach\": 0.64, \"cash\": 0.0, \"cheque\": 0.04, \"card\": 0.24}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 1.39, \"unique_counterparties_7d\": 17, \"amount_z_score_max\": 1.87, \"country_risk_max\": 0.2, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.98}, \"evidence\": \"transactions[0..24]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $10,333.31, which is approximately 3.3 times the expected monthly volume of $3,122.00.\", \"calculation\": \"1. Sum all transaction amounts: 638.41 + 399.75 + 454.26 + 236.46 + 462.91 + 175.11 + 576.61 + 257.22 + 506.76 + 668.63 + 687.19 + 237.38 + 539.29 + 500.71 + 429.90 + 557.21 + 704.02 + 656.35 + 533.56 + 443.57 + 372.11 + 390.85 + 209.88 + 557.21 + 704.02 + 656.35 + 533.56 = 10,333.31\\n2. Compare to KYC expected monthly volume: 10,333.31 / 3,122.00 = 3.31\", \"evidence\": \"All 'amount' fields in the Transactions table\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred",
+      "_decision_target"
+    ],
+    "v1_sar_is_suspicious": false,
+    "agreement_with_v1": true,
+    "v1_decision_target": "not_suspicious"
+  },
+  "transactions": [
+    {
+      "amount": 638.41,
+      "channel": "ach",
+      "counterparty": "RNZL Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 399.75,
+      "channel": "wire",
+      "counterparty": "NY Group LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 454.26,
+      "channel": "ach",
+      "counterparty": "BRBOU Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 236.46,
+      "channel": "ach",
+      "counterparty": "FUWMZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 462.91,
+      "channel": "ach",
+      "counterparty": "AO Group LLC",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    },
+    {
+      "amount": 175.11,
+      "channel": "ach",
+      "counterparty": "XJNUR Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 576.61,
+      "channel": "ach",
+      "counterparty": "HVXOU Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 257.22,
+      "channel": "ach",
+      "counterparty": "DO Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 506.76,
+      "channel": "card",
+      "counterparty": "Karen Brown",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 668.63,
+      "channel": "card",
+      "counterparty": "Christopher Moore",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 687.19,
+      "channel": "ach",
+      "counterparty": "RSVVV Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 237.38,
+      "channel": "ach",
+      "counterparty": "HX Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 539.29,
+      "channel": "card",
+      "counterparty": "Jennifer Miller",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 500.71,
+      "channel": "card",
+      "counterparty": "Sarah Miller",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 429.9,
+      "channel": "wire",
+      "counterparty": "VZ Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 526.82,
+      "channel": "ach",
+      "counterparty": "RRN Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 634.96,
+      "channel": "ach",
+      "counterparty": "XTFGA Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 372.11,
+      "channel": "ach",
+      "counterparty": "YRS Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    },
+    {
+      "amount": 390.85,
+      "channel": "ach",
+      "counterparty": "RGDS Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 209.88,
+      "channel": "card",
+      "counterparty": "Michael White",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 557.21,
+      "channel": "ach",
+      "counterparty": "SU Group LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 704.02,
+      "channel": "wire",
+      "counterparty": "PCIL Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": ""
+    },
+    {
+      "amount": 656.35,
+      "channel": "cheque",
+      "counterparty": "RRV Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 533.56,
+      "channel": "card",
+      "counterparty": "Robert Jackson",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 443.57,
+      "channel": "card",
+      "counterparty": "James Lewis",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dea84ad0",
+    "entity_type": "individual",
+    "expected_monthly_volume": 3122.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$3,122.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "MID-SHIP Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    },
+    {
+      "name": "Córdoba Music Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.56,
+      "card": 0.28,
+      "wire": 0.12,
+      "cheque": 0.04
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account exhibits a high volume of activity with 25 transactions totaling $12,424.43. The channel mix is heavily weighted towards ACH (64.0%) and card (24.0%), with minimal use of wire (8.0%) and cheque (4.0%). Activity is frequent, with a velocity of 24h_max of 2 and an average of 1.39 per 30 days. The account interacted with 17 unique counterparties over 7 days. The highest single transaction z-score is 1.87, and the highest country risk is 0.2. The observed volume is 3.98 times the declared monthly volume of $3,122.00.",
+        "metrics": {
+          "tx_count": 25,
+          "tx_total_usd": 12424.43,
+          "channel_mix": {
+            "wire": 0.08,
+            "ach": 0.64,
+            "cash": 0.0,
+            "cheque": 0.04,
+            "card": 0.24
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 1.39,
+          "unique_counterparties_7d": 17,
+          "amount_z_score_max": 1.87,
+          "country_risk_max": 0.2,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.98
+        },
+        "evidence": "transactions[0..24]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $10,333.31, which is approximately 3.3 times the expected monthly volume of $3,122.00.",
+        "calculation": "1. Sum all transaction amounts: 638.41 + 399.75 + 454.26 + 236.46 + 462.91 + 175.11 + 576.61 + 257.22 + 506.76 + 668.63 + 687.19 + 237.38 + 539.29 + 500.71 + 429.90 + 557.21 + 704.02 + 656.35 + 533.56 + 443.57 + 372.11 + 390.85 + 209.88 + 557.21 + 704.02 + 656.35 + 533.56 = 10,333.31\n2. Compare to KYC expected monthly volume: 10,333.31 / 3,122.00 = 3.31",
+        "evidence": "All 'amount' fields in the Transactions table"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  }
+}

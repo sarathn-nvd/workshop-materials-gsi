@@ -1,0 +1,323 @@
+{
+  "case_id": "DEMO_0279",
+  "alert_id": "ALT_9897858",
+  "entity_id": "SYN_5aec5911",
+  "started_at": "2026-05-28T10:56:53.896529+00:00",
+  "finished_at": "2026-05-28T10:56:59.398868+00:00",
+  "wall_clock_ms": 5502.4,
+  "transactions": [
+    {
+      "amount": 1990.66,
+      "channel": "ach",
+      "counterparty": "HIRDI Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 2509.37,
+      "channel": "wire",
+      "counterparty": "JNYGY Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 3720.68,
+      "channel": "card",
+      "counterparty": "Mary Johnson",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    },
+    {
+      "amount": 1244.96,
+      "channel": "ach",
+      "counterparty": "CRZTB Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 3172.26,
+      "channel": "cash",
+      "counterparty": "John Moore",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 1674.82,
+      "channel": "card",
+      "counterparty": "Susan Harris",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 3534.54,
+      "channel": "wire",
+      "counterparty": "GHE Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 1271.28,
+      "channel": "ach",
+      "counterparty": "HCOT Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 2413.72,
+      "channel": "card",
+      "counterparty": "Joshua Jackson",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 3653.18,
+      "channel": "card",
+      "counterparty": "Christopher Smith",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 1068.6,
+      "channel": "ach",
+      "counterparty": "BV Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 1609.95,
+      "channel": "ach",
+      "counterparty": "HLLQ Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 3568.8,
+      "channel": "card",
+      "counterparty": "Patricia Brown",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 2986.54,
+      "channel": "ach",
+      "counterparty": "EXKNP Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 2620.53,
+      "channel": "wire",
+      "counterparty": "UJVOD Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 2790.22,
+      "channel": "wire",
+      "counterparty": "LBBKG Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 2276.86,
+      "channel": "ach",
+      "counterparty": "DSMAE Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 2791.61,
+      "channel": "ach",
+      "counterparty": "TL Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 1614.47,
+      "channel": "ach",
+      "counterparty": "DLR Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 2623.09,
+      "channel": "cash",
+      "counterparty": "Robert Moore",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_5aec5911",
+    "entity_type": "individual",
+    "expected_monthly_volume": 12914.0,
+    "business_purpose": "Self-employed proprietor; small-business cash flow; expected monthly throughput ~$12,914.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.45,
+      "card": 0.25,
+      "wire": 0.2,
+      "cash": 0.1
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.45, 'wire': 0.2, 'card': 0.25, 'cash': 0.1})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_5aec5911 executed 20 transactions totaling $49,136.14 USD with channel mix {\"ach\": 0.45, \"card\": 0.25, \"wire\": 0.2, \"cash\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.5x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 20,
+        "tx_total_usd": 49136.14,
+        "channel_mix": {
+          "ach": 0.45,
+          "card": 0.25,
+          "wire": 0.2,
+          "cash": 0.1
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.67,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.68,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.5
+      },
+      "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 47343.31",
+      "calculation": "1. Sum all transaction amounts from the [transactions] block: 1990.66 + 2509.37 + 3720.68 + 1244.96 + 3172.26 + 1674.82 + 3534.54 + 1271.28 + 2413.72 + 3653.18 + 1068.60 + 1609.95 + 3568.80 + 2986.54 + 2620.53 + 2790.22 + 2276.86 + 2791.61 + 1614.47 + 2623.09 = 47343.31",
+      "evidence": "transactions[0..20].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_5aec5911 executed 20 transactions totaling $49,136.14 USD with channel mix {\"ach\": 0.45, \"card\": 0.25, \"wire\": 0.2, \"cash\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.5x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 49136.14,
+          "channel_mix": {
+            "ach": 0.45,
+            "card": 0.25,
+            "wire": 0.2,
+            "cash": 0.1
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.68,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.5
+        },
+        "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 47343.31",
+        "calculation": "1. Sum all transaction amounts from the [transactions] block: 1990.66 + 2509.37 + 3720.68 + 1244.96 + 3172.26 + 1674.82 + 3534.54 + 1271.28 + 2413.72 + 3653.18 + 1068.60 + 1609.95 + 3568.80 + 2986.54 + 2620.53 + 2790.22 + 2276.86 + 2791.61 + 1614.47 + 2623.09 = 47343.31",
+        "evidence": "transactions[0..20].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1990.66, \"channel\": \"ach\", \"counterparty\": \"HIRDI Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 2509.37, \"channel\": \"wire\", \"counterparty\": \"JNYGY Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 3720.68, \"channel\": \"card\", \"counterparty\": \"Mary Johnson\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}, {\"amount\": 1244.96, \"channel\": \"ach\", \"counterparty\": \"CRZTB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 3172.26, \"channel\": \"cash\", \"counterparty\": \"John Moore\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 1674.82, \"channel\": \"card\", \"counterparty\": \"Susan Harris\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 3534.54, \"channel\": \"wire\", \"counterparty\": \"GHE Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 1271.28, \"channel\": \"ach\", \"counterparty\": \"HCOT Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 2413.72, \"channel\": \"card\", \"counterparty\": \"Joshua Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 3653.18, \"channel\": \"card\", \"counterparty\": \"Christopher Smith\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 1068.6, \"channel\": \"ach\", \"counterparty\": \"BV Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 1609.95, \"channel\": \"ach\", \"counterparty\": \"HLLQ Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 3568.8, \"channel\": \"card\", \"counterparty\": \"Patricia Brown\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 2986.54, \"channel\": \"ach\", \"counterparty\": \"EXKNP Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 2620.53, \"channel\": \"wire\", \"counterparty\": \"UJVOD Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 2790.22, \"channel\": \"wire\", \"counterparty\": \"LBBKG Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 2276.86, \"channel\": \"ach\", \"counterparty\": \"DSMAE Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 2791.61, \"channel\": \"ach\", \"counterparty\": \"TL Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 1614.47, \"channel\": \"ach\", \"counterparty\": \"DLR Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 2623.09, \"channel\": \"cash\", \"counterparty\": \"Robert Moore\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_5aec5911\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 12914.0, \"business_purpose\": \"Self-employed proprietor; small-business cash flow; expected monthly throughput ~$12,914.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_5aec5911 executed 20 transactions totaling $49,136.14 USD with channel mix {\\\"ach\\\": 0.45, \\\"card\\\": 0.25, \\\"wire\\\": 0.2, \\\"cash\\\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.5x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 49136.14, \"channel_mix\": {\"ach\": 0.45, \"card\": 0.25, \"wire\": 0.2, \"cash\": 0.1}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.68, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.5}, \"evidence\": \"transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 47343.31\", \"calculation\": \"1. Sum all transaction amounts from the [transactions] block: 1990.66 + 2509.37 + 3720.68 + 1244.96 + 3172.26 + 1674.82 + 3534.54 + 1271.28 + 2413.72 + 3653.18 + 1068.60 + 1609.95 + 3568.80 + 2986.54 + 2620.53 + 2790.22 + 2276.86 + 2791.61 + 1614.47 + 2623.09 = 47343.31\", \"evidence\": \"transactions[0..20].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a volume spike with 20 transactions totaling $49,136.14, which represents a 1.5x ratio relative to the declared monthly volume of $12,914.00. However, the activity consists of a mix of ACH, card, wire, and cash payments to various counterparties, such as $3,172.26 in cash to John Moore on 2026-04-01 and $3,534.54 to GHE Holdings LLC on 2026-02-27. This activity is consistent with the KYC profile of a self-employed proprietor managing small-business cash flow. No sanctions hits or high-risk jurisdictional patterns were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a volume spike with 20 transactions totaling $49,136.14, which represents a 1.5x ratio relative to the declared monthly volume of $12,914.00. However, the activity consists of a mix of ACH, card, wire, and cash payments to various counterparties, such as $3,172.26 in cash to John Moore on 2026-04-01 and $3,534.54 to GHE Holdings LLC on 2026-02-27. This activity is consistent with the KYC profile of a self-employed proprietor managing small-business cash flow. No sanctions hits or high-risk jurisdictional patterns were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a volume spike with 20 transactions totaling $49,136.14, which represents a 1.5x ratio relative to the declared monthly volume of $12,914.00. However, the activity consists of a mix of ACH, card, wire, and cash payments to various counterparties, such as $3,172.26 in cash to John Moore on 2026-04-01 and $3,534.54 to GHE Holdings LLC on 2026-02-27. This activity is consistent with the KYC profile of a self-employed proprietor managing small-business cash flow. No sanctions hits or high-risk jurisdictional patterns were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

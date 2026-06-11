@@ -1,0 +1,193 @@
+{
+  "case_id": "DEMO_0090",
+  "alert_id": "ALT_2466731",
+  "entity_id": "SYN_55f27e71",
+  "started_at": "2026-05-27T15:23:42.347828+00:00",
+  "finished_at": "2026-05-27T15:24:08.581953+00:00",
+  "wall_clock_ms": 26234.2,
+  "transactions": [
+    {
+      "amount": 45035.88,
+      "channel": "wire",
+      "counterparty": "BWEE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 45035.88,
+      "channel": "wire",
+      "counterparty": "BWEE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 184360.87,
+      "channel": "wire",
+      "counterparty": "FN Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 79680.55,
+      "channel": "wire",
+      "counterparty": "XEYAU Services LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 107846.64,
+      "channel": "ach",
+      "counterparty": "XIVOD Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 69174.59,
+      "channel": "card",
+      "counterparty": "Mary Jackson",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 181577.22,
+      "channel": "card",
+      "counterparty": "Jennifer Moore",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_55f27e71",
+    "entity_type": "business",
+    "expected_monthly_volume": 167830.0,
+    "business_purpose": "Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$167,830.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "Nevada-US"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.571,
+      "card": 0.286,
+      "ach": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5714285714285714, 'ach': 0.14285714285714285, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=45035.88, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 transactions with a tx_total_usd of 717,711.63. The channel_mix shows a reliance on wire transfers, which accounts for 4 of the total transactions. A velocity_24h_max of 45,035.88 was observed, though this includes a returned wire. The entity interacted with unique_counterparties_7d of 0 during the most recent seven-day window. The vs_declared_volume_ratio of 4.27 indicates activity significantly exceeding the expected monthly volume. This pattern of rapid movement of funds is consistent with pass-through behavior.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 717711.63,
+          "channel_mix": {
+            "wire": 4,
+            "ach": 1,
+            "card": 2
+          },
+          "velocity_24h_max": 45035.88,
+          "unique_counterparties_7d": 0,
+          "vs_declared_volume_ratio": 4.27
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 712,711.55",
+      "calculation": "1. Sum all transaction amounts: 45,035.88 (transactions[0]) + 45,035.88 (transactions[1]) + 184,360.87 (transactions[2]) + 79,680.55 (transactions[3]) + 107,846.64 (transactions[4]) + 69,174.59 (transactions[5]) + 181,577.22 (transactions[6]) = 712,711.55.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 712,711.55",
+        "calculation": "1. Sum all transaction amounts: 45,035.88 (transactions[0]) + 45,035.88 (transactions[1]) + 184,360.87 (transactions[2]) + 79,680.55 (transactions[3]) + 107,846.64 (transactions[4]) + 69,174.59 (transactions[5]) + 181,577.22 (transactions[6]) = 712,711.55.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 45035.88, \"channel\": \"wire\", \"counterparty\": \"BWEE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"outbound wire\"}, {\"amount\": 45035.88, \"channel\": \"wire\", \"counterparty\": \"BWEE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 184360.87, \"channel\": \"wire\", \"counterparty\": \"FN Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 79680.55, \"channel\": \"wire\", \"counterparty\": \"XEYAU Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 107846.64, \"channel\": \"ach\", \"counterparty\": \"XIVOD Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 69174.59, \"channel\": \"card\", \"counterparty\": \"Mary Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 181577.22, \"channel\": \"card\", \"counterparty\": \"Jennifer Moore\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_55f27e71\", \"entity_type\": \"business\", \"expected_monthly_volume\": 167830.0, \"business_purpose\": \"Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$167,830.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"Nevada-US\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 712,711.55\", \"calculation\": \"1. Sum all transaction amounts: 45,035.88 (transactions[0]) + 45,035.88 (transactions[1]) + 184,360.87 (transactions[2]) + 79,680.55 (transactions[3]) + 107,846.64 (transactions[4]) + 69,174.59 (transactions[5]) + 181,577.22 (transactions[6]) = 712,711.55.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account exhibits a rapid-movement pattern inconsistent with its profile as a domestic holding LLC. Between 2026-02-02 and 2026-04-25, the entity conducted seven transactions totaling $712,711.55, which significantly exceeds the declared expected monthly volume of $167,830.00. Notable activity includes large outbound wires to FN Trading LLC ($184,360.87) and XEYAU Services LLC ($79,680.55), alongside high-value card payments to individuals Jennifer Moore ($181,577.22) and Mary Jackson ($69,174.59). The combination of an opaque-ownership vehicle, enhanced risk rating, and volume spikes suggests potential layering or pass-through activity. This warrants further review by a human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account exhibits a rapid-movement pattern inconsistent with its profile as a domestic holding LLC. Between 2026-02-02 and 2026-04-25, the entity conducted seven transactions totaling $712,711.55, which significantly exceeds the declared expected monthly volume of $167,830.00. Notable activity includes large outbound wires to FN Trading LLC ($184,360.87) and XEYAU Services LLC ($79,680.55), alongside high-value card payments to individuals Jennifer Moore ($181,577.22) and Mary Jackson ($69,174.59). The combination of an opaque-ownership vehicle, enhanced risk rating, and volume spikes suggests potential layering or pass-through activity. This warrants further review by a human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account exhibits a rapid-movement pattern inconsistent with its profile as a domestic holding LLC. Between 2026-02-02 and 2026-04-25, the entity conducted seven transactions totaling $712,711.55, which significantly exceeds the declared expected monthly volume of $167,830.00. Notable activity includes large outbound wires to FN Trading LLC ($184,360.87) and XEYAU Services LLC ($79,680.55), alongside high-value card payments to individuals Jennifer Moore ($181,577.22) and Mary Jackson ($69,174.59). The combination of an opaque-ownership vehicle, enhanced risk rating, and volume spikes suggests potential layering or pass-through activity. This warrants further review by a human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

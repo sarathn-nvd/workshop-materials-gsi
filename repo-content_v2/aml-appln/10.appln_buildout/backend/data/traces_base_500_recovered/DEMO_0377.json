@@ -1,0 +1,305 @@
+{
+  "case_id": "DEMO_0377",
+  "alert_id": "ALT_5727085",
+  "entity_id": "SYN_d978aec6",
+  "started_at": "2026-05-29T03:13:15.984267+00:00",
+  "finished_at": "2026-05-29T03:13:47.063352+00:00",
+  "wall_clock_ms": 31079.1,
+  "transactions": [
+    {
+      "amount": 653.4,
+      "channel": "card",
+      "counterparty": "Robert Martin",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 215.54,
+      "channel": "ach",
+      "counterparty": "UZUSM Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 616.19,
+      "channel": "cheque",
+      "counterparty": "KUUN Services LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 250.86,
+      "channel": "ach",
+      "counterparty": "FDJ Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 608.24,
+      "channel": "wire",
+      "counterparty": "YGRN Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 636.38,
+      "channel": "ach",
+      "counterparty": "HI Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 726.36,
+      "channel": "card",
+      "counterparty": "Robert White",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 630.53,
+      "channel": "ach",
+      "counterparty": "IB Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 513.1,
+      "channel": "ach",
+      "counterparty": "FLWZ Group LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 617.55,
+      "channel": "cheque",
+      "counterparty": "SLRGG Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 300.18,
+      "channel": "card",
+      "counterparty": "Maria Anderson",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 434.36,
+      "channel": "ach",
+      "counterparty": "CX Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 332.92,
+      "channel": "ach",
+      "counterparty": "XYA Services LLC",
+      "currency": "USD",
+      "date": "2026-03-06",
+      "notes": ""
+    },
+    {
+      "amount": 504.75,
+      "channel": "card",
+      "counterparty": "John Anderson",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 268.68,
+      "channel": "wire",
+      "counterparty": "DYJWJ Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 442.26,
+      "channel": "ach",
+      "counterparty": "COZ Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 701.29,
+      "channel": "ach",
+      "counterparty": "RLKLL Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 690.95,
+      "channel": "card",
+      "counterparty": "John Thompson",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 321.03,
+      "channel": "ach",
+      "counterparty": "DWE Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 612.21,
+      "channel": "card",
+      "counterparty": "Michael Anderson",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_d978aec6",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2464.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$2,464.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.3,
+      "ach": 0.5,
+      "cheque": 0.1,
+      "wire": 0.1
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'card': 0.3, 'ach': 0.5, 'cheque': 0.1, 'wire': 0.1})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_d978aec6 executed 20 transactions totaling $10,076.78 USD with channel mix {\"ach\": 0.5, \"card\": 0.3, \"cheque\": 0.1, \"wire\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.5x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 20,
+        "tx_total_usd": 10076.78,
+        "channel_mix": {
+          "ach": 0.5,
+          "card": 0.3,
+          "cheque": 0.1,
+          "wire": 0.1
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.67,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.75,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.5
+      },
+      "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to compute transaction volumes from the transactions block. Likely sum of amounts? Or maybe total volume? The question: \"Summarize transaction volumes and compare to KYC declared monthly volume.\" So we need to summarize transaction volumes (maybe total sum) and compare to KYC declared monthly volume of 2464.0.\n\nWe need to produ"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The system indicates that no policy excerpts were retrieved.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, label, reasoning.\n\nWe have a task: \"auxiliary_statutory\". The user gave a JSON with task_type, statute empty, fact_pattern with transactions and kyc_profile, and question: \"No statute mapped for this typology; respond accordingly.\"\n\nWe need to produce a statutory applicability finding for downstream financial-crime analysis. Determine independently whether the statute applies to the facts.\n\nBut there is no statute provided. The user says \"No st"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_d978aec6 executed 20 transactions totaling $10,076.78 USD with channel mix {\"ach\": 0.5, \"card\": 0.3, \"cheque\": 0.1, \"wire\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.5x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 10076.78,
+          "channel_mix": {
+            "ach": 0.5,
+            "card": 0.3,
+            "cheque": 0.1,
+            "wire": 0.1
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.75,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.5
+        },
+        "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The system indicates that no policy excerpts were retrieved.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": []
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 653.4, \"channel\": \"card\", \"counterparty\": \"Robert Martin\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 215.54, \"channel\": \"ach\", \"counterparty\": \"UZUSM Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 616.19, \"channel\": \"cheque\", \"counterparty\": \"KUUN Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 250.86, \"channel\": \"ach\", \"counterparty\": \"FDJ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 608.24, \"channel\": \"wire\", \"counterparty\": \"YGRN Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 636.38, \"channel\": \"ach\", \"counterparty\": \"HI Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 726.36, \"channel\": \"card\", \"counterparty\": \"Robert White\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 630.53, \"channel\": \"ach\", \"counterparty\": \"IB Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 513.1, \"channel\": \"ach\", \"counterparty\": \"FLWZ Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 617.55, \"channel\": \"cheque\", \"counterparty\": \"SLRGG Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 300.18, \"channel\": \"card\", \"counterparty\": \"Maria Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 434.36, \"channel\": \"ach\", \"counterparty\": \"CX Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 332.92, \"channel\": \"ach\", \"counterparty\": \"XYA Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-06\", \"notes\": \"\"}, {\"amount\": 504.75, \"channel\": \"card\", \"counterparty\": \"John Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 268.68, \"channel\": \"wire\", \"counterparty\": \"DYJWJ Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 442.26, \"channel\": \"ach\", \"counterparty\": \"COZ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 701.29, \"channel\": \"ach\", \"counterparty\": \"RLKLL Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 690.95, \"channel\": \"card\", \"counterparty\": \"John Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 321.03, \"channel\": \"ach\", \"counterparty\": \"DWE Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 612.21, \"channel\": \"card\", \"counterparty\": \"Michael Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_d978aec6\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2464.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$2,464.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_d978aec6 executed 20 transactions totaling $10,076.78 USD with channel mix {\\\"ach\\\": 0.5, \\\"card\\\": 0.3, \\\"cheque\\\": 0.1, \\\"wire\\\": 0.1}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.5x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 10076.78, \"channel_mix\": {\"ach\": 0.5, \"card\": 0.3, \"cheque\": 0.1, \"wire\": 0.1}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.75, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.5}, \"evidence\": \"transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The system indicates that no policy excerpts were retrieved.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": []}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive is_suspicious based on evidence.\n\nWe have kyc_profile: individual, business purpose \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$2,464.\" risk_rating high. Transactions: 20 transactions total $10,076.78. Channel mix: ach 0.5, card 0.3, cheque 0.1, wire 0.1. Velocity peak 2 vs avg 0.67. Volume vs declared monthly is 1.5x. So volume is 1.5 times declared monthly volume. That's within 0.5-1.5x? The rule says transaction total within 0.5–1.5× declared monthly volume on a customer profile that explains the activity (e.g., laundromat with cash receipts) is disposition false. Here ratio is 1.5x exactly. The rule says within 0.5–1.5× declared monthly volume resolves. It says \"within 0.5–1.5× declared monthly volume on a customer profile that explains the activity\". 1.5x is at the upper bound; likely considered within? Probably yes, as it's within inclusive? Might be borderline. Also channel mix includes non-cash (ach, card, wire). The entity is an individual, not a business. Business purpose is salaried wage earner. So activity likely wages, not cash intensive. The volume is 1.5x expected monthly volume, which might be high but could be explained by occasional larger payments. There's no sanctions hit. No policy excerpts. Auxiliary findings: behavioral summary includes metrics. No numeric or citation or statutory that would push to SAR. So likely is_suspicious = false.\n\nWe must produce a negative narrative (disposition rationale) 400-800 characters, grounded, naming surface red flag, citing bundle evidence that resolves it, and defer to human investigator. Must not downplay or hide the surface red flag. Must name it explicitly: e.g., \"Twenty transactions totaling $10,076.78 across multiple channels triggered the alert.\" Then cite disambiguating evidence: KYC business purpose as salaried wage earner with expected monthly volume $2,464, and observed total is 1.5x that, within expected range, and channel mix consistent with individual's typical activity. Also mention no sanctions hit, no structuring pattern. Then state disposition: \"no SAR warranted\". Then defer.\n\nNeed 400-800 characters length. Let's craft about 550 characters.\n\nCount characters roughly. Let's draft:\n\n\"Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator.\"\n\nNow count characters. Let's approximate: each character includes spaces. Let's count quickly.\n\nI'll count:\n\n\"Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator.\"\n\nLet's count characters roughly: I'll use approximate count. Might be around 500-560. Let's count more precisely.\n\nI'll copy into a counting tool mentally? Let's approximate: \n\nI'll count words and estimate. Better to ensure 400-800 characters. This seems likely ~560. Should be fine.\n\nMake sure no invented data. All numbers are from bundle: 20 transactions, $10,076.78 total, channel mix percentages given, expected monthly volume $2,464, ratio 1.5x. Use \"1.5×\". That's fine.\n\nWe must output JSON with is_suspicious false and the narrative string.\n\nThus final answer:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator.\"\n}\n\nCheck character count: Let's quickly count characters including spaces. I'll approximate: \n\nString length: I'll count characters manually quickly: \n\n\"Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator.\"\n\nLet's count: I'll use rough estimate: It's probably around 560-600 characters. Should be within 400-800.\n\nThus output JSON.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Twenty transactions totaling $10,076.78 USD were recorded across card, ACH, cheque and wire channels, triggering the alert. The KYC profile identifies the entity as a salaried wage earner with an expected monthly volume of $2,464, and the observed activity represents 1.5× that volume, which falls within the 0.5–1.5× range consistent with normal wage‑related inflows. No sanctions or PEP matches appear, and the channel mix aligns with a typical individual customer. Accordingly, no SAR is warranted; final disposition is left to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

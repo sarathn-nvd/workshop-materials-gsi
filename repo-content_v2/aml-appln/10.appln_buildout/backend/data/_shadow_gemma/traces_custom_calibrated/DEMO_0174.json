@@ -1,0 +1,206 @@
+{
+  "case_id": "DEMO_0174",
+  "alert_id": "ALT_2428047",
+  "entity_id": "SYN_00ff3538",
+  "started_at": "2026-05-23T13:16:17.663068+00:00",
+  "finished_at": "2026-05-23T13:16:20.220675+00:00",
+  "wall_clock_ms": 2557.6,
+  "transactions": [
+    {
+      "amount": 24990472.56,
+      "channel": "wire",
+      "counterparty": "PXU Associates LLC, Germany",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": "trade-finance wire (benign: matches declared invoice value)"
+    },
+    {
+      "amount": 36676479.5,
+      "channel": "ach",
+      "counterparty": "SRPI Group LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 40480318.53,
+      "channel": "ach",
+      "counterparty": "UYQEZ Services LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 34243498.51,
+      "channel": "wire",
+      "counterparty": "JTH Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 39586329.37,
+      "channel": "ach",
+      "counterparty": "WUOEI Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 15549882.77,
+      "channel": "wire",
+      "counterparty": "DTGZE Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_00ff3538",
+    "entity_type": "business",
+    "expected_monthly_volume": 34397872.0,
+    "business_purpose": "Securities broker / dealer firm; intermediary capital flows; declared monthly volume ~$34,397,872.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-IL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "ach": 0.5
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'ach': 0.5})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The entity SYN_00ff3538 exhibited high-velocity activity in March 2026, with a single wire transaction of 24,990,472.56 USD to PXU Associates LLC. The account also processed several high-value ACH transfers, including 36,676,479.50 USD to SRPI Group LLC and 40,480,318.53 USD to UYQEZ Services LLC. The total observed volume significantly exceeds the declared monthly volume of 34,397,872.00, with a vs_declared_volume_ratio of 1.31. Activity includes wires and ACH, with a detected loop involving DTGZE Holdings LLC and JTH Logistics LLC on 2026-04-20. The risk rating is high, and the country risk is 0.0.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 191486551.24,
+        "channel_mix": {
+          "wire": 0.5,
+          "ach": 0.5,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 2.45,
+        "country_risk_max": 0.0,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 1.31
+      },
+      "evidence": "transactions[0..5]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "The total transaction volume across all entries is $191,426,751.24. This significantly exceeds the KYC declared monthly volume of $34,397,872.00.",
+      "calculation": "1. Identify all transaction amounts: 24,990,472.56, 36,676,479.50, 40,480,318.53, 34,243,498.51, 39,586,329.37, 15,549,882.77.\n2. Sum the amounts: 24,990,472.56 + 36,676,479.50 + 40,480,318.53 + 34,243,498.51 + 39,586,329.37 + 15,549,882.77 = 191,426,751.24.\n3. Compare to KYC declared monthly volume of 34,397,872.00.",
+      "evidence": "Transaction list rows with 'amount' and 'currency' fields; KYC profile 'expected_monthly_volume' field."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant passage was provided to extract a citation from.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+      "label": "neutral",
+      "reasoning": "No statute text was provided to analyze against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+        "label": "neutral",
+        "reasoning": "No statute text was provided to analyze against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_00ff3538 exhibited high-velocity activity in March 2026, with a single wire transaction of 24,990,472.56 USD to PXU Associates LLC. The account also processed several high-value ACH transfers, including 36,676,479.50 USD to SRPI Group LLC and 40,480,318.53 USD to UYQEZ Services LLC. The total observed volume significantly exceeds the declared monthly volume of 34,397,872.00, with a vs_declared_volume_ratio of 1.31. Activity includes wires and ACH, with a detected loop involving DTGZE Holdings LLC and JTH Logistics LLC on 2026-04-20. The risk rating is high, and the country risk is 0.0.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 191486551.24,
+          "channel_mix": {
+            "wire": 0.5,
+            "ach": 0.5,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 2.45,
+          "country_risk_max": 0.0,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 1.31
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume across all entries is $191,426,751.24. This significantly exceeds the KYC declared monthly volume of $34,397,872.00.",
+        "calculation": "1. Identify all transaction amounts: 24,990,472.56, 36,676,479.50, 40,480,318.53, 34,243,498.51, 39,586,329.37, 15,549,882.77.\n2. Sum the amounts: 24,990,472.56 + 36,676,479.50 + 40,480,318.53 + 34,243,498.51 + 39,586,329.37 + 15,549,882.77 = 191,426,751.24.\n3. Compare to KYC declared monthly volume of 34,397,872.00.",
+        "evidence": "Transaction list rows with 'amount' and 'currency' fields; KYC profile 'expected_monthly_volume' field."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 24990472.56, \"channel\": \"wire\", \"counterparty\": \"PXU Associates LLC, Germany\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"trade-finance wire (benign: matches declared invoice value)\"}, {\"amount\": 36676479.5, \"channel\": \"ach\", \"counterparty\": \"SRPI Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 40480318.53, \"channel\": \"ach\", \"counterparty\": \"UYQEZ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 34243498.51, \"channel\": \"wire\", \"counterparty\": \"JTH Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 39586329.37, \"channel\": \"ach\", \"counterparty\": \"WUOEI Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 15549882.77, \"channel\": \"wire\", \"counterparty\": \"DTGZE Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_00ff3538\", \"entity_type\": \"business\", \"expected_monthly_volume\": 34397872, \"business_purpose\": \"Securities broker / dealer firm; intermediary capital flows; declared monthly volume ~$34,397,872.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-IL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"No statute text was provided to analyze against the fact pattern.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_00ff3538 exhibited high-velocity activity in March 2026, with a single wire transaction of 24,990,472.56 USD to PXU Associates LLC. The account also processed several high-value ACH transfers, including 36,676,479.50 USD to SRPI Group LLC and 40,480,318.53 USD to UYQEZ Services LLC. The total observed volume significantly exceeds the declared monthly volume of 34,397,872.00, with a vs_declared_volume_ratio of 1.31. Activity includes wires and ACH, with a detected loop involving DTGZE Holdings LLC and JTH Logistics LLC on 2026-04-20. The risk rating is high, and the country risk is 0.0.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 191486551.24, \"channel_mix\": {\"wire\": 0.5, \"ach\": 0.5, \"cash\": 0.0}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 2.45, \"country_risk_max\": 0.0, \"loop_detected\": true, \"vs_declared_volume_ratio\": 1.31}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume across all entries is $191,426,751.24. This significantly exceeds the KYC declared monthly volume of $34,397,872.00.\", \"calculation\": \"1. Identify all transaction amounts: 24,990,472.56, 36,676,479.50, 40,480,318.53, 34,243,498.51, 39,586,329.37, 15,549,882.77.\\n2. Sum the amounts: 24,990,472.56 + 36,676,479.50 + 40,480,318.53 + 34,243,498.51 + 39,586,329.37 + 15,549,882.77 = 191,426,751.24.\\n3. Compare to KYC declared monthly volume of 34,397,872.00.\", \"evidence\": \"Transaction list rows with 'amount' and 'currency' fields; KYC profile 'expected_monthly_volume' field.\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

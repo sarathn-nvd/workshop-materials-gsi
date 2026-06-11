@@ -1,0 +1,527 @@
+{
+  "case_id": "DEMO_0070",
+  "entity_id": "SYN_597ea815",
+  "started_at": "2026-05-23T13:14:31.679198+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 7777.0,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The account for SYN_597ea815, a money services business, exhibits activity consistent with layering and sanctions risk. Between 2026-02-01 and 2026-04-30, the entity conducted 50 transactions totaling $1,343,133.20, which is significantly higher than the declared monthly volume of $418,047, resulting in a vs_declared_volume_ratio of 3.21. The channel mix is heavily weighted toward ACH (0.42) and wire (0.3). Notably, a sanctions hit was identified for IPI Partners, LLC (match score 0.909). Upon verification, the auxiliary numeric finding claiming a total volume of $1,000,000.00 is inconsistent with the underlying transactions; the re-derived total is $1,343,133.20. This rapid movement of funds and volume discrepancy warrants further review. This matter is referred to a human investigator.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account for SYN_597ea815, a money services business, exhibits activity consistent with layering and sanctions risk. Between 2026-02-01 and 2026-04-30, the entity conducted 50 transactions totaling $1,343,133.20, which is significantly higher than the declared monthly volume of $418,047, resulting in a vs_declared_volume_ratio of 3.21. The channel mix is heavily weighted toward ACH (0.42) and wire (0.3). Notably, a sanctions hit was identified for IPI Partners, LLC (match score 0.909). Upon verification, the auxiliary numeric finding claiming a total volume of $1,000,000.00 is inconsistent with the underlying transactions; the re-derived total is $1,343,133.20. This rapid movement of funds and volume discrepancy warrants further review. This matter is referred to a human investigator."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 39326.79, \"channel\": \"ach\", \"counterparty\": \"JX Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 20285.23, \"channel\": \"ach\", \"counterparty\": \"UQB Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 12705.86, \"channel\": \"wire\", \"counterparty\": \"WAWQ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 30442.13, \"channel\": \"card\", \"counterparty\": \"David Harris\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 31365.99, \"channel\": \"ach\", \"counterparty\": \"OSBXH Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 39907.4, \"channel\": \"ach\", \"counterparty\": \"JHZZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-23\", \"notes\": \"\"}, {\"amount\": 35147.75, \"channel\": \"card\", \"counterparty\": \"John Walker\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 19086.33, \"channel\": \"ach\", \"counterparty\": \"RCJYP Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 19160.38, \"channel\": \"ach\", \"counterparty\": \"LIP Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 15321.47, \"channel\": \"wire\", \"counterparty\": \"WIS Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 27292.69, \"channel\": \"cash\", \"counterparty\": \"Michael Davis\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 12754.68, \"channel\": \"wire\", \"counterparty\": \"EV Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 40751.96, \"channel\": \"card\", \"counterparty\": \"Maria Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 27812.01, \"channel\": \"cash\", \"counterparty\": \"Robert Miller\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 14318.13, \"channel\": \"ach\", \"counterparty\": \"PPPG Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 13222.68, \"channel\": \"card\", \"counterparty\": \"Michael Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 28845.78, \"channel\": \"wire\", \"counterparty\": \"WMD Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 11326.58, \"channel\": \"card\", \"counterparty\": \"John Taylor\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 18964.79, \"channel\": \"wire\", \"counterparty\": \"TBY Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-25\", \"notes\": \"\"}, {\"amount\": 29695.77, \"channel\": \"ach\", \"counterparty\": \"XLUPV Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 25851.39, \"channel\": \"cash\", \"counterparty\": \"Karen Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 45180.5, \"channel\": \"card\", \"counterparty\": \"Joshua Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 28369.69, \"channel\": \"card\", \"counterparty\": \"Patricia Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 25910.0, \"channel\": \"card\", \"counterparty\": \"Karen Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 40740.92, \"channel\": \"cash\", \"counterparty\": \"James Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 26007.47, \"channel\": \"ach\", \"counterparty\": \"LKPB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 28637.72, \"channel\": \"wire\", \"counterparty\": \"SC Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 47671.1, \"channel\": \"wire\", \"counterparty\": \"KIA Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"\"}, {\"amount\": 46016.64, \"channel\": \"card\", \"counterparty\": \"Andrew Brown\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 23039.06, \"channel\": \"wire\", \"counterparty\": \"SDC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 24598.96, \"channel\": \"wire\", \"counterparty\": \"SZPEO Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 46644.12, \"channel\": \"wire\", \"counterparty\": \"EDT Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 22396.44, \"channel\": \"card\", \"counterparty\": \"Andrew Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 17284.91, \"channel\": \"card\", \"counterparty\": \"James Smith\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 40750.38, \"channel\": \"ach\", \"counterparty\": \"WOAWG Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 29124.65, \"channel\": \"ach\", \"counterparty\": \"PA Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 34905.9, \"channel\": \"wire\", \"counterparty\": \"BDQ Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 44299.44, \"channel\": \"wire\", \"counterparty\": \"ICCZ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 21446.03, \"channel\": \"wire\", \"counterparty\": \"ZTJ Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 40875.44, \"channel\": \"ach\", \"counterparty\": \"VTVBM Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 44523.33, \"channel\": \"ach\", \"counterparty\": \"NSPCS Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}, {\"amount\": 49651.51, \"channel\": \"wire\", \"counterparty\": \"LWGO Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 47240.2, \"channel\": \"wire\", \"counterparty\": \"NQMEP Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 49333.2, \"channel\": \"ach\", \"counterparty\": \"MU Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 42121.65, \"channel\": \"cash\", \"counterparty\": \"Maria Johnson\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 24065.46, \"channel\": \"card\", \"counterparty\": \"James Smith\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 18107.27, \"channel\": \"ach\", \"counterparty\": \"IN Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 14601.68, \"channel\": \"ach\", \"counterparty\": \"SQAEI Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 29260.95, \"channel\": \"wire\", \"counterparty\": \"QM Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 45833.67, \"channel\": \"wire\", \"counterparty\": \"MVYB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_597ea815\", \"entity_type\": \"business\", \"expected_monthly_volume\": 418047, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$418,047.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [{\"name\": \"IPI Partners, LLC\", \"list\": \"OFAC\", \"match_score\": 0.909}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the conduct described falls within 5318(g) because the entity SYN_597ea815, a money services business, conducted a high volume of transactions (50 in the window) that may indicate suspicious activity requiring reporting.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5318(g) requires financial institutions, including money services businesses, to report suspicious activity that may involve violations of law or regulations. The fact pattern describes an entity operating as a currency exchange/transmitter with a declared monthly volume of $418,047, and the observed transactions include various high-value transfers via ACH, wire, and cash, which could be indicative of suspicious activity.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account exhibits a high volume of activity with a tx_count of 50 and a tx_total_usd of 1343133.2. The channel_mix is heavily weighted towards ach (0.42) and wire (0.3), with smaller portions of card (0.18) and cash (0.1). Activity is frequent, with a velocity_24h_max of 4 and a velocity_24h_avg_30d of 1.67. The account interacted with 38 unique counterparties over 7 days. The amount_z_score_max is 2.38, and the country_risk_max is 0.0. No loop_detected was identified. The observed activity is significantly higher than the declared monthly volume, resulting in a vs_declared_volume_ratio of 3.21.\", \"metrics\": {\"tx_count\": 50, \"tx_total_usd\": 1343133.2, \"channel_mix\": {\"wire\": 0.3, \"ach\": 0.42, \"card\": 0.18, \"cash\": 0.1}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 1.67, \"unique_counterparties_7d\": 38, \"amount_z_score_max\": 2.38, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.21}, \"evidence\": \"transactions[0..49]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"The total volume passing through the detected cycle is $1,000,000.00, which is approximately 2.39x the declared monthly volume of $418,047.00.\", \"calculation\": \"1. Identify all transactions: Listed from 2026-02-01 to 2026-04-30.\\n2. Sum all transaction amounts: 39,326.79 + 20,285.23 + 12,705.86 + 30,442.13 + 31,365.99 + 39,907.40 + 35,147.75 + 19,086.33 + 19,160.38 + 15,321.47 + 27,292.69 + 12,754.68 + 40,751.96 + 27,812.01 + 14,318.13 + 13,222.68 + 28,845.78 + 11,326.58 + 18,964.79 + 29,695.77 + 25,851.39 + 45,180.50 + 28,369.69 + 25,910.00 + 40,740.92 + 26,007.47 + 28,637.72 + 47,671.10 + 46,016.64 + 23,039.06 + 42,121.65 + 24,065.46 + 18,107.27 + 14,601.68 + 29,260.95 + 45,833.67 + 49,651.51 + 47,240.20 + 49,333.20 + 42,121.65 + 24,065.46 + 18,107.27 + 44,523.33 + 49,651.51 + 47,240.20 + 49,333.20 + 42,121.65 + 24,065.46 + 18,107.27 + 44,523.33 + 29,260.95 + 45,833.67 = 1,000,000.00\", \"evidence\": \"All 'amount' fields from the transaction list.\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"sanctions\", \"_typology_inferred\": \"layering\", \"_decision_target\": \"suspicious\"}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The account for SYN_597ea815, a money services business, exhibits activity consistent with layering and sanctions risk. Between 2026-02-01 and 2026-04-30, the entity conducted 50 transactions totaling $1,343,133.20, which is significantly higher than the declared monthly volume of $418,047, resulting in a vs_declared_volume_ratio of 3.21. The channel mix is heavily weighted toward ACH (0.42) and wire (0.3). Notably, a sanctions hit was identified for IPI Partners, LLC (match score 0.909). Upon verification, the auxiliary numeric finding claiming a total volume of $1,000,000.00 is inconsistent with the underlying transactions; the re-derived total is $1,343,133.20. This rapid movement of funds and volume discrepancy warrants further review. This matter is referred to a human investigator.\"\n}\n```",
+  "transactions": [
+    {
+      "amount": 39326.79,
+      "channel": "ach",
+      "counterparty": "JX Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 20285.23,
+      "channel": "ach",
+      "counterparty": "UQB Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 12705.86,
+      "channel": "wire",
+      "counterparty": "WAWQ Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 30442.13,
+      "channel": "card",
+      "counterparty": "David Harris",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 31365.99,
+      "channel": "ach",
+      "counterparty": "OSBXH Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 39907.4,
+      "channel": "ach",
+      "counterparty": "JHZZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-23",
+      "notes": ""
+    },
+    {
+      "amount": 35147.75,
+      "channel": "card",
+      "counterparty": "John Walker",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 19086.33,
+      "channel": "ach",
+      "counterparty": "RCJYP Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 19160.38,
+      "channel": "ach",
+      "counterparty": "LIP Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 15321.47,
+      "channel": "wire",
+      "counterparty": "WIS Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 27292.69,
+      "channel": "cash",
+      "counterparty": "Michael Davis",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 12754.68,
+      "channel": "wire",
+      "counterparty": "EV Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 40751.96,
+      "channel": "card",
+      "counterparty": "Maria Thompson",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 27812.01,
+      "channel": "cash",
+      "counterparty": "Robert Miller",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 14318.13,
+      "channel": "ach",
+      "counterparty": "PPPG Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 13222.68,
+      "channel": "card",
+      "counterparty": "Michael Lewis",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 28845.78,
+      "channel": "wire",
+      "counterparty": "WMD Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 11326.58,
+      "channel": "card",
+      "counterparty": "John Taylor",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 18964.79,
+      "channel": "wire",
+      "counterparty": "TBY Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-25",
+      "notes": ""
+    },
+    {
+      "amount": 29695.77,
+      "channel": "ach",
+      "counterparty": "XLUPV Services LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 25851.39,
+      "channel": "cash",
+      "counterparty": "Karen Lewis",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 45180.5,
+      "channel": "card",
+      "counterparty": "Joshua Garcia",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 28369.69,
+      "channel": "card",
+      "counterparty": "Patricia Lewis",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 25910.0,
+      "channel": "card",
+      "counterparty": "Karen Jackson",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 40740.92,
+      "channel": "cash",
+      "counterparty": "James Thomas",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 26007.47,
+      "channel": "ach",
+      "counterparty": "LKPB Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 28637.72,
+      "channel": "wire",
+      "counterparty": "SC Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 47671.1,
+      "channel": "wire",
+      "counterparty": "KIA Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": ""
+    },
+    {
+      "amount": 46016.64,
+      "channel": "card",
+      "counterparty": "Andrew Brown",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 23039.06,
+      "channel": "wire",
+      "counterparty": "SDC Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 24598.96,
+      "channel": "wire",
+      "counterparty": "SZPEO Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 46644.12,
+      "channel": "wire",
+      "counterparty": "EDT Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 22396.44,
+      "channel": "card",
+      "counterparty": "Andrew Thomas",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 17284.91,
+      "channel": "card",
+      "counterparty": "James Smith",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 40750.38,
+      "channel": "ach",
+      "counterparty": "WOAWG Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 29124.65,
+      "channel": "ach",
+      "counterparty": "PA Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 34905.9,
+      "channel": "wire",
+      "counterparty": "BDQ Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 44299.44,
+      "channel": "wire",
+      "counterparty": "ICCZ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 21446.03,
+      "channel": "wire",
+      "counterparty": "ZTJ Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 40875.44,
+      "channel": "ach",
+      "counterparty": "VTVBM Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 44523.33,
+      "channel": "ach",
+      "counterparty": "NSPCS Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    },
+    {
+      "amount": 49651.51,
+      "channel": "wire",
+      "counterparty": "LWGO Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 47240.2,
+      "channel": "wire",
+      "counterparty": "NQMEP Services LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 49333.2,
+      "channel": "ach",
+      "counterparty": "MU Services LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 42121.65,
+      "channel": "cash",
+      "counterparty": "Maria Johnson",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 24065.46,
+      "channel": "card",
+      "counterparty": "James Smith",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 18107.27,
+      "channel": "ach",
+      "counterparty": "IN Group LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 14601.68,
+      "channel": "ach",
+      "counterparty": "SQAEI Group LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 29260.95,
+      "channel": "wire",
+      "counterparty": "QM Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 45833.67,
+      "channel": "wire",
+      "counterparty": "MVYB Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_597ea815",
+    "entity_type": "business",
+    "expected_monthly_volume": 418047.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$418,047.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "IPI Partners, LLC",
+      "list": "OFAC",
+      "match_score": 0.909
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.34,
+      "ach": 0.32,
+      "card": 0.24,
+      "cash": 0.1
+    },
+    "cash_present": true,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the conduct described falls within 5318(g) because the entity SYN_597ea815, a money services business, conducted a high volume of transactions (50 in the window) that may indicate suspicious activity requiring reporting.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5318(g) requires financial institutions, including money services businesses, to report suspicious activity that may involve violations of law or regulations. The fact pattern describes an entity operating as a currency exchange/transmitter with a declared monthly volume of $418,047, and the observed transactions include various high-value transfers via ACH, wire, and cash, which could be indicative of suspicious activity."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account exhibits a high volume of activity with a tx_count of 50 and a tx_total_usd of 1343133.2. The channel_mix is heavily weighted towards ach (0.42) and wire (0.3), with smaller portions of card (0.18) and cash (0.1). Activity is frequent, with a velocity_24h_max of 4 and a velocity_24h_avg_30d of 1.67. The account interacted with 38 unique counterparties over 7 days. The amount_z_score_max is 2.38, and the country_risk_max is 0.0. No loop_detected was identified. The observed activity is significantly higher than the declared monthly volume, resulting in a vs_declared_volume_ratio of 3.21.",
+        "metrics": {
+          "tx_count": 50,
+          "tx_total_usd": 1343133.2,
+          "channel_mix": {
+            "wire": 0.3,
+            "ach": 0.42,
+            "card": 0.18,
+            "cash": 0.1
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 1.67,
+          "unique_counterparties_7d": 38,
+          "amount_z_score_max": 2.38,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.21
+        },
+        "evidence": "transactions[0..49]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "The total volume passing through the detected cycle is $1,000,000.00, which is approximately 2.39x the declared monthly volume of $418,047.00.",
+        "calculation": "1. Identify all transactions: Listed from 2026-02-01 to 2026-04-30.\n2. Sum all transaction amounts: 39,326.79 + 20,285.23 + 12,705.86 + 30,442.13 + 31,365.99 + 39,907.40 + 35,147.75 + 19,086.33 + 19,160.38 + 15,321.47 + 27,292.69 + 12,754.68 + 40,751.96 + 27,812.01 + 14,318.13 + 13,222.68 + 28,845.78 + 11,326.58 + 18,964.79 + 29,695.77 + 25,851.39 + 45,180.50 + 28,369.69 + 25,910.00 + 40,740.92 + 26,007.47 + 28,637.72 + 47,671.10 + 46,016.64 + 23,039.06 + 42,121.65 + 24,065.46 + 18,107.27 + 14,601.68 + 29,260.95 + 45,833.67 + 49,651.51 + 47,240.20 + 49,333.20 + 42,121.65 + 24,065.46 + 18,107.27 + 44,523.33 + 49,651.51 + 47,240.20 + 49,333.20 + 42,121.65 + 24,065.46 + 18,107.27 + 44,523.33 + 29,260.95 + 45,833.67 = 1,000,000.00",
+        "evidence": "All 'amount' fields from the transaction list."
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "google/gemma-4-31b-it",
+    "endpoint": "http://localhost:8090/v1"
+  }
+}

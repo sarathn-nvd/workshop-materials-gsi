@@ -1,0 +1,236 @@
+{
+  "case_id": "DEMO_0026",
+  "alert_id": "ALT_2472199",
+  "entity_id": "SYN_e04aac21",
+  "started_at": "2026-05-23T12:01:09.055896+00:00",
+  "finished_at": "2026-05-23T12:01:30.630607+00:00",
+  "wall_clock_ms": 21574.7,
+  "transactions": [
+    {
+      "amount": 675.29,
+      "channel": "wire",
+      "counterparty": "Donor Karen Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 201.76,
+      "channel": "ach",
+      "counterparty": "Donor Susan Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 284.99,
+      "channel": "ach",
+      "counterparty": "Donor Michael Thompson",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 818.5,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Jackson",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 662.05,
+      "channel": "wire",
+      "counterparty": "Donor Karen Miller",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 410.83,
+      "channel": "ach",
+      "counterparty": "Donor Sarah Walker",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 245.51,
+      "channel": "wire",
+      "counterparty": "Donor Patricia Smith",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 883.87,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Walker",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 434.46,
+      "channel": "ach",
+      "counterparty": "Donor Patricia Anderson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_e04aac21",
+    "entity_type": "business",
+    "expected_monthly_volume": 14372.0,
+    "business_purpose": "Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-DC"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Patricia Smith",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.667,
+      "wire": 0.333
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.6666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity executed 9 transactions totaling $5,017.26, with a channel mix of wire 0.2222 ach 0.7778 cash 0.0 and a 24‑hour velocity maximum of 2 transactions (average 0.3 per day over 30 days). It interacted with 5 unique counterparties in the last 7 days, exhibited a highest amount z‑score of 1.376, carries a country risk score of 0.5, no loop was detected, and the observed volume versus declared volume ratio is 0.349.",
+      "metrics": {
+        "tx_count": 9,
+        "tx_total_usd": 5017.26,
+        "channel_mix": {
+          "wire": 0.2222,
+          "ach": 0.7778,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.3,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 1.376,
+        "country_risk_max": 0.5,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.349
+      },
+      "evidence": "transactions[0..8]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$4,617.26 observed over 13 days (~$10,658 monthly), which is about 1.35× lower than the declared $14,372 monthly volume.",
+      "calculation": "1. Extract amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46.\n2. Sum: 675.29+201.76=877.05; +284.99=1,162.04; +818.50=1,980.54; +662.05=2,642.59; +410.83=3,053.42; +245.51=3,298.93; +883.87=4,182.80; +434.46=4,617.26.\n3. Count days: earliest 2026-04-13, latest 2026-04-26 → 13 days.\n4. Monthly equivalent: 4,617.26 × (30/13) ≈ 10,658.\n5. Compare: 10,658 / 14,372 ≈ 0.74, i.e., observed is about 74% of declared, or declared is ~1.35× observed.",
+      "evidence": "Rows with amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46 (all in USD)."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be evaluated for statutory coverage because no statute was provided.",
+      "label": "neutral",
+      "reasoning": "The statute identifier is '' (empty), indicating no applicable statute."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be evaluated for statutory coverage because no statute was provided.",
+        "label": "neutral",
+        "reasoning": "The statute identifier is '' (empty), indicating no applicable statute."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity executed 9 transactions totaling $5,017.26, with a channel mix of wire 0.2222 ach 0.7778 cash 0.0 and a 24‑hour velocity maximum of 2 transactions (average 0.3 per day over 30 days). It interacted with 5 unique counterparties in the last 7 days, exhibited a highest amount z‑score of 1.376, carries a country risk score of 0.5, no loop was detected, and the observed volume versus declared volume ratio is 0.349.",
+        "metrics": {
+          "tx_count": 9,
+          "tx_total_usd": 5017.26,
+          "channel_mix": {
+            "wire": 0.2222,
+            "ach": 0.7778,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.3,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.376,
+          "country_risk_max": 0.5,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.349
+        },
+        "evidence": "transactions[0..8]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$4,617.26 observed over 13 days (~$10,658 monthly), which is about 1.35× lower than the declared $14,372 monthly volume.",
+        "calculation": "1. Extract amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46.\n2. Sum: 675.29+201.76=877.05; +284.99=1,162.04; +818.50=1,980.54; +662.05=2,642.59; +410.83=3,053.42; +245.51=3,298.93; +883.87=4,182.80; +434.46=4,617.26.\n3. Count days: earliest 2026-04-13, latest 2026-04-26 → 13 days.\n4. Monthly equivalent: 4,617.26 × (30/13) ≈ 10,658.\n5. Compare: 10,658 / 14,372 ≈ 0.74, i.e., observed is about 74% of declared, or declared is ~1.35× observed.",
+        "evidence": "Rows with amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46 (all in USD)."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 675.29, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 201.76, \"channel\": \"ach\", \"counterparty\": \"Donor Susan Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 284.99, \"channel\": \"ach\", \"counterparty\": \"Donor Michael Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"small inbound donation\"}, {\"amount\": 818.5, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"small inbound donation\"}, {\"amount\": 662.05, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Miller\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"small inbound donation\"}, {\"amount\": 410.83, \"channel\": \"ach\", \"counterparty\": \"Donor Sarah Walker\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"small inbound donation\"}, {\"amount\": 245.51, \"channel\": \"wire\", \"counterparty\": \"Donor Patricia Smith\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"small inbound donation\"}, {\"amount\": 883.87, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Walker\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"small inbound donation\"}, {\"amount\": 434.46, \"channel\": \"ach\", \"counterparty\": \"Donor Patricia Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_e04aac21\", \"entity_type\": \"business\", \"expected_monthly_volume\": 14372, \"business_purpose\": \"Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-DC\"}, \"sanctions_pep_hits\": [{\"name\": \"Patricia Smith\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be evaluated for statutory coverage because no statute was provided.\", \"label\": \"neutral\", \"reasoning\": \"The statute identifier is '' (empty), indicating no applicable statute.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity executed 9 transactions totaling $5,017.26, with a channel mix of wire 0.2222 ach 0.7778 cash 0.0 and a 24‑hour velocity maximum of 2 transactions (average 0.3 per day over 30 days). It interacted with 5 unique counterparties in the last 7 days, exhibited a highest amount z‑score of 1.376, carries a country risk score of 0.5, no loop was detected, and the observed volume versus declared volume ratio is 0.349.\", \"metrics\": {\"tx_count\": 9, \"tx_total_usd\": 5017.26, \"channel_mix\": {\"wire\": 0.2222, \"ach\": 0.7778, \"cash\": 0.0}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.3, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.376, \"country_risk_max\": 0.5, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.349}, \"evidence\": \"transactions[0..8]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$4,617.26 observed over 13 days (~$10,658 monthly), which is about 1.35× lower than the declared $14,372 monthly volume.\", \"calculation\": \"1. Extract amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46.\\n2. Sum: 675.29+201.76=877.05; +284.99=1,162.04; +818.50=1,980.54; +662.05=2,642.59; +410.83=3,053.42; +245.51=3,298.93; +883.87=4,182.80; +434.46=4,617.26.\\n3. Count days: earliest 2026-04-13, latest 2026-04-26 → 13 days.\\n4. Monthly equivalent: 4,617.26 × (30/13) ≈ 10,658.\\n5. Compare: 10,658 / 14,372 ≈ 0.74, i.e., observed is about 74% of declared, or declared is ~1.35× observed.\", \"evidence\": \"Rows with amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46 (all in USD).\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since _regulatory_frame is \"benign\", decision should be not suspicious. So is_suspicious = false, suspicious_activity_report = \"\" (empty string). Must be a single JSON object, no extra text.\n\nCheck constraints: When false, report must be empty string. Provide exactly that.\n\nThus output: {\"is_suspicious\":false,\"suspicious_activity_report\":\"\"} Ensure no extra whitespace? Probably fine.\n\nMake sure no extra fields. Provide JSON only.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

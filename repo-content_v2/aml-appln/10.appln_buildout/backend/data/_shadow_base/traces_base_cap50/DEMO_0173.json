@@ -1,0 +1,280 @@
+{
+  "case_id": "DEMO_0173",
+  "alert_id": "ALT_2497955",
+  "entity_id": "SYN_20df88f4",
+  "started_at": "2026-05-23T12:40:40.283086+00:00",
+  "finished_at": "2026-05-23T12:40:47.684033+00:00",
+  "wall_clock_ms": 7401.0,
+  "transactions": [
+    {
+      "amount": 1224.43,
+      "channel": "ach",
+      "counterparty": "TSJAO Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1119.68,
+      "channel": "wire",
+      "counterparty": "CNQA Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 2999.76,
+      "channel": "ach",
+      "counterparty": "UDV Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-06",
+      "notes": ""
+    },
+    {
+      "amount": 886.14,
+      "channel": "card",
+      "counterparty": "Christopher Thomas",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1476.54,
+      "channel": "ach",
+      "counterparty": "HRN Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 2168.62,
+      "channel": "card",
+      "counterparty": "Andrew Harris",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 1390.11,
+      "channel": "ach",
+      "counterparty": "TB Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    },
+    {
+      "amount": 623.28,
+      "channel": "card",
+      "counterparty": "Patricia Moore",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 1771.62,
+      "channel": "card",
+      "counterparty": "Michael Brown",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 1065.88,
+      "channel": "ach",
+      "counterparty": "SGJ Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 1609.73,
+      "channel": "ach",
+      "counterparty": "RO Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 2126.55,
+      "channel": "ach",
+      "counterparty": "TLY Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 2770.54,
+      "channel": "cheque",
+      "counterparty": "TWN Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 788.79,
+      "channel": "card",
+      "counterparty": "James Martin",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 2790.51,
+      "channel": "wire",
+      "counterparty": "RMANI Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 1922.67,
+      "channel": "ach",
+      "counterparty": "ZUSQL Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 2280.41,
+      "channel": "wire",
+      "counterparty": "MGREF Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 1475.9,
+      "channel": "card",
+      "counterparty": "Michael Walker",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 1666.65,
+      "channel": "card",
+      "counterparty": "Christopher Taylor",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 2410.33,
+      "channel": "cheque",
+      "counterparty": "IJU Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 937.63,
+      "channel": "ach",
+      "counterparty": "PSUIT Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_20df88f4",
+    "entity_type": "individual",
+    "expected_monthly_volume": 10757.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$10,757.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "card": 0.333,
+      "wire": 0.143,
+      "cheque": 0.095
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.42857142857142855, 'wire': 0.14285714285714285, 'card': 0.3333333333333333, 'cheque': 0.09523809523809523})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from the passage. Let's parse.\n\nWe have entity_id SYN_20df88f4, individual, expected monthly volume 10757.0 USD. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute metrics:\n\n- tx_count: number of transactions listed. Let's count lines. I'll enumerate:\n\n1 2026-03-01\n2 2026-03-03\n3 2026-03-06\n4 2026-04-06\n5 2026-02-17\n6 2026-04-18\n7 2026-02-13\n8 2026-03-27\n9 2026-03-15\n10 2026-03-13\n11 2026-04-29\n12 2"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to compute sum of transaction amounts in passage, compare to expected monthly volume $10,757. Sum all amounts listed. Let's list amounts:\n\n1. 1224.43\n2. 1119.68\n3. 2999.76\n4. 886.14\n5. 1476.54\n6. 2168.62\n7. 1390.11\n8. 1771.62\n9. 1065.88\n10. 1609.73\n11. 2126.55\n12. 2770.54\n13. 623.28\n14. 2790.51\n15. 1922.67\n16. 2280.41\n17. 1475.90\n18. 1666.65\n19. 2410.33\n20. 937.63\n\nNow sum. Let's add gradually.\n\nI'll sum using grouping.\n\nFirst 5: 1224.43+1119.68=2344.11; +2999.76=5343.87; +886.14=6230.01"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage indicates that no policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute exists for the given fact pattern.",
+      "label": "neutral",
+      "reasoning": "Statute identifier is \"\" (empty)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute exists for the given fact pattern.",
+        "label": "neutral",
+        "reasoning": "Statute identifier is \"\" (empty)."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage indicates that no policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1224.43, \"channel\": \"ach\", \"counterparty\": \"TSJAO Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1119.68, \"channel\": \"wire\", \"counterparty\": \"CNQA Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 2999.76, \"channel\": \"ach\", \"counterparty\": \"UDV Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-06\", \"notes\": \"\"}, {\"amount\": 886.14, \"channel\": \"card\", \"counterparty\": \"Christopher Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1476.54, \"channel\": \"ach\", \"counterparty\": \"HRN Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 2168.62, \"channel\": \"card\", \"counterparty\": \"Andrew Harris\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 1390.11, \"channel\": \"ach\", \"counterparty\": \"TB Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}, {\"amount\": 623.28, \"channel\": \"card\", \"counterparty\": \"Patricia Moore\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 1771.62, \"channel\": \"card\", \"counterparty\": \"Michael Brown\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 1065.88, \"channel\": \"ach\", \"counterparty\": \"SGJ Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 1609.73, \"channel\": \"ach\", \"counterparty\": \"RO Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 2126.55, \"channel\": \"ach\", \"counterparty\": \"TLY Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 2770.54, \"channel\": \"cheque\", \"counterparty\": \"TWN Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 788.79, \"channel\": \"card\", \"counterparty\": \"James Martin\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 2790.51, \"channel\": \"wire\", \"counterparty\": \"RMANI Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 1922.67, \"channel\": \"ach\", \"counterparty\": \"ZUSQL Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 2280.41, \"channel\": \"wire\", \"counterparty\": \"MGREF Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 1475.9, \"channel\": \"card\", \"counterparty\": \"Michael Walker\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 1666.65, \"channel\": \"card\", \"counterparty\": \"Christopher Taylor\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 2410.33, \"channel\": \"cheque\", \"counterparty\": \"IJU Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 937.63, \"channel\": \"ach\", \"counterparty\": \"PSUIT Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_20df88f4\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 10757, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$10,757.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute exists for the given fact pattern.\", \"label\": \"neutral\", \"reasoning\": \"Statute identifier is \\\"\\\" (empty).\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage indicates that no policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since _regulatory_frame is \"benign\", decision should be not suspicious. So is_suspicious = false, suspicious_activity_report = \"\" (empty string). Must output JSON only.\n\nCheck constraints: When false, report must be empty string. Provide JSON object.\n\nThus output: {\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

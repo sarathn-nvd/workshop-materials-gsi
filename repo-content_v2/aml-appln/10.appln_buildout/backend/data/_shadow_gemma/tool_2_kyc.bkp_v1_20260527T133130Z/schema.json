@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "entity_id": {
+      "title": "Entity Id",
+      "type": "string"
+    },
+    "entity_type": {
+      "enum": [
+        "individual",
+        "business"
+      ],
+      "title": "Entity Type",
+      "type": "string"
+    },
+    "expected_monthly_volume": {
+      "minimum": 0,
+      "title": "Expected Monthly Volume",
+      "type": "number"
+    },
+    "business_purpose": {
+      "title": "Business Purpose",
+      "type": "string"
+    },
+    "risk_rating": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "enhanced",
+        "prohibited"
+      ],
+      "title": "Risk Rating",
+      "type": "string"
+    },
+    "incorporation_jurisdiction": {
+      "title": "Incorporation Jurisdiction",
+      "type": "string"
+    }
+  },
+  "required": [
+    "entity_id",
+    "entity_type",
+    "expected_monthly_volume",
+    "business_purpose",
+    "risk_rating",
+    "incorporation_jurisdiction"
+  ],
+  "title": "KYCProfile",
+  "type": "object"
+}

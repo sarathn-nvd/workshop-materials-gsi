@@ -1,0 +1,328 @@
+{
+  "case_id": "DEMO_0230",
+  "alert_id": "ALT_2694522",
+  "entity_id": "SYN_5dff2746",
+  "started_at": "2026-05-28T10:56:27.294466+00:00",
+  "finished_at": "2026-05-28T10:56:32.795094+00:00",
+  "wall_clock_ms": 5500.7,
+  "transactions": [
+    {
+      "amount": 256.83,
+      "channel": "ach",
+      "counterparty": "KST Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 258.12,
+      "channel": "card",
+      "counterparty": "Robert Moore",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 123.89,
+      "channel": "card",
+      "counterparty": "Patricia Thompson",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 95.85,
+      "channel": "card",
+      "counterparty": "Andrew Moore",
+      "currency": "USD",
+      "date": "2026-04-05",
+      "notes": ""
+    },
+    {
+      "amount": 203.24,
+      "channel": "ach",
+      "counterparty": "LWC Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 113.3,
+      "channel": "card",
+      "counterparty": "Patricia Miller",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 209.71,
+      "channel": "card",
+      "counterparty": "Andrew Miller",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 264.05,
+      "channel": "card",
+      "counterparty": "Karen Smith",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 294.29,
+      "channel": "ach",
+      "counterparty": "NQYDJ Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    },
+    {
+      "amount": 118.34,
+      "channel": "ach",
+      "counterparty": "ZRZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 303.22,
+      "channel": "card",
+      "counterparty": "Robert Miller",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 143.75,
+      "channel": "card",
+      "counterparty": "Susan Thompson",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 289.95,
+      "channel": "card",
+      "counterparty": "Susan Harris",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 123.22,
+      "channel": "card",
+      "counterparty": "David Anderson",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 203.79,
+      "channel": "cheque",
+      "counterparty": "UK Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 117.25,
+      "channel": "card",
+      "counterparty": "John Wilson",
+      "currency": "USD",
+      "date": "2026-03-19",
+      "notes": ""
+    },
+    {
+      "amount": 199.13,
+      "channel": "ach",
+      "counterparty": "XWBX Services LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 139.46,
+      "channel": "ach",
+      "counterparty": "BI Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 254.88,
+      "channel": "card",
+      "counterparty": "Maria Thompson",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 257.88,
+      "channel": "ach",
+      "counterparty": "OTVP Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 328.05,
+      "channel": "cheque",
+      "counterparty": "EI Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_5dff2746",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1176.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,176.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.571,
+      "ach": 0.333,
+      "cheque": 0.095
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.3333333333333333, 'card': 0.5714285714285714, 'cheque': 0.09523809523809523})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_5dff2746 executed 21 transactions totaling $4,298.20 USD with channel mix {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.31x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 21,
+        "tx_total_usd": 4298.2,
+        "channel_mix": {
+          "card": 0.571,
+          "ach": 0.333,
+          "cheque": 0.095
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.7,
+        "unique_counterparties_7d": 4,
+        "amount_z_score_max": 1.7,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.31
+      },
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 4733.11",
+      "calculation": "1. Sum all transaction amounts: 256.83 + 258.12 + 123.89 + 95.85 + 203.24 + 113.30 + 209.71 + 264.05 + 294.29 + 118.34 + 303.22 + 143.75 + 289.95 + 123.22 + 203.79 + 117.25 + 199.13 + 139.46 + 254.88 + 257.88 + 328.05 = 4733.11",
+      "evidence": "transactions[0..20].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_5dff2746 executed 21 transactions totaling $4,298.20 USD with channel mix {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.31x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 21,
+          "tx_total_usd": 4298.2,
+          "channel_mix": {
+            "card": 0.571,
+            "ach": 0.333,
+            "cheque": 0.095
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.7,
+          "unique_counterparties_7d": 4,
+          "amount_z_score_max": 1.7,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.31
+        },
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 4733.11",
+        "calculation": "1. Sum all transaction amounts: 256.83 + 258.12 + 123.89 + 95.85 + 203.24 + 113.30 + 209.71 + 264.05 + 294.29 + 118.34 + 303.22 + 143.75 + 289.95 + 123.22 + 203.79 + 117.25 + 199.13 + 139.46 + 254.88 + 257.88 + 328.05 = 4733.11",
+        "evidence": "transactions[0..20].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 256.83, \"channel\": \"ach\", \"counterparty\": \"KST Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 258.12, \"channel\": \"card\", \"counterparty\": \"Robert Moore\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 123.89, \"channel\": \"card\", \"counterparty\": \"Patricia Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 95.85, \"channel\": \"card\", \"counterparty\": \"Andrew Moore\", \"currency\": \"USD\", \"date\": \"2026-04-05\", \"notes\": \"\"}, {\"amount\": 203.24, \"channel\": \"ach\", \"counterparty\": \"LWC Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 113.3, \"channel\": \"card\", \"counterparty\": \"Patricia Miller\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 209.71, \"channel\": \"card\", \"counterparty\": \"Andrew Miller\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 264.05, \"channel\": \"card\", \"counterparty\": \"Karen Smith\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 294.29, \"channel\": \"ach\", \"counterparty\": \"NQYDJ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}, {\"amount\": 118.34, \"channel\": \"ach\", \"counterparty\": \"ZRZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 303.22, \"channel\": \"card\", \"counterparty\": \"Robert Miller\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 143.75, \"channel\": \"card\", \"counterparty\": \"Susan Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 289.95, \"channel\": \"card\", \"counterparty\": \"Susan Harris\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 123.22, \"channel\": \"card\", \"counterparty\": \"David Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 203.79, \"channel\": \"cheque\", \"counterparty\": \"UK Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 117.25, \"channel\": \"card\", \"counterparty\": \"John Wilson\", \"currency\": \"USD\", \"date\": \"2026-03-19\", \"notes\": \"\"}, {\"amount\": 199.13, \"channel\": \"ach\", \"counterparty\": \"XWBX Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 139.46, \"channel\": \"ach\", \"counterparty\": \"BI Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 254.88, \"channel\": \"card\", \"counterparty\": \"Maria Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 257.88, \"channel\": \"ach\", \"counterparty\": \"OTVP Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 328.05, \"channel\": \"cheque\", \"counterparty\": \"EI Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_5dff2746\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1176.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,176.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_5dff2746 executed 21 transactions totaling $4,298.20 USD with channel mix {\\\"card\\\": 0.571, \\\"ach\\\": 0.333, \\\"cheque\\\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.31x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 21, \"tx_total_usd\": 4298.2, \"channel_mix\": {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.7, \"unique_counterparties_7d\": 4, \"amount_z_score_max\": 1.7, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.31}, \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 4733.11\", \"calculation\": \"1. Sum all transaction amounts: 256.83 + 258.12 + 123.89 + 95.85 + 203.24 + 113.30 + 209.71 + 264.05 + 294.29 + 118.34 + 303.22 + 143.75 + 289.95 + 123.22 + 203.79 + 117.25 + 199.13 + 139.46 + 254.88 + 257.88 + 328.05 = 4733.11\", \"evidence\": \"transactions[0..20].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a total transaction volume of $4,298.20 across 21 transactions between 2026-02-03 and 2026-04-28, which represents a volume ratio of 1.31x relative to the declared monthly volume of $1,176.00. However, the activity consists of small, fragmented payments via card, ACH, and cheque to various counterparties (e.g., $258.12 to Robert Moore on 2026-03-08 and $203.24 to LWC Logistics LLC on 2026-04-01), which is consistent with the spending patterns of a retired individual managing personal expenses. No sanctions hits or high-risk jurisdictional links were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a total transaction volume of $4,298.20 across 21 transactions between 2026-02-03 and 2026-04-28, which represents a volume ratio of 1.31x relative to the declared monthly volume of $1,176.00. However, the activity consists of small, fragmented payments via card, ACH, and cheque to various counterparties (e.g., $258.12 to Robert Moore on 2026-03-08 and $203.24 to LWC Logistics LLC on 2026-04-01), which is consistent with the spending patterns of a retired individual managing personal expenses. No sanctions hits or high-risk jurisdictional links were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a total transaction volume of $4,298.20 across 21 transactions between 2026-02-03 and 2026-04-28, which represents a volume ratio of 1.31x relative to the declared monthly volume of $1,176.00. However, the activity consists of small, fragmented payments via card, ACH, and cheque to various counterparties (e.g., $258.12 to Robert Moore on 2026-03-08 and $203.24 to LWC Logistics LLC on 2026-04-01), which is consistent with the spending patterns of a retired individual managing personal expenses. No sanctions hits or high-risk jurisdictional links were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

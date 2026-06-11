@@ -1,0 +1,263 @@
+{
+  "case_id": "DEMO_0173",
+  "entity_id": "SYN_20df88f4",
+  "started_at": "2026-05-23T13:16:16.827316+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 175.1,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1224.43, \"channel\": \"ach\", \"counterparty\": \"TSJAO Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1119.68, \"channel\": \"wire\", \"counterparty\": \"CNQA Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 2999.76, \"channel\": \"ach\", \"counterparty\": \"UDV Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-06\", \"notes\": \"\"}, {\"amount\": 886.14, \"channel\": \"card\", \"counterparty\": \"Christopher Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1476.54, \"channel\": \"ach\", \"counterparty\": \"HRN Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 2168.62, \"channel\": \"card\", \"counterparty\": \"Andrew Harris\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 1390.11, \"channel\": \"ach\", \"counterparty\": \"TB Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}, {\"amount\": 623.28, \"channel\": \"card\", \"counterparty\": \"Patricia Moore\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 1771.62, \"channel\": \"card\", \"counterparty\": \"Michael Brown\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 1065.88, \"channel\": \"ach\", \"counterparty\": \"SGJ Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 1609.73, \"channel\": \"ach\", \"counterparty\": \"RO Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 2126.55, \"channel\": \"ach\", \"counterparty\": \"TLY Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 2770.54, \"channel\": \"cheque\", \"counterparty\": \"TWN Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 788.79, \"channel\": \"card\", \"counterparty\": \"James Martin\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 2790.51, \"channel\": \"wire\", \"counterparty\": \"RMANI Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 1922.67, \"channel\": \"ach\", \"counterparty\": \"ZUSQL Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 2280.41, \"channel\": \"wire\", \"counterparty\": \"MGREF Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 1475.9, \"channel\": \"card\", \"counterparty\": \"Michael Walker\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 1666.65, \"channel\": \"card\", \"counterparty\": \"Christopher Taylor\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 2410.33, \"channel\": \"cheque\", \"counterparty\": \"IJU Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 937.63, \"channel\": \"ach\", \"counterparty\": \"PSUIT Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_20df88f4\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 10757, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$10,757.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [{\"name\": \"Michael Brown\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_20df88f4, a salaried wage earner, shows a total of 20 transactions across multiple channels. Activity is spread across ACH, wire, card, and cheque channels. The highest single transaction was $2,999.76 via ACH to UDV Industries LLC on 2026-03-06, while the lowest was $623.28 via card to Patricia Moore on 2026-04-08. The account exhibits a high velocity of activity, with a maximum of 4 transactions in a 24-hour period and an average of 0.67 transactions per day over 30 days. The total volume is $33,333.11, which is significantly higher than the expected monthly volume of $10,757.00. The account interacts with a diverse set of counterparties, including TSJAO Logistics LLC and CNQA Holdings LLC.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 33333.11, \"channel_mix\": {\"ach\": 0.4, \"wire\": 0.25, \"card\": 0.3, \"cheque\": 0.05}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 16, \"amount_z_score_max\": 2.45, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.1}, \"evidence\": \"transactions[0..19]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume across all dates is $33,223.31. This represents an average monthly volume of approximately $3,322.33, which is significantly lower than the KYC declared monthly volume of $10,757.0.\", \"calculation\": \"1. Identify all transaction amounts: 1224.43, 1119.68, 2999.76, 886.14, 1476.54, 2168.62, 1390.11, 623.28, 1771.62, 1065.88, 1609.73, 2126.55, 2770.54, 788.79, 2790.51, 1922.67, 2280.41, 1475.90, 1666.65, 2410.33, 937.63.\\n2. Sum the amounts: 1224.43 + 1119.68 + 2999.76 + 886.14 + 1476.54 + 2168.62 + 1390.11 + 623.28 + 1771.62 + 1065.88 + 1609.73 + 2126.55 + 2770.54 + 788.79 + 2790.51 + 1922.67 + 2280.41 + 1475.90 + 1666.65 + 2410.33 + 937.63 = 33,223.31.\\n3. Compare to KYC: 33,223.31 / 12 months = 2,768.61 average monthly volume (note: this is the average over the period shown, not a full month comparison). However, the total is $33,223.31, which is less than the declared $10,757.0 per month.\", \"evidence\": \"Transaction amounts listed in the 'amount' column for dates 2026-03-01 to 2026-04-29.\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\", \"_decision_target\": \"not_suspicious\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "transactions": [
+    {
+      "amount": 1224.43,
+      "channel": "ach",
+      "counterparty": "TSJAO Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1119.68,
+      "channel": "wire",
+      "counterparty": "CNQA Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 2999.76,
+      "channel": "ach",
+      "counterparty": "UDV Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-06",
+      "notes": ""
+    },
+    {
+      "amount": 886.14,
+      "channel": "card",
+      "counterparty": "Christopher Thomas",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1476.54,
+      "channel": "ach",
+      "counterparty": "HRN Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 2168.62,
+      "channel": "card",
+      "counterparty": "Andrew Harris",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 1390.11,
+      "channel": "ach",
+      "counterparty": "TB Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    },
+    {
+      "amount": 623.28,
+      "channel": "card",
+      "counterparty": "Patricia Moore",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 1771.62,
+      "channel": "card",
+      "counterparty": "Michael Brown",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 1065.88,
+      "channel": "ach",
+      "counterparty": "SGJ Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 1609.73,
+      "channel": "ach",
+      "counterparty": "RO Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 2126.55,
+      "channel": "ach",
+      "counterparty": "TLY Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 2770.54,
+      "channel": "cheque",
+      "counterparty": "TWN Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 788.79,
+      "channel": "card",
+      "counterparty": "James Martin",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 2790.51,
+      "channel": "wire",
+      "counterparty": "RMANI Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 1922.67,
+      "channel": "ach",
+      "counterparty": "ZUSQL Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 2280.41,
+      "channel": "wire",
+      "counterparty": "MGREF Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 1475.9,
+      "channel": "card",
+      "counterparty": "Michael Walker",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 1666.65,
+      "channel": "card",
+      "counterparty": "Christopher Taylor",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 2410.33,
+      "channel": "cheque",
+      "counterparty": "IJU Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 937.63,
+      "channel": "ach",
+      "counterparty": "PSUIT Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_20df88f4",
+    "entity_type": "individual",
+    "expected_monthly_volume": 10757.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$10,757.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Michael Brown",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "card": 0.333,
+      "wire": 0.143,
+      "cheque": 0.095
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_20df88f4, a salaried wage earner, shows a total of 20 transactions across multiple channels. Activity is spread across ACH, wire, card, and cheque channels. The highest single transaction was $2,999.76 via ACH to UDV Industries LLC on 2026-03-06, while the lowest was $623.28 via card to Patricia Moore on 2026-04-08. The account exhibits a high velocity of activity, with a maximum of 4 transactions in a 24-hour period and an average of 0.67 transactions per day over 30 days. The total volume is $33,333.11, which is significantly higher than the expected monthly volume of $10,757.00. The account interacts with a diverse set of counterparties, including TSJAO Logistics LLC and CNQA Holdings LLC.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 33333.11,
+          "channel_mix": {
+            "ach": 0.4,
+            "wire": 0.25,
+            "card": 0.3,
+            "cheque": 0.05
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 16,
+          "amount_z_score_max": 2.45,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.1
+        },
+        "evidence": "transactions[0..19]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume across all dates is $33,223.31. This represents an average monthly volume of approximately $3,322.33, which is significantly lower than the KYC declared monthly volume of $10,757.0.",
+        "calculation": "1. Identify all transaction amounts: 1224.43, 1119.68, 2999.76, 886.14, 1476.54, 2168.62, 1390.11, 623.28, 1771.62, 1065.88, 1609.73, 2126.55, 2770.54, 788.79, 2790.51, 1922.67, 2280.41, 1475.90, 1666.65, 2410.33, 937.63.\n2. Sum the amounts: 1224.43 + 1119.68 + 2999.76 + 886.14 + 1476.54 + 2168.62 + 1390.11 + 623.28 + 1771.62 + 1065.88 + 1609.73 + 2126.55 + 2770.54 + 788.79 + 2790.51 + 1922.67 + 2280.41 + 1475.90 + 1666.65 + 2410.33 + 937.63 = 33,223.31.\n3. Compare to KYC: 33,223.31 / 12 months = 2,768.61 average monthly volume (note: this is the average over the period shown, not a full month comparison). However, the total is $33,223.31, which is less than the declared $10,757.0 per month.",
+        "evidence": "Transaction amounts listed in the 'amount' column for dates 2026-03-01 to 2026-04-29."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "aml-custom-task-nim-1",
+    "endpoint": "http://localhost:8088/v1"
+  }
+}

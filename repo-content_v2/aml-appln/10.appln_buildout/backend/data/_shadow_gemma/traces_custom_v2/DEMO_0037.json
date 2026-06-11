@@ -1,0 +1,188 @@
+{
+  "case_id": "DEMO_0037",
+  "entity_id": "SYN_dff57c0d",
+  "started_at": "2026-05-23T13:13:58.666864+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 3575.5,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The account of SYN_dff57c0d exhibited a pattern of cash deposits that appear consistent with structuring to evade the $10,000 reporting threshold. Specifically, the entity conducted multiple cash deposits, including $55,261.24 on 2026-04-17 and $50,076.29 on 2026-02-24, which, when aggregated, total $166,643.03. This volume exceeds the declared monthly volume of $101,650. The activity is further characterized by a high channel mix of cash (0.5) and card (0.333), with a total transaction volume of $372,620.08. This conduct may fall within 31 U.S.C. § 5324 regarding the evasion of reporting requirements. The matter is referred for further human investigation.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_dff57c0d exhibited a pattern of cash deposits that appear consistent with structuring to evade the $10,000 reporting threshold. Specifically, the entity conducted multiple cash deposits, including $55,261.24 on 2026-04-17 and $50,076.29 on 2026-02-24, which, when aggregated, total $166,643.03. This volume exceeds the declared monthly volume of $101,650. The activity is further characterized by a high channel mix of cash (0.5) and card (0.333), with a total transaction volume of $372,620.08. This conduct may fall within 31 U.S.C. § 5324 regarding the evasion of reporting requirements. The matter is referred for further human investigation."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 9053.82, \"channel\": \"cash\", \"counterparty\": \"Cash deposit, ATL Branch #58\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"one-time sub-CTR cash receipt (benign: customer paid in cash)\"}, {\"amount\": 55261.24, \"channel\": \"cash\", \"counterparty\": \"James Wilson\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 81509.11, \"channel\": \"ach\", \"counterparty\": \"PU Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 50076.29, \"channel\": \"cash\", \"counterparty\": \"Linda Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 90479.6, \"channel\": \"card\", \"counterparty\": \"David Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 52251.68, \"channel\": \"cash\", \"counterparty\": \"Elizabeth White\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 34359.94, \"channel\": \"card\", \"counterparty\": \"Jennifer Brown\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dff57c0d\", \"entity_type\": \"business\", \"expected_monthly_volume\": 101650, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$101,650.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/AS_World_Trading_Consent_Order_FINAL\", \"url\": \"\", \"text\": \"of Authority to Examine Nonfinancial Trades and\\nBusinesses (April 21, 2015), available at https://www.irs.gov/irm/part4/irm_04-026-001, Ex. 4.26.1-3.\\n9 31 C.F.R. §§ 1010.810(a), (d); Treasury Order 180-01 (July 1, 2014).\\n10 In December of 2017, Campos dissolved A&S. Prior to the dissolution of A&S, Campos mainly relied\\non his staff to oversee A&S’s business operations, financials, and its relationship with the company’s\\nvendors and certified public accountant.\\n11 31 U.S.C. § 5326(a); Treasury Order 180-01 (July 1, 2014).\\n– 4 –\\nOn September 26, 2014, FinCEN issued a GTO to certain trades and businesses\\nlocated within the Los Angeles, California fashion district (referred to hereafter as the\\n“Los Angeles Fashion District GTO”).12 The Los Angeles Fashion District GTO applied\\nto certain specified types of “Covered Businesses,” including “perfume stores,” in a\\n“Covered Geographic Area” that encompassed A&S’s Fine Fragrance location at 501\\nEast Olympic Boulevard.13\\nThe Los Angeles Fashion District GTO required any Covered Business that, in the\\ncourse of its trade or business, received currency in excess of $3,000 in one transaction\\nor two or more related transactions in a 24-hour period, to report such transactions\\nelectronically to FinCEN.14 The Los Angeles Fashion District GTO was effective from\\nOctober 9, 2014 through April 6, 2015.\\nOn October 2, 2014, before the Los Angeles Fashion District GTO became\\neffective, FinCEN and the Department of Justice issued press releases announc\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"at he repre-\\nsented the investments as risk-free. He claimed the principal\\nwould remain in the investors’ own accounts and was secured\\nby real estate or promissory notes. Further, literature distrib-\\nuted by Bush indicated that his investment had minimal risk\\nand could produce up to a 300-percent yearly return. Accord-\\ning to a letter soliciting new investments, investor funds\\nwould be held “in trust” until the pool accumulated $1 mil-\\nlion. At that point, the pooled funds would be transferred to\\nWilcoxson or Mintus who would then place the money with\\na “private merchant bank.” After investors sent money, Bush\\nsent them a Hulaman Trust International Trust and Fiduciary\\nAgreement, which catalogued investors’ funds under the reas-\\nsuring heading “Assets Delivered in Trust.” Soon after Bush\\nbegan to invest with Mintus, she failed to make her first pay-\\nment due to Bush. Despite this, Bush testified that he\\nremained confident about the viability of Mintus’s program\\nand continued to place Hulaman-client money with her.\\n  Bush recruited several individuals to assist him in promot-\\ning Hulaman. Chief among them was his longtime marketing\\npartner Marilyn March. Bush also tapped Larry and Vicki\\nWebster to work as “financial planners” and promoters, pay-\\ning them a percentage of any funds they raised. Bush hired\\nMarch’s friend Tammy Stuckey to work as his administrative\\nassistant. She was paid $1000 per week in cash. For his part,\\nBush told investors that he lived an ascetic life and “\"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"makes relevant knowledge and expertise\\naccessible and applicable to organisations. In most cases, membership includes the endorsement of\\ncodes of conduct and commitment to transparent accountability.\\n1. ORGANISATIONAL INTEGRITY\\n102. NPOs are established and operate in accordance with a governing document, for example,\\narticles of incorporation, a constitution, or bylaws that outline purposes, structure, reporting\\npractices, and guidelines for complying with local laws. Members of the governing board understand\\nand act in the interest of the organisation. The governing board maintains oversight over the\\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\\nRECOMMENDATION 8\\n33\\n© 2023 FATF/OECD\\norganisation by establishing strong financial and human resource policies, meeting on a regular\\nbasis, and actively monitoring activities.\\n103. Large NPOs with a high-risk profile can design and implement policies, codes of conduct\\naddressing CFT specifically. These measures can be regularly assessed by internal monitoring and\\nevaluation mechanisms, which include independent auditing. In addition, requirements for\\ndirectors, organisation of internal supervision, effective whistleblowing mechanisms and regularly\\nscheduled self-evaluations could be beneficial.\\n2. PARTNER AND DONOR RELATIONSHIPS\\n104. NPOs could undertake a range of practical steps to be reasonably assured of the provenance\\nof the funds given to them and verify information on those individuals a\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-STRUCTURING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all cash transactions for the entity in the prior 90 days.\\n2. Identify sub-$10,000 cash deposits made within 14 days across multiple branches or distinct counterparties.\\n3. Confirm the declared business purpose against observed cash run-rate.\\n4. Aggregate per the BSA aggregation rule (single business day, same person).\\n5. Escalate to SAR review if the pattern persists across ≥3 sub-CTR deposits.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5324?\", \"answer\": \"Yes, the conduct may fall within 31 U.S.C. § 5324 if the cash deposits were structured to evade the reporting requirements of 31 U.S.C. § 5322.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5324 prohibits structuring transactions to evade the reporting requirements of 31 U.S.C. § 5322. The fact pattern describes multiple cash deposits (e.g., $9,053.82 on 2026-04-21 and $5,526.12 on 2026-04-17) that appear to be below the $10,000 reporting threshold, which is a common indicator of structuring to avoid triggering a Currency Transaction Report (CTR).\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account exhibited a high volume of cash activity, including a $55,261.24 cash deposit on 2026-04-17 and a $50,076.29 cash deposit on 2026-02-24. The total transaction count is 6 with a total volume of $372,620.08. The channel mix is heavily weighted toward cash (0.5) and card (0.333), with a single ACH transaction. The velocity is low with a max of 1 transaction in 24 hours and a 30-day average of 0.2. The highest amount z-score is 1.48, and the country risk is 0.0. A loop was detected in the transaction data. The observed volume is 3.66 times the declared monthly volume of $101,650.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 372620.08, \"channel_mix\": {\"wire\": 0.0, \"ach\": 0.167, \"cash\": 0.5, \"card\": 0.333}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.48, \"country_risk_max\": 0.0, \"loop_detected\": true, \"vs_declared_volume_ratio\": 3.66}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Sum the cash deposits in the investigation window and compare to the KYC declared monthly cash volume.\", \"answer\": \"The total cash deposits are $62,375.66, which is 61.4% of the declared monthly volume of $101,650.\", \"calculation\": \"1. Identify cash deposits: 2026-04-21 ($9,053.82), 2026-04-17 ($55,261.24), 2026-02-24 ($50,076.29), 2026-04-20 ($52,251.68).\\n2. Sum cash deposits: 9,053.82 + 55,261.24 + 50,076.29 + 52,251.68 = 166,643.03? Wait, rechecking: 9,053.82 + 55,261.24 = 64,315.06; 64,315.06 + 50,076.29 = 114,391.35; 114,391.35 + 52,251.68 = 166,643.03. But the passage lists 2026-04-21, 2026-04-17, 2026-02-24, 2026-04-20. However, the KYC declared monthly volume is $101,650. The sum of cash deposits is $166,643.03, which exceeds the declared volume.\\n3. Compare to KYC: 166,643.03 / 101,650 = 1.64x declared volume.\", \"evidence\": \"Transactions: 2026-04-21 (9053.82), 2026-04-17 (55261.24), 2026-02-24 (50076.29), 2026-04-20 (52251.68) are cash deposits.\"}], \"citation\": [{\"question\": \"What does pdfs/AS_World_Trading_Consent_Order_FINAL say about the activity described?\", \"answer\": \"The Los Angeles Fashion District GTO required any Covered Business that, in the course of its trade or business, received currency in excess of $3,000 in one transaction or two or more related transactions in a 24-hour period, to report such transactions electronically to FinCEN.\", \"evidence_span\": \"The Los Angeles Fashion District GTO required any Covered Business that, in the course of its trade or business, received currency in excess of $3,000 in one transaction or two or more related transactions in a 24-hour period, to report such transactions electronically to FinCEN.\"}]}, \"_regulatory_frame\": \"ctr_structuring\", \"_typology_inferred\": \"structuring\"}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account of SYN_dff57c0d exhibited a pattern of cash deposits that appear consistent with structuring to evade the $10,000 reporting threshold. Specifically, the entity conducted multiple cash deposits, including $55,261.24 on 2026-04-17 and $50,076.29 on 2026-02-24, which, when aggregated, total $166,643.03. This volume exceeds the declared monthly volume of $101,650. The activity is further characterized by a high channel mix of cash (0.5) and card (0.333), with a total transaction volume of $372,620.08. This conduct may fall within 31 U.S.C. § 5324 regarding the evasion of reporting requirements. The matter is referred for further human investigation.\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred"
+    ],
+    "v1_sar_is_suspicious": true,
+    "agreement_with_v1": true,
+    "v1_decision_target": null
+  },
+  "transactions": [
+    {
+      "amount": 9053.82,
+      "channel": "cash",
+      "counterparty": "Cash deposit, ATL Branch #58",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "one-time sub-CTR cash receipt (benign: customer paid in cash)"
+    },
+    {
+      "amount": 55261.24,
+      "channel": "cash",
+      "counterparty": "James Wilson",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 81509.11,
+      "channel": "ach",
+      "counterparty": "PU Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 50076.29,
+      "channel": "cash",
+      "counterparty": "Linda Taylor",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 90479.6,
+      "channel": "card",
+      "counterparty": "David Jackson",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 52251.68,
+      "channel": "cash",
+      "counterparty": "Elizabeth White",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 34359.94,
+      "channel": "card",
+      "counterparty": "Jennifer Brown",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dff57c0d",
+    "entity_type": "business",
+    "expected_monthly_volume": 101650.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$101,650.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/AS_World_Trading_Consent_Order_FINAL",
+      "url": "",
+      "text": "of Authority to Examine Nonfinancial Trades and\nBusinesses (April 21, 2015), available at https://www.irs.gov/irm/part4/irm_04-026-001, Ex. 4.26.1-3.\n9 31 C.F.R. §§ 1010.810(a), (d); Treasury Order 180-01 (July 1, 2014).\n10 In December of 2017, Campos dissolved A&S. Prior to the dissolution of A&S, Campos mainly relied\non his staff to oversee A&S’s business operations, financials, and its relationship with the company’s\nvendors and certified public accountant.\n11 31 U.S.C. § 5326(a); Treasury Order 180-01 (July 1, 2014).\n– 4 –\nOn September 26, 2014, FinCEN issued a GTO to certain trades and businesses\nlocated within the Los Angeles, California fashion district (referred to hereafter as the\n“Los Angeles Fashion District GTO”).12 The Los Angeles Fashion District GTO applied\nto certain specified types of “Covered Businesses,” including “perfume stores,” in a\n“Covered Geographic Area” that encompassed A&S’s Fine Fragrance location at 501\nEast Olympic Boulevard.13\nThe Los Angeles Fashion District GTO required any Covered Business that, in the\ncourse of its trade or business, received currency in excess of $3,000 in one transaction\nor two or more related transactions in a 24-hour period, to report such transactions\nelectronically to FinCEN.14 The Los Angeles Fashion District GTO was effective from\nOctober 9, 2014 through April 6, 2015.\nOn October 2, 2014, before the Los Angeles Fashion District GTO became\neffective, FinCEN and the Department of Justice issued press releases announc"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "at he repre-\nsented the investments as risk-free. He claimed the principal\nwould remain in the investors’ own accounts and was secured\nby real estate or promissory notes. Further, literature distrib-\nuted by Bush indicated that his investment had minimal risk\nand could produce up to a 300-percent yearly return. Accord-\ning to a letter soliciting new investments, investor funds\nwould be held “in trust” until the pool accumulated $1 mil-\nlion. At that point, the pooled funds would be transferred to\nWilcoxson or Mintus who would then place the money with\na “private merchant bank.” After investors sent money, Bush\nsent them a Hulaman Trust International Trust and Fiduciary\nAgreement, which catalogued investors’ funds under the reas-\nsuring heading “Assets Delivered in Trust.” Soon after Bush\nbegan to invest with Mintus, she failed to make her first pay-\nment due to Bush. Despite this, Bush testified that he\nremained confident about the viability of Mintus’s program\nand continued to place Hulaman-client money with her.\n  Bush recruited several individuals to assist him in promot-\ning Hulaman. Chief among them was his longtime marketing\npartner Marilyn March. Bush also tapped Larry and Vicki\nWebster to work as “financial planners” and promoters, pay-\ning them a percentage of any funds they raised. Bush hired\nMarch’s friend Tammy Stuckey to work as his administrative\nassistant. She was paid $1000 per week in cash. For his part,\nBush told investors that he lived an ascetic life and “"
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "makes relevant knowledge and expertise\naccessible and applicable to organisations. In most cases, membership includes the endorsement of\ncodes of conduct and commitment to transparent accountability.\n1. ORGANISATIONAL INTEGRITY\n102. NPOs are established and operate in accordance with a governing document, for example,\narticles of incorporation, a constitution, or bylaws that outline purposes, structure, reporting\npractices, and guidelines for complying with local laws. Members of the governing board understand\nand act in the interest of the organisation. The governing board maintains oversight over the\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\nRECOMMENDATION 8\n33\n© 2023 FATF/OECD\norganisation by establishing strong financial and human resource policies, meeting on a regular\nbasis, and actively monitoring activities.\n103. Large NPOs with a high-risk profile can design and implement policies, codes of conduct\naddressing CFT specifically. These measures can be regularly assessed by internal monitoring and\nevaluation mechanisms, which include independent auditing. In addition, requirements for\ndirectors, organisation of internal supervision, effective whistleblowing mechanisms and regularly\nscheduled self-evaluations could be beneficial.\n2. PARTNER AND DONOR RELATIONSHIPS\n104. NPOs could undertake a range of practical steps to be reasonably assured of the provenance\nof the funds given to them and verify information on those individuals a"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-STRUCTURING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all cash transactions for the entity in the prior 90 days.\n2. Identify sub-$10,000 cash deposits made within 14 days across multiple branches or distinct counterparties.\n3. Confirm the declared business purpose against observed cash run-rate.\n4. Aggregate per the BSA aggregation rule (single business day, same person).\n5. Escalate to SAR review if the pattern persists across ≥3 sub-CTR deposits."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.571,
+      "card": 0.286,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "ctr_structuring",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "structuring"
+  },
+  "typology_hypothesis": "structuring",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5324?",
+        "answer": "Yes, the conduct may fall within 31 U.S.C. § 5324 if the cash deposits were structured to evade the reporting requirements of 31 U.S.C. § 5322.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5324 prohibits structuring transactions to evade the reporting requirements of 31 U.S.C. § 5322. The fact pattern describes multiple cash deposits (e.g., $9,053.82 on 2026-04-21 and $5,526.12 on 2026-04-17) that appear to be below the $10,000 reporting threshold, which is a common indicator of structuring to avoid triggering a Currency Transaction Report (CTR)."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account exhibited a high volume of cash activity, including a $55,261.24 cash deposit on 2026-04-17 and a $50,076.29 cash deposit on 2026-02-24. The total transaction count is 6 with a total volume of $372,620.08. The channel mix is heavily weighted toward cash (0.5) and card (0.333), with a single ACH transaction. The velocity is low with a max of 1 transaction in 24 hours and a 30-day average of 0.2. The highest amount z-score is 1.48, and the country risk is 0.0. A loop was detected in the transaction data. The observed volume is 3.66 times the declared monthly volume of $101,650.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 372620.08,
+          "channel_mix": {
+            "wire": 0.0,
+            "ach": 0.167,
+            "cash": 0.5,
+            "card": 0.333
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.48,
+          "country_risk_max": 0.0,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 3.66
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Sum the cash deposits in the investigation window and compare to the KYC declared monthly cash volume.",
+        "answer": "The total cash deposits are $62,375.66, which is 61.4% of the declared monthly volume of $101,650.",
+        "calculation": "1. Identify cash deposits: 2026-04-21 ($9,053.82), 2026-04-17 ($55,261.24), 2026-02-24 ($50,076.29), 2026-04-20 ($52,251.68).\n2. Sum cash deposits: 9,053.82 + 55,261.24 + 50,076.29 + 52,251.68 = 166,643.03? Wait, rechecking: 9,053.82 + 55,261.24 = 64,315.06; 64,315.06 + 50,076.29 = 114,391.35; 114,391.35 + 52,251.68 = 166,643.03. But the passage lists 2026-04-21, 2026-04-17, 2026-02-24, 2026-04-20. However, the KYC declared monthly volume is $101,650. The sum of cash deposits is $166,643.03, which exceeds the declared volume.\n3. Compare to KYC: 166,643.03 / 101,650 = 1.64x declared volume.",
+        "evidence": "Transactions: 2026-04-21 (9053.82), 2026-04-17 (55261.24), 2026-02-24 (50076.29), 2026-04-20 (52251.68) are cash deposits."
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/AS_World_Trading_Consent_Order_FINAL say about the activity described?",
+        "answer": "The Los Angeles Fashion District GTO required any Covered Business that, in the course of its trade or business, received currency in excess of $3,000 in one transaction or two or more related transactions in a 24-hour period, to report such transactions electronically to FinCEN.",
+        "evidence_span": "The Los Angeles Fashion District GTO required any Covered Business that, in the course of its trade or business, received currency in excess of $3,000 in one transaction or two or more related transactions in a 24-hour period, to report such transactions electronically to FinCEN."
+      }
+    ]
+  }
+}

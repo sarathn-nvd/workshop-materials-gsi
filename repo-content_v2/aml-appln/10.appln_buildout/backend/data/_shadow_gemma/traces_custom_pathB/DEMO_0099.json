@@ -1,0 +1,331 @@
+{
+  "case_id": "DEMO_0099",
+  "alert_id": "ALT_2441750",
+  "entity_id": "SYN_0a761ae8",
+  "started_at": "2026-05-27T16:49:25.837764+00:00",
+  "finished_at": "2026-05-27T16:49:35.264529+00:00",
+  "wall_clock_ms": 9426.8,
+  "transactions": [
+    {
+      "amount": 3257.3,
+      "channel": "card",
+      "counterparty": "Christopher Miller",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    },
+    {
+      "amount": 950.71,
+      "channel": "cheque",
+      "counterparty": "LA Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 2209.79,
+      "channel": "ach",
+      "counterparty": "BXV Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1650.0,
+      "channel": "wire",
+      "counterparty": "YBIA Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 2715.98,
+      "channel": "card",
+      "counterparty": "Daniel Moore",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 2255.11,
+      "channel": "ach",
+      "counterparty": "TXKVB Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 1244.89,
+      "channel": "ach",
+      "counterparty": "PVG Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 1013.02,
+      "channel": "card",
+      "counterparty": "Michael Davis",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 1626.99,
+      "channel": "card",
+      "counterparty": "Christopher Anderson",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 3008.99,
+      "channel": "card",
+      "counterparty": "Sarah Thompson",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 2584.99,
+      "channel": "wire",
+      "counterparty": "XT Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 908.48,
+      "channel": "ach",
+      "counterparty": "LXZ Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 673.61,
+      "channel": "card",
+      "counterparty": "Michael Taylor",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 1275.57,
+      "channel": "ach",
+      "counterparty": "AR Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 2829.98,
+      "channel": "card",
+      "counterparty": "John Thompson",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 3037.86,
+      "channel": "card",
+      "counterparty": "Christopher White",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 1623.8,
+      "channel": "ach",
+      "counterparty": "MMS Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 1073.29,
+      "channel": "ach",
+      "counterparty": "FJT Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1340.83,
+      "channel": "ach",
+      "counterparty": "ABV Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 1235.98,
+      "channel": "card",
+      "counterparty": "Robert Smith",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 783.64,
+      "channel": "ach",
+      "counterparty": "UFH Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_0a761ae8",
+    "entity_type": "individual",
+    "expected_monthly_volume": 11536.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$11,536.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.429,
+      "ach": 0.429,
+      "wire": 0.095,
+      "cheque": 0.048
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'card': 0.42857142857142855, 'cheque': 0.047619047619047616, 'ach': 0.42857142857142855, 'wire': 0.09523809523809523})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 21 with a tx_total_usd of 37300.81. The channel_mix indicates a reliance on card transactions at 0.429, alongside ACH and wire transfers. Activity shows a velocity_24h_max of 2 and a limited network with unique_counterparties_7d of 2. The vs_declared_volume_ratio is 1.26, suggesting volume slightly above the expected profile. The presence of a loop_detected value of false and a low country_risk_max of 0.1 indicates no immediate red flags. This pattern of rapid movement and the observed volume ratio warrants further review.",
+      "metrics": {
+        "tx_count": 21,
+        "tx_total_usd": 37300.81,
+        "channel_mix": {
+          "card": 0.429,
+          "ach": 0.429,
+          "wire": 0.095,
+          "cheque": 0.048
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.7,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.26
+      },
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 41333.31",
+      "calculation": "1. Identify all transaction amounts from the [transactions] block: 3257.30, 950.71, 2209.79, 1650.00, 2715.98, 2255.11, 1244.89, 1013.02, 1626.99, 3008.99, 2584.99, 908.48, 673.61, 1275.57, 2829.98, 3037.86, 1623.80, 1073.29, 1340.83, 1235.98, 783.64. 2. Sum these values: 3257.30 + 950.71 + 2209.79 + 1650.00 + 2715.98 + 2255.11 + 1244.89 + 1013.02 + 1626.99 + 3008.99 + 2584.99 + 908.48 + 673.61 + 1275.57 + 2829.98 + 3037.86 + 1623.80 + 1073.29 + 1340.83 + 1235.98 + 783.64 = 41333.31.",
+      "evidence": "transactions[0..20].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_0a761ae8 executed 21 transactions totaling $37,300.81 USD with channel mix {\"card\": 0.429, \"ach\": 0.429, \"wire\": 0.095, \"cheque\": 0.048}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.26x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 21,
+          "tx_total_usd": 37300.81,
+          "channel_mix": {
+            "card": 0.429,
+            "ach": 0.429,
+            "wire": 0.095,
+            "cheque": 0.048
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.7,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.26
+        },
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 41333.31",
+        "calculation": "1. Identify all transaction amounts from the [transactions] block: 3257.30, 950.71, 2209.79, 1650.00, 2715.98, 2255.11, 1244.89, 1013.02, 1626.99, 3008.99, 2584.99, 908.48, 673.61, 1275.57, 2829.98, 3037.86, 1623.80, 1073.29, 1340.83, 1235.98, 783.64. 2. Sum these values: 3257.30 + 950.71 + 2209.79 + 1650.00 + 2715.98 + 2255.11 + 1244.89 + 1013.02 + 1626.99 + 3008.99 + 2584.99 + 908.48 + 673.61 + 1275.57 + 2829.98 + 3037.86 + 1623.80 + 1073.29 + 1340.83 + 1235.98 + 783.64 = 41333.31.",
+        "evidence": "transactions[0..20].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3257.3, \"channel\": \"card\", \"counterparty\": \"Christopher Miller\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}, {\"amount\": 950.71, \"channel\": \"cheque\", \"counterparty\": \"LA Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 2209.79, \"channel\": \"ach\", \"counterparty\": \"BXV Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1650.0, \"channel\": \"wire\", \"counterparty\": \"YBIA Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 2715.98, \"channel\": \"card\", \"counterparty\": \"Daniel Moore\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 2255.11, \"channel\": \"ach\", \"counterparty\": \"TXKVB Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 1244.89, \"channel\": \"ach\", \"counterparty\": \"PVG Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 1013.02, \"channel\": \"card\", \"counterparty\": \"Michael Davis\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 1626.99, \"channel\": \"card\", \"counterparty\": \"Christopher Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 3008.99, \"channel\": \"card\", \"counterparty\": \"Sarah Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 2584.99, \"channel\": \"wire\", \"counterparty\": \"XT Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 908.48, \"channel\": \"ach\", \"counterparty\": \"LXZ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 673.61, \"channel\": \"card\", \"counterparty\": \"Michael Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 1275.57, \"channel\": \"ach\", \"counterparty\": \"AR Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 2829.98, \"channel\": \"card\", \"counterparty\": \"John Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 3037.86, \"channel\": \"card\", \"counterparty\": \"Christopher White\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 1623.8, \"channel\": \"ach\", \"counterparty\": \"MMS Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 1073.29, \"channel\": \"ach\", \"counterparty\": \"FJT Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1340.83, \"channel\": \"ach\", \"counterparty\": \"ABV Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 1235.98, \"channel\": \"card\", \"counterparty\": \"Robert Smith\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 783.64, \"channel\": \"ach\", \"counterparty\": \"UFH Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_0a761ae8\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 11536.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$11,536.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_0a761ae8 executed 21 transactions totaling $37,300.81 USD with channel mix {\\\"card\\\": 0.429, \\\"ach\\\": 0.429, \\\"wire\\\": 0.095, \\\"cheque\\\": 0.048}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.26x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 21, \"tx_total_usd\": 37300.81, \"channel_mix\": {\"card\": 0.429, \"ach\": 0.429, \"wire\": 0.095, \"cheque\": 0.048}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.7, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.26}, \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 41333.31\", \"calculation\": \"1. Identify all transaction amounts from the [transactions] block: 3257.30, 950.71, 2209.79, 1650.00, 2715.98, 2255.11, 1244.89, 1013.02, 1626.99, 3008.99, 2584.99, 908.48, 673.61, 1275.57, 2829.98, 3037.86, 1623.80, 1073.29, 1340.83, 1235.98, 783.64. 2. Sum these values: 3257.30 + 950.71 + 2209.79 + 1650.00 + 2715.98 + 2255.11 + 1244.89 + 1013.02 + 1626.99 + 3008.99 + 2584.99 + 908.48 + 673.61 + 1275.57 + 2829.98 + 3037.86 + 1623.80 + 1073.29 + 1340.83 + 1235.98 + 783.64 = 41333.31.\", \"evidence\": \"transactions[0..20].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a volume spike, with 21 transactions totaling $37,300.81 between 2026-02-01 and 2026-04-19, representing a volume ratio of 1.26x against the declared monthly volume of $11,536. This activity triggered an alert for volume exceeding expectations. However, the transactions consist of small, varied payments via card, ACH, and wire to multiple counterparties (e.g., $3,257.30 to Christopher Miller on 2026-03-02 and $2,209.79 to BXV Logistics LLC on 2026-04-06), which is consistent with the profile of a salaried wage earner managing personal expenses. No sanctions hits or high-risk patterns were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a volume spike, with 21 transactions totaling $37,300.81 between 2026-02-01 and 2026-04-19, representing a volume ratio of 1.26x against the declared monthly volume of $11,536. This activity triggered an alert for volume exceeding expectations. However, the transactions consist of small, varied payments via card, ACH, and wire to multiple counterparties (e.g., $3,257.30 to Christopher Miller on 2026-03-02 and $2,209.79 to BXV Logistics LLC on 2026-04-06), which is consistent with the profile of a salaried wage earner managing personal expenses. No sanctions hits or high-risk patterns were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a volume spike, with 21 transactions totaling $37,300.81 between 2026-02-01 and 2026-04-19, representing a volume ratio of 1.26x against the declared monthly volume of $11,536. This activity triggered an alert for volume exceeding expectations. However, the transactions consist of small, varied payments via card, ACH, and wire to multiple counterparties (e.g., $3,257.30 to Christopher Miller on 2026-03-02 and $2,209.79 to BXV Logistics LLC on 2026-04-06), which is consistent with the profile of a salaried wage earner managing personal expenses. No sanctions hits or high-risk patterns were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

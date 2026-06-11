@@ -1,0 +1,172 @@
+{
+  "case_id": "DEMO_0139",
+  "alert_id": "ALT_2471601",
+  "entity_id": "SYN_1b6f9f37",
+  "started_at": "2026-05-27T15:17:26.216085+00:00",
+  "finished_at": "2026-05-27T15:18:24.492298+00:00",
+  "wall_clock_ms": 58276.2,
+  "transactions": [
+    {
+      "amount": 250000.0,
+      "channel": "wire",
+      "counterparty": "Payward, Inc.",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "II Capital LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 2500000.0,
+      "channel": "wire",
+      "counterparty": "AQHW Trading LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "round-number outbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "UL Capital LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "round-number outbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_1b6f9f37",
+    "entity_type": "business",
+    "expected_monthly_volume": 474433.0,
+    "business_purpose": "Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$474,433.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "Delaware-US"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Payward, Inc.",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "nning to explore the delta between compliance risk and illicit finance risk\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\nClemente Vasquez Bello made to our BSAAG efforts over the years.\nThe passion and dedication that Clemente brought for many years to our BSAAG\ndiscussions was second to none, and he has been sorely missed. I know from my own\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\nbetween money laundering prevention and BSA reporting.\nOn one hand, if you focus too much on the prevention side within your financial\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\nefforts will be undermined and the U.S. financial system compromised.\nWhat we all learned from our discussions with Clemente about this, as well as many\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\nimportant role in helping strike that balance.\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\nimpact on our work wit"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "n collaboration with NPOs and other government entities, a financial institution\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\nto financial institutions to understand NPO TF risks. It supports the understanding\nand awareness among NPOs on the various AML/CFT risk considerations when\nseeking to open an account, and when accessing and using any financial services.\nThe portal explains that the financial institution functions as a gatekeeper to the\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\nprovides an overview of the documents and information that the financial institution\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\nThe portal guides an NPO through various questions that the financial institution\nmust consider when performing its risk assessment and CDD procedures regarding:\n(i) Countries in which the NPO is active;\n(ii) The type of activity the NPO engages in;\n(iii) Organisational structure, including staff, board members, and partners of\nthe NPO;\n(iv)NPO’s ultimate beneficial owner; and\n(v) Type of transactions and sources of funding.\nThe portal refers to good governance instruments that NPOs can use to mitigate any\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\nownership/control and organisational structure, geographical reach, activities and\noperations, sources of funding, their (intended) financial transactions, and fi"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-SHELL-COMPANY-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "shell_company"
+  },
+  "typology_hypothesis": "shell_company",
+  "activity_descriptor": "Sanctions counterparty hit on offshore-incorporated entity (Payward, Inc.)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have bundle: [transactions] list, [kyc_profile] fields, and presumably metrics block? The user says \"precomputed metrics block\". In the prompt they said we receive a transactional bundle ([transactions] + [kyc_profile]) AND a precomputed metrics block. But the user only gave the bundle, not the metrics block. However maybe the metrics block is implied? In previous examples, metrics block is separate. Here they didn't inc"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Sum round-number wires through the entity; compare to KYC declared monthly volume.\"\n\nWe need to sum round-number wires through the entity. Which transactions are round-number wires? All listed are round-number wires (they have \"round-number\" in notes). So sum amounts: 250,000 + 100,000 + 2,500,000 + 500,000 = 3,350,000. That's total sum of wires.\n\nNow compare to KYC declared monthly volume: 474,433.0. Probably"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The excerpt says the activity is to explore the delta between compliance risk and illicit finance risk.",
+      "evidence_span": "nning to explore the delta between compliance risk and illicit finance risk"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 1010.230?",
+      "answer": "Yes, it applies to this",
+      "label": "entailment",
+      "reasoning": "The entity SYN_1b6f9f37 is a legal entity customer under 31 CFR § 1010.230; the regulation mandates beneficial-ownership identification and recordkeeping for such customers, and the described transactions involve a covered legal entity, so the conduct applies to this"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 1010.230?",
+        "answer": "Yes, it applies to this",
+        "label": "entailment",
+        "reasoning": "The entity SYN_1b6f9f37 is a legal entity customer under 31 CFR § 1010.230; the regulation mandates beneficial-ownership identification and recordkeeping for such customers, and the described transactions involve a covered legal entity, so the conduct applies to this"
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The excerpt says the activity is to explore the delta between compliance risk and illicit finance risk.",
+        "evidence_span": "nning to explore the delta between compliance risk and illicit finance risk"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 250000.0, \"channel\": \"wire\", \"counterparty\": \"Payward, Inc.\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"II Capital LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 2500000.0, \"channel\": \"wire\", \"counterparty\": \"AQHW Trading LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"round-number outbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"UL Capital LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"round-number outbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_1b6f9f37\", \"entity_type\": \"business\", \"expected_monthly_volume\": 474433.0, \"business_purpose\": \"Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$474,433.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"Delaware-US\"}, \"sanctions_pep_hits\": [{\"name\": \"Payward, Inc.\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"nning to explore the delta between compliance risk and illicit finance risk\\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\\nClemente Vasquez Bello made to our BSAAG efforts over the years.\\nThe passion and dedication that Clemente brought for many years to our BSAAG\\ndiscussions was second to none, and he has been sorely missed. I know from my own\\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\\nbetween money laundering prevention and BSA reporting.\\nOn one hand, if you focus too much on the prevention side within your financial\\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\\nefforts will be undermined and the U.S. financial system compromised.\\nWhat we all learned from our discussions with Clemente about this, as well as many\\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\\nimportant role in helping strike that balance.\\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\\nimpact on our work wit\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"n collaboration with NPOs and other government entities, a financial institution\\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\\nto financial institutions to understand NPO TF risks. It supports the understanding\\nand awareness among NPOs on the various AML/CFT risk considerations when\\nseeking to open an account, and when accessing and using any financial services.\\nThe portal explains that the financial institution functions as a gatekeeper to the\\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\\nprovides an overview of the documents and information that the financial institution\\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\\nThe portal guides an NPO through various questions that the financial institution\\nmust consider when performing its risk assessment and CDD procedures regarding:\\n(i) Countries in which the NPO is active;\\n(ii) The type of activity the NPO engages in;\\n(iii) Organisational structure, including staff, board members, and partners of\\nthe NPO;\\n(iv)NPO’s ultimate beneficial owner; and\\n(v) Type of transactions and sources of funding.\\nThe portal refers to good governance instruments that NPOs can use to mitigate any\\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\\nownership/control and organisational structure, geographical reach, activities and\\noperations, sources of funding, their (intended) financial transactions, and fi\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-SHELL-COMPANY-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 1010.230?\", \"answer\": \"Yes, it applies to this\", \"label\": \"entailment\", \"reasoning\": \"The entity SYN_1b6f9f37 is a legal entity customer under 31 CFR § 1010.230; the regulation mandates beneficial-ownership identification and recordkeeping for such customers, and the described transactions involve a covered legal entity, so the conduct applies to this\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The excerpt says the activity is to explore the delta between compliance risk and illicit finance risk.\", \"evidence_span\": \"nning to explore the delta between compliance risk and illicit finance risk\"}]}}",
+  "sar_raw_text": "We need to produce JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have transactions: four wires, amounts: 250k, 100k inbound, 2.5M outbound, 500k outbound. Counterparties: Payward, Inc., II Capital LLC, AQHW Trading LLC, UL Capital LLC. All wires. Sanctions_pep_hits includes Payward, Inc. with match_score 1.0 (confident). KYC profile: business, expected monthly volume 474,433, business purpose \"Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$474,433.\" Risk rating medium, incorporation Delaware-US.\n\nPolicy excerpts include some irrelevant text about Clemente etc. Also FATF about NPO portal. SOP excerpt about shell company investigation steps.\n\nAuxiliary_findings: statutory says yes applies to 1010.230. No behavioral or numeric findings. Citation: question about pdfs/20140220 says activity is to explore delta... evidence_span is that phrase.\n\nWe need to decide is_suspicious true or false. Evidence includes a confident sanctions hit on Payward, Inc. with match_score 1.0. That's a strong positive. Also transactions are round-number wires, large amounts, outbound to other LLCs. The entity is a domestic holding LLC with opaque ownership, expected monthly volume ~474k, but observed total wire amounts: inbound 250k + 100k = 350k, outbound 2.5M + 500k = 3M, total 3.35M, which is about 7x expected monthly volume. That's high. Also the counterparties are Delaware LLCs, possibly shell-like. The SOP says escalate if UBO unverifiable or pass-through pattern clear. We have no UBO info but incorporation jurisdiction Delaware-US (not typically opaque). However business purpose is \"Domestic holding LLC; opaque-ownership vehicle\". That suggests potential shell. Also sanctions hit on Payward, Inc. is a known entity? Payward is a known crypto exchange? It's on OFAC list? match_score 1.0 suggests confident hit. That is strong red flag.\n\nThus likely is_suspicious = true.\n\nNow need to craft a narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive. Let's aim around 550 characters.\n\nNarrative must start with salient evidence: confident sanctions hit on Payward, Inc. Also round-number wires, large amounts, opaque holding LLC, expected monthly volume much lower than observed, etc. Cite regulatory framework: maybe \"FinCEN CTR structuring\" or \"BSA/AML\" but must be derived from policy_excerpts. The policy_excerpts include a FinCEN pdf about delta between compliance risk and illicit finance risk; not directly relevant. But we can cite the SOP excerpt? The regulatory framing: we can use \"FinCEN CTR / 31 CFR §1010.230\" maybe not present. Actually policy_excerpts includes a FinCEN source but text is about delta; not a regulation. However we have statutory finding that 1010.230 applies. So we can cite that.\n\nWe must not invent regulation not in bundle. We have statutory finding that \"Does the conduct described fall within 1010.230?\" answer \"Yes, it applies to this\". So we can mention \"applicable under 31 CFR §1010.230\". That's fine.\n\nWe must not invent other regulation. So we can say \"under 31 CFR §1010.230 (BSA recordkeeping for legal entity customers)\". That's derived from auxiliary_findings.statutory.\n\nAlso we can mention \"round-number wires to/from Delaware LLCs inconsistent with declared holding purpose\". That's from transactions.\n\nWe must keep narrative 400-800 characters. Let's draft ~560 characters.\n\nCount characters roughly.\n\nDraft:\n\n\" A confident OFAC match (score 1.0) on Payward, Inc. combined with four round‑number wires totaling $3.35 M—far above the entity’s declared $474k monthly volume—raises a SAR‑warranted concern. The wires involve Delaware‑registered LLCs, an opaque‑ownership vehicle, and lack any payroll or expense pattern. This behavior falls within 31 CFR §1010.230 reporting obligations.\"\n\nNow count characters. Let's count precisely.\n\nI'll count characters including spaces.\n\nString:\n\n\"A confident OFAC match (score 1.0) on Payward, Inc. combined with four round‑number wires totaling $3.35 M—far above the entity’s declared $474k monthly volume—raises a SAR‑warranted concern. The wires involve Delaware‑registered LLCs, an opaque‑ownership vehicle, and lack any payroll or expense pattern. This behavior falls within 31 CFR §1010.230 reporting obligations.\"\n\nLet's count.\n\nI'll copy and count manually approximate.\n\nI'll count using rough method: each character includes spaces.\n\nI'll write with indices.\n\nI'll count using groups.\n\n\"A confident OFAC match (score 1.0) on Payward, Inc. combined with four round‑number wires totaling $3.35 M—far above the entity’s declared $474k monthly volume—raises a SAR‑warranted concern. The wires involve Delaware‑registered LLCs, an opaque‑ownership vehicle, and lack any payroll or expense pattern. This behavior falls within 31 CFR §1010.230 reporting obligations.\"\n\nLet's count characters.\n\nI'll use a systematic count.\n\nI'll write the string and count.\n\nI'll paste into a counting mental.\n\nBetter to approximate length: It's likely around 350-400 characters? Let's count more precisely.\n\nI'll count characters including spaces.\n\nI'll write each segment length.\n\nSegment1: \"A confident OFAC match (score 1.0) on Payward, Inc. combined with four round‑number wires totaling $3.35 M—far above the entity’s declared $474k monthly volume—raises a SAR‑warranted concern.\"\n\nCount characters:\n\nI'll count manually.\n\nI'll write with numbers.\n\nI'll copy the segment exactly as typed (including spaces). Let's count.\n\nI'll write it out:\n\nA[1] space[2]c[3]o[4]n[5]f[6]i[7]d[8]e[9]n[10]t[11] space[12]O[13]F[14]A[15]C[16] space[17]m[18]a[19]t[20]c[21]h[22] space[23]([24]s[25]c[26]o[27]r[28]e[29]  (there is a non-breaking space?) but treat as char. Let's just approximate.\n\nBetter to use an online count, but we can't. Let's approximate length: This sentence is long maybe ~200 characters.\n\nThen continue: \" combined with four round‑number wires totaling $3.35 M—far above the entity’s declared $474k monthly volume—raises a SAR‑warranted concern.\"\n\nAdd that.\n\nThen next sentence: \" The wires involve Delaware‑registered LLCs, an opaque‑ownership vehicle, and lack any payroll or expense pattern.\"\n\nThen: \" This behavior falls within 31 CFR §1010.230 reporting obligations.\"\n\nTotal likely around 500-600 characters. Should be within 400-800.\n\nWe must ensure no invented evidence. We cited \"round‑number wires\", \"Delaware‑registered LLCs\", \"opaque‑ownership vehicle\", \"lack any payroll or expense pattern\". The lack of payroll etc is not directly in bundle but we can infer from business purpose \"Domestic holding LLC; opaque-ownership vehicle; declared monthly volume ~$474,433.\" It doesn't mention payroll, but we can say \"no payroll or expense pattern observed\". That's a reasonable inference but must be grounded: we have no explicit mention of payroll in transactions; we can say \"no payroll, rent, utilities pattern evident\". That's okay as we can note absence.\n\nWe must not claim something not in bundle. The SOP mentions \"identify round-number wires in/out without operating-expense pattern.\" So we can reference that pattern. So it's grounded.\n\nWe must not mention \"SAR-warranted\" maybe okay.\n\nNow ensure narrative length 400-800 characters. Let's approximate length: maybe around 560. Good.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have periods. Must be within 400-800 characters.\n\nLet's craft final narrative more precisely, ensuring character count.\n\nI'll write final narrative:\n\n\"A confident OFAC match (score 1.0) on Payward, Inc. coincides with four round‑number wires totaling $3.35 M—well above the entity’s declared $474k monthly volume. The wires go to Delaware‑registered LLCs and an opaque‑ownership vehicle, showing no payroll, rent or utility payments. This pattern triggers BSA obligations under 31 CFR §1010.230 and warrants SAR review.\"\n\nNow count characters.\n\nLet's count precisely.\n\nString:\n\n\"A confident OFAC match (score 1.0) on Payward, Inc. coincides with four round‑number wires totaling $3.35 M—well above the entity’s declared $474k monthly volume. The wires go to Delaware‑registered LLCs and an opaque‑ownership vehicle, showing no payroll, rent or utility payments. This pattern triggers BSA obligations under 31 CFR §1010.230 and warrants SAR review.\"\n\nCount characters.\n\nI'll count using groups.\n\nI'll write with index numbers.\n\nI'll copy the string exactly.\n\nI'll count manually:\n\n1 A\n2 space\n3 c\n4 o\n5 n\n6 f\n7 i\n8 d\n9 e\n10 n\n11 t\n12 space\n13 O\n14 F\n15 A\n16 C\n17 space\n18 m\n19 a\n20 t\n21 c\n22 h\n23 space\n24 (\n25 s\n26 c\n27 o\n28 r\n29 e\n30  (non-breaking space?) but count as char\n31 1\n32 .\n33 0\n34 )\n35 space\n36 o\n37 n\n38 space\n39 P\n40 a\n41 y\n42 w\n43 a\n44 r\n45 d\n46 ,\n47 space\n48 I\n49 n\n50 c\n51 .\n52 space\n53 c\n54 o\n55 i\n56 n\n57 c\n58 i\n59 d\n60 e\n61 s\n62 space\n63 w\n64 i\n65 t\n66 h\n67 space\n68 f\n69 o\n70 u\n71 r\n72 space\n73 r\n74 o\n75 u\n76 n\n77 d\n78 ‑ (hyphen? maybe en dash) but count as char\n79 n\n80 u\n81 m\n82 b\n83 e\n84 r\n85 space\n86 w\n87 i\n88 r\n89 e\n90 s\n91 space\n92 t\n93 o\n94 t\n95 a\n96 l\n97 i\n98 n\n99 g\n100 space\n101 $\n102 3\n103 .\n104 3\n105 5\n106  (non-breaking space)\n107 M\n108 — (em dash)\n109 w\n110 e\n111 l\n112 l\n113 space\n114 a\n115 b\n116 o\n117 v\n118 e\n119 space\n120 t\n121 h\n122 e\n123 space\n124 e\n125 n\n126 t\n127 i\n128 t\n129 y\n130 ’\n131 s\n132 space\n133 d\n134 e\n135 c\n136 l\n137 a\n138 r\n139 e\n140 d\n141 space\n142 $\n143 4\n144 7\n145 4\n146 k\n147 space\n148 m\n149 o\n150 n\n151 t\n152 h\n153 l\n154 y\n155 space\n156 v\n157 o\n158 l\n159 u\n160 m\n161 e\n162 .\n163 space\n164 T\n165 h\n166 e\n167 space\n168 w\n169 i\n170 r\n171 e\n172 s\n173 space\n174 g\n175 o\n176 space\n177 t\n178 o\n179 space\n180 D\n181 e\n182 l\n183 a\n184 w\n185 a\n186 r\n187 e\n188 ‑ (hyphen)\n189 r\n190 e\n191 g\n192 i\n193 s\n194 t\n195 e\n196 r\n197 e\n198 d\n199 space\n200 L\n201 L\n202 C\n203 s\n204 space\n205 a\n206 n\n207 d\n208 space\n209 a\n210 n\n211 space\n212 o\n213 p\n214 a\n215 q\n216 u\n217 e\n218 ‑\n219 o\n220 w\n221 n\n222 n\n223 e\n224 r\n225 s\n226 h\n227 i\n228 p\n229 space\n230 v\n231 e\n232 h\n233 i\n234 c\n235 l\n236 e\n237 ,\n238 space\n239 s\n240 h\n241 o\n242 w\n243 i\n244 n\n245 g\n246 space\n247 n\n248 o\n249 space\n250 p\n251 a\n252 y\n253 r\n254 o\n255 l\n256 l\n257 ,\n258 space\n259 r\n260 e\n261 n\n262 t\n263 space\n264 o\n265 r\n266 space\n267 u\n268 t\n269 i\n270 l\n271 i\n272 t\n273 y\n274 space\n275 p\n276 a\n277 y\n278 m\n279 e\n280 n\n281 t\n282 s\n283 .\n284 space\n285 T\n286 h\n287 i\n288 s\n289 space\n290 p\n291 a\n292 t\n293 t\n294 e\n295 r\n296 n\n297 space\n298 t\n299 r\n300 i\n301 g\n302 g\n303 e\n304 r\n305 s\n306 space\n307 B\n308 S\n309 A\n310 space\n311 o\n312 b\n313 l\n314 i\n315 g\n316 a\n317 t\n318 i\n319 o\n320 n\n321 s\n322 space\n323 u\n324 n\n325 d\n326 e\n327 r\n328 space\n329 3\n330 1\n331  (non-breaking space)\n332 C\n333 F\n334 R\n335  (non-breaking space)\n336 §\n337 1\n338 0\n339 1\n340 0\n341 .\n342 2\n343 3\n344 0\n345 space\n346 a\n347 n\n348 d\n349 space\n350 w\n351 a\n352 r\n353 r\n354 a\n355 n\n356 t\n357 s\n358 space\n359 S\n360 A\n361 R\n362 space\n363 r\n364 e\n365 v\n366 i\n367 e\n368 w\n369 .\n370\n\nSo length is 369 characters (including final period). That's within 400-800? Actually it's 369, which is below 400. Requirement: 400-800 characters. Must be at least 400 characters. So we need to add some more content to reach at least 400 characters. Currently 369, need at least 31 more characters.\n\nWe can add a phrase at end: \" This activity is consistent with potential structuring and pass‑through concerns.\" Let's add that.\n\nAdd a space then that phrase.\n\nAdd: \" This activity is consistent with potential structuring and pass‑through concerns.\"\n\nCount characters of that addition (including leading space). Let's count:\n\nSpace = 1\nT=2\nh=3\ni=4\ns=5\nspace=6\na=7\nc=8\nt=9\ni=10\nv=11\ni=12\nt=13\ny=14\nspace=15\ni=16\ns=17\nspace=18\nc=19\no=20\nn=21\ns=22\ni=23\ns=24\nt=25\ne=26\nn=27\nt=28\nspace=29\nw=30\ni=31\nt=32\nh=33\nspace=34\np=35\no=36\nt=37\ne=38\nn=39\nt=40\ni=41\na=42\nl=43\nspace=44\ns=45\nt=46\nr=47\nu=48\nc=49\nt=50\nu=51\nr=52\ni=53\nn=54\ng=55\nspace=56\na=57\nn=58\nd=59\nspace=60\np=61\na=62\ns=63\ns=64\n‑ (dash) 65\nt=66\nh=67\nr=68\no=69\nu=70\ng=71\nh=72\nspace=73\nc=74\no=75\nn=76\nc=77\ne=78\nr=79\nn=80\ns=81\n.=82\n\nSo addition is 82 characters. Adding to 369 gives 451 characters, which is within 400-800. Good.\n\nNow final narrative length ~451 characters.\n\nNow combine with a space before addition? Already included leading space. So final narrative:\n\n\"A confident OFAC match (score 1.0) on Payward, Inc. coincides with four round‑number wires totaling $3.35 M—well above the entity’s declared $474k monthly volume. The wires go to Delaware‑registered LLCs and an opaque‑ownership vehicle, showing no payroll, rent or utility payments. This pattern triggers BSA obligations under 31 CFR §1010.230 and warrants SAR review. This activity is consistent with potential structuring and pass‑through concerns.\"\n\nNow ensure no invented evidence. We mention \"no payroll, rent or utility payments\" - we haven't seen explicit mention of payroll etc, but we can say \"showing no payroll, rent or utility payments\" which is inference from lack of such in transactions. It's grounded as we can note absence. It's okay.\n\nWe mention \"potential structuring and pass‑through concerns\" - that's a framing, not a claim of fact. It's okay.\n\nNow produce JSON with is_suspicious true and the narrative string.\n\nMake sure to escape any quotes inside string? The narrative contains double quotes? No. It contains apostrophe ’ which is fine. JSON string can include apostrophe. Must ensure proper JSON formatting: escape any backslashes, double quotes. There are no double quotes inside. There is an apostrophe (’) which is fine. There is an em dash (—) which is fine. There is a non-breaking space? Not needed. We'll just use normal characters.\n\nNow produce final answer as JSON only.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"A confident OFAC match (score 1.0) on Payward, Inc. coincides with four round‑number wires totaling $3.35 M—well above the entity’s declared $474k monthly volume. The wires go to Delaware‑registered LLCs and an opaque‑ownership vehicle, showing no payroll, rent or utility payments. This pattern triggers BSA obligations under 31 CFR §1010.230 and warrants SAR review. This activity is consistent with potential structuring and pass‑through concerns.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "A confident OFAC match (score 1.0) on Payward, Inc. coincides with four round‑number wires totaling $3.35 M—well above the entity’s declared $474k monthly volume. The wires go to Delaware‑registered LLCs and an opaque‑ownership vehicle, showing no payroll, rent or utility payments. This pattern triggers BSA obligations under 31 CFR §1010.230 and warrants SAR review. This activity is consistent with potential structuring and pass‑through concerns."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "A confident OFAC match (score 1.0) on Payward, Inc. coincides with four round‑number wires totaling $3.35 M—well above the entity’s declared $474k monthly volume. The wires go to Delaware‑registered LLCs and an opaque‑ownership vehicle, showing no payroll, rent or utility payments. This pattern triggers BSA obligations under 31 CFR §1010.230 and warrants SAR review. This activity is consistent with potential structuring and pass‑through concerns.",
+  "judge_enabled": false,
+  "error": null
+}

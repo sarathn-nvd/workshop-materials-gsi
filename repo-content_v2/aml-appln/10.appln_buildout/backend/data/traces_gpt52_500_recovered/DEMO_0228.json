@@ -1,0 +1,216 @@
+{
+  "case_id": "DEMO_0228",
+  "alert_id": "ALT_4823498",
+  "entity_id": "SYN_1d273e51",
+  "started_at": "2026-05-31T06:07:39.808083+00:00",
+  "finished_at": "2026-05-31T06:07:45.309030+00:00",
+  "wall_clock_ms": 5501.0,
+  "transactions": [
+    {
+      "amount": 1102.23,
+      "channel": "wire",
+      "counterparty": "Linda Lewis (family, abroad)",
+      "currency": "USD",
+      "date": "2026-03-25",
+      "notes": "remittance to family (benign: documented diaspora support)"
+    },
+    {
+      "amount": 9600.78,
+      "channel": "card",
+      "counterparty": "Maria Garcia",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 10656.43,
+      "channel": "ach",
+      "counterparty": "UM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 11307.55,
+      "channel": "card",
+      "counterparty": "James Martin",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 5998.86,
+      "channel": "ach",
+      "counterparty": "XRMGA Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-25",
+      "notes": ""
+    },
+    {
+      "amount": 11937.55,
+      "channel": "wire",
+      "counterparty": "YUB Services LLC",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 12702.57,
+      "channel": "wire",
+      "counterparty": "ZHMCE Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-13",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_1d273e51",
+    "entity_type": "individual",
+    "expected_monthly_volume": 13750.0,
+    "business_purpose": "Self-employed proprietor; small-business cash flow; expected monthly throughput ~$13,750.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.4286,
+      "card": 0.2857,
+      "ach": 0.2857
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'card': 0.2857142857142857, 'ach': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_1d273e51 executed 7 transactions totaling $63,305.97 USD with channel mix {\"wire\": 0.429, \"card\": 0.286, \"ach\": 0.286}. The 24-hour velocity peak is 2 against a 30-day average of 0.23. Volume vs declared monthly is 2.61x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 63305.97,
+        "channel_mix": {
+          "wire": 0.429,
+          "card": 0.286,
+          "ach": 0.286
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 2.08,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.61
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 63206.0",
+      "calculation": "1) Sum all transaction amounts in transactions[0..6]: 1,102.23 + 9,600.78 + 10,656.43 + 11,307.55 + 5,998.86 + 11,937.55 + 12,702.57 = 63,306.0.\n2) KYC declared expected_monthly_volume from kyc_profile.expected_monthly_volume = 13,750.0.\n3) Compute multiple vs KYC: 63,306.0 / 13,750.0 = 4.6048 ≈ 4.60.\n4) Final computed total transaction volume = 63,306.0.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim evidence citation from the supplied input.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided (no cited U.S.C./CFR section), so there are no statutory elements to compare against the fact pattern. Because no section (e.g., 31 U.S.C. § 5324) is available to analyze, applicability cannot be determined from the facts. Contiguous phrase from answer: \"no statute provided\"."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_1d273e51 executed 7 transactions totaling $63,305.97 USD with channel mix {\"wire\": 0.429, \"card\": 0.286, \"ach\": 0.286}. The 24-hour velocity peak is 2 against a 30-day average of 0.23. Volume vs declared monthly is 2.61x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 63305.97,
+          "channel_mix": {
+            "wire": 0.429,
+            "card": 0.286,
+            "ach": 0.286
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 2.08,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.61
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 63206.0",
+        "calculation": "1) Sum all transaction amounts in transactions[0..6]: 1,102.23 + 9,600.78 + 10,656.43 + 11,307.55 + 5,998.86 + 11,937.55 + 12,702.57 = 63,306.0.\n2) KYC declared expected_monthly_volume from kyc_profile.expected_monthly_volume = 13,750.0.\n3) Compute multiple vs KYC: 63,306.0 / 13,750.0 = 4.6048 ≈ 4.60.\n4) Final computed total transaction volume = 63,306.0.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim evidence citation from the supplied input.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided (no cited U.S.C./CFR section), so there are no statutory elements to compare against the fact pattern. Because no section (e.g., 31 U.S.C. § 5324) is available to analyze, applicability cannot be determined from the facts. Contiguous phrase from answer: \"no statute provided\"."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1102.23, \"channel\": \"wire\", \"counterparty\": \"Linda Lewis (family, abroad)\", \"currency\": \"USD\", \"date\": \"2026-03-25\", \"notes\": \"remittance to family (benign: documented diaspora support)\"}, {\"amount\": 9600.78, \"channel\": \"card\", \"counterparty\": \"Maria Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 10656.43, \"channel\": \"ach\", \"counterparty\": \"UM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 11307.55, \"channel\": \"card\", \"counterparty\": \"James Martin\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 5998.86, \"channel\": \"ach\", \"counterparty\": \"XRMGA Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-25\", \"notes\": \"\"}, {\"amount\": 11937.55, \"channel\": \"wire\", \"counterparty\": \"YUB Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 12702.57, \"channel\": \"wire\", \"counterparty\": \"ZHMCE Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-13\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_1d273e51\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 13750.0, \"business_purpose\": \"Self-employed proprietor; small-business cash flow; expected monthly throughput ~$13,750.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_1d273e51 executed 7 transactions totaling $63,305.97 USD with channel mix {\\\"wire\\\": 0.429, \\\"card\\\": 0.286, \\\"ach\\\": 0.286}. The 24-hour velocity peak is 2 against a 30-day average of 0.23. Volume vs declared monthly is 2.61x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 63305.97, \"channel_mix\": {\"wire\": 0.429, \"card\": 0.286, \"ach\": 0.286}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 2.08, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.61}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 63206.0\", \"calculation\": \"1) Sum all transaction amounts in transactions[0..6]: 1,102.23 + 9,600.78 + 10,656.43 + 11,307.55 + 5,998.86 + 11,937.55 + 12,702.57 = 63,306.0.\\n2) KYC declared expected_monthly_volume from kyc_profile.expected_monthly_volume = 13,750.0.\\n3) Compute multiple vs KYC: 63,306.0 / 13,750.0 = 4.6048 \\u2248 4.60.\\n4) Final computed total transaction volume = 63,306.0.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a verbatim evidence citation from the supplied input.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"Neutral: no statute provided, so statutory applicability cannot be determined.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided (no cited U.S.C./CFR section), so there are no statutory elements to compare against the fact pattern. Because no section (e.g., 31 U.S.C. \\u00a7 5324) is available to analyze, applicability cannot be determined from the facts. Contiguous phrase from answer: \\\"no statute provided\\\".\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_1d273e51 (individual; expected monthly throughput $13,750) conducted 7 non-cash transactions totaling $63,305.97 between 2026-02-13 and 2026-04-07, including wires of $12,702.57 to ZHMCE Trading LLC (02-13) and $11,937.55 to YUB Services LLC (02-15), plus ACH/card payments >$9K. Behavioral finding shows volume vs declared monthly at 2.61x and 24h velocity peak of 2 vs 30-day avg 0.23, suggesting atypical throughput inconsistent with stated small-business cash flow. No sanctions/PEP hits and no policy/statute excerpts were provided to cite; activity nonetheless warrants SAR consideration pending investigator review.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_1d273e51 (individual; expected monthly throughput $13,750) conducted 7 non-cash transactions totaling $63,305.97 between 2026-02-13 and 2026-04-07, including wires of $12,702.57 to ZHMCE Trading LLC (02-13) and $11,937.55 to YUB Services LLC (02-15), plus ACH/card payments >$9K. Behavioral finding shows volume vs declared monthly at 2.61x and 24h velocity peak of 2 vs 30-day avg 0.23, suggesting atypical throughput inconsistent with stated small-business cash flow. No sanctions/PEP hits and no policy/statute excerpts were provided to cite; activity nonetheless warrants SAR consideration pending investigator review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_1d273e51 (individual; expected monthly throughput $13,750) conducted 7 non-cash transactions totaling $63,305.97 between 2026-02-13 and 2026-04-07, including wires of $12,702.57 to ZHMCE Trading LLC (02-13) and $11,937.55 to YUB Services LLC (02-15), plus ACH/card payments >$9K. Behavioral finding shows volume vs declared monthly at 2.61x and 24h velocity peak of 2 vs 30-day avg 0.23, suggesting atypical throughput inconsistent with stated small-business cash flow. No sanctions/PEP hits and no policy/statute excerpts were provided to cite; activity nonetheless warrants SAR consideration pending investigator review.",
+  "judge_enabled": false,
+  "error": null
+}

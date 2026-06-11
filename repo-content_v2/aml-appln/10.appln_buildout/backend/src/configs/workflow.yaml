@@ -1,0 +1,394 @@
+general:
+  use_uvloop: true
+  front_end:
+    _type: fastapi
+    host: ${NAT_AML_HOST:-0.0.0.0}
+    port: ${NAT_AML_PORT:-8000}
+    workflow:
+      method: POST
+      path: /api/investigation/run
+      description: "Default workflow entry \u2014 reasoning_agent \u2192 orchestrator \u2192 SAR."
+    cors:
+      allow_origins:
+      - '*'
+      allow_methods:
+      - GET
+      - POST
+      - OPTIONS
+      allow_headers:
+      - '*'
+      allow_credentials: true
+    endpoints:
+    - path: /api/investigation/{case_id}
+      method: GET
+      function_name: get_trace
+      description: Retrieve persisted case trace (NAT 1.5 GET path-param bug — prefer POST below)
+    - path: /api/investigation/get
+      method: POST
+      function_name: get_trace
+      description: Retrieve persisted case trace (POST workaround for NAT 1.5)
+    - path: /api/alerts
+      method: GET
+      function_name: list_alerts
+      description: List alerts from the demo manifest.
+    - path: /api/alerts/stats
+      method: GET
+      function_name: alerts_stats
+      description: Summary counts for the alert queue.
+    - path: /api/alerts/{alert_id}/disposition
+      method: POST
+      function_name: post_disposition
+      description: Record an analyst disposition for an alert.
+    - path: /api/alerts/{alert_id}
+      method: GET
+      function_name: get_alert
+      description: Fetch one alert with snippets and trace.
+    - path: /api/alerts/get
+      method: POST
+      function_name: get_alert
+      description: Fetch one alert (POST workaround for NAT 1.5 GET path-param bug).
+    - path: /api/entities
+      method: GET
+      function_name: list_entities
+      description: Search KYC entities.
+    - path: /api/entities/{entity_id}
+      method: GET
+      function_name: get_entity
+      description: Full entity 360 profile.
+    - path: /api/entities/get
+      method: POST
+      function_name: get_entity
+      description: Entity 360 profile (POST workaround).
+    - path: /api/entities/{entity_id}/transactions
+      method: GET
+      function_name: get_entity_tx
+      description: Paginated transaction history for one entity.
+    - path: /api/entities/transactions
+      method: POST
+      function_name: get_entity_tx
+      description: Entity transactions (POST workaround).
+    - path: /api/entities/{entity_id}/behavioral_summary
+      method: GET
+      function_name: get_entity_behavioral
+      description: Deterministic behavioral metrics for one entity.
+    - path: /api/entities/behavioral_summary
+      method: POST
+      function_name: get_entity_behavioral
+      description: Behavioral metrics (POST workaround).
+    - path: /api/entities/{entity_id}/risk_score
+      method: GET
+      function_name: get_entity_risk
+      description: Derived 0-100 risk score for one entity.
+    - path: /api/entities/risk_score
+      method: POST
+      function_name: get_entity_risk
+      description: Entity risk score (POST workaround).
+    - path: /api/entities/{entity_id}/network
+      method: GET
+      function_name: get_entity_network
+      description: N-hop counterparty graph for one entity.
+    - path: /api/entities/network
+      method: POST
+      function_name: get_entity_network
+      description: Entity network (POST workaround).
+    - path: /api/entities/{entity_id}/timeline
+      method: GET
+      function_name: get_entity_timeline
+      description: Daily transaction-volume timeline.
+    - path: /api/entities/timeline
+      method: POST
+      function_name: get_entity_timeline
+      description: Entity timeline (POST workaround).
+    - path: /api/network/global
+      method: GET
+      function_name: get_global_network
+      description: Global counterparty-graph summary.
+    - path: /api/network/patterns
+      method: GET
+      function_name: get_network_patterns
+      description: Pre-computed loop / cycle detections.
+    - path: /api/network/path
+      method: POST
+      function_name: get_network_path
+      description: Shortest path between two entities.
+    - path: /api/skills/behavioral
+      method: POST
+      function_name: skill_behavioral
+      description: Behavioral skill playground.
+    - path: /api/skills/numeric
+      method: POST
+      function_name: skill_numeric
+      description: Numeric skill playground.
+    - path: /api/skills/citation
+      method: POST
+      function_name: skill_citation
+      description: Citation skill playground.
+    - path: /api/skills/statutory
+      method: POST
+      function_name: skill_statutory
+      description: Statutory skill playground.
+    - path: /api/skills/sar
+      method: POST
+      function_name: skill_sar
+      description: SAR skill playground (full bundle).
+    - path: /api/policy/search
+      method: POST
+      function_name: search_policy
+      description: Query the policy RAG corpus.
+    - path: /api/policy/sources
+      method: GET
+      function_name: list_policy_sources
+      description: Policy corpus distribution.
+    - path: /api/sops
+      method: GET
+      function_name: list_sops
+      description: List typology SOPs.
+    - path: /api/sops/{sop_id}
+      method: GET
+      function_name: get_sop_body
+      description: SOP body (GET — affected by NAT 1.5 path-param bug; prefer POST below).
+    - path: /api/sops/get
+      method: POST
+      function_name: get_sop_body
+      description: Render an SOP body as Markdown.
+    - path: /api/sanctions/screen
+      method: POST
+      function_name: screen_name
+      description: Free-form sanctions screen.
+    - path: /api/analytics/overview
+      method: GET
+      function_name: analytics_overview
+      description: Top-line analytics cards.
+    - path: /api/analytics/typology_distribution
+      method: GET
+      function_name: analytics_typology
+      description: Per-typology distribution.
+    - path: /api/analytics/risk_heatmap
+      method: GET
+      function_name: analytics_risk_heatmap
+      description: Heatmap by jurisdiction / risk rating.
+    - path: /api/analytics/timeline
+      method: GET
+      function_name: analytics_timeline
+      description: Tx counts per day.
+    - path: /api/analytics/channel_mix
+      method: GET
+      function_name: analytics_channel_mix
+      description: Channel mix per typology.
+    - path: /api/analytics/top_counterparties
+      method: GET
+      function_name: analytics_top_cp
+      description: Top counterparties by volume.
+    - path: /api/analytics/aux_usage
+      method: GET
+      function_name: analytics_aux_usage
+      description: Aux finding USED vs DROPPED stats.
+    - path: /api/analytics/agent_performance
+      method: GET
+      function_name: analytics_agent_perf
+      description: Per-typology recall / precision vs eval keys.
+    - path: /api/analytics/profile
+      method: GET
+      function_name: analytics_profile
+      description: NAT profiler summary artifacts.
+    - path: /api/demo/eval
+      method: POST
+      function_name: demo_eval
+      description: Score persisted traces against eval keys (gated).
+    - path: /api/demo/eval/cases
+      method: POST
+      function_name: demo_eval_cases
+      description: Per-case list of prediction vs ground truth (gated by token).
+    - path: /api/demo/eval/case/{case_id}
+      method: POST
+      function_name: demo_eval_case
+      description: Deep-dive comparison for one case_id with tool outputs (gated by token).
+    - path: /api/demo/eval/runs
+      method: GET
+      function_name: demo_eval_runs
+      description: List trace-snapshot directories (active + archived) available for comparison.
+    - path: /api/demo/eval/compare
+      method: POST
+      function_name: demo_eval_compare
+      description: Side-by-side scorecard comparing two trace snapshots vs the same ground truth (gated).
+    - path: /api/demo/eval/model_comparison
+      method: POST
+      function_name: demo_eval_model_comparison_report
+      description: Pre-compiled N-way comparison of model endpoints (custom-task NIM vs base Nemotron vs frontier models). Read-only — does not invoke any LLM.
+    - path: /api/demo/seed_traces
+      method: POST
+      function_name: demo_seed_traces
+      description: Pre-load bundled baseline rollout into traces/.
+    - path: /api/health
+      method: GET
+      function_name: health
+      description: Liveness + data plane status.
+    - path: /api/system/config
+      method: GET
+      function_name: system_config
+      description: Show what is wired in this deployment.
+    - path: /api/system/components
+      method: GET
+      function_name: system_components
+      description: List components in this workflow.
+llms:
+  custom_task_nim:
+    _type: nim
+    base_url: ${NAT_AML_NIM_BASE_URL:-http://localhost:8088/v1}
+    api_key: ${NAT_AML_NIM_API_KEY:-EMPTY}
+    model_name: ${NAT_AML_NIM_MODEL:-aml-custom-task-nim}
+    temperature: 0.0
+    max_tokens: 2500
+    top_p: 1.0
+  judge_llm:
+    _type: nim
+    base_url: ${NAT_AML_JUDGE_BASE_URL:-http://localhost:8088/v1}
+    api_key: ${NAT_AML_NIM_API_KEY:-EMPTY}
+    model_name: ${NAT_AML_JUDGE_MODEL:-aml-custom-task-nim}
+    temperature: 0.0
+    max_tokens: 300
+function_groups:
+  aml_data_tools:
+    _type: aml_data_tools
+    data_dir: ${NAT_AML_DATA_DIR:-./data}
+functions:
+  compute_hints:
+    _type: compute_hints
+  aux_behavioral_call:
+    _type: aux_call
+    task_type: auxiliary_behavioral
+    llm_name: custom_task_nim
+    max_tokens: ${NAT_AML_AUX_MAX_TOKENS:-1200}
+    max_thinking_tokens: ${NAT_AML_THINKING_BUDGET:-0}
+  aux_numeric_call:
+    _type: aux_call
+    task_type: auxiliary_numeric
+    llm_name: custom_task_nim
+    max_tokens: ${NAT_AML_AUX_MAX_TOKENS:-1200}
+    max_thinking_tokens: ${NAT_AML_THINKING_BUDGET:-0}
+  aux_citation_call:
+    _type: aux_call
+    task_type: auxiliary_citation
+    llm_name: custom_task_nim
+    max_tokens: ${NAT_AML_AUX_MAX_TOKENS:-1200}
+    max_thinking_tokens: ${NAT_AML_THINKING_BUDGET:-0}
+  aux_statutory_call:
+    _type: aux_call
+    task_type: auxiliary_statutory
+    llm_name: custom_task_nim
+    max_tokens: ${NAT_AML_AUX_MAX_TOKENS:-1200}
+    max_thinking_tokens: ${NAT_AML_THINKING_BUDGET:-0}
+  aux_gate:
+    _type: aux_gate
+    judge_llm_name: judge_llm
+    enable_judge: ${NAT_AML_ENABLE_JUDGE:-false}
+  sar_judgment_caller:
+    _type: sar_judgment_caller
+    llm_name: custom_task_nim
+    max_tokens: ${NAT_AML_SAR_MAX_TOKENS:-2500}
+    max_thinking_tokens: ${NAT_AML_THINKING_BUDGET:-0}
+  list_alerts:
+    _type: list_alerts
+  get_alert:
+    _type: get_alert
+  post_disposition:
+    _type: post_disposition
+  alerts_stats:
+    _type: alerts_stats
+  list_entities:
+    _type: list_entities
+  get_entity:
+    _type: get_entity
+  get_entity_tx:
+    _type: get_entity_tx
+  get_entity_behavioral:
+    _type: get_entity_behavioral
+  get_entity_risk:
+    _type: get_entity_risk
+  get_entity_network:
+    _type: get_entity_network
+  get_entity_timeline:
+    _type: get_entity_timeline
+  get_global_network:
+    _type: get_global_network
+  get_network_patterns:
+    _type: get_network_patterns
+  get_network_path:
+    _type: get_network_path
+  skill_behavioral:
+    _type: skill_behavioral
+    aux_function: aux_behavioral_call
+  skill_numeric:
+    _type: skill_numeric
+    aux_function: aux_numeric_call
+  skill_citation:
+    _type: skill_citation
+    aux_function: aux_citation_call
+  skill_statutory:
+    _type: skill_statutory
+    aux_function: aux_statutory_call
+  skill_sar:
+    _type: skill_sar
+    sar_function: sar_judgment_caller
+  search_policy:
+    _type: search_policy
+  list_policy_sources:
+    _type: list_policy_sources
+  list_sops:
+    _type: list_sops
+  get_sop_body:
+    _type: get_sop_body
+  screen_name:
+    _type: screen_name
+  analytics_overview:
+    _type: analytics_overview
+  analytics_typology:
+    _type: analytics_typology
+  analytics_risk_heatmap:
+    _type: analytics_risk_heatmap
+  analytics_timeline:
+    _type: analytics_timeline
+  analytics_channel_mix:
+    _type: analytics_channel_mix
+  analytics_top_cp:
+    _type: analytics_top_cp
+  analytics_aux_usage:
+    _type: analytics_aux_usage
+  analytics_agent_perf:
+    _type: analytics_agent_perf
+  analytics_profile:
+    _type: analytics_profile
+  demo_eval:
+    _type: demo_eval
+  demo_seed_traces:
+    _type: demo_seed_traces
+  get_trace:
+    _type: get_trace
+  health:
+    _type: health
+  system_config:
+    _type: system_config
+  system_components:
+    _type: system_components
+  demo_eval_cases:
+    _type: demo_eval_cases
+  demo_eval_case:
+    _type: demo_eval_case
+  demo_eval_runs:
+    _type: demo_eval_runs
+  demo_eval_compare:
+    _type: demo_eval_compare
+  demo_eval_model_comparison_report:
+    _type: demo_eval_model_comparison_report
+workflow:
+  _type: investigate_case
+  data_tools: aml_data_tools
+  compute_hints_fn: compute_hints
+  aux_behavioral_fn: aux_behavioral_call
+  aux_numeric_fn: aux_numeric_call
+  aux_citation_fn: aux_citation_call
+  aux_statutory_fn: aux_statutory_call
+  aux_gate_fn: aux_gate
+  sar_caller_fn: sar_judgment_caller
+  enable_aux_gate: ${NAT_AML_ENABLE_JUDGE:-false}
+  fail_open_on_aux_error: true

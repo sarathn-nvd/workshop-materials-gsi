@@ -1,0 +1,339 @@
+{
+  "case_id": "DEMO_0305",
+  "alert_id": "ALT_6543670",
+  "entity_id": "SYN_7fa2ae4c",
+  "started_at": "2026-05-28T12:00:29.503390+00:00",
+  "finished_at": "2026-05-28T12:00:39.226933+00:00",
+  "wall_clock_ms": 9723.6,
+  "transactions": [
+    {
+      "amount": 326.89,
+      "channel": "ach",
+      "counterparty": "WCMN Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 522.89,
+      "channel": "cheque",
+      "counterparty": "YS Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 554.19,
+      "channel": "card",
+      "counterparty": "Patricia Davis",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 512.3,
+      "channel": "cheque",
+      "counterparty": "QKER Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 350.27,
+      "channel": "card",
+      "counterparty": "Michael Walker",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 329.37,
+      "channel": "cheque",
+      "counterparty": "PDQ Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 455.79,
+      "channel": "wire",
+      "counterparty": "HXPXK Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 268.71,
+      "channel": "cheque",
+      "counterparty": "MI Services LLC",
+      "currency": "USD",
+      "date": "2026-03-06",
+      "notes": ""
+    },
+    {
+      "amount": 248.18,
+      "channel": "card",
+      "counterparty": "Elizabeth Harris",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 223.28,
+      "channel": "ach",
+      "counterparty": "MQ Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 165.14,
+      "channel": "wire",
+      "counterparty": "LLTVI Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 303.11,
+      "channel": "ach",
+      "counterparty": "EHWQ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 500.34,
+      "channel": "ach",
+      "counterparty": "FI Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 393.25,
+      "channel": "card",
+      "counterparty": "Linda Moore",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 514.04,
+      "channel": "ach",
+      "counterparty": "GGZ Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 227.81,
+      "channel": "card",
+      "counterparty": "Christopher Garcia",
+      "currency": "USD",
+      "date": "2026-03-25",
+      "notes": ""
+    },
+    {
+      "amount": 334.49,
+      "channel": "card",
+      "counterparty": "Susan White",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 221.28,
+      "channel": "ach",
+      "counterparty": "ZLSJX Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 211.4,
+      "channel": "card",
+      "counterparty": "David Davis",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 567.4,
+      "channel": "wire",
+      "counterparty": "GEK Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 356.57,
+      "channel": "card",
+      "counterparty": "Patricia Jackson",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 227.05,
+      "channel": "ach",
+      "counterparty": "PSBP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_7fa2ae4c",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2148.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,148.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.364,
+      "ach": 0.318,
+      "cheque": 0.182,
+      "wire": 0.136
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.3181818181818182, 'cheque': 0.18181818181818182, 'card': 0.36363636363636365, 'wire': 0.13636363636363635})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_7fa2ae4c executed 22 transactions totaling $7,813.75 USD with channel mix {\"card\": 0.364, \"ach\": 0.318, \"cheque\": 0.182, \"wire\": 0.136}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.28x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 22,
+        "tx_total_usd": 7813.75,
+        "channel_mix": {
+          "card": 0.364,
+          "ach": 0.318,
+          "cheque": 0.182,
+          "wire": 0.136
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.73,
+        "unique_counterparties_7d": 4,
+        "amount_z_score_max": 1.7,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.28
+      },
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 7823.75",
+      "calculation": "1) Sum all listed transaction amounts in transactions[0..21]: 326.89+522.89+554.19+512.30+350.27+329.37+455.79+268.71+248.18+223.28+165.14+303.11+500.34+393.25+514.04+227.81+334.49+221.28+211.40+567.40+356.57+227.05 = 7823.75.\n2) Read declared expected monthly volume from kyc_profile.expected_monthly_volume = 2148.0.\n3) Compute multiple vs declared: 7823.75 / 2148.0 = 3.6429 ≈ 3.64.\n4) Compute absolute difference: 7823.75 - 2148.0 = 5675.75.\n5) Final numeric result (reported): total transaction volume = 7823.75.",
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a supported citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided, so there is no basis to evaluate statutory elements against the fact pattern. Because no section (e.g., a specific U.S.C. or C.F.R. provision) is identified, applicability cannot be assessed. Contiguous phrase from answer: \"no statute provided\"."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided, so there is no basis to evaluate statutory elements against the fact pattern. Because no section (e.g., a specific U.S.C. or C.F.R. provision) is identified, applicability cannot be assessed. Contiguous phrase from answer: \"no statute provided\"."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_7fa2ae4c executed 22 transactions totaling $7,813.75 USD with channel mix {\"card\": 0.364, \"ach\": 0.318, \"cheque\": 0.182, \"wire\": 0.136}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.28x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 22,
+          "tx_total_usd": 7813.75,
+          "channel_mix": {
+            "card": 0.364,
+            "ach": 0.318,
+            "cheque": 0.182,
+            "wire": 0.136
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.73,
+          "unique_counterparties_7d": 4,
+          "amount_z_score_max": 1.7,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.28
+        },
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 7823.75",
+        "calculation": "1) Sum all listed transaction amounts in transactions[0..21]: 326.89+522.89+554.19+512.30+350.27+329.37+455.79+268.71+248.18+223.28+165.14+303.11+500.34+393.25+514.04+227.81+334.49+221.28+211.40+567.40+356.57+227.05 = 7823.75.\n2) Read declared expected monthly volume from kyc_profile.expected_monthly_volume = 2148.0.\n3) Compute multiple vs declared: 7823.75 / 2148.0 = 3.6429 ≈ 3.64.\n4) Compute absolute difference: 7823.75 - 2148.0 = 5675.75.\n5) Final numeric result (reported): total transaction volume = 7823.75.",
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a supported citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 326.89, \"channel\": \"ach\", \"counterparty\": \"WCMN Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 522.89, \"channel\": \"cheque\", \"counterparty\": \"YS Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 554.19, \"channel\": \"card\", \"counterparty\": \"Patricia Davis\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 512.3, \"channel\": \"cheque\", \"counterparty\": \"QKER Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 350.27, \"channel\": \"card\", \"counterparty\": \"Michael Walker\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 329.37, \"channel\": \"cheque\", \"counterparty\": \"PDQ Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 455.79, \"channel\": \"wire\", \"counterparty\": \"HXPXK Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 268.71, \"channel\": \"cheque\", \"counterparty\": \"MI Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-06\", \"notes\": \"\"}, {\"amount\": 248.18, \"channel\": \"card\", \"counterparty\": \"Elizabeth Harris\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 223.28, \"channel\": \"ach\", \"counterparty\": \"MQ Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 165.14, \"channel\": \"wire\", \"counterparty\": \"LLTVI Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 303.11, \"channel\": \"ach\", \"counterparty\": \"EHWQ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 500.34, \"channel\": \"ach\", \"counterparty\": \"FI Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 393.25, \"channel\": \"card\", \"counterparty\": \"Linda Moore\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 514.04, \"channel\": \"ach\", \"counterparty\": \"GGZ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 227.81, \"channel\": \"card\", \"counterparty\": \"Christopher Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-25\", \"notes\": \"\"}, {\"amount\": 334.49, \"channel\": \"card\", \"counterparty\": \"Susan White\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 221.28, \"channel\": \"ach\", \"counterparty\": \"ZLSJX Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 211.4, \"channel\": \"card\", \"counterparty\": \"David Davis\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 567.4, \"channel\": \"wire\", \"counterparty\": \"GEK Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 356.57, \"channel\": \"card\", \"counterparty\": \"Patricia Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 227.05, \"channel\": \"ach\", \"counterparty\": \"PSBP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_7fa2ae4c\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2148.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,148.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"Neutral: no statute provided, so statutory applicability cannot be determined.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided, so there is no basis to evaluate statutory elements against the fact pattern. Because no section (e.g., a specific U.S.C. or C.F.R. provision) is identified, applicability cannot be assessed. Contiguous phrase from answer: \\\"no statute provided\\\".\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_7fa2ae4c executed 22 transactions totaling $7,813.75 USD with channel mix {\\\"card\\\": 0.364, \\\"ach\\\": 0.318, \\\"cheque\\\": 0.182, \\\"wire\\\": 0.136}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.28x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 22, \"tx_total_usd\": 7813.75, \"channel_mix\": {\"card\": 0.364, \"ach\": 0.318, \"cheque\": 0.182, \"wire\": 0.136}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.73, \"unique_counterparties_7d\": 4, \"amount_z_score_max\": 1.7, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.28}, \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 7823.75\", \"calculation\": \"1) Sum all listed transaction amounts in transactions[0..21]: 326.89+522.89+554.19+512.30+350.27+329.37+455.79+268.71+248.18+223.28+165.14+303.11+500.34+393.25+514.04+227.81+334.49+221.28+211.40+567.40+356.57+227.05 = 7823.75.\\n2) Read declared expected monthly volume from kyc_profile.expected_monthly_volume = 2148.0.\\n3) Compute multiple vs declared: 7823.75 / 2148.0 = 3.6429 ≈ 3.64.\\n4) Compute absolute difference: 7823.75 - 2148.0 = 5675.75.\\n5) Final numeric result (reported): total transaction volume = 7823.75.\", \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a supported citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_7fa2ae4c (retired individual; expected monthly throughput ~$2,148) shows elevated, unexplained non-cash activity across many counterparties: 22 transactions totaling $7,823.75 from 2026-02-01 to 2026-04-27 via card/ACH/cheque/wire, including wires to GEK Trading LLC ($567.40, 2026-04-23), HXPXK Capital LLC ($455.79, 2026-04-27), and LLTVI Capital LLC ($165.14, 2026-03-04). Verified total is ~3.64x declared volume (aux numeric); activity appears inconsistent with fixed pension profile and warrants SAR consideration. No policy/statute citations were provided.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_7fa2ae4c (retired individual; expected monthly throughput ~$2,148) shows elevated, unexplained non-cash activity across many counterparties: 22 transactions totaling $7,823.75 from 2026-02-01 to 2026-04-27 via card/ACH/cheque/wire, including wires to GEK Trading LLC ($567.40, 2026-04-23), HXPXK Capital LLC ($455.79, 2026-04-27), and LLTVI Capital LLC ($165.14, 2026-03-04). Verified total is ~3.64x declared volume (aux numeric); activity appears inconsistent with fixed pension profile and warrants SAR consideration. No policy/statute citations were provided."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_7fa2ae4c (retired individual; expected monthly throughput ~$2,148) shows elevated, unexplained non-cash activity across many counterparties: 22 transactions totaling $7,823.75 from 2026-02-01 to 2026-04-27 via card/ACH/cheque/wire, including wires to GEK Trading LLC ($567.40, 2026-04-23), HXPXK Capital LLC ($455.79, 2026-04-27), and LLTVI Capital LLC ($165.14, 2026-03-04). Verified total is ~3.64x declared volume (aux numeric); activity appears inconsistent with fixed pension profile and warrants SAR consideration. No policy/statute citations were provided.",
+  "judge_enabled": false,
+  "error": null
+}

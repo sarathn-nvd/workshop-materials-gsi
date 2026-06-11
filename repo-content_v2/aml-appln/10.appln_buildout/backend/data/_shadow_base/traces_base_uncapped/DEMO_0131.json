@@ -1,0 +1,231 @@
+{
+  "case_id": "DEMO_0131",
+  "alert_id": "ALT_2481230",
+  "entity_id": "SYN_f1437d64",
+  "started_at": "2026-05-23T12:13:44.954318+00:00",
+  "finished_at": "2026-05-23T12:14:24.564612+00:00",
+  "wall_clock_ms": 39610.3,
+  "transactions": [
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "Haverly Systems, Inc.",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "ON Capital LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": "round-number outbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "AE Industries LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 2500000.0,
+      "channel": "wire",
+      "counterparty": "USFP Services LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 1000000.0,
+      "channel": "wire",
+      "counterparty": "DB Logistics LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "round-number inbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f1437d64",
+    "entity_type": "business",
+    "expected_monthly_volume": 443649.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Haverly Systems, Inc.",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "nning to explore the delta between compliance risk and illicit finance risk\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\nClemente Vasquez Bello made to our BSAAG efforts over the years.\nThe passion and dedication that Clemente brought for many years to our BSAAG\ndiscussions was second to none, and he has been sorely missed. I know from my own\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\nbetween money laundering prevention and BSA reporting.\nOn one hand, if you focus too much on the prevention side within your financial\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\nefforts will be undermined and the U.S. financial system compromised.\nWhat we all learned from our discussions with Clemente about this, as well as many\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\nimportant role in helping strike that balance.\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\nimpact on our work wit"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "n collaboration with NPOs and other government entities, a financial institution\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\nto financial institutions to understand NPO TF risks. It supports the understanding\nand awareness among NPOs on the various AML/CFT risk considerations when\nseeking to open an account, and when accessing and using any financial services.\nThe portal explains that the financial institution functions as a gatekeeper to the\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\nprovides an overview of the documents and information that the financial institution\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\nThe portal guides an NPO through various questions that the financial institution\nmust consider when performing its risk assessment and CDD procedures regarding:\n(i) Countries in which the NPO is active;\n(ii) The type of activity the NPO engages in;\n(iii) Organisational structure, including staff, board members, and partners of\nthe NPO;\n(iv)NPO’s ultimate beneficial owner; and\n(v) Type of transactions and sources of funding.\nThe portal refers to good governance instruments that NPOs can use to mitigate any\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\nownership/control and organisational structure, geographical reach, activities and\noperations, sources of funding, their (intended) financial transactions, and fi"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-SHELL-COMPANY-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "shell_company"
+  },
+  "typology_hypothesis": "shell_company",
+  "activity_descriptor": "Sanctions counterparty hit on offshore-incorporated entity (Haverly Systems, Inc.)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity executed five transactions totaling 4600000.0 USD, with a channel mix of wire 1.0 and other channels 0.0. Its 24‑hour peak velocity is 1, the 30‑day average 24‑hour velocity is 0.16666666666666666, and the observed‑to‑declared volume ratio is 10.371842105263158.",
+      "metrics": {
+        "tx_count": 5,
+        "tx_total_usd": 4600000.0,
+        "channel_mix": {
+          "wire": 1.0,
+          "ach": 0.0,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.16666666666666666,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.880952380952381,
+        "country_risk_max": 0.5,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 10.371842105263157
+      },
+      "evidence": "transactions[0..4]"
+    },
+    "numeric": {
+      "error": "schema",
+      "detail": "1 validation error for NumericFinding\nevidence\n  Input should be a valid string [type=string_type, input_value=['2026-04-04,100000.00,US...d-number inbound wire\"'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type",
+      "raw_payload": {
+        "question": "Sum round-number wires through the entity; compare to KYC declared monthly volume.",
+        "answer": "$4,600,000 total round-number wires, about 10.4× the declared $443,649 monthly volume",
+        "calculation": "1. 100,000 + 500,000 = 600,000\n2. 600,000 + 500,000 = 1,100,000\n3. 1,100,000 + 2,500,000 = 3,600,000\n4. 3,600,000 + 1,000,000 = 4,600,000\n5. Compare 4,600,000 / 443,649 ≈ 10.37 (≈10.4×)",
+        "evidence": [
+          "2026-04-04,100000.00,USD,\"Haverly Systems, Inc.\",wire,\"round-number inbound wire\"",
+          "2026-04-07,500000.00,USD,\"ON Capital LLC, BVI\",wire,\"round-number outbound wire\"",
+          "2026-04-17,500000.00,USD,\"AE Industries LLC, BVI\",wire,\"round-number inbound wire\"",
+          "2026-04-22,2500000.00,USD,\"USFP Services LLC, Delaware-US\",wire,\"round-number inbound wire\"",
+          "2026-04-24,1000000.00,USD,\"DB Logistics LLC, Delaware-US\",wire,\"round-number inbound wire\""
+        ]
+      }
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The section describes the Delta Team’s work on balancing compliance risk and illicit finance risk and acknowledges Clemente Vasquez Bello’s contributions.",
+      "evidence_span": "The Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG), explores the delta between compliance risk and illicit finance risk."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 1010.230?",
+      "answer": "Yes, the conduct falls within the scope of 31 CFR § 1010.230.",
+      "label": "entailment",
+      "reasoning": "The regulation 31 CFR § 1010.230 governs beneficial-ownership requirements for legal entity customers, and the fact pattern involves a BVI legal entity customer, thus the conduct is covered."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 1010.230?",
+        "answer": "Yes, the conduct falls within the scope of 31 CFR § 1010.230.",
+        "label": "entailment",
+        "reasoning": "The regulation 31 CFR § 1010.230 governs beneficial-ownership requirements for legal entity customers, and the fact pattern involves a BVI legal entity customer, thus the conduct is covered."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity executed five transactions totaling 4600000.0 USD, with a channel mix of wire 1.0 and other channels 0.0. Its 24‑hour peak velocity is 1, the 30‑day average 24‑hour velocity is 0.16666666666666666, and the observed‑to‑declared volume ratio is 10.371842105263158.",
+        "metrics": {
+          "tx_count": 5,
+          "tx_total_usd": 4600000.0,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.16666666666666666,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.880952380952381,
+          "country_risk_max": 0.5,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 10.371842105263157
+        },
+        "evidence": "transactions[0..4]"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The section describes the Delta Team’s work on balancing compliance risk and illicit finance risk and acknowledges Clemente Vasquez Bello’s contributions.",
+        "evidence_span": "The Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG), explores the delta between compliance risk and illicit finance risk."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"Haverly Systems, Inc.\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"ON Capital LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"round-number outbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"AE Industries LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 2500000.0, \"channel\": \"wire\", \"counterparty\": \"USFP Services LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 1000000.0, \"channel\": \"wire\", \"counterparty\": \"DB Logistics LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"round-number inbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f1437d64\", \"entity_type\": \"business\", \"expected_monthly_volume\": 443649, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [{\"name\": \"Haverly Systems, Inc.\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"nning to explore the delta between compliance risk and illicit finance risk\\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\\nClemente Vasquez Bello made to our BSAAG efforts over the years.\\nThe passion and dedication that Clemente brought for many years to our BSAAG\\ndiscussions was second to none, and he has been sorely missed. I know from my own\\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\\nbetween money laundering prevention and BSA reporting.\\nOn one hand, if you focus too much on the prevention side within your financial\\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\\nefforts will be undermined and the U.S. financial system compromised.\\nWhat we all learned from our discussions with Clemente about this, as well as many\\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\\nimportant role in helping strike that balance.\\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\\nimpact on our work wit\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"n collaboration with NPOs and other government entities, a financial institution\\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\\nto financial institutions to understand NPO TF risks. It supports the understanding\\nand awareness among NPOs on the various AML/CFT risk considerations when\\nseeking to open an account, and when accessing and using any financial services.\\nThe portal explains that the financial institution functions as a gatekeeper to the\\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\\nprovides an overview of the documents and information that the financial institution\\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\\nThe portal guides an NPO through various questions that the financial institution\\nmust consider when performing its risk assessment and CDD procedures regarding:\\n(i) Countries in which the NPO is active;\\n(ii) The type of activity the NPO engages in;\\n(iii) Organisational structure, including staff, board members, and partners of\\nthe NPO;\\n(iv)NPO’s ultimate beneficial owner; and\\n(v) Type of transactions and sources of funding.\\nThe portal refers to good governance instruments that NPOs can use to mitigate any\\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\\nownership/control and organisational structure, geographical reach, activities and\\noperations, sources of funding, their (intended) financial transactions, and fi\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-SHELL-COMPANY-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 1010.230?\", \"answer\": \"Yes, the conduct falls within the scope of 31 CFR § 1010.230.\", \"label\": \"entailment\", \"reasoning\": \"The regulation 31 CFR § 1010.230 governs beneficial-ownership requirements for legal entity customers, and the fact pattern involves a BVI legal entity customer, thus the conduct is covered.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity executed five transactions totaling 4600000.0 USD, with a channel mix of wire 1.0 and other channels 0.0. Its 24‑hour peak velocity is 1, the 30‑day average 24‑hour velocity is 0.16666666666666666, and the observed‑to‑declared volume ratio is 10.371842105263158.\", \"metrics\": {\"tx_count\": 5, \"tx_total_usd\": 4600000.0, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.16666666666666666, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.880952380952381, \"country_risk_max\": 0.5, \"loop_detected\": false, \"vs_declared_volume_ratio\": 10.371842105263157}, \"evidence\": \"transactions[0..4]\"}], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The section describes the Delta Team’s work on balancing compliance risk and illicit finance risk and acknowledges Clemente Vasquez Bello’s contributions.\", \"evidence_span\": \"The Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG), explores the delta between compliance risk and illicit finance risk.\"}]}, \"_regulatory_frame\": \"sanctions\", \"_typology_inferred\": \"shell_company\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Determine if SAR should be filed.\n\nWe have regulatory_frame = \"sanctions\". Typology inferred = \"shell_company\". But sanctions frame? Actually regulatory_frame is \"sanctions\". That suggests we should use sanctions framing. However typology inferred is \"shell_company\". That might be contradictory but we must follow regulatory framing: sanctions. So we need to produce SAR narrative consistent with sanctions framing. However the typology inferred is shell_company, which is a typology, but regulatory_frame is sanctions. The instruction: \"Regulatory Framing (HARD — coherent with _regulatory_frame): - ctr_structuring ... - layering_passthrough ... - tbml ... - shell ... - sanctions ... - te ... - elder ... - trafficking ... - benign\". So we must use the framing that matches _regulatory_frame. Here it's \"sanctions\". So we must produce a narrative that aligns with sanctions framing, i.e., referencing OFAC, sanctioned jurisdictions, etc. However we also have a PEP hit: Haverly Systems, Inc. is OFAC listed. Also the counterparties are BVI entities. The regulatory frame is sanctions, so we should talk about sanctions risk, OFAC listing, etc. Also we must ground every claim in the bundle.\n\nWe have auxiliary_findings.behavioral with metrics: tx_count 5, tx_total_usd 4600000.0, channel_mix wire 1.0, velocity_24h_max 1, velocity_24h_avg_30d 0.166..., unique_counterparties_7d 3, amount_z_score_max 1.880..., country_risk_max 0.5, loop_detected false, vs_declared_volume_ratio 10.371842105263157.\n\nWe must cite the most salient behavioral finding: likely vs_declared_volume_ratio 10.37 (i.e., observed volume is ~10x declared monthly volume). That is a strong indicator.\n\nWe must also verify consistency of auxiliary_findings against raw inputs. Let's compute declared monthly volume: kyc_profile.expected_monthly_volume = 443,649 USD. Observed total USD across all transactions is 4,600,000 USD. Ratio = 4,600,000 / 443,649 ≈ 10.37, matches metric.\n\nNow we need to ensure every transaction amount, date, counterparty, channel appears in transactions[]. Yes.\n\nEvery metric value cited must appear verbatim in auxiliary_findings.behavioral.metrics if present. We will cite the ratio and maybe velocity etc. Must be verbatim: \"10.371842105263157\" appears as value. We can quote the ratio as \"10.371842105263157\". Must not invent.\n\nEvery entity identifier must appear in kyc_profile, transactions, or sanctions_pep_hits[]. Entities: Haverly Systems, Inc. appears in transactions and sanctions_pep_hits. ON Capital LLC, BVI; AE Industries LLC, BVI; USFP Services LLC, Delaware-US; DB Logistics LLC, Delaware-US. These appear in transactions. Also the entity_id SYN_f1437d64 appears in kyc_profile. So fine.\n\nNow we need to produce suspicious_activity_report string, 250-800 characters, ending with a complete sentence, referencing the matter to human investigator.\n\nWe must not exceed 800 characters. Let's craft about 500 characters.\n\nWe must ground every claim: mention amounts, dates, counterparties, channel wire, that total is 4.6 million, ratio 10.37 times declared volume, OFAC hit on Haverly Systems, BVI incorporation, lack of operating expenses (but we don't have that info; we can mention absence of payroll etc? Not in bundle; but we can reference SOP steps? Might be okay if we cite SOP? But we must only use info present. We can mention that the entity is an offshore holding company with no declared operating expenses? Not present. So avoid that.\n\nWe can mention that the transactions are round-number wires, multiple inbound/outbound, total 4.6M, ratio 10.37x declared volume, OFAC match on Haverly Systems, and that the pattern suggests potential sanctions evasion.\n\nWe must use qualified language: \"appears to\", \"consistent with\", \"warrants\". End with a complete sentence, and then refer to human investigator.\n\nLet's draft:\n\n\"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio reflected in the behavioral metric “vs_declared_volume_ratio”: 10.371842105263157. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\"\n\nNow count characters. Let's approximate: We'll count roughly.\n\nI'll count characters including spaces.\n\n\"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio reflected in the behavioral metric “vs_declared_volume_ratio”: 10.371842105263157. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\"\n\nLet's count roughly: I'll use approximate count. Might be around 600-700 characters. Should be within 250-800. Good.\n\nWe must ensure we didn't invent any metric values not present verbatim. We used \"10.371842105263157\" exactly as in metrics. Good. We used \"vs_declared_volume_ratio\": 10.371842105263157. That's fine.\n\nWe mentioned \"round‑number wires\". That's okay; the notes say \"round-number inbound wire\" etc. So we can say \"round‑number wires\". That's consistent.\n\nWe mentioned \"OFAC‑matched PEP\". The sanctions_pep_hits list Haverly Systems, Inc. as OFAC. So that's fine.\n\nWe mentioned \"shell‑company pass‑through pattern\". That's consistent with typology inferred \"shell_company\". But we must not use \"shell\" framing? Actually regulatory_frame is \"sanctions\". But we can still mention \"shell-company pass-through pattern\" as part of the narrative? The instruction: \"Regulatory Framing (HARD — coherent with _regulatory_frame): - sanctions → OFAC / 31 CFR 501 / sanctioned-jurisdiction risk.\" So we should frame in sanctions context, but we can still mention shell-company pattern as part of the evidence, but the framing should be sanctions. Probably okay.\n\nWe must not use \"layering\" etc. Not needed.\n\nNow ensure we didn't use any invented numbers: we used $4,600,000 which is sum of amounts: 100,000 + 500,000 + 500,000 + 2,500,000 + 1,000,000 = 4,600,000. That's correct. We used dates: 2026-04-04, 2026-04-07, 2026-04-17, 2026-04-22, 2026-04-24. We referenced \"Between 4 April and 24 April 2026\". That's okay.\n\nWe referenced \"entity’s declared monthly volume of $443,649\". That's from kyc_profile.\n\nWe referenced \"behavioral metric “vs_declared_volume_ratio”: 10.371842105263157\". That's verbatim.\n\nWe referenced \"OFAC‑matched PEP\". That's derived from sanctions_pep_hits. It's okay.\n\nNow we must output JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<the narrative>\"\n}\n\nMake sure the narrative is a string, no extra characters. Must be within 250-800 characters. Let's count approximate characters of the narrative we wrote.\n\nI'll count more precisely.\n\nString:\n\nBetween 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio reflected in the behavioral metric “vs_declared_volume_ratio”: 10.371842105263157. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\n\nLet's count characters including spaces. I'll approximate using a quick count: I'll copy into a mental count.\n\nI'll count each segment.\n\n\"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US).\" That's about 180? Let's count precisely.\n\nI'll write with indices.\n\nI'll count characters manually:\n\n\"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US).\"\n\nLet's count:\n\nBetween(6) + space(1)=7\n4 (1) =>8\n  (non-breaking space?) but count as 1 =>9\nApril(5)=>14\nspace=>15\nand=>18\nspace=>19\n24 April (6? \"24\"2, space1, \"April\"5) =>25\nspace=>26\n2026=>30\nspace=>31\nthe=>34\nspace=>35\naccount=>42\nspace=>43\nmoved=>48\nspace=>49\nfive=>53\nspace=>54\nwire=>58\nspace=>59\ntransfers=>68\nspace=>69\ntotaling=>77\nspace=>78\n$4,600,000=>? \"$\"1, \"4\"1, \",\"1, \"600\"3, \",\"1, \"000\"3, \"0\"1? Actually \"$4,600,000\" length 9? Let's count: $ (1), 4 (1) =2, , (1)=3, 6 (1)=4, 0 (1)=5, 0 (1)=6, , (1)=7, 0 (1)=8, 0 (1)=9, 0 (1)=10? Wait \"4,600,000\" is 8 digits plus commas? Actually it's \"$4,600,000\": characters: $ (1), 4 (2), , (3), 6 (4), 0 (5), 0 (6), , (7), 0 (8), 0 (9), 0 (10). So 10 characters. So add 10 =>88\nspace=>89\nto=>91\nspace=>92\nand=>95\nspace=>96\nfrom=>100\nspace=>101\nHaverly=>108\nspace=>109\nSystems,=>117 (Systems=7, comma=1) =>117\nspace=>118\nInc.=>121 (Inc. 4 inc period) =>121\nspace=>122\nON=>124\nspace=>125\nCapital=>132\nspace=>133\nLLC=>136\nspace=>137\n(BVI),=>? \"(\"1, \"BVI\"3, \")\"1, \",\"1 =6 =>143\nspace=>144\nAE=>146\nspace=>147\nIndustries=>157 (Industries 9) =>157\nspace=>158\nLLC=>161\nspace=>162\n(Delaware‑US)=>? \"(\"1, \"Delaware‑US\"?? includes hyphen and maybe special char. Let's count characters: \"Delaware‑US\" length 11? D1 e2 l3 a4 w5 a6 r7 e8 ‑ (en dash?) 9 U10 S11. So plus parentheses: 1+11+1 =13. plus \")\"? Actually we already counted closing? Actually we have \"(Delaware‑US)\" includes opening \"(\" then \"Delaware‑US\" then \")\" . So total 13. So add 13 =>175\nspace=>176\nand=>179\nspace=>180\nDB=>182\nspace=>183\nLogistics=>191 (Logistics 9) =>191\nspace=>192\nLLC=>195\nspace=>196\n(Delaware‑US).=>? \"(\"1, \"Delaware‑US\"11, \")\"1, \".\"1 =14 =>210\n\nSo first sentence length approx 210 characters.\n\nSecond sentence: \" The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio reflected in the behavioral metric “vs_declared_volume_ratio”: 10.371842105263157.\"\n\nInclude leading space? There's a space after period. We'll count from \"The\". Let's count:\n\nThe=>3\nspace=>4\naggregate=>11 (aggregate 9) =>13? Actually \"aggregate\" 9 letters, so after \"The \" we have \"aggregate\": 9 => total 4+9=13\nspace=>14\namount=>20 (5) =>19? Wait we need to recalc: Let's just approximate length of whole second sentence maybe 150 characters. Let's not be too precise; overall narrative likely under 800.\n\nWe need to ensure total characters 250-800. Our first sentence already ~210, second maybe ~150, third maybe ~120, fourth ~100, fifth ~80, total maybe ~660. So okay.\n\nNow we must ensure we didn't use any metric values not verbatim. We used \"10.37\" as approximate but also used \"10.371842105263157\" exactly. That's fine. We used \"10.37 times\" which is not verbatim; but we said \"roughly 10.37 times\". That's a derived statement; but we must not invent metric values; we can use approximate language but must not claim a metric value that is not present. We used \"10.37 times\" which is derived from the ratio 10.371842105263157. That's okay as we are not stating the exact metric value; we are using approximate. The constraint: \"Every metric value cited (velocity, ratios, counts, channel mix) MUST appear verbatim in auxiliary_findings.behavioral[*].metrics if present, otherwise be computable from transactions[]. Do NOT invent metric values.\" So we can cite the ratio value verbatim, but we can also refer to it as \"10.37 times\" which is not a metric value but a derived statement. That's okay as long as we don't claim a metric value that is not present. We are not claiming \"10.37\" as a metric value; we are using it as a descriptive phrase. That's fine.\n\nBut we must ensure we don't claim any metric that is not present. We referenced \"vs_declared_volume_ratio\": 10.371842105263157. That's present. We also referenced \"channel mix\" maybe not needed. We didn't mention channel mix. That's fine.\n\nNow we must ensure we didn't mention any other metric values not present. We said \"roughly 10.37 times\". That's okay.\n\nNow we must ensure we didn't mention any entity not present. We mentioned \"Haverly Systems, Inc.\" (present), \"ON Capital LLC (BVI)\" (present), \"AE Industries LLC (BVI)\" (present), \"USFP Services LLC (Delaware‑US)\" (present), \"DB Logistics LLC (Delaware‑US)\" (present). Good.\n\nWe mentioned \"OFAC‑matched PEP\". That's derived from sanctions_pep_hits. It's okay.\n\nWe mentioned \"shell‑company pass‑through pattern\". That's referencing typology but not a regulatory frame; but it's okay as part of narrative. The regulatory frame is sanctions, but we can still mention shell-company pattern as part of evidence. The instruction: \"Regulatory Framing (HARD — coherent with _regulatory_frame): - sanctions → OFAC / 31 CFR 501 / sanctioned-jurisdiction risk.\" So we should frame in sanctions context. Mentioning \"shell-company pass-through pattern\" might be more about typology but it's okay as part of evidence. However we must ensure we don't use \"layering\" etc. We are not.\n\nNow we must ensure the narrative ends with a complete sentence. Our last sentence: \"The case should be referred to a human investigator for further review.\" That's a complete sentence. Good.\n\nNow we must output JSON with is_suspicious true and the narrative string.\n\nMake sure to escape any double quotes inside the string. The narrative contains double quotes? It contains “vs_declared_volume_ratio”: 10.371842105263157. That's a colon and quotes? Actually we have “vs_declared_volume_ratio”: 10.371842105263157. The colon and quotes are part of the string? In JSON, we need to escape double quotes. The narrative includes double quotes around vs_declared_volume_ratio? Actually we wrote: “vs_declared_volume_ratio”: 10.371842105263157. That includes a colon and maybe quotes? Let's rewrite to avoid internal double quotes. We can use single quotes? JSON requires double quotes for strings, but inside the string we can include double quotes as long as we escape them. Safer to avoid double quotes inside the string. We can rephrase: vs_declared_volume_ratio 10.371842105263157. Or we can escape the double quotes.\n\nBetter to avoid double quotes altogether. Let's rewrite the narrative without internal double quotes.\n\nRewrite: \"The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\"\n\nWe need to include the ratio mention with the exact value. We can say: \"a ratio of 10.371842105263157 reflects the observed‑to‑declared volume relationship.\" That includes the number but no quotes.\n\nLet's craft final narrative:\n\n\"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio of 10.371842105263157 that matches the behavioral metric vs_declared_volume_ratio. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\"\n\nNow check for any double quotes inside: none. The phrase \"vs_declared_volume_ratio\" includes underscore but no quotes. Good.\n\nNow count characters roughly: Let's approximate length. Might be around 650 characters. Should be within 250-800.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio of 10.371842105263157 that matches the behavioral metric vs_declared_volume_ratio. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\"\n}\n\nMake sure no extra whitespace or newline? It's okay.\n\nNow output as single JSON object, no extra text.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio of 10.371842105263157 that matches the behavioral metric vs_declared_volume_ratio. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio of 10.371842105263157 that matches the behavioral metric vs_declared_volume_ratio. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Between 4 April and 24 April 2026 the account moved five wire transfers totaling $4,600,000 to and from Haverly Systems, Inc., ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate amount is roughly 10.37 times the entity’s declared monthly volume of $443,649, a ratio of 10.371842105263157 that matches the behavioral metric vs_declared_volume_ratio. The first inbound wire to Haverly Systems, Inc. is listed as an OFAC‑matched PEP. The concentration of round‑number wires and the offshore jurisdiction align with a shell‑company pass‑through pattern that raises sanctions concerns. These indicators collectively warrant a SAR filing. The case should be referred to a human investigator for further review.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,295 @@
+{
+  "case_id": "DEMO_0150",
+  "alert_id": "ALT_2444869",
+  "entity_id": "SYN_c521a8b5",
+  "started_at": "2026-05-23T12:16:05.800326+00:00",
+  "finished_at": "2026-05-23T12:16:32.171812+00:00",
+  "wall_clock_ms": 26371.5,
+  "transactions": [
+    {
+      "amount": 933.83,
+      "channel": "ach",
+      "counterparty": "IPVYL Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 1851.84,
+      "channel": "ach",
+      "counterparty": "HGDN Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 966.88,
+      "channel": "cheque",
+      "counterparty": "CDI Group LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 1640.09,
+      "channel": "card",
+      "counterparty": "Susan Taylor",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 2377.27,
+      "channel": "ach",
+      "counterparty": "UIF Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 1300.92,
+      "channel": "ach",
+      "counterparty": "IKOLT Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 2148.48,
+      "channel": "ach",
+      "counterparty": "CIETQ Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 1031.45,
+      "channel": "wire",
+      "counterparty": "AJ Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 1779.8,
+      "channel": "card",
+      "counterparty": "Andrew Thompson",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 1274.95,
+      "channel": "wire",
+      "counterparty": "WV Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 2309.34,
+      "channel": "wire",
+      "counterparty": "FJW Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 1045.96,
+      "channel": "wire",
+      "counterparty": "WX Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 1037.7,
+      "channel": "card",
+      "counterparty": "Linda Garcia",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 901.42,
+      "channel": "card",
+      "counterparty": "John Wilson",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 2412.93,
+      "channel": "ach",
+      "counterparty": "ITE Services LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 751.21,
+      "channel": "wire",
+      "counterparty": "RXV Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 681.7,
+      "channel": "ach",
+      "counterparty": "KXSCY Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 1568.71,
+      "channel": "card",
+      "counterparty": "Andrew Lewis",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 1575.36,
+      "channel": "ach",
+      "counterparty": "QWMPC Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 695.9,
+      "channel": "cheque",
+      "counterparty": "KQPY Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 2170.63,
+      "channel": "card",
+      "counterparty": "Elizabeth Garcia",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_c521a8b5",
+    "entity_type": "individual",
+    "expected_monthly_volume": 9045.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$9,045.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "IPI Partners, LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.381,
+      "card": 0.286,
+      "wire": 0.238,
+      "cheque": 0.095
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.38095238095238093, 'cheque': 0.09523809523809523, 'card': 0.2857142857142857, 'wire': 0.23809523809523808})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from the passage. Let's parse.\n\nWe have entity_id SYN_c521a8b5, individual, expected monthly volume 9045.0 USD. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count lines. I'll enumerate:\n\n1 2026-02-25\n2 2026-03-11\n3 2026-04-04\n4 2026-04-07\n5 2026-02-06\n6 2026-04-27\n7 2026-04-04 (second entry? Actually there are two entries on 2026-04-04: one wi"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$30,456.37 total transaction volume, about 3.37× the declared $9,045 monthly volume.",
+      "calculation": "1. Extract all amount values from the transaction table.\n2. Add them sequentially: 933.83 + 1851.84 = 2785.67; +966.88 = 3752.55; +1640.09 = 5392.64; +2377.27 = 7769.91; +1300.92 = 9070.83; +2148.48 = 11219.31; +1031.45 = 12250.76; +1779.80 = 14030.56; +1274.95 = 15305.51; +2309.34 = 17614.85; +1045.96 = 18660.81; +1037.70 = 19698.51; +901.42 = 20599.93; +2412.93 = 23012.86; +751.21 = 23764.07; +681.70 = 24445.77; +1568.71 = 26014.48; +1575.36 = 27589.84; +695.90 = 28285.74; +2170.63 = 30456.37.\n3. Compare result to expected monthly volume of $9,045: 30456.37 / 9045 ≈ 3.37 times.",
+      "evidence": "Transaction amounts: 933.83, 1851.84, 966.88, 1640.09, 2377.27, 1300.92, 2148.48, 1031.45, 1779.80, 1274.95, 2309.34, 1045.96, 1037.70, 901.42, 2412.93, 751.21, 681.70, 1568.71, 1575.36, 695.90, 2170.63 (all USD)."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage indicates that no policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute is provided to evaluate the conduct.",
+      "label": "neutral",
+      "reasoning": "The statute identifier is '' (empty), indicating no statutory text is available for analysis."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute is provided to evaluate the conduct.",
+        "label": "neutral",
+        "reasoning": "The statute identifier is '' (empty), indicating no statutory text is available for analysis."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$30,456.37 total transaction volume, about 3.37× the declared $9,045 monthly volume.",
+        "calculation": "1. Extract all amount values from the transaction table.\n2. Add them sequentially: 933.83 + 1851.84 = 2785.67; +966.88 = 3752.55; +1640.09 = 5392.64; +2377.27 = 7769.91; +1300.92 = 9070.83; +2148.48 = 11219.31; +1031.45 = 12250.76; +1779.80 = 14030.56; +1274.95 = 15305.51; +2309.34 = 17614.85; +1045.96 = 18660.81; +1037.70 = 19698.51; +901.42 = 20599.93; +2412.93 = 23012.86; +751.21 = 23764.07; +681.70 = 24445.77; +1568.71 = 26014.48; +1575.36 = 27589.84; +695.90 = 28285.74; +2170.63 = 30456.37.\n3. Compare result to expected monthly volume of $9,045: 30456.37 / 9045 ≈ 3.37 times.",
+        "evidence": "Transaction amounts: 933.83, 1851.84, 966.88, 1640.09, 2377.27, 1300.92, 2148.48, 1031.45, 1779.80, 1274.95, 2309.34, 1045.96, 1037.70, 901.42, 2412.93, 751.21, 681.70, 1568.71, 1575.36, 695.90, 2170.63 (all USD)."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage indicates that no policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 933.83, \"channel\": \"ach\", \"counterparty\": \"IPVYL Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 1851.84, \"channel\": \"ach\", \"counterparty\": \"HGDN Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 966.88, \"channel\": \"cheque\", \"counterparty\": \"CDI Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 1640.09, \"channel\": \"card\", \"counterparty\": \"Susan Taylor\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 2377.27, \"channel\": \"ach\", \"counterparty\": \"UIF Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 1300.92, \"channel\": \"ach\", \"counterparty\": \"IKOLT Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 2148.48, \"channel\": \"ach\", \"counterparty\": \"CIETQ Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 1031.45, \"channel\": \"wire\", \"counterparty\": \"AJ Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 1779.8, \"channel\": \"card\", \"counterparty\": \"Andrew Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 1274.95, \"channel\": \"wire\", \"counterparty\": \"WV Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 2309.34, \"channel\": \"wire\", \"counterparty\": \"FJW Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 1045.96, \"channel\": \"wire\", \"counterparty\": \"WX Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 1037.7, \"channel\": \"card\", \"counterparty\": \"Linda Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 901.42, \"channel\": \"card\", \"counterparty\": \"John Wilson\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 2412.93, \"channel\": \"ach\", \"counterparty\": \"ITE Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 751.21, \"channel\": \"wire\", \"counterparty\": \"RXV Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 681.7, \"channel\": \"ach\", \"counterparty\": \"KXSCY Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 1568.71, \"channel\": \"card\", \"counterparty\": \"Andrew Lewis\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 1575.36, \"channel\": \"ach\", \"counterparty\": \"QWMPC Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 695.9, \"channel\": \"cheque\", \"counterparty\": \"KQPY Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 2170.63, \"channel\": \"card\", \"counterparty\": \"Elizabeth Garcia\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_c521a8b5\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 9045, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$9,045.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [{\"name\": \"IPI Partners, LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute is provided to evaluate the conduct.\", \"label\": \"neutral\", \"reasoning\": \"The statute identifier is '' (empty), indicating no statutory text is available for analysis.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$30,456.37 total transaction volume, about 3.37× the declared $9,045 monthly volume.\", \"calculation\": \"1. Extract all amount values from the transaction table.\\n2. Add them sequentially: 933.83 + 1851.84 = 2785.67; +966.88 = 3752.55; +1640.09 = 5392.64; +2377.27 = 7769.91; +1300.92 = 9070.83; +2148.48 = 11219.31; +1031.45 = 12250.76; +1779.80 = 14030.56; +1274.95 = 15305.51; +2309.34 = 17614.85; +1045.96 = 18660.81; +1037.70 = 19698.51; +901.42 = 20599.93; +2412.93 = 23012.86; +751.21 = 23764.07; +681.70 = 24445.77; +1568.71 = 26014.48; +1575.36 = 27589.84; +695.90 = 28285.74; +2170.63 = 30456.37.\\n3. Compare result to expected monthly volume of $9,045: 30456.37 / 9045 ≈ 3.37 times.\", \"evidence\": \"Transaction amounts: 933.83, 1851.84, 966.88, 1640.09, 2377.27, 1300.92, 2148.48, 1031.45, 1779.80, 1274.95, 2309.34, 1045.96, 1037.70, 901.42, 2412.93, 751.21, 681.70, 1568.71, 1575.36, 695.90, 2170.63 (all USD).\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage indicates that no policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR, not suspicious. However we must check decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. The regulatory frame is benign, which likely indicates not suspicious. Also typology inferred is \"none\". So likely is_suspicious = false, and report empty string.\n\nBut we must verify if any auxiliary_findings indicate suspiciousness. There's numeric finding: total volume ~3.37x declared monthly volume. That's suspicious maybe, but regulatory frame says benign. The typology inferred is \"none\". The regulatory frame \"benign\" likely overrides. The decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. The presence of benign frame suggests not suspicious. Also the typology inferred is \"none\". So likely not suspicious.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nCheck constraints: When false, report must be empty string. Provide JSON only.\n\nThus final answer.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

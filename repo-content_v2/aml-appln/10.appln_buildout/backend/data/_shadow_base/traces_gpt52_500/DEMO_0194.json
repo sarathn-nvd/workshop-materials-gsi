@@ -1,0 +1,253 @@
+{
+  "case_id": "DEMO_0194",
+  "alert_id": "ALT_2474443",
+  "entity_id": "SYN_b9cd6940",
+  "started_at": "2026-05-28T11:54:52.159305+00:00",
+  "finished_at": "2026-05-28T11:54:58.931462+00:00",
+  "wall_clock_ms": 6772.2,
+  "transactions": [
+    {
+      "amount": 5325.78,
+      "channel": "cash",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5360.73,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6672.05,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8853.0,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5042.67,
+      "channel": "cash",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4813.72,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8826.73,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5351.75,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6368.51,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 3764.09,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5486.25,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4688.7,
+      "channel": "ach",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_b9cd6940",
+    "entity_type": "business",
+    "expected_monthly_volume": 747759.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$747,759.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.583,
+      "cash": 0.417
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "under",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.4166666666666667, 'ach': 0.5833333333333334})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_b9cd6940 executed 12 transactions totaling $70,553.98 USD with channel mix {\"ach\": 0.583, \"cash\": 0.417}. The 24-hour velocity peak is 3 against a 30-day average of 2.0. Volume vs declared monthly is 0.47x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 12,
+        "tx_total_usd": 70553.98,
+        "channel_mix": {
+          "ach": 0.583,
+          "cash": 0.417
+        },
+        "velocity_24h_max": 3,
+        "velocity_24h_avg_30d": 2.0,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.98,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.47
+      },
+      "evidence": "transactions[0..11]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total inbound volume 70,553.98",
+      "calculation": "1) Sum all listed transaction amounts to get total inbound volume: transactions[0..11] = 5,325.78 + 5,360.73 + 6,672.05 + 8,853.00 + 5,042.67 + 4,813.72 + 8,826.73 + 5,351.75 + 6,368.51 + 3,764.09 + 5,486.25 + 4,688.70 = 70,553.98.\n2) Take KYC declared expected monthly volume: kyc_profile.expected_monthly_volume = 747,759.0.\n3) Compute ratio of observed total inbound volume to declared monthly volume: 70,553.98 / 747,759.0 = 0.09436 (≈9.44%).\n4) Compute difference vs declared monthly volume: 747,759.0 − 70,553.98 = 677,205.02.",
+      "evidence": "transactions[0..11]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided, so there is no way to test statutory elements against the fact pattern. Because no statute is mapped, applicability is indeterminable on these facts. Phrase in answer: \"no statute provided\"."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided, so there is no way to test statutory elements against the fact pattern. Because no statute is mapped, applicability is indeterminable on these facts. Phrase in answer: \"no statute provided\"."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_b9cd6940 executed 12 transactions totaling $70,553.98 USD with channel mix {\"ach\": 0.583, \"cash\": 0.417}. The 24-hour velocity peak is 3 against a 30-day average of 2.0. Volume vs declared monthly is 0.47x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 12,
+          "tx_total_usd": 70553.98,
+          "channel_mix": {
+            "ach": 0.583,
+            "cash": 0.417
+          },
+          "velocity_24h_max": 3,
+          "velocity_24h_avg_30d": 2.0,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.98,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.47
+        },
+        "evidence": "transactions[0..11]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total inbound volume 70,553.98",
+        "calculation": "1) Sum all listed transaction amounts to get total inbound volume: transactions[0..11] = 5,325.78 + 5,360.73 + 6,672.05 + 8,853.00 + 5,042.67 + 4,813.72 + 8,826.73 + 5,351.75 + 6,368.51 + 3,764.09 + 5,486.25 + 4,688.70 = 70,553.98.\n2) Take KYC declared expected monthly volume: kyc_profile.expected_monthly_volume = 747,759.0.\n3) Compute ratio of observed total inbound volume to declared monthly volume: 70,553.98 / 747,759.0 = 0.09436 (≈9.44%).\n4) Compute difference vs declared monthly volume: 747,759.0 − 70,553.98 = 677,205.02.",
+        "evidence": "transactions[0..11]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 5325.78, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5360.73, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6672.05, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8853.0, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5042.67, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4813.72, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8826.73, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5351.75, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6368.51, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 3764.09, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5486.25, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4688.7, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}], \"kyc_profile\": {\"entity_id\": \"SYN_b9cd6940\", \"entity_type\": \"business\", \"expected_monthly_volume\": 747759.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$747,759.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"Neutral: no statute provided, so statutory applicability cannot be determined.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided, so there is no way to test statutory elements against the fact pattern. Because no statute is mapped, applicability is indeterminable on these facts. Phrase in answer: \\\"no statute provided\\\".\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_b9cd6940 executed 12 transactions totaling $70,553.98 USD with channel mix {\\\"ach\\\": 0.583, \\\"cash\\\": 0.417}. The 24-hour velocity peak is 3 against a 30-day average of 2.0. Volume vs declared monthly is 0.47x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 12, \"tx_total_usd\": 70553.98, \"channel_mix\": {\"ach\": 0.583, \"cash\": 0.417}, \"velocity_24h_max\": 3, \"velocity_24h_avg_30d\": 2.0, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.98, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.47}, \"evidence\": \"transactions[0..11]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total inbound volume 70,553.98\", \"calculation\": \"1) Sum all listed transaction amounts to get total inbound volume: transactions[0..11] = 5,325.78 + 5,360.73 + 6,672.05 + 8,853.00 + 5,042.67 + 4,813.72 + 8,826.73 + 5,351.75 + 6,368.51 + 3,764.09 + 5,486.25 + 4,688.70 = 70,553.98.\\n2) Take KYC declared expected monthly volume: kyc_profile.expected_monthly_volume = 747,759.0.\\n3) Compute ratio of observed total inbound volume to declared monthly volume: 70,553.98 / 747,759.0 = 0.09436 (≈9.44%).\\n4) Compute difference vs declared monthly volume: 747,759.0 − 70,553.98 = 677,205.02.\", \"evidence\": \"transactions[0..11]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Between 2026-04-15 and 2026-04-21, business SYN_b9cd6940 (MSB) received 12 inbound deposits totaling $70,553.98 from only three counterparties (AC399607/AC345884/AC384913) via mixed cash and ACH. Multiple cash deposits are sub-$10K (e.g., $6,368.51, $5,486.25, $5,325.78, $5,042.67, $3,764.09) alongside similar-sized ACH credits, consistent with potential structuring/fan-in. No sanctions hits; no statute/policy text provided to cite. Activity warrants SAR consideration pending investigator review.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Between 2026-04-15 and 2026-04-21, business SYN_b9cd6940 (MSB) received 12 inbound deposits totaling $70,553.98 from only three counterparties (AC399607/AC345884/AC384913) via mixed cash and ACH. Multiple cash deposits are sub-$10K (e.g., $6,368.51, $5,486.25, $5,325.78, $5,042.67, $3,764.09) alongside similar-sized ACH credits, consistent with potential structuring/fan-in. No sanctions hits; no statute/policy text provided to cite. Activity warrants SAR consideration pending investigator review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Between 2026-04-15 and 2026-04-21, business SYN_b9cd6940 (MSB) received 12 inbound deposits totaling $70,553.98 from only three counterparties (AC399607/AC345884/AC384913) via mixed cash and ACH. Multiple cash deposits are sub-$10K (e.g., $6,368.51, $5,486.25, $5,325.78, $5,042.67, $3,764.09) alongside similar-sized ACH credits, consistent with potential structuring/fan-in. No sanctions hits; no statute/policy text provided to cite. Activity warrants SAR consideration pending investigator review.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,167 @@
+{
+  "case_id": "DEMO_0174",
+  "alert_id": "ALT_2428047",
+  "entity_id": "SYN_00ff3538",
+  "started_at": "2026-05-23T12:19:15.190151+00:00",
+  "finished_at": "2026-05-23T12:19:41.071108+00:00",
+  "wall_clock_ms": 25881.0,
+  "transactions": [
+    {
+      "amount": 24990472.56,
+      "channel": "wire",
+      "counterparty": "PXU Associates LLC, Germany",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": "trade-finance wire (benign: matches declared invoice value)"
+    },
+    {
+      "amount": 36676479.5,
+      "channel": "ach",
+      "counterparty": "SRPI Group LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 40480318.53,
+      "channel": "ach",
+      "counterparty": "UYQEZ Services LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 34243498.51,
+      "channel": "wire",
+      "counterparty": "JTH Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 39586329.37,
+      "channel": "ach",
+      "counterparty": "WUOEI Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 15549882.77,
+      "channel": "wire",
+      "counterparty": "DTGZE Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_00ff3538",
+    "entity_type": "business",
+    "expected_monthly_volume": 34397872.0,
+    "business_purpose": "Securities broker / dealer firm; intermediary capital flows; declared monthly volume ~$34,397,872.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-IL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "ach": 0.5
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'ach': 0.5})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_00ff3538, business purpose etc. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count: entries: 2026-03-26, 2026-04-09, 2026-02-18, 2026-04-20, 2026-02-01, 2026-04-20. That's 6 transactions.\n\n- tx_total_usd: sum of amounts in USD. Let's sum amounts:\n\n1) 24,990,472.56\n2) 36,676,479.50\n3) 40,480,318.53\n4) 34,243"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$191,526,981.24 total transaction volume, about 5.6× the declared $34,397,872 monthly volume.",
+      "calculation": "1. Extract transaction amounts: 24,990,472.56; 36,676,479.50; 40,480,318.53; 34,243,498.51; 39,586,329.37; 15,549,882.77.\n2. Sum them: 24,990,472.56 + 36,676,479.50 = 61,666,952.06; + 40,480,318.53 = 102,147,270.59; + 34,243,498.51 = 136,390,769.10; + 39,586,329.37 = 175,977,098.47; + 15,549,882.77 = 191,526,981.24.\n3. Compare to declared monthly volume: 191,526,981.24 / 34,397,872 ≈ 5.57.\n4. Conclude the total is roughly 5.6 times the declared volume.",
+      "evidence": "Rows with amounts: 2026-03-26 $24,990,472.56; 2026-04-09 $36,676,479.50; 2026-02-18 $40,480,318.53; 2026-04-20 $34,243,498.51; 2026-02-01 $39,586,329.37; 2026-04-20 $15,549,882.77."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage does not contain any policy excerpts.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be evaluated under any statute.",
+      "label": "neutral",
+      "reasoning": "Statute identifier is ''"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be evaluated under any statute.",
+        "label": "neutral",
+        "reasoning": "Statute identifier is ''"
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$191,526,981.24 total transaction volume, about 5.6× the declared $34,397,872 monthly volume.",
+        "calculation": "1. Extract transaction amounts: 24,990,472.56; 36,676,479.50; 40,480,318.53; 34,243,498.51; 39,586,329.37; 15,549,882.77.\n2. Sum them: 24,990,472.56 + 36,676,479.50 = 61,666,952.06; + 40,480,318.53 = 102,147,270.59; + 34,243,498.51 = 136,390,769.10; + 39,586,329.37 = 175,977,098.47; + 15,549,882.77 = 191,526,981.24.\n3. Compare to declared monthly volume: 191,526,981.24 / 34,397,872 ≈ 5.57.\n4. Conclude the total is roughly 5.6 times the declared volume.",
+        "evidence": "Rows with amounts: 2026-03-26 $24,990,472.56; 2026-04-09 $36,676,479.50; 2026-02-18 $40,480,318.53; 2026-04-20 $34,243,498.51; 2026-02-01 $39,586,329.37; 2026-04-20 $15,549,882.77."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage does not contain any policy excerpts.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 24990472.56, \"channel\": \"wire\", \"counterparty\": \"PXU Associates LLC, Germany\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"trade-finance wire (benign: matches declared invoice value)\"}, {\"amount\": 36676479.5, \"channel\": \"ach\", \"counterparty\": \"SRPI Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 40480318.53, \"channel\": \"ach\", \"counterparty\": \"UYQEZ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 34243498.51, \"channel\": \"wire\", \"counterparty\": \"JTH Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 39586329.37, \"channel\": \"ach\", \"counterparty\": \"WUOEI Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 15549882.77, \"channel\": \"wire\", \"counterparty\": \"DTGZE Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_00ff3538\", \"entity_type\": \"business\", \"expected_monthly_volume\": 34397872, \"business_purpose\": \"Securities broker / dealer firm; intermediary capital flows; declared monthly volume ~$34,397,872.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-IL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be evaluated under any statute.\", \"label\": \"neutral\", \"reasoning\": \"Statute identifier is ''\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$191,526,981.24 total transaction volume, about 5.6× the declared $34,397,872 monthly volume.\", \"calculation\": \"1. Extract transaction amounts: 24,990,472.56; 36,676,479.50; 40,480,318.53; 34,243,498.51; 39,586,329.37; 15,549,882.77.\\n2. Sum them: 24,990,472.56 + 36,676,479.50 = 61,666,952.06; + 40,480,318.53 = 102,147,270.59; + 34,243,498.51 = 136,390,769.10; + 39,586,329.37 = 175,977,098.47; + 15,549,882.77 = 191,526,981.24.\\n3. Compare to declared monthly volume: 191,526,981.24 / 34,397,872 ≈ 5.57.\\n4. Conclude the total is roughly 5.6 times the declared volume.\", \"evidence\": \"Rows with amounts: 2026-03-26 $24,990,472.56; 2026-04-09 $36,676,479.50; 2026-02-18 $40,480,318.53; 2026-04-20 $34,243,498.51; 2026-02-01 $39,586,329.37; 2026-04-20 $15,549,882.77.\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage does not contain any policy excerpts.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That indicates no SAR; is_suspicious should be false, and report empty string.\n\nBut we must verify decision rule: Set is_suspicious=true if evidence warrants filing a SAR; otherwise false. Since regulatory_frame is benign, likely not suspicious. Also auxiliary_findings numeric shows volume 5.6x declared, but that is a finding. However regulatory_frame benign indicates no SAR. The decision rule: is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. The presence of benign frame suggests not suspicious. So is_suspicious = false, report = \"\".\n\nWe must output JSON only, no extra text. Ensure proper JSON formatting.\n\nThus output: {\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}\n\nCheck no extra spaces? It's fine.\n\nReturn exactly that.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

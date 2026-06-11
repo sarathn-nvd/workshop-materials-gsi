@@ -1,0 +1,159 @@
+{
+  "case_id": "DEMO_0153",
+  "alert_id": "ALT_2484319",
+  "entity_id": "SYN_e017e1b4",
+  "started_at": "2026-05-23T12:39:44.131818+00:00",
+  "finished_at": "2026-05-23T12:39:53.044747+00:00",
+  "wall_clock_ms": 8913.0,
+  "transactions": [
+    {
+      "amount": 212786.16,
+      "channel": "wire",
+      "counterparty": "TZZC Enterprises LLC, Germany",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "trade-finance wire (benign: matches declared invoice value)"
+    },
+    {
+      "amount": 195029.03,
+      "channel": "ach",
+      "counterparty": "TY Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 228360.68,
+      "channel": "ach",
+      "counterparty": "EPU Services LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 439492.78,
+      "channel": "cash",
+      "counterparty": "Elizabeth Miller",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 452477.1,
+      "channel": "ach",
+      "counterparty": "OEABP Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": ""
+    },
+    {
+      "amount": 274872.33,
+      "channel": "cash",
+      "counterparty": "James Miller",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_e017e1b4",
+    "entity_type": "business",
+    "expected_monthly_volume": 393310.0,
+    "business_purpose": "Convenience / grocery store; multi-shift cash operation; declared monthly volume ~$393,310.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.5,
+      "cash": 0.333,
+      "wire": 0.167
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'ach': 0.5, 'cash': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_e017e1b4, business, expected monthly volume 393310.0 USD. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count: entries: 2026-04-24, 2026-03-03, 2026-03-22, 2026-03-18, 2026-04-14, 2026-04-09 => 6 transactions.\n\n- tx_total_usd: sum of amounts. Let's sum:\n\n212,786.16\n195,029.03\n228,360.68\n439,492.78\n452,477.10"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to compute sum of transaction amounts, compare to expected monthly volume 393,310.0. Provide JSON with fields: question, answer, calculation, evidence.\n\nWe need to parse passage: Transactions list with amounts. Let's list amounts:\n\n1. 2026-04-24, 212,786.16 USD\n2. 2026-03-03, 195,029.03 USD\n3. 2026-03-22, 228,360.68 USD\n4. 2026-03-18, 439,492.78 USD\n5. 2026-04-14, 452,477.10 USD\n6. 2026-04-09, 274,872.33 USD\n\nSum them.\n\nLet's compute:\n\n212,786.16 + 195,029.03 = 407,815.19\nAdd 228,360.68 "
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpt is available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute is available to evaluate the conduct.",
+      "label": "neutral",
+      "reasoning": "The statute identifier is '' (empty), indicating no applicable law, so the conduct cannot be classified as entailment or contradiction."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute is available to evaluate the conduct.",
+        "label": "neutral",
+        "reasoning": "The statute identifier is '' (empty), indicating no applicable law, so the conduct cannot be classified as entailment or contradiction."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpt is available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 212786.16, \"channel\": \"wire\", \"counterparty\": \"TZZC Enterprises LLC, Germany\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"trade-finance wire (benign: matches declared invoice value)\"}, {\"amount\": 195029.03, \"channel\": \"ach\", \"counterparty\": \"TY Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 228360.68, \"channel\": \"ach\", \"counterparty\": \"EPU Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 439492.78, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Miller\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 452477.1, \"channel\": \"ach\", \"counterparty\": \"OEABP Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"\"}, {\"amount\": 274872.33, \"channel\": \"cash\", \"counterparty\": \"James Miller\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_e017e1b4\", \"entity_type\": \"business\", \"expected_monthly_volume\": 393310, \"business_purpose\": \"Convenience / grocery store; multi-shift cash operation; declared monthly volume ~$393,310.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute is available to evaluate the conduct.\", \"label\": \"neutral\", \"reasoning\": \"The statute identifier is '' (empty), indicating no applicable law, so the conduct cannot be classified as entailment or contradiction.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpt is available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That indicates no SAR; is_suspicious should be false, and report empty string.\n\nBut we must verify decision rule: Set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. Here regulatory_frame benign => likely not suspicious. Also auxiliary_findings have no behavioral, numeric, citation; only statutory neutral. So no evidence. So is_suspicious = false, report = \"\".\n\nWe must output JSON object only, no extra text. Ensure proper JSON formatting.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nCheck constraints: When false, report must be empty string. Good.\n\nThus final.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

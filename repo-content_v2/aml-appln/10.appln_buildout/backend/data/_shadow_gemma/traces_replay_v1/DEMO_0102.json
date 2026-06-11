@@ -1,0 +1,151 @@
+{
+  "case_id": "DEMO_0102",
+  "entity_id": "SYN_f6a4c562",
+  "started_at": "2026-05-23T13:15:02.429086+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 137.4,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2616.65, \"channel\": \"wire\", \"counterparty\": \"Sarah Johnson (family member)\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 2569.95, \"channel\": \"wire\", \"counterparty\": \"Sarah Johnson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"wire to family (benign, similar amount)\"}, {\"amount\": 1314.82, \"channel\": \"card\", \"counterparty\": \"Robert Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 659.48, \"channel\": \"ach\", \"counterparty\": \"DJLHR Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 608.25, \"channel\": \"ach\", \"counterparty\": \"QZM Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 1399.82, \"channel\": \"card\", \"counterparty\": \"Robert Brown\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 1074.17, \"channel\": \"ach\", \"counterparty\": \"JLGMF Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f6a4c562\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1409, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,409.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-AZ\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"No statute text is provided to analyze against the fact pattern.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_f6a4c562, a retired individual with a high risk rating, shows a total of 6 transactions amounting to $10,243.14. Activity is primarily conducted via wire (2 transactions) and ACH (3 transactions), with one card transaction. The highest velocity in a 24-hour period is 1, and the account interacted with 4 unique counterparties over 7 days. The total observed volume is approximately 7.27 times the declared monthly volume of $1,409.00. Notably, a wire transfer of $2,616.65 was sent to a family member on 2026-03-31, followed by a similar wire of $2,569.95 on 2026-04-25.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 10243.14, \"channel_mix\": {\"wire\": 0.333, \"ach\": 0.5, \"card\": 0.167, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 4, \"amount_z_score_max\": 1.84, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 7.27}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume for the period is $10,243.14, which exceeds the expected monthly volume of $1,409.00.\", \"calculation\": \"1. Identify all transaction amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17.\\n2. Sum the amounts: 2616.65 + 2569.95 + 1314.82 + 659.48 + 608.25 + 1399.82 + 1074.17 = 10,243.14.\\n3. Compare to KYC profile: 10,243.14 > 1,409.00.\", \"evidence\": \"Transaction list rows with amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17; KYC profile 'expected_monthly_volume: 1409.0'\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "transactions": [
+    {
+      "amount": 2616.65,
+      "channel": "wire",
+      "counterparty": "Sarah Johnson (family member)",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 2569.95,
+      "channel": "wire",
+      "counterparty": "Sarah Johnson (family member)",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "wire to family (benign, similar amount)"
+    },
+    {
+      "amount": 1314.82,
+      "channel": "card",
+      "counterparty": "Robert Thomas",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 659.48,
+      "channel": "ach",
+      "counterparty": "DJLHR Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 608.25,
+      "channel": "ach",
+      "counterparty": "QZM Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 1399.82,
+      "channel": "card",
+      "counterparty": "Robert Brown",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 1074.17,
+      "channel": "ach",
+      "counterparty": "JLGMF Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f6a4c562",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1409.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,409.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-AZ"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "wire": 0.286,
+      "card": 0.286
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+        "label": "neutral",
+        "reasoning": "No statute text is provided to analyze against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_f6a4c562, a retired individual with a high risk rating, shows a total of 6 transactions amounting to $10,243.14. Activity is primarily conducted via wire (2 transactions) and ACH (3 transactions), with one card transaction. The highest velocity in a 24-hour period is 1, and the account interacted with 4 unique counterparties over 7 days. The total observed volume is approximately 7.27 times the declared monthly volume of $1,409.00. Notably, a wire transfer of $2,616.65 was sent to a family member on 2026-03-31, followed by a similar wire of $2,569.95 on 2026-04-25.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 10243.14,
+          "channel_mix": {
+            "wire": 0.333,
+            "ach": 0.5,
+            "card": 0.167,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 4,
+          "amount_z_score_max": 1.84,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 7.27
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume for the period is $10,243.14, which exceeds the expected monthly volume of $1,409.00.",
+        "calculation": "1. Identify all transaction amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17.\n2. Sum the amounts: 2616.65 + 2569.95 + 1314.82 + 659.48 + 608.25 + 1399.82 + 1074.17 = 10,243.14.\n3. Compare to KYC profile: 10,243.14 > 1,409.00.",
+        "evidence": "Transaction list rows with amounts: 2616.65, 2569.95, 1314.82, 659.48, 608.25, 1399.82, 1074.17; KYC profile 'expected_monthly_volume: 1409.0'"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "aml-custom-task-nim-1",
+    "endpoint": "http://localhost:8088/v1"
+  }
+}

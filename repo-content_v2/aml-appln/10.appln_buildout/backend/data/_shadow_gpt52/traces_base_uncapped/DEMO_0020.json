@@ -1,0 +1,214 @@
+{
+  "case_id": "DEMO_0020",
+  "alert_id": "ALT_2421581",
+  "entity_id": "SYN_b511b639",
+  "started_at": "2026-05-23T12:00:39.279982+00:00",
+  "finished_at": "2026-05-23T12:01:03.671022+00:00",
+  "wall_clock_ms": 24391.1,
+  "transactions": [
+    {
+      "amount": 2893.15,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 9958.81,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 24006.18,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 88578.88,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "wire to newly-added payee"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_b511b639",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2670.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,670.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/312factsheet",
+      "url": "",
+      "text": "owners of such foreign bank, if its shares are not publicly traded;\nThe original proposed rulemaking issued in 2002 sought to create an exception to\nthe enhanced due diligence requirement for those offshore banks that were branches of\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\ndiligence those foreign banks operating under an offshore banking license that are\nbranches of banks licensed in a jurisdiction where one or more banks had been\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\na different approach, focusing instead on clarifying that U.S. financial institutions have\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\naccount. Comments are sought on all aspects of this proposed rulemaking.\nII. Private Banking Provisions\nThe final rule requires certain U.S. financial institutions to establish and maintain\na due diligence program for private banking accounts that is reasonably designed to\ndetect and report any known or suspected money laundering or suspicious activity.\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\nbanking account that is maintained for senior foreign political figures, their immediate\nfamily members, or persons widely and publicly known to"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "PUBLISHED\nUNITED STATES COURT OF APPEALS\n              FOR THE FOURTH CIRCUIT\nUNITED STATES OF AMERICA,             \n                Plaintiff-Appellee,\n               v.                           No. 10-4478\nWALTER LLOYD BLAIR,\n             Defendant-Appellant.\n                                      \n        Appeal from the United States District Court\n         for the District of Maryland, at Greenbelt.\n          Peter J. Messitte, Senior District Judge.\n                   (8:08-cr-00505-PJM-1)\n                  Argued: March 25, 2011\n                Decided: September 21, 2011\n  Before TRAXLER, Chief Judge, and WILKINSON and\n              WYNN, Circuit Judges.\nAffirmed in part, reversed in part, and remanded by published\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\nson wrote the majority opinion as to Section IV, in which\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\nopinion as to Section IV.\n                         COUNSEL\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\nMAN, Washington, D.C., for Appellant. Michael Richard\n\f2\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\nstein, United States Attorney, Baltimore, Maryland, Jonathan\nC. Su, Assistant United States Attorney, OFFICE OF THE\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\nAppellee.\n                               OPINION\nPER CURIAM:\n   Walter L. Blair, a Maryland attorne"
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "ing beneficiaries)\nAdvanced systems (for\nmore developed\norganisations)\n◼ Sound investment policies\n◼ Resource generation plan\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\nRECOMMENDATION 8\n75\n© 2023 FATF/OECD\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\nencompasses a statement of principles of development as well as a code of conduct,\nand outlines the ethical principles that must be adhered to, and promoted, by the\norganisation and its members. Below is an excerpt from the Code related to\norganisational integrity:\nGovernance\n Each Organisation shall be governed fairly and responsibly by an\nindependent, active and informed governing body (e.g., the Board of\nDirectors).\n All voting members of the governing body shall serve without compensation,\nexcept for reasonable expenses incurred to fulfil their organisational duties.\n Each Organisation shall establish and periodically review a governance\nframework suitable for fulfilling its mandate. The structure shall enable the\nOrganisation to make timely decisions and to meet its responsibilities. The\nframework shall include an appropriate governance structure and operations;\nrelationship of senior staff and the governing body; and clear decision-making\nprocesses. […]\nOrganisational Integrity\n The affairs of the Organisation shall be conducted with integrity and\ntransparency. The Organisa"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-ELDER-EXPLOITATION-01",
+      "section": "Investigation Steps",
+      "text": "1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "elder",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "elder_exploitation"
+  },
+  "typology_hypothesis": "elder_exploitation",
+  "activity_descriptor": "Retiree with 4 escalating wires to (Robert Johnson (new payee))",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity executed 4 transactions (tx_count: 4) totaling $125,437.02 (tx_total_usd: 125437.02) with a channel mix of 1.0 wire, 0.0 ach, and 0.0 cash. Velocity metrics show a 24‑hour maximum of 1 (velocity_24h_max: 1) and a 30‑day average of 0.1333 (velocity_24h_avg_30d: 0.1333), while unique counterparties in the last 7 days are 1 (unique_counterparties_7d: 1). The highest amount z‑score is 1.495 (amount_z_score_max: 1.495), country risk is 0.9 (country_risk_max: 0.9), a loop was detected (loop_detected: true), and the observed volume versus declared volume ratio is 47.018 (vs_declared_volume_ratio: 47.018).",
+      "metrics": {
+        "tx_count": 4,
+        "tx_total_usd": 125437.02,
+        "channel_mix": {
+          "wire": 1.0,
+          "ach": 0.0,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.1333,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.495,
+        "country_risk_max": 0.9,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 47.018
+      },
+      "evidence": "transactions[0..3]"
+    },
+    "numeric": {
+      "question": "Compute the escalation rate of wires to any newly-added payee.",
+      "answer": "$88578.88 is about 30.6× the first wire amount, representing a ~30.6‑fold escalation.",
+      "calculation": "1. Identify the first wire amount: $2,893.15.\n2. Identify the last wire amount: $88,578.88.\n3. Compute the escalation factor: 88,578.88 ÷ 2,893.15 ≈ 30.62.\n4. Round to one decimal place: 30.6×.",
+      "evidence": "Transaction amounts: 2,893.15, 9,958.81, 24,006.18, 88,578.88 (all USD, payee: Robert Johnson (new payee))"
+    },
+    "citation": {
+      "question": "What does pdfs/312factsheet say about the activity described?",
+      "answer": "The final rule requires certain U.S. financial institutions to establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering or suspicious activity.",
+      "evidence_span": "The final rule requires certain U.S. financial institutions to establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering or suspicious activity."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "Yes, the described transactions constitute suspicious activity that triggers the reporting obligations under 31 U.S.C. § 5318(g).",
+      "label": "entailment",
+      "reasoning": "The pattern of multiple large, same-day wires to a newly added payee matches the suspicious activity indicators covered by 31 U.S.C. § 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the described transactions constitute suspicious activity that triggers the reporting obligations under 31 U.S.C. § 5318(g).",
+        "label": "entailment",
+        "reasoning": "The pattern of multiple large, same-day wires to a newly added payee matches the suspicious activity indicators covered by 31 U.S.C. § 5318(g)."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity executed 4 transactions (tx_count: 4) totaling $125,437.02 (tx_total_usd: 125437.02) with a channel mix of 1.0 wire, 0.0 ach, and 0.0 cash. Velocity metrics show a 24‑hour maximum of 1 (velocity_24h_max: 1) and a 30‑day average of 0.1333 (velocity_24h_avg_30d: 0.1333), while unique counterparties in the last 7 days are 1 (unique_counterparties_7d: 1). The highest amount z‑score is 1.495 (amount_z_score_max: 1.495), country risk is 0.9 (country_risk_max: 0.9), a loop was detected (loop_detected: true), and the observed volume versus declared volume ratio is 47.018 (vs_declared_volume_ratio: 47.018).",
+        "metrics": {
+          "tx_count": 4,
+          "tx_total_usd": 125437.02,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.1333,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.495,
+          "country_risk_max": 0.9,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 47.018
+        },
+        "evidence": "transactions[0..3]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the escalation rate of wires to any newly-added payee.",
+        "answer": "$88578.88 is about 30.6× the first wire amount, representing a ~30.6‑fold escalation.",
+        "calculation": "1. Identify the first wire amount: $2,893.15.\n2. Identify the last wire amount: $88,578.88.\n3. Compute the escalation factor: 88,578.88 ÷ 2,893.15 ≈ 30.62.\n4. Round to one decimal place: 30.6×.",
+        "evidence": "Transaction amounts: 2,893.15, 9,958.81, 24,006.18, 88,578.88 (all USD, payee: Robert Johnson (new payee))"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/312factsheet say about the activity described?",
+        "answer": "The final rule requires certain U.S. financial institutions to establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering or suspicious activity.",
+        "evidence_span": "The final rule requires certain U.S. financial institutions to establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering or suspicious activity."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2893.15, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 9958.81, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 24006.18, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 88578.88, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"wire to newly-added payee\"}], \"kyc_profile\": {\"entity_id\": \"SYN_b511b639\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2670, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,670.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/312factsheet\", \"url\": \"\", \"text\": \"owners of such foreign bank, if its shares are not publicly traded;\\nThe original proposed rulemaking issued in 2002 sought to create an exception to\\nthe enhanced due diligence requirement for those offshore banks that were branches of\\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\\ndiligence those foreign banks operating under an offshore banking license that are\\nbranches of banks licensed in a jurisdiction where one or more banks had been\\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\\na different approach, focusing instead on clarifying that U.S. financial institutions have\\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\\naccount. Comments are sought on all aspects of this proposed rulemaking.\\nII. Private Banking Provisions\\nThe final rule requires certain U.S. financial institutions to establish and maintain\\na due diligence program for private banking accounts that is reasonably designed to\\ndetect and report any known or suspected money laundering or suspicious activity.\\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\\nbanking account that is maintained for senior foreign political figures, their immediate\\nfamily members, or persons widely and publicly known to\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"PUBLISHED\\nUNITED STATES COURT OF APPEALS\\n              FOR THE FOURTH CIRCUIT\\nUNITED STATES OF AMERICA,             \\n                Plaintiff-Appellee,\\n               v.                           No. 10-4478\\nWALTER LLOYD BLAIR,\\n             Defendant-Appellant.\\n                                      \\n        Appeal from the United States District Court\\n         for the District of Maryland, at Greenbelt.\\n          Peter J. Messitte, Senior District Judge.\\n                   (8:08-cr-00505-PJM-1)\\n                  Argued: March 25, 2011\\n                Decided: September 21, 2011\\n  Before TRAXLER, Chief Judge, and WILKINSON and\\n              WYNN, Circuit Judges.\\nAffirmed in part, reversed in part, and remanded by published\\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\\nson wrote the majority opinion as to Section IV, in which\\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\\nopinion as to Section IV.\\n                         COUNSEL\\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\\nMAN, Washington, D.C., for Appellant. Michael Richard\\n\\f2\\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\\nstein, United States Attorney, Baltimore, Maryland, Jonathan\\nC. Su, Assistant United States Attorney, OFFICE OF THE\\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\\nAppellee.\\n                               OPINION\\nPER CURIAM:\\n   Walter L. Blair, a Maryland attorne\"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"ing beneficiaries)\\nAdvanced systems (for\\nmore developed\\norganisations)\\n◼ Sound investment policies\\n◼ Resource generation plan\\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\\nRECOMMENDATION 8\\n75\\n© 2023 FATF/OECD\\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\\nencompasses a statement of principles of development as well as a code of conduct,\\nand outlines the ethical principles that must be adhered to, and promoted, by the\\norganisation and its members. Below is an excerpt from the Code related to\\norganisational integrity:\\nGovernance\\n Each Organisation shall be governed fairly and responsibly by an\\nindependent, active and informed governing body (e.g., the Board of\\nDirectors).\\n All voting members of the governing body shall serve without compensation,\\nexcept for reasonable expenses incurred to fulfil their organisational duties.\\n Each Organisation shall establish and periodically review a governance\\nframework suitable for fulfilling its mandate. The structure shall enable the\\nOrganisation to make timely decisions and to meet its responsibilities. The\\nframework shall include an appropriate governance structure and operations;\\nrelationship of senior staff and the governing body; and clear decision-making\\nprocesses. […]\\nOrganisational Integrity\\n The affairs of the Organisation shall be conducted with integrity and\\ntransparency. The Organisa\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-ELDER-EXPLOITATION-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the described transactions constitute suspicious activity that triggers the reporting obligations under 31 U.S.C. § 5318(g).\", \"label\": \"entailment\", \"reasoning\": \"The pattern of multiple large, same-day wires to a newly added payee matches the suspicious activity indicators covered by 31 U.S.C. § 5318(g).\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity executed 4 transactions (tx_count: 4) totaling $125,437.02 (tx_total_usd: 125437.02) with a channel mix of 1.0 wire, 0.0 ach, and 0.0 cash. Velocity metrics show a 24‑hour maximum of 1 (velocity_24h_max: 1) and a 30‑day average of 0.1333 (velocity_24h_avg_30d: 0.1333), while unique counterparties in the last 7 days are 1 (unique_counterparties_7d: 1). The highest amount z‑score is 1.495 (amount_z_score_max: 1.495), country risk is 0.9 (country_risk_max: 0.9), a loop was detected (loop_detected: true), and the observed volume versus declared volume ratio is 47.018 (vs_declared_volume_ratio: 47.018).\", \"metrics\": {\"tx_count\": 4, \"tx_total_usd\": 125437.02, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.1333, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.495, \"country_risk_max\": 0.9, \"loop_detected\": true, \"vs_declared_volume_ratio\": 47.018}, \"evidence\": \"transactions[0..3]\"}], \"numeric\": [{\"question\": \"Compute the escalation rate of wires to any newly-added payee.\", \"answer\": \"$88578.88 is about 30.6× the first wire amount, representing a ~30.6‑fold escalation.\", \"calculation\": \"1. Identify the first wire amount: $2,893.15.\\n2. Identify the last wire amount: $88,578.88.\\n3. Compute the escalation factor: 88,578.88 ÷ 2,893.15 ≈ 30.62.\\n4. Round to one decimal place: 30.6×.\", \"evidence\": \"Transaction amounts: 2,893.15, 9,958.81, 24,006.18, 88,578.88 (all USD, payee: Robert Johnson (new payee))\"}], \"citation\": [{\"question\": \"What does pdfs/312factsheet say about the activity described?\", \"answer\": \"The final rule requires certain U.S. financial institutions to establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering or suspicious activity.\", \"evidence_span\": \"The final rule requires certain U.S. financial institutions to establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering or suspicious activity.\"}]}, \"_regulatory_frame\": \"elder\", \"_typology_inferred\": \"elder_exploitation\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since is_suspicious likely true given elder exploitation typology and behavioral findings. Must produce narrative 250-800 characters, grounded, citing specifics, referencing behavioral metric that drives decision (likely escalation rate or volume ratio). Must close with referral to human investigator. Must not exceed length. Must be 250-800 characters inclusive. Let's craft about 400 characters.\n\nWe need to include evidence: transactions amounts and dates, mention newly-added payee, escalation, loop detected, vs_declared_volume_ratio 47.018, etc. Must cite behavioral finding verbatim? It says \"Surface the most salient behavioral finding (the metric that drives the decision — typically the volume ratio, velocity spike, or counterparty concentration).\" So we should mention the most salient metric: vs_declared_volume_ratio 47.018 maybe. Or escalation factor 30.6×. Choose one. Probably the volume ratio is most salient. Must cite it verbatim from auxiliary_findings.behavioral[].metrics: \"vs_declared_volume_ratio: 47.018\". Also mention loop_detected true maybe. But keep within length.\n\nNeed to ensure every claim sourced from bundle. So we can say: \"Four wire transfers to a newly‑added payee Robert Johnson total $125,437.02 from 2026‑04‑12 to 2026‑04‑29, with amounts escalating from $2,893.15 to $88,578.88, a 30.6× increase.\" That's sourced. Then mention \"The behavioral analysis shows a volume‑ratio of 47.018, indicating observed volume far exceeds declared volume, and a loop was detected.\" That's sourced. Must not invent new numbers beyond those given. The volume ratio is 47.018, yes. Also mention \"channel mix is 100% wire\". That's from metrics. Also mention \"velocity_24h_max: 1\". Could mention but maybe not needed.\n\nNeed to keep narrative 250-800 characters. Let's draft about 380 characters.\n\nCount characters roughly. Let's write:\n\n\"Four wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review.\"\n\nNow count characters. Let's count manually (including spaces). I'll approximate.\n\nString:\n\nFour wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review.\n\nLet's count characters precisely? We'll approximate length. Might be around 350-380. Should be within 250-800. Good.\n\nNeed to ensure no invented figures beyond those given. We used $125,437.02 which is sum of amounts; that's computable from transactions, okay. We used 30.6× increase, derived from amounts, okay. We used volume‑ratio 47.018 exactly as in metrics. Good.\n\nWe must ensure we don't mention any policy excerpts directly unless we cite them? Not required but can mention \"elder‑exploitation typology\". That's derived from _typology_inferred = elder_exploitation, which is allowed. Must not claim something not in bundle. \"elder‑exploitation typology\" is consistent with regulatory frame elder. That's fine.\n\nWe must close with referral to human investigator. We have \"Refer to a human investigator for further review.\" That's fine.\n\nNow output JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review.\"\n}\n\nMake sure JSON is valid, no extra whitespace? It's okay.\n\nCheck length of narrative: Let's count characters roughly. I'll count precisely.\n\nString:\n\nFour wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review.\n\nCount characters including spaces. Let's count using approximate method: I'll write with indices.\n\nI'll copy into a counting mental.\n\nI'll count each segment.\n\n\"Four wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). \" Let's count.\n\nI'll count characters:\n\nF(1)o2u3r4 (space5)w6i7r8e9 (space10)t11r12a13n14s15f16e17r18s19 (space20)t21o22 (space23)a24 (space25)n26e27w28l29y‑30a31d32d33e34d35 (space36)p37a38y39e40e41 (space42)R43o44b45e46r47t48 (space49)J50o51h52n53s54o55n56 (space57)(58 2 0 2 6 ‑ 0 4 ‑ 1 2 (that's characters) let's just approximate total length maybe 150? This is too time-consuming. Likely within limits.\n\nWe must ensure narrative ends with a complete sentence. It ends with \"Refer to a human investigator for further review.\" That's a complete sentence. Good.\n\nNow output JSON only.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Four wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Four wire transfers to a newly‑added payee Robert Johnson (2026‑04‑12 to 2026‑04‑29) total $125,437.02, escalating from $2,893.15 to $88,578.88 (≈30.6× increase). The behavioral profile shows a volume‑ratio of 47.018 and a loop detected, indicating abnormal inflows. This pattern aligns with elder‑exploitation typology and warrants a SAR. Refer to a human investigator for further review.",
+  "judge_enabled": false,
+  "error": null
+}

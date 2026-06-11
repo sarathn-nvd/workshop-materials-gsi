@@ -1,0 +1,177 @@
+{
+  "case_id": "DEMO_0106",
+  "entity_id": "SYN_fc0f474e",
+  "started_at": "2026-05-23T13:15:05.977077+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 3322.9,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The account of SYN_fc0f474e, a virtual asset service provider, exhibited highly suspicious activity characterized by rapid movement of funds. Between 2026-04-25 and 2026-04-28, the entity conducted six wire transfers totaling $86,514,740.33 to various LLCs, including WHU Capital LLC ($15,946,550.07), VHHP Enterprises LLC ($15,257,619.32), and LMI Ventures LLC ($14,644,153.27). This activity is consistent with layering and pass-through behavior, as the total volume is approximately 7.44 times the declared monthly volume of $11,632,908. The use of a 'peel-chain hop' pattern across multiple counterparties warrants further investigation. This matter is referred for human investigator review.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_fc0f474e, a virtual asset service provider, exhibited highly suspicious activity characterized by rapid movement of funds. Between 2026-04-25 and 2026-04-28, the entity conducted six wire transfers totaling $86,514,740.33 to various LLCs, including WHU Capital LLC ($15,946,550.07), VHHP Enterprises LLC ($15,257,619.32), and LMI Ventures LLC ($14,644,153.27). This activity is consistent with layering and pass-through behavior, as the total volume is approximately 7.44 times the declared monthly volume of $11,632,908. The use of a 'peel-chain hop' pattern across multiple counterparties warrants further investigation. This matter is referred for human investigator review."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 15946550.07, \"channel\": \"wire\", \"counterparty\": \"WHU Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 15257619.32, \"channel\": \"wire\", \"counterparty\": \"VHHP Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 14644153.27, \"channel\": \"wire\", \"counterparty\": \"LMI Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 14071107.07, \"channel\": \"wire\", \"counterparty\": \"YWZGJ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"peel-chain hop\"}, {\"amount\": 13585807.1, \"channel\": \"wire\", \"counterparty\": \"IM Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"peel-chain hop\"}, {\"amount\": 13010103.4, \"channel\": \"wire\", \"counterparty\": \"MAN Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"peel-chain hop\"}], \"kyc_profile\": {\"entity_id\": \"SYN_fc0f474e\", \"entity_type\": \"business\", \"expected_monthly_volume\": 11632908, \"business_purpose\": \"Virtual asset service provider (crypto exchange); declared monthly volume ~$11,632,908.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"Singapore\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the conduct likely falls within 5318(g) as the entity exhibited a pattern of high-value transfers to multiple LLCs via wire transfers, which is characteristic of suspicious activity reporting requirements for virtual asset service providers.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5318(g) requires financial institutions, including virtual asset service providers, to report suspicious activity that may indicate money laundering or other illicit financial activity. The observed transactions involve large, rapid transfers to various LLCs using a 'peel-chain hop' pattern, which is a common indicator of layering and evasion.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account exhibited extremely high activity over a short period, with a tx_count of 6 and a tx_total_usd of 86,514,740.33. The channel_mix is entirely composed of wire transfers (1.0), and the velocity_24h_max is 4. The activity involved unique_counterparties_7d of 5, including WHU Capital LLC, VHHP Enterprises LLC, LMI Ventures LLC, YWZGJ Associates LLC, and IM Ventures LLC. The amount_z_score_max is 1.31, and the loop_detected is false. The observed volume significantly exceeds the declared monthly volume, resulting in a vs_declared_volume_ratio of 7.44.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 86514740.33, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 6.0, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.31, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 7.44}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"The total volume passing through the detected cycle is $82,484,840.16, which is approximately 7.1 times the declared monthly volume of $11,632,908.\", \"calculation\": \"1. Identify all transactions: 6 transactions totaling $82,484,840.16.\\n2. Sum the amounts: 15,946,550.07 + 15,257,619.32 + 14,644,153.27 + 14,071,107.07 + 13,585,807.10 + 13,010,103.40 = 82,484,840.16.\\n3. Compare to KYC declared monthly volume: 82,484,840.16 / 11,632,908 ≈ 7.1.\", \"evidence\": \"Transactions dated 2026-04-25, 2026-04-27, and 2026-04-28 with counterparties WHU Capital LLC, VHHP Enterprises LLC, LMI Ventures LLC, YWZGJ Associates LLC, IM Ventures LLC, and MAN Solutions LLC.\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account of SYN_fc0f474e, a virtual asset service provider, exhibited highly suspicious activity characterized by rapid movement of funds. Between 2026-04-25 and 2026-04-28, the entity conducted six wire transfers totaling $86,514,740.33 to various LLCs, including WHU Capital LLC ($15,946,550.07), VHHP Enterprises LLC ($15,257,619.32), and LMI Ventures LLC ($14,644,153.27). This activity is consistent with layering and pass-through behavior, as the total volume is approximately 7.44 times the declared monthly volume of $11,632,908. The use of a 'peel-chain hop' pattern across multiple counterparties warrants further investigation. This matter is referred for human investigator review.\"}",
+  "_compare_meta": {
+    "v1_user_message_keys": [
+      "task_type",
+      "transactions",
+      "kyc_profile",
+      "sanctions_pep_hits",
+      "policy_excerpts",
+      "sop_excerpts",
+      "auxiliary_findings",
+      "_regulatory_frame",
+      "_typology_inferred"
+    ],
+    "v1_sar_is_suspicious": true,
+    "agreement_with_v1": true,
+    "v1_decision_target": null
+  },
+  "transactions": [
+    {
+      "amount": 15946550.07,
+      "channel": "wire",
+      "counterparty": "WHU Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 15257619.32,
+      "channel": "wire",
+      "counterparty": "VHHP Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 14644153.27,
+      "channel": "wire",
+      "counterparty": "LMI Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 14071107.07,
+      "channel": "wire",
+      "counterparty": "YWZGJ Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 13585807.1,
+      "channel": "wire",
+      "counterparty": "IM Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 13010103.4,
+      "channel": "wire",
+      "counterparty": "MAN Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "peel-chain hop"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_fc0f474e",
+    "entity_type": "business",
+    "expected_monthly_volume": 11632908.0,
+    "business_purpose": "Virtual asset service provider (crypto exchange); declared monthly volume ~$11,632,908.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "Singapore"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the conduct likely falls within 5318(g) as the entity exhibited a pattern of high-value transfers to multiple LLCs via wire transfers, which is characteristic of suspicious activity reporting requirements for virtual asset service providers.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5318(g) requires financial institutions, including virtual asset service providers, to report suspicious activity that may indicate money laundering or other illicit financial activity. The observed transactions involve large, rapid transfers to various LLCs using a 'peel-chain hop' pattern, which is a common indicator of layering and evasion."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account exhibited extremely high activity over a short period, with a tx_count of 6 and a tx_total_usd of 86,514,740.33. The channel_mix is entirely composed of wire transfers (1.0), and the velocity_24h_max is 4. The activity involved unique_counterparties_7d of 5, including WHU Capital LLC, VHHP Enterprises LLC, LMI Ventures LLC, YWZGJ Associates LLC, and IM Ventures LLC. The amount_z_score_max is 1.31, and the loop_detected is false. The observed volume significantly exceeds the declared monthly volume, resulting in a vs_declared_volume_ratio of 7.44.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 86514740.33,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 6.0,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.31,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 7.44
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "The total volume passing through the detected cycle is $82,484,840.16, which is approximately 7.1 times the declared monthly volume of $11,632,908.",
+        "calculation": "1. Identify all transactions: 6 transactions totaling $82,484,840.16.\n2. Sum the amounts: 15,946,550.07 + 15,257,619.32 + 14,644,153.27 + 14,071,107.07 + 13,585,807.10 + 13,010,103.40 = 82,484,840.16.\n3. Compare to KYC declared monthly volume: 82,484,840.16 / 11,632,908 ≈ 7.1.",
+        "evidence": "Transactions dated 2026-04-25, 2026-04-27, and 2026-04-28 with counterparties WHU Capital LLC, VHHP Enterprises LLC, LMI Ventures LLC, YWZGJ Associates LLC, IM Ventures LLC, and MAN Solutions LLC."
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  }
+}

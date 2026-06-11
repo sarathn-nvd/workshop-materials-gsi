@@ -1,0 +1,169 @@
+{
+  "case_id": "DEMO_0084",
+  "alert_id": "ALT_2401071",
+  "entity_id": "SYN_d5639af6",
+  "started_at": "2026-05-23T12:36:52.997858+00:00",
+  "finished_at": "2026-05-23T12:37:01.207825+00:00",
+  "wall_clock_ms": 8210.0,
+  "transactions": [
+    {
+      "amount": 2682.54,
+      "channel": "wire",
+      "counterparty": "Elizabeth Walker (family member)",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 4365.25,
+      "channel": "ach",
+      "counterparty": "OGHKW Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 3355.31,
+      "channel": "card",
+      "counterparty": "Michael Garcia",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1727.78,
+      "channel": "cheque",
+      "counterparty": "VDL Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 1846.43,
+      "channel": "wire",
+      "counterparty": "VGX Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 1377.01,
+      "channel": "card",
+      "counterparty": "Karen Moore",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_d5639af6",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4256.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$4,256.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.333,
+      "card": 0.333,
+      "ach": 0.167,
+      "cheque": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.16666666666666666, 'card': 0.3333333333333333, 'cheque': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_d5639af6, individual, expected monthly volume 4256.0 USD. Transactions list 6 entries.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. That's 6.\n\n- tx_total_usd: sum of amounts. Let's sum:\n\n2682.54\n4365.25\n3355.31\n1727.78\n1846.43\n1377.01\n\nCompute sum:\n\n2682.54 + 4365.25 = 7047.79\n7047.79 + 3355.31 = 10403.10\n10403.10 + 1727.78 = 12130.88\n12130.88 + 1846.43 = 13977.31\n13977.31 + 1377.01 = 153"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$15,354.32 total, roughly 3.6× the declared $4,256 monthly volume",
+      "calculation": "1. 2682.54 + 4365.25 = 7047.79\n2. 7047.79 + 3355.31 = 10403.10\n3. 10403.10 + 1727.78 = 12130.88\n4. 12130.88 + 1846.43 = 13977.31\n5. 13977.31 + 1377.01 = 15354.32",
+      "evidence": "Transactions: 2682.54, 4365.25, 3355.31, 1727.78, 1846.43, 1377.01 (USD)"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The system reports that no policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute.",
+      "label": "neutral",
+      "reasoning": "Statute field is empty (\"\"), so no statutory basis; label neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute.",
+        "label": "neutral",
+        "reasoning": "Statute field is empty (\"\"), so no statutory basis; label neutral."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$15,354.32 total, roughly 3.6× the declared $4,256 monthly volume",
+        "calculation": "1. 2682.54 + 4365.25 = 7047.79\n2. 7047.79 + 3355.31 = 10403.10\n3. 10403.10 + 1727.78 = 12130.88\n4. 12130.88 + 1846.43 = 13977.31\n5. 13977.31 + 1377.01 = 15354.32",
+        "evidence": "Transactions: 2682.54, 4365.25, 3355.31, 1727.78, 1846.43, 1377.01 (USD)"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The system reports that no policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2682.54, \"channel\": \"wire\", \"counterparty\": \"Elizabeth Walker (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 4365.25, \"channel\": \"ach\", \"counterparty\": \"OGHKW Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 3355.31, \"channel\": \"card\", \"counterparty\": \"Michael Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1727.78, \"channel\": \"cheque\", \"counterparty\": \"VDL Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 1846.43, \"channel\": \"wire\", \"counterparty\": \"VGX Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 1377.01, \"channel\": \"card\", \"counterparty\": \"Karen Moore\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_d5639af6\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4256, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$4,256.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute.\", \"label\": \"neutral\", \"reasoning\": \"Statute field is empty (\\\"\\\"), so no statutory basis; label neutral.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$15,354.32 total, roughly 3.6× the declared $4,256 monthly volume\", \"calculation\": \"1. 2682.54 + 4365.25 = 7047.79\\n2. 7047.79 + 3355.31 = 10403.10\\n3. 10403.10 + 1727.78 = 12130.88\\n4. 12130.88 + 1846.43 = 13977.31\\n5. 13977.31 + 1377.01 = 15354.32\", \"evidence\": \"Transactions: 2682.54, 4365.25, 3355.31, 1727.78, 1846.43, 1377.01 (USD)\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The system reports that no policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since _regulatory_frame is \"benign\", decision should be not suspicious. So is_suspicious = false, suspicious_activity_report = \"\" (empty string). Must be a single JSON object, no extra text.\n\nCheck constraints: When false, report must be empty string. Provide exactly that.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nMake sure no extra whitespace? Probably fine.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,212 @@
+{
+  "case_id": "DEMO_0075",
+  "alert_id": "ALT_2411802",
+  "entity_id": "SYN_c1500837",
+  "started_at": "2026-05-23T12:07:14.495328+00:00",
+  "finished_at": "2026-05-23T12:07:35.367568+00:00",
+  "wall_clock_ms": 20872.3,
+  "transactions": [
+    {
+      "amount": 4161.24,
+      "channel": "wire",
+      "counterparty": "Daniel Martin (family member)",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 1637.54,
+      "channel": "cheque",
+      "counterparty": "MJOCM Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 1501.52,
+      "channel": "card",
+      "counterparty": "Sarah White",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 1748.55,
+      "channel": "ach",
+      "counterparty": "IY Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 700.13,
+      "channel": "ach",
+      "counterparty": "OX Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    },
+    {
+      "amount": 1406.63,
+      "channel": "card",
+      "counterparty": "Susan Smith",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_c1500837",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1736.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,736.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.333,
+      "ach": 0.333,
+      "wire": 0.167,
+      "cheque": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'cheque': 0.16666666666666666, 'card': 0.3333333333333333, 'ach': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity shows a high observed transaction volume of $11,155.61 across six transactions, far exceeding the expected monthly volume of $1,736 and yielding a vs_declared_volume_ratio of 6.426. Velocity metrics indicate a peak of two transactions within any 24‑hour window and an average daily activity of 0.2 transactions over the last 30 days, while only two unique counterparties appeared in the most recent 7‑day window. The largest amount‑z‑score is 1.94, reflecting a single outlier payment, and the transaction mix is dominated by ACH and card channels, each comprising roughly 33% of activity. No loop patterns or elevated country risk were detected.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 11155.61,
+        "channel_mix": {
+          "wire": 0.16666666666666666,
+          "ach": 0.3333333333333333,
+          "card": 0.3333333333333333,
+          "cheque": 0.16666666666666666,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.94,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 6.426
+      },
+      "evidence": "transactions[0..5]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$11,155.61 total, about 6.4x the declared $1,736 monthly volume",
+      "calculation": "1. Extract amounts: 4161.24, 1637.54, 1501.52, 1748.55, 700.13, 1406.63.\n2. Sum: 4161.24+1637.54+1501.52+1748.55+700.13+1406.63 = 11155.61.\n3. Compare: 11155.61 / 1736 ≈ 6.42, i.e., ~6.4 times the declared volume.",
+      "evidence": "Rows with amounts: 4161.24 (2026-04-10), 1637.54 (2026-03-29), 1501.52 (2026-04-15), 1748.55 (2026-02-10), 700.13 (2026-03-16), 1406.63 (2026-03-16)."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute is provided, so the conduct cannot be determined to fall within any statutory provision.",
+      "label": "neutral",
+      "reasoning": "No statute provided; citing the statute identifier verbatim: \"\"; therefore the conduct cannot be classified as entailment or contradiction."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute is provided, so the conduct cannot be determined to fall within any statutory provision.",
+        "label": "neutral",
+        "reasoning": "No statute provided; citing the statute identifier verbatim: \"\"; therefore the conduct cannot be classified as entailment or contradiction."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity shows a high observed transaction volume of $11,155.61 across six transactions, far exceeding the expected monthly volume of $1,736 and yielding a vs_declared_volume_ratio of 6.426. Velocity metrics indicate a peak of two transactions within any 24‑hour window and an average daily activity of 0.2 transactions over the last 30 days, while only two unique counterparties appeared in the most recent 7‑day window. The largest amount‑z‑score is 1.94, reflecting a single outlier payment, and the transaction mix is dominated by ACH and card channels, each comprising roughly 33% of activity. No loop patterns or elevated country risk were detected.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 11155.61,
+          "channel_mix": {
+            "wire": 0.16666666666666666,
+            "ach": 0.3333333333333333,
+            "card": 0.3333333333333333,
+            "cheque": 0.16666666666666666,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.94,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 6.426
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$11,155.61 total, about 6.4x the declared $1,736 monthly volume",
+        "calculation": "1. Extract amounts: 4161.24, 1637.54, 1501.52, 1748.55, 700.13, 1406.63.\n2. Sum: 4161.24+1637.54+1501.52+1748.55+700.13+1406.63 = 11155.61.\n3. Compare: 11155.61 / 1736 ≈ 6.42, i.e., ~6.4 times the declared volume.",
+        "evidence": "Rows with amounts: 4161.24 (2026-04-10), 1637.54 (2026-03-29), 1501.52 (2026-04-15), 1748.55 (2026-02-10), 700.13 (2026-03-16), 1406.63 (2026-03-16)."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 4161.24, \"channel\": \"wire\", \"counterparty\": \"Daniel Martin (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 1637.54, \"channel\": \"cheque\", \"counterparty\": \"MJOCM Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 1501.52, \"channel\": \"card\", \"counterparty\": \"Sarah White\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 1748.55, \"channel\": \"ach\", \"counterparty\": \"IY Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 700.13, \"channel\": \"ach\", \"counterparty\": \"OX Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}, {\"amount\": 1406.63, \"channel\": \"card\", \"counterparty\": \"Susan Smith\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_c1500837\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1736, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,736.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute is provided, so the conduct cannot be determined to fall within any statutory provision.\", \"label\": \"neutral\", \"reasoning\": \"No statute provided; citing the statute identifier verbatim: \\\"\\\"; therefore the conduct cannot be classified as entailment or contradiction.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity shows a high observed transaction volume of $11,155.61 across six transactions, far exceeding the expected monthly volume of $1,736 and yielding a vs_declared_volume_ratio of 6.426. Velocity metrics indicate a peak of two transactions within any 24‑hour window and an average daily activity of 0.2 transactions over the last 30 days, while only two unique counterparties appeared in the most recent 7‑day window. The largest amount‑z‑score is 1.94, reflecting a single outlier payment, and the transaction mix is dominated by ACH and card channels, each comprising roughly 33% of activity. No loop patterns or elevated country risk were detected.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 11155.61, \"channel_mix\": {\"wire\": 0.16666666666666666, \"ach\": 0.3333333333333333, \"card\": 0.3333333333333333, \"cheque\": 0.16666666666666666, \"cash\": 0.0}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.94, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 6.426}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$11,155.61 total, about 6.4x the declared $1,736 monthly volume\", \"calculation\": \"1. Extract amounts: 4161.24, 1637.54, 1501.52, 1748.55, 700.13, 1406.63.\\n2. Sum: 4161.24+1637.54+1501.52+1748.55+700.13+1406.63 = 11155.61.\\n3. Compare: 11155.61 / 1736 ≈ 6.42, i.e., ~6.4 times the declared volume.\", \"evidence\": \"Rows with amounts: 4161.24 (2026-04-10), 1637.54 (2026-03-29), 1501.52 (2026-04-15), 1748.55 (2026-02-10), 700.13 (2026-03-16), 1406.63 (2026-03-16).\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also typology inferred is \"none\". So likely not suspicious. However need to check decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. Since regulatory_frame is benign, likely not suspicious. Also auxiliary_findings includes behavioral and numeric that show high volume ratio, but the regulatory frame says benign, meaning no SAR. The decision rule likely overrides: if benign, then not suspicious. Also need to ensure we follow constraints: when is_suspicious=false, suspicious_activity_report must be empty string. So output {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}. Ensure no extra text. Provide JSON only.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

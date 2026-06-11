@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0058",
+  "alert_id": "ALT_2420885",
+  "entity_id": "SYN_f7cee9ab",
+  "started_at": "2026-05-27T16:06:14.049980+00:00",
+  "finished_at": "2026-05-27T16:06:22.687973+00:00",
+  "wall_clock_ms": 8638.0,
+  "transactions": [
+    {
+      "amount": 1247.28,
+      "channel": "wire",
+      "counterparty": "Save the Children",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "charitable donation (benign: 501(c)(3) recipient, single occurrence)"
+    },
+    {
+      "amount": 4754.65,
+      "channel": "ach",
+      "counterparty": "RXDS Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 4269.31,
+      "channel": "card",
+      "counterparty": "Linda Martin",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 3934.65,
+      "channel": "card",
+      "counterparty": "Maria Walker",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 6073.95,
+      "channel": "ach",
+      "counterparty": "NA Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 4957.59,
+      "channel": "ach",
+      "counterparty": "ZRD Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 5572.29,
+      "channel": "ach",
+      "counterparty": "JL Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f7cee9ab",
+    "entity_type": "individual",
+    "expected_monthly_volume": 6734.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,734.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "card": 0.286,
+      "wire": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.14285714285714285, 'ach': 0.5714285714285714, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 30809.72. The channel_mix is primarily composed of ach at 0.571, indicating a reliance on electronic transfers. Activity shows a velocity_24h_max of 1, with a limited network of unique_counterparties_7d of 7. The vs_declared_volume_ratio is 14.5, suggesting volume significantly exceeds the expected monthly throughput. This pattern of rapid movement and high volume relative to the profile warrants further review. The presence of a loop_detected flag further indicates potential irregularities in the transaction flow.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 30809.72,
+        "channel_mix": {
+          "ach": 0.571,
+          "card": 0.286,
+          "wire": 0.143
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 7,
+        "amount_z_score_max": 1.85,
+        "country_risk_max": 0.1,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 14.5
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 26,810.72",
+      "calculation": "1. Sum transaction amounts: 1,247.28 + 4,754.65 + 4,269.31 + 3,934.65 + 6,073.95 + 4,957.59 + 5,572.29 = 30,809.72 (transactions[0..6])\n2. Identify the total volume for the period: 30,809.72 (sum of all listed amounts).\n3. Compare to KYC declared monthly volume of 6,734.00.",
+      "evidence": "transactions[0..6]; [kyc_profile]"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 30809.72. The channel_mix is primarily composed of ach at 0.571, indicating a reliance on electronic transfers. Activity shows a velocity_24h_max of 1, with a limited network of unique_counterparties_7d of 7. The vs_declared_volume_ratio is 14.5, suggesting volume significantly exceeds the expected monthly throughput. This pattern of rapid movement and high volume relative to the profile warrants further review. The presence of a loop_detected flag further indicates potential irregularities in the transaction flow.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 30809.72,
+          "channel_mix": {
+            "ach": 0.571,
+            "card": 0.286,
+            "wire": 0.143
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 7,
+          "amount_z_score_max": 1.85,
+          "country_risk_max": 0.1,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 14.5
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 26,810.72",
+        "calculation": "1. Sum transaction amounts: 1,247.28 + 4,754.65 + 4,269.31 + 3,934.65 + 6,073.95 + 4,957.59 + 5,572.29 = 30,809.72 (transactions[0..6])\n2. Identify the total volume for the period: 30,809.72 (sum of all listed amounts).\n3. Compare to KYC declared monthly volume of 6,734.00.",
+        "evidence": "transactions[0..6]; [kyc_profile]"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1247.28, \"channel\": \"wire\", \"counterparty\": \"Save the Children\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"charitable donation (benign: 501(c)(3) recipient, single occurrence)\"}, {\"amount\": 4754.65, \"channel\": \"ach\", \"counterparty\": \"RXDS Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 4269.31, \"channel\": \"card\", \"counterparty\": \"Linda Martin\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 3934.65, \"channel\": \"card\", \"counterparty\": \"Maria Walker\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 6073.95, \"channel\": \"ach\", \"counterparty\": \"NA Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 4957.59, \"channel\": \"ach\", \"counterparty\": \"ZRD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 5572.29, \"channel\": \"ach\", \"counterparty\": \"JL Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f7cee9ab\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 6734.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,734.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits a tx_count of 7 with a tx_total_usd of 30809.72. The channel_mix is primarily composed of ach at 0.571, indicating a reliance on electronic transfers. Activity shows a velocity_24h_max of 1, with a limited network of unique_counterparties_7d of 7. The vs_declared_volume_ratio is 14.5, suggesting volume significantly exceeds the expected monthly throughput. This pattern of rapid movement and high volume relative to the profile warrants further review. The presence of a loop_detected flag further indicates potential irregularities in the transaction flow.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 30809.72, \"channel_mix\": {\"ach\": 0.571, \"card\": 0.286, \"wire\": 0.143}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 7, \"amount_z_score_max\": 1.85, \"country_risk_max\": 0.1, \"loop_detected\": true, \"vs_declared_volume_ratio\": 14.5}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 26,810.72\", \"calculation\": \"1. Sum transaction amounts: 1,247.28 + 4,754.65 + 4,269.31 + 3,934.65 + 6,073.95 + 4,957.59 + 5,572.29 = 30,809.72 (transactions[0..6])\\n2. Identify the total volume for the period: 30,809.72 (sum of all listed amounts).\\n3. Compare to KYC declared monthly volume of 6,734.00.\", \"evidence\": \"transactions[0..6]; [kyc_profile]\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account triggered an alert due to a high volume of electronic transfers, including ACH payments to RXDS Logistics LLC ($4,754.65 on 2026-04-12), NA Logistics LLC ($6,073.95 on 2026-03-09), and ZRD Trading LLC ($4,957.59 on 2026-02-07), as well as card payments to Linda Martin ($4,269.31 on 2026-04-06) and Maria Walker ($3,934.65 on 2026-04-13). However, the total transaction volume of $30,809.72 is primarily driven by a single large ACH payment of $5,572.29 to JL Solutions LLC on 2026-04-30. The activity is consistent with the profile of a salaried wage earner making various business-related payments. No sanctions hits or structuring patterns were observed. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert due to a high volume of electronic transfers, including ACH payments to RXDS Logistics LLC ($4,754.65 on 2026-04-12), NA Logistics LLC ($6,073.95 on 2026-03-09), and ZRD Trading LLC ($4,957.59 on 2026-02-07), as well as card payments to Linda Martin ($4,269.31 on 2026-04-06) and Maria Walker ($3,934.65 on 2026-04-13). However, the total transaction volume of $30,809.72 is primarily driven by a single large ACH payment of $5,572.29 to JL Solutions LLC on 2026-04-30. The activity is consistent with the profile of a salaried wage earner making various business-related payments. No sanctions hits or structuring patterns were observed. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert due to a high volume of electronic transfers, including ACH payments to RXDS Logistics LLC ($4,754.65 on 2026-04-12), NA Logistics LLC ($6,073.95 on 2026-03-09), and ZRD Trading LLC ($4,957.59 on 2026-02-07), as well as card payments to Linda Martin ($4,269.31 on 2026-04-06) and Maria Walker ($3,934.65 on 2026-04-13). However, the total transaction volume of $30,809.72 is primarily driven by a single large ACH payment of $5,572.29 to JL Solutions LLC on 2026-04-30. The activity is consistent with the profile of a salaried wage earner making various business-related payments. No sanctions hits or structuring patterns were observed. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

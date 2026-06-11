@@ -1,0 +1,176 @@
+{
+  "case_id": "DEMO_0058",
+  "alert_id": "ALT_2420885",
+  "entity_id": "SYN_f7cee9ab",
+  "started_at": "2026-05-27T15:13:24.736006+00:00",
+  "finished_at": "2026-05-27T15:14:03.247557+00:00",
+  "wall_clock_ms": 38511.6,
+  "transactions": [
+    {
+      "amount": 1247.28,
+      "channel": "wire",
+      "counterparty": "Save the Children",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "charitable donation (benign: 501(c)(3) recipient, single occurrence)"
+    },
+    {
+      "amount": 4754.65,
+      "channel": "ach",
+      "counterparty": "RXDS Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 4269.31,
+      "channel": "card",
+      "counterparty": "Linda Martin",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 3934.65,
+      "channel": "card",
+      "counterparty": "Maria Walker",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 6073.95,
+      "channel": "ach",
+      "counterparty": "NA Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 4957.59,
+      "channel": "ach",
+      "counterparty": "ZRD Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 5572.29,
+      "channel": "ach",
+      "counterparty": "JL Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f7cee9ab",
+    "entity_type": "individual",
+    "expected_monthly_volume": 6734.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,734.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "card": 0.286,
+      "wire": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.14285714285714285, 'ach': 0.5714285714285714, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have bundle: [transactions] list, [kyc_profile] fields, and presumably a precomputed metrics block? The user didn't provide metrics block explicitly. But the instruction says we receive a transactional bundle AND a precomputed metrics block. However the user only gave the bundle. Possibly the metrics block is part of the bundle? Not given. Maybe we need to infer metrics from the data? But rule 2: summary must mention at "
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total volume ratio 4.58",
+      "calculation": "1. Sum amounts from transactions[0..6] yielding 30809.72; 2. Retrieve kyc_profile.expected_monthly_volume = 6734.0; 3. Divide 30809.72 by 6734.0 to obtain 4.575; 4. Round to 4.58",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute",
+      "label": "neutral",
+      "reasoning": "§ 0000(a)(1) No applicable statute; insufficient facts to assess any element."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute",
+        "label": "neutral",
+        "reasoning": "§ 0000(a)(1) No applicable statute; insufficient facts to assess any element."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total volume ratio 4.58",
+        "calculation": "1. Sum amounts from transactions[0..6] yielding 30809.72; 2. Retrieve kyc_profile.expected_monthly_volume = 6734.0; 3. Divide 30809.72 by 6734.0 to obtain 4.575; 4. Round to 4.58",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1247.28, \"channel\": \"wire\", \"counterparty\": \"Save the Children\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"charitable donation (benign: 501(c)(3) recipient, single occurrence)\"}, {\"amount\": 4754.65, \"channel\": \"ach\", \"counterparty\": \"RXDS Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 4269.31, \"channel\": \"card\", \"counterparty\": \"Linda Martin\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 3934.65, \"channel\": \"card\", \"counterparty\": \"Maria Walker\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 6073.95, \"channel\": \"ach\", \"counterparty\": \"NA Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 4957.59, \"channel\": \"ach\", \"counterparty\": \"ZRD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 5572.29, \"channel\": \"ach\", \"counterparty\": \"JL Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f7cee9ab\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 6734.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,734.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute\", \"label\": \"neutral\", \"reasoning\": \"§ 0000(a)(1) No applicable statute; insufficient facts to assess any element.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total volume ratio 4.58\", \"calculation\": \"1. Sum amounts from transactions[0..6] yielding 30809.72; 2. Retrieve kyc_profile.expected_monthly_volume = 6734.0; 3. Divide 30809.72 by 6734.0 to obtain 4.575; 4. Round to 4.58\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string (400-800 characters). Must derive is_suspicious based on evidence.\n\nWe have transactions list 7 entries. Let's compute total amount: sum amounts:\n\n1247.28 + 4754.65 = 6001.93\n+ 4269.31 = 10271.24\n+ 3934.65 = 14205.89\n+ 6073.95 = 20279.84\n+ 4957.59 = 25237.43\n+ 5572.29 = 30809.72\n\nMatches calculation in auxiliary_findings numeric: total volume ratio 4.58 (30809.72 / 6734 = 4.575 ~4.58). So total is about 4.58 times expected monthly volume.\n\nKYC profile: individual, salaried wage earner, expected monthly volume $6,734. Business purpose: salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,734.\n\nRisk rating high.\n\nSanctions_pep_hits empty.\n\nPolicy_excerpts empty.\n\nSOP_excerpts empty.\n\nAuxiliary_findings numeric includes ratio 4.58.\n\nWe need to decide if suspicious. The ratio is high (4.58x). But the business purpose is salaried wage earner, expected monthly volume $6,734. Observed total over some period? The transactions are across multiple dates: from 2026-02-07 to 2026-04-30. That's about 3 months? Let's see dates: 2026-02-07, 2026-03-09, 2026-04-06, 2026-04-13, 2026-04-26, 2026-04-30. That's six transactions across roughly 2.5 months? Actually includes Feb, Mar, Apr. Could be roughly quarterly? The total 30809.72 is over maybe 3 months? If monthly expected is 6734, then quarterly expected would be about 20202. So 30809 is about 1.5x quarterly expected, or 4.58x monthly. That seems high.\n\nBut we need to see if there are any other red flags: all channels are wire, ACH, card. No cash. No structuring. No sanctions hit. No PEP. The counterparties: Save the Children (charitable donation), RXDS Logistics LLC, Linda Martin, Maria Walker, NA Logistics LLC, ZRD Trading LLC, JL Solutions LLC. Some are LLCs possibly business. There's a charitable donation of $1247.28 to Save the Children (benign). Others are various LLCs.\n\nThe KYC says individual, salaried wage earner, expected monthly volume $6,734. The transactions include payments to various entities, possibly personal payments? Could be legitimate.\n\nThe ratio of 4.58 suggests total transaction volume far exceeds expected monthly volume, but maybe it's cumulative over multiple months, not a single month. The alert may be triggered because total across period is high, but we need to see if that is suspicious.\n\nGiven no other red flags, and the ratio is high but could be explained by multiple payments (maybe paying bills, etc). The KYC says expected monthly volume ~6,734, but the observed total across maybe 3 months is 30,809, which is about 10k per month, which is higher but not extremely. Actually 30,809 / 3 = 10,270 per month, about 1.5x expected. Not huge.\n\nBut the ratio is computed as total over the period divided by monthly expected, giving 4.58. That might be misleading; perhaps the period covers 6 transactions across 3 months, so average monthly ~10,270, which is 1.5x expected, not 4.58x. So the ratio is not a direct indicator.\n\nGiven lack of other red flags, I think the appropriate disposition is not suspicious (is_suspicious = false). Because there is no sanctions hit, no structuring, no cash, no pattern inconsistent with declared purpose. The high ratio is not sufficient alone.\n\nThus is_suspicious = false.\n\nNow we need to produce a narrative 400-800 characters, grounded, citing the surface red flag (the high total volume ratio) and the disambiguating context (KYC expected monthly volume, business purpose, nature of transactions). Must name the surface red flag explicitly: \"total transaction volume ratio of 4.58\" or \"aggregate transaction amount of $30,809.72\". Must cite the KYC expected monthly volume $6,734 and business purpose \"salaried wage earner; primary income from service-industry employer\". Must mention that the transactions are mostly non-cash (wire, ACH, card) to various entities, including a charitable donation, consistent with a salaried individual's diversified payments. Must mention that no structuring or sanctions concerns.\n\nLength 400-800 characters. Let's craft about 550 characters.\n\nCount characters roughly. We'll write:\n\n\"Surface red flag: aggregate transaction amount of $30,809.72 across seven transfers, yielding a total‑volume ratio of 4.58 against the KYC‑declared monthly volume of $6,734. The entity’s profile identifies the customer as a salaried wage earner in the service‑industry, with expected monthly throughput near $6,734, and the observed activity consists of routine payments — including a charitable donation to Save the Children and small transfers to logistics and personal LLCs — consistent with normal personal finance behavior. No structuring, cash‑intensive, or sanctions‑related patterns are present, so the alert is resolved as not warranting a SAR.\"\n\nNow count characters. Let's approximate: We'll count characters including spaces.\n\nI'll count manually:\n\n\"Surface red flag: aggregate transaction amount of $30,809.72 across seven transfers, yielding a total‑volume ratio of 4.58 against the KYC‑declared monthly volume of $6,734. The entity’s profile identifies the customer as a salaried wage earner in the service‑industry, with expected monthly throughput near $6,734, and the observed activity consists of routine payments — including a charitable donation to Save the Children and small transfers to logistics and personal LLCs — consistent with normal personal finance behavior. No structuring, cash‑intensive, or sanctions‑related patterns are present, so the alert is resolved as not warranting a SAR.\"\n\nLet's count roughly: I'll use approximate count. Might be around 500-600 characters. Should be within 400-800.\n\nWe need to ensure it's 400-800 characters. Let's quickly count using rough estimate: Each word ~5 chars plus space. Let's count words: \"Surface(6) red(3) flag:(5) aggregate(7) transaction(11) amount(6) of(2) $30,809.72(8) across(6) seven(5) transfers,(9) yielding(7) a(1) total‑volume(11) ratio(5) of(2) 4.58(4) against(7) the(3) KYC‑declared(12) monthly(7) volume(6) of(2) $6,734.(7). The(3) entity’s(7) profile(7) identifies(9) the(3) customer(8) as(2) a(1) salaried(7) wage(4) earner(6) in(2) the(3) service‑industry,(13) with(4) expected(8) monthly(7) throughput(9) near(4) $6,734,(7), and(3) the(3) observed(7) activity(8) consists(8) of(2) routine(7) payments(8) — (1) including(9) a(1) charitable(10) donation(9) to(2) Save(4) the(3) Children(8) and(3) small(5) transfers(9) to(2) logistics(8) and(3) personal(8) LLCs(4) — (1) consistent(10) with(4) normal(6) personal(8) finance(7) behavior.(10) No(2) structuring,(12) cash‑intensive,(13) or(2) sanctions‑related(15) patterns(8) are(3) present,(8) so(2) the(3) alert(5) is(2) resolved(8) as(2) not(3) warranting(10) a(1) SAR.(4)\n\nThat's too many characters; but approximate length maybe ~500-600. Should be okay.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"<the narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still part of string. Probably fine.\n\nWe must ensure no extra keys. Provide exactly JSON.\n\nLet's craft final narrative with proper quoting and ensure it's within 400-800 characters. Let's count more precisely maybe 560 characters.\n\nI'll write a concise version:\n\n\"Surface red flag: aggregate transaction amount of $30,809.72 across seven transfers produces a total‑volume ratio of 4.58 versus the KYC‑declared monthly volume of $6,734. The customer is an individual salaried wage earner in the service sector, with expected monthly throughput near $6,734. Activity consists of routine non‑cash payments — including a $1,247 donation to Save the Children and small transfers to logistics and personal LLCs — matching typical personal finance behavior. No structuring, cash‑intensive, or sanctions concerns are evident, so the alert is resolved as not warranting a SAR.\"\n\nNow count characters: Let's approximate: This is likely around 500-560 characters. Should be fine.\n\nNow output JSON.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"Surface red flag: aggregate transaction amount of $30,809.72 across seven transfers produces a total‑volume ratio of 4.58 versus the KYC‑declared monthly volume of $6,734. The customer is an individual salaried wage earner in the service sector, with expected monthly throughput near $6,734. Activity consists of routine non‑cash payments — including a $1,247 donation to Save the Children and small transfers to logistics and personal LLCs — matching typical personal finance behavior. No structuring, cash‑intensive, or sanctions concerns are evident, so the alert is resolved as not warranting a SAR.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: aggregate transaction amount of $30,809.72 across seven transfers produces a total‑volume ratio of 4.58 versus the KYC‑declared monthly volume of $6,734. The customer is an individual salaried wage earner in the service sector, with expected monthly throughput near $6,734. Activity consists of routine non‑cash payments — including a $1,247 donation to Save the Children and small transfers to logistics and personal LLCs — matching typical personal finance behavior. No structuring, cash‑intensive, or sanctions concerns are evident, so the alert is resolved as not warranting a SAR."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: aggregate transaction amount of $30,809.72 across seven transfers produces a total‑volume ratio of 4.58 versus the KYC‑declared monthly volume of $6,734. The customer is an individual salaried wage earner in the service sector, with expected monthly throughput near $6,734. Activity consists of routine non‑cash payments — including a $1,247 donation to Save the Children and small transfers to logistics and personal LLCs — matching typical personal finance behavior. No structuring, cash‑intensive, or sanctions concerns are evident, so the alert is resolved as not warranting a SAR.",
+  "judge_enabled": false,
+  "error": null
+}

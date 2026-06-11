@@ -1,0 +1,211 @@
+{
+  "case_id": "DEMO_0172",
+  "alert_id": "ALT_2429579",
+  "entity_id": "SYN_4a4c637a",
+  "started_at": "2026-05-28T11:23:28.065031+00:00",
+  "finished_at": "2026-05-28T11:23:41.752717+00:00",
+  "wall_clock_ms": 13687.7,
+  "transactions": [
+    {
+      "amount": 2893.15,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 9958.81,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 24006.18,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 88578.88,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "wire to newly-added payee"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_4a4c637a",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2670.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,670.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/312factsheet",
+      "url": "",
+      "text": "owners of such foreign bank, if its shares are not publicly traded;\nThe original proposed rulemaking issued in 2002 sought to create an exception to\nthe enhanced due diligence requirement for those offshore banks that were branches of\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\ndiligence those foreign banks operating under an offshore banking license that are\nbranches of banks licensed in a jurisdiction where one or more banks had been\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\na different approach, focusing instead on clarifying that U.S. financial institutions have\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\naccount. Comments are sought on all aspects of this proposed rulemaking.\nII. Private Banking Provisions\nThe final rule requires certain U.S. financial institutions to establish and maintain\na due diligence program for private banking accounts that is reasonably designed to\ndetect and report any known or suspected money laundering or suspicious activity.\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\nbanking account that is maintained for senior foreign political figures, their immediate\nfamily members, or persons widely and publicly known to"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "PUBLISHED\nUNITED STATES COURT OF APPEALS\n              FOR THE FOURTH CIRCUIT\nUNITED STATES OF AMERICA,             \n                Plaintiff-Appellee,\n               v.                           No. 10-4478\nWALTER LLOYD BLAIR,\n             Defendant-Appellant.\n                                      \n        Appeal from the United States District Court\n         for the District of Maryland, at Greenbelt.\n          Peter J. Messitte, Senior District Judge.\n                   (8:08-cr-00505-PJM-1)\n                  Argued: March 25, 2011\n                Decided: September 21, 2011\n  Before TRAXLER, Chief Judge, and WILKINSON and\n              WYNN, Circuit Judges.\nAffirmed in part, reversed in part, and remanded by published\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\nson wrote the majority opinion as to Section IV, in which\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\nopinion as to Section IV.\n                         COUNSEL\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\nMAN, Washington, D.C., for Appellant. Michael Richard\n\f2\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\nstein, United States Attorney, Baltimore, Maryland, Jonathan\nC. Su, Assistant United States Attorney, OFFICE OF THE\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\nAppellee.\n                               OPINION\nPER CURIAM:\n   Walter L. Blair, a Maryland attorne"
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "ing beneficiaries)\nAdvanced systems (for\nmore developed\norganisations)\n◼ Sound investment policies\n◼ Resource generation plan\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\nRECOMMENDATION 8\n75\n© 2023 FATF/OECD\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\nencompasses a statement of principles of development as well as a code of conduct,\nand outlines the ethical principles that must be adhered to, and promoted, by the\norganisation and its members. Below is an excerpt from the Code related to\norganisational integrity:\nGovernance\n Each Organisation shall be governed fairly and responsibly by an\nindependent, active and informed governing body (e.g., the Board of\nDirectors).\n All voting members of the governing body shall serve without compensation,\nexcept for reasonable expenses incurred to fulfil their organisational duties.\n Each Organisation shall establish and periodically review a governance\nframework suitable for fulfilling its mandate. The structure shall enable the\nOrganisation to make timely decisions and to meet its responsibilities. The\nframework shall include an appropriate governance structure and operations;\nrelationship of senior staff and the governing body; and clear decision-making\nprocesses. […]\nOrganisational Integrity\n The affairs of the Organisation shall be conducted with integrity and\ntransparency. The Organisa"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-ELDER-EXPLOITATION-01",
+      "section": "Investigation Steps",
+      "text": "1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "elder",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "elder_exploitation"
+  },
+  "typology_hypothesis": "elder_exploitation",
+  "activity_descriptor": "Retiree with 4 escalating wires to (Robert Johnson (new payee))",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_4a4c637a executed 4 transactions totaling $125,437.02 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.24. Volume vs declared monthly is 82.91x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 4,
+        "tx_total_usd": 125437.02,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.24,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.69,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 82.91
+      },
+      "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Compute the escalation rate of wires to any newly-added payee.",
+      "answer": "total wire escalation 125,437.02",
+      "calculation": "1. Identify all wires to newly-added payee: transactions[0] (2,893.15), transactions[1] (9,958.81), transactions[2] (24,006.18), transactions[3] (88,578.88). 2. Sum the amounts: 2,893.15 + 9,958.81 + 24,006.18 + 88,578.88 = 125,437.02.",
+      "evidence": "transactions[0..3]"
+    },
+    "citation": {
+      "question": "What does pdfs/312factsheet say about the activity described?",
+      "answer": "U.S. financial institutions must maintain a due diligence program to detect and report any known or suspected money laundering.",
+      "evidence_span": "establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "Yes, 31 U.S.C. § 5318(g) requires reporting because the activity is suspicious.",
+      "label": "entailment",
+      "reasoning": "Under 31 U.S.C. § 5318(g) requires reporting of transactions that a financial institution knows, suspects, or has reason to suspect are suspicious. The fact pattern shows that Entity SYN_4a4c637a, a retired individual with a declared monthly volume of $2,670, conducted four wire transfers to a new payee totaling $125,437.02 in a single month. This activity is vastly inconsistent with the entity's KYC profile and business purpose (fixed pension income), creating a strong basis for a suspicion of illicit activity. Because 31 U.S.C. § 5318(g) requires reporting such anomalies, the statute applies."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, 31 U.S.C. § 5318(g) requires reporting because the activity is suspicious.",
+        "label": "entailment",
+        "reasoning": "Under 31 U.S.C. § 5318(g) requires reporting of transactions that a financial institution knows, suspects, or has reason to suspect are suspicious. The fact pattern shows that Entity SYN_4a4c637a, a retired individual with a declared monthly volume of $2,670, conducted four wire transfers to a new payee totaling $125,437.02 in a single month. This activity is vastly inconsistent with the entity's KYC profile and business purpose (fixed pension income), creating a strong basis for a suspicion of illicit activity. Because 31 U.S.C. § 5318(g) requires reporting such anomalies, the statute applies."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_4a4c637a executed 4 transactions totaling $125,437.02 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.24. Volume vs declared monthly is 82.91x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 4,
+          "tx_total_usd": 125437.02,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.24,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.69,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 82.91
+        },
+        "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the escalation rate of wires to any newly-added payee.",
+        "answer": "total wire escalation 125,437.02",
+        "calculation": "1. Identify all wires to newly-added payee: transactions[0] (2,893.15), transactions[1] (9,958.81), transactions[2] (24,006.18), transactions[3] (88,578.88). 2. Sum the amounts: 2,893.15 + 9,958.81 + 24,006.18 + 88,578.88 = 125,437.02.",
+        "evidence": "transactions[0..3]"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/312factsheet say about the activity described?",
+        "answer": "U.S. financial institutions must maintain a due diligence program to detect and report any known or suspected money laundering.",
+        "evidence_span": "establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2893.15, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 9958.81, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 24006.18, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 88578.88, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"wire to newly-added payee\"}], \"kyc_profile\": {\"entity_id\": \"SYN_4a4c637a\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2670.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,670.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/312factsheet\", \"url\": \"\", \"text\": \"owners of such foreign bank, if its shares are not publicly traded;\\nThe original proposed rulemaking issued in 2002 sought to create an exception to\\nthe enhanced due diligence requirement for those offshore banks that were branches of\\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\\ndiligence those foreign banks operating under an offshore banking license that are\\nbranches of banks licensed in a jurisdiction where one or more banks had been\\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\\na different approach, focusing instead on clarifying that U.S. financial institutions have\\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\\naccount. Comments are sought on all aspects of this proposed rulemaking.\\nII. Private Banking Provisions\\nThe final rule requires certain U.S. financial institutions to establish and maintain\\na due diligence program for private banking accounts that is reasonably designed to\\ndetect and report any known or suspected money laundering or suspicious activity.\\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\\nbanking account that is maintained for senior foreign political figures, their immediate\\nfamily members, or persons widely and publicly known to\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"PUBLISHED\\nUNITED STATES COURT OF APPEALS\\n              FOR THE FOURTH CIRCUIT\\nUNITED STATES OF AMERICA,             \\n                Plaintiff-Appellee,\\n               v.                           No. 10-4478\\nWALTER LLOYD BLAIR,\\n             Defendant-Appellant.\\n                                      \\n        Appeal from the United States District Court\\n         for the District of Maryland, at Greenbelt.\\n          Peter J. Messitte, Senior District Judge.\\n                   (8:08-cr-00505-PJM-1)\\n                  Argued: March 25, 2011\\n                Decided: September 21, 2011\\n  Before TRAXLER, Chief Judge, and WILKINSON and\\n              WYNN, Circuit Judges.\\nAffirmed in part, reversed in part, and remanded by published\\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\\nson wrote the majority opinion as to Section IV, in which\\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\\nopinion as to Section IV.\\n                         COUNSEL\\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\\nMAN, Washington, D.C., for Appellant. Michael Richard\\n\\f2\\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\\nstein, United States Attorney, Baltimore, Maryland, Jonathan\\nC. Su, Assistant United States Attorney, OFFICE OF THE\\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\\nAppellee.\\n                               OPINION\\nPER CURIAM:\\n   Walter L. Blair, a Maryland attorne\"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"ing beneficiaries)\\nAdvanced systems (for\\nmore developed\\norganisations)\\n◼ Sound investment policies\\n◼ Resource generation plan\\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\\nRECOMMENDATION 8\\n75\\n© 2023 FATF/OECD\\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\\nencompasses a statement of principles of development as well as a code of conduct,\\nand outlines the ethical principles that must be adhered to, and promoted, by the\\norganisation and its members. Below is an excerpt from the Code related to\\norganisational integrity:\\nGovernance\\n Each Organisation shall be governed fairly and responsibly by an\\nindependent, active and informed governing body (e.g., the Board of\\nDirectors).\\n All voting members of the governing body shall serve without compensation,\\nexcept for reasonable expenses incurred to fulfil their organisational duties.\\n Each Organisation shall establish and periodically review a governance\\nframework suitable for fulfilling its mandate. The structure shall enable the\\nOrganisation to make timely decisions and to meet its responsibilities. The\\nframework shall include an appropriate governance structure and operations;\\nrelationship of senior staff and the governing body; and clear decision-making\\nprocesses. […]\\nOrganisational Integrity\\n The affairs of the Organisation shall be conducted with integrity and\\ntransparency. The Organisa\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-ELDER-EXPLOITATION-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, 31 U.S.C. § 5318(g) requires reporting because the activity is suspicious.\", \"label\": \"entailment\", \"reasoning\": \"Under 31 U.S.C. § 5318(g) requires reporting of transactions that a financial institution knows, suspects, or has reason to suspect are suspicious. The fact pattern shows that Entity SYN_4a4c637a, a retired individual with a declared monthly volume of $2,670, conducted four wire transfers to a new payee totaling $125,437.02 in a single month. This activity is vastly inconsistent with the entity's KYC profile and business purpose (fixed pension income), creating a strong basis for a suspicion of illicit activity. Because 31 U.S.C. § 5318(g) requires reporting such anomalies, the statute applies.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_4a4c637a executed 4 transactions totaling $125,437.02 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.24. Volume vs declared monthly is 82.91x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 4, \"tx_total_usd\": 125437.02, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.24, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.69, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 82.91}, \"evidence\": \"transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Compute the escalation rate of wires to any newly-added payee.\", \"answer\": \"total wire escalation 125,437.02\", \"calculation\": \"1. Identify all wires to newly-added payee: transactions[0] (2,893.15), transactions[1] (9,958.81), transactions[2] (24,006.18), transactions[3] (88,578.88). 2. Sum the amounts: 2,893.15 + 9,958.81 + 24,006.18 + 88,578.88 = 125,437.02.\", \"evidence\": \"transactions[0..3]\"}], \"citation\": [{\"question\": \"What does pdfs/312factsheet say about the activity described?\", \"answer\": \"U.S. financial institutions must maintain a due diligence program to detect and report any known or suspected money laundering.\", \"evidence_span\": \"establish and maintain a due diligence program for private banking accounts that is reasonably designed to detect and report any known or suspected money laundering\"}]}}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Entity SYN_4a4c637a, a retired individual on a fixed pension, exhibited a highly suspicious pattern of escalating wire transfers to a newly-added payee, 'Robert Johnson'. Between 2026-04-12 and 2026-04-29, four wires were sent in increasing amounts: $2,893.15, $9,958.81, $24,006.18, and $88,578.88, totaling $125,437.02. This volume is 82.91x the declared monthly volume of $2,670.00. This activity aligns with the red flags for elder exploitation detailed in SOP-ELDER-EXPLOITATION-01 and warrants reporting under 31 U.S.C. § 5318(g) due to the extreme inconsistency with the customer's KYC profile. Final filing decision is deferred to the human investigator.\"\n}\n```",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Entity SYN_4a4c637a, a retired individual on a fixed pension, exhibited a highly suspicious pattern of escalating wire transfers to a newly-added payee, 'Robert Johnson'. Between 2026-04-12 and 2026-04-29, four wires were sent in increasing amounts: $2,893.15, $9,958.81, $24,006.18, and $88,578.88, totaling $125,437.02. This volume is 82.91x the declared monthly volume of $2,670.00. This activity aligns with the red flags for elder exploitation detailed in SOP-ELDER-EXPLOITATION-01 and warrants reporting under 31 U.S.C. § 5318(g) due to the extreme inconsistency with the customer's KYC profile. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Entity SYN_4a4c637a, a retired individual on a fixed pension, exhibited a highly suspicious pattern of escalating wire transfers to a newly-added payee, 'Robert Johnson'. Between 2026-04-12 and 2026-04-29, four wires were sent in increasing amounts: $2,893.15, $9,958.81, $24,006.18, and $88,578.88, totaling $125,437.02. This volume is 82.91x the declared monthly volume of $2,670.00. This activity aligns with the red flags for elder exploitation detailed in SOP-ELDER-EXPLOITATION-01 and warrants reporting under 31 U.S.C. § 5318(g) due to the extreme inconsistency with the customer's KYC profile. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

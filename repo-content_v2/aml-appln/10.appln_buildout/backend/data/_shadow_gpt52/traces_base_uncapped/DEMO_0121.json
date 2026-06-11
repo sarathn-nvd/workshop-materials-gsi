@@ -1,0 +1,176 @@
+{
+  "case_id": "DEMO_0121",
+  "alert_id": "ALT_2414366",
+  "entity_id": "SYN_a6d7460e",
+  "started_at": "2026-05-23T12:12:29.024853+00:00",
+  "finished_at": "2026-05-23T12:12:55.553156+00:00",
+  "wall_clock_ms": 26528.3,
+  "transactions": [
+    {
+      "amount": 72263.97,
+      "channel": "wire",
+      "counterparty": "PWWC Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 72263.97,
+      "channel": "wire",
+      "counterparty": "PWWC Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 1961076.32,
+      "channel": "ach",
+      "counterparty": "UK Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 1597607.31,
+      "channel": "ach",
+      "counterparty": "IPOM Group LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 2171548.23,
+      "channel": "ach",
+      "counterparty": "AYELZ Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 2672337.86,
+      "channel": "cash",
+      "counterparty": "Jennifer Davis",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 736553.59,
+      "channel": "ach",
+      "counterparty": "JX Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_a6d7460e",
+    "entity_type": "business",
+    "expected_monthly_volume": 2234646.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$2,234,646.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.286,
+      "cash": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'ach': 0.5714285714285714, 'cash': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_a6d7460e, business purpose money services business, declared monthly volume ~$2,234,646.\n\nTransactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count: lines: 2026-04-17, 2026-04-19, 2026-02-28, 2026-04-29, 2026-02-26, 2026-03-08 => 6 transactions.\n\n- tx_total_usd: sum of amounts. Let's sum:\n\n72263.97\n+72263.97 = 144"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$9.28M total transaction volume, about 4.2× the declared monthly volume of $2.23M.",
+      "calculation": "1. Extract transaction amounts: 72,263.97; 72,263.97; 1,961,076.32; 1,597,607.31; 2,171,548.23; 2,672,337.86; 736,553.59.\n2. Sum amounts: 72,263.97 + 72,263.97 + 1,961,076.32 + 1,597,607.31 + 2,171,548.23 + 2,672,337.86 + 736,553.59 = 9,283,651.25.\n3. Declared monthly volume = 2,234,646.\n4. Ratio = 9,283,651.25 / 2,234,646 ≈ 4.15 (≈4.2×).",
+      "evidence": "Transaction amounts from rows: 72,263.97 (2026-04-17), 72,263.97 (2026-04-19), 1,961,076.32 (2026-04-23), 1,597,607.31 (2026-02-28), 2,171,548.23 (2026-04-29), 2,672,337.86 (2026-02-26), 736,553.59 (2026-03-08). Declared monthly volume field: expected_monthly_volume: 2234646.0"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage does not contain any policy excerpt.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be determined to fall within any statute.",
+      "label": "neutral",
+      "reasoning": "No statute identifier provided (\"\" ), thus no entailment nor contradiction can be established; label is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be determined to fall within any statute.",
+        "label": "neutral",
+        "reasoning": "No statute identifier provided (\"\" ), thus no entailment nor contradiction can be established; label is neutral."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$9.28M total transaction volume, about 4.2× the declared monthly volume of $2.23M.",
+        "calculation": "1. Extract transaction amounts: 72,263.97; 72,263.97; 1,961,076.32; 1,597,607.31; 2,171,548.23; 2,672,337.86; 736,553.59.\n2. Sum amounts: 72,263.97 + 72,263.97 + 1,961,076.32 + 1,597,607.31 + 2,171,548.23 + 2,672,337.86 + 736,553.59 = 9,283,651.25.\n3. Declared monthly volume = 2,234,646.\n4. Ratio = 9,283,651.25 / 2,234,646 ≈ 4.15 (≈4.2×).",
+        "evidence": "Transaction amounts from rows: 72,263.97 (2026-04-17), 72,263.97 (2026-04-19), 1,961,076.32 (2026-04-23), 1,597,607.31 (2026-02-28), 2,171,548.23 (2026-04-29), 2,672,337.86 (2026-02-26), 736,553.59 (2026-03-08). Declared monthly volume field: expected_monthly_volume: 2234646.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage does not contain any policy excerpt.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 72263.97, \"channel\": \"wire\", \"counterparty\": \"PWWC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"outbound wire\"}, {\"amount\": 72263.97, \"channel\": \"wire\", \"counterparty\": \"PWWC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 1961076.32, \"channel\": \"ach\", \"counterparty\": \"UK Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 1597607.31, \"channel\": \"ach\", \"counterparty\": \"IPOM Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 2171548.23, \"channel\": \"ach\", \"counterparty\": \"AYELZ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 2672337.86, \"channel\": \"cash\", \"counterparty\": \"Jennifer Davis\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 736553.59, \"channel\": \"ach\", \"counterparty\": \"JX Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_a6d7460e\", \"entity_type\": \"business\", \"expected_monthly_volume\": 2234646, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$2,234,646.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be determined to fall within any statute.\", \"label\": \"neutral\", \"reasoning\": \"No statute identifier provided (\\\"\\\" ), thus no entailment nor contradiction can be established; label is neutral.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$9.28M total transaction volume, about 4.2× the declared monthly volume of $2.23M.\", \"calculation\": \"1. Extract transaction amounts: 72,263.97; 72,263.97; 1,961,076.32; 1,597,607.31; 2,171,548.23; 2,672,337.86; 736,553.59.\\n2. Sum amounts: 72,263.97 + 72,263.97 + 1,961,076.32 + 1,597,607.31 + 2,171,548.23 + 2,672,337.86 + 736,553.59 = 9,283,651.25.\\n3. Declared monthly volume = 2,234,646.\\n4. Ratio = 9,283,651.25 / 2,234,646 ≈ 4.15 (≈4.2×).\", \"evidence\": \"Transaction amounts from rows: 72,263.97 (2026-04-17), 72,263.97 (2026-04-19), 1,961,076.32 (2026-04-23), 1,597,607.31 (2026-02-28), 2,171,548.23 (2026-04-29), 2,672,337.86 (2026-02-26), 736,553.59 (2026-03-08). Declared monthly volume field: expected_monthly_volume: 2234646.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage does not contain any policy excerpt.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also typology inferred is \"none\". So likely not suspicious. However we must check decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. Here regulatory_frame benign indicates no SAR. Also auxiliary_findings numeric shows ratio 4.2x declared volume, but that is not necessarily suspicious? But regulatory_frame benign overrides? The bundle says benign, meaning no SAR. So is_suspicious should be false, and suspicious_activity_report empty string.\n\nWe must output JSON only, no extra text. Ensure proper JSON formatting.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nCheck constraints: When false, report must be empty string. Yes.\n\nThus final.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

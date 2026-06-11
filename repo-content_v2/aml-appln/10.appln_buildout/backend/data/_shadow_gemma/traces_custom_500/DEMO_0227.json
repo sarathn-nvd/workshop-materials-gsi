@@ -1,0 +1,216 @@
+{
+  "case_id": "DEMO_0227",
+  "alert_id": "ALT_2166941",
+  "entity_id": "SYN_0f559af7",
+  "started_at": "2026-05-28T10:56:25.749099+00:00",
+  "finished_at": "2026-05-28T10:56:29.576099+00:00",
+  "wall_clock_ms": 3827.0,
+  "transactions": [
+    {
+      "amount": 37044.88,
+      "channel": "wire",
+      "counterparty": "ZEI Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 37044.88,
+      "channel": "wire",
+      "counterparty": "ZEI Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 5735.01,
+      "channel": "card",
+      "counterparty": "Daniel Thomas",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 5546.72,
+      "channel": "wire",
+      "counterparty": "GY Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 4880.74,
+      "channel": "ach",
+      "counterparty": "DSS Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 6809.26,
+      "channel": "card",
+      "counterparty": "Robert Davis",
+      "currency": "USD",
+      "date": "2026-04-05",
+      "notes": ""
+    },
+    {
+      "amount": 2133.49,
+      "channel": "wire",
+      "counterparty": "TDXI Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_0f559af7",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5896.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,896.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.571,
+      "card": 0.286,
+      "ach": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5714285714285714, 'card': 0.2857142857142857, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_0f559af7 executed 7 transactions totaling $99,194.98 USD with channel mix {\"wire\": 0.571, \"card\": 0.286, \"ach\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 14.84x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 99194.98,
+        "channel_mix": {
+          "wire": 0.571,
+          "card": 0.286,
+          "ach": 0.143
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.57,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 14.84
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 93394.21",
+      "calculation": "1. Sum all transaction amounts: 37,044.88 + 37,044.88 + 5,735.01 + 5,546.72 + 4,880.74 + 6,809.26 + 2,133.49 = 93,394.21",
+      "evidence": "transactions[0..6].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_0f559af7 executed 7 transactions totaling $99,194.98 USD with channel mix {\"wire\": 0.571, \"card\": 0.286, \"ach\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 14.84x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 99194.98,
+          "channel_mix": {
+            "wire": 0.571,
+            "card": 0.286,
+            "ach": 0.143
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.57,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 14.84
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 93394.21",
+        "calculation": "1. Sum all transaction amounts: 37,044.88 + 37,044.88 + 5,735.01 + 5,546.72 + 4,880.74 + 6,809.26 + 2,133.49 = 93,394.21",
+        "evidence": "transactions[0..6].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 37044.88, \"channel\": \"wire\", \"counterparty\": \"ZEI Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"outbound wire\"}, {\"amount\": 37044.88, \"channel\": \"wire\", \"counterparty\": \"ZEI Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 5735.01, \"channel\": \"card\", \"counterparty\": \"Daniel Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 5546.72, \"channel\": \"wire\", \"counterparty\": \"GY Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 4880.74, \"channel\": \"ach\", \"counterparty\": \"DSS Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 6809.26, \"channel\": \"card\", \"counterparty\": \"Robert Davis\", \"currency\": \"USD\", \"date\": \"2026-04-05\", \"notes\": \"\"}, {\"amount\": 2133.49, \"channel\": \"wire\", \"counterparty\": \"TDXI Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_0f559af7\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5896.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,896.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_0f559af7 executed 7 transactions totaling $99,194.98 USD with channel mix {\\\"wire\\\": 0.571, \\\"card\\\": 0.286, \\\"ach\\\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 14.84x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 99194.98, \"channel_mix\": {\"wire\": 0.571, \"card\": 0.286, \"ach\": 0.143}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.57, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 14.84}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 93394.21\", \"calculation\": \"1. Sum all transaction amounts: 37,044.88 + 37,044.88 + 5,735.01 + 5,546.72 + 4,880.74 + 6,809.26 + 2,133.49 = 93,394.21\", \"evidence\": \"transactions[0..6].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a high-volume wire transaction of $37,044.88 to ZEI Solutions LLC on 2026-04-11, which was subsequently returned on 2026-04-12 as a cancelled invoice. While the total transaction volume of $93,394.21 is significantly higher than the declared monthly volume of $5,896.00, the activity is primarily driven by a single benign wire reversal. Other transactions, including card payments to Daniel Thomas and DSS Logistics LLC, are consistent with typical individual spending. The activity is not indicative of layering or structuring. No SAR warranted; the final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a high-volume wire transaction of $37,044.88 to ZEI Solutions LLC on 2026-04-11, which was subsequently returned on 2026-04-12 as a cancelled invoice. While the total transaction volume of $93,394.21 is significantly higher than the declared monthly volume of $5,896.00, the activity is primarily driven by a single benign wire reversal. Other transactions, including card payments to Daniel Thomas and DSS Logistics LLC, are consistent with typical individual spending. The activity is not indicative of layering or structuring. No SAR warranted; the final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a high-volume wire transaction of $37,044.88 to ZEI Solutions LLC on 2026-04-11, which was subsequently returned on 2026-04-12 as a cancelled invoice. While the total transaction volume of $93,394.21 is significantly higher than the declared monthly volume of $5,896.00, the activity is primarily driven by a single benign wire reversal. Other transactions, including card payments to Daniel Thomas and DSS Logistics LLC, are consistent with typical individual spending. The activity is not indicative of layering or structuring. No SAR warranted; the final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

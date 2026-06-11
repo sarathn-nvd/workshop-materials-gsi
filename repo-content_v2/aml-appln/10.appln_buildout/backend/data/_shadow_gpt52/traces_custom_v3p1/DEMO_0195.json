@@ -1,0 +1,234 @@
+{
+  "case_id": "DEMO_0195",
+  "alert_id": "ALT_2414064",
+  "entity_id": "SYN_81a6d896",
+  "started_at": "2026-05-27T16:07:34.879552+00:00",
+  "finished_at": "2026-05-27T16:07:41.639395+00:00",
+  "wall_clock_ms": 6759.9,
+  "transactions": [
+    {
+      "amount": 675.29,
+      "channel": "wire",
+      "counterparty": "Donor Karen Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 201.76,
+      "channel": "ach",
+      "counterparty": "Donor Susan Johnson",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 284.99,
+      "channel": "ach",
+      "counterparty": "Donor Michael Thompson",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 818.5,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Jackson",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 662.05,
+      "channel": "wire",
+      "counterparty": "Donor Karen Miller",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 410.83,
+      "channel": "ach",
+      "counterparty": "Donor Sarah Walker",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 245.51,
+      "channel": "wire",
+      "counterparty": "Donor Patricia Smith",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 883.87,
+      "channel": "ach",
+      "counterparty": "Donor Andrew Walker",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "small inbound donation"
+    },
+    {
+      "amount": 434.46,
+      "channel": "ach",
+      "counterparty": "Donor Patricia Anderson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_81a6d896",
+    "entity_type": "business",
+    "expected_monthly_volume": 14372.0,
+    "business_purpose": "Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-DC"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Patricia Smith",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.667,
+      "wire": 0.333
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.6666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 9 with a tx_total_usd of 4617.26. The channel_mix is primarily composed of ach at 0.667, indicating a reliance on electronic transfers. Activity shows a velocity_24h_max of 2, with unique_counterparties_7d of 5. The vs_declared_volume_ratio is 1.08, which is consistent with the expected monthly volume. The movement of funds appears to be consistent with the entity's declared purpose as a charity. This pattern of rapid movement of small donations warrants no further concern at this time.",
+      "metrics": {
+        "tx_count": 9,
+        "tx_total_usd": 4617.26,
+        "channel_mix": {
+          "ach": 0.667,
+          "wire": 0.333
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.38,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.08
+      },
+      "evidence": "transactions[0..8]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 4616.26",
+      "calculation": "1. Identify all transaction amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46 (transactions[0..9].amount). 2. Sum the amounts: 675.29 + 201.76 + 284.99 + 818.50 + 662.05 + 410.83 + 245.51 + 883.87 + 434.46 = 4616.26",
+      "evidence": "transactions[0..9].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account recorded a tx_count of 9 with a tx_total_usd of 4617.26. The channel_mix is primarily composed of ach at 0.667, indicating a reliance on electronic transfers. Activity shows a velocity_24h_max of 2, with unique_counterparties_7d of 5. The vs_declared_volume_ratio is 1.08, which is consistent with the expected monthly volume. The movement of funds appears to be consistent with the entity's declared purpose as a charity. This pattern of rapid movement of small donations warrants no further concern at this time.",
+        "metrics": {
+          "tx_count": 9,
+          "tx_total_usd": 4617.26,
+          "channel_mix": {
+            "ach": 0.667,
+            "wire": 0.333
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.38,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.08
+        },
+        "evidence": "transactions[0..8]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 4616.26",
+        "calculation": "1. Identify all transaction amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46 (transactions[0..9].amount). 2. Sum the amounts: 675.29 + 201.76 + 284.99 + 818.50 + 662.05 + 410.83 + 245.51 + 883.87 + 434.46 = 4616.26",
+        "evidence": "transactions[0..9].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 675.29, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 201.76, \"channel\": \"ach\", \"counterparty\": \"Donor Susan Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"small inbound donation\"}, {\"amount\": 284.99, \"channel\": \"ach\", \"counterparty\": \"Donor Michael Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"small inbound donation\"}, {\"amount\": 818.5, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Jackson\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"small inbound donation\"}, {\"amount\": 662.05, \"channel\": \"wire\", \"counterparty\": \"Donor Karen Miller\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"small inbound donation\"}, {\"amount\": 410.83, \"channel\": \"ach\", \"counterparty\": \"Donor Sarah Walker\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"small inbound donation\"}, {\"amount\": 245.51, \"channel\": \"wire\", \"counterparty\": \"Donor Patricia Smith\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"small inbound donation\"}, {\"amount\": 883.87, \"channel\": \"ach\", \"counterparty\": \"Donor Andrew Walker\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"small inbound donation\"}, {\"amount\": 434.46, \"channel\": \"ach\", \"counterparty\": \"Donor Patricia Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_81a6d896\", \"entity_type\": \"business\", \"expected_monthly_volume\": 14372.0, \"business_purpose\": \"Non-governmental organization / charity; donation-funded operations; declared monthly volume ~$14,372.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-DC\"}, \"sanctions_pep_hits\": [{\"name\": \"Patricia Smith\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account recorded a tx_count of 9 with a tx_total_usd of 4617.26. The channel_mix is primarily composed of ach at 0.667, indicating a reliance on electronic transfers. Activity shows a velocity_24h_max of 2, with unique_counterparties_7d of 5. The vs_declared_volume_ratio is 1.08, which is consistent with the expected monthly volume. The movement of funds appears to be consistent with the entity's declared purpose as a charity. This pattern of rapid movement of small donations warrants no further concern at this time.\", \"metrics\": {\"tx_count\": 9, \"tx_total_usd\": 4617.26, \"channel_mix\": {\"ach\": 0.667, \"wire\": 0.333}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.38, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.08}, \"evidence\": \"transactions[0..8]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 4616.26\", \"calculation\": \"1. Identify all transaction amounts: 675.29, 201.76, 284.99, 818.50, 662.05, 410.83, 245.51, 883.87, 434.46 (transactions[0..9].amount). 2. Sum the amounts: 675.29 + 201.76 + 284.99 + 818.50 + 662.05 + 410.83 + 245.51 + 883.87 + 434.46 = 4616.26\", \"evidence\": \"transactions[0..9].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"A sanctions screening hit was identified for counterparty 'Patricia Smith' (match_score 1.0, OpenSanctions list) associated with a wire transfer of $245.51 on 2026-04-24. However, the transaction amount is small and the match is a perfect score on a common name, which typically indicates a false positive. Furthermore, the account activity consists of nine small inbound donations totaling $4,617.26 between 2026-04-13 and 2026-04-26, which is consistent with the KYC business purpose of a donation-funded NGO and the expected monthly volume of $14,372.00. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "A sanctions screening hit was identified for counterparty 'Patricia Smith' (match_score 1.0, OpenSanctions list) associated with a wire transfer of $245.51 on 2026-04-24. However, the transaction amount is small and the match is a perfect score on a common name, which typically indicates a false positive. Furthermore, the account activity consists of nine small inbound donations totaling $4,617.26 between 2026-04-13 and 2026-04-26, which is consistent with the KYC business purpose of a donation-funded NGO and the expected monthly volume of $14,372.00. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "A sanctions screening hit was identified for counterparty 'Patricia Smith' (match_score 1.0, OpenSanctions list) associated with a wire transfer of $245.51 on 2026-04-24. However, the transaction amount is small and the match is a perfect score on a common name, which typically indicates a false positive. Furthermore, the account activity consists of nine small inbound donations totaling $4,617.26 between 2026-04-13 and 2026-04-26, which is consistent with the KYC business purpose of a donation-funded NGO and the expected monthly volume of $14,372.00. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

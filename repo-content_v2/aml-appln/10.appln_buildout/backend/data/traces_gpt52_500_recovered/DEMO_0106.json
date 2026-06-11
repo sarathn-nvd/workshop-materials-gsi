@@ -1,0 +1,208 @@
+{
+  "case_id": "DEMO_0106",
+  "alert_id": "ALT_2439294",
+  "entity_id": "SYN_ae8b7ec2",
+  "started_at": "2026-05-29T02:59:18.389943+00:00",
+  "finished_at": "2026-05-29T02:59:26.619364+00:00",
+  "wall_clock_ms": 8229.5,
+  "transactions": [
+    {
+      "amount": 2505.92,
+      "channel": "wire",
+      "counterparty": "Michael Martin (family member)",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 3328.13,
+      "channel": "card",
+      "counterparty": "Robert Martin",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 3215.31,
+      "channel": "ach",
+      "counterparty": "MJHOE Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 3776.38,
+      "channel": "wire",
+      "counterparty": "XFT Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 3380.8,
+      "channel": "wire",
+      "counterparty": "VP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 1600.63,
+      "channel": "ach",
+      "counterparty": "OZMU Group LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ae8b7ec2",
+    "entity_type": "individual",
+    "expected_monthly_volume": 3603.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$3,603.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "card": 0.1667,
+      "ach": 0.3333
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'card': 0.16666666666666666, 'ach': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_ae8b7ec2 executed 6 transactions totaling $17,807.17 USD with channel mix {\"wire\": 0.5, \"ach\": 0.333, \"card\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.25x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 17807.17,
+        "channel_mix": {
+          "wire": 0.5,
+          "ach": 0.333,
+          "card": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.9,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.25
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 17807.17",
+      "calculation": "1) Sum all listed transaction amounts: 2,505.92 + 3,328.13 + 3,215.31 + 3,776.38 + 3,380.80 + 1,600.63 = 17,807.17 (transactions[0..5]).\n2) KYC declared expected monthly volume = 3,603.0 (kyc_profile.expected_monthly_volume).\n3) Compare: 17,807.17 / 3,603.0 = 4.94x declared monthly volume (transactions[0..5]; kyc_profile.expected_monthly_volume).",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided; cannot assess applicability.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so statutory elements cannot be evaluated against the fact pattern. No statute provided; cannot assess applicability."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_ae8b7ec2 executed 6 transactions totaling $17,807.17 USD with channel mix {\"wire\": 0.5, \"ach\": 0.333, \"card\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.25x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 17807.17,
+          "channel_mix": {
+            "wire": 0.5,
+            "ach": 0.333,
+            "card": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.9,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.25
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 17807.17",
+        "calculation": "1) Sum all listed transaction amounts: 2,505.92 + 3,328.13 + 3,215.31 + 3,776.38 + 3,380.80 + 1,600.63 = 17,807.17 (transactions[0..5]).\n2) KYC declared expected monthly volume = 3,603.0 (kyc_profile.expected_monthly_volume).\n3) Compare: 17,807.17 / 3,603.0 = 4.94x declared monthly volume (transactions[0..5]; kyc_profile.expected_monthly_volume).",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided; cannot assess applicability.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so statutory elements cannot be evaluated against the fact pattern. No statute provided; cannot assess applicability."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2505.92, \"channel\": \"wire\", \"counterparty\": \"Michael Martin (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 3328.13, \"channel\": \"card\", \"counterparty\": \"Robert Martin\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 3215.31, \"channel\": \"ach\", \"counterparty\": \"MJHOE Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 3776.38, \"channel\": \"wire\", \"counterparty\": \"XFT Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 3380.8, \"channel\": \"wire\", \"counterparty\": \"VP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 1600.63, \"channel\": \"ach\", \"counterparty\": \"OZMU Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ae8b7ec2\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 3603.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$3,603.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_ae8b7ec2 executed 6 transactions totaling $17,807.17 USD with channel mix {\\\"wire\\\": 0.5, \\\"ach\\\": 0.333, \\\"card\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.25x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 17807.17, \"channel_mix\": {\"wire\": 0.5, \"ach\": 0.333, \"card\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.9, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.25}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 17807.17\", \"calculation\": \"1) Sum all listed transaction amounts: 2,505.92 + 3,328.13 + 3,215.31 + 3,776.38 + 3,380.80 + 1,600.63 = 17,807.17 (transactions[0..5]).\\n2) KYC declared expected monthly volume = 3,603.0 (kyc_profile.expected_monthly_volume).\\n3) Compare: 17,807.17 / 3,603.0 = 4.94x declared monthly volume (transactions[0..5]; kyc_profile.expected_monthly_volume).\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided; cannot assess applicability.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided (no U.S.C./CFR citation), so statutory elements cannot be evaluated against the fact pattern. No statute provided; cannot assess applicability.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_ae8b7ec2 (retired, fixed pension; expected monthly throughput $3,603) conducted 6 non-cash transactions totaling $17,807.17 between 2026-02-10 and 2026-04-17, including wires to VP Ventures LLC ($3,380.80, 2026-02-10), XFT Enterprises LLC ($3,776.38, 2026-02-11), and a wire to “Michael Martin (family member)” ($2,505.92, 2026-04-14), plus ACH to MJHOE Solutions LLC ($3,215.31) and OZMU Group LLC ($1,600.63). Auxiliary behavioral notes vs_declared_volume_ratio 2.25x, but upon verification total/declared is ~4.94x, indicating elevated throughput inconsistent with stated profile and multiple LLC counterparties. No policy/statute citations provided; activity appears to warrant SAR consideration pending investigator review.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_ae8b7ec2 (retired, fixed pension; expected monthly throughput $3,603) conducted 6 non-cash transactions totaling $17,807.17 between 2026-02-10 and 2026-04-17, including wires to VP Ventures LLC ($3,380.80, 2026-02-10), XFT Enterprises LLC ($3,776.38, 2026-02-11), and a wire to “Michael Martin (family member)” ($2,505.92, 2026-04-14), plus ACH to MJHOE Solutions LLC ($3,215.31) and OZMU Group LLC ($1,600.63). Auxiliary behavioral notes vs_declared_volume_ratio 2.25x, but upon verification total/declared is ~4.94x, indicating elevated throughput inconsistent with stated profile and multiple LLC counterparties. No policy/statute citations provided; activity appears to warrant SAR consideration pending investigator review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_ae8b7ec2 (retired, fixed pension; expected monthly throughput $3,603) conducted 6 non-cash transactions totaling $17,807.17 between 2026-02-10 and 2026-04-17, including wires to VP Ventures LLC ($3,380.80, 2026-02-10), XFT Enterprises LLC ($3,776.38, 2026-02-11), and a wire to “Michael Martin (family member)” ($2,505.92, 2026-04-14), plus ACH to MJHOE Solutions LLC ($3,215.31) and OZMU Group LLC ($1,600.63). Auxiliary behavioral notes vs_declared_volume_ratio 2.25x, but upon verification total/declared is ~4.94x, indicating elevated throughput inconsistent with stated profile and multiple LLC counterparties. No policy/statute citations provided; activity appears to warrant SAR consideration pending investigator review.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,210 @@
+{
+  "case_id": "DEMO_0082",
+  "alert_id": "ALT_2472070",
+  "entity_id": "SYN_cf899c57",
+  "started_at": "2026-05-29T03:01:11.809469+00:00",
+  "finished_at": "2026-05-29T03:01:54.687860+00:00",
+  "wall_clock_ms": 42878.4,
+  "transactions": [
+    {
+      "amount": 1441.07,
+      "channel": "wire",
+      "counterparty": "Daniel Harris (family, abroad)",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": "remittance to family (benign: documented diaspora support)"
+    },
+    {
+      "amount": 20288.71,
+      "channel": "card",
+      "counterparty": "Christopher Lewis",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 17926.71,
+      "channel": "card",
+      "counterparty": "Michael Miller",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 16022.47,
+      "channel": "cash",
+      "counterparty": "Andrew Miller",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 30072.9,
+      "channel": "ach",
+      "counterparty": "MQ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 23911.9,
+      "channel": "ach",
+      "counterparty": "FUOE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 10257.01,
+      "channel": "ach",
+      "counterparty": "KZJAF Group LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_cf899c57",
+    "entity_type": "individual",
+    "expected_monthly_volume": 33793.0,
+    "business_purpose": "Self-employed proprietor; small-business cash flow; expected monthly throughput ~$33,793.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.1429,
+      "card": 0.2857,
+      "cash": 0.1429,
+      "ach": 0.4286
+    },
+    "cash_present": true,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.14285714285714285, 'card': 0.2857142857142857, 'cash': 0.14285714285714285, 'ach': 0.42857142857142855})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_cf899c57 executed 7 transactions totaling $119,920.77 USD with channel mix {\"ach\": 0.429, \"card\": 0.286, \"wire\": 0.143, \"cash\": 0.143}. The 24-hour velocity peak is 2 against a 30-day average of 0.23. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 119920.77,
+        "channel_mix": {
+          "ach": 0.429,
+          "card": 0.286,
+          "wire": 0.143,
+          "cash": 0.143
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.82,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.22
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 119920.77",
+      "calculation": "1. transactions[0..6] sum amount = 119920.77",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No citation can be generated; policy excerpts available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, label, reasoning.\n\nWe have a user request: \"No statute mapped for this typology; respond accordingly.\"\n\nWe have a fact pattern with transactions and KYC profile. There's no statute provided (statute field empty). The question is \"No statute mapped for this typology; respond accordingly.\"\n\nWe need to determine if the statute applies to the facts. Since there is no statute, we cannot find any statutory element to satisfy. So likely label is 'neut"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_cf899c57 executed 7 transactions totaling $119,920.77 USD with channel mix {\"ach\": 0.429, \"card\": 0.286, \"wire\": 0.143, \"cash\": 0.143}. The 24-hour velocity peak is 2 against a 30-day average of 0.23. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 119920.77,
+          "channel_mix": {
+            "ach": 0.429,
+            "card": 0.286,
+            "wire": 0.143,
+            "cash": 0.143
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.82,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.22
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 119920.77",
+        "calculation": "1. transactions[0..6] sum amount = 119920.77",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No citation can be generated; policy excerpts available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": []
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1441.07, \"channel\": \"wire\", \"counterparty\": \"Daniel Harris (family, abroad)\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"remittance to family (benign: documented diaspora support)\"}, {\"amount\": 20288.71, \"channel\": \"card\", \"counterparty\": \"Christopher Lewis\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 17926.71, \"channel\": \"card\", \"counterparty\": \"Michael Miller\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 16022.47, \"channel\": \"cash\", \"counterparty\": \"Andrew Miller\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 30072.9, \"channel\": \"ach\", \"counterparty\": \"MQ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 23911.9, \"channel\": \"ach\", \"counterparty\": \"FUOE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 10257.01, \"channel\": \"ach\", \"counterparty\": \"KZJAF Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_cf899c57\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 33793.0, \"business_purpose\": \"Self-employed proprietor; small-business cash flow; expected monthly throughput ~$33,793.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_cf899c57 executed 7 transactions totaling $119,920.77 USD with channel mix {\\\"ach\\\": 0.429, \\\"card\\\": 0.286, \\\"wire\\\": 0.143, \\\"cash\\\": 0.143}. The 24-hour velocity peak is 2 against a 30-day average of 0.23. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 119920.77, \"channel_mix\": {\"ach\": 0.429, \"card\": 0.286, \"wire\": 0.143, \"cash\": 0.143}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.82, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.22}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 119920.77\", \"calculation\": \"1. transactions[0..6] sum amount = 119920.77\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No citation can be generated; policy excerpts available.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": []}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report (string 400-800 chars). Must decide based on evidence.\n\nWe have a low risk individual, expected monthly volume 33,793, total transaction volume 119,920.77 which is 3.55x? Wait earlier metrics says vs_declared_volume_ratio 2.22x. Let's compute: total 119,920.77 / 33,793 ≈ 3.55. But metrics says 2.22x maybe they used something else. But we can reference that ratio.\n\nWe have channel mix: ach 42.9%, card 28.6%, wire 14.3%, cash 14.3%. No sanctions hits. Behavioral summary: 24h velocity peak 2 vs avg 0.23, high. Unique counterparties 1 in 7 days (so many to same? Actually unique counterparties_7d = 1, meaning all transactions to same counterparty? Actually they have multiple counterparties listed: Daniel Harris, Christopher Lewis, Michael Miller, Andrew Miller, MQ Logistics LLC, FUOE Ventures LLC, KZJAF Group LLC - that's 7 counterparties. But metrics says unique_counterparties_7d = 1, maybe they considered only within 7 days? Actually all dates are within Feb-Mar 2026, maybe within 7 days of some point? Not sure. But we must stick to evidence.\n\nWe need to decide if suspicious. The bundle includes a high volume relative to expected, high velocity, but also business purpose is small-business cash flow, low risk. The transactions include wires to family abroad, card payments to individuals, ACH to LLCs. No structuring under 10k. There's a high velocity spike (2 in 24h) vs avg 0.23, suggests clustering. Could be suspicious.\n\nBut we must decide based on evidence: Are there strong positive signals? There's a high volume ratio (2.22x) but not extremely high. However, the velocity spike and high total volume could be suspicious, especially if the entity is low risk and expected monthly volume is 33k but they moved 119k in some period (maybe within a month). That is >3x expected. That may warrant SAR.\n\nBut also there is no sanctions hit, no PEP. The behavioral finding says loop_detected false, country_risk_max 0.1. The channel mix includes ach, card, wire, cash. The presence of multiple ACH payments to LLCs could be trade-based? But not necessarily.\n\nGiven the instructions: Set is_suspicious=true only when evidence warrants filing a SAR. Strong-positive signals include high volume ratio inconsistent with declared purpose. Here it's 2.22x (or maybe 3.5x). That's somewhat high. Also velocity spike is high (2 vs 0.23). That suggests unusual activity. Also the entity is low risk but moving large sums.\n\nThus I think we should set is_suspicious=true.\n\nNow we need to produce a narrative 400-800 characters, grounded, citing evidence.\n\nWe must not exceed 800 characters. Let's craft about 650 characters.\n\nNarrative must start with most salient evidence: maybe the high volume vs declared and velocity spike.\n\nWe must cite specific transaction facts: amounts, dates, counterparties.\n\nWe must mention the single most notable behavioral finding: velocity_24h_max 2 vs avg 0.23, or vs_declared_volume_ratio 2.22x.\n\nWe must cite regulatory framework: likely \"CTR / 31 USC 5324\" or \"structuring\" if cash? But we have mixed channels, not all cash. Could use \"layering / rapid-movement\" framing. But we need to choose appropriate based on channel mix: mixed cash+non-cash, so discuss cash as CTR; wires as layering separately. But we have only one cash transaction (16022.47) to Andrew Miller, not structuring. The high volume is across channels.\n\nMaybe we can cite \"FATF guidance on rapid-transaction patterns\" but must be from policy_excerpts? There are none. But we can cite \"regulatory framework applicable to rapid-movement of funds\" but must be derived from policy_excerpts? There are none. However we can cite \"the observed pattern is inconsistent with declared low‑risk business purpose and exceeds expected monthly volume, triggering SAR consideration under FinCEN CTR expectations.\" We must ensure we don't invent regulation not in excerpts. There are no policy_excerpts provided. But we can still mention \"FinCEN CTR thresholds\" without citing a specific excerpt? The grounding rule: Every regulation cited MUST appear by its section identifier in policy_excerpts[].text or in auxiliary_findings.{citation, statutory}. Since there are no policy_excerpts, we cannot cite a regulation. But we can still mention \"FinCEN CTR\" if it's not a regulation citation? Might be considered a regulation. Safer to avoid citing any regulation if not present. We can just say \"under applicable BSA expectations\" but that's vague. Might be okay.\n\nBut the instruction: \"Cite the regulatory framework that applies (see REGULATORY FRAMING below).\" We need to choose a framework based on channel mix. Since we have mixed channels, we can use \"mixed cash + non-cash\" -> discuss cash as CTR; wires as layering separately. But we need to cite the framework? Not necessarily a regulation reference, but we can mention \"BSA CTR structuring rules\" but that is a regulation. Not in excerpts. Might be okay if we don't claim it's in excerpts. The grounding rule says every regulation cited must appear in policy_excerpts or auxiliary_findings. Since there are none, we cannot cite any regulation. So we should avoid citing any specific regulation or statute. We can just say \"consistent with BSA expectations for unusual volume and velocity.\"\n\nBut the narrative must be grounded, but we can refer to \"the observed 24‑hour velocity peak of 2 (vs a 30‑day average of 0.23)\" and \"total volume 119,921 USD, about 2.2‑times the expected monthly throughput\". That's enough.\n\nWe must not exceed 800 characters. Let's count approximate characters.\n\nDraft:\n\n\"On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13. The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume. A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile. No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern.\"\n\nNow count characters. Let's approximate: each character includes spaces. Let's count quickly.\n\nI'll count using rough method: I'll copy text and count.\n\n\"On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13. The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume. A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile. No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern.\"\n\nLet's count characters including spaces. I'll approximate using a tool mentally: It's probably around 650-700 characters. Let's count more precisely.\n\nI'll write it without line breaks and count.\n\nI'll count characters manually: I'll copy into a counting mental.\n\nI'll count per segment.\n\nSegment1: \"On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13.\"\n\nLet's count length. I'll approximate: It's long. Might be ~350 characters.\n\nSegment2: \" The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume.\"\n\nAdd maybe 100 chars.\n\nSegment3: \" A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile.\"\n\n~100 chars.\n\nSegment4: \" No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern.\"\n\n~80 chars.\n\nTotal maybe ~630-660. That's within 400-800.\n\nWe must ensure we don't exceed 800 characters. Likely okay.\n\nNow we must output JSON with is_suspicious true and the narrative string.\n\nMake sure to escape quotes properly in JSON string. Use double quotes for JSON, and escape any internal double quotes. Our narrative contains double quotes? It contains “ and ” curly quotes, which are not standard ASCII double quotes; they are Unicode left and right double quotation marks, which are not double quote characters. JSON strings can contain any Unicode characters, but we must ensure we don't have unescaped control characters. The curly quotes are fine. However we have apostrophes? That's fine. We have hyphens, etc. We must ensure we don't have unescaped backslashes. There's a multiplication sign × (U+00D7) and a fraction? That's fine. We have an en dash – (U+2013). That's fine. JSON allows these.\n\nBut we must ensure we don't have any unescaped newline characters. We'll keep it as one line.\n\nWe must output exactly JSON object, no extra text.\n\nThus final answer:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13. The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume. A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile. No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern.\"\n}\n\nCheck character count: Let's approximate length: It's probably around 650-700 characters, within 400-800.\n\nNow ensure we didn't include any extra keys. Only two fields.\n\nThus final.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13. The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume. A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile. No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13. The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume. A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile. No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑01 a $1,441.07 wire to “Daniel Harris (family, abroad)” was recorded, followed by a $20,288.71 card payment to Christopher Lewis (2026‑02‑25), a $17,926.71 card payment to Michael Miller (2026‑03‑11), a $16,022.47 cash payment to Andrew Miller (2026‑02‑26), and three ACH transfers totaling $71,202.71 to MQ Logistics LLC, FUOE Ventures LLC and KZJAF Group LLC between 2026‑02‑12 and 2026‑03‑13. The entity, a low‑risk sole‑proprietor with an expected monthly volume of $33,793, moved a total of $119,921 across seven transactions – roughly 2.2 × the declared volume. A 24‑hour window showed a velocity peak of 2 versus an average of 0.23, indicating clustered activity inconsistent with the modest cash‑flow profile. No sanctions or PEP matches are present, but the magnitude and velocity of the activity raise a SAR‑warranting concern.",
+  "judge_enabled": false,
+  "error": null
+}

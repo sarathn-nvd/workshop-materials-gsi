@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0121",
+  "alert_id": "ALT_2414366",
+  "entity_id": "SYN_a6d7460e",
+  "started_at": "2026-05-23T11:22:00.047209+00:00",
+  "finished_at": "2026-05-23T11:22:03.118734+00:00",
+  "wall_clock_ms": 3071.6,
+  "transactions": [
+    {
+      "amount": 72263.97,
+      "channel": "wire",
+      "counterparty": "PWWC Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 72263.97,
+      "channel": "wire",
+      "counterparty": "PWWC Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 1961076.32,
+      "channel": "ach",
+      "counterparty": "UK Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 1597607.31,
+      "channel": "ach",
+      "counterparty": "IPOM Group LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 2171548.23,
+      "channel": "ach",
+      "counterparty": "AYELZ Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 2672337.86,
+      "channel": "cash",
+      "counterparty": "Jennifer Davis",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 736553.59,
+      "channel": "ach",
+      "counterparty": "JX Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_a6d7460e",
+    "entity_type": "business",
+    "expected_monthly_volume": 2234646.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$2,234,646.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.286,
+      "cash": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'ach': 0.5714285714285714, 'cash': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The entity SYN_a6d7460e exhibited high transaction activity with a total volume of $7,212,447.45 across 6 transactions. Activity is concentrated in ACH transfers to UK Capital LLC ($1,961,076.32), IPOM Group LLC ($1,597,607.31), and AYELZ Capital LLC ($2,171,548.23), alongside a large cash transaction of $2,672,337.86 to Jennifer Davis. The velocity is high, with a 24h max of 2 and a 30d average of 0.2, while the amount z-score max is 2.1. A loop was detected involving PWWC Partners LLC with two wires totaling $144,527.94. The observed volume significantly exceeds the declared monthly volume of $2,234,646.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 7212447.45,
+        "channel_mix": {
+          "wire": 0.333,
+          "ach": 0.5,
+          "cash": 0.167
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 2.1,
+        "country_risk_max": 0.0,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 3.23
+      },
+      "evidence": "transactions[0..5]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "The total transaction volume is $7,331,817.68, which is approximately 3.28x the declared monthly volume of $2,234,646.00.",
+      "calculation": "1. Sum of transactions: 72,263.97 + 72,263.97 + 1,961,076.32 + 1,597,607.31 + 2,171,548.23 + 2,672,337.86 + 736,553.59 = 7,331,817.68\n2. Comparison: 7,331,817.68 / 2,234,646.00 = 3.28",
+      "evidence": "Transactions listed with amounts in USD; KYC profile expected monthly volume of 2,234,646.0"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant passage was provided to extract a citation from.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+      "label": "neutral",
+      "reasoning": "No statute text was provided to analyze against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+        "label": "neutral",
+        "reasoning": "No statute text was provided to analyze against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_a6d7460e exhibited high transaction activity with a total volume of $7,212,447.45 across 6 transactions. Activity is concentrated in ACH transfers to UK Capital LLC ($1,961,076.32), IPOM Group LLC ($1,597,607.31), and AYELZ Capital LLC ($2,171,548.23), alongside a large cash transaction of $2,672,337.86 to Jennifer Davis. The velocity is high, with a 24h max of 2 and a 30d average of 0.2, while the amount z-score max is 2.1. A loop was detected involving PWWC Partners LLC with two wires totaling $144,527.94. The observed volume significantly exceeds the declared monthly volume of $2,234,646.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 7212447.45,
+          "channel_mix": {
+            "wire": 0.333,
+            "ach": 0.5,
+            "cash": 0.167
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 2.1,
+          "country_risk_max": 0.0,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 3.23
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $7,331,817.68, which is approximately 3.28x the declared monthly volume of $2,234,646.00.",
+        "calculation": "1. Sum of transactions: 72,263.97 + 72,263.97 + 1,961,076.32 + 1,597,607.31 + 2,171,548.23 + 2,672,337.86 + 736,553.59 = 7,331,817.68\n2. Comparison: 7,331,817.68 / 2,234,646.00 = 3.28",
+        "evidence": "Transactions listed with amounts in USD; KYC profile expected monthly volume of 2,234,646.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 72263.97, \"channel\": \"wire\", \"counterparty\": \"PWWC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"outbound wire\"}, {\"amount\": 72263.97, \"channel\": \"wire\", \"counterparty\": \"PWWC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 1961076.32, \"channel\": \"ach\", \"counterparty\": \"UK Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 1597607.31, \"channel\": \"ach\", \"counterparty\": \"IPOM Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 2171548.23, \"channel\": \"ach\", \"counterparty\": \"AYELZ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 2672337.86, \"channel\": \"cash\", \"counterparty\": \"Jennifer Davis\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 736553.59, \"channel\": \"ach\", \"counterparty\": \"JX Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_a6d7460e\", \"entity_type\": \"business\", \"expected_monthly_volume\": 2234646, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$2,234,646.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"No statute text was provided to analyze against the fact pattern.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_a6d7460e exhibited high transaction activity with a total volume of $7,212,447.45 across 6 transactions. Activity is concentrated in ACH transfers to UK Capital LLC ($1,961,076.32), IPOM Group LLC ($1,597,607.31), and AYELZ Capital LLC ($2,171,548.23), alongside a large cash transaction of $2,672,337.86 to Jennifer Davis. The velocity is high, with a 24h max of 2 and a 30d average of 0.2, while the amount z-score max is 2.1. A loop was detected involving PWWC Partners LLC with two wires totaling $144,527.94. The observed volume significantly exceeds the declared monthly volume of $2,234,646.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 7212447.45, \"channel_mix\": {\"wire\": 0.333, \"ach\": 0.5, \"cash\": 0.167}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 2.1, \"country_risk_max\": 0.0, \"loop_detected\": true, \"vs_declared_volume_ratio\": 3.23}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $7,331,817.68, which is approximately 3.28x the declared monthly volume of $2,234,646.00.\", \"calculation\": \"1. Sum of transactions: 72,263.97 + 72,263.97 + 1,961,076.32 + 1,597,607.31 + 2,171,548.23 + 2,672,337.86 + 736,553.59 = 7,331,817.68\\n2. Comparison: 7,331,817.68 / 2,234,646.00 = 3.28\", \"evidence\": \"Transactions listed with amounts in USD; KYC profile expected monthly volume of 2,234,646.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

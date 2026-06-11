@@ -1,0 +1,151 @@
+{
+  "case_id": "DEMO_0052",
+  "alert_id": "ALT_2406632",
+  "entity_id": "SYN_ddbcc620",
+  "started_at": "2026-05-27T15:13:11.128124+00:00",
+  "finished_at": "2026-05-27T15:13:43.203065+00:00",
+  "wall_clock_ms": 32075.0,
+  "transactions": [
+    {
+      "amount": 710.16,
+      "channel": "wire",
+      "counterparty": "Donor Susan Anderson",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ddbcc620",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4145.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,145.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Concentrated wire flow (1 txns, top counterparty share 100%)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have input bundle: [transactions] list with one transaction: date 2026-04-29, channel wire, amount 710.16 USD, counterparty Donor Susan Anderson, notes small inbound donation.\n\n[kyc_profile] with fields: entity_id, entity_type, expected_monthly_volume: 4145.0, business_purpose: ..., risk_rating: medium, incorporation_jurisdiction: US-CA.\n\nWe also have a precomputed metrics block? The user says \"precomputed metrics block\""
+    },
+    "numeric": {
+      "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+      "answer": "total cycle volume 0.1713",
+      "calculation": "1. Extract transaction amount from transactions[0..0].amount => 710.16\n2. Extract expected monthly volume from kyc_profile.expected_monthly_volume => 4145.0\n3. Compute ratio = 710.16 / 4145.0 => 0.1713\n4. total cycle volume = 0.1713",
+      "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The passage says the activity is certainly worthy of FinCEN’s attention.",
+      "evidence_span": "is certainly worthy of FinCEN’s attention."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "does not apply",
+      "label": "contradiction",
+      "reasoning": "31 U.S.C. § 5318(g) obligates reporting of suspicious activity; the fact pattern shows a single $710.16 inbound donation with no pattern of structuring or volume exceeding thresholds, therefore the conduct does not satisfy the statutory requirement and does not apply."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "does not apply",
+        "label": "contradiction",
+        "reasoning": "31 U.S.C. § 5318(g) obligates reporting of suspicious activity; the fact pattern shows a single $710.16 inbound donation with no pattern of structuring or volume exceeding thresholds, therefore the conduct does not satisfy the statutory requirement and does not apply."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "total cycle volume 0.1713",
+        "calculation": "1. Extract transaction amount from transactions[0..0].amount => 710.16\n2. Extract expected monthly volume from kyc_profile.expected_monthly_volume => 4145.0\n3. Compute ratio = 710.16 / 4145.0 => 0.1713\n4. total cycle volume = 0.1713",
+        "evidence": "transactions[0..0]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The passage says the activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 710.16, \"channel\": \"wire\", \"counterparty\": \"Donor Susan Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ddbcc620\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4145.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,145.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"does not apply\", \"label\": \"contradiction\", \"reasoning\": \"31 U.S.C. § 5318(g) obligates reporting of suspicious activity; the fact pattern shows a single $710.16 inbound donation with no pattern of structuring or volume exceeding thresholds, therefore the conduct does not satisfy the statutory requirement and does not apply.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"total cycle volume 0.1713\", \"calculation\": \"1. Extract transaction amount from transactions[0..0].amount => 710.16\\n2. Extract expected monthly volume from kyc_profile.expected_monthly_volume => 4145.0\\n3. Compute ratio = 710.16 / 4145.0 => 0.1713\\n4. total cycle volume = 0.1713\", \"evidence\": \"transactions[0..0]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The passage says the activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string (400-800 characters). Must derive is_suspicious based on evidence.\n\nWe have a single transaction: $710.16 inbound wire donation from \"Donor Susan Anderson\". It's an individual with expected monthly volume $4,145. Business purpose: salaried wage earner. Risk rating medium. No sanctions hits. Policy excerpts include FinCEN text about suspicious activity being worthy of attention, but also about volume. SOP excerpt about layering detection etc. Auxiliary findings: statutory says does not apply; numeric says total cycle volume 0.1713 (ratio). So they computed ratio 0.1713 (710.16 / 4145). That's about 17% of expected monthly volume. That's less than 0.5-1.5x? Actually it's less than declared volume; it's within range but lower. They say \"total cycle volume 0.1713\". That's less than 1x. So not exceeding declared volume.\n\nThe question: Should we file SAR? Based on evidence, likely not suspicious. The transaction is a small inbound donation, no pattern, no structuring, no high risk. The auxiliary numeric finding indicates low volume relative to expected. So is_suspicious = false.\n\nWe must produce a negative narrative (disposition rationale) of 400-800 characters, grounded, citing the surface red flag (the alert triggered maybe due to some rule?), naming it explicitly, citing bundle evidence that resolves it, and defer to human investigator. Must not downplay or hide the surface red flag. Must name it explicitly: e.g., \"single inbound wire of $710.16 from Donor Susan Anderson\". Must cite KYC business purpose and expected monthly volume. Must mention that the transaction amount is within declared volume, etc. Must not invent disambiguating evidence not present. Must not claim anything not in bundle.\n\nWe need to produce a string of 400-800 characters. Let's craft about 550 characters.\n\nCount characters roughly. Let's draft:\n\n\"Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation. This single low‑value wire triggered the alert. The kyc_profile indicates the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of wage income. The observed amount represents only 17 % of the declared monthly volume and does not exhibit structuring, rapid‑pass‑through, or other red‑flag patterns. Accordingly, the activity is consistent with the declared business and no SAR is warranted; final disposition defers to the human investigator.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\nSurface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation. This single low‑value wire triggered the alert. The kyc_profile indicates the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of wage income. The observed amount represents only 17 % of the declared monthly volume and does not exhibit structuring, rapid‑pass‑through, or other red‑flag patterns. Accordingly, the activity is consistent with the declared business and no SAR is warranted; final disposition defers to the human investigator.\n\nLet's count characters. I'll approximate using a tool mentally: It's probably around 500-560 characters. Let's count precisely.\n\nI'll write it with indices.\n\n\"Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation. This single low‑value wire triggered the alert. The kyc_profile indicates the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of wage income. The observed amount represents only 17 % of the declared monthly volume and does not exhibit structuring, rapid‑pass‑through, or other red‑flag patterns. Accordingly, the activity is consistent with the declared business and no SAR is warranted; final disposition defers to the human investigator.\"\n\nCount characters:\n\nI'll count manually using groups.\n\nI'll copy into a counting mental: Let's count each sentence.\n\nSentence1: \"Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation.\"\n\nCount characters including spaces and punctuation.\n\nI'll count characters:\n\n\"Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation.\"\n\nLet's count: \nS(1)u2r3f4a5c6e7 (space8)r9e10d11 (space12)f13l14a15g16:17 (space18)a19 (space20)$21 7? Actually \"$\" is one char. Let's do systematic: maybe easier to approximate length ~150 characters. Overall whole text likely ~560. That's within 400-800.\n\nWe must ensure it's 400-800 characters. Let's approximate length: The text seems maybe ~560 characters. Should be fine.\n\nNow output JSON:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"<the string>\"\n}\n\nMake sure no extra whitespace? It's okay.\n\nWe must not use markdown fences. Just raw JSON.\n\nLet's produce final answer.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation. This single low‑value wire triggered the alert. The kyc_profile indicates the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of wage income. The observed amount represents only 17 % of the declared monthly volume and does not exhibit structuring, rapid‑pass‑through, or other red‑flag patterns. Accordingly, the activity is consistent with the declared business and no SAR is warranted; final disposition defers to the human investigator.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation. This single low‑value wire triggered the alert. The kyc_profile indicates the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of wage income. The observed amount represents only 17 % of the declared monthly volume and does not exhibit structuring, rapid‑pass‑through, or other red‑flag patterns. Accordingly, the activity is consistent with the declared business and no SAR is warranted; final disposition defers to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: a $710.16 inbound wire from counterparty Donor Susan Anderson on 2026-04-29, noted as a small donation. This single low‑value wire triggered the alert. The kyc_profile indicates the entity is a salaried wage earner with an expected monthly volume of $4,145 and a business purpose of wage income. The observed amount represents only 17 % of the declared monthly volume and does not exhibit structuring, rapid‑pass‑through, or other red‑flag patterns. Accordingly, the activity is consistent with the declared business and no SAR is warranted; final disposition defers to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

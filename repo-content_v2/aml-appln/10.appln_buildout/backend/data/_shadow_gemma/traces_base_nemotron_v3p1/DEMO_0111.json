@@ -1,0 +1,180 @@
+{
+  "case_id": "DEMO_0111",
+  "alert_id": "ALT_2495069",
+  "entity_id": "SYN_1140aeab",
+  "started_at": "2026-05-27T15:15:57.954232+00:00",
+  "finished_at": "2026-05-27T15:16:30.071839+00:00",
+  "wall_clock_ms": 32117.6,
+  "transactions": [
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "CSE Global Limited",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "ON Capital LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": "round-number outbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "AE Industries LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 2500000.0,
+      "channel": "wire",
+      "counterparty": "USFP Services LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 1000000.0,
+      "channel": "wire",
+      "counterparty": "DB Logistics LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "round-number inbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_1140aeab",
+    "entity_type": "business",
+    "expected_monthly_volume": 443649.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "CSE Global Limited",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "nning to explore the delta between compliance risk and illicit finance risk\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\nClemente Vasquez Bello made to our BSAAG efforts over the years.\nThe passion and dedication that Clemente brought for many years to our BSAAG\ndiscussions was second to none, and he has been sorely missed. I know from my own\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\nbetween money laundering prevention and BSA reporting.\nOn one hand, if you focus too much on the prevention side within your financial\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\nefforts will be undermined and the U.S. financial system compromised.\nWhat we all learned from our discussions with Clemente about this, as well as many\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\nimportant role in helping strike that balance.\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\nimpact on our work wit"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "n collaboration with NPOs and other government entities, a financial institution\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\nto financial institutions to understand NPO TF risks. It supports the understanding\nand awareness among NPOs on the various AML/CFT risk considerations when\nseeking to open an account, and when accessing and using any financial services.\nThe portal explains that the financial institution functions as a gatekeeper to the\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\nprovides an overview of the documents and information that the financial institution\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\nThe portal guides an NPO through various questions that the financial institution\nmust consider when performing its risk assessment and CDD procedures regarding:\n(i) Countries in which the NPO is active;\n(ii) The type of activity the NPO engages in;\n(iii) Organisational structure, including staff, board members, and partners of\nthe NPO;\n(iv)NPO’s ultimate beneficial owner; and\n(v) Type of transactions and sources of funding.\nThe portal refers to good governance instruments that NPOs can use to mitigate any\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\nownership/control and organisational structure, geographical reach, activities and\noperations, sources of funding, their (intended) financial transactions, and fi"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-SHELL-COMPANY-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "shell_company"
+  },
+  "typology_hypothesis": "shell_company",
+  "activity_descriptor": "Sanctions counterparty hit on offshore-incorporated entity (CSE Global Limited)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have input bundle: [transactions] list, [kyc_profile] details, and presumably a precomputed metrics block? The user didn't provide metrics block explicitly. The task says we receive a transactional bundle ([transactions] + [kyc_profile]) AND a precomputed metrics block. But they didn't include metrics block in the passage. Possibly it's implied that we need to compute metrics? But rule says metrics is the precomputed met"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Sum round-number wires through the entity; compare to KYC declared monthly volume.\"\n\nWe need to sum round-number wires through the entity. Which wires are round-number? All listed amounts are round numbers (e.g., 100,000; 500,000; etc). Probably sum all amounts in transactions. Let's sum:\n\nAmounts:\n100,000.00\n500,000.00\n500,000.00\n2,500,000.00\n1,000,000.00\n\nSum = 100k + 500k + 500k + 2,500k + 1,000k = 4,600,00"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "It describes explore the delta between compliance risk and illicit finance risk.",
+      "evidence_span": "nning to explore the delta between compliance risk and illicit finance risk through our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG)."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 1010.230?",
+      "answer": "yes, because § 1010.230 requires identification of beneficial owners",
+      "label": "entailment",
+      "reasoning": "The statute § 1010.230 governs beneficial-ownership requirements for legal entity customers; it obligates covered entities to identify and verify beneficial owners of such customers. The fact pattern describes a BVI business entity (a legal entity customer) with declared monthly volume and multiple wire transactions, indicating that the entity is subject to the rule’s identification obligation. Thus the conduct falls within the scope of § 1010.230, as the regulation’s element of identifying beneficial owners is triggered by the existence of a covered legal entity customer, which is present here. requires identification of"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 1010.230?",
+        "answer": "yes, because § 1010.230 requires identification of beneficial owners",
+        "label": "entailment",
+        "reasoning": "The statute § 1010.230 governs beneficial-ownership requirements for legal entity customers; it obligates covered entities to identify and verify beneficial owners of such customers. The fact pattern describes a BVI business entity (a legal entity customer) with declared monthly volume and multiple wire transactions, indicating that the entity is subject to the rule’s identification obligation. Thus the conduct falls within the scope of § 1010.230, as the regulation’s element of identifying beneficial owners is triggered by the existence of a covered legal entity customer, which is present here. requires identification of"
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "It describes explore the delta between compliance risk and illicit finance risk.",
+        "evidence_span": "nning to explore the delta between compliance risk and illicit finance risk through our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG)."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"CSE Global Limited\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"ON Capital LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"round-number outbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"AE Industries LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 2500000.0, \"channel\": \"wire\", \"counterparty\": \"USFP Services LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 1000000.0, \"channel\": \"wire\", \"counterparty\": \"DB Logistics LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"round-number inbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_1140aeab\", \"entity_type\": \"business\", \"expected_monthly_volume\": 443649.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [{\"name\": \"CSE Global Limited\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"nning to explore the delta between compliance risk and illicit finance risk\\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\\nClemente Vasquez Bello made to our BSAAG efforts over the years.\\nThe passion and dedication that Clemente brought for many years to our BSAAG\\ndiscussions was second to none, and he has been sorely missed. I know from my own\\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\\nbetween money laundering prevention and BSA reporting.\\nOn one hand, if you focus too much on the prevention side within your financial\\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\\nefforts will be undermined and the U.S. financial system compromised.\\nWhat we all learned from our discussions with Clemente about this, as well as many\\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\\nimportant role in helping strike that balance.\\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\\nimpact on our work wit\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"n collaboration with NPOs and other government entities, a financial institution\\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\\nto financial institutions to understand NPO TF risks. It supports the understanding\\nand awareness among NPOs on the various AML/CFT risk considerations when\\nseeking to open an account, and when accessing and using any financial services.\\nThe portal explains that the financial institution functions as a gatekeeper to the\\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\\nprovides an overview of the documents and information that the financial institution\\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\\nThe portal guides an NPO through various questions that the financial institution\\nmust consider when performing its risk assessment and CDD procedures regarding:\\n(i) Countries in which the NPO is active;\\n(ii) The type of activity the NPO engages in;\\n(iii) Organisational structure, including staff, board members, and partners of\\nthe NPO;\\n(iv)NPO’s ultimate beneficial owner; and\\n(v) Type of transactions and sources of funding.\\nThe portal refers to good governance instruments that NPOs can use to mitigate any\\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\\nownership/control and organisational structure, geographical reach, activities and\\noperations, sources of funding, their (intended) financial transactions, and fi\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-SHELL-COMPANY-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 1010.230?\", \"answer\": \"yes, because § 1010.230 requires identification of beneficial owners\", \"label\": \"entailment\", \"reasoning\": \"The statute § 1010.230 governs beneficial-ownership requirements for legal entity customers; it obligates covered entities to identify and verify beneficial owners of such customers. The fact pattern describes a BVI business entity (a legal entity customer) with declared monthly volume and multiple wire transactions, indicating that the entity is subject to the rule’s identification obligation. Thus the conduct falls within the scope of § 1010.230, as the regulation’s element of identifying beneficial owners is triggered by the existence of a covered legal entity customer, which is present here. requires identification of\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"It describes explore the delta between compliance risk and illicit finance risk.\", \"evidence_span\": \"nning to explore the delta between compliance risk and illicit finance risk through our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG).\"}]}}",
+  "sar_raw_text": "We need to produce JSON with is_suspicious boolean and suspicious_activity_report string 400-800 characters, grounded narrative, citing evidence from bundle. Must derive is_suspicious based on evidence.\n\nWe have transactions: 5 wires, amounts: 100k, 500k, 500k, 2.5M, 1M. Counterparties: CSE Global Limited (OFAC hit), ON Capital LLC BVI, AE Industries LLC BVI, USFP Services LLC Delaware-US, DB Logistics LLC Delaware-US. All round-number wires. Entity is offshore holding company, BVI, expected monthly volume 443,649. So total transaction amounts sum = 100k + 500k + 500k + 2.5M + 1M = 4.1M. That's about 9.25x expected monthly volume. That's high. Also sanctions hit on CSE Global Limited with match_score 1.0 (confident). Also policy excerpt about beneficial ownership etc. SOP steps mention escalate if UBO unverifiable or pass-through pattern clear. Here we have round-number wires, BVI, no payroll etc. Likely suspicious.\n\nWe must produce narrative 400-800 characters. Must be grounded, citing specific evidence: mention OFAC hit on CSE Global Limited match_score 1.0, round-number wires, BVI incorporation, expected monthly volume, etc. Must not exceed 800 characters. Let's craft about 650 characters.\n\nNeed to output JSON only, no extra text.\n\nCheck constraints: Must not invent evidence not present. We can compute total volume ratio: 4.1M / 443,649 ≈ 9.25. That's derived from transactions, allowed. Must not claim something not in auxiliary_findings. There's statutory finding about §1010.230 but we can mention that the conduct falls within that regulation (since it's in statutory answer). That is allowed.\n\nWe must ensure narrative length 400-800 characters. Let's draft ~650 characters.\n\nCount characters roughly. Let's write:\n\n\"An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, combined with five round‑number wires totaling $4.1 M—about 9.3× the declared monthly volume of $443,649—creates a clear pass‑through pattern inconsistent with the entity’s asset‑holding purpose. The activity triggers §1010.230 beneficial‑owner identification and warrants SAR review.\"\n\nNow count characters. Let's count manually.\n\nString:\n\n\"An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, combined with five round‑number wires totaling $4.1 M—about 9.3× the declared monthly volume of $443,649—creates a clear pass‑through pattern inconsistent with the entity’s asset‑holding purpose. The activity triggers §1010.230 beneficial‑owner identification and warrants SAR review.\"\n\nCount characters including spaces. Let's approximate: I'll count.\n\nI'll copy into a counting mental.\n\nI'll count characters:\n\n1-10: \"An OFAC \" (8?) Let's do precise.\n\nI'll write with indices.\n\n\"An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, combined with five round‑number wires totaling $4.1 M—about 9.3× the declared monthly volume of $443,649—creates a clear pass‑through pattern inconsistent with the entity’s asset‑holding purpose. The activity triggers §1010.230 beneficial‑owner identification and warrants SAR review.\"\n\nLet's count using rough method: maybe around 350? Need 400-800. Need longer. Add more details: mention transaction dates, counterparties, channel mix, and that it's inconsistent with declared business purpose.\n\nAdd: \"The wires occurred between 2026-04-04 and 2026-04-24, involving CSE Global Limited, ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US).\" That adds length.\n\nLet's craft final narrative ~650-700 characters.\n\nFull narrative:\n\n\"An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, coincides with five round‑number wires ($100k, $500k, $500k, $2.5M, $1M) dated 2026‑04‑04 to 2026‑04‑24 to counterparties including ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate $4.1 M equals roughly 9.3× the declared monthly volume of $443,649 and lacks any payroll, rent or utility pattern, inconsistent with the stated asset‑holding purpose. This triggers §1010.230 beneficial‑owner identification and warrants SAR review.\"\n\nNow count characters. Let's approximate: It's likely around 650-700. Let's quickly count roughly: Each word ~5 chars plus spaces. Probably okay.\n\nWe must ensure length >=400 and <=800. Should be fine.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure to escape quotes inside string? The narrative contains double quotes? It doesn't contain double quotes. It contains apostrophes and hyphens. That's fine. Must not include newline? Probably okay but better keep as one line string. JSON string can contain line breaks but it's okay. We'll keep as one line.\n\nLet's output exactly JSON.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, coincides with five round‑number wires ($100k, $500k, $500k, $2.5M, $1M) dated 2026‑04‑04 to 2026‑04‑24 to counterparties including ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate $4.1 M equals roughly 9.3× the declared monthly volume of $443,649 and lacks any payroll, rent or utility pattern, inconsistent with the stated asset‑holding purpose. This triggers §1010.230 beneficial‑owner identification and warrants SAR review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, coincides with five round‑number wires ($100k, $500k, $500k, $2.5M, $1M) dated 2026‑04‑04 to 2026‑04‑24 to counterparties including ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate $4.1 M equals roughly 9.3× the declared monthly volume of $443,649 and lacks any payroll, rent or utility pattern, inconsistent with the stated asset‑holding purpose. This triggers §1010.230 beneficial‑owner identification and warrants SAR review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "An OFAC match_score of 1.0 on CSE Global Limited, a BVI‑incorporated offshore holding company, coincides with five round‑number wires ($100k, $500k, $500k, $2.5M, $1M) dated 2026‑04‑04 to 2026‑04‑24 to counterparties including ON Capital LLC (BVI), AE Industries LLC (BVI), USFP Services LLC (Delaware‑US) and DB Logistics LLC (Delaware‑US). The aggregate $4.1 M equals roughly 9.3× the declared monthly volume of $443,649 and lacks any payroll, rent or utility pattern, inconsistent with the stated asset‑holding purpose. This triggers §1010.230 beneficial‑owner identification and warrants SAR review.",
+  "judge_enabled": false,
+  "error": null
+}

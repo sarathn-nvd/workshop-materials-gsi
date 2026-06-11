@@ -1,0 +1,168 @@
+{
+  "case_id": "DEMO_0116",
+  "alert_id": "ALT_2476483",
+  "entity_id": "SYN_91fbc766",
+  "started_at": "2026-05-27T15:16:20.165220+00:00",
+  "finished_at": "2026-05-27T15:16:56.441586+00:00",
+  "wall_clock_ms": 36276.4,
+  "transactions": [
+    {
+      "amount": 23001.3,
+      "channel": "wire",
+      "counterparty": "MCM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 23001.3,
+      "channel": "wire",
+      "counterparty": "MCM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 390324.25,
+      "channel": "cash",
+      "counterparty": "Elizabeth Moore",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 319385.49,
+      "channel": "card",
+      "counterparty": "Maria Martin",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 467886.71,
+      "channel": "card",
+      "counterparty": "Daniel Smith",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 159248.12,
+      "channel": "ach",
+      "counterparty": "XY Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 269057.99,
+      "channel": "card",
+      "counterparty": "Maria Thompson",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_91fbc766",
+    "entity_type": "business",
+    "expected_monthly_volume": 522414.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$522,414.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "Cayman"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.429,
+      "wire": 0.286,
+      "cash": 0.143,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'cash': 0.14285714285714285, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have to echo the user's question verbatim as question value.\n\nWe need to produce a summary 4-8 sentences, prose, every quantitative claim must be a verbatim copy of a value from the precomputed metrics block. The summary must mention, as their exact stored values, at least these six metric keys when present: tx_count, tx_total_usd, channel_mix (one entry suffices), velocity_24h_max, unique_counterparties_7d, vs_declared_"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe must produce a strict-JSON numeric finding. Must echo question verbatim as question field.\n\nAnswer must be numeric value derivable from input, within rounding tolerance ±5%. Also must include a contiguous 3-word phrase that names the specific quantity computed, and the numeric result. So answer must be something like \"total transac"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The system reports no policy excerpts.",
+      "evidence_span": "no policy excerpts"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "no statute mapped",
+      "label": "neutral",
+      "reasoning": "N/A; no statutory elements present, so cannot satisfy any, leading to neutral. no statute mapped"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "no statute mapped",
+        "label": "neutral",
+        "reasoning": "N/A; no statutory elements present, so cannot satisfy any, leading to neutral. no statute mapped"
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The system reports no policy excerpts.",
+        "evidence_span": "no policy excerpts"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 23001.3, \"channel\": \"wire\", \"counterparty\": \"MCM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"outbound wire\"}, {\"amount\": 23001.3, \"channel\": \"wire\", \"counterparty\": \"MCM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 390324.25, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Moore\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 319385.49, \"channel\": \"card\", \"counterparty\": \"Maria Martin\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 467886.71, \"channel\": \"card\", \"counterparty\": \"Daniel Smith\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 159248.12, \"channel\": \"ach\", \"counterparty\": \"XY Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 269057.99, \"channel\": \"card\", \"counterparty\": \"Maria Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_91fbc766\", \"entity_type\": \"business\", \"expected_monthly_volume\": 522414.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$522,414.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"Cayman\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"no statute mapped\", \"label\": \"neutral\", \"reasoning\": \"N/A; no statutory elements present, so cannot satisfy any, leading to neutral. no statute mapped\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The system reports no policy excerpts.\", \"evidence_span\": \"no policy excerpts\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have transactions: 7 entries. Let's examine.\n\nTransactions:\n\n1. $23,001.30 wire to MCM Solutions LLC 2026-04-12\n2. $23,001.30 wire returned (benign) 2026-04-15\n3. $390,324.25 cash to Elizabeth Moore 2026-02-10\n4. $319,385.49 card to Maria Martin 2026-02-17\n5. $467,886.71 card to Daniel Smith 2026-04-11\n6. $159,248.12 ach to XY Capital LLC 2026-04-17\n7. $269,057.99 card to Maria Thompson 2026-04-06\n\nkyc_profile: business, expected_monthly_volume 522,414, business purpose: Offshore holding company; primary purpose is asset holding; declared monthly volume ~$522,414. risk medium, jurisdiction Cayman.\n\nsanctions_pep_hits: empty.\n\npolicy_excerpts: empty.\n\nsop_excerpts: empty.\n\nauxiliary_findings: statutory: no statute mapped; behavioral: []; numeric: []; citation: no policy excerpts.\n\nThus no explicit red flags besides maybe structuring? There are two wires of $23,001.30 each, just under 25k but above 10k? Actually 23k > 10k, but CTR threshold is $10,000? In US, CTR is $10,000, but suspicious may be structuring to avoid CTR? However these are wires, not cash. Structuring applies to cash deposits, not wires. But could be suspicious if pattern of just under 25k? Not relevant.\n\nThere is a large cash outflow $390k to Elizabeth Moore (maybe a person). Also large card payments to Maria Martin, Daniel Smith, Maria Thompson. These are large amounts, but total maybe exceeds expected monthly volume? Let's sum amounts:\n\nWire 23,001.30 + 23,001.30 = 46,002.60\nCash 390,324.25\nCard 319,385.49\nCard 467,886.71\nACH 159,248.12\nCard 269,057.99\n\nSum = let's compute:\n\n46,002.60 + 390,324.25 = 436,326.85\n+ 319,385.49 = 755,712.34\n+ 467,886.71 = 1,223,599.05\n+ 159,248.12 = 1,382,847.17\n+ 269,057.99 = 1,651,905.16\n\nTotal ~1.65 million. Expected monthly volume is 522,414. So observed total is about 3.16 times expected monthly volume. That's a strong signal.\n\nBut we need to see if there is any pattern that matches declared business purpose: Offshore holding company; primary purpose is asset holding. That may involve investments, maybe cash outflows to individuals? Could be suspicious.\n\nNo sanctions hits.\n\nNo policy excerpts.\n\nThus we have strong numeric finding: observed total > declared volume.\n\nBut we must verify if any auxiliary numeric findings are present: none. So we must compute ourselves.\n\nWe need to produce a narrative 400-800 characters, grounded, citing evidence.\n\nWe need to decide is_suspicious: likely true, because the volume far exceeds expected monthly volume, and the entity is an offshore holding company with asset holding purpose, but large card payments to various individuals may be suspicious. Also the two $23k wires just under 25k but not structuring; but the large cash outflow may be suspicious.\n\nThus is_suspicious = true.\n\nNow craft narrative 400-800 characters.\n\nNeed to mention salient evidence: large transaction amounts, total exceeds expected monthly volume by ~3x, multiple large card payments to different payees, offshore holding company context.\n\nAlso mention that no sanctions hit, but the volume discrepancy is a strong positive signal.\n\nNeed to close with deferring final filing decision to human investigator.\n\nLength 400-800 characters. Let's aim ~550 characters.\n\nCount characters roughly.\n\nDraft:\n\n\"On 2026‑04‑12 and 2026‑04‑15 two $23,001.30 wires to MCM Solutions LLC were recorded, one later cancelled. Between 2026‑02‑10 and 2026‑04‑17 the entity transferred $390,324.25 in cash to Elizabeth Moore and made four card payments of $319,385.49, $467,886.71, $159,248.12 and $269,057.99 to distinct payees. The aggregate of all seven transactions equals $1,651,905, roughly three times the KYC‑declared monthly volume of $522,414 for an offshore holding company. This volume discrepancy, combined with multiple large outbound payments to unrelated individuals, constitutes a strong‑positive SAR trigger; final filing decision is referred to the analyst.\"\n\nNow count characters. Let's approximate: We'll count characters including spaces.\n\nI'll count manually:\n\n\"On 2026‑04‑12 and 2026‑04‑15 two $23,001.30 wires to MCM Solutions LLC were recorded, one later cancelled. Between 2026‑02‑10 and 2026‑04‑17 the entity transferred $390,324.25 in cash to Elizabeth Moore and made four card payments of $319,385.49, $467,886.71, $159,248.12 and $269,057.99 to distinct payees. The aggregate of all seven transactions equals $1,651,905, roughly three times the KYC‑declared monthly volume of $522,414 for an offshore holding company. This volume discrepancy, combined with multiple large outbound payments to unrelated individuals, constitutes a strong‑positive SAR trigger; final filing decision is referred to the analyst.\"\n\nLet's count roughly: I'll use approximate count. Might be around 600-650 characters. Should be within 400-800.\n\nWe need to ensure it's 400-800 characters, not words. Let's approximate length: The text seems maybe ~560 characters. Should be fine.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<the narrative>\"\n}\n\nMake sure to escape quotes inside string? The narrative contains double quotes? It doesn't contain double quotes. It contains apostrophes? It has none. It contains hyphens and punctuation but fine.\n\nWe must output exactly JSON, no extra text.\n\nThus final answer.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑12 and 2026‑04‑15 two $23,001.30 wires to MCM Solutions LLC were recorded, one later cancelled. Between 2026‑02‑10 and 2026‑04‑17 the entity transferred $390,324.25 in cash to Elizabeth Moore and made four card payments of $319,385.49, $467,886.71, $159,248.12 and $269,057.99 to distinct payees. The aggregate of all seven transactions equals $1,651,905, roughly three times the KYC‑declared monthly volume of $522,414 for an offshore holding company. This volume discrepancy, combined with multiple large outbound payments to unrelated individuals, constitutes a strong‑positive SAR trigger; final filing decision is referred to the analyst.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑12 and 2026‑04‑15 two $23,001.30 wires to MCM Solutions LLC were recorded, one later cancelled. Between 2026‑02‑10 and 2026‑04‑17 the entity transferred $390,324.25 in cash to Elizabeth Moore and made four card payments of $319,385.49, $467,886.71, $159,248.12 and $269,057.99 to distinct payees. The aggregate of all seven transactions equals $1,651,905, roughly three times the KYC‑declared monthly volume of $522,414 for an offshore holding company. This volume discrepancy, combined with multiple large outbound payments to unrelated individuals, constitutes a strong‑positive SAR trigger; final filing decision is referred to the analyst."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑12 and 2026‑04‑15 two $23,001.30 wires to MCM Solutions LLC were recorded, one later cancelled. Between 2026‑02‑10 and 2026‑04‑17 the entity transferred $390,324.25 in cash to Elizabeth Moore and made four card payments of $319,385.49, $467,886.71, $159,248.12 and $269,057.99 to distinct payees. The aggregate of all seven transactions equals $1,651,905, roughly three times the KYC‑declared monthly volume of $522,414 for an offshore holding company. This volume discrepancy, combined with multiple large outbound payments to unrelated individuals, constitutes a strong‑positive SAR trigger; final filing decision is referred to the analyst.",
+  "judge_enabled": false,
+  "error": null
+}

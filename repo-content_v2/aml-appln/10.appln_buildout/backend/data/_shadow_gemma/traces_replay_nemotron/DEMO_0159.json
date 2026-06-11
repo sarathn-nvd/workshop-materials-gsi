@@ -1,0 +1,287 @@
+{
+  "case_id": "DEMO_0159",
+  "entity_id": "SYN_e48c7af1",
+  "started_at": "2026-05-23T13:15:57.887191+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 11042.5,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 377.09, \"channel\": \"ach\", \"counterparty\": \"DCPV Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}, {\"amount\": 1032.93, \"channel\": \"ach\", \"counterparty\": \"FNM Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1072.01, \"channel\": \"wire\", \"counterparty\": \"QET Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 1224.79, \"channel\": \"ach\", \"counterparty\": \"PO Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 1116.97, \"channel\": \"cheque\", \"counterparty\": \"SBBE Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 750.59, \"channel\": \"wire\", \"counterparty\": \"DJT Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 514.09, \"channel\": \"card\", \"counterparty\": \"Patricia Smith\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 722.53, \"channel\": \"ach\", \"counterparty\": \"KW Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 558.72, \"channel\": \"cheque\", \"counterparty\": \"CZ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 910.58, \"channel\": \"ach\", \"counterparty\": \"PS Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}, {\"amount\": 939.78, \"channel\": \"ach\", \"counterparty\": \"SUK Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 1110.13, \"channel\": \"card\", \"counterparty\": \"Andrew Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 443.76, \"channel\": \"card\", \"counterparty\": \"James Garcia\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 1048.96, \"channel\": \"card\", \"counterparty\": \"James Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 485.4, \"channel\": \"ach\", \"counterparty\": \"OOLZ Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 741.03, \"channel\": \"ach\", \"counterparty\": \"KNRG Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 963.34, \"channel\": \"wire\", \"counterparty\": \"GVYCX Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 670.46, \"channel\": \"card\", \"counterparty\": \"James Davis\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 452.2, \"channel\": \"ach\", \"counterparty\": \"LAH Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 269.97, \"channel\": \"wire\", \"counterparty\": \"DLFC Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 771.8, \"channel\": \"card\", \"counterparty\": \"Andrew Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 944.35, \"channel\": \"ach\", \"counterparty\": \"CRIYZ Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 1240.52, \"channel\": \"card\", \"counterparty\": \"Christopher Harris\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 864.57, \"channel\": \"ach\", \"counterparty\": \"OUVCO Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_e48c7af1\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5000, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,000.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [{\"name\": \"Patricia Smith\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_e48c7af1 exhibits a high volume of activity with a total of 24 transactions. The total volume across all transactions is $22,234.11, which represents a vs_declared_volume_ratio of 4.45 relative to the expected monthly volume of $5,000.00. Activity is spread across multiple channels, with ach being the most frequent (11 instances), followed by card (6 instances) and wire (4 instances). The velocity is moderate, with a 24h max of 3 and a 30d average of 0.8. The account interacts with a diverse set of counterparties, including several LLCs and individuals. No loop_detected activity was observed.\", \"metrics\": {\"tx_count\": 24, \"tx_total_usd\": 22234.11, \"channel_mix\": {\"ach\": 0.458, \"card\": 0.25, \"wire\": 0.167, \"cheque\": 0.083}, \"velocity_24h_max\": 3, \"velocity_24h_avg_30d\": 0.8, \"unique_counterparties_7d\": 18, \"amount_z_score_max\": 2.45, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 4.45}, \"evidence\": \"transactions[0..23]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $17,322.21, which is 3.46x the declared monthly volume of $5,000.00.\", \"calculation\": \"1. Sum all transaction amounts: 377.09 + 1032.93 + 1072.01 + 1224.79 + 1116.97 + 750.59 + 514.09 + 722.53 + 558.72 + 910.58 + 939.78 + 1110.13 + 443.76 + 1048.96 + 485.40 + 741.03 + 963.34 + 670.46 + 452.20 + 269.97 + 771.80 + 944.35 + 1240.52 + 864.57 = 17,322.21\\n2. Compare to KYC expected monthly volume: 17,322.21 / 5,000.00 = 3.46\", \"evidence\": \"All 'amount' fields in the Transactions table\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\", \"_decision_target\": \"not_suspicious\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle says _regulatory_frame benign, _typology_inferred none, _decision_target not_suspicious. Also auxiliary_findings includes behavioral and numeric. Need to verify consistency. The behavioral says total volume $22,234.11 vs declared $5,000 => ratio 4.45. But numeric says total $17,322.21, ratio 3.46. There's inconsistency. Must verify. Let's compute sum of amounts given. Let's sum quickly: I'll add.\n\nList amounts:\n377.09\n1032.93 => 1410.02\n1072.01 => 2482.03\n1224.79 => 3706.82\n1116.97 => 4823.79\n750.59 => 5574.38\n514.09 => 6088.47\n722.53 => 6811.00\n558.72 => 7369.72\n910.58 => 8280.30\n939.78 => 9220.08\n1110.13 => 10330.21\n443.76 => 10773.97\n1048.96 => 11822.93\n485.40 => 12308.33\n741.03 => 13049.36\n963.34 => 14012.70\n670.46 => 14683.16\n452.20 => 15135.36\n269.97 => 15405.33\n771.80 => 16177.13\n944.35 => 17121.48\n864.57 => 17986.05\n\nWait my sum seems off; maybe I missed some. Let's recount number of transactions: there are 24 entries. I think I missed some amounts: Let's list with index:\n\n0 377.09\n1 1032.93\n2 1072.01\n3 1224.79\n4 1116.97\n5 750.59\n6 514.09\n7 722.53\n8 558.72\n9 910.58\n10 939.78\n11 1110.13\n12 443.76\n13 1048.96\n14 485.40\n15 741.03\n16 963.34\n17 670.46\n18 452.20\n19 269.97\n20 771.80\n21 944.35\n22 1240.52\n23 864.57\n\nNow sum precisely using calculator mental:\n\nLet's sum groups:\n\nFirst 5: 377.09+1032.93=1410.02; +1072.01=2482.03; +1224.79=3706.82; +1116.97=4823.79\n\nNext 5 (5-9): +750.59=5574.38; +514.09=6088.47; +722.53=6811.00; +558.72=7369.72; +910.58=8280.30\n\nNext 5 (10-14): +939.78=9220.08; +1110.13=10330.21; +443.76=10773.97; +1048.96=11822.93; +485.40=12308.33\n\nNext 5 (15-19): +741.03=13049.36; +963.34=14012.70; +670.46=14683.16; +452.20=15135.36; +269.97=15405.33\n\nNext 5 (20-24): +771.80=16177.13; +944.35=17121.48; +1240.52=18362.00; +864.57=19226.57\n\nWait I think I miscount; after 15-19 we had 15405.33, then adding 771.80 => 16177.13, then +944.35 => 17121.48, then +1240.52 => 1",
+  "transactions": [
+    {
+      "amount": 377.09,
+      "channel": "ach",
+      "counterparty": "DCPV Group LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    },
+    {
+      "amount": 1032.93,
+      "channel": "ach",
+      "counterparty": "FNM Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1072.01,
+      "channel": "wire",
+      "counterparty": "QET Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 1224.79,
+      "channel": "ach",
+      "counterparty": "PO Group LLC",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 1116.97,
+      "channel": "cheque",
+      "counterparty": "SBBE Services LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 750.59,
+      "channel": "wire",
+      "counterparty": "DJT Group LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 514.09,
+      "channel": "card",
+      "counterparty": "Patricia Smith",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 722.53,
+      "channel": "ach",
+      "counterparty": "KW Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 558.72,
+      "channel": "cheque",
+      "counterparty": "CZ Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 910.58,
+      "channel": "ach",
+      "counterparty": "PS Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    },
+    {
+      "amount": 939.78,
+      "channel": "ach",
+      "counterparty": "SUK Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 1110.13,
+      "channel": "card",
+      "counterparty": "Andrew Lewis",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 443.76,
+      "channel": "card",
+      "counterparty": "James Garcia",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 1048.96,
+      "channel": "card",
+      "counterparty": "James Thomas",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 485.4,
+      "channel": "ach",
+      "counterparty": "OOLZ Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 741.03,
+      "channel": "ach",
+      "counterparty": "KNRG Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 963.34,
+      "channel": "wire",
+      "counterparty": "GVYCX Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 670.46,
+      "channel": "card",
+      "counterparty": "James Davis",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 452.2,
+      "channel": "ach",
+      "counterparty": "LAH Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 269.97,
+      "channel": "wire",
+      "counterparty": "DLFC Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 771.8,
+      "channel": "card",
+      "counterparty": "Andrew Anderson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 944.35,
+      "channel": "ach",
+      "counterparty": "CRIYZ Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 1240.52,
+      "channel": "card",
+      "counterparty": "Christopher Harris",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 864.57,
+      "channel": "ach",
+      "counterparty": "OUVCO Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_e48c7af1",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5000.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,000.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Patricia Smith",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.458,
+      "card": 0.292,
+      "wire": 0.167,
+      "cheque": 0.083
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_e48c7af1 exhibits a high volume of activity with a total of 24 transactions. The total volume across all transactions is $22,234.11, which represents a vs_declared_volume_ratio of 4.45 relative to the expected monthly volume of $5,000.00. Activity is spread across multiple channels, with ach being the most frequent (11 instances), followed by card (6 instances) and wire (4 instances). The velocity is moderate, with a 24h max of 3 and a 30d average of 0.8. The account interacts with a diverse set of counterparties, including several LLCs and individuals. No loop_detected activity was observed.",
+        "metrics": {
+          "tx_count": 24,
+          "tx_total_usd": 22234.11,
+          "channel_mix": {
+            "ach": 0.458,
+            "card": 0.25,
+            "wire": 0.167,
+            "cheque": 0.083
+          },
+          "velocity_24h_max": 3,
+          "velocity_24h_avg_30d": 0.8,
+          "unique_counterparties_7d": 18,
+          "amount_z_score_max": 2.45,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 4.45
+        },
+        "evidence": "transactions[0..23]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $17,322.21, which is 3.46x the declared monthly volume of $5,000.00.",
+        "calculation": "1. Sum all transaction amounts: 377.09 + 1032.93 + 1072.01 + 1224.79 + 1116.97 + 750.59 + 514.09 + 722.53 + 558.72 + 910.58 + 939.78 + 1110.13 + 443.76 + 1048.96 + 485.40 + 741.03 + 963.34 + 670.46 + 452.20 + 269.97 + 771.80 + 944.35 + 1240.52 + 864.57 = 17,322.21\n2. Compare to KYC expected monthly volume: 17,322.21 / 5,000.00 = 3.46",
+        "evidence": "All 'amount' fields in the Transactions table"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "nvidia/nemotron-3-nano",
+    "endpoint": "http://localhost:8089/v1"
+  }
+}

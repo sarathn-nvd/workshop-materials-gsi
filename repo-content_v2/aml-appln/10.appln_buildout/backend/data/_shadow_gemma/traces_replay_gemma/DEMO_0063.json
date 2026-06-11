@@ -1,0 +1,175 @@
+{
+  "case_id": "DEMO_0063",
+  "entity_id": "SYN_4d98f665",
+  "started_at": "2026-05-23T13:14:25.295420+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 12455.4,
+  "sar_is_suspicious": true,
+  "sar_parse_error": null,
+  "sar_narrative": "The account of SYN_4d98f665 exhibits activity consistent with layering and rapid movement of funds, which is inconsistent with the client's KYC profile as a salaried wage earner with an expected monthly volume of $4,751. Behavioral findings indicate a total transaction volume of $122,612.72 across 6 transactions, resulting in a vs_declared_volume_ratio of 25.81. Specifically, a circular flow was observed involving OPP Ventures LLC, with an outbound wire of $55,454.13 on 2026-04-09 and a returned wire of $55,454.13 on 2026-04-11. The total volume passing through this cycle was $110,908.26, which is 23.34x the declared monthly volume. Additional outbound activity includes wires to MCM Solutions LLC ($4,715.13 on 2026-02-07), AB Exports LLC ($4,255.11 on 2026-04-11), and FPEK Enterprises LLC ($1,262.59 on 2026-04-30), as well as a cheque to YDWO Group LLC ($3,549.73 on 2026-02-10). This activity warrants further review by a human investigator.",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_4d98f665 exhibits activity consistent with layering and rapid movement of funds, which is inconsistent with the client's KYC profile as a salaried wage earner with an expected monthly volume of $4,751. Behavioral findings indicate a total transaction volume of $122,612.72 across 6 transactions, resulting in a vs_declared_volume_ratio of 25.81. Specifically, a circular flow was observed involving OPP Ventures LLC, with an outbound wire of $55,454.13 on 2026-04-09 and a returned wire of $55,454.13 on 2026-04-11. The total volume passing through this cycle was $110,908.26, which is 23.34x the declared monthly volume. Additional outbound activity includes wires to MCM Solutions LLC ($4,715.13 on 2026-02-07), AB Exports LLC ($4,255.11 on 2026-04-11), and FPEK Enterprises LLC ($1,262.59 on 2026-04-30), as well as a cheque to YDWO Group LLC ($3,549.73 on 2026-02-10). This activity warrants further review by a human investigator."
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 55454.13, \"channel\": \"wire\", \"counterparty\": \"OPP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"outbound wire\"}, {\"amount\": 55454.13, \"channel\": \"wire\", \"counterparty\": \"OPP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 1262.59, \"channel\": \"wire\", \"counterparty\": \"FPEK Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"\"}, {\"amount\": 4715.13, \"channel\": \"wire\", \"counterparty\": \"MCM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 3549.73, \"channel\": \"cheque\", \"counterparty\": \"YDWO Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 4255.11, \"channel\": \"wire\", \"counterparty\": \"AB Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 1321.89, \"channel\": \"ach\", \"counterparty\": \"NQNKS Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_4d98f665\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4751, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,751.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the conduct may fall within 5318(g) due to the presence of multiple outbound wires and a cheque to various counterparties, including a wire of $55,454.13 to OPP Ventures LLC.\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity that may involve money laundering or other criminal activity. The observed transactions include several outbound wires (e.g., $55,454.13 to OPP Ventures LLC) and a cheque to YDWO Group LLC, which could indicate a pattern of activity inconsistent with the individual's declared business purpose as a salaried wage earner.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_4d98f665 exhibits high-value activity with a total transaction volume of $122,612.72 across 6 transactions. The activity is heavily concentrated in wire transfers, including a significant outbound wire of $55,454.13 to OPP Ventures LLC and a returned wire of the same amount. The account also shows a mix of cheque and ACH activity, such as a $3,549.73 cheque to YDWO Group LLC. The velocity is low with a 24h max of 2 and a 30d average of 0.2, and the account has interacted with 4 unique counterparties. The observed volume is significantly higher than the declared monthly volume of $4,751.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 122612.72, \"channel_mix\": {\"wire\": 0.6666666666666666, \"cheque\": 0.16666666666666666, \"ach\": 0.16666666666666666}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 4, \"amount_z_score_max\": 2.31, \"country_risk_max\": 0.0, \"loop_detected\": true, \"vs_declared_volume_ratio\": 25.81}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"The total volume passing through the cycle between 2026-04-09 and 2026-04-11 is $110,908.26, which is 23.34x the declared monthly volume of $4,751.0.\", \"calculation\": \"1. Identify the cycle: Outbound wire of $55,454.13 on 2026-04-09 to OPP Ventures LLC, followed by a returned wire of $55,454.13 on 2026-04-11.\\n2. Sum the amounts in the cycle: $55,454.13 + $55,454.13 = $110,908.26.\\n3. Compare to KYC declared monthly volume: $110,908.26 / $4,751.0 = 23.34.\", \"evidence\": \"Transactions 2026-04-09 ($55,454.13) and 2026-04-11 ($55,454.13)\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "```json\n{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account of SYN_4d98f665 exhibits activity consistent with layering and rapid movement of funds, which is inconsistent with the client's KYC profile as a salaried wage earner with an expected monthly volume of $4,751. Behavioral findings indicate a total transaction volume of $122,612.72 across 6 transactions, resulting in a vs_declared_volume_ratio of 25.81. Specifically, a circular flow was observed involving OPP Ventures LLC, with an outbound wire of $55,454.13 on 2026-04-09 and a returned wire of $55,454.13 on 2026-04-11. The total volume passing through this cycle was $110,908.26, which is 23.34x the declared monthly volume. Additional outbound activity includes wires to MCM Solutions LLC ($4,715.13 on 2026-02-07), AB Exports LLC ($4,255.11 on 2026-04-11), and FPEK Enterprises LLC ($1,262.59 on 2026-04-30), as well as a cheque to YDWO Group LLC ($3,549.73 on 2026-02-10). This activity warrants further review by a human investigator.\"}\n```",
+  "transactions": [
+    {
+      "amount": 55454.13,
+      "channel": "wire",
+      "counterparty": "OPP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 55454.13,
+      "channel": "wire",
+      "counterparty": "OPP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 1262.59,
+      "channel": "wire",
+      "counterparty": "FPEK Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": ""
+    },
+    {
+      "amount": 4715.13,
+      "channel": "wire",
+      "counterparty": "MCM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 3549.73,
+      "channel": "cheque",
+      "counterparty": "YDWO Group LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 4255.11,
+      "channel": "wire",
+      "counterparty": "AB Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 1321.89,
+      "channel": "ach",
+      "counterparty": "NQNKS Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_4d98f665",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4751.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,751.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.714,
+      "cheque": 0.143,
+      "ach": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the conduct may fall within 5318(g) due to the presence of multiple outbound wires and a cheque to various counterparties, including a wire of $55,454.13 to OPP Ventures LLC.",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5318(g) requires financial institutions to report suspicious activity that may involve money laundering or other criminal activity. The observed transactions include several outbound wires (e.g., $55,454.13 to OPP Ventures LLC) and a cheque to YDWO Group LLC, which could indicate a pattern of activity inconsistent with the individual's declared business purpose as a salaried wage earner."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_4d98f665 exhibits high-value activity with a total transaction volume of $122,612.72 across 6 transactions. The activity is heavily concentrated in wire transfers, including a significant outbound wire of $55,454.13 to OPP Ventures LLC and a returned wire of the same amount. The account also shows a mix of cheque and ACH activity, such as a $3,549.73 cheque to YDWO Group LLC. The velocity is low with a 24h max of 2 and a 30d average of 0.2, and the account has interacted with 4 unique counterparties. The observed volume is significantly higher than the declared monthly volume of $4,751.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 122612.72,
+          "channel_mix": {
+            "wire": 0.6666666666666666,
+            "cheque": 0.16666666666666666,
+            "ach": 0.16666666666666666
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 4,
+          "amount_z_score_max": 2.31,
+          "country_risk_max": 0.0,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 25.81
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "The total volume passing through the cycle between 2026-04-09 and 2026-04-11 is $110,908.26, which is 23.34x the declared monthly volume of $4,751.0.",
+        "calculation": "1. Identify the cycle: Outbound wire of $55,454.13 on 2026-04-09 to OPP Ventures LLC, followed by a returned wire of $55,454.13 on 2026-04-11.\n2. Sum the amounts in the cycle: $55,454.13 + $55,454.13 = $110,908.26.\n3. Compare to KYC declared monthly volume: $110,908.26 / $4,751.0 = 23.34.",
+        "evidence": "Transactions 2026-04-09 ($55,454.13) and 2026-04-11 ($55,454.13)"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "google/gemma-4-31b-it",
+    "endpoint": "http://localhost:8090/v1"
+  }
+}

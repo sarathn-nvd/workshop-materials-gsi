@@ -1,0 +1,185 @@
+{
+  "case_id": "DEMO_0196",
+  "alert_id": "ALT_2437298",
+  "entity_id": "SYN_4e793ebb",
+  "started_at": "2026-05-27T15:20:16.980704+00:00",
+  "finished_at": "2026-05-27T15:20:55.815602+00:00",
+  "wall_clock_ms": 38834.9,
+  "transactions": [
+    {
+      "amount": 69422.08,
+      "channel": "wire",
+      "counterparty": "BHDFX Industries LLC, Germany",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "trade-finance wire (benign: matches declared invoice value)"
+    },
+    {
+      "amount": 74452.63,
+      "channel": "ach",
+      "counterparty": "ZU Group LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 67162.81,
+      "channel": "card",
+      "counterparty": "Joshua Moore",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 43993.89,
+      "channel": "cash",
+      "counterparty": "Patricia Smith",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 26086.08,
+      "channel": "wire",
+      "counterparty": "TZZC Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 43663.47,
+      "channel": "ach",
+      "counterparty": "TY Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_4e793ebb",
+    "entity_type": "business",
+    "expected_monthly_volume": 88055.0,
+    "business_purpose": "Convenience / grocery store; multi-shift cash operation; declared monthly volume ~$88,055.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "MID-SHIP Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    },
+    {
+      "name": "Córdoba Music Group LLC",
+      "list": "OFAC",
+      "match_score": 0.857
+    },
+    {
+      "name": "Patricia Smith",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.333,
+      "ach": 0.333,
+      "card": 0.167,
+      "cash": 0.167
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.3333333333333333, 'card': 0.16666666666666666, 'cash': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have bundle: transactions list, kyc_profile with fields. Also we have precomputed metrics block? The user didn't provide metrics block explicitly. The instruction says we receive a transactional bundle ([transactions] + [kyc_profile]) AND a precomputed metrics block. But the user only gave the bundle, not metrics block. Possibly the metrics block is implied? Maybe we need to compute metrics from the bundle? But rule says"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "monthly volume 324781",
+      "calculation": "1. Sum amounts from transactions[0..5] using amount column values: 69,422.08 + 74,452.63 + 67,162.81 + 43,993.89 + 26,086.08 + 43,663.47 = 324,780.96.\n2. Round to nearest integer to obtain 324,781.\n3. This represents the total transaction volume, termed monthly volume 324781.",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statutory provision cited.",
+      "label": "neutral",
+      "reasoning": "No statutory provision cited; thus no section identifier to cite, making applicability undeterminable."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statutory provision cited.",
+        "label": "neutral",
+        "reasoning": "No statutory provision cited; thus no section identifier to cite, making applicability undeterminable."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "monthly volume 324781",
+        "calculation": "1. Sum amounts from transactions[0..5] using amount column values: 69,422.08 + 74,452.63 + 67,162.81 + 43,993.89 + 26,086.08 + 43,663.47 = 324,780.96.\n2. Round to nearest integer to obtain 324,781.\n3. This represents the total transaction volume, termed monthly volume 324781.",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 69422.08, \"channel\": \"wire\", \"counterparty\": \"BHDFX Industries LLC, Germany\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"trade-finance wire (benign: matches declared invoice value)\"}, {\"amount\": 74452.63, \"channel\": \"ach\", \"counterparty\": \"ZU Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 67162.81, \"channel\": \"card\", \"counterparty\": \"Joshua Moore\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 43993.89, \"channel\": \"cash\", \"counterparty\": \"Patricia Smith\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 26086.08, \"channel\": \"wire\", \"counterparty\": \"TZZC Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 43663.47, \"channel\": \"ach\", \"counterparty\": \"TY Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_4e793ebb\", \"entity_type\": \"business\", \"expected_monthly_volume\": 88055.0, \"business_purpose\": \"Convenience / grocery store; multi-shift cash operation; declared monthly volume ~$88,055.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [{\"name\": \"MID-SHIP Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}, {\"name\": \"Córdoba Music Group LLC\", \"list\": \"OFAC\", \"match_score\": 0.857}, {\"name\": \"Patricia Smith\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statutory provision cited.\", \"label\": \"neutral\", \"reasoning\": \"No statutory provision cited; thus no section identifier to cite, making applicability undeterminable.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"monthly volume 324781\", \"calculation\": \"1. Sum amounts from transactions[0..5] using amount column values: 69,422.08 + 74,452.63 + 67,162.81 + 43,993.89 + 26,086.08 + 43,663.47 = 324,780.96.\\n2. Round to nearest integer to obtain 324,781.\\n3. This represents the total transaction volume, termed monthly volume 324781.\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report (string 400-800 chars). Must decide based on evidence.\n\nWe have transactions: 6 entries. Let's compute total amount: 69,422.08 + 74,452.63 + 67,162.81 + 43,993.89 + 26,086.08 + 43,663.47 = let's sum:\n\n69,422.08 + 74,452.63 = 143,874.71\n+ 67,162.81 = 211,037.52\n+ 43,993.89 = 255,031.41\n+ 26,086.08 = 281,117.49\n+ 43,663.47 = 324,780.96\n\nMatches numeric finding: monthly volume 324,781.\n\nKYC expected monthly volume: 88,055. So observed total is about 3.68 times expected monthly volume. That's high. Business purpose: convenience/grocery store, multi-shift cash operation, declared monthly volume ~88,055. But observed total is 324k, far above declared. However note that many transactions are wires, ACH, card, cash. The cash transaction is $43,993.89 to Patricia Smith (cash). That's a large cash receipt. Also there is a wire to BHDFX Industries LLC, Germany, with note \"trade-finance wire (benign: matches declared invoice value)\". That suggests legitimate trade finance. But overall volume far exceeds expected.\n\nSanctions hits: Patricia Smith appears with match_score 1.0 on OpenSanctions. That's a direct hit on a person (maybe same name as counterparty in cash transaction). That's a high confidence hit. Also two other hits on MID-SHIP Group LLC and Córdoba Music Group LLC with match_score 0.857.\n\nPolicy excerpts empty. SOP excerpts empty.\n\nAuxiliary findings: numeric says monthly volume 324,781, which is > expected. That suggests high volume relative to declared. That could be suspicious.\n\nBut we must decide is_suspicious based on evidence. The high volume relative to declared could be suspicious, but also could be explained? The KYC says declared monthly volume ~88,055, but observed total is 324,781, which is >3.5x. That is inconsistent. However the business purpose is convenience/grocery store with cash operation; maybe they process large volumes? But declared volume is low. That mismatch is a red flag.\n\nAlso there is a sanctions hit on Patricia Smith with match_score 1.0. That is a direct hit on a counterparty in a cash transaction. That is strong positive.\n\nThus likely is_suspicious = true.\n\nNow need to craft narrative 400-800 characters, grounded, citing evidence.\n\nWe must mention the most salient evidence: sanctions hit on Patricia Smith (match_score 1.0) and the high transaction volume exceeding declared monthly volume by factor ~3.7. Also mention the cash transaction of $43,993.89 to Patricia Smith. Also mention that the wire to BHDFX matches declared invoice value (benign). But overall pattern is suspicious.\n\nWe must keep within 400-800 characters. Let's aim ~600 characters.\n\nNarrative must be a string, no line breaks? It's a JSON string, can include punctuation.\n\nLet's draft:\n\n\"Alert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×). The wire to BHDFX Industries LLC is noted as trade‑finance and benign, but the aggregate amount and the direct sanctions match on a cash payee constitute strong‑positive signals consistent with structuring and sanctions‑risk concerns under 31 CFR 5324 and OFAC guidance. Final filing decision deferred to human review.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\nAlert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×). The wire to BHDFX Industries LLC is noted as trade‑finance and benign, but the aggregate amount and the direct sanctions match on a cash payee constitute strong‑positive signals consistent with structuring and sanctions‑risk concerns under 31 CFR 5324 and OFAC guidance. Final filing decision deferred to human review.\n\nLet's count approximate characters. Use rough estimate: each word ~5 chars plus spaces. But better to count precisely? Need 400-800 characters, we are likely within.\n\nLet's count manually quickly: I'll copy into a counter mentally? Let's approximate: The sentence length seems maybe ~500-600 characters. Should be okay.\n\nWe must ensure it's grounded: we cited amounts, dates? Not required but must be from bundle. We referenced $43,993.89 cash receipt, $324,781 total, $88,055 declared, match_score 1.0, OFAC OpenSanctions, 31 CFR 5324, OFAC guidance. Are those in policy_excerpts? There are none. But we can cite regulatory framework only if appears in policy_excerpts or auxiliary_findings.citation. In this bundle, policy_excerpts is empty, and citation says no policy excerpts. However we can still mention regulatory framework? The instruction says \"Cite the regulatory framework that applies (see REGULATORY FRAMING below).\" But we must derive from bundle; if no policy excerpts, we cannot cite a regulation unless it's in auxiliary_findings.citation. There's none. So we must not cite regulation if not present. We can maybe refer to \"structuring\" generally but not cite a specific CFR number unless present. Since policy_excerpts is empty, we cannot cite any regulation. So we must avoid citing regulation numbers. We can say \"relevant anti‑money laundering rules\" but not specific. Must be grounded: every claim must be sourced from bundle. So we can only cite facts present: transaction amounts, dates, counterparties, notes, KYC expected monthly volume, sanctions hit details, numeric finding. We cannot cite regulation numbers because not in bundle. So we must avoid that.\n\nThus narrative should not mention 31 CFR 5324 or OFAC guidance unless those are in policy_excerpts. They are not. So we must not cite them. We can mention \"structuring concerns\" but that may be considered regulatory framing; but is that allowed? The instruction says \"Cite the regulatory framework that applies (see REGULATORY FRAMING below).\" But if no policy excerpts, maybe we cannot cite any. However we can still mention \"structuring\" as a typology derived from evidence, but not cite a specific regulation. Might be okay as long as we don't claim a specific statute number. The narrative must be grounded; we can say \"consistent with structuring patterns\" but not cite CFR. That may be okay.\n\nBut we must ensure we don't invent evidence. We referenced \"trade‑finance and benign\" which is from note in transaction 0: \"trade-finance wire (benign: matches declared invoice value)\". That's fine.\n\nWe referenced \"direct sanctions match on a cash payee\" which is from sanctions hit on Patricia Smith.\n\nWe referenced \"aggregate amount\" and \"exceeding declared monthly volume\". That's from numeric finding.\n\nThus narrative is okay.\n\nNow ensure length 400-800 characters. Let's count roughly.\n\nI'll count characters precisely (including spaces). I'll write the string and count.\n\n\"Alert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×). The wire to BHDFX Industries LLC is noted as trade‑finance and benign, but the aggregate amount and the direct sanctions match on a cash payee constitute strong‑positive signals consistent with structuring and sanctions‑risk concerns under 31 CFR 5324 and OFAC guidance. Final filing decision deferred to human review.\"\n\nOops I included regulation citations again. Must remove those. Let's rewrite without regulation citations.\n\nRevised narrative:\n\n\"Alert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×). The wire to BHDFX Industries LLC is noted as trade‑finance and benign, but the aggregate amount and the direct sanctions match on a cash payee constitute strong‑positive signals consistent with structuring and sanctions‑risk concerns. Final filing decision deferred to human review.\"\n\nNow count characters.\n\nI'll count manually (including spaces). Let's copy the string:\n\nAlert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×). The wire to BHDFX Industries LLC is noted as trade‑finance and benign, but the aggregate amount and the direct sanctions match on a cash payee constitute strong‑positive signals consistent with structuring and sanctions‑risk concerns. Final filing decision deferred to human review.\n\nNow count characters. I'll use approximate counting: I'll count each segment.\n\nSegment1: \"Alert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×).\"\n\nLet's count length. I'll count characters including spaces.\n\nI'll write with indices? Might be easier to approximate using known length. But need to ensure 400-800. Likely this is around 400-500 characters. Let's quickly estimate: The sentence is long but maybe ~350 characters? Let's do a more precise count.\n\nI'll count using groups of 10.\n\nI'll write the string and count manually:\n\n\"Alert triggered by a high‑value cash receipt of $43,993.89 to a counterparty matching an OFAC OpenSanctions hit (Patricia Smith, match_score 1.0) and by transaction volume that totals $324,781 across six transfers, far exceeding the KYC‑declared monthly volume of $88,055 (≈3.7×).\"\n\nLet's count characters:\n\nI'll copy into a counting method: I'll count each character including spaces.\n\nI'll write it with line breaks for counting? Might be tedious. Instead, I can approximate: typical 400-800 characters is about 70-130 words. This is maybe 130 words? Actually it's maybe 100 words. Let's approximate characters: 100 words * average 5 chars + space = 600 characters. So likely within range.\n\nBut to be safe, we can add a bit more detail to reach ~600 characters. Add mention of \"six transactions\" and \"cash receipt\" etc.\n\nLet's craft final narrative about 600 characters.\n\nFinal narrative:\n\n\"Alert triggered by a $43,993.89 cash receipt to Patricia Smith, who is listed on OpenSanctions with a match_score of 1.0, and by a total of $324,781 moved across six transfers, which is roughly 3.7 times the KYC‑declared monthly volume of $88,055 for a convenience/grocery store. The wire to BHDFX Industries LLC is noted as trade‑finance and benign, yet the large cash inflow and the direct sanctions hit on a payee create strong‑positive structuring and sanctions‑risk indicators. Final filing decision deferred to human review.\"\n\nNow count characters roughly.\n\nLet's count:\n\n\"Alert triggered by a $43,993.89 cash receipt to Patricia Smith, who is listed on OpenSanctions with a match_score of 1.0, and by a total of $324,781 moved across six transfers, which is roughly 3.7 times the KYC‑declared monthly volume of $88,055 for a convenience/grocery store. The wire to BHDFX Industries LLC is noted as trade‑finance and benign, yet the large cash inflow and the direct sanctions hit on a payee create strong‑positive structuring and sanctions‑risk indicators. Final filing decision deferred to human review.\"\n\nNow count characters. I'll approximate: This is likely around 650-700 characters. Should be within 400-800.\n\nNow ensure we didn't cite any regulation numbers. We said \"structuring and sanctions‑risk indicators\" but not specific regulation. That's okay.\n\nWe referenced \"KYC‑declared monthly volume\". That's from kyc_profile.expected_monthly_volume.\n\nWe referenced \"six transfers\". That's from transactions length.\n\nWe referenced \"$43,993.89 cash receipt\". That's from transaction 3 cash.\n\nWe referenced \"match_score of 1.0\". That's from sanctions hit.\n\nWe referenced \"OpenSanctions\". That's from sanctions_pep_hits list.\n\nWe referenced \"trade‑finance and benign\". That's from note.\n\nAll good.\n\nNow output JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<the string>\"\n}\n\nMake sure to escape any quotes inside string? The string contains double quotes? It doesn't contain double quotes. It contains apostrophes? It has single quotes? It has none. It has parentheses and commas, but no double quotes. So we can embed as raw string.\n\nThus final answer: JSON object.\n</think>\n{\"is_suspicious\": true, \"suspicious_activity_report\": \"Alert triggered by a $43,993.89 cash receipt to Patricia Smith, who is listed on OpenSanctions with a match_score of 1.0, and by a total of $324,781 moved across six transfers, which is roughly 3.7 times the KYC‑declared monthly volume of $88,055 for a convenience/grocery store. The wire to BHDFX Industries LLC is noted as trade‑finance and benign, yet the large cash inflow and the direct sanctions hit on a payee create strong‑positive structuring and sanctions‑risk indicators. Final filing decision deferred to human review.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Alert triggered by a $43,993.89 cash receipt to Patricia Smith, who is listed on OpenSanctions with a match_score of 1.0, and by a total of $324,781 moved across six transfers, which is roughly 3.7 times the KYC‑declared monthly volume of $88,055 for a convenience/grocery store. The wire to BHDFX Industries LLC is noted as trade‑finance and benign, yet the large cash inflow and the direct sanctions hit on a payee create strong‑positive structuring and sanctions‑risk indicators. Final filing decision deferred to human review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Alert triggered by a $43,993.89 cash receipt to Patricia Smith, who is listed on OpenSanctions with a match_score of 1.0, and by a total of $324,781 moved across six transfers, which is roughly 3.7 times the KYC‑declared monthly volume of $88,055 for a convenience/grocery store. The wire to BHDFX Industries LLC is noted as trade‑finance and benign, yet the large cash inflow and the direct sanctions hit on a payee create strong‑positive structuring and sanctions‑risk indicators. Final filing decision deferred to human review.",
+  "judge_enabled": false,
+  "error": null
+}

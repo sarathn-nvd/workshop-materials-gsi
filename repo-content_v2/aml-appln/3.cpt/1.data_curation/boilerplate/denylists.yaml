@@ -1,0 +1,94 @@
+# Per-source boilerplate line denylist for the BOILERPLATE stage.
+#
+# Each top-level key is the value of the `source` field on a CPT JSONL record
+# (matches what Step 2 writes). Each list entry is a full line (after .strip())
+# that should be removed from any document of that source.
+#
+# This is the *hand-curated* layer. The pipeline also runs a per-source
+# recurring-line pre-pass (see config.boilerplate.recurring_line_doc_ratio)
+# which auto-extends this list at runtime; the YAML below is the floor.
+#
+# Add lines as we observe them in curated output. Start small and grow.
+
+pile_of_law_doj_guidance:
+  - "U.S. Department of Justice"
+  - "Office of Legal Counsel"
+  - "This document is intended only as guidance."
+  - "This memorandum is for internal use only."
+
+pile_of_law_oig:
+  - "Office of Inspector General"
+  - "OIG Report"
+  - "This report contains sensitive but unclassified information."
+
+pile_of_law_federal_register:
+  - "Federal Register / Vol."
+  - "Notices"
+  - "Proposed Rules"
+  - "Final Rule"
+
+pile_of_law_sec:
+  - "Securities and Exchange Commission"
+  - "Release No."
+  - "ADMINISTRATIVE PROCEEDING"
+
+pile_of_law_cfr:
+  - "Code of Federal Regulations"
+  - "Authority:"
+  - "Source:"
+
+pile_of_law_uscode:
+  - "United States Code"
+  - "Annotated"
+
+uscode_house:
+  - "From the U.S. Government Publishing Office"
+  - "Office of the Law Revision Counsel"
+
+edgar_corpus:
+  - "UNITED STATES SECURITIES AND EXCHANGE COMMISSION"
+  - "Washington, D.C. 20549"
+  - "Form 10-K"
+  - "Form 10-Q"
+
+# CPT Layer 2 sources
+
+fincen_advisories:
+  - "FinCEN Advisory"
+  - "Financial Crimes Enforcement Network"
+  - "U.S. Department of the Treasury"
+
+fincen_federal_register:
+  - "Financial Crimes Enforcement Network"
+  - "DEPARTMENT OF THE TREASURY"
+
+fincen_sar_reviews:
+  - "SAR Activity Review"
+  - "Trends, Tips & Issues"
+
+fincen_enforcement:
+  - "Financial Crimes Enforcement Network"
+  - "Enforcement Action"
+
+fincen_files:
+  - "ICIJ"
+  - "International Consortium of Investigative Journalists"
+
+ofac_guidance:
+  - "Office of Foreign Assets Control"
+  - "U.S. Department of the Treasury"
+  - "OFAC"
+
+ofac_enforcement:
+  - "Office of Foreign Assets Control"
+  - "Enforcement Information"
+
+fatf_publications:
+  - "Financial Action Task Force"
+  - "FATF/OECD"
+  - "All rights reserved."
+
+courtlistener:
+  - "COURT OPINION"
+  - "Citation:"
+  - "Filed:"

@@ -1,0 +1,307 @@
+{
+  "case_id": "DEMO_0061",
+  "alert_id": "ALT_2465191",
+  "entity_id": "SYN_62defd67",
+  "started_at": "2026-05-27T15:22:48.811412+00:00",
+  "finished_at": "2026-05-27T15:23:18.719153+00:00",
+  "wall_clock_ms": 29907.8,
+  "transactions": [
+    {
+      "amount": 1144148.79,
+      "channel": "ach",
+      "counterparty": "QRP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 848582.98,
+      "channel": "wire",
+      "counterparty": "LTZC Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 817190.83,
+      "channel": "card",
+      "counterparty": "Linda Davis",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 393717.39,
+      "channel": "ach",
+      "counterparty": "RS Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 373071.59,
+      "channel": "wire",
+      "counterparty": "KEC Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 601677.96,
+      "channel": "cash",
+      "counterparty": "Christopher Miller",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 1111779.72,
+      "channel": "cash",
+      "counterparty": "Daniel Davis",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 1210871.56,
+      "channel": "ach",
+      "counterparty": "WO Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 928991.87,
+      "channel": "wire",
+      "counterparty": "GHQ Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 519241.4,
+      "channel": "cash",
+      "counterparty": "Jennifer Anderson",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 677492.91,
+      "channel": "ach",
+      "counterparty": "EHDD Services LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 710183.8,
+      "channel": "ach",
+      "counterparty": "WHLD Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 733941.56,
+      "channel": "wire",
+      "counterparty": "YRRX Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 939888.74,
+      "channel": "wire",
+      "counterparty": "GD Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 492496.91,
+      "channel": "ach",
+      "counterparty": "FLGE Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 304562.13,
+      "channel": "ach",
+      "counterparty": "SQJ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 1270287.45,
+      "channel": "ach",
+      "counterparty": "KNI Group LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 319447.82,
+      "channel": "ach",
+      "counterparty": "TRVZW Services LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 523898.43,
+      "channel": "card",
+      "counterparty": "Patricia Garcia",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 359134.08,
+      "channel": "ach",
+      "counterparty": "ZK Group LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 1322402.88,
+      "channel": "ach",
+      "counterparty": "VXZU Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_62defd67",
+    "entity_type": "business",
+    "expected_monthly_volume": 4930705.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$4,930,705.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.524,
+      "wire": 0.238,
+      "cash": 0.143,
+      "card": 0.095
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.5238095238095238, 'wire': 0.23809523809523808, 'card': 0.09523809523809523, 'cash': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=1888364.47, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account recorded a tx_count of 21 transactions with a tx_total_usd of 16,283,000.00. The channel_mix includes cash: 2,232,700.00, indicating the presence of physical currency movements. A velocity_24h_max of 1,888,364.47 was observed, reflecting high daily throughput. The entity interacted with unique_counterparties_7d of 2 during the most recent seven-day window. The vs_declared_volume_ratio of 3.28 suggests activity exceeding the expected monthly volume. These patterns, including significant cash deposits, warrant a review for potential structuring under 31 USC 5324.",
+        "metrics": {
+          "tx_count": 21,
+          "tx_total_usd": 16283000.0,
+          "channel_mix": {
+            "ach": 6544445.45,
+            "wire": 3824475.78,
+            "cash": 2232700.0,
+            "card": 1341089.26
+          },
+          "velocity_24h_max": 1888364.47,
+          "unique_counterparties_7d": 2,
+          "vs_declared_volume_ratio": 3.28
+        },
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 15,416,453.21",
+      "calculation": "1. Sum all transaction amounts from transactions[0..20]: 1,144,148.79 + 848,582.98 + 817,190.83 + 393,717.39 + 373,071.59 + 601,677.96 + 1,111,779.72 + 1,210,871.56 + 928,991.87 + 519,241.40 + 677,492.91 + 710,183.80 + 733,941.56 + 939,888.74 + 492,496.91 + 304,562.13 + 1,270,287.45 + 319,447.82 + 523,898.43 + 359,134.08 + 1,322,402.88 = 15,416,453.21.",
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 15,416,453.21",
+        "calculation": "1. Sum all transaction amounts from transactions[0..20]: 1,144,148.79 + 848,582.98 + 817,190.83 + 393,717.39 + 373,071.59 + 601,677.96 + 1,111,779.72 + 1,210,871.56 + 928,991.87 + 519,241.40 + 677,492.91 + 710,183.80 + 733,941.56 + 939,888.74 + 492,496.91 + 304,562.13 + 1,270,287.45 + 319,447.82 + 523,898.43 + 359,134.08 + 1,322,402.88 = 15,416,453.21.",
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1144148.79, \"channel\": \"ach\", \"counterparty\": \"QRP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 848582.98, \"channel\": \"wire\", \"counterparty\": \"LTZC Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 817190.83, \"channel\": \"card\", \"counterparty\": \"Linda Davis\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 393717.39, \"channel\": \"ach\", \"counterparty\": \"RS Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 373071.59, \"channel\": \"wire\", \"counterparty\": \"KEC Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 601677.96, \"channel\": \"cash\", \"counterparty\": \"Christopher Miller\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 1111779.72, \"channel\": \"cash\", \"counterparty\": \"Daniel Davis\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 1210871.56, \"channel\": \"ach\", \"counterparty\": \"WO Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 928991.87, \"channel\": \"wire\", \"counterparty\": \"GHQ Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 519241.4, \"channel\": \"cash\", \"counterparty\": \"Jennifer Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 677492.91, \"channel\": \"ach\", \"counterparty\": \"EHDD Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 710183.8, \"channel\": \"ach\", \"counterparty\": \"WHLD Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 733941.56, \"channel\": \"wire\", \"counterparty\": \"YRRX Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 939888.74, \"channel\": \"wire\", \"counterparty\": \"GD Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 492496.91, \"channel\": \"ach\", \"counterparty\": \"FLGE Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 304562.13, \"channel\": \"ach\", \"counterparty\": \"SQJ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 1270287.45, \"channel\": \"ach\", \"counterparty\": \"KNI Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 319447.82, \"channel\": \"ach\", \"counterparty\": \"TRVZW Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 523898.43, \"channel\": \"card\", \"counterparty\": \"Patricia Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 359134.08, \"channel\": \"ach\", \"counterparty\": \"ZK Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 1322402.88, \"channel\": \"ach\", \"counterparty\": \"VXZU Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_62defd67\", \"entity_type\": \"business\", \"expected_monthly_volume\": 4930705.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$4,930,705.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 15,416,453.21\", \"calculation\": \"1. Sum all transaction amounts from transactions[0..20]: 1,144,148.79 + 848,582.98 + 817,190.83 + 393,717.39 + 373,071.59 + 601,677.96 + 1,111,779.72 + 1,210,871.56 + 928,991.87 + 519,241.40 + 677,492.91 + 710,183.80 + 733,941.56 + 939,888.74 + 492,496.91 + 304,562.13 + 1,270,287.45 + 319,447.82 + 523,898.43 + 359,134.08 + 1,322,402.88 = 15,416,453.21.\", \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The entity SYN_62defd67 exhibits transaction volumes significantly exceeding its declared profile. While the KYC profile lists an expected monthly volume of $4,930,705.00, the total transaction volume across the observed period is $15,416,453.21, representing a volume ratio of approximately 3.1x the expected amount. Activity includes high-value cash transactions, such as $1,111,779.72 to Daniel Davis on 2026-03-31 and $601,677.96 to Christopher Miller on 2026-03-14, alongside numerous large ACH and wire transfers to various LLCs (e.g., $1,322,402.88 to VXZU Imports LLC). This rapid movement of funds is inconsistent with the declared business purpose and volume for a money services business. This pattern suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator.\"\n}\n```",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The entity SYN_62defd67 exhibits transaction volumes significantly exceeding its declared profile. While the KYC profile lists an expected monthly volume of $4,930,705.00, the total transaction volume across the observed period is $15,416,453.21, representing a volume ratio of approximately 3.1x the expected amount. Activity includes high-value cash transactions, such as $1,111,779.72 to Daniel Davis on 2026-03-31 and $601,677.96 to Christopher Miller on 2026-03-14, alongside numerous large ACH and wire transfers to various LLCs (e.g., $1,322,402.88 to VXZU Imports LLC). This rapid movement of funds is inconsistent with the declared business purpose and volume for a money services business. This pattern suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The entity SYN_62defd67 exhibits transaction volumes significantly exceeding its declared profile. While the KYC profile lists an expected monthly volume of $4,930,705.00, the total transaction volume across the observed period is $15,416,453.21, representing a volume ratio of approximately 3.1x the expected amount. Activity includes high-value cash transactions, such as $1,111,779.72 to Daniel Davis on 2026-03-31 and $601,677.96 to Christopher Miller on 2026-03-14, alongside numerous large ACH and wire transfers to various LLCs (e.g., $1,322,402.88 to VXZU Imports LLC). This rapid movement of funds is inconsistent with the declared business purpose and volume for a money services business. This pattern suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

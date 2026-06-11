@@ -1,0 +1,316 @@
+{
+  "case_id": "DEMO_0230",
+  "alert_id": "ALT_2694522",
+  "entity_id": "SYN_5dff2746",
+  "started_at": "2026-05-28T11:10:01.723730+00:00",
+  "finished_at": "2026-05-28T11:10:59.344656+00:00",
+  "wall_clock_ms": 57620.9,
+  "transactions": [
+    {
+      "amount": 256.83,
+      "channel": "ach",
+      "counterparty": "KST Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 258.12,
+      "channel": "card",
+      "counterparty": "Robert Moore",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 123.89,
+      "channel": "card",
+      "counterparty": "Patricia Thompson",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 95.85,
+      "channel": "card",
+      "counterparty": "Andrew Moore",
+      "currency": "USD",
+      "date": "2026-04-05",
+      "notes": ""
+    },
+    {
+      "amount": 203.24,
+      "channel": "ach",
+      "counterparty": "LWC Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 113.3,
+      "channel": "card",
+      "counterparty": "Patricia Miller",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 209.71,
+      "channel": "card",
+      "counterparty": "Andrew Miller",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 264.05,
+      "channel": "card",
+      "counterparty": "Karen Smith",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 294.29,
+      "channel": "ach",
+      "counterparty": "NQYDJ Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    },
+    {
+      "amount": 118.34,
+      "channel": "ach",
+      "counterparty": "ZRZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 303.22,
+      "channel": "card",
+      "counterparty": "Robert Miller",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    },
+    {
+      "amount": 143.75,
+      "channel": "card",
+      "counterparty": "Susan Thompson",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 289.95,
+      "channel": "card",
+      "counterparty": "Susan Harris",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 123.22,
+      "channel": "card",
+      "counterparty": "David Anderson",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 203.79,
+      "channel": "cheque",
+      "counterparty": "UK Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 117.25,
+      "channel": "card",
+      "counterparty": "John Wilson",
+      "currency": "USD",
+      "date": "2026-03-19",
+      "notes": ""
+    },
+    {
+      "amount": 199.13,
+      "channel": "ach",
+      "counterparty": "XWBX Services LLC",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 139.46,
+      "channel": "ach",
+      "counterparty": "BI Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 254.88,
+      "channel": "card",
+      "counterparty": "Maria Thompson",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 257.88,
+      "channel": "ach",
+      "counterparty": "OTVP Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 328.05,
+      "channel": "cheque",
+      "counterparty": "EI Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_5dff2746",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1176.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,176.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.571,
+      "ach": 0.333,
+      "cheque": 0.095
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.3333333333333333, 'card': 0.5714285714285714, 'cheque': 0.09523809523809523})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_5dff2746 executed 21 transactions totaling $4,298.20 USD with channel mix {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.31x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 21,
+        "tx_total_usd": 4298.2,
+        "channel_mix": {
+          "card": 0.571,
+          "ach": 0.333,
+          "cheque": 0.095
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.7,
+        "unique_counterparties_7d": 4,
+        "amount_z_score_max": 1.7,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.31
+      },
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to compute transaction volumes from the [transactions] block. Likely sum of amounts? Or maybe total volume? The question: \"Summarize transaction volumes and compare to KYC declared monthly volume.\" So we need to produce a numeric finding that compares transaction volumes to KYC declared monthly volume. Probably compute total tr"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts",
+      "evidence_span": "no policy excerpts"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute mapped",
+      "label": "neutral",
+      "reasoning": "No statute mapped; see 0 U.S.C. § 0 for illustration."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute mapped",
+        "label": "neutral",
+        "reasoning": "No statute mapped; see 0 U.S.C. § 0 for illustration."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_5dff2746 executed 21 transactions totaling $4,298.20 USD with channel mix {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.31x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 21,
+          "tx_total_usd": 4298.2,
+          "channel_mix": {
+            "card": 0.571,
+            "ach": 0.333,
+            "cheque": 0.095
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.7,
+          "unique_counterparties_7d": 4,
+          "amount_z_score_max": 1.7,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.31
+        },
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts",
+        "evidence_span": "no policy excerpts"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 256.83, \"channel\": \"ach\", \"counterparty\": \"KST Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 258.12, \"channel\": \"card\", \"counterparty\": \"Robert Moore\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 123.89, \"channel\": \"card\", \"counterparty\": \"Patricia Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 95.85, \"channel\": \"card\", \"counterparty\": \"Andrew Moore\", \"currency\": \"USD\", \"date\": \"2026-04-05\", \"notes\": \"\"}, {\"amount\": 203.24, \"channel\": \"ach\", \"counterparty\": \"LWC Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 113.3, \"channel\": \"card\", \"counterparty\": \"Patricia Miller\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 209.71, \"channel\": \"card\", \"counterparty\": \"Andrew Miller\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 264.05, \"channel\": \"card\", \"counterparty\": \"Karen Smith\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 294.29, \"channel\": \"ach\", \"counterparty\": \"NQYDJ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}, {\"amount\": 118.34, \"channel\": \"ach\", \"counterparty\": \"ZRZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 303.22, \"channel\": \"card\", \"counterparty\": \"Robert Miller\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}, {\"amount\": 143.75, \"channel\": \"card\", \"counterparty\": \"Susan Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 289.95, \"channel\": \"card\", \"counterparty\": \"Susan Harris\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 123.22, \"channel\": \"card\", \"counterparty\": \"David Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 203.79, \"channel\": \"cheque\", \"counterparty\": \"UK Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 117.25, \"channel\": \"card\", \"counterparty\": \"John Wilson\", \"currency\": \"USD\", \"date\": \"2026-03-19\", \"notes\": \"\"}, {\"amount\": 199.13, \"channel\": \"ach\", \"counterparty\": \"XWBX Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 139.46, \"channel\": \"ach\", \"counterparty\": \"BI Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 254.88, \"channel\": \"card\", \"counterparty\": \"Maria Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 257.88, \"channel\": \"ach\", \"counterparty\": \"OTVP Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 328.05, \"channel\": \"cheque\", \"counterparty\": \"EI Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_5dff2746\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1176.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,176.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute mapped\", \"label\": \"neutral\", \"reasoning\": \"No statute mapped; see 0 U.S.C. § 0 for illustration.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_5dff2746 executed 21 transactions totaling $4,298.20 USD with channel mix {\\\"card\\\": 0.571, \\\"ach\\\": 0.333, \\\"cheque\\\": 0.095}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.31x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 21, \"tx_total_usd\": 4298.2, \"channel_mix\": {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.7, \"unique_counterparties_7d\": 4, \"amount_z_score_max\": 1.7, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.31}, \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts\", \"evidence_span\": \"no policy excerpts\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive is_suspicious based on evidence.\n\nWe have kyc_profile: individual, retired, expected monthly volume $1176, business purpose retired individual on fixed pension income. Transactions total $4,298.20, which is about 3.66x expected monthly volume? Actually 4298/1176 ≈ 3.66. Wait earlier summary says 1.31x? Let's compute: maybe they used different numbers? Let's recompute: sum of amounts given: Let's sum quickly: I'll add amounts:\n\n1 256.83\n2 258.12 => 514.95\n3 123.89 => 638.84\n4 95.85 => 734.69\n5 203.24 => 937.93\n6 113.3 => 1051.23\n7 209.71 => 1260.94\n8 264.05 => 1525 - actually 1260.94+264.05=1524.99\n9 294.29 => 1819.28\n10 118.34 => 1937.62\n11 303.22 => 2240.84\n12 143.75 => 2384.59\n13 289.95 => 2674.54\n14 123.22 => 2797.76\n15 203.79 => 3001.55\n16 117.25 => 3118.80\n17 199.13 => 3317.93\n18 139.46 => 3457.39\n19 254.88 => 3712.27\n20 257.88 => 3970.15\n21 328.05 => 4298.20\n\nYes total 4298.20.\n\nExpected monthly volume is 1176, so ratio = 4298.20 / 1176 ≈ 3.655. That's > 1.5x, which is a red flag. However the auxiliary behavioral summary says ratio 1.31x, maybe they used different numbers? Might be they considered only some subset? But we have the raw data; we can compute ratio ourselves. The ratio is about 3.66, which is well above 1.5x. That suggests suspicious.\n\nBut we also have channel mix: card 57%, ach 33%, cheque 9.5%. There's some cash? Actually cheque is not cash; but there are ACH and card (non-cash). No cash deposits. So not structuring via cash. There's no sanctions hit. No PEP. So the main red flag is high volume relative to declared. Also velocity peak 2 vs avg 0.7, i.e., 2 transactions in 24h vs avg 0.7, which is high.\n\nThus we likely have suspicious activity. However we must consider if the activity could be explained: retired individual with pension income may have occasional larger payments (e.g., paying bills, transfers). But 3.66x monthly volume is high. Also the pattern includes many different counterparties (unique counterparties 4 in 7 days). That suggests possible layering.\n\nThus I think is_suspicious = true.\n\nNow need to produce a narrative 400-800 characters, grounded, citing evidence from bundle. Must be 400-800 characters inclusive. Let's craft about 550 characters.\n\nNarrative must start with most salient evidence, cite transaction facts, surface metric, cite regulatory framework.\n\nWe need to mention the high volume ratio (3.66x) and velocity spike (2 vs 0.7). Also mention channel mix and business purpose (retired individual). Also mention that no sanctions hit. Must defer final filing to human investigator.\n\nLet's draft ~560 characters.\n\nCount characters roughly. Let's write:\n\n\"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume). The 24‑hour velocity peaked at 2 (average 0.7 over 30 days) and the channel mix was 57 % card, 33 % ACH, 9 % cheque. No sanctions or PEP hits were found. This pattern of unusually high volume and rapid movement is consistent with layering and structuring risks under FinCEN CTR guidance. The final filing decision is referred to the human investigator.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\n\"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume). The 24‑hour velocity peaked at 2 (average 0.7 over 30 days) and the channel mix was 57 % card, 33 % ACH, 9 % cheque. No sanctions or PEP hits were found. This pattern of unusually high volume and rapid movement is consistent with layering and structuring risks under FinCEN CTR guidance. The final filing decision is referred to the human investigator.\"\n\nLet's count using approximate. I'll count manually:\n\nI'll copy into a counting tool mentally? Let's approximate: It's likely around 500-560 characters. Need 400-800, so okay.\n\nBut must ensure no invented data. All numbers are from bundle: 21 transactions, total $4,298.20, declared monthly volume $1,176, channel mix percentages? The bundle gave channel mix as {\"card\": 0.571, \"ach\": 0.333, \"cheque\": 0.095}. That's 57.1%, 33.3%, 9.5% - we can state 57%, 33%, 9% approximate. That's fine.\n\nWe mention \"24‑hour velocity peaked at 2 (average 0.7 over 30 days)\" - from auxiliary findings: velocity_24h_max 2, velocity_24h_avg_30d 0.7. Good.\n\nWe mention \"layering and structuring risks under FinCEN CTR guidance\" - regulatory framing: we can cite \"FinCEN CTR guidance\". That's okay as it's derived from policy_excerpts? There are no policy_excerpts in bundle, but we can cite regulatory framework that matches channel mix. The instruction says we can cite regulation if appears in policy_excerpts or auxiliary_findings.citation. There are none. So we must not cite regulation unless it's in the bundle. There are no policy_excerpts. However we can still mention \"FinCEN CTR guidance\" maybe not allowed? The grounding says every regulation cited must appear by its section identifier in policy_excerpts.text or auxiliary_findings.{citation, statutory}. There are none. So we cannot cite any regulation unless it's present. The bundle has no policy_excerpts. So we must avoid citing any regulation. We can just say \"consistent with structuring and layering risks\" without naming regulation. That's safer.\n\nThus narrative should not mention specific regulation identifiers. Just say \"consistent with structuring and layering risks\". That's fine.\n\nNow ensure we don't mention any regulation by name that isn't in bundle. So we will avoid \"FinCEN CTR guidance\". Use generic \"structuring and layering risks\". Also avoid \"FinCEN Advisory\". So rewrite:\n\n\"… consistent with structuring and layering risks under anti‑money laundering guidance.\"\n\nBut \"anti‑money laundering guidance\" is generic, not a specific regulation. That should be okay.\n\nNow ensure we don't mention any policy excerpt that isn't present. So we must not quote any excerpt.\n\nNow produce final JSON.\n\nCheck length of narrative: Let's count characters more precisely.\n\nI'll write the narrative exactly as we will include:\n\n\"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume). The 24‑hour velocity peaked at 2 (average 0.7 over 30 days) and the channel mix was 57 % card, 33 % ACH, 9 % cheque. No sanctions or PEP hits were found. This pattern of unusually high volume and rapid movement is consistent with structuring and layering risks under anti‑money laundering guidance. The final filing decision is referred to the human investigator.\"\n\nNow count characters. Let's count manually (including spaces). I'll use approximate counting.\n\nI'll copy into a counting method: I'll count each segment.\n\nSegment1: \"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume).\"\n\nCount characters: Let's count precisely.\n\nI'll write with indices.\n\n\"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume).\"\n\nI'll count using groups.\n\nI'll count characters including spaces.\n\nI'll write a quick approximate count: It's about 180 characters? Let's do more systematic.\n\nI'll count each word length plus spaces.\n\nBetter approach: I can approximate total length later; it's likely within 400-800.\n\nBut need to ensure it's at least 400 characters. Let's approximate total length: The narrative seems maybe ~500-560 characters. Should be fine.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still part of string. Probably okay.\n\nNow output exactly JSON with no extra text.\n\nLet's craft final narrative with exactly the characters we wrote.\n\nCheck for any invented data: We said \"≈3.6× expected volume\". That's derived from ratio 3.66, we approximated 3.6. That's okay as we can say \"≈3.6×\". That's derived from evidence. It's not exact but approximate; still based on evidence. It's okay.\n\nWe said \"57 % card, 33 % ACH, 9 % cheque\". The bundle gave 0.571, 0.333, 0.095. That's 57.1%, 33.3%, 9.5% - we approximated to 57%, 33%, 9%. That's fine.\n\nWe said \"24‑hour velocity peaked at 2 (average 0.7 over 30 days)\". That's directly from auxiliary findings.\n\nWe said \"No sanctions or PEP hits were found.\" That's true (sanctions_pep_hits empty).\n\nWe said \"This pattern ... is consistent with structuring and layering risks under anti‑money laundering guidance.\" That's a generic statement, not citing a specific regulation.\n\nWe said \"The final filing decision is referred to the human investigator.\" That's required.\n\nNow ensure narrative length is between 400-800 characters. Let's approximate length: I'll count characters roughly.\n\nI'll count using rough method: Each character includes spaces. Let's count words length.\n\nI'll write the narrative exactly as a string and then count.\n\nString:\n\nOn 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume). The 24‑hour velocity peaked at 2 (average 0.7 over 30 days) and the channel mix was 57 % card, 33 % ACH, 9 % cheque. No sanctions or PEP hits were found. This pattern of unusually high volume and rapid movement is consistent with structuring and layering risks under anti‑money laundering guidance. The final filing decision is referred to the human investigator.\n\nNow count characters. I'll count using approximate method: I'll count per sentence.\n\nSentence1: \"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume).\"\n\nLet's count characters including spaces.\n\nI'll write it with indices:\n\n\"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746, a retired individual with a declared monthly volume of $1,176, executed 21 transfers totaling $4,298.20 (≈3.6× expected volume).\"\n\nCount: I'll count characters manually:\n\nO(1)n2 (space3)2(4)0(5)2(6)6(7)‑(8)0(9)3(10)‑(11)1(12)8(13) (space14)t15h16r17o18u19g20h21 (space22)2(23)0(24)2(25)6(26)‑(27)0(28)4(29)‑(30)2(31)8(32) (space33)t34h35e36 (space37)e38n39t40i41t42y43 (space44)S45Y46N47_48 5(49)d(50)f(51)f2(52)7(53)4(54)6(55),(56) (space57)a58 (space59)r60e61t62i63r64e65d66 (space67)i68n69d70i71v72i73d74u75a76l77 (space78)w79i80t81h82 (space83)a84 (space85)d86e87c88l89a90r91e92d93 (space94)m95o96n97t98h99l100y101 (space102)v103o104l105u106m107e108 (space109)o110f111 (space112)$113 1(114),(115)1(116)7(117)6(118),(119) (space120)e121x122e123c124u125t126e127d128 (space129)2(130)1(131) (space132)t133r134a135n136s137f138e139r140s141 (space142)t143o144t145a146l147i148n149g150 (space151)$152 4(153),(154)2(155)9(156)8(157).(158) (space159)(160≈161 3(162).(163)6(164)×(165) (space166)e167x168p169e170c171t172e173d174 (space175)v176o177l178u179m180e181.(182)\n\nSo sentence1 length ~182 characters.\n\nSentence2: \" The 24‑hour velocity peaked at 2 (average 0.7 over 30 days) and the channel mix was 57 % card, 33 % ACH, 9 % cheque.\"\n\nNote there is a leading space after period? In the string we have a space after period. That space counts. Let's count from \"The\". Actually after period there is a space then \"The\". We'll include that space.\n\nLet's count characters of sentence2 including leading space.\n\nStart with space (1) then \"The...\" Let's count.\n\nI'll write the sentence exactly: \" The 24‑hour velocity peaked at 2 (average 0.7 over 30 days) and the channel mix was 57 % card, 33 % ACH, 9 % cheque.\"\n\nCount:\n\n1 space\n2 T\n3 h\n4 e\n5 (space)\n6 2\n7 4\n8 ‑ (hyphen)\n9 h\n10 o\n11 u\n12 r\n13 (space)\n14 v\n15 e\n16 l\n17 o\n18 c\n19 i\n20 t\n21 y\n22 (space)\n23 p\n24 e\n25 a\n26 k\n27 e\n28 d\n29 (space)\n30 a\n31 t\n32 (space)\n33 2\n34 (space)\n35 (\n36 a\n37 v\n38 e\n39 r\n40 a\n41 g\n42 e\n43 (space)\n44 0\n45 .\n46 7\n47 (space)\n48 o\n49 v\n50 e\n51 r\n52 (space)\n53 3\n54 0\n55 ‑ (maybe non-breaking space? but count as char)\n56 d\n57 a\n58 y\n59 s\n60 )\n61 (space)\n62 a\n63 n\n64 d\n65 (space)\n66 t\n67 h\n68 e\n69 (space)\n70 c\n71 h\n72 a\n73 n\n74 n\n75 e\n76 l\n77 (space)\n78 m\n79 i\n80 x\n81 (space)\n82 w\n83 a\n84 s\n85 (space)\n86 5\n87 7\n88 ‑ (maybe non-breaking)\n89 %\n90 (space)\n91 c\n92 a\n93 r\n94 d\n95 ,\n96 (space)\n97 3\n98 3\n99 ‑\n100 %\n101 (space)\n102 A\n103 C\n104 H\n105 ,\n106 (space)\n107 9\n108 ‑\n109 %\n110 (space)\n111 c\n112 h\n113 e\n114 q\n115 u\n116 e\n117 .\nSo length ~117 characters? Let's sum: we started counting from 1 to 117, so 117 characters.\n\nBut we need to be accurate; approximate is fine.\n\nSentence3: \" No sanctions or PEP hits were found.\"\n\nInclude leading space after previous period? There is a space after period. So start with space then \"No sanctions or PEP hits were found.\"\n\nCount: space (1) N2 o3 (space4) s5 a6 n7 c8 t9 i10 o11 n12 s13 (space14) o15 r16 (space17) P18 E19 P20 (space21) h22 i23 t24 s25 (space26) w27 e28 r29 e30 (space31) f32 o33 u34 n35 d36 .37\n\nSo about 37 characters.\n\nSentence4: \" This pattern of unusually high volume and rapid movement is consistent with structuring and layering risks under anti‑money laundering guidance.\"\n\nInclude leading space after period. Count roughly.\n\nStart with space (1) T2 h3 i4 s5 (space6) p7 a8 t9 t10 e11 r12 n13 (space14) o15 f16 (space17) u18 n19 u20 s21 u22 a23 l24 l25 y26 (space27) h28 i29 g30 h31 (space32) v33 o34 l35 u36 m37 e38 (space39) a40 n41 d42 (space43) r44 a45 p46 i47 d48 (space49) m50 o51 v52 e53 m54 e55 n56 t57 (space58) i59 s60 (space61) c62 o63 n64 s65 i66 s67 t68 e69 n70 t71 (space72) w73 i74 t75 h76 (space77) s78 t79 r80 u81 c82 t83 u84 r85 i86 n87 g88 (space89) a90 n91 d92 (space93) l94 a95 y96 e97 r98 i99 n100 g101 (space102) r103 i104 s105 k106 s107 (space108) u109 n110 d111 e112 r113 (space114) a115 n116 t117 i118 (space119) m120 o121 n122 e123 y124 y125 (space126) l127 a128 u129 n130 d131 e132 r133 i134 n135 g136 (space137) g138 u139 i140 d141 a142 n143 c144 e145 .146\n\nSo about 146 characters.\n\nSentence5: \" The final filing decision is referred to the human investigator.\"\n\nInclude leading space. Count:\n\nspace1 T2 h3 e4 (space5) f6 i7 n8 a9 l10 (space11) f12 i13 l14 i15 n16 g17 (space18) d19 e20 c21 i22 s23 i24 o25 n26 (space27) i28 s29 (space30) r31 e32 f33 e34 r35 r36 e37 d38 (space39) t40 o41 (space42) t43 h44 e44? Actually \"the\" is t h e. Let's continue: \"the\" t45 h46 e47 (space48) h49 u50 m51 a52 n53 (space54) i55 n56 v57 e58 s59 t60 i61 g62 a63 t64 o65 r66 .67\n\nSo about 67 characters.\n\nNow sum all: 182 + 117 + 37 + 146 + 67 = 549 characters. Plus maybe some extra spaces? We accounted spaces. So total ~549 characters, which is within 400-800. Good.\n\nNow ensure we didn't include any regulation name. We said \"anti‑money laundering guidance\" which is generic, not a specific regulation. That's okay.\n\nNow produce JSON with is_suspicious true and the narrative string exactly as above.\n\nMake sure to escape any double quotes inside string. Our narrative contains double quotes? No. It contains apostrophes? No. It contains parentheses and special characters but no double quotes. So we can embed as is.\n\nBut we have a double quote in the JSON? No.\n\nNow produce final answer.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑03‑18 through 2026‑04‑28 the entity SYN_5dff2746",
+  "sar_output": null,
+  "sar_parse_error": "no JSON found in model output",
+  "sar_is_suspicious": null,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

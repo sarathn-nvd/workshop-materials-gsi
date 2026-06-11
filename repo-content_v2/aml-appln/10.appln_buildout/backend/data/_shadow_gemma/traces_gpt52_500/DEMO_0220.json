@@ -1,0 +1,208 @@
+{
+  "case_id": "DEMO_0220",
+  "alert_id": "ALT_7374122",
+  "entity_id": "SYN_1112b660",
+  "started_at": "2026-05-28T11:56:22.363970+00:00",
+  "finished_at": "2026-05-28T11:56:30.649578+00:00",
+  "wall_clock_ms": 8285.6,
+  "transactions": [
+    {
+      "amount": 2342.88,
+      "channel": "cash",
+      "counterparty": "Joshua Garcia (family contribution)",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": "small cash deposit (benign: documented family contribution)"
+    },
+    {
+      "amount": 90186.02,
+      "channel": "ach",
+      "counterparty": "TRM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 118061.35,
+      "channel": "ach",
+      "counterparty": "BUTKT Services LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 160390.53,
+      "channel": "wire",
+      "counterparty": "WW Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    },
+    {
+      "amount": 201391.97,
+      "channel": "wire",
+      "counterparty": "UK Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 169499.03,
+      "channel": "ach",
+      "counterparty": "IPOM Group LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_1112b660",
+    "entity_type": "business",
+    "expected_monthly_volume": 237086.0,
+    "business_purpose": "Coin-operated laundry / car wash; high cash throughput; declared monthly volume ~$237,086.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.5,
+      "wire": 0.333,
+      "cash": 0.167
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.16666666666666666, 'ach': 0.5, 'wire': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_1112b660 executed 6 transactions totaling $741,871.78 USD with channel mix {\"ach\": 0.5, \"wire\": 0.333, \"cash\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.54x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 741871.78,
+        "channel_mix": {
+          "ach": 0.5,
+          "wire": 0.333,
+          "cash": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.87,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.54
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 741,871.78",
+      "calculation": "1) Sum all transaction amounts in transactions[0..5]: 2,342.88 + 90,186.02 + 118,061.35 + 160,390.53 + 201,391.97 + 169,499.03 = 741,871.78.\n2) KYC declared expected_monthly_volume from kyc_profile.expected_monthly_volume = 237,086.0.\n3) Compute multiple of declared volume: 741,871.78 / 237,086.0 = 3.1296 ≈ 3.13.\n4) Difference vs declared volume: 741,871.78 - 237,086.0 = 504,785.78.\n5) Final reported quantity is total transaction volume = 741,871.78.",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source material.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so there are no statutory elements to compare against the fact pattern. Because the statute is missing, applicability cannot be assessed. Phrase included from answer: \"no statute provided\"."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "Neutral: no statute provided, so statutory applicability cannot be determined.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so there are no statutory elements to compare against the fact pattern. Because the statute is missing, applicability cannot be assessed. Phrase included from answer: \"no statute provided\"."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_1112b660 executed 6 transactions totaling $741,871.78 USD with channel mix {\"ach\": 0.5, \"wire\": 0.333, \"cash\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.54x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 741871.78,
+          "channel_mix": {
+            "ach": 0.5,
+            "wire": 0.333,
+            "cash": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.87,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.54
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 741,871.78",
+        "calculation": "1) Sum all transaction amounts in transactions[0..5]: 2,342.88 + 90,186.02 + 118,061.35 + 160,390.53 + 201,391.97 + 169,499.03 = 741,871.78.\n2) KYC declared expected_monthly_volume from kyc_profile.expected_monthly_volume = 237,086.0.\n3) Compute multiple of declared volume: 741,871.78 / 237,086.0 = 3.1296 ≈ 3.13.\n4) Difference vs declared volume: 741,871.78 - 237,086.0 = 504,785.78.\n5) Final reported quantity is total transaction volume = 741,871.78.",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source material.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2342.88, \"channel\": \"cash\", \"counterparty\": \"Joshua Garcia (family contribution)\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"small cash deposit (benign: documented family contribution)\"}, {\"amount\": 90186.02, \"channel\": \"ach\", \"counterparty\": \"TRM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 118061.35, \"channel\": \"ach\", \"counterparty\": \"BUTKT Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 160390.53, \"channel\": \"wire\", \"counterparty\": \"WW Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}, {\"amount\": 201391.97, \"channel\": \"wire\", \"counterparty\": \"UK Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 169499.03, \"channel\": \"ach\", \"counterparty\": \"IPOM Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_1112b660\", \"entity_type\": \"business\", \"expected_monthly_volume\": 237086.0, \"business_purpose\": \"Coin-operated laundry / car wash; high cash throughput; declared monthly volume ~$237,086.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"Neutral: no statute provided, so statutory applicability cannot be determined.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided (no U.S.C./CFR citation), so there are no statutory elements to compare against the fact pattern. Because the statute is missing, applicability cannot be assessed. Phrase included from answer: \\\"no statute provided\\\".\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_1112b660 executed 6 transactions totaling $741,871.78 USD with channel mix {\\\"ach\\\": 0.5, \\\"wire\\\": 0.333, \\\"cash\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.54x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 741871.78, \"channel_mix\": {\"ach\": 0.5, \"wire\": 0.333, \"cash\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.87, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.54}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 741,871.78\", \"calculation\": \"1) Sum all transaction amounts in transactions[0..5]: 2,342.88 + 90,186.02 + 118,061.35 + 160,390.53 + 201,391.97 + 169,499.03 = 741,871.78.\\n2) KYC declared expected_monthly_volume from kyc_profile.expected_monthly_volume = 237,086.0.\\n3) Compute multiple of declared volume: 741,871.78 / 237,086.0 = 3.1296 ≈ 3.13.\\n4) Difference vs declared volume: 741,871.78 - 237,086.0 = 504,785.78.\\n5) Final reported quantity is total transaction volume = 741,871.78.\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved, so I cannot provide a verbatim citation or evidence span from source material.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_1112b660 (coin-operated laundry/car wash; expected monthly volume $237,086) shows elevated non-cash activity: 6 tx totaling $741,871.78 across ACH/wires to TRM Solutions LLC ($90,186.02 on 2026-03-04), WW Holdings LLC ($160,390.53 on 2026-03-20), UK Capital LLC ($201,391.97 on 2026-03-31), BUTKT Services LLC ($118,061.35 on 2026-04-22), and IPOM Group LLC ($169,499.03 on 2026-02-28), plus one cash deposit $2,342.88 (family contribution). Auxiliary behavioral ratio (1.54x) conflicts with recomputed 3.13x vs declared volume, indicating a significant unexplained spike inconsistent with a cash-heavy business; no sanctions hits or policy citations provided. Activity appears to warrant SAR consideration; final decision deferred to investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_1112b660 (coin-operated laundry/car wash; expected monthly volume $237,086) shows elevated non-cash activity: 6 tx totaling $741,871.78 across ACH/wires to TRM Solutions LLC ($90,186.02 on 2026-03-04), WW Holdings LLC ($160,390.53 on 2026-03-20), UK Capital LLC ($201,391.97 on 2026-03-31), BUTKT Services LLC ($118,061.35 on 2026-04-22), and IPOM Group LLC ($169,499.03 on 2026-02-28), plus one cash deposit $2,342.88 (family contribution). Auxiliary behavioral ratio (1.54x) conflicts with recomputed 3.13x vs declared volume, indicating a significant unexplained spike inconsistent with a cash-heavy business; no sanctions hits or policy citations provided. Activity appears to warrant SAR consideration; final decision deferred to investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_1112b660 (coin-operated laundry/car wash; expected monthly volume $237,086) shows elevated non-cash activity: 6 tx totaling $741,871.78 across ACH/wires to TRM Solutions LLC ($90,186.02 on 2026-03-04), WW Holdings LLC ($160,390.53 on 2026-03-20), UK Capital LLC ($201,391.97 on 2026-03-31), BUTKT Services LLC ($118,061.35 on 2026-04-22), and IPOM Group LLC ($169,499.03 on 2026-02-28), plus one cash deposit $2,342.88 (family contribution). Auxiliary behavioral ratio (1.54x) conflicts with recomputed 3.13x vs declared volume, indicating a significant unexplained spike inconsistent with a cash-heavy business; no sanctions hits or policy citations provided. Activity appears to warrant SAR consideration; final decision deferred to investigator.",
+  "judge_enabled": false,
+  "error": null
+}

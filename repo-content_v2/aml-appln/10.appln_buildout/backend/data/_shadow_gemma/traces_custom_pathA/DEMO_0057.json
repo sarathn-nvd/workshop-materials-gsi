@@ -1,0 +1,213 @@
+{
+  "case_id": "DEMO_0057",
+  "alert_id": "ALT_2440988",
+  "entity_id": "SYN_abc944c6",
+  "started_at": "2026-05-27T16:47:11.193316+00:00",
+  "finished_at": "2026-05-27T16:47:18.156085+00:00",
+  "wall_clock_ms": 6962.8,
+  "transactions": [
+    {
+      "amount": 64327.63,
+      "channel": "wire",
+      "counterparty": "IW Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 64327.63,
+      "channel": "wire",
+      "counterparty": "IW Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 5145.47,
+      "channel": "wire",
+      "counterparty": "QRB Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 4325.27,
+      "channel": "ach",
+      "counterparty": "SQDK Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 5580.36,
+      "channel": "ach",
+      "counterparty": "DD Services LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 3024.23,
+      "channel": "ach",
+      "counterparty": "GQG Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 4882.63,
+      "channel": "ach",
+      "counterparty": "WR Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_abc944c6",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5237.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,237.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.429
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.5714285714285714})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_abc944c6 executed 7 transactions totaling $151,613.22 USD with channel mix {\"ach\": 0.571, \"wire\": 0.429}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 11.58x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 151613.22,
+        "channel_mix": {
+          "ach": 0.571,
+          "wire": 0.429
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.58,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 11.58
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 151,513.22",
+      "calculation": "1. Identify all transaction amounts: 64,327.63 (2026-03-30), 64,327.63 (2026-04-02), 5,145.47 (2026-03-21), 4,325.27 (2026-02-02), 5,580.36 (2026-03-29), 3,024.23 (2026-03-22), 4,882.63 (2026-04-18). 2. Sum the amounts: 64,327.63 + 64,327.63 + 5,145.47 + 4,325.27 + 5,580.36 + 3,024.23 + 4,882.63 = 151,513.22.",
+      "evidence": "transactions[0..7]"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_abc944c6 executed 7 transactions totaling $151,613.22 USD with channel mix {\"ach\": 0.571, \"wire\": 0.429}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 11.58x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 151613.22,
+          "channel_mix": {
+            "ach": 0.571,
+            "wire": 0.429
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.58,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 11.58
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 151,513.22",
+        "calculation": "1. Identify all transaction amounts: 64,327.63 (2026-03-30), 64,327.63 (2026-04-02), 5,145.47 (2026-03-21), 4,325.27 (2026-02-02), 5,580.36 (2026-03-29), 3,024.23 (2026-03-22), 4,882.63 (2026-04-18). 2. Sum the amounts: 64,327.63 + 64,327.63 + 5,145.47 + 4,325.27 + 5,580.36 + 3,024.23 + 4,882.63 = 151,513.22.",
+        "evidence": "transactions[0..7]"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 64327.63, \"channel\": \"wire\", \"counterparty\": \"IW Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"outbound wire\"}, {\"amount\": 64327.63, \"channel\": \"wire\", \"counterparty\": \"IW Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 5145.47, \"channel\": \"wire\", \"counterparty\": \"QRB Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 4325.27, \"channel\": \"ach\", \"counterparty\": \"SQDK Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 5580.36, \"channel\": \"ach\", \"counterparty\": \"DD Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 3024.23, \"channel\": \"ach\", \"counterparty\": \"GQG Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 4882.63, \"channel\": \"ach\", \"counterparty\": \"WR Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_abc944c6\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5237.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,237.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_abc944c6 executed 7 transactions totaling $151,613.22 USD with channel mix {\\\"ach\\\": 0.571, \\\"wire\\\": 0.429}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 11.58x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 151613.22, \"channel_mix\": {\"ach\": 0.571, \"wire\": 0.429}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.58, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 11.58}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 151,513.22\", \"calculation\": \"1. Identify all transaction amounts: 64,327.63 (2026-03-30), 64,327.63 (2026-04-02), 5,145.47 (2026-03-21), 4,325.27 (2026-02-02), 5,580.36 (2026-03-29), 3,024.23 (2026-03-22), 4,882.63 (2026-04-18). 2. Sum the amounts: 64,327.63 + 64,327.63 + 5,145.47 + 4,325.27 + 5,580.36 + 3,024.23 + 4,882.63 = 151,513.22.\", \"evidence\": \"transactions[0..7]\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a significant volume spike, with total transactions of $151,613.22, which is 11.58x the declared monthly volume of $5,237. This activity was primarily driven by two large wires to IW Logistics LLC totaling $128,655.26 on 2026-03-30 and 2026-04-02. However, the second wire for $64,327.63 was explicitly noted as a returned wire due to a cancelled invoice, resolving the apparent pass-through pattern. The remaining activity consists of small ACH payments to various LLCs, which are consistent with incidental business expenses. Given the benign explanation for the large wire, the activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a significant volume spike, with total transactions of $151,613.22, which is 11.58x the declared monthly volume of $5,237. This activity was primarily driven by two large wires to IW Logistics LLC totaling $128,655.26 on 2026-03-30 and 2026-04-02. However, the second wire for $64,327.63 was explicitly noted as a returned wire due to a cancelled invoice, resolving the apparent pass-through pattern. The remaining activity consists of small ACH payments to various LLCs, which are consistent with incidental business expenses. Given the benign explanation for the large wire, the activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a significant volume spike, with total transactions of $151,613.22, which is 11.58x the declared monthly volume of $5,237. This activity was primarily driven by two large wires to IW Logistics LLC totaling $128,655.26 on 2026-03-30 and 2026-04-02. However, the second wire for $64,327.63 was explicitly noted as a returned wire due to a cancelled invoice, resolving the apparent pass-through pattern. The remaining activity consists of small ACH payments to various LLCs, which are consistent with incidental business expenses. Given the benign explanation for the large wire, the activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

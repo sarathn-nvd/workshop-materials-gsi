@@ -1,0 +1,218 @@
+{
+  "case_id": "DEMO_0082",
+  "alert_id": "ALT_2472070",
+  "entity_id": "SYN_cf899c57",
+  "started_at": "2026-05-27T16:06:27.997796+00:00",
+  "finished_at": "2026-05-27T16:06:35.807383+00:00",
+  "wall_clock_ms": 7809.6,
+  "transactions": [
+    {
+      "amount": 1441.07,
+      "channel": "wire",
+      "counterparty": "Daniel Harris (family, abroad)",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": "remittance to family (benign: documented diaspora support)"
+    },
+    {
+      "amount": 20288.71,
+      "channel": "card",
+      "counterparty": "Christopher Lewis",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 17926.71,
+      "channel": "card",
+      "counterparty": "Michael Miller",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 16022.47,
+      "channel": "cash",
+      "counterparty": "Andrew Miller",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 30072.9,
+      "channel": "ach",
+      "counterparty": "MQ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 23911.9,
+      "channel": "ach",
+      "counterparty": "FUOE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 10257.01,
+      "channel": "ach",
+      "counterparty": "KZJAF Group LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_cf899c57",
+    "entity_type": "individual",
+    "expected_monthly_volume": 33793.0,
+    "business_purpose": "Self-employed proprietor; small-business cash flow; expected monthly throughput ~$33,793.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "card": 0.286,
+      "wire": 0.143,
+      "cash": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.14285714285714285, 'card': 0.2857142857142857, 'cash': 0.14285714285714285, 'ach': 0.42857142857142855})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 120020.77. The channel_mix includes cash at 0.143, which warrants a review for potential structuring or CTR compliance under 31 USC 5324. Activity is characterized by a velocity_24h_max of 2 and a limited network of unique_counterparties_7d of 2. The vs_declared_volume_ratio is 12.0, indicating volume significantly above the expected monthly throughput. These patterns, combined with a tx_total_usd of 120020.77, appear consistent with high-value movement relative to the declared profile.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 120020.77,
+        "channel_mix": {
+          "ach": 0.429,
+          "card": 0.286,
+          "wire": 0.143,
+          "cash": 0.143
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.83,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 12.0
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 119921.79",
+      "calculation": "1. Identify all transaction amounts: 1,441.07 (2026-04-01), 20,288.71 (2026-02-25), 17,926.71 (2026-03-11), 16,022.47 (2026-02-26), 30,072.90 (2026-03-13), 23,911.90 (2026-03-13), 10,257.01 (2026-02-12). 2. Sum the amounts: 1,441.07 + 20,288.71 + 17,926.71 + 16,022.47 + 30,072.90 + 23,911.90 + 10,257.01 = 119,921.79.",
+      "evidence": "transactions[0..6].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 120020.77. The channel_mix includes cash at 0.143, which warrants a review for potential structuring or CTR compliance under 31 USC 5324. Activity is characterized by a velocity_24h_max of 2 and a limited network of unique_counterparties_7d of 2. The vs_declared_volume_ratio is 12.0, indicating volume significantly above the expected monthly throughput. These patterns, combined with a tx_total_usd of 120020.77, appear consistent with high-value movement relative to the declared profile.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 120020.77,
+          "channel_mix": {
+            "ach": 0.429,
+            "card": 0.286,
+            "wire": 0.143,
+            "cash": 0.143
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.83,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 12.0
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 119921.79",
+        "calculation": "1. Identify all transaction amounts: 1,441.07 (2026-04-01), 20,288.71 (2026-02-25), 17,926.71 (2026-03-11), 16,022.47 (2026-02-26), 30,072.90 (2026-03-13), 23,911.90 (2026-03-13), 10,257.01 (2026-02-12). 2. Sum the amounts: 1,441.07 + 20,288.71 + 17,926.71 + 16,022.47 + 30,072.90 + 23,911.90 + 10,257.01 = 119,921.79.",
+        "evidence": "transactions[0..6].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1441.07, \"channel\": \"wire\", \"counterparty\": \"Daniel Harris (family, abroad)\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"remittance to family (benign: documented diaspora support)\"}, {\"amount\": 20288.71, \"channel\": \"card\", \"counterparty\": \"Christopher Lewis\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 17926.71, \"channel\": \"card\", \"counterparty\": \"Michael Miller\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 16022.47, \"channel\": \"cash\", \"counterparty\": \"Andrew Miller\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 30072.9, \"channel\": \"ach\", \"counterparty\": \"MQ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 23911.9, \"channel\": \"ach\", \"counterparty\": \"FUOE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 10257.01, \"channel\": \"ach\", \"counterparty\": \"KZJAF Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_cf899c57\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 33793.0, \"business_purpose\": \"Self-employed proprietor; small-business cash flow; expected monthly throughput ~$33,793.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits a tx_count of 7 with a tx_total_usd of 120020.77. The channel_mix includes cash at 0.143, which warrants a review for potential structuring or CTR compliance under 31 USC 5324. Activity is characterized by a velocity_24h_max of 2 and a limited network of unique_counterparties_7d of 2. The vs_declared_volume_ratio is 12.0, indicating volume significantly above the expected monthly throughput. These patterns, combined with a tx_total_usd of 120020.77, appear consistent with high-value movement relative to the declared profile.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 120020.77, \"channel_mix\": {\"ach\": 0.429, \"card\": 0.286, \"wire\": 0.143, \"cash\": 0.143}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.83, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 12.0}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 119921.79\", \"calculation\": \"1. Identify all transaction amounts: 1,441.07 (2026-04-01), 20,288.71 (2026-02-25), 17,926.71 (2026-03-11), 16,022.47 (2026-02-26), 30,072.90 (2026-03-13), 23,911.90 (2026-03-13), 10,257.01 (2026-02-12). 2. Sum the amounts: 1,441.07 + 20,288.71 + 17,926.71 + 16,022.47 + 30,072.90 + 23,911.90 + 10,257.01 = 119,921.79.\", \"evidence\": \"transactions[0..6].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account triggered an alert due to a high volume of transactions totaling $120,020.77, which represents a vs_declared_volume_ratio of 12.0 relative to the expected monthly volume of $33,793. However, the activity is consistent with the entity's profile as a self-employed proprietor. The transactions include a mix of ACH, card, wire, and cash payments to various counterparties, such as MQ Logistics LLC ($30,072.90) and Andrew Miller ($16,022.47), which are plausible for small-business cash flow. No sanctions hits or structuring patterns were identified. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert due to a high volume of transactions totaling $120,020.77, which represents a vs_declared_volume_ratio of 12.0 relative to the expected monthly volume of $33,793. However, the activity is consistent with the entity's profile as a self-employed proprietor. The transactions include a mix of ACH, card, wire, and cash payments to various counterparties, such as MQ Logistics LLC ($30,072.90) and Andrew Miller ($16,022.47), which are plausible for small-business cash flow. No sanctions hits or structuring patterns were identified. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert due to a high volume of transactions totaling $120,020.77, which represents a vs_declared_volume_ratio of 12.0 relative to the expected monthly volume of $33,793. However, the activity is consistent with the entity's profile as a self-employed proprietor. The transactions include a mix of ACH, card, wire, and cash payments to various counterparties, such as MQ Logistics LLC ($30,072.90) and Andrew Miller ($16,022.47), which are plausible for small-business cash flow. No sanctions hits or structuring patterns were identified. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

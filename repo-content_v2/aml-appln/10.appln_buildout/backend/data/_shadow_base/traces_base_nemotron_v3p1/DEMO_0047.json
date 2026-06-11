@@ -1,0 +1,272 @@
+{
+  "case_id": "DEMO_0047",
+  "alert_id": "ALT_2413917",
+  "entity_id": "SYN_295469da",
+  "started_at": "2026-05-27T15:12:52.301246+00:00",
+  "finished_at": "2026-05-27T15:13:36.931069+00:00",
+  "wall_clock_ms": 44629.9,
+  "transactions": [
+    {
+      "amount": 19303.55,
+      "channel": "cash",
+      "counterparty": "Jennifer Johnson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 16132.01,
+      "channel": "card",
+      "counterparty": "Patricia Thomas",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 29267.96,
+      "channel": "cash",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 7968.82,
+      "channel": "card",
+      "counterparty": "Karen Harris",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 25827.82,
+      "channel": "card",
+      "counterparty": "Karen Thomas",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 21047.67,
+      "channel": "cash",
+      "counterparty": "James Thomas",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 23165.02,
+      "channel": "ach",
+      "counterparty": "CTOW Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": ""
+    },
+    {
+      "amount": 9355.16,
+      "channel": "ach",
+      "counterparty": "TJ Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 7810.21,
+      "channel": "card",
+      "counterparty": "Elizabeth Anderson",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 7187.82,
+      "channel": "cash",
+      "counterparty": "James Anderson",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 29685.38,
+      "channel": "card",
+      "counterparty": "Jennifer Thompson",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 26189.21,
+      "channel": "cash",
+      "counterparty": "Andrew Garcia",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 12093.29,
+      "channel": "card",
+      "counterparty": "Michael Anderson",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 25833.74,
+      "channel": "ach",
+      "counterparty": "BCEV Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 8822.71,
+      "channel": "ach",
+      "counterparty": "GJX Group LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 20438.44,
+      "channel": "cash",
+      "counterparty": "Mary Walker",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 18224.78,
+      "channel": "card",
+      "counterparty": "Jennifer Davis",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 22443.31,
+      "channel": "wire",
+      "counterparty": "GD Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 21667.12,
+      "channel": "ach",
+      "counterparty": "WKY Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 21565.42,
+      "channel": "cash",
+      "counterparty": "Maria Lewis",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_295469da",
+    "entity_type": "business",
+    "expected_monthly_volume": 105245.0,
+    "business_purpose": "Retail jewelry store; mixed cash and card receipts; declared monthly volume ~$105,245.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.35,
+      "card": 0.35,
+      "ach": 0.25,
+      "wire": 0.05
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.35, 'card': 0.35, 'ach': 0.25, 'wire': 0.05})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe must echo the user's question verbatim as question value.\n\nSummary: 4-8 sentences prose. Every quantitative claim in summary must be a verbatim copy of a value from the precomputed metrics block. The summary must mention, as their exact stored values, at least these six metric keys when present: tx_count, tx_total_usd, channel_mix (one entry suffices), velocity_24h_max, unique_counterparties_7d, vs_declared_volume_ratio."
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output strict JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to produce a numeric finding. Likely need to compute total transaction amount or maybe sum of amounts, then compare to expected monthly volume 105,245.0. Provide answer that includes a contiguous 3-word phrase naming the specific quantity computed and the numeric result. Must include that phrase in answer.\n\nWe must cite "
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts were retrieved.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute.",
+      "label": "neutral",
+      "reasoning": "No statutory elements exist; § 0 No applicable statute."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute.",
+        "label": "neutral",
+        "reasoning": "No statutory elements exist; § 0 No applicable statute."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts were retrieved.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 19303.55, \"channel\": \"cash\", \"counterparty\": \"Jennifer Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 16132.01, \"channel\": \"card\", \"counterparty\": \"Patricia Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 29267.96, \"channel\": \"cash\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 7968.82, \"channel\": \"card\", \"counterparty\": \"Karen Harris\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 25827.82, \"channel\": \"card\", \"counterparty\": \"Karen Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 21047.67, \"channel\": \"cash\", \"counterparty\": \"James Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 23165.02, \"channel\": \"ach\", \"counterparty\": \"CTOW Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"\"}, {\"amount\": 9355.16, \"channel\": \"ach\", \"counterparty\": \"TJ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 7810.21, \"channel\": \"card\", \"counterparty\": \"Elizabeth Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 7187.82, \"channel\": \"cash\", \"counterparty\": \"James Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 29685.38, \"channel\": \"card\", \"counterparty\": \"Jennifer Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 26189.21, \"channel\": \"cash\", \"counterparty\": \"Andrew Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 12093.29, \"channel\": \"card\", \"counterparty\": \"Michael Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 25833.74, \"channel\": \"ach\", \"counterparty\": \"BCEV Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 8822.71, \"channel\": \"ach\", \"counterparty\": \"GJX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 20438.44, \"channel\": \"cash\", \"counterparty\": \"Mary Walker\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 18224.78, \"channel\": \"card\", \"counterparty\": \"Jennifer Davis\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 22443.31, \"channel\": \"wire\", \"counterparty\": \"GD Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 21667.12, \"channel\": \"ach\", \"counterparty\": \"WKY Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 21565.42, \"channel\": \"cash\", \"counterparty\": \"Maria Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_295469da\", \"entity_type\": \"business\", \"expected_monthly_volume\": 105245.0, \"business_purpose\": \"Retail jewelry store; mixed cash and card receipts; declared monthly volume ~$105,245.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute.\", \"label\": \"neutral\", \"reasoning\": \"No statutory elements exist; § 0 No applicable statute.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts were retrieved.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have transactions list, kyc_profile: business retail jewelry store, expected monthly volume 105,245, low risk. No sanctions hits. No policy excerpts. Auxiliary findings: statutory neutral, no behavioral, numeric, citation.\n\nWe need to decide if suspicious. Look at transactions: many cash and card and ACH and wire. Amounts vary, some large ~29k cash, 29k card, etc. Total sum? Let's compute approximate sum of amounts:\n\nList amounts:\n1 19303.55 cash\n2 16132.01 card\n3 29267.96 cash\n4 7968.82 card\n5 25827.82 card\n6 21047.67 cash\n7 23165.02 ach\n8 9355.16 ach\n9 7810.21 card\n10 7187.82 cash\n11 29685.38 card\n12 26189.21 cash\n13 12093.29 card\n14 25833.74 ach\n15 8822.71 ach\n16 20438.44 cash\n17 18224.78 card\n18 22443.31 wire\n19 21667.12 ach\n20 21565.42 cash\n\nLet's sum quickly: I'll add:\n\n1 19,303.55\n+2 16,132.01 = 35,435.56\n+3 29,267.96 = 64,703.52\n+4 7,968.82 = 72,672.34\n+5 25,827.82 = 98,500.16\n+6 21,047.67 = 119,547.83\n+7 23,165.02 = 142,712.85\n+8 9,355.16 = 152,068.01\n+9 7,810.21 = 159,878.22\n+10 7,187.82 = 167,066.04\n+11 29,685.38 = 196,751.42\n+12 26,189.21 = 222,940.63\n+13 12,093.29 = 235,033.92\n+14 25,833.74 = 260,867.66\n+15 8,822.71 = 269,690.37\n+16 20,438.44 = 290,128.81\n+17 18,224.78 = 308,353.59\n+18 22,443.31 = 330,796.90\n+19 21,667.12 = 352,464.02\n+20 21,565.42 = 374,029.44\n\nTotal ~374k over maybe a month? Not sure timeframe: dates range from Feb 15 to Apr 26, about 2 months? Actually earliest date 2026-02-15, latest 2026-04-26, about 2 months and 11 days. So monthly volume expected ~105k, but total observed ~374k over ~2 months => ~187k per month, which is less than expected 105k? Actually expected monthly volume is 105,245, but we have ~374k over ~2 months => average 187k per month, which is higher than expected. But we need to see if within 0.5-1.5x? 187k / 105k ≈ 1.78x, which is above 1.5x. That could be a red flag. However the business purpose is retail jewelry store, mixed cash and card. The amounts are large, but jewelry could have high-value transactions. Also many counterparties, some repeated? Let's see repeated names: Jennifer Johnson, Patricia Thomas, Maria Jackson, Karen Harris, Karen Thomas, James Thomas, CTOW Partners LLC, TJ Imports LLC, Elizabeth Anderson, James Anderson, Jennifer Thompson, Andrew Garcia, Michael Anderson, BCEV Exports LLC, GJX Group LLC, Mary Walker, Jennifer Davis, GD Partners LLC, WKY Capital LLC, Maria Lewis. Many distinct counterparties, some similar names (Anderson, Thomas, etc). Could be structuring? There's a wire to GD Partners LLC $22,443.31, and ACH to CTOW Partners LLC $23,165.02, etc. There's also a cash transaction to James Anderson $21,047.67, etc.\n\nBut we have no sanctions hits. No policy excerpts. Auxiliary findings empty. So we must decide based on evidence.\n\nGiven the total volume is higher than expected monthly volume, but not extremely high, and the business is jewelry store which can have high-value sales, and there is no obvious structuring pattern (no sub-10k structuring), but there are many cash transactions >10k (e.g., 19k, 29k, 29k, 26k, 21k, 20k, 22k, 21k). Actually many cash >10k, but not structuring (just single transactions). Could be suspicious if structuring is attempted via multiple sub-10k, but not present.\n\nThe pattern includes multiple large cash transactions to different counterparties, but also many card and ACH. Could be normal for a jewelry store.\n\nGiven no sanctions hit, no other red flags, and the volume is only modestly above expected (1.78x) which is above 1.5 threshold? The rule says \"transaction total within 0.5–1.5× declared monthly volume\" resolves. Here it's 1.78x >1.5, so maybe it's above that threshold, could be suspicious. But the rule for suspicious is strong-positive signals include structuring etc. Not present. Also the narrative must be 400-800 characters.\n\nWe need to decide is_suspicious true or false. Considering the evidence: no sanctions hit, no obvious structuring, but total volume is higher than expected, but not dramatically. However the business is jewelry store, which can have high-value sales; the pattern includes many large cash transactions but not suspicious. I think the appropriate verdict is false (not suspicious) because the surface red flag (high volume) is resolved by the declared business purpose and expected volume? Actually it's above 1.5x, which is outside the \"within 0.5–1.5×\" range that resolves. But the rule says \"Set is_suspicious=true only when the bundle evidence, on its own, warrants filing a SAR. Strong-positive signals include ...\". The volume being 1.78x might be considered a signal but not strong enough? The rule for negative disposition includes \"Transaction total within 0.5–1.5× declared monthly volume on a customer profile that explains the activity\". Here it's above 1.5, so not within that range, so maybe it's not resolved, thus could be suspicious. But we also have no other red flags. The question: we must decide based on evidence. The presence of a high volume above 1.5x could be considered a suspicious signal, but is it enough to file SAR? Usually SARs are filed for suspicious activity, not just high volume. The rule says \"Set is_suspicious=true only when the bundle evidence, on its own, warrants filing a SAR.\" The evidence includes high volume but also no other red flags. I think it's not sufficient to warrant SAR, so is_suspicious=false.\n\nThus we need to produce a negative narrative (disposition rationale) 400-800 characters, naming the surface red flag (e.g., \"Total transaction volume of $374,029 across the observation window, approximately 1.78× the expected monthly volume of $105,245\") and then cite bundle evidence that resolves: the kyc_profile business purpose is retail jewelry store with mixed cash and card receipts, expected monthly volume ~105k, and the observed activity is consistent with that purpose, perhaps the volume is within normal variation for high-value jewelry sales. Also note no sanctions hits, no structuring, etc.\n\nWe must ensure narrative length 400-800 characters. Let's craft about 550 characters.\n\nNarrative must start with naming the surface red flag explicitly. Then cite bundle evidence that resolves. Then state disposition explicitly: \"no SAR warranted\" or similar. Then defer to human investigator.\n\nLet's draft:\n\n\"Surface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\nSurface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator.\n\nLet's count roughly: I'll use approximate count.\n\nI'll copy into a counting tool mentally: Let's count characters.\n\nI'll write with indices.\n\n\"Surface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator.\"\n\nLet's count: I'll count words and approximate characters.\n\nBetter to ensure 400-800 characters. This seems maybe around 500-600. Let's approximate: each word ~5 chars plus space. Let's count characters precisely? Might be okay.\n\nBut we must ensure it's exactly JSON with string value. Must escape quotes? The string can contain quotes? It's JSON string, we need to embed double quotes inside? We can avoid double quotes inside the string. Use single quotes? JSON requires double quotes for strings, but inside the string we can use double quotes only if escaped. Safer to avoid double quotes inside the narrative. Use no double quotes. Use apostrophes? That's fine. Use colon etc.\n\nOur narrative currently contains double quotes? No. It contains apostrophe in \"low‑risk\"? That's fine. It contains colon, parentheses, etc. No double quotes. So we can embed as is.\n\nBut we have \"kyc_profile\" includes underscore, fine. No double quotes.\n\nWe must ensure the JSON output is exactly:\n\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"<narrative>\"}\n\nMake sure no extra spaces? It's okay.\n\nNow ensure narrative length 400-800 characters. Let's approximate length: I'll count characters manually quickly.\n\nI'll write the narrative exactly as I will output:\n\nSurface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator.\n\nNow count characters including spaces. Let's count using rough method: I'll count per segment.\n\n\"Surface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store.\" Let's count characters:\n\nI'll count characters including spaces.\n\nI'll write it out with index numbers? Might be tedious. Let's approximate length: This sentence is about 150 characters? Let's approximate total narrative length maybe ~500-600. Should be within 400-800.\n\nI think it's okay.\n\nNow produce final JSON.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"Surface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: aggregate transaction volume of $374,029 across the observation period, approximately 1.78× the expected monthly volume of $105,245 for a retail jewelry store. Contextual resolution: kyc_profile indicates a low‑risk jewelry retailer with mixed cash and card receipts and declared monthly volume ~$105,245, and the transaction mix (cash, card, ACH, wire) aligns with typical high‑value sales patterns for such merchants; no sanctions or structuring indicators are present. disposition: no SAR warranted. final disposition: defer to human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

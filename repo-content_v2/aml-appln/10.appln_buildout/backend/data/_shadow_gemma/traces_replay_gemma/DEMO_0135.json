@@ -1,0 +1,288 @@
+{
+  "case_id": "DEMO_0135",
+  "entity_id": "SYN_9e6a0748",
+  "started_at": "2026-05-23T13:15:35.062449+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 911.8,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 34579.75, \"channel\": \"card\", \"counterparty\": \"Susan Anderson\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 21627.92, \"channel\": \"ach\", \"counterparty\": \"XGX Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-21\", \"notes\": \"\"}, {\"amount\": 33769.51, \"channel\": \"card\", \"counterparty\": \"Christopher Martin\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 36590.41, \"channel\": \"cash\", \"counterparty\": \"Linda Walker\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 25262.28, \"channel\": \"cash\", \"counterparty\": \"Mary Garcia\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 30883.18, \"channel\": \"card\", \"counterparty\": \"Elizabeth Moore\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 17324.69, \"channel\": \"cash\", \"counterparty\": \"Susan Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-06\", \"notes\": \"\"}, {\"amount\": 27140.46, \"channel\": \"ach\", \"counterparty\": \"HQS Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 37563.8, \"channel\": \"wire\", \"counterparty\": \"DUGE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 21460.16, \"channel\": \"ach\", \"counterparty\": \"MDUR Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 11337.33, \"channel\": \"cash\", \"counterparty\": \"Daniel Davis\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 12515.94, \"channel\": \"cash\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 37451.08, \"channel\": \"cash\", \"counterparty\": \"James Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 15989.17, \"channel\": \"card\", \"counterparty\": \"John Moore\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 35283.66, \"channel\": \"ach\", \"counterparty\": \"XXHYH Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 14436.58, \"channel\": \"cash\", \"counterparty\": \"Robert Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 21842.25, \"channel\": \"ach\", \"counterparty\": \"NLQO Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 34498.79, \"channel\": \"card\", \"counterparty\": \"Linda Garcia\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 23858.99, \"channel\": \"cash\", \"counterparty\": \"John Garcia\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 31624.05, \"channel\": \"card\", \"counterparty\": \"David Martin\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 29439.53, \"channel\": \"cash\", \"counterparty\": \"Andrew Garcia\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 9565.17, \"channel\": \"cash\", \"counterparty\": \"Mary Taylor\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 32967.01, \"channel\": \"card\", \"counterparty\": \"Patricia Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 8615.49, \"channel\": \"card\", \"counterparty\": \"David Harris\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 10025.35, \"channel\": \"ach\", \"counterparty\": \"PCQD Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_9e6a0748\", \"entity_type\": \"business\", \"expected_monthly_volume\": 280120, \"business_purpose\": \"Convenience / grocery store; multi-shift cash operation; declared monthly volume ~$280,120.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account exhibits a high volume of activity with a total of 24 transactions. The total USD volume is 613,333.31, which is significantly higher than the expected monthly volume of 280,120. Activity is spread across multiple channels including card (10), cash (7), and ach (7). The highest single transaction was 37,563.80 via wire, and the maximum velocity in 24 hours is 4 transactions. The account interacts with a diverse set of 18 unique counterparties. The observed volume is approximately 2.19 times the declared volume.\", \"metrics\": {\"tx_count\": 24, \"tx_total_usd\": 613333.31, \"channel_mix\": {\"card\": 0.4166666666666667, \"ach\": 0.2916666666666667, \"cash\": 0.2916666666666667}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 0.8, \"unique_counterparties_7d\": 18, \"amount_z_score_max\": 2.45, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.189486}, \"evidence\": \"transactions[0..23]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume across all dates is $542,333.11, which exceeds the KYC declared monthly volume of $280,120.00.\", \"calculation\": \"1. Sum all transaction amounts: 34579.75 + 21627.92 + 33769.51 + 36590.41 + 25262.28 + 30883.18 + 17324.69 + 27140.46 + 37563.80 + 21460.16 + 11337.33 + 12515.94 + 37451.08 + 15989.17 + 35283.66 + 14436.58 + 21842.25 + 34498.79 + 23858.99 + 31624.05 + 29439.53 + 9565.17 + 32967.01 + 8615.49 + 10025.35 = 542333.11\", \"evidence\": \"All 'amount' fields in the Transactions table\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant policy excerpt is available to provide a citation.\", \"evidence_span\": \"no policy excerpts were retrieved\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\", \"_decision_target\": \"not_suspicious\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "transactions": [
+    {
+      "amount": 34579.75,
+      "channel": "card",
+      "counterparty": "Susan Anderson",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 21627.92,
+      "channel": "ach",
+      "counterparty": "XGX Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-21",
+      "notes": ""
+    },
+    {
+      "amount": 33769.51,
+      "channel": "card",
+      "counterparty": "Christopher Martin",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 36590.41,
+      "channel": "cash",
+      "counterparty": "Linda Walker",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 25262.28,
+      "channel": "cash",
+      "counterparty": "Mary Garcia",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 30883.18,
+      "channel": "card",
+      "counterparty": "Elizabeth Moore",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 17324.69,
+      "channel": "cash",
+      "counterparty": "Susan Anderson",
+      "currency": "USD",
+      "date": "2026-03-06",
+      "notes": ""
+    },
+    {
+      "amount": 27140.46,
+      "channel": "ach",
+      "counterparty": "HQS Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 37563.8,
+      "channel": "wire",
+      "counterparty": "DUGE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 21460.16,
+      "channel": "ach",
+      "counterparty": "MDUR Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 11337.33,
+      "channel": "cash",
+      "counterparty": "Daniel Davis",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 12515.94,
+      "channel": "cash",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 37451.08,
+      "channel": "cash",
+      "counterparty": "James Thompson",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 15989.17,
+      "channel": "card",
+      "counterparty": "John Moore",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 35283.66,
+      "channel": "ach",
+      "counterparty": "XXHYH Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 14436.58,
+      "channel": "cash",
+      "counterparty": "Robert Taylor",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 21842.25,
+      "channel": "ach",
+      "counterparty": "NLQO Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 34498.79,
+      "channel": "card",
+      "counterparty": "Linda Garcia",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 23858.99,
+      "channel": "cash",
+      "counterparty": "John Garcia",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 31624.05,
+      "channel": "card",
+      "counterparty": "David Martin",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 29439.53,
+      "channel": "cash",
+      "counterparty": "Andrew Garcia",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 9565.17,
+      "channel": "cash",
+      "counterparty": "Mary Taylor",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 32967.01,
+      "channel": "card",
+      "counterparty": "Patricia Taylor",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 8615.49,
+      "channel": "card",
+      "counterparty": "David Harris",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 10025.35,
+      "channel": "ach",
+      "counterparty": "PCQD Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_9e6a0748",
+    "entity_type": "business",
+    "expected_monthly_volume": 280120.0,
+    "business_purpose": "Convenience / grocery store; multi-shift cash operation; declared monthly volume ~$280,120.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.4,
+      "card": 0.32,
+      "ach": 0.24,
+      "wire": 0.04
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account exhibits a high volume of activity with a total of 24 transactions. The total USD volume is 613,333.31, which is significantly higher than the expected monthly volume of 280,120. Activity is spread across multiple channels including card (10), cash (7), and ach (7). The highest single transaction was 37,563.80 via wire, and the maximum velocity in 24 hours is 4 transactions. The account interacts with a diverse set of 18 unique counterparties. The observed volume is approximately 2.19 times the declared volume.",
+        "metrics": {
+          "tx_count": 24,
+          "tx_total_usd": 613333.31,
+          "channel_mix": {
+            "card": 0.4166666666666667,
+            "ach": 0.2916666666666667,
+            "cash": 0.2916666666666667
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 0.8,
+          "unique_counterparties_7d": 18,
+          "amount_z_score_max": 2.45,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.189486
+        },
+        "evidence": "transactions[0..23]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume across all dates is $542,333.11, which exceeds the KYC declared monthly volume of $280,120.00.",
+        "calculation": "1. Sum all transaction amounts: 34579.75 + 21627.92 + 33769.51 + 36590.41 + 25262.28 + 30883.18 + 17324.69 + 27140.46 + 37563.80 + 21460.16 + 11337.33 + 12515.94 + 37451.08 + 15989.17 + 35283.66 + 14436.58 + 21842.25 + 34498.79 + 23858.99 + 31624.05 + 29439.53 + 9565.17 + 32967.01 + 8615.49 + 10025.35 = 542333.11",
+        "evidence": "All 'amount' fields in the Transactions table"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant policy excerpt is available to provide a citation.",
+        "evidence_span": "no policy excerpts were retrieved"
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "google/gemma-4-31b-it",
+    "endpoint": "http://localhost:8090/v1"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "case_id": "DEMO_0111",
+  "alert_id": "ALT_2495069",
+  "entity_id": "SYN_1140aeab",
+  "started_at": "2026-05-27T16:47:36.679511+00:00",
+  "finished_at": "2026-05-27T16:47:44.698229+00:00",
+  "wall_clock_ms": 8018.7,
+  "transactions": [
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "CSE Global Limited",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "ON Capital LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": "round-number outbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "AE Industries LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 2500000.0,
+      "channel": "wire",
+      "counterparty": "USFP Services LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 1000000.0,
+      "channel": "wire",
+      "counterparty": "DB Logistics LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "round-number inbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_1140aeab",
+    "entity_type": "business",
+    "expected_monthly_volume": 443649.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "CSE Global Limited",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "nning to explore the delta between compliance risk and illicit finance risk\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\nClemente Vasquez Bello made to our BSAAG efforts over the years.\nThe passion and dedication that Clemente brought for many years to our BSAAG\ndiscussions was second to none, and he has been sorely missed. I know from my own\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\nbetween money laundering prevention and BSA reporting.\nOn one hand, if you focus too much on the prevention side within your financial\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\nefforts will be undermined and the U.S. financial system compromised.\nWhat we all learned from our discussions with Clemente about this, as well as many\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\nimportant role in helping strike that balance.\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\nimpact on our work wit"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "n collaboration with NPOs and other government entities, a financial institution\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\nto financial institutions to understand NPO TF risks. It supports the understanding\nand awareness among NPOs on the various AML/CFT risk considerations when\nseeking to open an account, and when accessing and using any financial services.\nThe portal explains that the financial institution functions as a gatekeeper to the\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\nprovides an overview of the documents and information that the financial institution\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\nThe portal guides an NPO through various questions that the financial institution\nmust consider when performing its risk assessment and CDD procedures regarding:\n(i) Countries in which the NPO is active;\n(ii) The type of activity the NPO engages in;\n(iii) Organisational structure, including staff, board members, and partners of\nthe NPO;\n(iv)NPO’s ultimate beneficial owner; and\n(v) Type of transactions and sources of funding.\nThe portal refers to good governance instruments that NPOs can use to mitigate any\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\nownership/control and organisational structure, geographical reach, activities and\noperations, sources of funding, their (intended) financial transactions, and fi"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-SHELL-COMPANY-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "shell_company"
+  },
+  "typology_hypothesis": "shell_company",
+  "activity_descriptor": "Sanctions counterparty hit on offshore-incorporated entity (CSE Global Limited)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_1140aeab executed 5 transactions totaling $4,600,000.00 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.25. Volume vs declared monthly is 15.55x. country_risk_max is 0.2; loop_detected is false.",
+      "metrics": {
+        "tx_count": 5,
+        "tx_total_usd": 4600000.0,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.88,
+        "country_risk_max": 0.2,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 15.55
+      },
+      "evidence": "transactions[0..4]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total round-number wires 4600000.0",
+      "calculation": "1. Identify round-number inbound wires: 2026-04-04 ($100,000.00), 2026-04-17 ($500,000.00), 2026-04-22 ($2,500,000.00), 2026-04-24 ($1,000,000.00) - Table rows 1, 3, 4, 5 columns 'amount'. 2. Identify round-number outbound wire: 2026-04-07 ($500,000.00) - Table row 2 column 'amount'. 3. Sum all identified amounts: 100,000.00 + 500,000.00 + 500,000.00 + 2,500,000.00 + 1,000,000.00 = 4,600,000.00",
+      "evidence": "Table row '2026-04-04' column 'amount'; Table row '2026-04-07' column 'amount'; Table row '2026-04-17' column 'amount'; Table row '2026-04-22' column 'amount'; Table row '2026-04-24' column 'amount'"
+    },
+    "citation": {
+      "question": "",
+      "answer": "The text discusses the importance of striking a balance between prevention and reporting.",
+      "evidence_span": "striking the right balance between money laundering prevention and BSA reporting"
+    },
+    "statutory": {
+      "question": "",
+      "answer": "Yes, 1010.230 requires reporting for legal entity customers.",
+      "label": "entailment",
+      "reasoning": "The fact pattern describes Entity SYN_1140aeab, a business incorporated in the BVI, which is a legal entity customer. 1010.230 requires reporting for legal entity customers, and the entity's profile indicates it is an offshore holding company. The observed transactions, including a $2,500,000.00 inbound wire from USFP Services LLC, are consistent with the entity's nature as a holding company. Therefore, 1010.230 requires reporting for this legal entity customer."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "Yes, 1010.230 requires reporting for legal entity customers.",
+        "label": "entailment",
+        "reasoning": "The fact pattern describes Entity SYN_1140aeab, a business incorporated in the BVI, which is a legal entity customer. 1010.230 requires reporting for legal entity customers, and the entity's profile indicates it is an offshore holding company. The observed transactions, including a $2,500,000.00 inbound wire from USFP Services LLC, are consistent with the entity's nature as a holding company. Therefore, 1010.230 requires reporting for this legal entity customer."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_1140aeab executed 5 transactions totaling $4,600,000.00 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.25. Volume vs declared monthly is 15.55x. country_risk_max is 0.2; loop_detected is false.",
+        "metrics": {
+          "tx_count": 5,
+          "tx_total_usd": 4600000.0,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.88,
+          "country_risk_max": 0.2,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 15.55
+        },
+        "evidence": "transactions[0..4]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total round-number wires 4600000.0",
+        "calculation": "1. Identify round-number inbound wires: 2026-04-04 ($100,000.00), 2026-04-17 ($500,000.00), 2026-04-22 ($2,500,000.00), 2026-04-24 ($1,000,000.00) - Table rows 1, 3, 4, 5 columns 'amount'. 2. Identify round-number outbound wire: 2026-04-07 ($500,000.00) - Table row 2 column 'amount'. 3. Sum all identified amounts: 100,000.00 + 500,000.00 + 500,000.00 + 2,500,000.00 + 1,000,000.00 = 4,600,000.00",
+        "evidence": "Table row '2026-04-04' column 'amount'; Table row '2026-04-07' column 'amount'; Table row '2026-04-17' column 'amount'; Table row '2026-04-22' column 'amount'; Table row '2026-04-24' column 'amount'"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "The text discusses the importance of striking a balance between prevention and reporting.",
+        "evidence_span": "striking the right balance between money laundering prevention and BSA reporting"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"CSE Global Limited\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"ON Capital LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"round-number outbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"AE Industries LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 2500000.0, \"channel\": \"wire\", \"counterparty\": \"USFP Services LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 1000000.0, \"channel\": \"wire\", \"counterparty\": \"DB Logistics LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"round-number inbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_1140aeab\", \"entity_type\": \"business\", \"expected_monthly_volume\": 443649.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [{\"name\": \"CSE Global Limited\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"nning to explore the delta between compliance risk and illicit finance risk\\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\\nClemente Vasquez Bello made to our BSAAG efforts over the years.\\nThe passion and dedication that Clemente brought for many years to our BSAAG\\ndiscussions was second to none, and he has been sorely missed. I know from my own\\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\\nbetween money laundering prevention and BSA reporting.\\nOn one hand, if you focus too much on the prevention side within your financial\\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\\nefforts will be undermined and the U.S. financial system compromised.\\nWhat we all learned from our discussions with Clemente about this, as well as many\\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\\nimportant role in helping strike that balance.\\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\\nimpact on our work wit\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"n collaboration with NPOs and other government entities, a financial institution\\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\\nto financial institutions to understand NPO TF risks. It supports the understanding\\nand awareness among NPOs on the various AML/CFT risk considerations when\\nseeking to open an account, and when accessing and using any financial services.\\nThe portal explains that the financial institution functions as a gatekeeper to the\\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\\nprovides an overview of the documents and information that the financial institution\\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\\nThe portal guides an NPO through various questions that the financial institution\\nmust consider when performing its risk assessment and CDD procedures regarding:\\n(i) Countries in which the NPO is active;\\n(ii) The type of activity the NPO engages in;\\n(iii) Organisational structure, including staff, board members, and partners of\\nthe NPO;\\n(iv)NPO’s ultimate beneficial owner; and\\n(v) Type of transactions and sources of funding.\\nThe portal refers to good governance instruments that NPOs can use to mitigate any\\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\\nownership/control and organisational structure, geographical reach, activities and\\noperations, sources of funding, their (intended) financial transactions, and fi\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-SHELL-COMPANY-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"Yes, 1010.230 requires reporting for legal entity customers.\", \"label\": \"entailment\", \"reasoning\": \"The fact pattern describes Entity SYN_1140aeab, a business incorporated in the BVI, which is a legal entity customer. 1010.230 requires reporting for legal entity customers, and the entity's profile indicates it is an offshore holding company. The observed transactions, including a $2,500,000.00 inbound wire from USFP Services LLC, are consistent with the entity's nature as a holding company. Therefore, 1010.230 requires reporting for this legal entity customer.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_1140aeab executed 5 transactions totaling $4,600,000.00 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.25. Volume vs declared monthly is 15.55x. country_risk_max is 0.2; loop_detected is false.\", \"metrics\": {\"tx_count\": 5, \"tx_total_usd\": 4600000.0, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.88, \"country_risk_max\": 0.2, \"loop_detected\": false, \"vs_declared_volume_ratio\": 15.55}, \"evidence\": \"transactions[0..4]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total round-number wires 4600000.0\", \"calculation\": \"1. Identify round-number inbound wires: 2026-04-04 ($100,000.00), 2026-04-17 ($500,000.00), 2026-04-22 ($2,500,000.00), 2026-04-24 ($1,000,000.00) - Table rows 1, 3, 4, 5 columns 'amount'. 2. Identify round-number outbound wire: 2026-04-07 ($500,000.00) - Table row 2 column 'amount'. 3. Sum all identified amounts: 100,000.00 + 500,000.00 + 500,000.00 + 2,500,000.00 + 1,000,000.00 = 4,600,000.00\", \"evidence\": \"Table row '2026-04-04' column 'amount'; Table row '2026-04-07' column 'amount'; Table row '2026-04-17' column 'amount'; Table row '2026-04-22' column 'amount'; Table row '2026-04-24' column 'amount'\"}], \"citation\": [{\"question\": \"\", \"answer\": \"The text discusses the importance of striking a balance between prevention and reporting.\", \"evidence_span\": \"striking the right balance between money laundering prevention and BSA reporting\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"Entity SYN_1140aeab, an offshore holding company incorporated in the BVI, exhibited a rapid pass-through pattern inconsistent with its declared business purpose. Between 2026-04-04 and 2026-04-24, the entity executed five wire transactions totaling $4,600,000.00, including a $2,500,000.00 inbound wire from USFP Services LLC and a $500,000.00 outbound wire to ON Capital LLC, BVI. This volume represents 15.55x the declared monthly volume of $443,649.00. The use of round-number transfers and the high velocity of movement suggest a shell-company pass-through pattern. This activity warrants reporting under 1010.230 for legal entity customers. Final filing decision is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Entity SYN_1140aeab, an offshore holding company incorporated in the BVI, exhibited a rapid pass-through pattern inconsistent with its declared business purpose. Between 2026-04-04 and 2026-04-24, the entity executed five wire transactions totaling $4,600,000.00, including a $2,500,000.00 inbound wire from USFP Services LLC and a $500,000.00 outbound wire to ON Capital LLC, BVI. This volume represents 15.55x the declared monthly volume of $443,649.00. The use of round-number transfers and the high velocity of movement suggest a shell-company pass-through pattern. This activity warrants reporting under 1010.230 for legal entity customers. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Entity SYN_1140aeab, an offshore holding company incorporated in the BVI, exhibited a rapid pass-through pattern inconsistent with its declared business purpose. Between 2026-04-04 and 2026-04-24, the entity executed five wire transactions totaling $4,600,000.00, including a $2,500,000.00 inbound wire from USFP Services LLC and a $500,000.00 outbound wire to ON Capital LLC, BVI. This volume represents 15.55x the declared monthly volume of $443,649.00. The use of round-number transfers and the high velocity of movement suggest a shell-company pass-through pattern. This activity warrants reporting under 1010.230 for legal entity customers. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,216 @@
+{
+  "case_id": "DEMO_0084",
+  "alert_id": "ALT_2480090",
+  "entity_id": "SYN_ac5595db",
+  "started_at": "2026-05-29T02:58:48.474511+00:00",
+  "finished_at": "2026-05-29T02:58:56.036851+00:00",
+  "wall_clock_ms": 7562.4,
+  "transactions": [
+    {
+      "amount": 3377.68,
+      "channel": "wire",
+      "counterparty": "Maria Brown (family member)",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 2995.15,
+      "channel": "wire",
+      "counterparty": "Maria Brown (family member)",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "wire to family (benign, similar amount)"
+    },
+    {
+      "amount": 475.72,
+      "channel": "ach",
+      "counterparty": "OOFG Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-12",
+      "notes": ""
+    },
+    {
+      "amount": 1295.4,
+      "channel": "ach",
+      "counterparty": "KD Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 1427.95,
+      "channel": "ach",
+      "counterparty": "SB Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 794.47,
+      "channel": "card",
+      "counterparty": "Daniel Thomas",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 929.24,
+      "channel": "wire",
+      "counterparty": "MN Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ac5595db",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1533.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,533.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-AZ"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.4286,
+      "ach": 0.4286,
+      "card": 0.1429
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.42857142857142855, 'card': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_ac5595db executed 7 transactions totaling $11,295.61 USD with channel mix {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 3.11x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 11295.61,
+        "channel_mix": {
+          "wire": 0.429,
+          "ach": 0.429,
+          "card": 0.143
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.69,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 3.11
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 11295.61; vs KYC expected monthly volume 1533.00",
+      "calculation": "1) Sum all transaction amounts: 3,377.68 + 2,995.15 + 475.72 + 1,295.40 + 1,427.95 + 794.47 + 929.24 = 11,295.61 (transactions[0..6]).\n2) Read declared expected monthly volume = 1,533.0 (kyc_profile.expected_monthly_volume).\n3) Report comparison: total transaction volume 11,295.61 vs KYC expected monthly volume 1,533.00.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; therefore I cannot provide a verbatim citation or evidence span from source text.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided; cannot assess applicability.",
+      "label": "neutral",
+      "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so statutory elements cannot be evaluated against the fact pattern. Because there is no cited section (e.g., 31 U.S.C. § 5324) to apply, the correct finding is: No statute provided; cannot assess applicability."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_ac5595db executed 7 transactions totaling $11,295.61 USD with channel mix {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 3.11x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 11295.61,
+          "channel_mix": {
+            "wire": 0.429,
+            "ach": 0.429,
+            "card": 0.143
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.69,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.11
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 11295.61; vs KYC expected monthly volume 1533.00",
+        "calculation": "1) Sum all transaction amounts: 3,377.68 + 2,995.15 + 475.72 + 1,295.40 + 1,427.95 + 794.47 + 929.24 = 11,295.61 (transactions[0..6]).\n2) Read declared expected monthly volume = 1,533.0 (kyc_profile.expected_monthly_volume).\n3) Report comparison: total transaction volume 11,295.61 vs KYC expected monthly volume 1,533.00.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; therefore I cannot provide a verbatim citation or evidence span from source text.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided; cannot assess applicability.",
+        "label": "neutral",
+        "reasoning": "No statute text or section identifier was provided (no U.S.C./CFR citation), so statutory elements cannot be evaluated against the fact pattern. Because there is no cited section (e.g., 31 U.S.C. § 5324) to apply, the correct finding is: No statute provided; cannot assess applicability."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3377.68, \"channel\": \"wire\", \"counterparty\": \"Maria Brown (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 2995.15, \"channel\": \"wire\", \"counterparty\": \"Maria Brown (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"wire to family (benign, similar amount)\"}, {\"amount\": 475.72, \"channel\": \"ach\", \"counterparty\": \"OOFG Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-12\", \"notes\": \"\"}, {\"amount\": 1295.4, \"channel\": \"ach\", \"counterparty\": \"KD Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 1427.95, \"channel\": \"ach\", \"counterparty\": \"SB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 794.47, \"channel\": \"card\", \"counterparty\": \"Daniel Thomas\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 929.24, \"channel\": \"wire\", \"counterparty\": \"MN Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ac5595db\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1533.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,533.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-AZ\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_ac5595db executed 7 transactions totaling $11,295.61 USD with channel mix {\\\"wire\\\": 0.429, \\\"ach\\\": 0.429, \\\"card\\\": 0.143}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 3.11x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 11295.61, \"channel_mix\": {\"wire\": 0.429, \"ach\": 0.429, \"card\": 0.143}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.69, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.11}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 11295.61; vs KYC expected monthly volume 1533.00\", \"calculation\": \"1) Sum all transaction amounts: 3,377.68 + 2,995.15 + 475.72 + 1,295.40 + 1,427.95 + 794.47 + 929.24 = 11,295.61 (transactions[0..6]).\\n2) Read declared expected monthly volume = 1,533.0 (kyc_profile.expected_monthly_volume).\\n3) Report comparison: total transaction volume 11,295.61 vs KYC expected monthly volume 1,533.00.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; therefore I cannot provide a verbatim citation or evidence span from source text.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided; cannot assess applicability.\", \"label\": \"neutral\", \"reasoning\": \"No statute text or section identifier was provided (no U.S.C./CFR citation), so statutory elements cannot be evaluated against the fact pattern. Because there is no cited section (e.g., 31 U.S.C. \\u00a7 5324) to apply, the correct finding is: No statute provided; cannot assess applicability.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\":true,\"suspicious_activity_report\":\"Customer SYN_ac5595db (KYC: retired individual on fixed pension; expected monthly throughput ~$1,533) conducted 7 transactions totaling $11,295.61 (aux verified by summing transactions[0..6]), or 3.11x declared volume. Activity includes two wires to “Maria Brown (family member)” for $3,377.68 (2026-04-03) and $2,995.15 (2026-04-23) plus ACH payments to multiple LLCs (OOFG Capital, KD Trading, SB Industries) and a wire to MN Logistics. No sanctions/PEP hits; no policy/statute citations provided. Pattern appears inconsistent with stated fixed-income profile and warrants SAR consideration pending investigator review.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Customer SYN_ac5595db (KYC: retired individual on fixed pension; expected monthly throughput ~$1,533) conducted 7 transactions totaling $11,295.61 (aux verified by summing transactions[0..6]), or 3.11x declared volume. Activity includes two wires to “Maria Brown (family member)” for $3,377.68 (2026-04-03) and $2,995.15 (2026-04-23) plus ACH payments to multiple LLCs (OOFG Capital, KD Trading, SB Industries) and a wire to MN Logistics. No sanctions/PEP hits; no policy/statute citations provided. Pattern appears inconsistent with stated fixed-income profile and warrants SAR consideration pending investigator review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Customer SYN_ac5595db (KYC: retired individual on fixed pension; expected monthly throughput ~$1,533) conducted 7 transactions totaling $11,295.61 (aux verified by summing transactions[0..6]), or 3.11x declared volume. Activity includes two wires to “Maria Brown (family member)” for $3,377.68 (2026-04-03) and $2,995.15 (2026-04-23) plus ACH payments to multiple LLCs (OOFG Capital, KD Trading, SB Industries) and a wire to MN Logistics. No sanctions/PEP hits; no policy/statute citations provided. Pattern appears inconsistent with stated fixed-income profile and warrants SAR consideration pending investigator review.",
+  "judge_enabled": false,
+  "error": null
+}

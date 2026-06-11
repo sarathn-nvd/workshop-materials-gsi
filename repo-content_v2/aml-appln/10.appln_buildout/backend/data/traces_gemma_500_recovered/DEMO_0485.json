@@ -1,0 +1,345 @@
+{
+  "case_id": "DEMO_0485",
+  "alert_id": "ALT_5013879",
+  "entity_id": "SYN_2be5bf24",
+  "started_at": "2026-05-29T03:15:39.645487+00:00",
+  "finished_at": "2026-05-29T03:15:55.924202+00:00",
+  "wall_clock_ms": 16278.7,
+  "transactions": [
+    {
+      "amount": 1157.07,
+      "channel": "ach",
+      "counterparty": "GBNQ Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 1062.49,
+      "channel": "card",
+      "counterparty": "Sarah Johnson",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1394.0,
+      "channel": "cheque",
+      "counterparty": "EMHE Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 568.63,
+      "channel": "ach",
+      "counterparty": "REN Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 674.65,
+      "channel": "ach",
+      "counterparty": "OW Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 653.03,
+      "channel": "card",
+      "counterparty": "Jennifer Walker",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 1564.7,
+      "channel": "cheque",
+      "counterparty": "MZAR Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 1999.62,
+      "channel": "card",
+      "counterparty": "Daniel Brown",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 1272.17,
+      "channel": "card",
+      "counterparty": "James Brown",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1005.65,
+      "channel": "wire",
+      "counterparty": "HTEVJ Group LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 1813.91,
+      "channel": "ach",
+      "counterparty": "ROD Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 688.44,
+      "channel": "ach",
+      "counterparty": "WK Logistics LLC",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 2008.95,
+      "channel": "ach",
+      "counterparty": "JU Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 1153.04,
+      "channel": "card",
+      "counterparty": "Robert Thompson",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 1508.61,
+      "channel": "ach",
+      "counterparty": "SU Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1590.58,
+      "channel": "wire",
+      "counterparty": "LXPR Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 1781.76,
+      "channel": "ach",
+      "counterparty": "REH Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 1644.36,
+      "channel": "ach",
+      "counterparty": "DDZ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 1862.38,
+      "channel": "ach",
+      "counterparty": "BJ Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 432.87,
+      "channel": "ach",
+      "counterparty": "PBY Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 1502.33,
+      "channel": "ach",
+      "counterparty": "BBPRQ Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    },
+    {
+      "amount": 1087.03,
+      "channel": "card",
+      "counterparty": "Susan Thomas",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_2be5bf24",
+    "entity_type": "individual",
+    "expected_monthly_volume": 7882.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$7,882.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "James Brown",
+      "list": "OpenSanctions",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.5455,
+      "card": 0.2727,
+      "cheque": 0.0909,
+      "wire": 0.0909
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.5454545454545454, 'card': 0.2727272727272727, 'cheque': 0.09090909090909091, 'wire': 0.09090909090909091})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_2be5bf24 executed 22 transactions totaling $28,426.27 USD with channel mix {\"ach\": 0.545, \"card\": 0.273, \"cheque\": 0.091, \"wire\": 0.091}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.26x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 22,
+        "tx_total_usd": 28426.27,
+        "channel_mix": {
+          "ach": 0.545,
+          "card": 0.273,
+          "cheque": 0.091,
+          "wire": 0.091
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.73,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 1.83,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.26
+      },
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 31,223.70",
+      "calculation": "1. Sum all transaction amounts from transactions[0..21]: 1,157.07 + 1,062.49 + 1,394.00 + 568.63 + 674.65 + 653.03 + 1,564.70 + 1,999.62 + 1,272.17 + 1,005.65 + 1,813.91 + 688.44 + 2,008.95 + 1,153.04 + 1,508.61 + 1,590.58 + 1,781.76 + 1,644.36 + 1,862.38 + 432.87 + 1,502.33 + 1,087.03 = 31,223.70.",
+      "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided for analysis.",
+      "label": "neutral",
+      "reasoning": "The request provides a fact pattern and a question, but the statute field is empty. Because no statute was provided, it is impossible to determine if any specific legal requirements are met or violated. Since no statute provided for analysis, the facts are insufficient to reach a conclusion of entailment or contradiction."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_2be5bf24 executed 22 transactions totaling $28,426.27 USD with channel mix {\"ach\": 0.545, \"card\": 0.273, \"cheque\": 0.091, \"wire\": 0.091}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.26x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 22,
+          "tx_total_usd": 28426.27,
+          "channel_mix": {
+            "ach": 0.545,
+            "card": 0.273,
+            "cheque": 0.091,
+            "wire": 0.091
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.73,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 1.83,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.26
+        },
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 31,223.70",
+        "calculation": "1. Sum all transaction amounts from transactions[0..21]: 1,157.07 + 1,062.49 + 1,394.00 + 568.63 + 674.65 + 653.03 + 1,564.70 + 1,999.62 + 1,272.17 + 1,005.65 + 1,813.91 + 688.44 + 2,008.95 + 1,153.04 + 1,508.61 + 1,590.58 + 1,781.76 + 1,644.36 + 1,862.38 + 432.87 + 1,502.33 + 1,087.03 = 31,223.70.",
+        "evidence": "transactions[0..21]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided for analysis.",
+        "label": "neutral",
+        "reasoning": "The request provides a fact pattern and a question, but the statute field is empty. Because no statute was provided, it is impossible to determine if any specific legal requirements are met or violated. Since no statute provided for analysis, the facts are insufficient to reach a conclusion of entailment or contradiction."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1157.07, \"channel\": \"ach\", \"counterparty\": \"GBNQ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 1062.49, \"channel\": \"card\", \"counterparty\": \"Sarah Johnson\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1394.0, \"channel\": \"cheque\", \"counterparty\": \"EMHE Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 568.63, \"channel\": \"ach\", \"counterparty\": \"REN Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 674.65, \"channel\": \"ach\", \"counterparty\": \"OW Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 653.03, \"channel\": \"card\", \"counterparty\": \"Jennifer Walker\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 1564.7, \"channel\": \"cheque\", \"counterparty\": \"MZAR Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 1999.62, \"channel\": \"card\", \"counterparty\": \"Daniel Brown\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 1272.17, \"channel\": \"card\", \"counterparty\": \"James Brown\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1005.65, \"channel\": \"wire\", \"counterparty\": \"HTEVJ Group LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 1813.91, \"channel\": \"ach\", \"counterparty\": \"ROD Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 688.44, \"channel\": \"ach\", \"counterparty\": \"WK Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 2008.95, \"channel\": \"ach\", \"counterparty\": \"JU Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 1153.04, \"channel\": \"card\", \"counterparty\": \"Robert Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 1508.61, \"channel\": \"ach\", \"counterparty\": \"SU Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1590.58, \"channel\": \"wire\", \"counterparty\": \"LXPR Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 1781.76, \"channel\": \"ach\", \"counterparty\": \"REH Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 1644.36, \"channel\": \"ach\", \"counterparty\": \"DDZ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 1862.38, \"channel\": \"ach\", \"counterparty\": \"BJ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 432.87, \"channel\": \"ach\", \"counterparty\": \"PBY Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 1502.33, \"channel\": \"ach\", \"counterparty\": \"BBPRQ Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}, {\"amount\": 1087.03, \"channel\": \"card\", \"counterparty\": \"Susan Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_2be5bf24\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 7882.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$7,882.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [{\"name\": \"James Brown\", \"list\": \"OpenSanctions\", \"match_score\": 1.0}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_2be5bf24 executed 22 transactions totaling $28,426.27 USD with channel mix {\\\"ach\\\": 0.545, \\\"card\\\": 0.273, \\\"cheque\\\": 0.091, \\\"wire\\\": 0.091}. The 24-hour velocity peak is 2 against a 30-day average of 0.73. Volume vs declared monthly is 1.26x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 22, \"tx_total_usd\": 28426.27, \"channel_mix\": {\"ach\": 0.545, \"card\": 0.273, \"cheque\": 0.091, \"wire\": 0.091}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.73, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 1.83, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.26}, \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 31,223.70\", \"calculation\": \"1. Sum all transaction amounts from transactions[0..21]: 1,157.07 + 1,062.49 + 1,394.00 + 568.63 + 674.65 + 653.03 + 1,564.70 + 1,999.62 + 1,272.17 + 1,005.65 + 1,813.91 + 688.44 + 2,008.95 + 1,153.04 + 1,508.61 + 1,590.58 + 1,781.76 + 1,644.36 + 1,862.38 + 432.87 + 1,502.33 + 1,087.03 = 31,223.70.\", \"evidence\": \"transactions[0..21]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"The request provides a fact pattern and a question, but the statute field is empty. Because no statute was provided, it is impossible to determine if any specific legal requirements are met or violated. Since no statute provided for analysis, the facts are insufficient to reach a conclusion of entailment or contradiction.\"}]}}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The account of SYN_2be5bf24 exhibits activity inconsistent with its KYC profile as a salaried wage earner. A high-confidence sanctions hit (match_score 1.0) was identified for counterparty 'James Brown' on the OpenSanctions list, who received a card payment of $1,272.17 on 2026-03-04. Furthermore, the entity is conducting numerous business-to-business style payments via ACH and wire to various LLCs (e.g., GBNQ Imports LLC, HTEVJ Group LLC, LXPR Industries LLC), which is atypical for a service-industry employee. Total transaction volume of $28,426.27 over the period exceeds the declared monthly volume of $7,882.00. This combination of a sanctions match and anomalous business-like payment patterns warrants further investigation for potential sanctions evasion or undisclosed business activity.\"\n}\n```",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_2be5bf24 exhibits activity inconsistent with its KYC profile as a salaried wage earner. A high-confidence sanctions hit (match_score 1.0) was identified for counterparty 'James Brown' on the OpenSanctions list, who received a card payment of $1,272.17 on 2026-03-04. Furthermore, the entity is conducting numerous business-to-business style payments via ACH and wire to various LLCs (e.g., GBNQ Imports LLC, HTEVJ Group LLC, LXPR Industries LLC), which is atypical for a service-industry employee. Total transaction volume of $28,426.27 over the period exceeds the declared monthly volume of $7,882.00. This combination of a sanctions match and anomalous business-like payment patterns warrants further investigation for potential sanctions evasion or undisclosed business activity."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account of SYN_2be5bf24 exhibits activity inconsistent with its KYC profile as a salaried wage earner. A high-confidence sanctions hit (match_score 1.0) was identified for counterparty 'James Brown' on the OpenSanctions list, who received a card payment of $1,272.17 on 2026-03-04. Furthermore, the entity is conducting numerous business-to-business style payments via ACH and wire to various LLCs (e.g., GBNQ Imports LLC, HTEVJ Group LLC, LXPR Industries LLC), which is atypical for a service-industry employee. Total transaction volume of $28,426.27 over the period exceeds the declared monthly volume of $7,882.00. This combination of a sanctions match and anomalous business-like payment patterns warrants further investigation for potential sanctions evasion or undisclosed business activity.",
+  "judge_enabled": false,
+  "error": null
+}

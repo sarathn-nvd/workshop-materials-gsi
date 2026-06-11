@@ -1,0 +1,153 @@
+{
+  "case_id": "DEMO_0165",
+  "alert_id": "ALT_2475166",
+  "entity_id": "SYN_838b52af",
+  "started_at": "2026-05-23T12:40:16.268105+00:00",
+  "finished_at": "2026-05-23T12:40:32.136068+00:00",
+  "wall_clock_ms": 15868.0,
+  "transactions": [
+    {
+      "amount": 1776322.5,
+      "channel": "wire",
+      "counterparty": "LL Holdings LLC, Hong Kong",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "trade-finance over-invoiced"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_838b52af",
+    "entity_type": "business",
+    "expected_monthly_volume": 436962.0,
+    "business_purpose": "Import-export trading firm; trade-finance flows; declared monthly volume ~$436,962.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Concentrated wire flow (1 txns, top counterparty share 100%)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage. Let's parse.\n\nKYC profile: entity_id SYN_838b52af, business, expected monthly volume 436962.0, declared monthly volume ~$436,962. So declared volume matches expected monthly volume.\n\nTransactions: only one transaction listed: date 2026-04-28, amount 1776322.50 USD, counterparty \"LL Holdings LLC, Hong Kong\", channel wire, notes \"trade-finance over-invoiced\". So tx_count = 1. tx_total_usd = 1776322.50.\n\nchannel_mix: only wire, so wi"
+    },
+    "numeric": {
+      "error": "schema",
+      "detail": "1 validation error for NumericFinding\ncalculation\n  Input should be a valid string [type=string_type, input_value=['1. Identify the transac...s the declared volume.'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type",
+      "raw_payload": {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "$1,776,322.50, about 4.1× the declared monthly volume",
+        "calculation": [
+          "1. Identify the transaction amount: 1,776,322.50 USD.",
+          "2. With only one transaction listed, the total volume through the detected cycle is this amount.",
+          "3. Compare to KYC declared monthly volume: 1,776,322.50 ÷ 436,962 ≈ 4.07.",
+          "4. Rounded, this is roughly 4.1 times the declared volume."
+        ],
+        "evidence": "Transaction amount field: 1776322.50 USD (row in Transactions table)."
+      }
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "It states that, to date, virtual currencies have yet to overtake more traditional methods to move illicit proceeds.",
+      "evidence_span": "While of growing concern, to date, virtual currencies have yet to overtake more traditional methods to move fun"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "Yes, the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).",
+      "label": "entailment",
+      "reasoning": "The transaction involves an over‑invoiced trade‑finance payment, which triggers the reporting obligations of 31 U.S.C. § 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).",
+        "label": "entailment",
+        "reasoning": "The transaction involves an over‑invoiced trade‑finance payment, which triggers the reporting obligations of 31 U.S.C. § 5318(g)."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "It states that, to date, virtual currencies have yet to overtake more traditional methods to move illicit proceeds.",
+        "evidence_span": "While of growing concern, to date, virtual currencies have yet to overtake more traditional methods to move fun"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1776322.5, \"channel\": \"wire\", \"counterparty\": \"LL Holdings LLC, Hong Kong\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"trade-finance over-invoiced\"}], \"kyc_profile\": {\"entity_id\": \"SYN_838b52af\", \"entity_type\": \"business\", \"expected_monthly_volume\": 436962, \"business_purpose\": \"Import-export trading firm; trade-finance flows; declared monthly volume ~$436,962.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).\", \"label\": \"entailment\", \"reasoning\": \"The transaction involves an over‑invoiced trade‑finance payment, which triggers the reporting obligations of 31 U.S.C. § 5318(g).\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"It states that, to date, virtual currencies have yet to overtake more traditional methods to move illicit proceeds.\", \"evidence_span\": \"While of growing concern, to date, virtual currencies have yet to overtake more traditional methods to move fun\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Determine if SAR should be filed.\n\nGiven regulatory frame: layering_passthrough. Typology inferred: layering. Transaction: amount 1,776,322.5 USD, channel wire, counterparty LL Holdings LLC, Hong Kong, date 2026-04-28, notes \"trade-finance over-invoiced\". This is a single transaction amount > $10k, but SAR not based on threshold; it's about layering typology.\n\nWe have auxiliary_findings: statutory says yes, must report under 31 USC 5318(g). behavioral empty, numeric empty, citation includes evidence_span but truncated. The policy_excerpts include FinCEN text about virtual currencies not overtaking, but not relevant. Also FATF excerpt about due diligence. SOP excerpt about layering detection steps.\n\nWe need to verify consistency of auxiliary findings. There's statutory finding: \"Does the conduct described fall within 5318(g)? Answer: Yes, the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).\" That is consistent? The transaction is a single wire over $1.7M, over-invoiced trade finance. Does that trigger 5318(g)? Possibly yes if suspicious. The label is entailment. So consistent.\n\nNo behavioral metrics given, so we cannot compute any metric. But we can compute volume ratio? There's only one transaction; declared monthly volume is $436,962. This transaction is 4x that. That could be a metric: volume ratio > 4. But not listed in auxiliary_findings.behavioral. So we cannot cite a metric unless we compute from transactions and it's allowed? The instruction: \"Every metric value cited (velocity, ratios, counts, channel mix) MUST appear verbatim in auxiliary_findings.behavioral[*].metrics if present, otherwise be computable from transactions[]. Do NOT invent metric values.\" So we can compute a metric ourselves and cite it, but must be computable from transactions. However we must not invent; we can compute and mention the computed value, but must be consistent with the bundle. The narrative must cite specific transaction facts and surface the most salient behavioral finding (the metric that drives the decision — typically the volume ratio, velocity spike, or counterparty concentration). Since there is no behavioral finding in auxiliary_findings.behavioral, we need to compute something ourselves? The instruction says \"otherwise be computable from transactions[]. Do NOT invent metric values.\" So we can compute a ratio and include it, but must be verbatim? It says \"MUST appear verbatim in auxiliary_findings.behavioral[*].metrics if present, otherwise be computable from transactions[]. Do NOT invent metric values.\" So we can compute a metric and include it, but we must not invent; we can compute and state the value. However the narrative must cite the metric verbatim? It says \"Every metric value cited ... MUST appear verbatim in auxiliary_findings.behavioral[*].metrics if present, otherwise be computable from transactions[]. Do NOT invent metric values.\" So if we compute a metric, we can include it, but we must not claim it's in auxiliary_findings if it's not. We can just compute and mention it as part of narrative, but we must not claim it's a finding. The instruction about \"surface the most salient behavioral finding (the metric that drives the decision — typically the volume ratio, velocity spike, or counterparty concentration).\" So we need to identify the most salient behavioral finding. Since none provided, maybe we need to compute a metric ourselves and treat it as the salient finding? But must be consistent with bundle. We can compute volume ratio: transaction amount / expected monthly volume = 1,776,322.5 / 436,962 ≈ 4.064. That's a ratio > 4. So we can state \"the transaction amount is roughly 4.1 times the entity's declared monthly volume\". That is computable. Should we include it as a metric? The instruction says \"Every metric value cited ... MUST appear verbatim in auxiliary_findings.behavioral[*].metrics if present, otherwise be computable from transactions[]. Do NOT invent metric values.\" So we can compute and cite it, but we must not claim it's a finding; we can just present it as part of narrative. However the narrative must \"surface the most salient behavioral finding (the metric that drives the decision — typically the volume ratio, velocity spike, or counterparty concentration).\" So we can say \"the volume ratio of 4.1x the expected monthly volume is the key behavioral indicator\". That's okay.\n\nWe also need to mention channel: wire. Counterparty: LL Holdings LLC, Hong Kong. Date: 2026-04-28. Amount: 1,776,322.5 USD.\n\nWe must ground every claim. So we can say: \"On 2026-04-28, a wire transfer of $1,776,322.50 was sent to LL Holdings LLC in Hong Kong.\" That's from transaction. \"The counterparty is a Hong Kong‑registered entity.\" That's from transaction. \"The transaction is noted as trade‑finance over‑invoiced.\" That's from notes.\n\nWe need to refer to regulatory framing: layering_passthrough. So we must use \"layering\", \"pass‑through\", \"rapid movement\", \"circular flow\". Do not cite $10,000 CTR threshold. Do not use \"structuring\". Do not cite 31 USC 5324(a) for non‑cash activity. So we can say \"The pattern exhibits layering characteristics, with funds moving through a single high‑value wire that appears to be part of a circular flow.\" Must not mention $10k.\n\nWe need to cite the statutory finding verbatim? It says \"If a finding is consistent, cite it verbatim in the narrative.\" The statutory finding is: \"Yes, the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).\" We can quote that phrase. Must be verbatim. So we can include that exact sentence or part. It says \"cite it verbatim\". So we should include that exact answer text. The answer is \"Yes, the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).\" That is the answer. So we can embed that phrase.\n\nWe also have citation finding: \"It states that, to date, virtual currencies have yet to overtake more traditional methods to move illicit proceeds.\" But that is about virtual currencies, not relevant. Might not need to cite.\n\nWe need to end with a complete sentence and refer the matter to the human investigator. Something like \"The case should be referred to a human investigator for further review.\" Must be a complete sentence.\n\nLength: 250–800 characters. Let's craft about 400-500 characters.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no extra punctuation outside.\n\nNow craft narrative:\n\n\"On 2026-04-28 a wire transfer of $1,776,322.50 was sent to LL Holdings LLC, Hong Kong; the transaction is flagged as trade‑finance over‑invoiced. The entity’s declared monthly volume is approximately $436,962, making this payment about 4.1 times the expected volume, a ratio that aligns with layering behavior. The statutory finding confirms that “the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).” These facts, together with the single high‑value wire and the observed volume spike, are consistent with layering‑passthrough typology and warrant SAR filing. The matter should be referred to a human investigator for further review.\"\n\nCheck length: Let's count characters roughly. We'll approximate.\n\nCount characters including spaces. Let's count quickly:\n\n\"On 2026-04-28 a wire transfer of $1,776,322.50 was sent to LL Holdings LLC, Hong Kong; the transaction is flagged as trade‑finance over‑invoiced. The entity’s declared monthly volume is approximately $436,962, making this payment about 4.1 times the expected volume, a ratio that aligns with layering behavior. The statutory finding confirms that “the transaction constitutes suspicious activity that must be reported under 31 U.S.C. § 5318(g).” These facts, together with the single high‑value wire and the observed volume spike, are consistent with layering‑passthrough typology and warrant SAR filing. The matter should be referred to a human investigator for further review.\"\n\nWe need to ensure no non-English, no markdown. Use straight quotes? The statutory quote includes curly quotes; maybe okay but better use straight quotes. Also the phrase includes special characters like “”. Might be okay but could be considered non-ASCII. Safer to use plain double quotes",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "<narrative>"
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "<narrative>",
+  "judge_enabled": false,
+  "error": null
+}

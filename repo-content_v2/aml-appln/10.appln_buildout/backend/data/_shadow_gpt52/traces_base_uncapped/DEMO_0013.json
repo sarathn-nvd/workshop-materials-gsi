@@ -1,0 +1,191 @@
+{
+  "case_id": "DEMO_0013",
+  "alert_id": "ALT_2445156",
+  "entity_id": "SYN_fae8592c",
+  "started_at": "2026-05-23T11:59:47.261856+00:00",
+  "finished_at": "2026-05-23T12:00:13.166267+00:00",
+  "wall_clock_ms": 25904.4,
+  "transactions": [
+    {
+      "amount": 2448.93,
+      "channel": "wire",
+      "counterparty": "Joshua Thompson (family member)",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 3699.78,
+      "channel": "wire",
+      "counterparty": "Joshua Thompson (family member)",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "wire to family (benign, similar amount)"
+    },
+    {
+      "amount": 6518.8,
+      "channel": "cheque",
+      "counterparty": "OC Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": ""
+    },
+    {
+      "amount": 7305.92,
+      "channel": "wire",
+      "counterparty": "JMPA Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 2546.12,
+      "channel": "card",
+      "counterparty": "Christopher Johnson",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 7366.94,
+      "channel": "ach",
+      "counterparty": "BMG Group LLC",
+      "currency": "USD",
+      "date": "2026-03-23",
+      "notes": ""
+    },
+    {
+      "amount": 3800.34,
+      "channel": "wire",
+      "counterparty": "HMSC Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_fae8592c",
+    "entity_type": "individual",
+    "expected_monthly_volume": 6734.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$6,734.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.571,
+      "cheque": 0.143,
+      "card": 0.143,
+      "ach": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5714285714285714, 'cheque': 0.14285714285714285, 'card': 0.14285714285714285, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_fae8592c, individual, expected monthly volume 6734.0 USD. Transactions list with dates and amounts.\n\nWe need to compute:\n\n- tx_count: number of transactions listed. Let's count: lines: 2026-04-01, 2026-04-27, 2026-04-16, 2026-04-10, 2026-03-24, 2026-03-23, 2026-02-03. That's 7 transactions.\n\n- tx_total_usd: sum of amounts. Let's sum:\n\n2448.93\n+3699.78 = 6148.71\n+6518.80 = 12667.51\n+7305.92 = 19973.43\n+2546.1"
+    },
+    "numeric": {
+      "error": "schema",
+      "detail": "2 validation errors for NumericFinding\ncalculation\n  Input should be a valid string [type=string_type, input_value=['1. Listed transaction a...8. Rounded to $33,687.'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nevidence\n  Input should be a vali",
+      "raw_payload": {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$33,687 total transaction volume, about 5x the declared $6,734 monthly volume.",
+        "calculation": [
+          "1. Listed transaction amounts: 2448.93, 3699.78, 6518.80, 7305.92, 2546.12, 7366.94, 3800.34",
+          "2. 2448.93 + 3699.78 = 6148.71",
+          "3. 6148.71 + 6518.80 = 12667.51",
+          "4. 12667.51 + 7305.92 = 19973.43",
+          "5. 19973.43 + 2546.12 = 22519.55",
+          "6. 22519.55 + 7366.94 = 29886.49",
+          "7. 29886.49 + 3800.34 = 33686.83",
+          "8. Rounded to $33,687."
+        ],
+        "evidence": [
+          "2026-04-01,2448.93,USD,\"Joshua Thompson (family member)\",wire,\"wire to family (benign)\"",
+          "2026-04-27,3699.78,USD,\"Joshua Thompson (family member)\",wire,\"wire to family (benign, similar amount)\"",
+          "2026-04-16,6518.80,USD,\"OC Exports LLC\",cheque,\"\"",
+          "2026-04-10,7305.92,USD,\"JMPA Exports LLC\",wire,\"\"",
+          "2026-03-24,2546.12,USD,\"Christopher Johnson\",card,\"\"",
+          "2026-03-23,7366.94,USD,\"BMG Group LLC\",ach,\"\"",
+          "2026-02-03,3800.34,USD,\"HMSC Associates LLC\",wire,\"\""
+        ]
+      }
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage indicates that no policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be evaluated for statutory coverage.",
+      "label": "neutral",
+      "reasoning": "No statute identifier provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be evaluated for statutory coverage.",
+        "label": "neutral",
+        "reasoning": "No statute identifier provided."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage indicates that no policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2448.93, \"channel\": \"wire\", \"counterparty\": \"Joshua Thompson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 3699.78, \"channel\": \"wire\", \"counterparty\": \"Joshua Thompson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"wire to family (benign, similar amount)\"}, {\"amount\": 6518.8, \"channel\": \"cheque\", \"counterparty\": \"OC Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"\"}, {\"amount\": 7305.92, \"channel\": \"wire\", \"counterparty\": \"JMPA Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 2546.12, \"channel\": \"card\", \"counterparty\": \"Christopher Johnson\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 7366.94, \"channel\": \"ach\", \"counterparty\": \"BMG Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-23\", \"notes\": \"\"}, {\"amount\": 3800.34, \"channel\": \"wire\", \"counterparty\": \"HMSC Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_fae8592c\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 6734, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$6,734.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be evaluated for statutory coverage.\", \"label\": \"neutral\", \"reasoning\": \"No statute identifier provided.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage indicates that no policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since regulatory_frame is \"benign\", decision should be not suspicious. So is_suspicious = false, suspicious_activity_report = \"\" (empty string). Must output JSON only.\n\nCheck constraints: When false, report must be empty string. Provide JSON object.\n\nThus output: {\"is_suspicious\":false,\"suspicious_activity_report\":\"\"} Ensure no extra whitespace? It's fine.\n\nMake sure no extra fields. Provide exactly that.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 247 248;
+  --fg: 17 24 39;
+  --muted: 107 114 128;
+  --panel: 255 255 255;
+  --line: 229 231 235;
+  --accent: 118 185 0;
+  --accent-foreground: 255 255 255;
+  --grid-line: 0 0 0;
+}
+
+.dark {
+  --bg: 10 14 20;
+  --fg: 226 232 240;
+  --muted: 148 163 184;
+  --panel: 22 27 34;
+  --line: 31 41 55;
+  --accent: 118 185 0;
+  --accent-foreground: 10 14 20;
+  --grid-line: 255 255 255;
+}
+
+html,
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+  font-family: var(--font-sans, "Inter"), system-ui, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Reusable surface tokens --- */
+.surface {
+  background: rgb(var(--panel));
+  border: 1px solid rgb(var(--line));
+}
+
+.surface-muted {
+  background: rgb(var(--bg));
+  border: 1px solid rgb(var(--line));
+}
+
+.divider {
+  border-color: rgb(var(--line));
+}
+
+.text-muted {
+  color: rgb(var(--muted));
+}
+
+/* --- Subtle background grid (cockpit / dashboard) --- */
+.bg-grid {
+  background-image: linear-gradient(
+      rgba(var(--grid-line) / 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(var(--grid-line) / 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* --- NVIDIA-brand status chip helpers --- */
+.chip {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium border;
+}
+.chip-success {
+  @apply text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900/50 bg-emerald-50 dark:bg-emerald-900/20;
+}
+.chip-danger {
+  @apply text-rose-600 dark:text-rose-400 border-rose-200 dark:border-rose-900/50 bg-rose-50 dark:bg-rose-900/20;
+}
+.chip-warn {
+  @apply text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-900/20;
+}
+.chip-info {
+  @apply text-sky-600 dark:text-sky-400 border-sky-200 dark:border-sky-900/50 bg-sky-50 dark:bg-sky-900/20;
+}
+.chip-neutral {
+  @apply text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60;
+}
+.chip-brand {
+  @apply text-nv-green border-nv-green/40 bg-nv-green/10;
+}
+
+/* --- Buttons --- */
+.btn {
+  @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium border transition-colors;
+}
+.btn-primary {
+  @apply bg-nv-green text-black border-nv-green hover:bg-nv-green-bright disabled:opacity-50;
+}
+.btn-ghost {
+  @apply border-transparent text-muted hover:text-[rgb(var(--fg))] hover:bg-[rgb(var(--line))];
+}
+.btn-outline {
+  @apply border-[rgb(var(--line))] hover:bg-[rgb(var(--line))];
+}
+
+/* --- Tables --- */
+.t-row {
+  border-color: rgb(var(--line));
+}
+.t-row:hover {
+  background: rgb(var(--line) / 0.4);
+}
+
+/* --- Custom scrollbars (dark) --- */
+.dark ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(31 41 55);
+  border-radius: 8px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgb(55 65 81);
+}
+
+/* --- Markdown rendering for SOP body / generic markdown --- */
+.sop-md h1 { @apply text-base font-semibold mt-3 mb-2; }
+.sop-md h2 { @apply text-sm font-semibold mt-3 mb-1.5 text-nv-green; }
+.sop-md h3 { @apply text-xs font-semibold mt-2 mb-1; }
+.sop-md p  { @apply text-xs leading-relaxed mb-2; }
+.sop-md ul,
+.sop-md ol { @apply text-xs ml-5 mb-2 space-y-0.5 list-disc; }
+.sop-md ol { @apply list-decimal; }
+.sop-md code { @apply font-mono text-[11px] px-1 rounded bg-[rgb(var(--line))]; }
+.sop-md a  { @apply text-nv-green hover:underline; }
+
+/* --- Cockpit timeline rail --- */
+.rail::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(118, 185, 0, 0.6),
+    rgba(118, 185, 0, 0.05)
+  );
+}

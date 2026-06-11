@@ -1,0 +1,24 @@
+tool_1:
+  name: transactions_db
+  input: '(entity_id: str, window_start: ISO date, window_end: ISO date)'
+  output: 'list[Transaction]  # see pipeline/schemas.py'
+tool_2:
+  name: kyc_store
+  input: '(entity_id: str)'
+  output: 'KYCProfile  # see pipeline/schemas.py'
+tool_3:
+  name: sanctions_pep_screen
+  input: '(counterparty_name: str, country?: str, min_score: float = 0.55)'
+  output: 'list[SanctionsHit]  # see pipeline/schemas.py'
+tool_4:
+  name: policy_rag
+  input: '(typology: str, k: int = 4, activity_descriptor?: str)'
+  output: 'list[PolicyExcerpt]  # see pipeline/schemas.py'
+tool_5:
+  name: sop_service
+  input: '(typology: str, variant: int = 1, section?: str)'
+  output: 'list[SOPExcerpt]  # see pipeline/schemas.py'
+deployable_endpoints:
+  tool_3: http://<host>:8801/screen
+  tool_4: http://<host>:8802/retrieve
+  tool_5: http://<host>:8803/sop

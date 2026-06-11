@@ -1,0 +1,280 @@
+{
+  "case_id": "DEMO_0099",
+  "alert_id": "ALT_2441750",
+  "entity_id": "SYN_0a761ae8",
+  "started_at": "2026-05-27T15:15:22.224049+00:00",
+  "finished_at": "2026-05-27T15:15:57.675325+00:00",
+  "wall_clock_ms": 35451.3,
+  "transactions": [
+    {
+      "amount": 3257.3,
+      "channel": "card",
+      "counterparty": "Christopher Miller",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    },
+    {
+      "amount": 950.71,
+      "channel": "cheque",
+      "counterparty": "LA Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 2209.79,
+      "channel": "ach",
+      "counterparty": "BXV Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1650.0,
+      "channel": "wire",
+      "counterparty": "YBIA Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 2715.98,
+      "channel": "card",
+      "counterparty": "Daniel Moore",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 2255.11,
+      "channel": "ach",
+      "counterparty": "TXKVB Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 1244.89,
+      "channel": "ach",
+      "counterparty": "PVG Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 1013.02,
+      "channel": "card",
+      "counterparty": "Michael Davis",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 1626.99,
+      "channel": "card",
+      "counterparty": "Christopher Anderson",
+      "currency": "USD",
+      "date": "2026-02-27",
+      "notes": ""
+    },
+    {
+      "amount": 3008.99,
+      "channel": "card",
+      "counterparty": "Sarah Thompson",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 2584.99,
+      "channel": "wire",
+      "counterparty": "XT Imports LLC",
+      "currency": "USD",
+      "date": "2026-02-22",
+      "notes": ""
+    },
+    {
+      "amount": 908.48,
+      "channel": "ach",
+      "counterparty": "LXZ Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 673.61,
+      "channel": "card",
+      "counterparty": "Michael Taylor",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 1275.57,
+      "channel": "ach",
+      "counterparty": "AR Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 2829.98,
+      "channel": "card",
+      "counterparty": "John Thompson",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 3037.86,
+      "channel": "card",
+      "counterparty": "Christopher White",
+      "currency": "USD",
+      "date": "2026-03-07",
+      "notes": ""
+    },
+    {
+      "amount": 1623.8,
+      "channel": "ach",
+      "counterparty": "MMS Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-27",
+      "notes": ""
+    },
+    {
+      "amount": 1073.29,
+      "channel": "ach",
+      "counterparty": "FJT Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1340.83,
+      "channel": "ach",
+      "counterparty": "ABV Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 1235.98,
+      "channel": "card",
+      "counterparty": "Robert Smith",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 783.64,
+      "channel": "ach",
+      "counterparty": "UFH Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_0a761ae8",
+    "entity_type": "individual",
+    "expected_monthly_volume": 11536.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$11,536.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.429,
+      "ach": 0.429,
+      "wire": 0.095,
+      "cheque": 0.048
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'card': 0.42857142857142855, 'cheque': 0.047619047619047616, 'ach': 0.42857142857142855, 'wire': 0.09523809523809523})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have to echo the user's question verbatim as question value.\n\nSummary: 4-8 sentences prose. Every quantitative claim in summary must be a verbatim copy of a value from the precomputed metrics block. The summary must mention, as their exact stored values, at least these six metric keys when present: tx_count, tx_total_usd, channel_mix (one entry suffices), velocity_24h_max, unique_counterparties_7d, vs_declared_volume_rat"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence. Must echo question verbatim. Provide numeric answer derived from input. Must include a contiguous 3-word phrase that names the specific quantity computed, and the numeric result, inside answer. Example: \"total cash deposits 12345\". Must be 3-word phrase naming the specific quantity computed, plus numeric result. So phrase must be exactly three words, and include the numeric result? The rule: \"INCLUDE in answer a contiguous"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "no policy excerpts were retrieved.",
+      "evidence_span": "no policy excerpts"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute.",
+      "label": "neutral",
+      "reasoning": "N/A No applicable statute."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute.",
+        "label": "neutral",
+        "reasoning": "N/A No applicable statute."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "no policy excerpts were retrieved.",
+        "evidence_span": "no policy excerpts"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3257.3, \"channel\": \"card\", \"counterparty\": \"Christopher Miller\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}, {\"amount\": 950.71, \"channel\": \"cheque\", \"counterparty\": \"LA Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 2209.79, \"channel\": \"ach\", \"counterparty\": \"BXV Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1650.0, \"channel\": \"wire\", \"counterparty\": \"YBIA Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 2715.98, \"channel\": \"card\", \"counterparty\": \"Daniel Moore\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 2255.11, \"channel\": \"ach\", \"counterparty\": \"TXKVB Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 1244.89, \"channel\": \"ach\", \"counterparty\": \"PVG Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 1013.02, \"channel\": \"card\", \"counterparty\": \"Michael Davis\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 1626.99, \"channel\": \"card\", \"counterparty\": \"Christopher Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-27\", \"notes\": \"\"}, {\"amount\": 3008.99, \"channel\": \"card\", \"counterparty\": \"Sarah Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 2584.99, \"channel\": \"wire\", \"counterparty\": \"XT Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-22\", \"notes\": \"\"}, {\"amount\": 908.48, \"channel\": \"ach\", \"counterparty\": \"LXZ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 673.61, \"channel\": \"card\", \"counterparty\": \"Michael Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 1275.57, \"channel\": \"ach\", \"counterparty\": \"AR Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 2829.98, \"channel\": \"card\", \"counterparty\": \"John Thompson\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 3037.86, \"channel\": \"card\", \"counterparty\": \"Christopher White\", \"currency\": \"USD\", \"date\": \"2026-03-07\", \"notes\": \"\"}, {\"amount\": 1623.8, \"channel\": \"ach\", \"counterparty\": \"MMS Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-27\", \"notes\": \"\"}, {\"amount\": 1073.29, \"channel\": \"ach\", \"counterparty\": \"FJT Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1340.83, \"channel\": \"ach\", \"counterparty\": \"ABV Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 1235.98, \"channel\": \"card\", \"counterparty\": \"Robert Smith\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 783.64, \"channel\": \"ach\", \"counterparty\": \"UFH Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_0a761ae8\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 11536.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$11,536.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute.\", \"label\": \"neutral\", \"reasoning\": \"N/A No applicable statute.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"no policy excerpts were retrieved.\", \"evidence_span\": \"no policy excerpts\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have transactions list, kyc_profile: individual, expected monthly volume 11536.0, business purpose \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$11,536.\" risk low. No sanctions hits. No policy excerpts. Auxiliary findings: statutory neutral, no behavioral, numeric, citation.\n\nWe need to decide if suspicious. Look at transactions: many small amounts, varied counterparties, many different names, some LLCs, some individuals. Channels: card, cheque, ach, wire. Amounts range 673 to 3037. There's no obvious structuring pattern? Several amounts near 1000-3000, but not repeated sub-10k cash deposits. There's no cash; all channels are card, cheque, ach, wire. No cash deposits. So not structuring. Could be layering? Many different counterparties, maybe suspicious but need to see if matches declared business purpose. The kyc says salaried wage earner, expected monthly volume 11536. The total of transactions? Let's sum amounts quickly approximate: Let's add amounts:\n\nList amounts:\n3257.30\n950.71\n2209.79\n1650.00\n2715.98\n2255.11\n1244.89\n1013.02\n1626.99\n3008.99\n2584.99\n908.48\n673.64\n1275.57\n2829.98\n3037.86\n1623.80\n1073.29\n1340.83\n1235.98\n783.64\n\nLet's sum: I'll approximate.\n\n3257.30+950.71=4208.01\n+2209.79=6417.80\n+1650.00=8067.80\n+2715.98=10783.78\n+2255.11=13038.89\n+1244.89=14283.78\n+1013.02=15296.80\n+1626.99=16923.79\n+3008.99=19932.78\n+2584.99=22517.77\n+908.48=23426.25\n+673.64=24100 approx? Actually 23426.25+673.64=241 - wait compute: 23426.25+673.64=241 - no, 23426.25+673.64=241 - let's do precisely: 23426.25+673.64=241 - I think it's 241 - let's compute: 23,426.25 + 673.64 = 24,099.89.\n+1275.57=25,375.46\n+2829.98=28,205.44\n+3037.86=31,243.30\n+1623.80=32,867.10\n+1073.29=33,940.39\n+1340.83=35,281.22\n+1235.98=36,517.20\n+783.64=37,300.84\n\nTotal ~37,301 USD over maybe many transactions. That's about 3.2 times expected monthly volume (11536). But the business purpose is individual salaried wage earner; maybe they have multiple income streams? However, the pattern includes many different counterparties, some LLCs, maybe indicates layering? But no cash, all electronic. Could be legitimate wage earner making purchases? But many payments to various LLCs could be personal expenses? Hard to say.\n\nGiven no sanctions hits, no policy excerpts, no auxiliary findings, and the behavior doesn't show clear red flags like structuring, rapid pass-through, etc. The volume is higher than expected but could be plausible for a wage earner with side business? The business purpose is \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$11,536.\" The observed total is ~37k, which is about 3x expected. That might be suspicious but could be explained by multiple payments? However, the narrative must be grounded and 400-800 characters.\n\nWe need to decide is_suspicious. Considering the evidence: no clear structuring, no cash, many different counterparties, high total volume relative to expectation, but no other red flags. The decision rule: set is_suspicious=true only when evidence warrants filing a SAR. Strong-positive signals include confident sanctions hit, peel-chain, structuring, trade-based laundering, etc. Here we have none. The volume is higher but not necessarily suspicious without more context. Could be a high-earning individual. I think the appropriate disposition is false (not suspicious enough). So is_suspicious = false.\n\nWe must produce a negative narrative (disposition rationale) 400-800 characters, grounded, citing the surface red flag (the alert triggered maybe due to high volume?) and the bundle evidence that resolves it.\n\nSurface red flag: The alert likely triggered due to high transaction volume or multiple counterparties? We need to name it explicitly: maybe \"elevated transaction volume exceeding expected monthly volume\" or \"multiple wire/ach payments to various LLCs\". Let's phrase: \"Observed aggregate transaction amount of approximately $37,300 across 20 distinct payments, exceeding the profile’s expected monthly volume of $11,536.\" That's the surface red flag.\n\nThen cite bundle evidence that resolves: KYC business purpose is salaried wage earner with expected monthly throughput ~$11,536; the aggregate amount is higher but could be explained by multiple legitimate payments; also all transactions are non-cash (card, ACH, wire) consistent with a salaried individual's spending; no structuring pattern; no cash deposits; no sanctions hit. So disposition: no SAR warranted.\n\nNeed to keep narrative 400-800 characters. Let's craft about 550 characters.\n\nCount characters roughly. We'll write:\n\n\"Surface red flag: aggregate of 20 transactions totaling roughly $37,300, which exceeds the KYC‑profile expected monthly volume of $11,536. The profile identifies the entity as a salaried wage earner with typical monthly throughput near $11,500, and all activity is electronic (card, ACH, wire) with no cash deposits or structuring pattern. No sanctions or PEP matches are present. Given the declared business purpose and the lack of cash‑intensive or rapid‑pass‑through behavior, the activity aligns with a high‑volume personal expense pattern rather than money‑laundering, so no SAR is warranted.\"\n\nNow count characters. Let's approximate: It's probably around 500-600 characters. Should be within 400-800.\n\nWe must output JSON with is_suspicious false and the string.\n\nMake sure no extra keys. Provide exactly JSON.\n\nLet's produce.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: aggregate of 20 transactions totaling roughly $37,300, which exceeds the KYC‑profile expected monthly volume of $11,536. The profile identifies the entity as a salaried wage earner with typical monthly throughput near $11,500, and all activity is electronic (card, ACH, wire) with no cash deposits or structuring pattern. No sanctions or PEP matches are present. Given the declared business purpose and the lack of cash‑intensive or rapid‑pass‑through behavior, the activity aligns with a high‑volume personal expense pattern rather than money‑laundering, so no SAR is warranted.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: aggregate of 20 transactions totaling roughly $37,300, which exceeds the KYC‑profile expected monthly volume of $11,536. The profile identifies the entity as a salaried wage earner with typical monthly throughput near $11,500, and all activity is electronic (card, ACH, wire) with no cash deposits or structuring pattern. No sanctions or PEP matches are present. Given the declared business purpose and the lack of cash‑intensive or rapid‑pass‑through behavior, the activity aligns with a high‑volume personal expense pattern rather than money‑laundering, so no SAR is warranted."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: aggregate of 20 transactions totaling roughly $37,300, which exceeds the KYC‑profile expected monthly volume of $11,536. The profile identifies the entity as a salaried wage earner with typical monthly throughput near $11,500, and all activity is electronic (card, ACH, wire) with no cash deposits or structuring pattern. No sanctions or PEP matches are present. Given the declared business purpose and the lack of cash‑intensive or rapid‑pass‑through behavior, the activity aligns with a high‑volume personal expense pattern rather than money‑laundering, so no SAR is warranted.",
+  "judge_enabled": false,
+  "error": null
+}

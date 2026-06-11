@@ -1,0 +1,217 @@
+{
+  "case_id": "DEMO_0184",
+  "alert_id": "ALT_2443292",
+  "entity_id": "SYN_9218a845",
+  "started_at": "2026-05-23T12:20:17.212453+00:00",
+  "finished_at": "2026-05-23T12:20:37.851875+00:00",
+  "wall_clock_ms": 20639.5,
+  "transactions": [
+    {
+      "amount": 9442.17,
+      "channel": "cash",
+      "counterparty": "Cash deposit, ORD Branch #82",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "one-time sub-CTR cash receipt (benign: customer paid in cash)"
+    },
+    {
+      "amount": 106761.9,
+      "channel": "card",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 151687.97,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 254632.62,
+      "channel": "ach",
+      "counterparty": "OUJXN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 77978.28,
+      "channel": "cash",
+      "counterparty": "Elizabeth Davis",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 187189.37,
+      "channel": "card",
+      "counterparty": "Christopher Moore",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 77235.13,
+      "channel": "cash",
+      "counterparty": "Patricia Lewis",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_9218a845",
+    "entity_type": "business",
+    "expected_monthly_volume": 271233.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.429,
+      "card": 0.429,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity executed 7 transactions with a total volume of 864927.44 and a channel mix of cash 0.428571, card 0.428571, and ach 0.142857, reaching a 24‑hour velocity peak of 2. Over the past 30 days the average 24‑hour transaction count is 0.2333, the maximum amount‑to‑declared‑volume ratio is 0.93868, and the country risk score is 0.2, with no looping detected. The observed volume exceeds the declared monthly volume by a ratio of 3.188, and unique counterparties in the last 7 days number 2.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 864927.44,
+        "channel_mix": {
+          "wire": 0.0,
+          "ach": 0.142857,
+          "cash": 0.428571,
+          "card": 0.428571
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.2333,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 0.93868,
+        "country_risk_max": 0.2,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 3.188
+      },
+      "evidence": "transactions[0..6]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "$864,927 total transaction volume, about 3.2× the declared $271,233 monthly volume.",
+      "calculation": "1. Sum transaction amounts: 9442.17 + 106761.90 + 151687.97 + 254632.62 + 77978.28 + 187189.37 + 77235.13 = 864927.44\n2. Compare to declared monthly volume: 864927.44 / 271233.0 ≈ 3.19 (≈3.2×)",
+      "evidence": "Transaction amounts from rows: 9442.17, 106761.90, 151687.97, 254632.62, 77978.28, 187189.37, 77235.13; declared monthly volume field: 271233.0"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage does not contain any policy excerpts.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be evaluated for statutory coverage because no statute is provided.",
+      "label": "neutral",
+      "reasoning": "N/A"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be evaluated for statutory coverage because no statute is provided.",
+        "label": "neutral",
+        "reasoning": "N/A"
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity executed 7 transactions with a total volume of 864927.44 and a channel mix of cash 0.428571, card 0.428571, and ach 0.142857, reaching a 24‑hour velocity peak of 2. Over the past 30 days the average 24‑hour transaction count is 0.2333, the maximum amount‑to‑declared‑volume ratio is 0.93868, and the country risk score is 0.2, with no looping detected. The observed volume exceeds the declared monthly volume by a ratio of 3.188, and unique counterparties in the last 7 days number 2.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 864927.44,
+          "channel_mix": {
+            "wire": 0.0,
+            "ach": 0.142857,
+            "cash": 0.428571,
+            "card": 0.428571
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2333,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 0.93868,
+          "country_risk_max": 0.2,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.188
+        },
+        "evidence": "transactions[0..6]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$864,927 total transaction volume, about 3.2× the declared $271,233 monthly volume.",
+        "calculation": "1. Sum transaction amounts: 9442.17 + 106761.90 + 151687.97 + 254632.62 + 77978.28 + 187189.37 + 77235.13 = 864927.44\n2. Compare to declared monthly volume: 864927.44 / 271233.0 ≈ 3.19 (≈3.2×)",
+        "evidence": "Transaction amounts from rows: 9442.17, 106761.90, 151687.97, 254632.62, 77978.28, 187189.37, 77235.13; declared monthly volume field: 271233.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage does not contain any policy excerpts.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 9442.17, \"channel\": \"cash\", \"counterparty\": \"Cash deposit, ORD Branch #82\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"one-time sub-CTR cash receipt (benign: customer paid in cash)\"}, {\"amount\": 106761.9, \"channel\": \"card\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 151687.97, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 254632.62, \"channel\": \"ach\", \"counterparty\": \"OUJXN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 77978.28, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Davis\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 187189.37, \"channel\": \"card\", \"counterparty\": \"Christopher Moore\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 77235.13, \"channel\": \"cash\", \"counterparty\": \"Patricia Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_9218a845\", \"entity_type\": \"business\", \"expected_monthly_volume\": 271233, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be evaluated for statutory coverage because no statute is provided.\", \"label\": \"neutral\", \"reasoning\": \"N/A\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity executed 7 transactions with a total volume of 864927.44 and a channel mix of cash 0.428571, card 0.428571, and ach 0.142857, reaching a 24‑hour velocity peak of 2. Over the past 30 days the average 24‑hour transaction count is 0.2333, the maximum amount‑to‑declared‑volume ratio is 0.93868, and the country risk score is 0.2, with no looping detected. The observed volume exceeds the declared monthly volume by a ratio of 3.188, and unique counterparties in the last 7 days number 2.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 864927.44, \"channel_mix\": {\"wire\": 0.0, \"ach\": 0.142857, \"cash\": 0.428571, \"card\": 0.428571}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2333, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 0.93868, \"country_risk_max\": 0.2, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.188}, \"evidence\": \"transactions[0..6]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"$864,927 total transaction volume, about 3.2× the declared $271,233 monthly volume.\", \"calculation\": \"1. Sum transaction amounts: 9442.17 + 106761.90 + 151687.97 + 254632.62 + 77978.28 + 187189.37 + 77235.13 = 864927.44\\n2. Compare to declared monthly volume: 864927.44 / 271233.0 ≈ 3.19 (≈3.2×)\", \"evidence\": \"Transaction amounts from rows: 9442.17, 106761.90, 151687.97, 254632.62, 77978.28, 187189.37, 77235.13; declared monthly volume field: 271233.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage does not contain any policy excerpts.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also _typology_inferred is \"none\". So likely not suspicious. However we must check decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. The regulatory frame is benign, which indicates no SAR. So is_suspicious should be false, and suspicious_activity_report empty string.\n\nBut we must ensure we follow constraints: When false, suspicious_activity_report must be empty string. So output JSON: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nCheck that we are not required to produce narrative when false. Only empty string.\n\nThus final answer is that JSON.\n\nMake sure no extra whitespace? Probably fine.\n\nThus output exactly that JSON.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

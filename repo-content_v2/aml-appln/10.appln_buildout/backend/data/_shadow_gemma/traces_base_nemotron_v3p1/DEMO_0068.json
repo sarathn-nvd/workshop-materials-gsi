@@ -1,0 +1,167 @@
+{
+  "case_id": "DEMO_0068",
+  "alert_id": "ALT_2478317",
+  "entity_id": "SYN_3a9e1931",
+  "started_at": "2026-05-27T15:13:52.641323+00:00",
+  "finished_at": "2026-05-27T15:14:31.399935+00:00",
+  "wall_clock_ms": 38758.6,
+  "transactions": [
+    {
+      "amount": 9442.17,
+      "channel": "cash",
+      "counterparty": "Cash deposit, ORD Branch #82",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "one-time sub-CTR cash receipt (benign: customer paid in cash)"
+    },
+    {
+      "amount": 106761.9,
+      "channel": "card",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 151687.97,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 254632.62,
+      "channel": "ach",
+      "counterparty": "OUJXN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 77978.28,
+      "channel": "cash",
+      "counterparty": "Elizabeth Davis",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 187189.37,
+      "channel": "card",
+      "counterparty": "Christopher Moore",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 77235.13,
+      "channel": "cash",
+      "counterparty": "Patricia Lewis",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3a9e1931",
+    "entity_type": "business",
+    "expected_monthly_volume": 271233.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.429,
+      "card": 0.429,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have input bundle: [transactions] list, [kyc_profile] details, and presumably a precomputed metrics block? The user didn't provide metrics block explicitly. But the task says we receive a transactional bundle ([transactions] + [kyc_profile]) AND a precomputed metrics block. However the user only gave the bundle, not the metrics block. Possibly the metrics block is implied? Maybe we need to compute metrics? But rule says "
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to produce a strict-JSON numeric finding. Must include answer numeric value derivable from input values within ±5% rounding tolerance. Must include a contiguous 3-word phrase that names the specific quantity computed, and the numeric result. So answer must contain a phrase like \"total cash deposits 9442.17\"? Actually need 3-wo"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The system indicates no policy excerpts were retrieved.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute",
+      "label": "neutral",
+      "reasoning": "No statute provided, thus no § reference; therefore No applicable statute."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute",
+        "label": "neutral",
+        "reasoning": "No statute provided, thus no § reference; therefore No applicable statute."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The system indicates no policy excerpts were retrieved.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 9442.17, \"channel\": \"cash\", \"counterparty\": \"Cash deposit, ORD Branch #82\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"one-time sub-CTR cash receipt (benign: customer paid in cash)\"}, {\"amount\": 106761.9, \"channel\": \"card\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 151687.97, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 254632.62, \"channel\": \"ach\", \"counterparty\": \"OUJXN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 77978.28, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Davis\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 187189.37, \"channel\": \"card\", \"counterparty\": \"Christopher Moore\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 77235.13, \"channel\": \"cash\", \"counterparty\": \"Patricia Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3a9e1931\", \"entity_type\": \"business\", \"expected_monthly_volume\": 271233.0, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute\", \"label\": \"neutral\", \"reasoning\": \"No statute provided, thus no § reference; therefore No applicable statute.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The system indicates no policy excerpts were retrieved.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive from evidence.\n\nWe have transactions: cash deposits, card payments, ACH. There's a sub-CTR cash receipt of $9442.17 (one-time). No sanctions hits. No policy excerpts. No auxiliary findings except statutory neutral.\n\nWe need to decide is_suspicious true or false. Based on evidence: The business is a restaurant/hospitality, low risk, expected monthly volume $271,233. Observed transactions: cash deposit $9,442 (sub-CTR), card payments to various individuals, ACH to OUJXN Enterprises LLC $254,632.62, cash payments to individuals $77,978.28, $187,189.37, $77,235.13 etc. The total amounts: let's sum cash channel amounts: 9442.17 + 77978.28 + 187189.37 + 77235.13 = let's compute: 9442.17+77978.28=87420.45; +187189.37=274609.82; +77235.13=351844.95. That's cash total ~351,845. That's higher than expected monthly volume? Expected monthly volume is $271,233. So cash total exceeds expected monthly volume by ~80k. However note that cash channel includes a sub-CTR receipt of $9,442 (benign). Also there are card and ACH payments. The ACH is $254,632 to OUJXN Enterprises LLC. That's large. The business purpose is restaurant/hospitality with daily cash receipts; declared monthly volume ~271k. The observed cash total is higher than expected, but maybe includes multiple months? The transactions are across Feb, Mar, Apr 2026. Let's sum all amounts: cash 351,844.95 + card amounts: 106,761.9 + 151,687.97 + 187,189.37 = 445,639.24? Wait card amounts: 106,761.9 + 151,687.97 = 258,449.87; +187,189.37 = 445,639.24. ACH: 254,632.62. Total across all channels = 351,844.95 + 445,639.24 + 254,632.62 = 1,052,116.81. That's about 4x expected monthly volume. But the business is low risk, expected monthly volume 271k. However the transactions are spread across three months? The dates: March 11, Feb 10, April 6, April 24, March 28, plus cash deposit April 20. So roughly within ~2 months? Actually April 20 is latest. So maybe within ~2 months (Feb-Apr). That could be consistent with higher volume.\n\nBut we need to decide suspicious based on evidence. There's no sanctions hit, no PEP. No policy excerpts. Auxiliary findings are neutral. The only potential red flag is cash total exceeding expected monthly volume, but it's not necessarily structuring; it's a single sub-CTR cash receipt of $9,442 (benign). The cash deposits are multiple, but they are not structuring under $10k; they are above $10k except the $9,442 is below 10k but it's sub-CTR? Actually sub-CTR cash receipt is $9,442.17, which is below $10k, but it's a one-time cash receipt. The other cash payments are to individuals, not deposits? They are \"cash\" channel with counterparties like \"Elizabeth Davis\". Those could be payouts? Not necessarily deposits. The pattern: multiple cash payments to different individuals, maybe payouts. Not obviously structuring.\n\nGiven no other red flags, likely is_suspicious = false. Need to produce a negative narrative (disposition rationale) 400-800 characters, grounded, naming the surface red flag (maybe \"cash total exceeds declared monthly volume\" or \"multiple cash payments to unrelated parties\") and citing bundle evidence that resolves it (KYC business purpose, expected monthly volume, etc.). Must be 400-800 characters length.\n\nWe must ensure narrative length between 400 and 800 characters inclusive. Let's craft about 550 characters.\n\nCount characters roughly. We'll write:\n\n\"Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted.\"\n\nNow count characters. Let's count precisely.\n\nI'll count characters including spaces.\n\nString:\n\nSurface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted.\n\nLet's count. I'll use approximate count. Better to count exactly.\n\nI'll write it out with indices.\n\n\"Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted.\"\n\nNow count characters. I'll count manually using groups.\n\nI'll copy into a counting method: each character includes letters, spaces, punctuation.\n\nI'll count using rough: Let's count words length.\n\nBetter to approximate: It's likely around 500-600 characters. Let's quickly estimate: The first sentence length: \"Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233.\" That's about 150 characters? Let's count precisely.\n\nI'll write characters count manually:\n\n\"Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233.\"\n\nCount:\n\nS(1)u2r3f4a5c6e7 (space8)r9e10d11 (space12)f13l14a15g16:17 (space18)m19u20l21t22i23p24l25e26 (space27)c28a29s30h31 (space32)p33a34y35m36e37n38t39s40 (space41)t42o43 (space44)d45i46s47t48i49n50c51t52 (space53)i54n55d56i57v58i59d60u61a62l63s64 (space65)t66o67t68a69l70i71n72g73 (space74)$75 3? Actually \"$\" is a character. Let's maybe use an online count but can't. Let's approximate total length maybe ~560 characters. Should be within 400-800.\n\nI think it's okay.\n\nWe must output JSON with is_suspicious false and the narrative string.\n\nMake sure no extra fields.\n\nThus final answer:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted.\"\n}\n\nCheck length: Let's count characters roughly: I think it's around 560-600. Should be fine.\n\nNow output exactly JSON, no markdown.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: multiple cash payments to distinct individuals totaling $351,845 and a $254,632 ACH to OUJXN Enterprises LLC, which together exceed the customer’s declared monthly volume of $271,233. Disambiguating evidence: KYC profile identifies the entity as a low‑risk restaurant/hospitality business with daily cash receipts, and the observed cash activity is consistent with occasional large cash payouts and vendor settlements; no structuring or pass‑through pattern is evident. Therefore, no SAR is warranted.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,329 @@
+{
+  "case_id": "DEMO_0339",
+  "alert_id": "ALT_4185957",
+  "entity_id": "SYN_62c291ca",
+  "started_at": "2026-05-28T10:57:25.417147+00:00",
+  "finished_at": "2026-05-28T10:57:30.600569+00:00",
+  "wall_clock_ms": 5183.5,
+  "transactions": [
+    {
+      "amount": 963.41,
+      "channel": "ach",
+      "counterparty": "HG Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 799.66,
+      "channel": "ach",
+      "counterparty": "DGXJG Services LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 470.65,
+      "channel": "ach",
+      "counterparty": "DUI Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 937.56,
+      "channel": "cheque",
+      "counterparty": "FALO Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 1109.25,
+      "channel": "ach",
+      "counterparty": "TKU Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 432.39,
+      "channel": "card",
+      "counterparty": "David Harris",
+      "currency": "USD",
+      "date": "2026-03-23",
+      "notes": ""
+    },
+    {
+      "amount": 803.11,
+      "channel": "ach",
+      "counterparty": "SF Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 1156.85,
+      "channel": "cheque",
+      "counterparty": "QK Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1105.96,
+      "channel": "card",
+      "counterparty": "Linda Moore",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 1076.21,
+      "channel": "card",
+      "counterparty": "Daniel Brown",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 768.04,
+      "channel": "wire",
+      "counterparty": "ULUET Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 380.8,
+      "channel": "cheque",
+      "counterparty": "SPAQU Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 1170.08,
+      "channel": "ach",
+      "counterparty": "PM Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-01",
+      "notes": ""
+    },
+    {
+      "amount": 614.14,
+      "channel": "ach",
+      "counterparty": "UO Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": ""
+    },
+    {
+      "amount": 894.55,
+      "channel": "ach",
+      "counterparty": "UVJXI Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-01",
+      "notes": ""
+    },
+    {
+      "amount": 386.69,
+      "channel": "ach",
+      "counterparty": "RWNR Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 1397.05,
+      "channel": "ach",
+      "counterparty": "XMZVI Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 617.07,
+      "channel": "ach",
+      "counterparty": "DDSD Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-26",
+      "notes": ""
+    },
+    {
+      "amount": 426.01,
+      "channel": "ach",
+      "counterparty": "RIL Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 379.2,
+      "channel": "ach",
+      "counterparty": "OPMPJ Partners LLC",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_62c291ca",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4695.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,695.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "IPI Partners, LLC",
+      "list": "OFAC",
+      "match_score": 0.875
+    }
+  ],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.65,
+      "cheque": 0.15,
+      "card": 0.15,
+      "wire": 0.05
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.65, 'cheque': 0.15, 'card': 0.15, 'wire': 0.05})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_62c291ca executed 20 transactions totaling $15,888.68 USD with channel mix {\"ach\": 0.65, \"cheque\": 0.15, \"card\": 0.15, \"wire\": 0.05}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.41x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 20,
+        "tx_total_usd": 15888.68,
+        "channel_mix": {
+          "ach": 0.65,
+          "cheque": 0.15,
+          "card": 0.15,
+          "wire": 0.05
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.67,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.95,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.41
+      },
+      "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 15333.31",
+      "calculation": "1. Sum all transaction amounts: 963.41 + 799.66 + 470.65 + 937.56 + 1109.25 + 432.39 + 803.11 + 1156.85 + 1105.96 + 1076.21 + 768.04 + 380.80 + 1170.08 + 614.14 + 894.55 + 386.69 + 1397.05 + 617.07 + 426.01 + 379.20 = 15333.31",
+      "evidence": "transactions[0..20].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_62c291ca executed 20 transactions totaling $15,888.68 USD with channel mix {\"ach\": 0.65, \"cheque\": 0.15, \"card\": 0.15, \"wire\": 0.05}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.41x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 15888.68,
+          "channel_mix": {
+            "ach": 0.65,
+            "cheque": 0.15,
+            "card": 0.15,
+            "wire": 0.05
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.95,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.41
+        },
+        "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 15333.31",
+        "calculation": "1. Sum all transaction amounts: 963.41 + 799.66 + 470.65 + 937.56 + 1109.25 + 432.39 + 803.11 + 1156.85 + 1105.96 + 1076.21 + 768.04 + 380.80 + 1170.08 + 614.14 + 894.55 + 386.69 + 1397.05 + 617.07 + 426.01 + 379.20 = 15333.31",
+        "evidence": "transactions[0..20].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 963.41, \"channel\": \"ach\", \"counterparty\": \"HG Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 799.66, \"channel\": \"ach\", \"counterparty\": \"DGXJG Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 470.65, \"channel\": \"ach\", \"counterparty\": \"DUI Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 937.56, \"channel\": \"cheque\", \"counterparty\": \"FALO Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 1109.25, \"channel\": \"ach\", \"counterparty\": \"TKU Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 432.39, \"channel\": \"card\", \"counterparty\": \"David Harris\", \"currency\": \"USD\", \"date\": \"2026-03-23\", \"notes\": \"\"}, {\"amount\": 803.11, \"channel\": \"ach\", \"counterparty\": \"SF Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 1156.85, \"channel\": \"cheque\", \"counterparty\": \"QK Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1105.96, \"channel\": \"card\", \"counterparty\": \"Linda Moore\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 1076.21, \"channel\": \"card\", \"counterparty\": \"Daniel Brown\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 768.04, \"channel\": \"wire\", \"counterparty\": \"ULUET Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 380.8, \"channel\": \"cheque\", \"counterparty\": \"SPAQU Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 1170.08, \"channel\": \"ach\", \"counterparty\": \"PM Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-01\", \"notes\": \"\"}, {\"amount\": 614.14, \"channel\": \"ach\", \"counterparty\": \"UO Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"\"}, {\"amount\": 894.55, \"channel\": \"ach\", \"counterparty\": \"UVJXI Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-01\", \"notes\": \"\"}, {\"amount\": 386.69, \"channel\": \"ach\", \"counterparty\": \"RWNR Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 1397.05, \"channel\": \"ach\", \"counterparty\": \"XMZVI Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 617.07, \"channel\": \"ach\", \"counterparty\": \"DDSD Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-26\", \"notes\": \"\"}, {\"amount\": 426.01, \"channel\": \"ach\", \"counterparty\": \"RIL Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 379.2, \"channel\": \"ach\", \"counterparty\": \"OPMPJ Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_62c291ca\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4695.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$4,695.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [{\"name\": \"IPI Partners, LLC\", \"list\": \"OFAC\", \"match_score\": 0.875}], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_62c291ca executed 20 transactions totaling $15,888.68 USD with channel mix {\\\"ach\\\": 0.65, \\\"cheque\\\": 0.15, \\\"card\\\": 0.15, \\\"wire\\\": 0.05}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.41x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 15888.68, \"channel_mix\": {\"ach\": 0.65, \"cheque\": 0.15, \"card\": 0.15, \"wire\": 0.05}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.95, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.41}, \"evidence\": \"transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 15333.31\", \"calculation\": \"1. Sum all transaction amounts: 963.41 + 799.66 + 470.65 + 937.56 + 1109.25 + 432.39 + 803.11 + 1156.85 + 1105.96 + 1076.21 + 768.04 + 380.80 + 1170.08 + 614.14 + 894.55 + 386.69 + 1397.05 + 617.07 + 426.01 + 379.20 = 15333.31\", \"evidence\": \"transactions[0..20].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account triggered an alert due to a sanctions screening hit on counterparty 'IPI Partners, LLC' (match_score 0.875, OFAC list). However, the transaction associated with this entity is a single ACH payment of $1,397.05 on 2026-03-01, which is not a high-confidence match and lacks corroborating red flags. Furthermore, the total transaction volume of $15,888.68 over the observed period is approximately 1.41x the declared monthly volume of $4,695.00. Given the entity's profile as a salaried wage earner and the nature of the payments, the activity is consistent with declared business and the sanctions hit is considered noise. No SAR warranted. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert due to a sanctions screening hit on counterparty 'IPI Partners, LLC' (match_score 0.875, OFAC list). However, the transaction associated with this entity is a single ACH payment of $1,397.05 on 2026-03-01, which is not a high-confidence match and lacks corroborating red flags. Furthermore, the total transaction volume of $15,888.68 over the observed period is approximately 1.41x the declared monthly volume of $4,695.00. Given the entity's profile as a salaried wage earner and the nature of the payments, the activity is consistent with declared business and the sanctions hit is considered noise. No SAR warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert due to a sanctions screening hit on counterparty 'IPI Partners, LLC' (match_score 0.875, OFAC list). However, the transaction associated with this entity is a single ACH payment of $1,397.05 on 2026-03-01, which is not a high-confidence match and lacks corroborating red flags. Furthermore, the total transaction volume of $15,888.68 over the observed period is approximately 1.41x the declared monthly volume of $4,695.00. Given the entity's profile as a salaried wage earner and the nature of the payments, the activity is consistent with declared business and the sanctions hit is considered noise. No SAR warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,137 @@
+{
+  "case_id": "DEMO_0017",
+  "alert_id": "ALT_2412245",
+  "entity_id": "SYN_cc82dac8",
+  "started_at": "2026-05-27T15:11:30.694263+00:00",
+  "finished_at": "2026-05-27T15:12:02.507612+00:00",
+  "wall_clock_ms": 31813.4,
+  "transactions": [],
+  "kyc_profile": {
+    "entity_id": "SYN_cc82dac8",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1536.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,536.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {},
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No transactions in investigation window",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The profile identifies the entity as an individual with a medium risk rating. The expected monthly volume is noted as part of the background but no specific transaction data is available. The incorporation jurisdiction is recorded as US-FL. No transaction records are present in the provided bundle. The analysis relies on the supplied kyc_profile details to frame the behavioral context.",
+      "metrics": {
+        "tx_count": 0,
+        "tx_total_usd": 0.0,
+        "channel_mix": {},
+        "velocity_24h_max": 0,
+        "velocity_24h_avg_30d": 0.0,
+        "unique_counterparties_7d": 0,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 0.0
+      },
+      "evidence": "kyc_profile; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe have input: [transactions] block with \"(no transactions)\". So there are no transactions. Then [kyc_profile] block with expected_monthly_volume: 1536.0.\n\nWe need to produce a strict-JSON numeric finding. The answer must be numeric and derived from input values. Since there are no transactions, transaction volumes presumably zero. Com"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "(no policy excerpts were retrieved",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute applicable.",
+      "label": "neutral",
+      "reasoning": "Statute: 0000 § 0000. No statute applicable."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute applicable.",
+        "label": "neutral",
+        "reasoning": "Statute: 0000 § 0000. No statute applicable."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The profile identifies the entity as an individual with a medium risk rating. The expected monthly volume is noted as part of the background but no specific transaction data is available. The incorporation jurisdiction is recorded as US-FL. No transaction records are present in the provided bundle. The analysis relies on the supplied kyc_profile details to frame the behavioral context.",
+        "metrics": {
+          "tx_count": 0,
+          "tx_total_usd": 0.0,
+          "channel_mix": {},
+          "velocity_24h_max": 0,
+          "velocity_24h_avg_30d": 0.0,
+          "unique_counterparties_7d": 0,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 0.0
+        },
+        "evidence": "kyc_profile; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "(no policy excerpts were retrieved",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [], \"kyc_profile\": {\"entity_id\": \"SYN_cc82dac8\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1536.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,536.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute applicable.\", \"label\": \"neutral\", \"reasoning\": \"Statute: 0000 § 0000. No statute applicable.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The profile identifies the entity as an individual with a medium risk rating. The expected monthly volume is noted as part of the background but no specific transaction data is available. The incorporation jurisdiction is recorded as US-FL. No transaction records are present in the provided bundle. The analysis relies on the supplied kyc_profile details to frame the behavioral context.\", \"metrics\": {\"tx_count\": 0, \"tx_total_usd\": 0.0, \"channel_mix\": {}, \"velocity_24h_max\": 0, \"velocity_24h_avg_30d\": 0.0, \"unique_counterparties_7d\": 0, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 0.0}, \"evidence\": \"kyc_profile; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"(no policy excerpts were retrieved\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string. The bundle has empty transactions, no sanctions hits, no policy excerpts, no sop excerpts. Auxiliary findings: statutory neutral, behavioral summary with metrics all zero, citing kyc_profile etc. So there is no evidence of suspicious activity. Must set is_suspicious = false. Provide a grounded narrative 400-800 characters explaining disposition rationale, naming surface red flag (none?), but we need to name the surface red flag that triggered the alert. However there is no red flag; but we still need to produce a negative narrative that names the surface red flag explicitly. But there is no surface red flag; maybe we can say \"No surface red flag identified; alert originated from placeholder?\" But we must name the surface red flag explicitly. The bundle indicates no transactions, no hits, no policy excerpts. The alert may have been triggered by something else not in bundle? But we must name it explicitly based on bundle. Possibly the surface red flag is \"no transaction data\"?? That seems odd. But we can interpret that the alert was triggered by the presence of an entity with medium risk? Or maybe the surface red flag is \"expected monthly volume mismatch\"? But there is no transaction to compare. Hmm.\n\nWe can still craft a narrative: \"No transaction records were provided; the only evidence is a KYC profile indicating a retired individual with expected monthly volume of $1,536. No sanctions hits, no policy excerpts, and auxiliary findings show zero transaction metrics, leading to a disposition of no SAR warranted.\" Must name the surface red flag: maybe \"absence of transaction data\" is not a red flag. But we can say \"The alert was triggered by the lack of transaction activity relative to expected volume\"? That seems forced.\n\nBetter: The surface red flag could be \"the entity is an individual with medium risk but no transaction data\" – but that's not a red flag. However the instruction says: \"A negative narrative is NOT a placeholder. It is a grounded disposition rationale that an analyst reviewing the alert would write in the case file. Structure: 1. NAME the surface red flag explicitly. Be specific — quote the transaction count, the sanctions-list match, the channel pattern, or whatever element of the bundle triggered the alert.\" So we must identify something in the bundle that triggered the alert. The bundle includes \"auxiliary_findings.behavioral\" which mentions \"The profile identifies the entity as an individual with a medium risk rating.\" That might be the surface red flag: \"medium risk rating\". So we can name that as the surface red flag: \"medium risk rating\". Then we need to cite bundle evidence that resolves it: the kyc_profile shows expected monthly volume matches retired individual, no transactions, etc.\n\nThus narrative: \"Surface red flag: medium risk rating in kyc_profile.\" Then explain that no transaction data, expected monthly volume aligns, no other red flags, thus no SAR.\n\nNeed 400-800 characters length. Let's craft about 550 characters.\n\nCount characters roughly. Let's draft ~600 characters.\n\nDraft:\n\n\"Surface red flag: the kyc_profile lists the entity as a medium‑risk individual. No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536. The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag. Accordingly, no SAR is warranted; the case should be closed pending further activity.\"\n\nNow count characters. Let's approximate: \n\n\"Surface red flag: the kyc_profile lists the entity as a medium‑risk individual. No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536. The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag. Accordingly, no SAR is warranted; the case should be closed pending further activity.\"\n\nLet's count roughly: \n\nI'll count characters including spaces. Use rough estimate: \n\nSentence 1: \"Surface red flag: the kyc_profile lists the entity as a medium‑risk individual.\" That's about 78 characters.\n\nSentence 2: \" No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536.\" That's long, maybe 150.\n\nSentence 3: \" The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag.\" ~130.\n\nSentence 4: \" Accordingly, no SAR is warranted; the case should be closed pending further activity.\" ~80.\n\nTotal ~438 characters. Need 400-800, so okay. It's within 400-800. Good.\n\nNow output JSON with is_suspicious false and the narrative string.\n\nMake sure to escape quotes properly. Provide JSON object only.\n\nLet's produce:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: the kyc_profile lists the entity as a medium‑risk individual. No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536. The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag. Accordingly, no SAR is warranted; the case should be closed pending further activity.\"\n}\n\nCheck character count: seems okay.\n\nNow output exactly that JSON, no extra.\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"Surface red flag: the kyc_profile lists the entity as a medium‑risk individual. No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536. The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag. Accordingly, no SAR is warranted; the case should be closed pending further activity.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: the kyc_profile lists the entity as a medium‑risk individual. No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536. The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag. Accordingly, no SAR is warranted; the case should be closed pending further activity."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: the kyc_profile lists the entity as a medium‑risk individual. No sanctions or policy excerpts are present, and the auxiliary behavioral findings show zero transaction count, zero total USD, and a vs_declared_volume_ratio of 0.0, indicating no activity to compare against the expected monthly volume of $1,536. The profile’s business purpose of a retired individual on fixed pension income aligns with the lack of transactional activity, resolving the initial risk flag. Accordingly, no SAR is warranted; the case should be closed pending further activity.",
+  "judge_enabled": false,
+  "error": null
+}

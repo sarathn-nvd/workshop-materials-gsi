@@ -1,0 +1,279 @@
+{
+  "case_id": "DEMO_0177",
+  "alert_id": "ALT_2435601",
+  "entity_id": "SYN_d8de3800",
+  "started_at": "2026-05-23T12:40:48.036609+00:00",
+  "finished_at": "2026-05-23T12:40:55.842599+00:00",
+  "wall_clock_ms": 7806.0,
+  "transactions": [
+    {
+      "amount": 576.82,
+      "channel": "ach",
+      "counterparty": "AGTIJ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 372.23,
+      "channel": "card",
+      "counterparty": "Karen Harris",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 378.43,
+      "channel": "ach",
+      "counterparty": "GOJH Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 819.9,
+      "channel": "card",
+      "counterparty": "Robert Lewis",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 571.44,
+      "channel": "ach",
+      "counterparty": "NV Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 871.25,
+      "channel": "ach",
+      "counterparty": "JSFOR Services LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 602.53,
+      "channel": "ach",
+      "counterparty": "LTLAA Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 323.9,
+      "channel": "ach",
+      "counterparty": "PKZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 846.58,
+      "channel": "card",
+      "counterparty": "Jennifer Wilson",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 751.66,
+      "channel": "wire",
+      "counterparty": "XJ Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": ""
+    },
+    {
+      "amount": 376.76,
+      "channel": "wire",
+      "counterparty": "YR Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    },
+    {
+      "amount": 218.29,
+      "channel": "wire",
+      "counterparty": "QUOIR Services LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 375.71,
+      "channel": "wire",
+      "counterparty": "JEG Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 597.96,
+      "channel": "card",
+      "counterparty": "Robert Moore",
+      "currency": "USD",
+      "date": "2026-03-09",
+      "notes": ""
+    },
+    {
+      "amount": 317.54,
+      "channel": "card",
+      "counterparty": "James Garcia",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 447.94,
+      "channel": "wire",
+      "counterparty": "TKPGJ Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 822.64,
+      "channel": "ach",
+      "counterparty": "BCMOL Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 725.93,
+      "channel": "ach",
+      "counterparty": "KWKEH Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 323.05,
+      "channel": "wire",
+      "counterparty": "OKWIO Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 533.28,
+      "channel": "ach",
+      "counterparty": "FD Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-23",
+      "notes": ""
+    },
+    {
+      "amount": 667.05,
+      "channel": "card",
+      "counterparty": "Robert Moore",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_d8de3800",
+    "entity_type": "individual",
+    "expected_monthly_volume": 3285.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$3,285.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.429,
+      "card": 0.286,
+      "wire": 0.286
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.42857142857142855, 'card': 0.2857142857142857, 'wire': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from the passage. Let's parse.\n\nWe have entity_id SYN_d8de3800, individual, expected monthly volume 3285.0 USD. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute metrics:\n\n- tx_count: number of transactions listed. Let's count lines. I'll enumerate:\n\n1 2026-04-09\n2 2026-04-13\n3 2026-04-22\n4 2026-03-31\n5 2026-04-17\n6 2026-02-07\n7 2026-04-17 (second? Actually there are two entries on 2026-04-17: one "
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to compute total transaction volume from passage, compare to expected monthly volume 3285.0. Sum amounts of all listed transactions. Let's list amounts:\n\n1. 576.82\n2. 372.23\n3. 378.43\n4. 819.90\n5. 571.44\n6. 871.25\n7. 602.53\n8. 323.90\n9. 846.58\n10. 751.66\n11. 376.76\n12. 218.29\n13. 375.71\n14. 597.96\n15. 317.54\n16. 447.94\n17. 822.64\n18. 725.93\n19. 323.05\n20. 533.28\n21. 667.05\n\nLet's sum.\n\nI'll add sequentially:\n\n576.82 + 372.23 = 949.05\n+378.43 = 1,327.48\n+819.90 = 2,147.38\n+571.44 = 2,718."
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be evaluated for statutory inclusion because no statute was provided.",
+      "label": "neutral",
+      "reasoning": "The statute identifier is \"\" and therefore there is no statutory language to evaluate, making the classification neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be evaluated for statutory inclusion because no statute was provided.",
+        "label": "neutral",
+        "reasoning": "The statute identifier is \"\" and therefore there is no statutory language to evaluate, making the classification neutral."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 576.82, \"channel\": \"ach\", \"counterparty\": \"AGTIJ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 372.23, \"channel\": \"card\", \"counterparty\": \"Karen Harris\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 378.43, \"channel\": \"ach\", \"counterparty\": \"GOJH Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 819.9, \"channel\": \"card\", \"counterparty\": \"Robert Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 571.44, \"channel\": \"ach\", \"counterparty\": \"NV Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 871.25, \"channel\": \"ach\", \"counterparty\": \"JSFOR Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 602.53, \"channel\": \"ach\", \"counterparty\": \"LTLAA Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 323.9, \"channel\": \"ach\", \"counterparty\": \"PKZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 846.58, \"channel\": \"card\", \"counterparty\": \"Jennifer Wilson\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 751.66, \"channel\": \"wire\", \"counterparty\": \"XJ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"\"}, {\"amount\": 376.76, \"channel\": \"wire\", \"counterparty\": \"YR Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}, {\"amount\": 218.29, \"channel\": \"wire\", \"counterparty\": \"QUOIR Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 375.71, \"channel\": \"wire\", \"counterparty\": \"JEG Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 597.96, \"channel\": \"card\", \"counterparty\": \"Robert Moore\", \"currency\": \"USD\", \"date\": \"2026-03-09\", \"notes\": \"\"}, {\"amount\": 317.54, \"channel\": \"card\", \"counterparty\": \"James Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 447.94, \"channel\": \"wire\", \"counterparty\": \"TKPGJ Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 822.64, \"channel\": \"ach\", \"counterparty\": \"BCMOL Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 725.93, \"channel\": \"ach\", \"counterparty\": \"KWKEH Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 323.05, \"channel\": \"wire\", \"counterparty\": \"OKWIO Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 533.28, \"channel\": \"ach\", \"counterparty\": \"FD Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-23\", \"notes\": \"\"}, {\"amount\": 667.05, \"channel\": \"card\", \"counterparty\": \"Robert Moore\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_d8de3800\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 3285, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$3,285.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be evaluated for statutory inclusion because no statute was provided.\", \"label\": \"neutral\", \"reasoning\": \"The statute identifier is \\\"\\\" and therefore there is no statutory language to evaluate, making the classification neutral.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since _regulatory_frame is \"benign\" and typology none, likely not suspicious. Must set is_suspicious=false and report empty string.\n\nCheck constraints: When false, report must be empty string. Provide JSON only.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nMake sure no extra whitespace? Probably fine.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,323 @@
+# SFT recipe -- 8 x A100 SXM (80 GB / GPU, NVSwitch mesh), BF16.
+# Resumes from /sadata/swaminathanb/gsi-training/run-v2/3.run_cpt/checkpoints/LOWEST_VAL/
+# (= cpt-l2-final, the Phase-2 CPT endpoint) and supervised-finetunes on the
+# revised v4 chat dataset under 4.run_sft/run-v4/3.filter_dataset/final_data_clean/
+# (output of stage 3 filter + rebuild; v4 ships no 4.remove_field hop -- the
+# upstream stage-1 builder already strips ground-truth-leak fields).
+#
+# A100 has NO FP8 hardware (Ampere SM_80) and DeepEP is Hopper-only, so this
+# recipe runs BF16-only with the torch dispatcher -- same backend choices as
+# the CPT recipes. The H200 reference (4.run_sft/reference/run-v2/4.run_sft/
+# recipe_sft_h200.yaml) was the structural starting point; everything below
+# is either copied from it (SFT-specific knobs: ChatDataset, packed_sequence,
+# AdamW betas (0.9, 0.999), cosine schedule, lr 1e-5) or adapted for A100
+# (fp8 disabled, ep_size=8, torch_mm experts, explicit dp_size=8).
+#
+# PRE-REQUISITES
+#
+# A. SSH into the same 8-GPU A100 SXM node used for CPT. The Phase-2 CPT
+#    LOWEST_VAL is already on this disk; no cross-host rsync needed.
+#
+# ssh swaminathanb@exp-blr-dgxa100-02
+# cd /sadata/swaminathanb/gsi-training
+# export HOST_WORKSPACE=/sadata/swaminathanb/gsi-training
+#
+#    Expected layout under HOST_WORKSPACE:
+#
+#    /sadata/swaminathanb/gsi-training/
+#    |-- run-v2/3.run_cpt/checkpoints/LOWEST_VAL/model/consolidated/   (= cpt-l2-final, ~63 GB,
+#    |                                                                  referenced by model.pretrained_model_name_or_path)
+#    `-- 4.run_sft/
+#        `-- run-v4/
+#            |-- 3.filter_dataset/final_data_clean/sft_mixed.chunk.00.jsonl  (training set)
+#            |-- 3.filter_dataset/final_data_clean/sft_mixed.val.jsonl       (in-training val)
+#            `-- 4.run_sft/                                                  (recipe + scripts; container workdir)
+#
+# B. Authenticate the Docker daemon against NGC so the
+#    `nvcr.io/nvidia/nemo-automodel:26.04` image can be pulled.
+#
+# docker login nvcr.io
+#   Username: $oauthtoken
+#   Password: <NGC_API_KEY>
+#
+# C. Export HF_TOKEN (the tokenizer is loaded from a gated NVIDIA repo even
+#    though the model weights themselves are local):
+#
+# export HF_TOKEN=hf_xxx_your_token
+#
+# RUN COMMANDS
+#
+# 0. (Optional) archive the previous run's log:
+#
+# mv /workspace/4.run_sft/run-v4/4.run_sft/run.log \
+#    /workspace/4.run_sft/run-v4/4.run_sft/run.$(date +%Y%m%d-%H%M%S).log
+#
+# 1. Launch the training container detached. (Rootless: omit `--user`/`--group-add 0`.)
+#
+# docker run -d --gpus all \
+#   --name sft-phase1-v4 \
+#   --shm-size=64g --ipc=host \
+#   --ulimit memlock=-1 \
+#   --workdir /workspace/4.run_sft/run-v4/4.run_sft \
+#   -e HOME=/tmp \
+#   -e HF_HOME=/workspace/4.run_sft/run-v4/4.run_sft/hf_cache \
+#   -e HF_TOKEN=$HF_TOKEN \
+#   -e PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+#   -v $HOST_WORKSPACE:/workspace \
+#   nvcr.io/nvidia/nemo-automodel:26.04 \
+#   torchrun --nproc-per-node=8 \
+#     /workspace/4.run_sft/run-v4/4.run_sft/finetune.py \
+#     --config /workspace/4.run_sft/run-v4/4.run_sft/recipe_a100sxm-8.yaml
+#
+# 2. Stream container stdout/stderr to a file in the background:
+#
+# nohup docker logs -f sft-phase1-v4 > 4.run_sft/run-v4/4.run_sft/run.log 2>&1 &
+# disown
+#
+# 3. Verify it's running:
+#
+# docker ps --filter name=sft-phase1-v4
+#
+# OPS COMMANDS
+#
+# Tail live log:        tail -f $HOST_WORKSPACE/4.run_sft/run-v4/4.run_sft/run.log
+# Last 200 log lines:   docker logs --tail 200 sft-phase1-v4
+# GPU snapshot:         nvidia-smi --query-gpu=index,memory.used,memory.free,utilization.gpu,power.draw --format=csv
+# Verify NVLink mesh:   nvidia-smi topo -m
+# Graceful stop:        docker stop sft-phase1-v4 && docker rm sft-phase1-v4
+# Resume from latest ckpt: just re-run step 1 above (NeMo auto-resumes from checkpoints/).
+
+model:
+  _target_: nemo_automodel.NeMoAutoModelForCausalLM.from_pretrained
+  # PHASE-2 CPT endpoint (= cpt-l2-final). The model has already been domain-
+  # adapted toward AML; SFT teaches it the chat-format instruction-following
+  # behavior on top of that.
+  pretrained_model_name_or_path: /workspace/run-v2/3.run_cpt/checkpoints/LOWEST_VAL/model/consolidated
+  trust_remote_code: true
+  # Reference (H200) sets bfloat16 explicitly (vs CPT's "auto"). Same numeric
+  # behavior for this model since the consolidated checkpoint is BF16; the
+  # explicit form keeps from_pretrained from second-guessing.
+  torch_dtype: bfloat16
+  # Reference sets false; CPT used true. Mamba kernels are technically faster
+  # on Ampere, but the kernels' state-passing pattern interacts poorly with
+  # ChatDataset's variable-length packing path -- false is the safe choice
+  # observed in production SFT runs.
+  use_mamba_kernels: false
+  backend:
+    _target_: nemo_automodel.components.models.common.BackendConfig
+    # `linear: te` keeps Transformer Engine BF16 attention (FlashAttention).
+    # TE on A100 falls back to BF16 cleanly -- no FP8 path is exercised.
+    linear: te
+    rms_norm: torch_fp32
+    # FORCED: A100 SXM has full NVSwitch mesh but DeepEP kernels are Hopper-
+    # only. Stay on torch dispatcher (same as CPT recipes).
+    experts: torch_mm
+    dispatcher: torch
+    enable_hf_state_dict_adapter: true
+    enable_fsdp_optimizations: true
+
+# DISABLED on A100 -- no FP8 tensor cores in Ampere (SM_80). The H200
+# reference omits this block entirely (FP8 auto-on); we make the off-state
+# explicit to prevent any TE FP8-promotion surprises.
+fp8:
+  enabled: false
+
+# --------------------------------------------------------------------------
+# ChatML chat_template for Nemotron-3 (used by both dataset blocks below).
+# --------------------------------------------------------------------------
+# The cpt-l2-final consolidated tokenizer (path_or_dataset_id below) was
+# inherited from `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16`. The base
+# variant did NOT ship a `chat_template` field in its tokenizer_config.json,
+# so loading it via `AutoTokenizer.from_pretrained(...).chat_template`
+# returns None and ChatDataset raises:
+#     ValueError: ChatDataset requires a tokenizer with chat template support.
+#
+# We provide it inline. The template matches the ChatML format the tokenizer
+# is already wired for: token id 10 = '<|im_start|>', token id 11 =
+# '<|im_end|>' (also the EOS), so apply_chat_template will produce the same
+# byte sequence the model saw in its synthetic SFT corpus generation.
+#
+# The H200 SFT reference recipes (4.run_sft/reference/run-{v1,v2}/4.run_sft/
+# recipe_sft_h200.yaml) don't pass `chat_template:` because their CPT
+# consolidated checkpoint had the field baked in upstream. We don't.
+chat_template: &chatml |-
+  {%- for message in messages -%}
+  {{- '<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>\n' -}}
+  {%- endfor -%}
+  {%- if add_generation_prompt -%}
+  {{- '<|im_start|>assistant\n' -}}
+  {%- endif -%}
+
+dataset:
+  _target_: nemo_automodel.components.datasets.llm.chat_dataset.ChatDataset
+  # Stage 3 cleaned output for the v4 corpus. v4 has no 4.remove_field hop --
+  # the upstream stage-1 builder already strips ground-truth-leak fields, so we
+  # point directly at the filter + rebuild output.
+  path_or_dataset_id: /workspace/4.run_sft/run-v4/3.filter_dataset/final_data_clean/sft_mixed.chunk.00.jsonl
+  split: train
+  chat_template: *chatml
+  # Answer-only SFT loss: mask everything before the LAST occurrence of
+  # `start_of_turn_token` so the trainer only computes loss on assistant
+  # output tokens, not on system+user prompt tokens. For ChatML, the
+  # token '<|im_start|>' (token id 10) marks every turn boundary; the
+  # trainer locates the last one and applies the mask there. Without this
+  # arg, loss is computed on the entire sequence -- functional but
+  # suboptimal (model would also try to learn to predict user prompts).
+  start_of_turn_token: '<|im_start|>'
+
+validation_dataset:
+  _target_: nemo_automodel.components.datasets.llm.chat_dataset.ChatDataset
+  path_or_dataset_id: /workspace/4.run_sft/run-v4/3.filter_dataset/final_data_clean/sft_mixed.val.jsonl
+  split: validation
+  chat_template: *chatml
+  start_of_turn_token: '<|im_start|>'
+
+step_scheduler:
+  # GBS=16, LBS=1, 8 GPUs => grad_accum = 16/(1*8) = 2. Tiny batches are
+  # standard for SFT; large batches over-smooth instruction-following gradients.
+  global_batch_size: 16
+  local_batch_size: 1
+  # ckpt + val cadence calibrated for the projected ~1,370 opt steps over
+  # 2 epochs (see num_epochs note below). 250-step ckpts give ~5 mid-run
+  # safety snapshots; 100-step vals give ~13 evaluation points so the loss
+  # curve is well sampled. Both match the CPT Phase-2 cadence that ran
+  # cleanly for ~11h with no over-instrumentation.
+  ckpt_every_steps: 250
+  val_every_steps: 100
+  # Two epochs over the v4 stratified SFT corpus.
+  #
+  # Step-count estimate for this corpus (42,785 total -> 38,494 train +
+  # 4,291 val from the stage-1 stratified split):
+  #
+  #   tokens / record  (median)     ~= 3648   (raw, stage-2 corpus_details.log)
+  #   records per pack              ~= 8350 / (3648 + chat-template buffer)
+  #                                 ~= 2.2   (packed_sequence_size / avg record len)
+  #   packs per epoch               ~= 38494 / 2.2   ~= 17,497
+  #   GBS=16 packs per opt step     -> 17497 / 16    ~= 1,094 opt steps per epoch
+  #   total over 2 epochs           ~= 2,188 opt steps
+  #
+  # max_steps is intentionally unset -- the framework derives total opt
+  # steps from dataloader_length * num_epochs. If you want a hard cap
+  # (e.g. for a smoke test) set max_steps below.
+  num_epochs: 2
+  # max_steps: 1500   # uncomment to override the auto-computed budget
+
+dist_env:
+  backend: nccl
+  # SFT spends longer on a single batch (long packed sequences + chat-template
+  # tokenization on the fly), so 30 min from CPT recipes is too tight on cold
+  # starts. Reference uses 60.
+  timeout_minutes: 60
+
+rng:
+  _target_: nemo_automodel.components.training.rng.StatefulRNG
+  seed: 1111
+  ranked: true
+
+checkpoint:
+  enabled: true
+  checkpoint_dir: /workspace/4.run_sft/run-v4/4.run_sft/checkpoints/
+  model_save_format: safetensors
+  save_consolidated: true
+
+distributed:
+  # Use the flat `strategy: fsdp2` form to match the CPT recipes that ran
+  # cleanly for ~23 hours combined (Phase 1 + Phase 2). NeMo also accepts the
+  # `_target_: nemo_automodel.components.distributed.fsdp2.FSDP2Manager` form
+  # used in the H200 SFT reference, but that's a different instantiation path
+  # we haven't validated on this framework version.
+  strategy: fsdp2
+  dp_size: 8
+  dp_replicate_size: 1
+  tp_size: 1
+  cp_size: 1
+  pp_size: 1
+  # ep_size=8 forced by MoE optimizer-state memory (lower ep won't fit on 80 GB).
+  # The H200 reference's `dp_size: none` (no ep_size) lets the framework
+  # auto-pick; on H200 the 140 GB HBM can skip EP entirely. On A100 80GB we
+  # must shard the 128 routed experts across the 8 GPUs.
+  ep_size: 8
+  # Mandatory on 80 GB. Disabling needs ~125 GiB peak -- OOMs.
+  activation_checkpointing: true
+  sequence_parallel: false
+
+loss_fn:
+  _target_: nemo_automodel.components.loss.masked_ce.MaskedCrossEntropy
+
+# SFT-specific. Pack multiple chat conversations into one fixed-length sequence
+# to amortize padding overhead. Sized from stage-2's analyse_dataset.py output
+# on the v4 42,785-record corpus (raw token counts, add_special_tokens=False):
+#
+#   p50 3648  p90 6522  p95 7202  p99 8224  p99.9 9111  max 12027
+#
+# 8350 = stage-3 --max_length (8250 raw cap + 100 chat-template buffer). This
+# fits every record stage-3 kept (raw <= 8250); records over 8250 raw were
+# dropped at stage 3 (p99-p100 buckets, ~1% of corpus). With median ~3648,
+# the packer fits ~2.2 average records per pack at LBS=1; packing efficiency
+# ~78%. Records lost to oversize at this packed size: 0 (matches stage 3).
+#
+# Memory caveat: bumping packed_sequence from 5550 -> 8350 (~50% larger)
+# pushes per-GPU peak from ~57-65 GiB toward ~75-80 GiB on A100 80 GB. If
+# you OOM on first opt step or first val pass, drop to 7168 or 6500 (and
+# re-run stage 3 with a matching tighter --max_length; otherwise the trainer
+# will silently split/drop oversize packs).
+#
+# Tuning: if you adopt a different SFT corpus and the new percentile report
+# shifts again (e.g. new p99 > 8250), re-run stage 3 with a higher
+# --max_length and update this value to match. Don't drop this block --
+# packing is what makes SFT throughput acceptable; without it every short
+# conversation pads to seq_len and most compute is wasted.
+packed_sequence:
+  packed_sequence_size: 8350
+
+# num_workers: 0 (in-process) is REQUIRED. We tried num_workers: 4 first and
+# the FIRST val pass at step 99 crashed with:
+#
+#   _pickle.PicklingError: Can't pickle
+#     <class 'nemo_automodel._transformers.tokenization.nemo_auto_tokenizer.
+#       NeMoAutoTokenizerWithBosEosEnforced'>:
+#     it's not the same object as nemo_automodel._transformers.tokenization.
+#       nemo_auto_tokenizer.NeMoAutoTokenizerWithBosEosEnforced
+#
+# Root cause: NeMoAutoTokenizerWithBosEosEnforced is a dynamically-created
+# subclass; pickle's identity check (cls is looked-up-cls) fails when the
+# StatefulDataLoader spawn workers try to import + match the class. Same
+# class of failure as CPT Phase 2's BlendedDataset BufferedReader pickle
+# crash (see /sadata/swaminathanb/gsi-training/run-v2/3.run_cpt/recipe_a100sxm-8.yaml:223-229);
+# different unpicklable thing, same spawn pathway. Throughput impact: < 5%
+# (SFT was already GPU-bound at ~3.5s/step before this; data-loader was not
+# the bottleneck).
+dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: nemo_automodel.components.datasets.utils.default_collater
+  shuffle: true
+  num_workers: 0
+  pin_memory: true
+
+validation_dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: nemo_automodel.components.datasets.utils.default_collater
+  num_workers: 0
+  pin_memory: true
+
+optimizer:
+  _target_: torch.optim.AdamW
+  # SFT uses (0.9, 0.999) -- the standard fine-tuning recipe. CPT used
+  # (0.9, 0.95) which is the LLM-pretraining convention (lower beta2 for
+  # better adaptation to non-stationary distributions).
+  betas: [0.9, 0.999]
+  eps: 1e-8
+  # Standard SFT peak; 2x the Phase-2 CPT peak because SFT moves the model
+  # along a clearly-defined task gradient (instruction-following) rather than
+  # the broader CPT distribution shift.
+  lr: 1.0e-5
+  weight_decay: 0.1
+
+# Cosine decay (lowercase -- scheduler.py:224 matches `"cosine"` exactly,
+# unlike WSD which is case-sensitive uppercase). Reference omits
+# lr_decay_steps; the framework auto-computes it from total opt steps minus
+# warmup. Same pattern as the H200 SFT reference, which ran successfully.
+lr_scheduler:
+  lr_decay_style: cosine
+  lr_warmup_steps: 100
+  min_lr: 1.0e-6

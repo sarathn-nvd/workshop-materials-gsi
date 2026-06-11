@@ -1,0 +1,154 @@
+{
+  "case_id": "DEMO_0190",
+  "alert_id": "ALT_2462580",
+  "entity_id": "SYN_071f5b48",
+  "started_at": "2026-05-23T12:41:19.708977+00:00",
+  "finished_at": "2026-05-23T12:41:35.574952+00:00",
+  "wall_clock_ms": 15866.0,
+  "transactions": [
+    {
+      "amount": 269.79,
+      "channel": "wire",
+      "counterparty": "DAF Trucks N.V.",
+      "currency": "USD",
+      "date": "2026-04-30",
+      "notes": "small inbound donation"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_071f5b48",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2580.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$2,580.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "DAF Trucks N.V.",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Sanctions counterparty hit on wire flow (DAF Trucks N.V.)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with fields: question, summary, metrics (with specified fields), evidence.\n\nWe have passage: KYC profile and one transaction line.\n\nWe need to compute deterministic behavioral metrics. Let's parse.\n\nEntity ID: SYN_071f5b48, individual, expected monthly volume: 2580.0 USD? It says expected monthly volume: 2580.0 (presumably USD). business purpose: salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$2,580. risk rating: high. inc"
+    },
+    "numeric": {
+      "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+      "answer": "$0 over 0 cycles, 0x declared",
+      "calculation": "1. Identify transactions that are part of a detected cycle. The provided transaction list contains only one entry (2026-04-30, amount 269.79 USD) labeled as a \"small inbound donation\" with no cycle indicator.\n2. Since no transactions are flagged as part of a cycle, the total volume passing through cycles = 0.\n3. KYC declared monthly volume = $2,580.0.\n4. Compare: 0 vs 2,580.0.\n5. Express the comparison: 0 is 0x the declared volume.",
+      "evidence": "Transaction list includes only the row (2026-04-30, 269.79 USD, USD, DAF Trucks N.V., wire, \"small inbound donation\"); no cycle-related entries are present."
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "It states that the activity is certainly worthy of FinCEN’s attention.",
+      "evidence_span": "is certainly worthy of FinCEN’s attention."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "No, the conduct does not fall within 5318(g).",
+      "label": "contradiction",
+      "reasoning": "The transaction is a small inbound donation of $269.79, well below any reporting threshold, and the individual's monthly volume and nature of activity do not satisfy the suspicious activity reporting requirements of 31 U.S.C. § 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "No, the conduct does not fall within 5318(g).",
+        "label": "contradiction",
+        "reasoning": "The transaction is a small inbound donation of $269.79, well below any reporting threshold, and the individual's monthly volume and nature of activity do not satisfy the suspicious activity reporting requirements of 31 U.S.C. § 5318(g)."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "$0 over 0 cycles, 0x declared",
+        "calculation": "1. Identify transactions that are part of a detected cycle. The provided transaction list contains only one entry (2026-04-30, amount 269.79 USD) labeled as a \"small inbound donation\" with no cycle indicator.\n2. Since no transactions are flagged as part of a cycle, the total volume passing through cycles = 0.\n3. KYC declared monthly volume = $2,580.0.\n4. Compare: 0 vs 2,580.0.\n5. Express the comparison: 0 is 0x the declared volume.",
+        "evidence": "Transaction list includes only the row (2026-04-30, 269.79 USD, USD, DAF Trucks N.V., wire, \"small inbound donation\"); no cycle-related entries are present."
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "It states that the activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 269.79, \"channel\": \"wire\", \"counterparty\": \"DAF Trucks N.V.\", \"currency\": \"USD\", \"date\": \"2026-04-30\", \"notes\": \"small inbound donation\"}], \"kyc_profile\": {\"entity_id\": \"SYN_071f5b48\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2580, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$2,580.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [{\"name\": \"DAF Trucks N.V.\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"No, the conduct does not fall within 5318(g).\", \"label\": \"contradiction\", \"reasoning\": \"The transaction is a small inbound donation of $269.79, well below any reporting threshold, and the individual's monthly volume and nature of activity do not satisfy the suspicious activity reporting requirements of 31 U.S.C. § 5318(g).\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"$0 over 0 cycles, 0x declared\", \"calculation\": \"1. Identify transactions that are part of a detected cycle. The provided transaction list contains only one entry (2026-04-30, amount 269.79 USD) labeled as a \\\"small inbound donation\\\" with no cycle indicator.\\n2. Since no transactions are flagged as part of a cycle, the total volume passing through cycles = 0.\\n3. KYC declared monthly volume = $2,580.0.\\n4. Compare: 0 vs 2,580.0.\\n5. Express the comparison: 0 is 0x the declared volume.\", \"evidence\": \"Transaction list includes only the row (2026-04-30, 269.79 USD, USD, DAF Trucks N.V., wire, \\\"small inbound donation\\\"); no cycle-related entries are present.\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"It states that the activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"sanctions\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Determine if SAR should be filed.\n\nWe have transaction: $269.79 inbound wire from DAF Trucks N.V., small inbound donation. KYC profile: individual, high risk rating, expected monthly volume $2,580. Sanctions PEP hits: DAF Trucks N.V. is OFAC sanctioned. Regulatory frame: sanctions. Typology inferred: layering. Auxiliary findings: statutory says no, but behavioral empty, numeric says 0 cycles, 0x declared, citation says \"It states that the activity is certainly worthy of FinCEN’s attention.\"\n\nWe need to verify consistency: The numeric finding says no cycles, 0 volume, 0x declared. That's consistent with transaction list (only one transaction, no cycle). That's fine.\n\nWe need to produce narrative 250-800 characters, objective, citing facts, referencing most salient behavioral finding (but behavioral empty; we can use numeric finding? The most salient is perhaps the numeric finding that 0 volume vs declared $2,580, indicating no cycle. But we need to surface the most salient behavioral finding that drives decision. Since behavioral empty, maybe we rely on numeric finding.\n\nWe must ground every claim: amounts, dates, counterparty, channel must appear in transactions[]. So we can mention $269.79, date 2026-04-30, counterparty DAF Trucks N.V., channel wire. Also mention OFAC match. Must not invent.\n\nWe must cite metric values verbatim from auxiliary_findings.behavioral if present; not present. So we can compute from transactions. The numeric finding is consistent; we can mention \"0x declared\" but that's from numeric answer; it's a derived statement. It appears in numeric answer, which is part of auxiliary_findings numeric. That is allowed.\n\nWe must not use \"definitely\", \"clearly\". Use qualified language.\n\nWe must end with a complete sentence referring to human investigator.\n\nLength 250-800 characters. Let's craft about 350-400 characters.\n\nNarrative: \"A $269.79 inbound wire on 2026‑04‑30 from DAF Trucks N.V. (an OFAC‑listed entity) was recorded as a small donation. The individual’s expected monthly volume is $2,580, yet no transaction cycle or layering pattern was detected; the auxiliary numeric finding notes 0x of declared volume passing through any cycle. This limited activity, combined with a sanctioned counterparty, warrants a SAR for potential sanctions‑related layering. The matter should be referred to a human investigator for further review.\"\n\nCount characters: Let's approximate. We'll count roughly.\n\n\"A $269.79 inbound wire on 2026‑04‑30 from DAF Trucks N.V. (an OFAC‑listed entity) was recorded as a small donation. The individual’s expected monthly volume is $2,580, yet no transaction cycle or layering pattern was detected; the auxiliary numeric finding notes 0x of declared volume passing through any cycle. This limited activity, combined with a sanctioned counterparty, warrants a SAR for potential sanctions‑related layering. The matter should be referred to a human investigator for further review.\"\n\nLet's count characters including spaces. I'll approximate: \n\nFirst sentence length ~108? Let's count precisely.\n\nI'll count characters manually:\n\nA (1) space (2) $ (3) 2 (4) 6 (5) 9 (6) . (7) 7 (8) 9 (9) space (10) i (11) n (12) b (13) o (14) u (15) n (16) d (17) space (18) w (19) i (20) r (21) e (22) space (23) o (24) n (25) space (26) 2 (27) 0 (28) 2 (29) 6 (30) ‑ (31) 0 (32) 4 (33) ‑ (34) 3 (35) 0 (36) space (37) f (38) r (39) o (40) m (41) space (42) D (43) A (44) F (45) space (46) T (47) r (48) u (49) c (50) k (51) s (52) space (53) N (54) . (55) V (56) . (57) space (58) ( (59) a (60) n (61) space (62) O (63) F (64) A (65) C (66) ‑ (67) l (68) i (69) s (70) t (71) e (72) d (73) space (74) e (75) n (76) t (77) i (78) t (79) y (80) ) (81) space (82) w (83) a (84) s (85) space (86) r (87) e (88) c (89) o (90) r (91) d (92) e (93) d (94) space (95) a (96) s (97) space (98) a (99) space (100) s (101) m (102) a (103) l (104) l (105) space (106) d (107) o (108) n (109) a (110) t (111) i (112) o (113) n (114) . (115) space (116) T (117) h (118) e (119) space (120) i (121) n (122) d (123) i (124) v (125) i (126) d (127) u (128) a (129) l (130) ’ (131) s (132) space (133) e (134) x (135) p (136) e (137) c (138) t (139) e (140) d (141) space (142) m (143) o (144) n (145) t (146) h (147) l (148) y (149) space (150) v (151) o (152) l (153) u (154) m (155) e (156) space (157) i (158) s (159) space (160) $ (161) 2 (162) , (163) 5 (164) 8 (165) 0 (166) , (167) space (168) y (169) e (170) t (171) space (172) n (173) o (174) space (175) t (176) r (177) a (178) n (179) s (180) a (181) c (182) t (183) i (184) o (185) n (186) space (187) c (188) y (189) c (190) l (191) e (192) space (193) o (194) r (195) space (196) l (197) a (198) y (199) e (200) r (201) i (202) n (203) g (204) space (205) p (206) a (207) t (208) t (209) e (210) r (211) n (212) space (213) w (214) a (215) s (216) space (217) d (218) e (219) t (220) e (221) c (222) t (2",
+  "sar_output": null,
+  "sar_parse_error": "no JSON found in model output",
+  "sar_is_suspicious": null,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

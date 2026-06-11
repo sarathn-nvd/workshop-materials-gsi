@@ -1,0 +1,202 @@
+{
+  "case_id": "DEMO_0172",
+  "alert_id": "ALT_2429579",
+  "entity_id": "SYN_4a4c637a",
+  "started_at": "2026-05-28T11:07:32.074341+00:00",
+  "finished_at": "2026-05-28T11:08:23.152597+00:00",
+  "wall_clock_ms": 51078.3,
+  "transactions": [
+    {
+      "amount": 2893.15,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 9958.81,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 24006.18,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 88578.88,
+      "channel": "wire",
+      "counterparty": "Robert Johnson (new payee)",
+      "currency": "USD",
+      "date": "2026-04-29",
+      "notes": "wire to newly-added payee"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_4a4c637a",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2670.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,670.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/312factsheet",
+      "url": "",
+      "text": "owners of such foreign bank, if its shares are not publicly traded;\nThe original proposed rulemaking issued in 2002 sought to create an exception to\nthe enhanced due diligence requirement for those offshore banks that were branches of\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\ndiligence those foreign banks operating under an offshore banking license that are\nbranches of banks licensed in a jurisdiction where one or more banks had been\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\na different approach, focusing instead on clarifying that U.S. financial institutions have\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\naccount. Comments are sought on all aspects of this proposed rulemaking.\nII. Private Banking Provisions\nThe final rule requires certain U.S. financial institutions to establish and maintain\na due diligence program for private banking accounts that is reasonably designed to\ndetect and report any known or suspected money laundering or suspicious activity.\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\nbanking account that is maintained for senior foreign political figures, their immediate\nfamily members, or persons widely and publicly known to"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "PUBLISHED\nUNITED STATES COURT OF APPEALS\n              FOR THE FOURTH CIRCUIT\nUNITED STATES OF AMERICA,             \n                Plaintiff-Appellee,\n               v.                           No. 10-4478\nWALTER LLOYD BLAIR,\n             Defendant-Appellant.\n                                      \n        Appeal from the United States District Court\n         for the District of Maryland, at Greenbelt.\n          Peter J. Messitte, Senior District Judge.\n                   (8:08-cr-00505-PJM-1)\n                  Argued: March 25, 2011\n                Decided: September 21, 2011\n  Before TRAXLER, Chief Judge, and WILKINSON and\n              WYNN, Circuit Judges.\nAffirmed in part, reversed in part, and remanded by published\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\nson wrote the majority opinion as to Section IV, in which\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\nopinion as to Section IV.\n                         COUNSEL\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\nMAN, Washington, D.C., for Appellant. Michael Richard\n\f2\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\nstein, United States Attorney, Baltimore, Maryland, Jonathan\nC. Su, Assistant United States Attorney, OFFICE OF THE\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\nAppellee.\n                               OPINION\nPER CURIAM:\n   Walter L. Blair, a Maryland attorne"
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "ing beneficiaries)\nAdvanced systems (for\nmore developed\norganisations)\n◼ Sound investment policies\n◼ Resource generation plan\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\nRECOMMENDATION 8\n75\n© 2023 FATF/OECD\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\nencompasses a statement of principles of development as well as a code of conduct,\nand outlines the ethical principles that must be adhered to, and promoted, by the\norganisation and its members. Below is an excerpt from the Code related to\norganisational integrity:\nGovernance\n Each Organisation shall be governed fairly and responsibly by an\nindependent, active and informed governing body (e.g., the Board of\nDirectors).\n All voting members of the governing body shall serve without compensation,\nexcept for reasonable expenses incurred to fulfil their organisational duties.\n Each Organisation shall establish and periodically review a governance\nframework suitable for fulfilling its mandate. The structure shall enable the\nOrganisation to make timely decisions and to meet its responsibilities. The\nframework shall include an appropriate governance structure and operations;\nrelationship of senior staff and the governing body; and clear decision-making\nprocesses. […]\nOrganisational Integrity\n The affairs of the Organisation shall be conducted with integrity and\ntransparency. The Organisa"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-ELDER-EXPLOITATION-01",
+      "section": "Investigation Steps",
+      "text": "1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "elder",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "elder_exploitation"
+  },
+  "typology_hypothesis": "elder_exploitation",
+  "activity_descriptor": "Retiree with 4 escalating wires to (Robert Johnson (new payee))",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_4a4c637a executed 4 transactions totaling $125,437.02 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.24. Volume vs declared monthly is 82.91x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 4,
+        "tx_total_usd": 125437.02,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.24,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.69,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 82.91
+      },
+      "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nWe must compute escalation rate of wires to any newly-added payee. Input is a transaction bundle with [transactions] block and [kyc_profile] block. We need to compute escalation rate. Likely they want rate of increase in amount of wires to newly-added payee over time? Possibly compute growth rate? Let's interpret: \"escalation rate of wires to any newly-added payee.\" Could be ratio of total amount to number of wires? Or ma"
+    },
+    "citation": {
+      "question": "What does pdfs/312factsheet say about the activity described?",
+      "answer": "The rule requires institutions to establish and maintain a due diligence program for private banking accounts.",
+      "evidence_span": "establish and maintain\na due diligence program for private banking accounts"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "yes, § 5318(g) requires reporting",
+      "label": "entailment",
+      "reasoning": "The four wire transfers to a newly‑added payee total $125,437.02, far exceeding the expected monthly volume of $2,670, and the high risk rating indicate suspicious activity; under 31 U.S.C. § 5318(g) requires financial institutions to file a SAR when such activity is observed, which is met here."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "yes, § 5318(g) requires reporting",
+        "label": "entailment",
+        "reasoning": "The four wire transfers to a newly‑added payee total $125,437.02, far exceeding the expected monthly volume of $2,670, and the high risk rating indicate suspicious activity; under 31 U.S.C. § 5318(g) requires financial institutions to file a SAR when such activity is observed, which is met here."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_4a4c637a executed 4 transactions totaling $125,437.02 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.24. Volume vs declared monthly is 82.91x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 4,
+          "tx_total_usd": 125437.02,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.24,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.69,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 82.91
+        },
+        "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/312factsheet say about the activity described?",
+        "answer": "The rule requires institutions to establish and maintain a due diligence program for private banking accounts.",
+        "evidence_span": "establish and maintain\na due diligence program for private banking accounts"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2893.15, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 9958.81, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 24006.18, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 88578.88, \"channel\": \"wire\", \"counterparty\": \"Robert Johnson (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-29\", \"notes\": \"wire to newly-added payee\"}], \"kyc_profile\": {\"entity_id\": \"SYN_4a4c637a\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2670.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,670.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/312factsheet\", \"url\": \"\", \"text\": \"owners of such foreign bank, if its shares are not publicly traded;\\nThe original proposed rulemaking issued in 2002 sought to create an exception to\\nthe enhanced due diligence requirement for those offshore banks that were branches of\\nwell-regulated foreign banks. Specifically, we proposed to exclude from enhanced due\\ndiligence those foreign banks operating under an offshore banking license that are\\nbranches of banks licensed in a jurisdiction where one or more banks had been\\ndetermined by the Federal Reserve to be subject to comprehensive supervision or\\nregulation on a consolidated basis. The notice of proposed rulemaking issued today takes\\na different approach, focusing instead on clarifying that U.S. financial institutions have\\nsome flexibility in applying the enhanced due diligence procedures on a risk-assessed\\nbasis, tailoring the enhanced due diligence to the risks associated with the particular\\naccount. Comments are sought on all aspects of this proposed rulemaking.\\nII. Private Banking Provisions\\nThe final rule requires certain U.S. financial institutions to establish and maintain\\na due diligence program for private banking accounts that is reasonably designed to\\ndetect and report any known or suspected money laundering or suspicious activity.\\nIncluded in this requirement is the duty to conduct enhanced scrutiny of any private\\nbanking account that is maintained for senior foreign political figures, their immediate\\nfamily members, or persons widely and publicly known to\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"PUBLISHED\\nUNITED STATES COURT OF APPEALS\\n              FOR THE FOURTH CIRCUIT\\nUNITED STATES OF AMERICA,             \\n                Plaintiff-Appellee,\\n               v.                           No. 10-4478\\nWALTER LLOYD BLAIR,\\n             Defendant-Appellant.\\n                                      \\n        Appeal from the United States District Court\\n         for the District of Maryland, at Greenbelt.\\n          Peter J. Messitte, Senior District Judge.\\n                   (8:08-cr-00505-PJM-1)\\n                  Argued: March 25, 2011\\n                Decided: September 21, 2011\\n  Before TRAXLER, Chief Judge, and WILKINSON and\\n              WYNN, Circuit Judges.\\nAffirmed in part, reversed in part, and remanded by published\\nper curiam opinion as to Sections I, II, and III. Judge Wilkin-\\nson wrote the majority opinion as to Section IV, in which\\nJudge Wynn joined. Chief Judge Traxler wrote a dissenting\\nopinion as to Section IV.\\n                         COUNSEL\\nARGUED: Eric Hans Kirchman, KIRCHMAN & KIRCH-\\nMAN, Washington, D.C., for Appellant. Michael Richard\\n\\f2\\nPauze, OFFICE OF THE UNITED STATES ATTORNEY,\\nGreenbelt, Maryland, for Appellee. ON BRIEF: Kenneth M.\\nRobinson, Washington, D.C., for Appellant. Rod J. Rosen-\\nstein, United States Attorney, Baltimore, Maryland, Jonathan\\nC. Su, Assistant United States Attorney, OFFICE OF THE\\nUNITED STATES ATTORNEY, Greenbelt, Maryland, for\\nAppellee.\\n                               OPINION\\nPER CURIAM:\\n   Walter L. Blair, a Maryland attorne\"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"ing beneficiaries)\\nAdvanced systems (for\\nmore developed\\norganisations)\\n◼ Sound investment policies\\n◼ Resource generation plan\\nBEST PRACTICES – COMBATING THE TERRORIST FINANCING ABUSE OF NON-PROFIT ORGANISATIONS\\nRECOMMENDATION 8\\n75\\n© 2023 FATF/OECD\\nBox B.14. Code of ethics of an umbrella NPO organisation based in Canada\\nAn umbrella NPO organisation based in Canada developed a Code of Ethics, which\\nencompasses a statement of principles of development as well as a code of conduct,\\nand outlines the ethical principles that must be adhered to, and promoted, by the\\norganisation and its members. Below is an excerpt from the Code related to\\norganisational integrity:\\nGovernance\\n Each Organisation shall be governed fairly and responsibly by an\\nindependent, active and informed governing body (e.g., the Board of\\nDirectors).\\n All voting members of the governing body shall serve without compensation,\\nexcept for reasonable expenses incurred to fulfil their organisational duties.\\n Each Organisation shall establish and periodically review a governance\\nframework suitable for fulfilling its mandate. The structure shall enable the\\nOrganisation to make timely decisions and to meet its responsibilities. The\\nframework shall include an appropriate governance structure and operations;\\nrelationship of senior staff and the governing body; and clear decision-making\\nprocesses. […]\\nOrganisational Integrity\\n The affairs of the Organisation shall be conducted with integrity and\\ntransparency. The Organisa\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-ELDER-EXPLOITATION-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Confirm beneficiary age (≥65 per FinCEN Advisory FIN-2022-A002).\\n2. Pull transactions; identify newly-added payees followed by escalating wire amounts (e.g., $2K → $5K → $15K → $25K).\\n3. Check for sudden changes in account-management contacts (new authorized user, recent power-of-attorney filing).\\n4. Cross-reference with caregiver / financial-advisor counterparty roles.\\n5. Escalate to SAR review; consider concurrent APS (Adult Protective Services) referral.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"yes, § 5318(g) requires reporting\", \"label\": \"entailment\", \"reasoning\": \"The four wire transfers to a newly‑added payee total $125,437.02, far exceeding the expected monthly volume of $2,670, and the high risk rating indicate suspicious activity; under 31 U.S.C. § 5318(g) requires financial institutions to file a SAR when such activity is observed, which is met here.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_4a4c637a executed 4 transactions totaling $125,437.02 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.24. Volume vs declared monthly is 82.91x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 4, \"tx_total_usd\": 125437.02, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.24, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.69, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 82.91}, \"evidence\": \"transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/312factsheet say about the activity described?\", \"answer\": \"The rule requires institutions to establish and maintain a due diligence program for private banking accounts.\", \"evidence_span\": \"establish and maintain\\na due diligence program for private banking accounts\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string (400-800 characters). Must decide based on evidence.\n\nWe have transactions: 4 wires to new payee Robert Johnson, amounts: 2893.15, 9958.81, 24006.18, 88578.88. Total 125,437.02. KYC: individual, retired, expected monthly volume 2670, business purpose: retired individual on fixed pension income; expected monthly throughput ~$2,670. Risk rating high. Sanctions hits none. Policy excerpts include FinCEN private banking due diligence, etc. SOP for elder exploitation. Auxiliary findings: statutory entailment says yes, §5318(g) requires reporting; behavioral summary shows volume vs declared volume ratio 82.91x, velocity etc. So strong signals: high volume far exceeding expected, new payee, high risk rating, rapid escalation, etc. This likely warrants SAR.\n\nWe must produce narrative 400-800 characters, grounded, citing evidence. Must not exceed 800 characters. Must be exactly one JSON object with fields is_suspicious (bool) and suspicious_activity_report (string). No extra keys.\n\nWe need to ensure narrative length 400-800 characters inclusive. Let's craft about 550 characters.\n\nCount characters roughly. Let's draft:\n\n\"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n\nNow count characters. Let's count precisely.\n\nI'll count characters including spaces.\n\nString:\n\n\"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n\nLet's count. I'll use approximate counting.\n\nI'll copy into a counting method mentally.\n\nI'll count characters:\n\n\"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n\nLet's count using groups.\n\nI'll write with indices.\n\nI'll count characters including spaces and punctuation.\n\nI'll use a tool mental: maybe easier to approximate length: It's likely around 400-500 characters. Let's approximate: each word average 5 chars plus space. Let's count words.\n\nWords list:\n\nFour(4) successive(9) wires(5) to(2) a(1) newly‑added(10?) actually \"newly‑added\" includes hyphen, count characters: n e w l y – a d d e d = 9? Let's just approximate.\n\nBetter to count precisely: I'll write the string and count.\n\nI'll write it out with each character count.\n\nI'll copy the string exactly as I intend:\n\nFour successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\n\nNow count characters.\n\nI'll count using segments.\n\nSegment1: \"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating.\"\n\nLet's count characters up to the period after rating.\n\nI'll count manually:\n\n\"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating.\"\n\nCount characters including spaces.\n\nI'll write each character count:\n\nI'll use a systematic approach: count length of each part.\n\nI'll break into parts:\n\n\"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating.\"\n\nLet's count length of this sentence.\n\nI'll count characters including spaces.\n\nI'll write it with indices:\n\n1 F\n2 o\n3 u\n4 r\n5 space\n6 s\n7 u\n8 c\n9 c\n10 e\n11 s\n12 s\n13 i\n14 v\n15 e\n16 space\n17 w\n18 i\n19 r\n20 e\n21 s\n22 space\n23 t\n24 o\n25 space\n26 a\n27 space\n28 n\n29 e\n30 w\n31 l\n32 y\n33 ‑ (hyphen? actually \"newly‑added\" includes a hyphen; it's a special char but count as one)\n34 a\n35 d\n36 d\n37 e\n38 d\n39 space\n40 p\n41 a\n42 y\n43 e\n44 e\n45 space\n46 '\n47 R\n48 o\n49 b\n50 e\n51 r\n52 t\n53 space\n54 J\n55 o\n56 h\n57 n\n58 s\n59 o\n60 n\n61 '\n62 space\n63 t\n64 o\n65 t\n66 a\n67 l\n68 space\n69 $\n70 1\n71 2\n72 5\n73 ,\n74 4\n75 3\n76 7\n77 .\n78 0\n79 2\n80 space\n81 U\n82 S\n83 D\n84 space\n85 b\n86 e\n87 t\n88 w\n89 e\n90 e\n91 n\n92 space\n93 2\n94 0\n95 2\n96 6\n97 ‑\n98 0\n99 4\n100 ‑\n101 1\n102 2\n103 space\n104 a\n105 n\n106 d\n107 space\n108 2\n109 0\n110 2\n111 6\n112 ‑\n113 0\n114 4\n115 ‑\n116 2\n117 9\n118 ,\n119 space\n120 f\n121 a\n122 r\n123 space\n124 e\n125 x\n126 c\n127 e\n128 e\n129 d\n130 i\n131 n\n132 g\n133 space\n134 t\n135 h\n136 e\n137 space\n138 e\n139 n\n140 t\n141 i\n142 t\n143 y\n144 ’\n145 s\n146 space\n147 d\n148 e\n149 c\n150 l\n151 a\n152 r\n153 e\n154 d\n155 space\n156 m\n157 o\n158 n\n159 t\n160 h\n161 l\n162 y\n163 space\n164 v\n165 o\n166 l\n167 u\n168 m\n169 e\n170 space\n171 o\n172 f\n173 space\n174 $\n175 2\n176 ,\n177 6\n178 7\n179 0\n180 space\n181 a\n182 n\n183 d\n184 space\n185 i\n186 t\n187 s\n188 space\n189 h\n190 i\n191 g\n192 h\n193 space\n194 r\n195 i\n196 s\n197 k\n198 space\n199 r\n200 a\n201 t\n202 i\n203 n\n204 g\n205 .\nSo far 205 characters up to the period after rating.\n\nNow continue: \" The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n\nInclude leading space? There's a space before \"The\". In the string after period there is a space then \"The\". In our earlier count we ended with period at char 205, then there is a space then \"The\". So we need to add that space as char 206.\n\nNow continue counting from there.\n\nI'll write the rest:\n\n\" The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n\nLet's count characters from the space after period.\n\nI'll start counting from char 206 as space.\n\n206: space\n207: T\n208: h\n209: e\n210: space\n211: 2\n212: 4\n213: ‑\n214: h\n215: o\n216: u\n217: r\n218: space\n219: v\n220: e\n221: l\n222: o\n223: c\n224: i\n225: t\n226: y\n227: space\n228: p\n229: e\n230: a\n231: k\n232: s\n233: space\n234: a\n235: t\n236: space\n237: 1\n238: space\n239: v\n240: e\n241: s\n242: u\n243: s\n244: space\n245: a\n246: space\n247: 3\n248: 0\n249: ‑\n250: d\n251: a\n252: y\n253: space\n254: a\n255: v\n256: e\n257: r\n258: a\n259: g\n260: e\n261: space\n262: o\n263: f\n264: space\n265: 0\n266: .\n267: 2\n268: 4\n269: ,\n270: space\n271: y\n272: i\n273: e\n274: l\n275: d\n276: i\n277: n\n278: g\n279: space\n280: a\n281: n\n282: space\n283: 8\n284: 2\n285: .\n286: 9\n287: ×\n288: space\n289: v\n290: o\n291: l\n292: u\n293: m\n294: e\n295: space\n296: r\n297: a\n298: t\n299: i\n300: o\n301: .\n302: space\n303: T\n304: h\n305: i\n306: s\n307: space\n308: p\n309: a\n310: t\n311: t\n312: e\n313: r\n314: n\n315: space\n316: a\n317: l\n318: i\n319: g\n320: n\n321: s\n322: space\n323: w\n324: i\n325: t\n326: h\n327: space\n328: F\n329: i\n330: n\n331: C\n332: E\n333: N\n334: space\n335: p\n336: r\n337: i\n338: v\n339: a\n340: t\n341: e\n342: ‑\n343: b\n344: a\n345: n\n346: k\n347: i\n348: n\n349: g\n350: space\n351: e\n352: n\n353: h\n354: a\n355: n\n356: c\n357: e\n358: d\n359: ‑\n360: d\n361: u\n362: e\n363: ‑\n364: d\n365: i\n366: l\n367: i\n368: g\n369: e\n370: n\n371: c\n372: e\n373: space\n374: e\n375: x\n376: p\n377: e\n378: c\n379: t\n380: a\n381: t\n382: i\n383: o\n384: n\n385: s\n386: space\n387: a\n388: n\n389: d\n390: space\n391: t\n392: h\n393: e\n394: space\n395: e\n396: l\n397: d\n398: e\n399: r\n400: ‑\n401: e\n402: x\n403: p\n404: l\n405: o\n406: i\n407: t\n408: i\n409: c\n410: a\n411: t\n412: i\n413: o\n414: n\n415: space\n416: S\n417: O\n418: P\n419: ,\n420: space\n421: w\n422: a\n423: r\n424: r\n425: a\n426: n\n427: t\n428: i\n429: n\n430: g\n431: space\n432: S\n433: A\n434: R\n435: space\n436: r\n437: e\n438: v\n439: i\n440: e\n441: w\n442: .\nSo total characters up to 442.\n\nThus total length is 442 characters. That's within 400-800. Good.\n\nNow we need to output JSON with is_suspicious true and the narrative string exactly as we crafted (including quotes). Must ensure no extra characters.\n\nWe must ensure the JSON is valid, no extra whitespace? It's okay.\n\nThus output:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n}\n\nMake sure the string includes the same characters exactly as counted. Ensure the hyphens and special characters are same (en dash?). In the bundle, they used \"newly‑added\" with a hyphen (maybe en dash). We'll keep same. Also \"entity’s\" with curly apostrophe. Use same. Also \"24‑hour\" with hyphen. Also \"82.9×\". Use same multiplication sign. Also \"private‑banking\" with hyphen. Also \"enhanced‑due‑diligence\" with hyphens. Also \"elder‑exploitation\". Use same. Also \"SAR review.\" with period.\n\nMake sure we include the final period.\n\nNow produce final answer as JSON only.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Four successive wires to a newly‑added payee 'Robert Johnson' total $125,437.02 USD between 2026‑04‑12 and 2026‑04‑29, far exceeding the entity’s declared monthly volume of $2,670 and its high risk rating. The 24‑hour velocity peaks at 1 versus a 30‑day average of 0.24, yielding an 82.9× volume ratio. This pattern aligns with FinCEN private‑banking enhanced‑due‑diligence expectations and the elder‑exploitation SOP, warranting SAR review.",
+  "judge_enabled": false,
+  "error": null
+}

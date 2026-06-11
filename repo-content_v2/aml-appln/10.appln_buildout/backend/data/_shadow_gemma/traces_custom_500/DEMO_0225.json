@@ -1,0 +1,211 @@
+{
+  "case_id": "DEMO_0225",
+  "alert_id": "ALT_5918715",
+  "entity_id": "SYN_b111c71e",
+  "started_at": "2026-05-28T10:56:25.132167+00:00",
+  "finished_at": "2026-05-28T10:56:30.430182+00:00",
+  "wall_clock_ms": 5298.0,
+  "transactions": [
+    {
+      "amount": 3531.24,
+      "channel": "wire",
+      "counterparty": "Jennifer Miller (family member)",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 1246.09,
+      "channel": "ach",
+      "counterparty": "TDE Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 4348.6,
+      "channel": "cheque",
+      "counterparty": "YBTGG Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": ""
+    },
+    {
+      "amount": 4392.46,
+      "channel": "card",
+      "counterparty": "Elizabeth Jackson",
+      "currency": "USD",
+      "date": "2026-02-06",
+      "notes": ""
+    },
+    {
+      "amount": 5584.63,
+      "channel": "wire",
+      "counterparty": "ZI Services LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": ""
+    },
+    {
+      "amount": 4225.01,
+      "channel": "ach",
+      "counterparty": "POJJ Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_b111c71e",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4981.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$4,981.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.333,
+      "ach": 0.333,
+      "cheque": 0.167,
+      "card": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.3333333333333333, 'cheque': 0.16666666666666666, 'card': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_b111c71e executed 6 transactions totaling $23,328.03 USD with channel mix {\"wire\": 0.333, \"ach\": 0.333, \"cheque\": 0.167, \"card\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.85x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 23328.03,
+        "channel_mix": {
+          "wire": 0.333,
+          "ach": 0.333,
+          "cheque": 0.167,
+          "card": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.99,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.85
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 19,328.03",
+      "calculation": "1. Identify all transaction amounts: 3,531.24 (2026-04-23), 1,246.09 (2026-04-06), 4,348.60 (2026-04-14), 4,392.46 (2026-02-06), 5,584.63 (2026-04-02), 4,225.01 (2026-04-08). 2. Sum the amounts: 3,531.24 + 1,246.09 + 4,348.60 + 4,392.46 + 5,584.63 + 4,225.01 = 19,328.03.",
+      "evidence": "transactions[0..5].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_b111c71e executed 6 transactions totaling $23,328.03 USD with channel mix {\"wire\": 0.333, \"ach\": 0.333, \"cheque\": 0.167, \"card\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.85x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 23328.03,
+          "channel_mix": {
+            "wire": 0.333,
+            "ach": 0.333,
+            "cheque": 0.167,
+            "card": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.99,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.85
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 19,328.03",
+        "calculation": "1. Identify all transaction amounts: 3,531.24 (2026-04-23), 1,246.09 (2026-04-06), 4,348.60 (2026-04-14), 4,392.46 (2026-02-06), 5,584.63 (2026-04-02), 4,225.01 (2026-04-08). 2. Sum the amounts: 3,531.24 + 1,246.09 + 4,348.60 + 4,392.46 + 5,584.63 + 4,225.01 = 19,328.03.",
+        "evidence": "transactions[0..5].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3531.24, \"channel\": \"wire\", \"counterparty\": \"Jennifer Miller (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 1246.09, \"channel\": \"ach\", \"counterparty\": \"TDE Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 4348.6, \"channel\": \"cheque\", \"counterparty\": \"YBTGG Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"\"}, {\"amount\": 4392.46, \"channel\": \"card\", \"counterparty\": \"Elizabeth Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-06\", \"notes\": \"\"}, {\"amount\": 5584.63, \"channel\": \"wire\", \"counterparty\": \"ZI Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"\"}, {\"amount\": 4225.01, \"channel\": \"ach\", \"counterparty\": \"POJJ Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_b111c71e\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4981.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$4,981.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request specifies that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_b111c71e executed 6 transactions totaling $23,328.03 USD with channel mix {\\\"wire\\\": 0.333, \\\"ach\\\": 0.333, \\\"cheque\\\": 0.167, \\\"card\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 1.85x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 23328.03, \"channel_mix\": {\"wire\": 0.333, \"ach\": 0.333, \"cheque\": 0.167, \"card\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.99, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.85}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 19,328.03\", \"calculation\": \"1. Identify all transaction amounts: 3,531.24 (2026-04-23), 1,246.09 (2026-04-06), 4,348.60 (2026-04-14), 4,392.46 (2026-02-06), 5,584.63 (2026-04-02), 4,225.01 (2026-04-08). 2. Sum the amounts: 3,531.24 + 1,246.09 + 4,348.60 + 4,392.46 + 5,584.63 + 4,225.01 = 19,328.03.\", \"evidence\": \"transactions[0..5].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a volume spike, with total transactions of $23,328.03 across six events, representing 1.85x the declared monthly volume of $4,981.00. However, the activity consists of routine payments to various counterparties, including a $3,531.24 wire to a family member and a $4,348.60 cheque to YBTGG Imports LLC. The transaction mix of wires, ACH, and cheques is consistent with the profile of a retired individual managing personal expenses. No sanctions hits or high-risk jurisdictions were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a volume spike, with total transactions of $23,328.03 across six events, representing 1.85x the declared monthly volume of $4,981.00. However, the activity consists of routine payments to various counterparties, including a $3,531.24 wire to a family member and a $4,348.60 cheque to YBTGG Imports LLC. The transaction mix of wires, ACH, and cheques is consistent with the profile of a retired individual managing personal expenses. No sanctions hits or high-risk jurisdictions were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a volume spike, with total transactions of $23,328.03 across six events, representing 1.85x the declared monthly volume of $4,981.00. However, the activity consists of routine payments to various counterparties, including a $3,531.24 wire to a family member and a $4,348.60 cheque to YBTGG Imports LLC. The transaction mix of wires, ACH, and cheques is consistent with the profile of a retired individual managing personal expenses. No sanctions hits or high-risk jurisdictions were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

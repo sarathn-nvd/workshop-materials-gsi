@@ -1,0 +1,215 @@
+{
+  "case_id": "DEMO_0033",
+  "alert_id": "ALT_2463300",
+  "entity_id": "SYN_4effdfb3",
+  "started_at": "2026-05-27T15:21:55.734871+00:00",
+  "finished_at": "2026-05-27T15:22:23.703835+00:00",
+  "wall_clock_ms": 27969.0,
+  "transactions": [
+    {
+      "amount": 2232.34,
+      "channel": "wire",
+      "counterparty": "Islamic Relief USA",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "charitable donation (benign: 501(c)(3) recipient, single occurrence)"
+    },
+    {
+      "amount": 3160.74,
+      "channel": "cheque",
+      "counterparty": "ZBTF Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 5354.13,
+      "channel": "cheque",
+      "counterparty": "TOPU Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 3464.44,
+      "channel": "cheque",
+      "counterparty": "EE Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 3109.4,
+      "channel": "ach",
+      "counterparty": "DPGI Services LLC",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 1437.41,
+      "channel": "cheque",
+      "counterparty": "UQ Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 2732.41,
+      "channel": "wire",
+      "counterparty": "BSNY Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_4effdfb3",
+    "entity_type": "individual",
+    "expected_monthly_volume": 6197.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,197.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cheque": 0.571,
+      "wire": 0.286,
+      "ach": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'cheque': 0.5714285714285714, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 7 transactions with a tx_total_usd of 21490.87. The channel_mix shows a prevalence of cheque transactions at 57.14%. Activity is characterized by a velocity_24h_max of 0.0, indicating no multiple transactions within a single day. The entity interacted with unique_counterparties_7d of 0 during the most recent seven-day window. A vs_declared_volume_ratio of 1.15 suggests the actual volume is slightly above the expected monthly throughput. This pattern of rapid movement across multiple counterparties warrants further review to ensure alignment with the declared business purpose.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 21490.87,
+        "channel_mix": {
+          "cheque": 57.14,
+          "wire": 28.57,
+          "ach": 14.29
+        },
+        "velocity_24h_max": 0,
+        "velocity_24h_avg_30d": 0.0,
+        "unique_counterparties_7d": 0,
+        "amount_z_score_max": 0.0,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.15
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 21490.87",
+      "calculation": "1. Sum all transaction amounts: 2232.34 (transactions[0]) + 3160.74 (transactions[1]) + 5354.13 (transactions[2]) + 3464.44 (transactions[3]) + 3109.40 (transactions[4]) + 1437.41 (transactions[5]) + 2732.41 (transactions[6]) = 21490.87.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 transactions with a tx_total_usd of 21490.87. The channel_mix shows a prevalence of cheque transactions at 57.14%. Activity is characterized by a velocity_24h_max of 0.0, indicating no multiple transactions within a single day. The entity interacted with unique_counterparties_7d of 0 during the most recent seven-day window. A vs_declared_volume_ratio of 1.15 suggests the actual volume is slightly above the expected monthly throughput. This pattern of rapid movement across multiple counterparties warrants further review to ensure alignment with the declared business purpose.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 21490.87,
+          "channel_mix": {
+            "cheque": 57.14,
+            "wire": 28.57,
+            "ach": 14.29
+          },
+          "velocity_24h_max": 0,
+          "velocity_24h_avg_30d": 0.0,
+          "unique_counterparties_7d": 0,
+          "amount_z_score_max": 0.0,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.15
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 21490.87",
+        "calculation": "1. Sum all transaction amounts: 2232.34 (transactions[0]) + 3160.74 (transactions[1]) + 5354.13 (transactions[2]) + 3464.44 (transactions[3]) + 3109.40 (transactions[4]) + 1437.41 (transactions[5]) + 2732.41 (transactions[6]) = 21490.87.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2232.34, \"channel\": \"wire\", \"counterparty\": \"Islamic Relief USA\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"charitable donation (benign: 501(c)(3) recipient, single occurrence)\"}, {\"amount\": 3160.74, \"channel\": \"cheque\", \"counterparty\": \"ZBTF Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 5354.13, \"channel\": \"cheque\", \"counterparty\": \"TOPU Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 3464.44, \"channel\": \"cheque\", \"counterparty\": \"EE Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 3109.4, \"channel\": \"ach\", \"counterparty\": \"DPGI Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 1437.41, \"channel\": \"cheque\", \"counterparty\": \"UQ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 2732.41, \"channel\": \"wire\", \"counterparty\": \"BSNY Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_4effdfb3\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 6197.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$6,197.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits a tx_count of 7 transactions with a tx_total_usd of 21490.87. The channel_mix shows a prevalence of cheque transactions at 57.14%. Activity is characterized by a velocity_24h_max of 0.0, indicating no multiple transactions within a single day. The entity interacted with unique_counterparties_7d of 0 during the most recent seven-day window. A vs_declared_volume_ratio of 1.15 suggests the actual volume is slightly above the expected monthly throughput. This pattern of rapid movement across multiple counterparties warrants further review to ensure alignment with the declared business purpose.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 21490.87, \"channel_mix\": {\"cheque\": 57.14, \"wire\": 28.57, \"ach\": 14.29}, \"velocity_24h_max\": 0, \"velocity_24h_avg_30d\": 0.0, \"unique_counterparties_7d\": 0, \"amount_z_score_max\": 0.0, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.15}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 21490.87\", \"calculation\": \"1. Sum all transaction amounts: 2232.34 (transactions[0]) + 3160.74 (transactions[1]) + 5354.13 (transactions[2]) + 3464.44 (transactions[3]) + 3109.40 (transactions[4]) + 1437.41 (transactions[5]) + 2732.41 (transactions[6]) = 21490.87.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "```json\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"The account triggered an alert based on a transaction total of $21,490.87 across seven transactions, including payments to entities such as ZBTF Associates LLC ($3,160.74) and TOPU Imports LLC ($5,354.13). However, the auxiliary behavioral findings indicate a vs_declared_volume_ratio of 1.15, which is within a reasonable range of the customer's expected monthly volume of $6,197.00 given the multi-month span of activity (February to April 2026). The channel mix of cheques (57.14%), wires, and ACH is consistent with a salaried individual's typical payment behavior. No sanctions hits were identified, and there is no evidence of rapid pass-through or structuring. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.\"\n}\n```",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account triggered an alert based on a transaction total of $21,490.87 across seven transactions, including payments to entities such as ZBTF Associates LLC ($3,160.74) and TOPU Imports LLC ($5,354.13). However, the auxiliary behavioral findings indicate a vs_declared_volume_ratio of 1.15, which is within a reasonable range of the customer's expected monthly volume of $6,197.00 given the multi-month span of activity (February to April 2026). The channel mix of cheques (57.14%), wires, and ACH is consistent with a salaried individual's typical payment behavior. No sanctions hits were identified, and there is no evidence of rapid pass-through or structuring. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account triggered an alert based on a transaction total of $21,490.87 across seven transactions, including payments to entities such as ZBTF Associates LLC ($3,160.74) and TOPU Imports LLC ($5,354.13). However, the auxiliary behavioral findings indicate a vs_declared_volume_ratio of 1.15, which is within a reasonable range of the customer's expected monthly volume of $6,197.00 given the multi-month span of activity (February to April 2026). The channel mix of cheques (57.14%), wires, and ACH is consistent with a salaried individual's typical payment behavior. No sanctions hits were identified, and there is no evidence of rapid pass-through or structuring. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

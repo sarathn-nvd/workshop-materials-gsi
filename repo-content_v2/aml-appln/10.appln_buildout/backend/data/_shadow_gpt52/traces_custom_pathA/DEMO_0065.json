@@ -1,0 +1,208 @@
+{
+  "case_id": "DEMO_0065",
+  "alert_id": "ALT_2476460",
+  "entity_id": "SYN_742388c5",
+  "started_at": "2026-05-27T16:47:13.275652+00:00",
+  "finished_at": "2026-05-27T16:47:18.733771+00:00",
+  "wall_clock_ms": 5458.1,
+  "transactions": [
+    {
+      "amount": 3460.58,
+      "channel": "wire",
+      "counterparty": "Joshua Jackson (family member)",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 538.73,
+      "channel": "wire",
+      "counterparty": "ECQFE Group LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 2030.87,
+      "channel": "ach",
+      "counterparty": "KIC Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 1530.59,
+      "channel": "card",
+      "counterparty": "Maria Smith",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 615.46,
+      "channel": "card",
+      "counterparty": "Sarah Miller",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1601.18,
+      "channel": "wire",
+      "counterparty": "BGE Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_742388c5",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2187.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,187.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "card": 0.333,
+      "ach": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'ach': 0.16666666666666666, 'card': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_742388c5 executed 6 transactions totaling $9,777.41 USD with channel mix {\"wire\": 0.5, \"card\": 0.333, \"ach\": 0.167}. The 24-hour velocity peak is 2 against a 30-day average of 0.2. Volume vs declared monthly is 2.74x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 9777.41,
+        "channel_mix": {
+          "wire": 0.5,
+          "card": 0.333,
+          "ach": 0.167
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 4,
+        "amount_z_score_max": 1.87,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.74
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 9777.41",
+      "calculation": "1. Identify all transaction amounts: 3460.58 (2026-04-16), 538.73 (2026-04-19), 2030.87 (2026-04-19), 1530.59 (2026-04-03), 615.46 (2026-03-04), 1601.18 (2026-04-22). 2. Sum the amounts: 3460.58 + 538.73 + 2030.87 + 1530.59 + 615.46 + 1601.18 = 9777.41.",
+      "evidence": "transactions[0..5].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_742388c5 executed 6 transactions totaling $9,777.41 USD with channel mix {\"wire\": 0.5, \"card\": 0.333, \"ach\": 0.167}. The 24-hour velocity peak is 2 against a 30-day average of 0.2. Volume vs declared monthly is 2.74x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 9777.41,
+          "channel_mix": {
+            "wire": 0.5,
+            "card": 0.333,
+            "ach": 0.167
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 4,
+          "amount_z_score_max": 1.87,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.74
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 9777.41",
+        "calculation": "1. Identify all transaction amounts: 3460.58 (2026-04-16), 538.73 (2026-04-19), 2030.87 (2026-04-19), 1530.59 (2026-04-03), 615.46 (2026-03-04), 1601.18 (2026-04-22). 2. Sum the amounts: 3460.58 + 538.73 + 2030.87 + 1530.59 + 615.46 + 1601.18 = 9777.41.",
+        "evidence": "transactions[0..5].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3460.58, \"channel\": \"wire\", \"counterparty\": \"Joshua Jackson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 538.73, \"channel\": \"wire\", \"counterparty\": \"ECQFE Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 2030.87, \"channel\": \"ach\", \"counterparty\": \"KIC Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 1530.59, \"channel\": \"card\", \"counterparty\": \"Maria Smith\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 615.46, \"channel\": \"card\", \"counterparty\": \"Sarah Miller\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1601.18, \"channel\": \"wire\", \"counterparty\": \"BGE Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_742388c5\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2187.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,187.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_742388c5 executed 6 transactions totaling $9,777.41 USD with channel mix {\\\"wire\\\": 0.5, \\\"card\\\": 0.333, \\\"ach\\\": 0.167}. The 24-hour velocity peak is 2 against a 30-day average of 0.2. Volume vs declared monthly is 2.74x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 9777.41, \"channel_mix\": {\"wire\": 0.5, \"card\": 0.333, \"ach\": 0.167}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 4, \"amount_z_score_max\": 1.87, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.74}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 9777.41\", \"calculation\": \"1. Identify all transaction amounts: 3460.58 (2026-04-16), 538.73 (2026-04-19), 2030.87 (2026-04-19), 1530.59 (2026-04-03), 615.46 (2026-03-04), 1601.18 (2026-04-22). 2. Sum the amounts: 3460.58 + 538.73 + 2030.87 + 1530.59 + 615.46 + 1601.18 = 9777.41.\", \"evidence\": \"transactions[0..5].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a volume spike, with total transactions of $9,777.41 across six events between 2026-03-04 and 2026-04-22, representing 2.74x the declared monthly volume of $2,187.00. However, the activity consists of small, varied payments to family members and small businesses, including a $3,460.58 wire to 'Joshua Jackson (family member)' and a $2,030.87 ACH to 'KIC Enterprises LLC'. These transactions are consistent with the personal spending patterns of a retired individual. No sanctions hits or high-risk jurisdictional links were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a volume spike, with total transactions of $9,777.41 across six events between 2026-03-04 and 2026-04-22, representing 2.74x the declared monthly volume of $2,187.00. However, the activity consists of small, varied payments to family members and small businesses, including a $3,460.58 wire to 'Joshua Jackson (family member)' and a $2,030.87 ACH to 'KIC Enterprises LLC'. These transactions are consistent with the personal spending patterns of a retired individual. No sanctions hits or high-risk jurisdictional links were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a volume spike, with total transactions of $9,777.41 across six events between 2026-03-04 and 2026-04-22, representing 2.74x the declared monthly volume of $2,187.00. However, the activity consists of small, varied payments to family members and small businesses, including a $3,460.58 wire to 'Joshua Jackson (family member)' and a $2,030.87 ACH to 'KIC Enterprises LLC'. These transactions are consistent with the personal spending patterns of a retired individual. No sanctions hits or high-risk jurisdictional links were identified. The activity is consistent with declared business and warrants no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

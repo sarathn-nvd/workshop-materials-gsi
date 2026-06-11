@@ -1,0 +1,195 @@
+{
+  "case_id": "DEMO_0116",
+  "alert_id": "ALT_2476483",
+  "entity_id": "SYN_91fbc766",
+  "started_at": "2026-05-27T15:24:37.198393+00:00",
+  "finished_at": "2026-05-27T15:25:06.217927+00:00",
+  "wall_clock_ms": 29019.6,
+  "transactions": [
+    {
+      "amount": 23001.3,
+      "channel": "wire",
+      "counterparty": "MCM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 23001.3,
+      "channel": "wire",
+      "counterparty": "MCM Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 390324.25,
+      "channel": "cash",
+      "counterparty": "Elizabeth Moore",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 319385.49,
+      "channel": "card",
+      "counterparty": "Maria Martin",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 467886.71,
+      "channel": "card",
+      "counterparty": "Daniel Smith",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 159248.12,
+      "channel": "ach",
+      "counterparty": "XY Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 269057.99,
+      "channel": "card",
+      "counterparty": "Maria Thompson",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_91fbc766",
+    "entity_type": "business",
+    "expected_monthly_volume": 522414.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$522,414.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "Cayman"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.429,
+      "wire": 0.286,
+      "cash": 0.143,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.2857142857142857, 'cash': 0.14285714285714285, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=467886.71, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 1,649,105.16. The channel_mix includes cash: 390,324.25, which warrants a review for potential structuring or CTR compliance under 31 USC 5324. Activity shows a velocity_24h_max of 467,886.71, indicating high-value single-day movements. There are unique_counterparties_7d of 3, reflecting concentrated activity in the most recent window. The vs_declared_volume_ratio is 3.16, suggesting volume significantly exceeds the expected monthly profile. This pattern of high-value transactions and volume variance appears consistent with rapid asset movement.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 1649105.16,
+          "channel_mix": {
+            "wire": 46002.6,
+            "cash": 390324.25,
+            "card": 1056329.19,
+            "ach": 159248.12
+          },
+          "velocity_24h_max": 467886.71,
+          "unique_counterparties_7d": 3,
+          "vs_declared_volume_ratio": 3.16
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 1,648,905.16",
+      "calculation": "1. Sum all transaction amounts: transactions[0] (23,001.30) + transactions[1] (23,001.30) + transactions[2] (390,324.25) + transactions[3] (319,385.49) + transactions[4] (467,886.71) + transactions[5] (159,248.12) + transactions[6] (269,057.99) = 1,648,905.16. 2. Compare to kyc_profile.expected_monthly_volume (522,414.0).",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 1,648,905.16",
+        "calculation": "1. Sum all transaction amounts: transactions[0] (23,001.30) + transactions[1] (23,001.30) + transactions[2] (390,324.25) + transactions[3] (319,385.49) + transactions[4] (467,886.71) + transactions[5] (159,248.12) + transactions[6] (269,057.99) = 1,648,905.16. 2. Compare to kyc_profile.expected_monthly_volume (522,414.0).",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 23001.3, \"channel\": \"wire\", \"counterparty\": \"MCM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"outbound wire\"}, {\"amount\": 23001.3, \"channel\": \"wire\", \"counterparty\": \"MCM Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 390324.25, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Moore\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 319385.49, \"channel\": \"card\", \"counterparty\": \"Maria Martin\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 467886.71, \"channel\": \"card\", \"counterparty\": \"Daniel Smith\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 159248.12, \"channel\": \"ach\", \"counterparty\": \"XY Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 269057.99, \"channel\": \"card\", \"counterparty\": \"Maria Thompson\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_91fbc766\", \"entity_type\": \"business\", \"expected_monthly_volume\": 522414.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$522,414.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"Cayman\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 1,648,905.16\", \"calculation\": \"1. Sum all transaction amounts: transactions[0] (23,001.30) + transactions[1] (23,001.30) + transactions[2] (390,324.25) + transactions[3] (319,385.49) + transactions[4] (467,886.71) + transactions[5] (159,248.12) + transactions[6] (269,057.99) = 1,648,905.16. 2. Compare to kyc_profile.expected_monthly_volume (522,414.0).\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account exhibits transaction volumes significantly exceeding the declared profile. Total transaction volume is 1,648,905.16, which is approximately 3.15x the expected monthly volume of 522,414.0. Notable activity includes a large cash deposit of 390,324.25 on 2026-02-10 and multiple high-value card transactions to Maria Martin (319,385.49), Daniel Smith (467,886.71), and Maria Thompson (269,057.99). Such high-velocity movement of funds, particularly the large cash component, is inconsistent with the declared business purpose of an offshore holding company for asset holding. This pattern suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account exhibits transaction volumes significantly exceeding the declared profile. Total transaction volume is 1,648,905.16, which is approximately 3.15x the expected monthly volume of 522,414.0. Notable activity includes a large cash deposit of 390,324.25 on 2026-02-10 and multiple high-value card transactions to Maria Martin (319,385.49), Daniel Smith (467,886.71), and Maria Thompson (269,057.99). Such high-velocity movement of funds, particularly the large cash component, is inconsistent with the declared business purpose of an offshore holding company for asset holding. This pattern suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account exhibits transaction volumes significantly exceeding the declared profile. Total transaction volume is 1,648,905.16, which is approximately 3.15x the expected monthly volume of 522,414.0. Notable activity includes a large cash deposit of 390,324.25 on 2026-02-10 and multiple high-value card transactions to Maria Martin (319,385.49), Daniel Smith (467,886.71), and Maria Thompson (269,057.99). Such high-velocity movement of funds, particularly the large cash component, is inconsistent with the declared business purpose of an offshore holding company for asset holding. This pattern suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

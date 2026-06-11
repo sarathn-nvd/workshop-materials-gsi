@@ -1,0 +1,201 @@
+{
+  "case_id": "DEMO_0075",
+  "alert_id": "ALT_2411802",
+  "entity_id": "SYN_c1500837",
+  "started_at": "2026-05-23T13:14:37.717679+00:00",
+  "finished_at": "2026-05-23T13:14:40.587418+00:00",
+  "wall_clock_ms": 2869.8,
+  "transactions": [
+    {
+      "amount": 4161.24,
+      "channel": "wire",
+      "counterparty": "Daniel Martin (family member)",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 1637.54,
+      "channel": "cheque",
+      "counterparty": "MJOCM Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 1501.52,
+      "channel": "card",
+      "counterparty": "Sarah White",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 1748.55,
+      "channel": "ach",
+      "counterparty": "IY Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 700.13,
+      "channel": "ach",
+      "counterparty": "OX Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    },
+    {
+      "amount": 1406.63,
+      "channel": "card",
+      "counterparty": "Susan Smith",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_c1500837",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1736.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,736.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "card": 0.333,
+      "ach": 0.333,
+      "wire": 0.167,
+      "cheque": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'cheque': 0.16666666666666666, 'card': 0.3333333333333333, 'ach': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The account of SYN_c1500837, a retired individual with a low risk rating, shows a total of 6 transactions amounting to $11,155.61. Activity includes wires to family members, cheques, and card/ACH transfers to various LLCs. The highest single transaction was $4,161.24, and the account exhibited a velocity of 2 transactions in 24 hours. The channel mix consists of wire (0.17), cheque (0.17), card (0.33), and ach (0.33). The observed volume is 6.42x the declared monthly volume of $1,736.00.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 11155.61,
+        "channel_mix": {
+          "wire": 0.16666666666666666,
+          "cheque": 0.16666666666666666,
+          "card": 0.3333333333333333,
+          "ach": 0.3333333333333333
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 2.11,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 6.42
+      },
+      "evidence": "transactions[0..5]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "Total transaction volume is $10,455.61, which is 6.02x the declared monthly volume of $1,736.0.",
+      "calculation": "1. Sum transactions: 4,161.24 + 1,637.54 + 1,501.52 + 1,748.55 + 700.13 + 1,406.63 = 10,455.61\n2. Compare to KYC: 10,455.61 / 1,736.0 = 6.02",
+      "evidence": "Transactions: date,amount fields; KYC: expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant passage was provided to extract a citation from.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "error": "no_json",
+      "raw": "{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"statute\": \"\"}"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": false,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_c1500837, a retired individual with a low risk rating, shows a total of 6 transactions amounting to $11,155.61. Activity includes wires to family members, cheques, and card/ACH transfers to various LLCs. The highest single transaction was $4,161.24, and the account exhibited a velocity of 2 transactions in 24 hours. The channel mix consists of wire (0.17), cheque (0.17), card (0.33), and ach (0.33). The observed volume is 6.42x the declared monthly volume of $1,736.00.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 11155.61,
+          "channel_mix": {
+            "wire": 0.16666666666666666,
+            "cheque": 0.16666666666666666,
+            "card": 0.3333333333333333,
+            "ach": 0.3333333333333333
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 2.11,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 6.42
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "Total transaction volume is $10,455.61, which is 6.02x the declared monthly volume of $1,736.0.",
+        "calculation": "1. Sum transactions: 4,161.24 + 1,637.54 + 1,501.52 + 1,748.55 + 700.13 + 1,406.63 = 10,455.61\n2. Compare to KYC: 10,455.61 / 1,736.0 = 6.02",
+        "evidence": "Transactions: date,amount fields; KYC: expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 4161.24, \"channel\": \"wire\", \"counterparty\": \"Daniel Martin (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 1637.54, \"channel\": \"cheque\", \"counterparty\": \"MJOCM Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 1501.52, \"channel\": \"card\", \"counterparty\": \"Sarah White\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 1748.55, \"channel\": \"ach\", \"counterparty\": \"IY Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 700.13, \"channel\": \"ach\", \"counterparty\": \"OX Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}, {\"amount\": 1406.63, \"channel\": \"card\", \"counterparty\": \"Susan Smith\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_c1500837\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1736, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,736.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_c1500837, a retired individual with a low risk rating, shows a total of 6 transactions amounting to $11,155.61. Activity includes wires to family members, cheques, and card/ACH transfers to various LLCs. The highest single transaction was $4,161.24, and the account exhibited a velocity of 2 transactions in 24 hours. The channel mix consists of wire (0.17), cheque (0.17), card (0.33), and ach (0.33). The observed volume is 6.42x the declared monthly volume of $1,736.00.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 11155.61, \"channel_mix\": {\"wire\": 0.16666666666666666, \"cheque\": 0.16666666666666666, \"card\": 0.3333333333333333, \"ach\": 0.3333333333333333}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 2.11, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 6.42}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"Total transaction volume is $10,455.61, which is 6.02x the declared monthly volume of $1,736.0.\", \"calculation\": \"1. Sum transactions: 4,161.24 + 1,637.54 + 1,501.52 + 1,748.55 + 700.13 + 1,406.63 = 10,455.61\\n2. Compare to KYC: 10,455.61 / 1,736.0 = 6.02\", \"evidence\": \"Transactions: date,amount fields; KYC: expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

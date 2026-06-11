@@ -1,0 +1,254 @@
+{
+  "case_id": "DEMO_0194",
+  "alert_id": "ALT_2474443",
+  "entity_id": "SYN_b9cd6940",
+  "started_at": "2026-05-27T16:07:34.838656+00:00",
+  "finished_at": "2026-05-27T16:07:42.252427+00:00",
+  "wall_clock_ms": 7413.8,
+  "transactions": [
+    {
+      "amount": 5325.78,
+      "channel": "cash",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5360.73,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6672.05,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8853.0,
+      "channel": "ach",
+      "counterparty": "Inbound from AC399607",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5042.67,
+      "channel": "cash",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4813.72,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 8826.73,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5351.75,
+      "channel": "ach",
+      "counterparty": "Inbound from AC345884",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 6368.51,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 3764.09,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 5486.25,
+      "channel": "cash",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "smurfing fan-in deposit"
+    },
+    {
+      "amount": 4688.7,
+      "channel": "ach",
+      "counterparty": "Inbound from AC384913",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": "smurfing fan-in deposit"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_b9cd6940",
+    "entity_type": "business",
+    "expected_monthly_volume": 747759.0,
+    "business_purpose": "Money services business (currency exchange / transmitter); declared monthly volume ~$747,759.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.583,
+      "cash": 0.417
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "under",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.4166666666666667, 'ach': 0.5833333333333334})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 13 with a tx_total_usd of 70553.98. The channel_mix shows a cash component of 0.385, which makes the activity subject to CTR and structuring considerations under 31 USC 5324. Transactional intensity peaked at a velocity_24h_max of 4. The account interacted with unique_counterparties_7d of 3. A vs_declared_volume_ratio of 0.03 indicates activity significantly below the expected monthly volume. These patterns, including the presence of cash, warrant further review for potential structuring.",
+      "metrics": {
+        "tx_count": 13,
+        "tx_total_usd": 70553.98,
+        "channel_mix": {
+          "ach": 0.538,
+          "cash": 0.385,
+          "wire": 0.077
+        },
+        "velocity_24h_max": 4,
+        "velocity_24h_avg_30d": 1.62,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.7,
+        "country_risk_max": 0.1,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 0.03
+      },
+      "evidence": "transactions[0..12]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 70,554.23",
+      "calculation": "1. Sum all transaction amounts from the [transactions] block: 5,325.78 + 5,360.73 + 6,672.05 + 8,853.00 + 5,042.67 + 4,813.72 + 8,826.73 + 5,351.75 + 6,368.51 + 3,764.09 + 5,486.25 + 4,688.70 = 70,554.23",
+      "evidence": "transactions[0..11].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account recorded a tx_count of 13 with a tx_total_usd of 70553.98. The channel_mix shows a cash component of 0.385, which makes the activity subject to CTR and structuring considerations under 31 USC 5324. Transactional intensity peaked at a velocity_24h_max of 4. The account interacted with unique_counterparties_7d of 3. A vs_declared_volume_ratio of 0.03 indicates activity significantly below the expected monthly volume. These patterns, including the presence of cash, warrant further review for potential structuring.",
+        "metrics": {
+          "tx_count": 13,
+          "tx_total_usd": 70553.98,
+          "channel_mix": {
+            "ach": 0.538,
+            "cash": 0.385,
+            "wire": 0.077
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 1.62,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.7,
+          "country_risk_max": 0.1,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 0.03
+        },
+        "evidence": "transactions[0..12]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 70,554.23",
+        "calculation": "1. Sum all transaction amounts from the [transactions] block: 5,325.78 + 5,360.73 + 6,672.05 + 8,853.00 + 5,042.67 + 4,813.72 + 8,826.73 + 5,351.75 + 6,368.51 + 3,764.09 + 5,486.25 + 4,688.70 = 70,554.23",
+        "evidence": "transactions[0..11].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 5325.78, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5360.73, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6672.05, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8853.0, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC399607\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5042.67, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4813.72, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 8826.73, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5351.75, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC345884\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 6368.51, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 3764.09, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 5486.25, \"channel\": \"cash\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"smurfing fan-in deposit\"}, {\"amount\": 4688.7, \"channel\": \"ach\", \"counterparty\": \"Inbound from AC384913\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"smurfing fan-in deposit\"}], \"kyc_profile\": {\"entity_id\": \"SYN_b9cd6940\", \"entity_type\": \"business\", \"expected_monthly_volume\": 747759.0, \"business_purpose\": \"Money services business (currency exchange / transmitter); declared monthly volume ~$747,759.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account recorded a tx_count of 13 with a tx_total_usd of 70553.98. The channel_mix shows a cash component of 0.385, which makes the activity subject to CTR and structuring considerations under 31 USC 5324. Transactional intensity peaked at a velocity_24h_max of 4. The account interacted with unique_counterparties_7d of 3. A vs_declared_volume_ratio of 0.03 indicates activity significantly below the expected monthly volume. These patterns, including the presence of cash, warrant further review for potential structuring.\", \"metrics\": {\"tx_count\": 13, \"tx_total_usd\": 70553.98, \"channel_mix\": {\"ach\": 0.538, \"cash\": 0.385, \"wire\": 0.077}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 1.62, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.7, \"country_risk_max\": 0.1, \"loop_detected\": true, \"vs_declared_volume_ratio\": 0.03}, \"evidence\": \"transactions[0..12]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 70,554.23\", \"calculation\": \"1. Sum all transaction amounts from the [transactions] block: 5,325.78 + 5,360.73 + 6,672.05 + 8,853.00 + 5,042.67 + 4,813.72 + 8,826.73 + 5,351.75 + 6,368.51 + 3,764.09 + 5,486.25 + 4,688.70 = 70,554.23\", \"evidence\": \"transactions[0..11].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a pattern of multiple inbound deposits just below the $10,000 reporting threshold, specifically five cash deposits on 2026-04-15, 2026-04-16, 2026-04-20, and 2026-04-20, and several ACH transfers from counterparties AC399607 and AC345884. However, the KYC profile identifies the entity as a 'business' and a 'Money services business (currency exchange / transmitter)' with a declared expected_monthly_volume of $747,759.00. The observed total transaction volume of $70,554.23 is significantly below this threshold (vs_declared_volume_ratio of 0.03). Given the entity's business archetype, these sub-CTR movements are consistent with declared business operations and warrant no filing. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a pattern of multiple inbound deposits just below the $10,000 reporting threshold, specifically five cash deposits on 2026-04-15, 2026-04-16, 2026-04-20, and 2026-04-20, and several ACH transfers from counterparties AC399607 and AC345884. However, the KYC profile identifies the entity as a 'business' and a 'Money services business (currency exchange / transmitter)' with a declared expected_monthly_volume of $747,759.00. The observed total transaction volume of $70,554.23 is significantly below this threshold (vs_declared_volume_ratio of 0.03). Given the entity's business archetype, these sub-CTR movements are consistent with declared business operations and warrant no filing. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a pattern of multiple inbound deposits just below the $10,000 reporting threshold, specifically five cash deposits on 2026-04-15, 2026-04-16, 2026-04-20, and 2026-04-20, and several ACH transfers from counterparties AC399607 and AC345884. However, the KYC profile identifies the entity as a 'business' and a 'Money services business (currency exchange / transmitter)' with a declared expected_monthly_volume of $747,759.00. The observed total transaction volume of $70,554.23 is significantly below this threshold (vs_declared_volume_ratio of 0.03). Given the entity's business archetype, these sub-CTR movements are consistent with declared business operations and warrant no filing. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

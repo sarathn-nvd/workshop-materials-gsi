@@ -1,0 +1,262 @@
+# CPT Phase 2 recipe -- 8 x A100 SXM (80 GB / GPU, NVSwitch mesh), BF16.
+# Resumes from /sadata/swaminathanb/gsi-training/3.run_cpt/checkpoints/LOWEST_VAL/
+# (Phase-1 final checkpoint, already on this disk -- no rsync needed) and trains
+# the AML-specific level_2 corpus with a 25/75 native-AML/EDGAR-replay blend.
+#
+# A100 has NO FP8 hardware (Ampere SM_80) and DeepEP is Hopper-only, so this
+# recipe runs BF16-only with the torch dispatcher -- same as run-v1's
+# recipe_a100sxm-8.yaml. There is effectively only one tier on A100.
+#
+# PRE-REQUISITES
+#
+# A. SSH into the same 8-GPU A100 SXM node used for Phase 1, cd into the
+#    workspace root, and export HOST_WORKSPACE so the bind-mount in step 1
+#    resolves correctly. Phase 2 reuses the Phase-1 workspace -- the Phase-1
+#    LOWEST_VAL checkpoint is already on this disk; no cross-host rsync needed.
+#
+# ssh swaminathanb@exp-blr-dgxa100-02
+# cd /sadata/swaminathanb/gsi-training
+# export HOST_WORKSPACE=/sadata/swaminathanb/gsi-training
+#
+#    Expected layout under HOST_WORKSPACE on the A100 box:
+#
+#    /sadata/swaminathanb/gsi-training/
+#    |-- 3.run_cpt/                             (Phase 1 work dir)
+#    |   `-- checkpoints/LOWEST_VAL/model/consolidated/   (= Phase 1 final ckpt, ~63 GB,
+#    |                                                       referenced by Phase 2 model.pretrained_model_name_or_path)
+#    `-- run-v2/                                (this directory tree)
+#        |-- 1.shuffle_dataset/data/...
+#        |-- 2.prepare_megatroncore_dataset/data/{native,replay}_processed_data_*
+#        `-- 3.run_cpt/                         (recipe + scripts; container workdir)
+#
+# B. Authenticate the Docker daemon against NGC (nvcr.io) so the
+#    `nvcr.io/nvidia/nemo-automodel:26.04` image can be pulled. Use your NGC
+#    API key as the password; the username is the literal string $oauthtoken:
+#
+# docker login nvcr.io
+#   Username: $oauthtoken
+#   Password: <NGC_API_KEY>
+#
+# C. Export the secrets the container expects at runtime. HF_TOKEN is required
+#    for the tokenizer download (the model weights themselves are loaded from
+#    /workspace/3.run_cpt/checkpoints/LOWEST_VAL/model/consolidated/, but the
+#    AutoTokenizer.from_pretrained call still goes to HuggingFace for the gated
+#    NVIDIA repo):
+#
+# export HF_TOKEN=hf_xxx_your_token   # required (gated NVIDIA repo)
+#
+# RUN COMMANDS
+#
+# 0. (Optional) archive the previous run's log:
+#
+# mv /workspace/run-v2/3.run_cpt/run.log \
+#    /workspace/run-v2/3.run_cpt/run.$(date +%Y%m%d-%H%M%S).log
+#
+# 1. Launch the training container detached. HOST_WORKSPACE bind-mounts the
+#    workspace root at /workspace so both run-v2/ (this dir) and
+#    3.run_cpt/checkpoints/LOWEST_VAL/ (Phase-1 ckpt) are visible to the
+#    container under one mount. (Rootless: omit `--user`/`--group-add 0`.)
+#
+# docker run -d --gpus all \
+#   --name cpt-phase2 \
+#   --shm-size=64g --ipc=host \
+#   --ulimit memlock=-1 \
+#   --workdir /workspace/run-v2/3.run_cpt \
+#   -e HOME=/tmp \
+#   -e HF_HOME=/workspace/run-v2/3.run_cpt/hf_cache \
+#   -e HF_TOKEN=$HF_TOKEN \
+#   -e PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+#   -v $HOST_WORKSPACE:/workspace \
+#   nvcr.io/nvidia/nemo-automodel:26.04 \
+#   torchrun --nproc-per-node=8 \
+#     /workspace/run-v2/3.run_cpt/pretrain.py \
+#     --config /workspace/run-v2/3.run_cpt/recipe_a100sxm-8.yaml
+#
+# 2. Stream container stdout/stderr to a file in the background. Run from
+#    $HOST_WORKSPACE so the redirect path resolves on the host:
+#
+# nohup docker logs -f cpt-phase2 > run-v2/3.run_cpt/run.log 2>&1 &
+# disown
+#
+# 3. Verify the container is running:
+#
+# docker ps --filter name=cpt-phase2
+#
+# OPS COMMANDS
+#
+# Tail live log:        tail -f $HOST_WORKSPACE/run-v2/3.run_cpt/run.log
+# Last 200 log lines:   docker logs --tail 200 cpt-phase2
+# GPU snapshot:         nvidia-smi --query-gpu=index,memory.used,memory.free,utilization.gpu,power.draw --format=csv
+# Verify NVLink mesh:   nvidia-smi topo -m   (expect NV12 between every GPU pair on A100 SXM)
+# Graceful stop:        docker stop cpt-phase2 && docker rm cpt-phase2
+# Resume from latest ckpt: just re-run step 1 above (NeMo auto-resumes from checkpoints/).
+
+model:
+  _target_: nemo_automodel.NeMoAutoModelForCausalLM.from_pretrained
+  # PHASE 2 DELTA 1: resume from Phase-1 LOWEST_VAL consolidated checkpoint
+  # (already on this workspace from the Phase-1 run) instead of the HF base.
+  # Phase 2 nudges Phase-1 weights toward AML; it does not start from scratch.
+  pretrained_model_name_or_path: /workspace/3.run_cpt/checkpoints/LOWEST_VAL/model/consolidated
+  trust_remote_code: true
+  torch_dtype: auto
+  use_mamba_kernels: true
+  backend:
+    _target_: nemo_automodel.components.models.common.BackendConfig
+    linear: te
+    rms_norm: torch_fp32
+    # FORCED: A100 SXM has full NVSwitch mesh but DeepEP kernels are
+    # Hopper-only. Stay on torch dispatcher (same as Phase 1).
+    experts: torch_mm
+    dispatcher: torch
+    enable_hf_state_dict_adapter: true
+    enable_fsdp_optimizations: true
+
+# DISABLED on A100 -- no FP8 tensor cores in Ampere (SM_80).
+fp8:
+  enabled: false
+
+dataset:
+  _target_: nemo_automodel.components.datasets.llm.megatron_dataset.MegatronPretraining
+  # PHASE 2 DELTA 2: weighted blend (the heart of Phase 2). Native AML gets 25%
+  # of every microbatch, EDGAR-replay 75% (anti-forgetting). Megatron normalizes
+  # weights to 1.0, so each replay shard takes 18.75 (4 * 18.75 = 75). If the
+  # replay tokenize step produced a different number of shards, redistribute the
+  # 75 evenly across them so total replay share stays at 75%.
+  paths:
+    - "25"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/native_processed_data_0_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_0_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_1_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_2_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_3_text_document
+  index_mapping_dir: /workspace/run-v2/3.run_cpt/mapping_dir
+  tokenizer:
+    _target_: transformers.AutoTokenizer.from_pretrained
+    pretrained_model_name_or_path: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16
+    trust_remote_code: true
+  seq_length: 4096
+  split: "0.99, 0.01, 0.00"
+  splits_to_build: "train"
+
+validation_dataset:
+  _target_: nemo_automodel.components.datasets.llm.megatron_dataset.MegatronPretraining
+  # MUST be byte-for-byte identical to dataset.paths above (same weights, same
+  # paths, same order). If you diverge, in-training val loss becomes
+  # uninterpretable. Per-source post-training PPL is the real Phase-2 metric;
+  # in-training val is just a sanity gauge of the weighted mixture.
+  paths:
+    - "25"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/native_processed_data_0_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_0_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_1_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_2_text_document
+    - "18.75"
+    - /workspace/run-v2/2.prepare_megatroncore_dataset/data/replay_processed_data_3_text_document
+  index_mapping_dir: /workspace/run-v2/3.run_cpt/mapping_dir
+  tokenizer:
+    _target_: transformers.AutoTokenizer.from_pretrained
+    pretrained_model_name_or_path: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16
+    trust_remote_code: true
+  seq_length: 4096
+  split: "0.99, 0.01, 0.00"
+  splits_to_build: "validation"
+  num_val_samples: 2048
+
+step_scheduler:
+  # PHASE 2 DELTA 3: smaller GBS, more opt steps for the smaller corpus.
+  # Token math:
+  #   tokens / opt step = global_batch_size * seq_length = 128 * 4096 = 524,288
+  #   total tokens      = max_steps * tokens_per_step = 2056 * 524,288 = 1.08 B
+  #   With 25/75 blend: native L2 drawn = 270 M from ~10 M pool = ~27x replay (safe);
+  #   EDGAR-replay drawn = 810 M from ~300 M pool = ~2.7x replay (anti-forgetting).
+  global_batch_size: 128            # was 256 in Phase 1
+  # 80 GB ceiling -- LBS=2 measured ~67 GiB peak in Phase 1 (steady state).
+  # LBS=4 estimated ~78-82 GiB which is right at the OOM edge during val/ckpt
+  # spikes. Stay at 2 for safety; the GBS halving already cuts wall clock.
+  local_batch_size: 2
+  ckpt_every_steps: 100
+  val_every_steps: 100              # was 190 in Phase 1; smaller run, more frequent val is cheap
+  num_epochs: 2                     # decorative under bounded max_steps mode (same as Phase 1's
+                                    # num_epochs: 1). The real volume lever is max_steps.
+                                    # Megatron will log "> total number of epochs: ~27" against the
+                                    # native shard -- that's the internal replay rate, not a bug.
+  max_steps: 2056
+
+dist_env:
+  backend: nccl
+  timeout_minutes: 30
+
+rng:
+  _target_: nemo_automodel.components.training.rng.StatefulRNG
+  seed: 1111
+  ranked: true
+
+checkpoint:
+  enabled: true
+  checkpoint_dir: /workspace/run-v2/3.run_cpt/checkpoints/
+  model_save_format: safetensors
+  save_consolidated: true
+
+distributed:
+  strategy: fsdp2
+  dp_size: 8
+  dp_replicate_size: 1
+  tp_size: 1
+  cp_size: 1
+  pp_size: 1
+  # ep_size=8 forced by MoE optimizer-state memory (lower ep won't fit on 80 GB).
+  ep_size: 8
+  # Mandatory on 80 GB. Disabling needs ~125 GiB peak -- OOMs.
+  activation_checkpointing: true
+  sequence_parallel: false
+
+loss_fn:
+  _target_: nemo_automodel.components.loss.masked_ce.MaskedCrossEntropy
+
+# num_workers: 0 (in-process) is REQUIRED with the Phase-2 weighted-blend
+# `dataset.paths`. Megatron's BlendedDataset opens BufferedReader handles to
+# every sub-shard's .bin/.idx in __init__; PyTorch on CUDA uses the `spawn`
+# start method and can't pickle BufferedReader to ship to worker processes.
+# Phase 1's single-glob dataset path didn't trigger this -- only the
+# weighted-blend list. Throughput impact is < 3% (Phase 1 was GPU-bound at
+# ~37 sec/step, not data-loader bound).
+dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: torch.utils.data.default_collate
+  num_workers: 0
+
+validation_dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: torch.utils.data.default_collate
+  num_workers: 0
+
+optimizer:
+  _target_: torch.optim.AdamW
+  betas: [0.9, 0.95]
+  # PHASE 2 DELTA 4: quarter of Phase 1's peak. Phase 1 already moved the model
+  # toward the financial register; Phase 2 fine-tunes on top. Higher LR here
+  # over-narrows the register and hurts L1 retention.
+  lr: 5.0e-6
+  weight_decay: 0.1
+  eps: 1.0e-8
+
+# PHASE 2 DELTA 4 (cont.): cosine instead of WSD. Phase 1 stopped at lr ~7.7e-6
+# (its WSD decay phase didn't fully reach min_lr because num_epochs=1 capped
+# training at step 1636 vs the planned 1800; only ~62% of the trailing decay
+# completed). That doesn't matter for Phase 2: a fresh AdamW is constructed
+# here, so there's no momentum/variance carry-over. Phase 2 short-warmups
+# from ~5e-7 (= min_lr at step 0) up to 5e-6 over 50 steps, then cosine-
+# decays back to 5e-7 over the rest of the run -- the standard
+# fine-tune-on-top schedule, independent of where Phase 1 stopped its LR.
+lr_scheduler:
+  lr_decay_style: cosine
+  lr_warmup_steps: 50               # was 100 in Phase 1; just a short ramp from 5e-7 (= min_lr) to 5e-6 (= max_lr)
+  lr_decay_steps: 2000              # most of max_steps=2056 decays to min_lr
+  min_lr: 5.0e-7                    # peak / 10

@@ -1,0 +1,40 @@
+# Step 1 — Data Download dependencies
+
+# HuggingFace datasets
+# Pinned <3.0.0 — datasets 3.x removed script-based loaders, which breaks
+# pile-of-law, edgar-corpus, finqa (they still ship .py loading scripts).
+datasets>=2.19.0,<3.0.0
+huggingface-hub>=0.24.0,<0.35.0
+pyarrow>=15.0.0
+# datasets 2.x still uses the old fsspec API
+fsspec>=2023.10.0,<2024.10.0
+
+# Kaggle
+kagglehub>=0.3.0
+kaggle>=1.6.14
+
+# HTTP / scraping
+requests>=2.32.0
+beautifulsoup4>=4.12.3
+lxml>=5.2.0
+cloudscraper>=1.2.71
+playwright>=1.44.0
+# Keep certifi current for data.consumerfinance.gov etc.
+certifi>=2024.7.4
+
+# Data handling
+pandas>=2.2.0
+
+# CLI / ergonomics
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+tenacity>=8.3.0
+rich>=13.7.0
+
+# Git (for AMLGentex)
+GitPython>=3.1.43
+
+# Used by the AMLGentex source to bootstrap the generator's own pinned
+# dependency set into an isolated sub-venv (so torch/numpy/scipy versions
+# AMLGentex requires don't collide with our top-level venv).
+uv>=0.4.0

@@ -1,0 +1,149 @@
+{
+  "case_id": "DEMO_0078",
+  "entity_id": "SYN_dfeea1a4",
+  "started_at": "2026-05-23T13:14:40.589276+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 6416.5,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 27774.72, \"channel\": \"wire\", \"counterparty\": \"KDJEQ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"outbound wire\"}, {\"amount\": 27774.72, \"channel\": \"wire\", \"counterparty\": \"KDJEQ Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 3400590.71, \"channel\": \"ach\", \"counterparty\": \"MDI Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 874449.11, \"channel\": \"ach\", \"counterparty\": \"MF Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-21\", \"notes\": \"\"}, {\"amount\": 2175782.61, \"channel\": \"wire\", \"counterparty\": \"KVMCA Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 1561305.85, \"channel\": \"ach\", \"counterparty\": \"ELTT Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1046105.9, \"channel\": \"ach\", \"counterparty\": \"OTTL Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dfeea1a4\", \"entity_type\": \"business\", \"expected_monthly_volume\": 3000167, \"business_purpose\": \"Virtual asset service provider (crypto exchange); declared monthly volume ~$3,000,167.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"Malta\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"No statute text was provided to analyze against the fact pattern.\"}], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_dfeea1a4, a virtual asset service provider based in Malta, exhibited a high volume of activity with a total of 6 transactions amounting to $7,043,413.91. The activity is characterized by a significant reliance on ACH transfers (50.0%) and wires (50.0%), with a notable outlier transaction of $3,400,590.71 to MDI Partners LLC. The velocity is low, with a maximum of 1 transaction in 24 hours and 1.57 unique counterparties in 7 days. The amount z-score maximum is 2.11, and the country risk is 0.0. The observed volume is 2.35 times the declared monthly volume of $3,000,167.00.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 7043413.91, \"channel_mix\": {\"wire\": 0.5, \"ach\": 0.5, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 2.11, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.35}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $8,043,483.62, which is approximately 2.68x the declared monthly volume of $3,000,167.00.\", \"calculation\": \"1. Identify all transaction amounts: 27,774.72, 27,774.72, 3,400,590.71, 874,449.11, 2,175,782.61, 1,561,305.85, 1,046,105.90.\\n2. Sum the amounts: 27,774.72 + 27,774.72 + 3,400,590.71 + 874,449.11 + 2,175,782.61 + 1,561,305.85 + 1,046,105.90 = 8,043,483.62.\\n3. Compare to KYC declared monthly volume: 8,043,483.62 / 3,000,167.00 = 2.68.\", \"evidence\": \"Transaction list rows with amounts in USD column.\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also _typology_inferred is \"none\". So likely not suspicious. However need to check decision rule: set is_suspicious=true if evidence and behavioral findings warrant filing a SAR; otherwise false. Since regulatory_frame is benign, likely not suspicious. Also auxiliary_findings includes behavioral and numeric findings, but they may be inconsistent? Let's verify.\n\nWe must verify each finding against raw inputs. The behavioral metrics: tx_count 6, tx_total_usd 7043413.91. Let's compute from transactions list: amounts: 27774.72, 27774.72, 3400590.71, 874449.11, 2175782.61, 1561305.85, 1046105.90. Wait there are 7 transactions? Actually list shows 7 entries. Let's count: 1: 27774.72, 2: 27774.72, 3: 3400590.71, 4: 874449.11, 5: 2175782.61, 6: 1561305.85, 7: 1046105.90. That's 7 transactions. But behavioral says tx_count 6. Also total USD they gave 7043413.91, but sum of all amounts is? Let's sum: 27,774.72+27,774.72=55,549.44; +3,400,590.71=3,456,140.15; +874,449.11=4,330,589.26; +2,175,782.61=6,506,371.87; +1,561,305.85=8,067,677.72; +1,046,105.90=9,113,783.62. Actually that's 9,113,783.62. But they also gave numeric answer sum 8,043,483.62, which matches maybe they excluded some? Let's compute again maybe they omitted one transaction? Let's see which amounts they used: they listed amounts: 27,774.72, 27,774.72, 3,400,590.71, 874,449.11, 2,175,782.61, 1,561,305.85, 1,046,105.90. That's 7 numbers. Summation they gave: 27,774.72 + 27,774.72 + 3,400,590.71 + 874,449.11 + 2,175,782.61 + 1,561,305.85 + 1,046,105.90 = let's compute precisely:\n\n27,774.72 + 27,774.72 = 55,549.44\n+3,400,590.71 = 3,456,140.15\n+874,449.11 = 4,330,589.26\n+2,175,782.61 = 6,506,371.87\n+1,561,305.85 = 8,067,677.72\n+1,046,105.90 = 9,113,783.62\n\nSo total is 9,113,783.62, not 8,043,483.62. They maybe omitted one transaction (maybe the 27,774.72 duplicate? Actually the",
+  "transactions": [
+    {
+      "amount": 27774.72,
+      "channel": "wire",
+      "counterparty": "KDJEQ Services LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 27774.72,
+      "channel": "wire",
+      "counterparty": "KDJEQ Services LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 3400590.71,
+      "channel": "ach",
+      "counterparty": "MDI Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 874449.11,
+      "channel": "ach",
+      "counterparty": "MF Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-21",
+      "notes": ""
+    },
+    {
+      "amount": 2175782.61,
+      "channel": "wire",
+      "counterparty": "KVMCA Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 1561305.85,
+      "channel": "ach",
+      "counterparty": "ELTT Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1046105.9,
+      "channel": "ach",
+      "counterparty": "OTTL Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dfeea1a4",
+    "entity_type": "business",
+    "expected_monthly_volume": 3000167.0,
+    "business_purpose": "Virtual asset service provider (crypto exchange); declared monthly volume ~$3,000,167.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "Malta"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "wire": 0.429
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The provided fact pattern and statute text are empty, so no determination can be made.",
+        "label": "neutral",
+        "reasoning": "No statute text was provided to analyze against the fact pattern."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_dfeea1a4, a virtual asset service provider based in Malta, exhibited a high volume of activity with a total of 6 transactions amounting to $7,043,413.91. The activity is characterized by a significant reliance on ACH transfers (50.0%) and wires (50.0%), with a notable outlier transaction of $3,400,590.71 to MDI Partners LLC. The velocity is low, with a maximum of 1 transaction in 24 hours and 1.57 unique counterparties in 7 days. The amount z-score maximum is 2.11, and the country risk is 0.0. The observed volume is 2.35 times the declared monthly volume of $3,000,167.00.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 7043413.91,
+          "channel_mix": {
+            "wire": 0.5,
+            "ach": 0.5,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 2.11,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.35
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $8,043,483.62, which is approximately 2.68x the declared monthly volume of $3,000,167.00.",
+        "calculation": "1. Identify all transaction amounts: 27,774.72, 27,774.72, 3,400,590.71, 874,449.11, 2,175,782.61, 1,561,305.85, 1,046,105.90.\n2. Sum the amounts: 27,774.72 + 27,774.72 + 3,400,590.71 + 874,449.11 + 2,175,782.61 + 1,561,305.85 + 1,046,105.90 = 8,043,483.62.\n3. Compare to KYC declared monthly volume: 8,043,483.62 / 3,000,167.00 = 2.68.",
+        "evidence": "Transaction list rows with amounts in USD column."
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "nvidia/nemotron-3-nano",
+    "endpoint": "http://localhost:8089/v1"
+  }
+}

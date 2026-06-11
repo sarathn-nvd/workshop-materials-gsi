@@ -1,0 +1,204 @@
+{
+  "case_id": "DEMO_0199",
+  "alert_id": "ALT_2417589",
+  "entity_id": "SYN_dfb9c858",
+  "started_at": "2026-05-27T16:07:37.838470+00:00",
+  "finished_at": "2026-05-27T16:07:43.381667+00:00",
+  "wall_clock_ms": 5543.2,
+  "transactions": [
+    {
+      "amount": 250000.0,
+      "channel": "wire",
+      "counterparty": "EBYZI Solutions LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "intercompany funding (benign: documented holding-entity transfer)"
+    },
+    {
+      "amount": 4581448.63,
+      "channel": "ach",
+      "counterparty": "ECFES Services LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 1979684.18,
+      "channel": "ach",
+      "counterparty": "CKO Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": ""
+    },
+    {
+      "amount": 1169929.47,
+      "channel": "ach",
+      "counterparty": "HR Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 1727682.82,
+      "channel": "ach",
+      "counterparty": "QZM Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 3976069.97,
+      "channel": "wire",
+      "counterparty": "COEX Group LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_dfb9c858",
+    "entity_type": "business",
+    "expected_monthly_volume": 4002158.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$4,002,158.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.667,
+      "wire": 0.333
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.3333333333333333, 'ach': 0.6666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account exhibits a tx_count of 6 with a tx_total_usd of 13684814.07. The channel_mix is composed of ach: 0.667 and wire: 0.333, indicating no cash activity. Transactional intensity is noted with a velocity_24h_max of 1. Activity is concentrated among a small group of entities, as shown by unique_counterparties_7d of 2. The vs_declared_volume_ratio of 10.26 suggests volume significantly exceeds the expected monthly profile. This pattern of rapid movement and high volume relative to declarations warrants further review for potential pass-through activity.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 13684814.07,
+        "channel_mix": {
+          "ach": 0.667,
+          "wire": 0.333
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.4,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 10.26
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 13,684,815.05",
+      "calculation": "1. Sum all transaction amounts: 250,000.00 + 4,581,448.63 + 1,979,684.18 + 1,169,929.47 + 1,727,682.82 + 3,976,069.97 = 13,684,815.05",
+      "evidence": "transactions[0..5].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 6 with a tx_total_usd of 13684814.07. The channel_mix is composed of ach: 0.667 and wire: 0.333, indicating no cash activity. Transactional intensity is noted with a velocity_24h_max of 1. Activity is concentrated among a small group of entities, as shown by unique_counterparties_7d of 2. The vs_declared_volume_ratio of 10.26 suggests volume significantly exceeds the expected monthly profile. This pattern of rapid movement and high volume relative to declarations warrants further review for potential pass-through activity.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 13684814.07,
+          "channel_mix": {
+            "ach": 0.667,
+            "wire": 0.333
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.4,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 10.26
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 13,684,815.05",
+        "calculation": "1. Sum all transaction amounts: 250,000.00 + 4,581,448.63 + 1,979,684.18 + 1,169,929.47 + 1,727,682.82 + 3,976,069.97 = 13,684,815.05",
+        "evidence": "transactions[0..5].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 250000.0, \"channel\": \"wire\", \"counterparty\": \"EBYZI Solutions LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"intercompany funding (benign: documented holding-entity transfer)\"}, {\"amount\": 4581448.63, \"channel\": \"ach\", \"counterparty\": \"ECFES Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 1979684.18, \"channel\": \"ach\", \"counterparty\": \"CKO Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"\"}, {\"amount\": 1169929.47, \"channel\": \"ach\", \"counterparty\": \"HR Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 1727682.82, \"channel\": \"ach\", \"counterparty\": \"QZM Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 3976069.97, \"channel\": \"wire\", \"counterparty\": \"COEX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_dfb9c858\", \"entity_type\": \"business\", \"expected_monthly_volume\": 4002158.0, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$4,002,158.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Consequently, there is no legal framework to apply to the facts provided.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account exhibits a tx_count of 6 with a tx_total_usd of 13684814.07. The channel_mix is composed of ach: 0.667 and wire: 0.333, indicating no cash activity. Transactional intensity is noted with a velocity_24h_max of 1. Activity is concentrated among a small group of entities, as shown by unique_counterparties_7d of 2. The vs_declared_volume_ratio of 10.26 suggests volume significantly exceeds the expected monthly profile. This pattern of rapid movement and high volume relative to declarations warrants further review for potential pass-through activity.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 13684814.07, \"channel_mix\": {\"ach\": 0.667, \"wire\": 0.333}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.4, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 10.26}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 13,684,815.05\", \"calculation\": \"1. Sum all transaction amounts: 250,000.00 + 4,581,448.63 + 1,979,684.18 + 1,169,929.47 + 1,727,682.82 + 3,976,069.97 = 13,684,815.05\", \"evidence\": \"transactions[0..5].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account of SYN_dfb9c858 exhibits a significant volume spike inconsistent with its declared profile. Between 2026-02-20 and 2026-04-11, the entity processed six transactions totaling $13,684,815.05, including a $4,581,448.63 ACH transfer to ECFES Services LLC and a $3,976,069.97 wire to COEX Group LLC. This activity represents a vs_declared_volume_ratio of 10.26, far exceeding the expected monthly volume of $4,002,158. The rapid movement of funds to multiple counterparties is inconsistent with the entity's declared purpose as an offshore holding company for asset holding. This pattern of high-velocity pass-through activity warrants further review for potential money laundering. Final filing decision is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account of SYN_dfb9c858 exhibits a significant volume spike inconsistent with its declared profile. Between 2026-02-20 and 2026-04-11, the entity processed six transactions totaling $13,684,815.05, including a $4,581,448.63 ACH transfer to ECFES Services LLC and a $3,976,069.97 wire to COEX Group LLC. This activity represents a vs_declared_volume_ratio of 10.26, far exceeding the expected monthly volume of $4,002,158. The rapid movement of funds to multiple counterparties is inconsistent with the entity's declared purpose as an offshore holding company for asset holding. This pattern of high-velocity pass-through activity warrants further review for potential money laundering. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account of SYN_dfb9c858 exhibits a significant volume spike inconsistent with its declared profile. Between 2026-02-20 and 2026-04-11, the entity processed six transactions totaling $13,684,815.05, including a $4,581,448.63 ACH transfer to ECFES Services LLC and a $3,976,069.97 wire to COEX Group LLC. This activity represents a vs_declared_volume_ratio of 10.26, far exceeding the expected monthly volume of $4,002,158. The rapid movement of funds to multiple counterparties is inconsistent with the entity's declared purpose as an offshore holding company for asset holding. This pattern of high-velocity pass-through activity warrants further review for potential money laundering. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

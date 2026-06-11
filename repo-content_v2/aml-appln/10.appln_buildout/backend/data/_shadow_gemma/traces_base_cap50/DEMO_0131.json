@@ -1,0 +1,186 @@
+{
+  "case_id": "DEMO_0131",
+  "alert_id": "ALT_2481230",
+  "entity_id": "SYN_f1437d64",
+  "started_at": "2026-05-23T12:38:48.979950+00:00",
+  "finished_at": "2026-05-23T12:39:05.263647+00:00",
+  "wall_clock_ms": 16283.7,
+  "transactions": [
+    {
+      "amount": 100000.0,
+      "channel": "wire",
+      "counterparty": "Haverly Systems, Inc.",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "ON Capital LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": "round-number outbound wire"
+    },
+    {
+      "amount": 500000.0,
+      "channel": "wire",
+      "counterparty": "AE Industries LLC, BVI",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 2500000.0,
+      "channel": "wire",
+      "counterparty": "USFP Services LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": "round-number inbound wire"
+    },
+    {
+      "amount": 1000000.0,
+      "channel": "wire",
+      "counterparty": "DB Logistics LLC, Delaware-US",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": "round-number inbound wire"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f1437d64",
+    "entity_type": "business",
+    "expected_monthly_volume": 443649.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [
+    {
+      "name": "Haverly Systems, Inc.",
+      "list": "OFAC",
+      "match_score": 1.0
+    }
+  ],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "nning to explore the delta between compliance risk and illicit finance risk\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\nClemente Vasquez Bello made to our BSAAG efforts over the years.\nThe passion and dedication that Clemente brought for many years to our BSAAG\ndiscussions was second to none, and he has been sorely missed. I know from my own\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\nbetween money laundering prevention and BSA reporting.\nOn one hand, if you focus too much on the prevention side within your financial\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\nefforts will be undermined and the U.S. financial system compromised.\nWhat we all learned from our discussions with Clemente about this, as well as many\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\nimportant role in helping strike that balance.\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\nimpact on our work wit"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "n collaboration with NPOs and other government entities, a financial institution\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\nto financial institutions to understand NPO TF risks. It supports the understanding\nand awareness among NPOs on the various AML/CFT risk considerations when\nseeking to open an account, and when accessing and using any financial services.\nThe portal explains that the financial institution functions as a gatekeeper to the\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\nprovides an overview of the documents and information that the financial institution\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\nThe portal guides an NPO through various questions that the financial institution\nmust consider when performing its risk assessment and CDD procedures regarding:\n(i) Countries in which the NPO is active;\n(ii) The type of activity the NPO engages in;\n(iii) Organisational structure, including staff, board members, and partners of\nthe NPO;\n(iv)NPO’s ultimate beneficial owner; and\n(v) Type of transactions and sources of funding.\nThe portal refers to good governance instruments that NPOs can use to mitigate any\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\nownership/control and organisational structure, geographical reach, activities and\noperations, sources of funding, their (intended) financial transactions, and fi"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-SHELL-COMPANY-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "sanctions",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "shell_company"
+  },
+  "typology_hypothesis": "shell_company",
+  "activity_descriptor": "Sanctions counterparty hit on offshore-incorporated entity (Haverly Systems, Inc.)",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_f1437d64, business, expected monthly volume 443649.0 USD. Transactions list 5 entries with amounts and dates.\n\nWe need to compute:\n\n- tx_count: number of transactions = 5\n- tx_total_usd: sum of amounts = 100,000 + 500,000 + 500,000 + 2,500,000 + 1,000,000 = 4,100,000? Let's sum: 100k + 500k = 600k; +500k = 1.1M; +2.5M = 3.6M; +1M = 4.6M? Wait recalc: 100,000 + 500,000 = 600,000; +500,000 = 1,100,000; +2,500,"
+    },
+    "numeric": {
+      "question": "Sum round-number wires through the entity; compare to KYC declared monthly volume.",
+      "answer": "$4,600,000 total round-number wires, about 10.4× the declared $443,649 monthly volume.",
+      "calculation": "1. Identify all transactions marked as \"round-number\" (all five rows).\\n2. Extract the amount values: 100,000; 500,000; 500,000; 2,500,000; 1,000,000.\\n3. Sum the amounts: 100,000 + 500,000 + 500,000 + 2,500,000 + 1,000,000 = 4,600,000.\\n4. Compare to KYC declared monthly volume of 443,649: 4,600,000 ÷ 443,649 ≈ 10.37, i.e., roughly 10.4 times larger.",
+      "evidence": "Transaction rows with round-number notes: 2026-04-04 (100,000 USD), 2026-04-07 (500,000 USD), 2026-04-17 (500,000 USD), 2026-04-22 (2,500,000 USD), 2026-04-24 (1,000,000 USD). KYC declared monthly volume: 443,649."
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "It states that there is no bright line, that such issues lie on a spectrum, and that strong public/private partnerships play an important role in striking the balance.",
+      "evidence_span": "What we all learned from our discussions with Clemente about this, as well as many other issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and where financial institutions need to strike a balance. Strong public/private partnerships play an important role in helping strike that balance."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 1010.230?",
+      "answer": "Yes, the described conduct is subject to the beneficial-ownership requirements of 31 CFR § 1010.230 — Beneficial-ownership requirements for legal entity customers.",
+      "label": "entailment",
+      "reasoning": "The entity is a legal entity customer under 31 CFR § 1010.230 — Beneficial-ownership requirements for legal entity customers, which mandates identification of beneficial owners."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 1010.230?",
+        "answer": "Yes, the described conduct is subject to the beneficial-ownership requirements of 31 CFR § 1010.230 — Beneficial-ownership requirements for legal entity customers.",
+        "label": "entailment",
+        "reasoning": "The entity is a legal entity customer under 31 CFR § 1010.230 — Beneficial-ownership requirements for legal entity customers, which mandates identification of beneficial owners."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Sum round-number wires through the entity; compare to KYC declared monthly volume.",
+        "answer": "$4,600,000 total round-number wires, about 10.4× the declared $443,649 monthly volume.",
+        "calculation": "1. Identify all transactions marked as \"round-number\" (all five rows).\\n2. Extract the amount values: 100,000; 500,000; 500,000; 2,500,000; 1,000,000.\\n3. Sum the amounts: 100,000 + 500,000 + 500,000 + 2,500,000 + 1,000,000 = 4,600,000.\\n4. Compare to KYC declared monthly volume of 443,649: 4,600,000 ÷ 443,649 ≈ 10.37, i.e., roughly 10.4 times larger.",
+        "evidence": "Transaction rows with round-number notes: 2026-04-04 (100,000 USD), 2026-04-07 (500,000 USD), 2026-04-17 (500,000 USD), 2026-04-22 (2,500,000 USD), 2026-04-24 (1,000,000 USD). KYC declared monthly volume: 443,649."
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "It states that there is no bright line, that such issues lie on a spectrum, and that strong public/private partnerships play an important role in striking the balance.",
+        "evidence_span": "What we all learned from our discussions with Clemente about this, as well as many other issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and where financial institutions need to strike a balance. Strong public/private partnerships play an important role in helping strike that balance."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 100000.0, \"channel\": \"wire\", \"counterparty\": \"Haverly Systems, Inc.\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"ON Capital LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"round-number outbound wire\"}, {\"amount\": 500000.0, \"channel\": \"wire\", \"counterparty\": \"AE Industries LLC, BVI\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 2500000.0, \"channel\": \"wire\", \"counterparty\": \"USFP Services LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"round-number inbound wire\"}, {\"amount\": 1000000.0, \"channel\": \"wire\", \"counterparty\": \"DB Logistics LLC, Delaware-US\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"round-number inbound wire\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f1437d64\", \"entity_type\": \"business\", \"expected_monthly_volume\": 443649, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$443,649.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [{\"name\": \"Haverly Systems, Inc.\", \"list\": \"OFAC\", \"match_score\": 1.0}], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"nning to explore the delta between compliance risk and illicit finance risk\\nthrough our Delta Team, a subcommittee of the Bank Secrecy Act Advisory Group (BSAAG). I\\nwould be remiss if I didn’t spend a few moments acknowledging the invaluable contributions\\nClemente Vasquez Bello made to our BSAAG efforts over the years.\\nThe passion and dedication that Clemente brought for many years to our BSAAG\\ndiscussions was second to none, and he has been sorely missed. I know from my own\\ndiscussions with Clemente that an area he cared deeply about was striking the right balance\\nbetween money laundering prevention and BSA reporting.\\nOn one hand, if you focus too much on the prevention side within your financial\\ninstitution, you could lose visibility as illicit actors burrow deeper into layers of client\\nrelationships, and we lose valuable reporting. But, if you focus only on reporting suspected\\nillicit activity, while allowing illicit actors to continue receiving services, prevention-related\\nefforts will be undermined and the U.S. financial system compromised.\\nWhat we all learned from our discussions with Clemente about this, as well as many\\nother issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and\\nwhere financial institutions need to strike a balance. Strong public/private partnerships play an\\nimportant role in helping strike that balance.\\nClemente’s fervor for these issues continues to resonate and will have a long-lasting\\nimpact on our work wit\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"same or similar character, or are based on the same act or transaction, or are connected with or constitute parts of a common scheme or plan.” To promote judicial efficiency, Rule 8(a) “permits very broad joinder” of “related counts in the same trial.” Cardwell, 433 F.3d at 385 (alterations and internal quotation marks omitted). As we have noted, “the prospect of duplicating witness testimony, impaneling additional jurors, and *769 wasting limited judicial resources suggests that related offenses should be tried in a single proceeding.” Hawkins, 589 F.3d at 700 (internal quotation marks omitted). The government contends the tax counts were connected with or constituted part of a common scheme to which the other offenses charged in the indictment were connected. In determining whether two offenses are connected with or constitute parts of a common scheme or plan for purposes of Rule 8(a), we have read the rule “flexibly” to require simply a “logical relationship” between offenses charged in the indictment. Cardwell, 433 F.3d at 385 (internal quotation marks omitted). With respect to the charge that Blair failed to file a tax return in 2003, the government’s position is most certainly correct. The evidence established that in 2003, Blair likely stole at least $100,000 in drug proceeds — substantial unreported income. We conclude that “a tax count is properly joined to other counts of an indictment if the other crimes generated the income on which the defendant evaded payment.” \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"n collaboration with NPOs and other government entities, a financial institution\\ndeveloped a web-based portal that guides NPOs through the issues that are relevant\\nto financial institutions to understand NPO TF risks. It supports the understanding\\nand awareness among NPOs on the various AML/CFT risk considerations when\\nseeking to open an account, and when accessing and using any financial services.\\nThe portal explains that the financial institution functions as a gatekeeper to the\\nfinancial sector and is subject to obligations on CDD based on AML/CFT legislation. It\\nprovides an overview of the documents and information that the financial institution\\ncommonly requires to identify and verify NPOs and their ultimate beneficial owners.\\nThe portal guides an NPO through various questions that the financial institution\\nmust consider when performing its risk assessment and CDD procedures regarding:\\n(i) Countries in which the NPO is active;\\n(ii) The type of activity the NPO engages in;\\n(iii) Organisational structure, including staff, board members, and partners of\\nthe NPO;\\n(iv)NPO’s ultimate beneficial owner; and\\n(v) Type of transactions and sources of funding.\\nThe portal refers to good governance instruments that NPOs can use to mitigate any\\nTF risks. It also raises awareness for NPOs on their TF risks associated with their\\nownership/control and organisational structure, geographical reach, activities and\\noperations, sources of funding, their (intended) financial transactions, and fi\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-SHELL-COMPANY-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull beneficial-ownership records and verify ultimate beneficial owner (UBO).\\n2. Pull all transactions; identify round-number wires in/out without operating-expense pattern.\\n3. Confirm declared business purpose against absence of payroll, rent, utilities.\\n4. Check incorporation jurisdiction against opaque-jurisdiction list (BVI, Cayman, Panama, Delaware-US, Nevada-US, Wyoming-US).\\n5. Escalate to SAR review if UBO unverifiable or pass-through pattern clear.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 1010.230?\", \"answer\": \"Yes, the described conduct is subject to the beneficial-ownership requirements of 31 CFR § 1010.230 — Beneficial-ownership requirements for legal entity customers.\", \"label\": \"entailment\", \"reasoning\": \"The entity is a legal entity customer under 31 CFR § 1010.230 — Beneficial-ownership requirements for legal entity customers, which mandates identification of beneficial owners.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Sum round-number wires through the entity; compare to KYC declared monthly volume.\", \"answer\": \"$4,600,000 total round-number wires, about 10.4× the declared $443,649 monthly volume.\", \"calculation\": \"1. Identify all transactions marked as \\\"round-number\\\" (all five rows).\\\\n2. Extract the amount values: 100,000; 500,000; 500,000; 2,500,000; 1,000,000.\\\\n3. Sum the amounts: 100,000 + 500,000 + 500,000 + 2,500,000 + 1,000,000 = 4,600,000.\\\\n4. Compare to KYC declared monthly volume of 443,649: 4,600,000 ÷ 443,649 ≈ 10.37, i.e., roughly 10.4 times larger.\", \"evidence\": \"Transaction rows with round-number notes: 2026-04-04 (100,000 USD), 2026-04-07 (500,000 USD), 2026-04-17 (500,000 USD), 2026-04-22 (2,500,000 USD), 2026-04-24 (1,000,000 USD). KYC declared monthly volume: 443,649.\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"It states that there is no bright line, that such issues lie on a spectrum, and that strong public/private partnerships play an important role in striking the balance.\", \"evidence_span\": \"What we all learned from our discussions with Clemente about this, as well as many other issues, is that there is no bright line. This is one of many issues that lie on a spectrum, and where financial institutions need to strike a balance. Strong public/private partnerships play an important role in helping strike that balance.\"}]}, \"_regulatory_frame\": \"sanctions\", \"_typology_inferred\": \"shell_company\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Determine if SAR should be filed.\n\nWe have regulatory_frame \"sanctions\". But typology inferred \"shell_company\". However regulatory_frame is sanctions, which seems mismatched; but we must follow regulatory framing: sanctions typology uses OFAC etc. However the typology inferred is shell_company, but regulatory_frame is sanctions. The instruction says \"Regulatory Framing (HARD — coherent with _regulatory_frame)\". So we must frame the SAR narrative consistent with the given regulatory_frame value, which is \"sanctions\". That means we must use sanctions framing language, not shell_company framing. But we also have typology inferred \"shell_company\". The regulatory_frame is \"sanctions\". So we must produce a narrative that aligns with sanctions typology, i.e., mention OFAC, sanctioned jurisdictions, etc. However the bundle includes a PEP hit on Haverly Systems, Inc. which is OFAC listed. So we can talk about sanctions risk.\n\nWe must ensure grounding: every claim sourced from transactions, kyc_profile, sanctions_pep_hits, policy_excerpts, sop_excerpts, auxiliary_findings. Must not invent.\n\nWe need to decide is_suspicious true or false. Look at evidence: large round-number wires totalling $4.6M, which is ~10.4x declared monthly volume. That's suspicious. Also PEP hit on Haverly Systems, Inc. (OFAC). The entity is an offshore holding company in BVI, medium risk. The SOP says escalate to SAR if UBO unverifiable or pass-through pattern clear. Here we have pass-through pattern: round-number wires with no expense pattern. So likely SAR.\n\nThus is_suspicious = true.\n\nNow need to produce suspicious_activity_report string, 250-800 characters, objective, citing facts.\n\nWe must include the most salient behavioral finding: the numeric finding that total round-number wires $4.6M is about 10.4x declared monthly volume. That is in auxiliary_findings numeric answer. Must cite verbatim? It says \"cite it verbatim in the narrative.\" The numeric answer is \"$4,600,000 total round-number wires, about 10.4× the declared $443,649 monthly volume.\" So we can include that phrase.\n\nWe must not invent any new metric values. Must not mention amounts not in transactions. All amounts are present.\n\nWe must not mention any entity not in kyc_profile, transactions, or sanctions_pep_hits. Entities: Haverly Systems, Inc., ON Capital LLC, AE Industries LLC, USFP Services LLC, DB Logistics LLC. Also BVI jurisdiction. The PEP hit is Haverly Systems, Inc. So we can mention that.\n\nWe must keep within 250-800 characters. Let's craft ~400 characters.\n\nNarrative: \"The client, a BVI‑registered offshore holding company (entity ID SYN_f1437d64), received five round‑number wire transfers totaling $4,600,000 between 2026‑04‑04 and 2026‑04‑24, which is roughly 10.4 × the declared monthly volume of $443,649. A payment to Haverly Systems, Inc., an OFAC‑listed entity, further raises sanctions concerns. The pattern of large, undifferentiated inflows without offsetting operating expenses aligns with shell‑company pass‑through behavior and warrants a SAR.\"\n\nCheck length: Let's count characters roughly. We'll approximate: It's probably around 350-400 characters. Should be within 250-800.\n\nWe must end with a complete sentence, and close by referring the matter to the human investigator. So add \"Refer to the compliance team for further review.\" That's a sentence.\n\nAdd at end: \"Refer to the compliance team for further review.\"\n\nNow ensure total characters still within limit. Let's count roughly.\n\nCurrent text: \n\"The client, a BVI‑registered offshore holding company (entity ID SYN_f1437d64), received five round‑number wire transfers totaling $4,600,000 between 2026‑04‑04 and 2026‑04‑24, which is roughly 10.4 × the declared monthly volume of $443,649. A payment to Haverly Systems, Inc., an OFAC‑listed entity, further raises sanctions concerns. The pattern of large, undifferentiated inflows without offsetting operating expenses aligns with shell‑company pass‑through behavior and warrants a SAR. Refer to the compliance team for further review.\"\n\nLet's count characters (including spaces). Rough estimate: \n\nSentence 1: \"The client, a BVI‑registered offshore holding company (entity ID SYN_f1437d64), received five round‑number wire transfers totaling $4,600,000 between 2026‑04‑04 and 2026‑04‑24, which is roughly 10.4 × the declared monthly volume of $443,649.\" That's about 210 characters.\n\nSentence 2: \" A payment to Haverly Systems, Inc., an OFAC‑listed entity, further raises sanctions concerns.\" ~80 characters.\n\nSentence 3: \" The pattern of large, undifferentiated inflows without offsetting operating expenses aligns with shell‑company pass‑through behavior and warrants a SAR.\" ~100 characters.\n\nSentence 4: \" Refer to the compliance team for further review.\" ~45 characters.\n\nTotal ~435 characters. Good.\n\nNow ensure we didn't invent any metric not in auxiliary_findings. We used \"10.4× the declared monthly volume of $443,649\" which matches the numeric answer. Good.\n\nWe referenced \"shell‑company pass‑through behavior\" which aligns with typology inferred \"shell_company\" but regulatory_frame is sanctions. However we can still mention shell-company pattern; but must be coherent with regulatory_frame \"sanctions\". The instruction: \"Regulatory Framing (HARD — coherent with _regulatory_frame)\". So the narrative must be coherent with the regulatory_frame value. That means we should frame the suspicion in terms of sanctions risk, not layering or structuring. So we should emphasize sanctions concerns, OFAC listing, etc. Mention \"sanctions concerns\". That's fine.\n\nWe must not use \"layering\" or \"pass-through\" in a way that conflicts? It's okay to mention \"pass-through behavior\" as part of shell-company pattern, but the regulatory_frame is sanctions, so we should focus on sanctions. However the typology inferred is shell_company, but we are not required to mention typology; we just need to be coherent with regulatory_frame. So we can talk about \"sanctions concerns\" and \"OFAC-listed entity\". That's fine.\n\nWe must not mention \"layering\" or \"pass-through\" in a way that would be invalid for sanctions framing? The instruction for layering_passthrough says DO NOT cite $10,000 CTR threshold, etc. But we are not in that frame. So it's okay.\n\nNow ensure we didn't mention any entity not in the bundle. We mentioned \"BVI‑registered offshore holding company (entity ID SYN_f1437d64)\" which is in kyc_profile. We mentioned \"Haverly Systems, Inc.\" which is in sanctions_pep_hits. We mentioned \"OFAC‑listed entity\". That's fine.\n\nWe referenced \"shell‑company pass‑through behavior\". That's okay; it's a description, not a regulatory frame. It's not prohibited.\n\nNow produce final JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The client, a BVI‑registered offshore holding company (entity ID SYN_f1437d64), received five round‑number wire transfers totaling $4,600,000 between 2026‑04‑04 and 2026‑04‑24, which is roughly 10.4 × the declared monthly volume of $443,649. A payment to Haverly Systems, Inc., an OFAC‑listed entity, further raises sanctions concerns. The pattern of large, undifferentiated inflows without offsetting operating expenses aligns with shell‑company pass‑through behavior and warrants a SAR. Refer to the compliance team for further review.\"\n}\n\nMake sure no extra whitespace, no markdown. Provide as single JSON object.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The client, a BVI‑registered offshore holding company (entity ID SYN_f1437d64), received five round‑number wire transfers totaling $4,600,000 between 2026‑04‑04 and 2026‑04‑24, which is roughly 10.4 × the declared monthly volume of $443,649. A payment to Haver",
+  "sar_output": null,
+  "sar_parse_error": "no JSON found in model output",
+  "sar_is_suspicious": null,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

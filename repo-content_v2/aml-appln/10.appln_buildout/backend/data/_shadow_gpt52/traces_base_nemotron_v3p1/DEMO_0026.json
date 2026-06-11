@@ -1,0 +1,182 @@
+{
+  "case_id": "DEMO_0026",
+  "alert_id": "ALT_2434688",
+  "entity_id": "SYN_28f97744",
+  "started_at": "2026-05-27T15:11:47.075312+00:00",
+  "finished_at": "2026-05-27T15:12:24.427179+00:00",
+  "wall_clock_ms": 37351.9,
+  "transactions": [
+    {
+      "amount": 15946550.07,
+      "channel": "wire",
+      "counterparty": "WHU Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 15257619.32,
+      "channel": "wire",
+      "counterparty": "VHHP Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 14644153.27,
+      "channel": "wire",
+      "counterparty": "LMI Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 14071107.07,
+      "channel": "wire",
+      "counterparty": "YWZGJ Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 13585807.1,
+      "channel": "wire",
+      "counterparty": "IM Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 13010103.4,
+      "channel": "wire",
+      "counterparty": "MAN Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "peel-chain hop"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_28f97744",
+    "entity_type": "business",
+    "expected_monthly_volume": 11632908.0,
+    "business_purpose": "Virtual asset service provider (crypto exchange); declared monthly volume ~$11,632,908.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "Singapore"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Peel-chain pattern with 6 descending wire amounts",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, summary, metrics, evidence.\n\nWe have input bundle: [transactions] list, [kyc_profile] details, and presumably a precomputed metrics block? The user didn't provide metrics block explicitly. The instruction says we receive a transactional bundle AND a precomputed metrics block. But the user only gave the bundle, not metrics. Possibly the metrics block is implied? Maybe we need to compute metrics from the bundle? But rule says metrics is the precomputed m"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nUser asks: \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\"\n\nWe have transaction block with amounts. Need total volume passing through any detected cycle. Likely sum of amounts? Or maybe sum of amounts that are part of a cycle? The phrase \"detected cycle\" maybe refers to repeated counterparties? But we just need total volume passing through any detected cycle; maybe su"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The excerpt says the activity is certainly worthy of FinCEN’s attention.",
+      "evidence_span": "is certainly worthy of FinCEN’s attention."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "applies to reporting",
+      "label": "entailment",
+      "reasoning": "The transactions exceed $13 million each, involve multiple transfers on consecutive days, and are labeled \"peel-chain hop,\" indicating possible structuring or layering, which are enumerated suspicious activities under 31 U.S.C. § 5318(g). As a virtual asset service provider, the entity is a covered financial institution that must file a SAR when it knows, suspects, or has reason to suspect suspicious activity. The pattern of large, rapid transfers satisfies the statutory elements of suspicious activity, thus the conduct applies to reporting under 31 U.S.C. § 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "applies to reporting",
+        "label": "entailment",
+        "reasoning": "The transactions exceed $13 million each, involve multiple transfers on consecutive days, and are labeled \"peel-chain hop,\" indicating possible structuring or layering, which are enumerated suspicious activities under 31 U.S.C. § 5318(g). As a virtual asset service provider, the entity is a covered financial institution that must file a SAR when it knows, suspects, or has reason to suspect suspicious activity. The pattern of large, rapid transfers satisfies the statutory elements of suspicious activity, thus the conduct applies to reporting under 31 U.S.C. § 5318(g)."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The excerpt says the activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 15946550.07, \"channel\": \"wire\", \"counterparty\": \"WHU Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 15257619.32, \"channel\": \"wire\", \"counterparty\": \"VHHP Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 14644153.27, \"channel\": \"wire\", \"counterparty\": \"LMI Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"peel-chain hop\"}, {\"amount\": 14071107.07, \"channel\": \"wire\", \"counterparty\": \"YWZGJ Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"peel-chain hop\"}, {\"amount\": 13585807.1, \"channel\": \"wire\", \"counterparty\": \"IM Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"peel-chain hop\"}, {\"amount\": 13010103.4, \"channel\": \"wire\", \"counterparty\": \"MAN Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"peel-chain hop\"}], \"kyc_profile\": {\"entity_id\": \"SYN_28f97744\", \"entity_type\": \"business\", \"expected_monthly_volume\": 11632908.0, \"business_purpose\": \"Virtual asset service provider (crypto exchange); declared monthly volume ~$11,632,908.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"Singapore\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"applies to reporting\", \"label\": \"entailment\", \"reasoning\": \"The transactions exceed $13 million each, involve multiple transfers on consecutive days, and are labeled \\\"peel-chain hop,\\\" indicating possible structuring or layering, which are enumerated suspicious activities under 31 U.S.C. § 5318(g). As a virtual asset service provider, the entity is a covered financial institution that must file a SAR when it knows, suspects, or has reason to suspect suspicious activity. The pattern of large, rapid transfers satisfies the statutory elements of suspicious activity, thus the conduct applies to reporting under 31 U.S.C. § 5318(g).\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The excerpt says the activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string (400-800 characters). Must decide based on evidence.\n\nWe have transactions: six wire transfers, each ~13-15 million, total ~87 million? Actually each around 15 million, six of them ~90 million. Counterparties are various LLCs, notes \"peel-chain hop\". This suggests peel-chain pattern. Entity is a VASP (virtual asset service provider) with expected monthly volume ~11.6 million. But each transaction is >13 million, exceeding expected monthly volume. Also they are wires, not cash, but still suspicious. There's no sanctions hits. Auxiliary findings include statutory entailment that conduct applies to reporting under 31 U.S.C. § 5318(g). Also policy excerpt says activity is certainly worthy of FinCEN's attention. Also SOP says escalate to SAR review if peel-chain >3 hops with ≥3% trim. Here we have multiple hops, likely >3 hops, and amounts decreasing slightly but still large; trim maybe >3%? Let's compute: amounts: 15,946,550; 15,257,619; 14,644,153; 14,071,107; 13,585,807; 13,010,103. Each step is decreasing ~5%? Actually 15.9M to 15.26M is -4%; then to 14.64M -4%; etc. So each hop is >3% trim. So peel-chain >3 hops with ≥3% trim satisfied. So SAR warranted.\n\nThus is_suspicious = true.\n\nNow need to produce a narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive. Let's craft about 550 characters.\n\nWe must not exceed 800 characters. Let's count approximate characters.\n\nDraft:\n\n\"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 executed six consecutive wire transfers totaling roughly $87 million to six distinct LLCs, each labeled “peel‑chain hop” and decreasing by 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that amount and the aggregate surpasses 7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops meets FinCEN SAR escalation criteria (SOP‑LAYERING‑01). The statutory finding confirms the activity falls within 31 U.S.C. § 5318(g). These facts constitute a SAR‑warranted suspicion.\"\n\nNow count characters. Let's count manually (including spaces). I'll copy text and count.\n\n\"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 executed six consecutive wire transfers totaling roughly $87 million to six distinct LLCs, each labeled “peel‑chain hop” and decreasing by 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that amount and the aggregate surpasses 7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops meets FinCEN SAR escalation criteria (SOP‑LAYERING‑01). The statutory finding confirms the activity falls within 31 U.S.C. § 5318(g). These facts constitute a SAR‑warranted suspicion.\"\n\nLet's count characters. I'll approximate using a tool mentally: I'll count each segment.\n\nI'll write with plain ASCII (but includes special characters). For counting, each character includes spaces and punctuation. Let's count roughly.\n\nI'll copy into a counting method: I'll count words length? Better to approximate length: This seems around 500-600 characters. Let's quickly approximate: The sentence length maybe ~620 characters. Should be within 400-800.\n\nWe need to ensure it's 400-800 characters. Let's count more precisely.\n\nI'll count characters manually:\n\nI'll write the string and count.\n\n\"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 executed six consecutive wire transfers totaling roughly $87 million to six distinct LLCs, each labeled “peel‑chain hop” and decreasing by 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that amount and the aggregate surpasses 7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops meets FinCEN SAR escalation criteria (SOP‑LAYERING-01). The statutory finding confirms the activity falls within 31 U.S.C. § 5318(g). These facts constitute a SAR‑warranted suspicion.\"\n\nLet's count using rough method: I'll count per sentence.\n\nSentence1: \"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 executed six consecutive wire transfers totaling roughly $87 million to six distinct LLCs, each labeled “peel‑chain hop” and decreasing by 3‑5 % per hop.\"\n\nCount characters including spaces. Let's count manually: I'll write with indices.\n\nI'll copy into a counting tool mentally: maybe easier to approximate length: It's likely around 350 characters for first sentence. Let's approximate total ~560. Should be fine.\n\nWe must ensure it's grounded and cites evidence: we referenced peel-chain, decreasing amounts, >3 hops, 3% trim, SOP-LAYERING-01, statutory finding, 31 U.S.C. § 5318(g). All are from bundle.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still part of string. Probably fine.\n\nNow output exactly JSON with no extra text.\n\nLet's craft final narrative with about 560 characters. I'll count more precisely now.\n\nI'll write a slightly shorter version to be safe.\n\nNarrative:\n\n\"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 performed six consecutive wire transfers totaling about $87 million to six LLCs, each marked “peel‑chain hop” and decreasing 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that figure and the aggregate is >7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops triggers FinCEN SAR escalation (SOP‑LAYERING‑01). A statutory finding confirms the conduct falls within 31 U.S.C. § 5318(g), indicating a SAR‑warranted suspicion.\"\n\nNow count characters.\n\nI'll count using rough method: I'll copy into a counting mental.\n\nI'll count each character including spaces.\n\nI'll write it out with indices:\n\n\"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 performed six consecutive wire transfers totaling about $87 million to six LLCs, each marked “peel‑chain hop” and decreasing 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that figure and the aggregate is >7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops triggers FinCEN SAR escalation (SOP‑LAYERING-01). A statutory finding confirms the conduct falls within 31 U.S.C. § 5318(g), indicating a SAR‑warranted suspicion.\"\n\nLet's count length. I'll use approximate: This is likely around 560-580 characters. Should be within 400-800.\n\nNow produce JSON.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 performed six consecutive wire transfers totaling about $87 million to six LLCs, each marked “peel‑chain hop” and decreasing 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that figure and the aggregate is >7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops triggers FinCEN SAR escalation (SOP‑LAYERING-01). A statutory finding confirms the conduct falls within 31 U.S.C. § 5318(g), indicating a SAR‑warranted suspicion.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 performed six consecutive wire transfers totaling about $87 million to six LLCs, each marked “peel‑chain hop” and decreasing 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that figure and the aggregate is >7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops triggers FinCEN SAR escalation (SOP‑LAYERING-01). A statutory finding confirms the conduct falls within 31 U.S.C. § 5318(g), indicating a SAR‑warranted suspicion."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑25 through 2026‑04‑28 the VASP SYN_28f97744 performed six consecutive wire transfers totaling about $87 million to six LLCs, each marked “peel‑chain hop” and decreasing 3‑5 % per hop. The entity’s declared monthly volume is $11.6 million, yet each transfer exceeds that figure and the aggregate is >7× the expected volume. The peel‑chain pattern with ≥3 % trim across >3 hops triggers FinCEN SAR escalation (SOP‑LAYERING-01). A statutory finding confirms the conduct falls within 31 U.S.C. § 5318(g), indicating a SAR‑warranted suspicion.",
+  "judge_enabled": false,
+  "error": null
+}

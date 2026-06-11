@@ -1,0 +1,310 @@
+{
+  "case_id": "DEMO_0149",
+  "alert_id": "ALT_2460249",
+  "entity_id": "SYN_fd66b718",
+  "started_at": "2026-05-23T11:22:26.209789+00:00",
+  "finished_at": "2026-05-23T11:22:28.931225+00:00",
+  "wall_clock_ms": 2721.5,
+  "transactions": [
+    {
+      "amount": 5048.39,
+      "channel": "cash",
+      "counterparty": "Jennifer Moore",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 2309.85,
+      "channel": "ach",
+      "counterparty": "ZLYRZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 3912.06,
+      "channel": "wire",
+      "counterparty": "RIQ Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 1791.79,
+      "channel": "cash",
+      "counterparty": "Mary Johnson",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 1493.98,
+      "channel": "ach",
+      "counterparty": "JLN Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 2396.89,
+      "channel": "cash",
+      "counterparty": "Susan Smith",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 3300.81,
+      "channel": "ach",
+      "counterparty": "XGK Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 2770.25,
+      "channel": "wire",
+      "counterparty": "FYVY Services LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 1684.5,
+      "channel": "ach",
+      "counterparty": "YAYVD Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 4706.11,
+      "channel": "cash",
+      "counterparty": "Joshua Anderson",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 3308.04,
+      "channel": "ach",
+      "counterparty": "KGCB Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    },
+    {
+      "amount": 2394.72,
+      "channel": "ach",
+      "counterparty": "SCF Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 1734.78,
+      "channel": "ach",
+      "counterparty": "SHV Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 1860.12,
+      "channel": "cash",
+      "counterparty": "Patricia White",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 3756.58,
+      "channel": "wire",
+      "counterparty": "BC Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 2000.88,
+      "channel": "wire",
+      "counterparty": "HTPPC Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 4253.35,
+      "channel": "wire",
+      "counterparty": "JNMK Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 3434.77,
+      "channel": "ach",
+      "counterparty": "QX Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 4970.61,
+      "channel": "ach",
+      "counterparty": "JKUCJ Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 2010.17,
+      "channel": "cash",
+      "counterparty": "Andrew Taylor",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_fd66b718",
+    "entity_type": "business",
+    "expected_monthly_volume": 17865.0,
+    "business_purpose": "Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$17,865.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.45,
+      "cash": 0.3,
+      "wire": 0.25
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.3, 'ach': 0.45, 'wire': 0.25})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The entity SYN_fd66b718 exhibited a high volume of activity across multiple channels, with a total of 19 transactions. The most frequently used channels were cash (36.8%) and ACH (36.8%), while wire transfers accounted for 26.3%. Activity was concentrated, with a velocity of 4 transactions in the last 24 hours and a maximum of 5 unique counterparties in a 7-day window. The largest single transaction was $5,048.39 in cash, and the total volume was $61,333.11, resulting in a vs_declared_volume_ratio of 3.43. The activity includes several cash deposits and a mix of ACH and wire transfers to various counterparties.",
+      "metrics": {
+        "tx_count": 19,
+        "tx_total_usd": 61333.11,
+        "channel_mix": {
+          "wire": 0.263,
+          "ach": 0.368,
+          "cash": 0.368
+        },
+        "velocity_24h_max": 4,
+        "velocity_24h_avg_30d": 0.63,
+        "unique_counterparties_7d": 5,
+        "amount_z_score_max": 2.31,
+        "country_risk_max": 0.0,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 3.43
+      },
+      "evidence": "transactions[0..18]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "The total transaction volume is $57,300.00, which is approximately 3.2x the declared monthly volume of $17,865.00.",
+      "calculation": "1. Sum all transaction amounts: 5048.39 + 2309.85 + 3912.06 + 1791.79 + 1493.98 + 2396.89 + 3300.81 + 2770.25 + 1684.50 + 3308.04 + 2394.72 + 1734.78 + 1860.12 + 3756.58 + 2000.88 + 4253.35 + 3434.77 + 4970.61 + 2010.17 = 57300.00\n2. Compare to KYC declared monthly volume: 57300.00 / 17865.00 = 3.207",
+      "evidence": "Transaction list rows; KYC profile 'expected_monthly_volume' field"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant passage was provided to extract a citation from.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "error": "no_json",
+      "raw": "{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"statute\": \"\"}"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": false,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The entity SYN_fd66b718 exhibited a high volume of activity across multiple channels, with a total of 19 transactions. The most frequently used channels were cash (36.8%) and ACH (36.8%), while wire transfers accounted for 26.3%. Activity was concentrated, with a velocity of 4 transactions in the last 24 hours and a maximum of 5 unique counterparties in a 7-day window. The largest single transaction was $5,048.39 in cash, and the total volume was $61,333.11, resulting in a vs_declared_volume_ratio of 3.43. The activity includes several cash deposits and a mix of ACH and wire transfers to various counterparties.",
+        "metrics": {
+          "tx_count": 19,
+          "tx_total_usd": 61333.11,
+          "channel_mix": {
+            "wire": 0.263,
+            "ach": 0.368,
+            "cash": 0.368
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 0.63,
+          "unique_counterparties_7d": 5,
+          "amount_z_score_max": 2.31,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.43
+        },
+        "evidence": "transactions[0..18]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $57,300.00, which is approximately 3.2x the declared monthly volume of $17,865.00.",
+        "calculation": "1. Sum all transaction amounts: 5048.39 + 2309.85 + 3912.06 + 1791.79 + 1493.98 + 2396.89 + 3300.81 + 2770.25 + 1684.50 + 3308.04 + 2394.72 + 1734.78 + 1860.12 + 3756.58 + 2000.88 + 4253.35 + 3434.77 + 4970.61 + 2010.17 = 57300.00\n2. Compare to KYC declared monthly volume: 57300.00 / 17865.00 = 3.207",
+        "evidence": "Transaction list rows; KYC profile 'expected_monthly_volume' field"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 5048.39, \"channel\": \"cash\", \"counterparty\": \"Jennifer Moore\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 2309.85, \"channel\": \"ach\", \"counterparty\": \"ZLYRZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 3912.06, \"channel\": \"wire\", \"counterparty\": \"RIQ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 1791.79, \"channel\": \"cash\", \"counterparty\": \"Mary Johnson\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 1493.98, \"channel\": \"ach\", \"counterparty\": \"JLN Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 2396.89, \"channel\": \"cash\", \"counterparty\": \"Susan Smith\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 3300.81, \"channel\": \"ach\", \"counterparty\": \"XGK Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 2770.25, \"channel\": \"wire\", \"counterparty\": \"FYVY Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 1684.5, \"channel\": \"ach\", \"counterparty\": \"YAYVD Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 4706.11, \"channel\": \"cash\", \"counterparty\": \"Joshua Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 3308.04, \"channel\": \"ach\", \"counterparty\": \"KGCB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}, {\"amount\": 2394.72, \"channel\": \"ach\", \"counterparty\": \"SCF Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 1734.78, \"channel\": \"ach\", \"counterparty\": \"SHV Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 1860.12, \"channel\": \"cash\", \"counterparty\": \"Patricia White\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 3756.58, \"channel\": \"wire\", \"counterparty\": \"BC Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 2000.88, \"channel\": \"wire\", \"counterparty\": \"HTPPC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 4253.35, \"channel\": \"wire\", \"counterparty\": \"JNMK Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 3434.77, \"channel\": \"ach\", \"counterparty\": \"QX Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 4970.61, \"channel\": \"ach\", \"counterparty\": \"JKUCJ Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 2010.17, \"channel\": \"cash\", \"counterparty\": \"Andrew Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_fd66b718\", \"entity_type\": \"business\", \"expected_monthly_volume\": 17865, \"business_purpose\": \"Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$17,865.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The entity SYN_fd66b718 exhibited a high volume of activity across multiple channels, with a total of 19 transactions. The most frequently used channels were cash (36.8%) and ACH (36.8%), while wire transfers accounted for 26.3%. Activity was concentrated, with a velocity of 4 transactions in the last 24 hours and a maximum of 5 unique counterparties in a 7-day window. The largest single transaction was $5,048.39 in cash, and the total volume was $61,333.11, resulting in a vs_declared_volume_ratio of 3.43. The activity includes several cash deposits and a mix of ACH and wire transfers to various counterparties.\", \"metrics\": {\"tx_count\": 19, \"tx_total_usd\": 61333.11, \"channel_mix\": {\"wire\": 0.263, \"ach\": 0.368, \"cash\": 0.368}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 0.63, \"unique_counterparties_7d\": 5, \"amount_z_score_max\": 2.31, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.43}, \"evidence\": \"transactions[0..18]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $57,300.00, which is approximately 3.2x the declared monthly volume of $17,865.00.\", \"calculation\": \"1. Sum all transaction amounts: 5048.39 + 2309.85 + 3912.06 + 1791.79 + 1493.98 + 2396.89 + 3300.81 + 2770.25 + 1684.50 + 3308.04 + 2394.72 + 1734.78 + 1860.12 + 3756.58 + 2000.88 + 4253.35 + 3434.77 + 4970.61 + 2010.17 = 57300.00\\n2. Compare to KYC declared monthly volume: 57300.00 / 17865.00 = 3.207\", \"evidence\": \"Transaction list rows; KYC profile 'expected_monthly_volume' field\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

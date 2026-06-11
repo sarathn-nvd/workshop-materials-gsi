@@ -1,0 +1,193 @@
+{
+  "case_id": "DEMO_0068",
+  "alert_id": "ALT_2478317",
+  "entity_id": "SYN_3a9e1931",
+  "started_at": "2026-05-27T15:23:05.724100+00:00",
+  "finished_at": "2026-05-27T15:23:34.651807+00:00",
+  "wall_clock_ms": 28927.7,
+  "transactions": [
+    {
+      "amount": 9442.17,
+      "channel": "cash",
+      "counterparty": "Cash deposit, ORD Branch #82",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "one-time sub-CTR cash receipt (benign: customer paid in cash)"
+    },
+    {
+      "amount": 106761.9,
+      "channel": "card",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 151687.97,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 254632.62,
+      "channel": "ach",
+      "counterparty": "OUJXN Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 77978.28,
+      "channel": "cash",
+      "counterparty": "Elizabeth Davis",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 187189.37,
+      "channel": "card",
+      "counterparty": "Christopher Moore",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 77235.13,
+      "channel": "cash",
+      "counterparty": "Patricia Lewis",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3a9e1931",
+    "entity_type": "business",
+    "expected_monthly_volume": 271233.0,
+    "business_purpose": "Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.429,
+      "card": 0.429,
+      "ach": 0.143
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.42857142857142855, 'card': 0.42857142857142855, 'ach': 0.14285714285714285})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=254632.62, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 with a tx_total_usd of 764,927.44. The channel_mix includes cash: 23,655.58, which is consistent with the entity's declared business purpose as a hospitality establishment. A velocity_24h_max of 254,632.62 was observed, indicating significant single-day movement. The account interacted with unique_counterparties_7d of 1, reflecting concentrated activity in the most recent window. The vs_declared_volume_ratio is 2.82, suggesting activity exceeds the expected monthly volume. Given the presence of cash deposits, the activity warrants review for potential structuring under 31 USC 5324.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 764927.44,
+          "channel_mix": {
+            "cash": 23655.58,
+            "card": 445639.24,
+            "ach": 254632.62
+          },
+          "velocity_24h_max": 254632.62,
+          "unique_counterparties_7d": 1,
+          "vs_declared_volume_ratio": 2.82
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 864,927.44",
+      "calculation": "1. Sum all transaction amounts: 9,442.17 (transactions[0]) + 106,761.90 (transactions[1]) + 151,687.97 (transactions[2]) + 254,632.62 (transactions[3]) + 77,978.28 (transactions[4]) + 187,189.37 (transactions[5]) + 77,235.13 (transactions[6]) = 864,927.44.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 864,927.44",
+        "calculation": "1. Sum all transaction amounts: 9,442.17 (transactions[0]) + 106,761.90 (transactions[1]) + 151,687.97 (transactions[2]) + 254,632.62 (transactions[3]) + 77,978.28 (transactions[4]) + 187,189.37 (transactions[5]) + 77,235.13 (transactions[6]) = 864,927.44.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 9442.17, \"channel\": \"cash\", \"counterparty\": \"Cash deposit, ORD Branch #82\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"one-time sub-CTR cash receipt (benign: customer paid in cash)\"}, {\"amount\": 106761.9, \"channel\": \"card\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 151687.97, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 254632.62, \"channel\": \"ach\", \"counterparty\": \"OUJXN Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 77978.28, \"channel\": \"cash\", \"counterparty\": \"Elizabeth Davis\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 187189.37, \"channel\": \"card\", \"counterparty\": \"Christopher Moore\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 77235.13, \"channel\": \"cash\", \"counterparty\": \"Patricia Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3a9e1931\", \"entity_type\": \"business\", \"expected_monthly_volume\": 271233.0, \"business_purpose\": \"Restaurant / hospitality establishment; daily cash receipts; declared monthly volume ~$271,233.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 864,927.44\", \"calculation\": \"1. Sum all transaction amounts: 9,442.17 (transactions[0]) + 106,761.90 (transactions[1]) + 151,687.97 (transactions[2]) + 254,632.62 (transactions[3]) + 77,978.28 (transactions[4]) + 187,189.37 (transactions[5]) + 77,235.13 (transactions[6]) = 864,927.44.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": true, \"suspicious_activity_report\": \"The account exhibits transaction volumes significantly exceeding the declared business profile. Total transaction volume for the period is $864,927.44, which is approximately 3.19x the expected monthly volume of $271,233.00. Notable activity includes a $254,632.62 ACH transfer to OUXJN Enterprises LLC on 2026-04-06 and multiple high-value card transactions, such as $187,189.37 to Christopher Moore on 2026-04-24. While the entity is a restaurant with expected cash receipts, the scale of non-cash movements is inconsistent with the declared business purpose and volume. This rapid movement of funds suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The account exhibits transaction volumes significantly exceeding the declared business profile. Total transaction volume for the period is $864,927.44, which is approximately 3.19x the expected monthly volume of $271,233.00. Notable activity includes a $254,632.62 ACH transfer to OUXJN Enterprises LLC on 2026-04-06 and multiple high-value card transactions, such as $187,189.37 to Christopher Moore on 2026-04-24. While the entity is a restaurant with expected cash receipts, the scale of non-cash movements is inconsistent with the declared business purpose and volume. This rapid movement of funds suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The account exhibits transaction volumes significantly exceeding the declared business profile. Total transaction volume for the period is $864,927.44, which is approximately 3.19x the expected monthly volume of $271,233.00. Notable activity includes a $254,632.62 ACH transfer to OUXJN Enterprises LLC on 2026-04-06 and multiple high-value card transactions, such as $187,189.37 to Christopher Moore on 2026-04-24. While the entity is a restaurant with expected cash receipts, the scale of non-cash movements is inconsistent with the declared business purpose and volume. This rapid movement of funds suggests potential layering or pass-through activity. Final filing decision is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

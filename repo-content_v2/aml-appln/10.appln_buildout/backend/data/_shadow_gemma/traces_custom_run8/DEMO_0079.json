@@ -1,0 +1,313 @@
+{
+  "case_id": "DEMO_0079",
+  "alert_id": "ALT_2406377",
+  "entity_id": "SYN_6853a873",
+  "started_at": "2026-05-23T11:21:18.211196+00:00",
+  "finished_at": "2026-05-23T11:21:21.081711+00:00",
+  "wall_clock_ms": 2870.5,
+  "transactions": [
+    {
+      "amount": 1062.05,
+      "channel": "ach",
+      "counterparty": "GSPYD Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 577.22,
+      "channel": "card",
+      "counterparty": "Christopher Taylor",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 1254.4,
+      "channel": "wire",
+      "counterparty": "LDJ Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 732.29,
+      "channel": "ach",
+      "counterparty": "IUDSB Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 1503.16,
+      "channel": "card",
+      "counterparty": "Karen Martin",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 1307.97,
+      "channel": "ach",
+      "counterparty": "QZXIP Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 864.9,
+      "channel": "ach",
+      "counterparty": "DGVNH Services LLC",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 1131.96,
+      "channel": "wire",
+      "counterparty": "XQUX Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": ""
+    },
+    {
+      "amount": 577.17,
+      "channel": "wire",
+      "counterparty": "CW Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 492.85,
+      "channel": "wire",
+      "counterparty": "YTUFM Industries LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 1636.14,
+      "channel": "card",
+      "counterparty": "Elizabeth Thomas",
+      "currency": "USD",
+      "date": "2026-03-02",
+      "notes": ""
+    },
+    {
+      "amount": 581.58,
+      "channel": "ach",
+      "counterparty": "XMHG Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": ""
+    },
+    {
+      "amount": 1223.79,
+      "channel": "cheque",
+      "counterparty": "HKXCY Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    },
+    {
+      "amount": 1231.72,
+      "channel": "ach",
+      "counterparty": "II Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": ""
+    },
+    {
+      "amount": 1085.73,
+      "channel": "ach",
+      "counterparty": "IKCB Group LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 1052.37,
+      "channel": "card",
+      "counterparty": "Daniel Martin",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 1515.71,
+      "channel": "ach",
+      "counterparty": "KJTCR Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 935.14,
+      "channel": "card",
+      "counterparty": "Jennifer Davis",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": ""
+    },
+    {
+      "amount": 631.42,
+      "channel": "card",
+      "counterparty": "Susan Martin",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 1326.21,
+      "channel": "wire",
+      "counterparty": "ZFWGZ Group LLC",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_6853a873",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5699.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,699.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.4,
+      "card": 0.3,
+      "wire": 0.25,
+      "cheque": 0.05
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.4, 'card': 0.3, 'wire': 0.25, 'cheque': 0.05})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "",
+      "summary": "The account exhibits a high volume of activity with a total of 20 transactions. The total volume is $22,422.31, which is approximately 3.93 times the expected monthly volume of $5,699.00. Activity is spread across multiple channels, with a channel mix of 47.4% ach, 25.0% card, 15.0% wire, and 12.6% cheque. The highest velocity in a 24-hour period is 4 transactions, and the account interacted with 16 unique counterparties over 7 days. The maximum z-score for transaction amounts is 1.78, and the highest country risk associated with a counterparty is 0.1. A loop was detected in the transaction history. The observed activity significantly exceeds the declared volume ratio of 3.93.",
+      "metrics": {
+        "tx_count": 20,
+        "tx_total_usd": 22422.31,
+        "channel_mix": {
+          "wire": 0.15,
+          "ach": 0.474,
+          "card": 0.25,
+          "cheque": 0.126
+        },
+        "velocity_24h_max": 4,
+        "velocity_24h_avg_30d": 0.67,
+        "unique_counterparties_7d": 16,
+        "amount_z_score_max": 1.78,
+        "country_risk_max": 0.1,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 3.93
+      },
+      "evidence": "transactions[0..19]"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "The total transaction volume is $18,334.31, which is approximately 3.22x the declared monthly volume of $5,699.00.",
+      "calculation": "1. Sum all transaction amounts: 1062.05 + 577.22 + 1254.40 + 732.29 + 1503.16 + 1307.97 + 864.90 + 1131.96 + 577.17 + 492.85 + 1636.14 + 581.58 + 1223.79 + 1231.72 + 1085.73 + 1052.37 + 1515.71 + 935.14 + 631.42 + 1326.21 = 18,334.31\n2. Compare to KYC profile: 18,334.31 / 5,699.00 = 3.217",
+      "evidence": "Transaction amounts listed in the 'amount' column for dates 2026-02-18 to 2026-04-27"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No relevant passage was provided to extract a citation from.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "error": "no_json",
+      "raw": "{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The provided fact pattern and statute text are empty, so no determination can be made.\", \"label\": \"neutral\", \"reasoning\": \"statute\": \"\"}"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": false,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account exhibits a high volume of activity with a total of 20 transactions. The total volume is $22,422.31, which is approximately 3.93 times the expected monthly volume of $5,699.00. Activity is spread across multiple channels, with a channel mix of 47.4% ach, 25.0% card, 15.0% wire, and 12.6% cheque. The highest velocity in a 24-hour period is 4 transactions, and the account interacted with 16 unique counterparties over 7 days. The maximum z-score for transaction amounts is 1.78, and the highest country risk associated with a counterparty is 0.1. A loop was detected in the transaction history. The observed activity significantly exceeds the declared volume ratio of 3.93.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 22422.31,
+          "channel_mix": {
+            "wire": 0.15,
+            "ach": 0.474,
+            "card": 0.25,
+            "cheque": 0.126
+          },
+          "velocity_24h_max": 4,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 16,
+          "amount_z_score_max": 1.78,
+          "country_risk_max": 0.1,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 3.93
+        },
+        "evidence": "transactions[0..19]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume is $18,334.31, which is approximately 3.22x the declared monthly volume of $5,699.00.",
+        "calculation": "1. Sum all transaction amounts: 1062.05 + 577.22 + 1254.40 + 732.29 + 1503.16 + 1307.97 + 864.90 + 1131.96 + 577.17 + 492.85 + 1636.14 + 581.58 + 1223.79 + 1231.72 + 1085.73 + 1052.37 + 1515.71 + 935.14 + 631.42 + 1326.21 = 18,334.31\n2. Compare to KYC profile: 18,334.31 / 5,699.00 = 3.217",
+        "evidence": "Transaction amounts listed in the 'amount' column for dates 2026-02-18 to 2026-04-27"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1062.05, \"channel\": \"ach\", \"counterparty\": \"GSPYD Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 577.22, \"channel\": \"card\", \"counterparty\": \"Christopher Taylor\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 1254.4, \"channel\": \"wire\", \"counterparty\": \"LDJ Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 732.29, \"channel\": \"ach\", \"counterparty\": \"IUDSB Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 1503.16, \"channel\": \"card\", \"counterparty\": \"Karen Martin\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 1307.97, \"channel\": \"ach\", \"counterparty\": \"QZXIP Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 864.9, \"channel\": \"ach\", \"counterparty\": \"DGVNH Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 1131.96, \"channel\": \"wire\", \"counterparty\": \"XQUX Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"\"}, {\"amount\": 577.17, \"channel\": \"wire\", \"counterparty\": \"CW Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 492.85, \"channel\": \"wire\", \"counterparty\": \"YTUFM Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 1636.14, \"channel\": \"card\", \"counterparty\": \"Elizabeth Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-02\", \"notes\": \"\"}, {\"amount\": 581.58, \"channel\": \"ach\", \"counterparty\": \"XMHG Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"\"}, {\"amount\": 1223.79, \"channel\": \"cheque\", \"counterparty\": \"HKXCY Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}, {\"amount\": 1231.72, \"channel\": \"ach\", \"counterparty\": \"II Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"\"}, {\"amount\": 1085.73, \"channel\": \"ach\", \"counterparty\": \"IKCB Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 1052.37, \"channel\": \"card\", \"counterparty\": \"Daniel Martin\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 1515.71, \"channel\": \"ach\", \"counterparty\": \"KJTCR Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 935.14, \"channel\": \"card\", \"counterparty\": \"Jennifer Davis\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"\"}, {\"amount\": 631.42, \"channel\": \"card\", \"counterparty\": \"Susan Martin\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 1326.21, \"channel\": \"wire\", \"counterparty\": \"ZFWGZ Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_6853a873\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5699, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,699.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account exhibits a high volume of activity with a total of 20 transactions. The total volume is $22,422.31, which is approximately 3.93 times the expected monthly volume of $5,699.00. Activity is spread across multiple channels, with a channel mix of 47.4% ach, 25.0% card, 15.0% wire, and 12.6% cheque. The highest velocity in a 24-hour period is 4 transactions, and the account interacted with 16 unique counterparties over 7 days. The maximum z-score for transaction amounts is 1.78, and the highest country risk associated with a counterparty is 0.1. A loop was detected in the transaction history. The observed activity significantly exceeds the declared volume ratio of 3.93.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 22422.31, \"channel_mix\": {\"wire\": 0.15, \"ach\": 0.474, \"card\": 0.25, \"cheque\": 0.126}, \"velocity_24h_max\": 4, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 16, \"amount_z_score_max\": 1.78, \"country_risk_max\": 0.1, \"loop_detected\": true, \"vs_declared_volume_ratio\": 3.93}, \"evidence\": \"transactions[0..19]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume is $18,334.31, which is approximately 3.22x the declared monthly volume of $5,699.00.\", \"calculation\": \"1. Sum all transaction amounts: 1062.05 + 577.22 + 1254.40 + 732.29 + 1503.16 + 1307.97 + 864.90 + 1131.96 + 577.17 + 492.85 + 1636.14 + 581.58 + 1223.79 + 1231.72 + 1085.73 + 1052.37 + 1515.71 + 935.14 + 631.42 + 1326.21 = 18,334.31\\n2. Compare to KYC profile: 18,334.31 / 5,699.00 = 3.217\", \"evidence\": \"Transaction amounts listed in the 'amount' column for dates 2026-02-18 to 2026-04-27\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

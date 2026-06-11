@@ -1,0 +1,283 @@
+{
+  "case_id": "DEMO_0149",
+  "alert_id": "ALT_2460249",
+  "entity_id": "SYN_fd66b718",
+  "started_at": "2026-05-23T12:15:59.317958+00:00",
+  "finished_at": "2026-05-23T12:16:25.042666+00:00",
+  "wall_clock_ms": 25724.7,
+  "transactions": [
+    {
+      "amount": 5048.39,
+      "channel": "cash",
+      "counterparty": "Jennifer Moore",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 2309.85,
+      "channel": "ach",
+      "counterparty": "ZLYRZ Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-15",
+      "notes": ""
+    },
+    {
+      "amount": 3912.06,
+      "channel": "wire",
+      "counterparty": "RIQ Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 1791.79,
+      "channel": "cash",
+      "counterparty": "Mary Johnson",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 1493.98,
+      "channel": "ach",
+      "counterparty": "JLN Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 2396.89,
+      "channel": "cash",
+      "counterparty": "Susan Smith",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 3300.81,
+      "channel": "ach",
+      "counterparty": "XGK Associates LLC",
+      "currency": "USD",
+      "date": "2026-02-28",
+      "notes": ""
+    },
+    {
+      "amount": 2770.25,
+      "channel": "wire",
+      "counterparty": "FYVY Services LLC",
+      "currency": "USD",
+      "date": "2026-02-03",
+      "notes": ""
+    },
+    {
+      "amount": 1684.5,
+      "channel": "ach",
+      "counterparty": "YAYVD Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 4706.11,
+      "channel": "cash",
+      "counterparty": "Joshua Anderson",
+      "currency": "USD",
+      "date": "2026-02-08",
+      "notes": ""
+    },
+    {
+      "amount": 3308.04,
+      "channel": "ach",
+      "counterparty": "KGCB Industries LLC",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    },
+    {
+      "amount": 2394.72,
+      "channel": "ach",
+      "counterparty": "SCF Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 1734.78,
+      "channel": "ach",
+      "counterparty": "SHV Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-05",
+      "notes": ""
+    },
+    {
+      "amount": 1860.12,
+      "channel": "cash",
+      "counterparty": "Patricia White",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 3756.58,
+      "channel": "wire",
+      "counterparty": "BC Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 2000.88,
+      "channel": "wire",
+      "counterparty": "HTPPC Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-25",
+      "notes": ""
+    },
+    {
+      "amount": 4253.35,
+      "channel": "wire",
+      "counterparty": "JNMK Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 3434.77,
+      "channel": "ach",
+      "counterparty": "QX Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-04",
+      "notes": ""
+    },
+    {
+      "amount": 4970.61,
+      "channel": "ach",
+      "counterparty": "JKUCJ Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    },
+    {
+      "amount": 2010.17,
+      "channel": "cash",
+      "counterparty": "Andrew Taylor",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_fd66b718",
+    "entity_type": "business",
+    "expected_monthly_volume": 17865.0,
+    "business_purpose": "Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$17,865.",
+    "risk_rating": "enhanced",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.45,
+      "cash": 0.3,
+      "wire": 0.25
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.3, 'ach': 0.45, 'wire': 0.25})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from the passage. Let's parse.\n\nWe have entity_id SYN_fd66b718, business purpose etc. Transactions list with date, amount, currency, counterparty, channel, notes.\n\nWe need to compute metrics:\n\n- tx_count: number of transactions listed. Let's count.\n\nList appears to have many lines. Let's count manually:\n\n1. 2026-02-05,5048.39,USD,\"Jennifer Moore\",cash,\n2. 2026-03-15,2309.85,USD,\"ZLYRZ Exports LLC\",ach,\n3. 2026-03-08,3912.06,USD,\"RIQ Capital LLC"
+    },
+    "numeric": {
+      "error": "schema",
+      "detail": "1 validation error for NumericFinding\ncalculation\n  Input should be a valid string [type=string_type, input_value=[\"1. Extract the 'amount'... the declared amount.'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type",
+      "raw_payload": {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$59,139 total transaction volume, which is roughly 3.3 times the declared monthly volume of $17,865.",
+        "calculation": [
+          "1. Extract the 'amount' field from each of the 20 transaction rows.",
+          "2. Sum the amounts: 5048.39 + 2309.85 + 3912.06 + 1791.79 + 1493.98 + 2396.89 + 3300.81 + 2770.25 + 1684.50 + 4706.11 + 3308.04 + 2394.72 + 1734.78 + 1860.12 + 3756.58 + 2000.88 + 4253.35 + 3434.77 + 4970.61 + 2010.17 = 59138.65.",
+          "3. Round to the nearest dollar: $59,139.",
+          "4. Compare to declared monthly volume: 59,139 ÷ 17,865 ≈ 3.31.",
+          "5. Conclusion: total volume is about 3.3× the declared amount."
+        ],
+        "evidence": "All 20 transaction rows (amounts listed above) contribute to the total; declared monthly volume is $17,865 from the KYC profile."
+      }
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The passage does not contain any policy excerpts.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute.",
+      "label": "neutral",
+      "reasoning": "Statute identifier is \"\" (empty), indicating no statutory provision."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute.",
+        "label": "neutral",
+        "reasoning": "Statute identifier is \"\" (empty), indicating no statutory provision."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The passage does not contain any policy excerpts.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 5048.39, \"channel\": \"cash\", \"counterparty\": \"Jennifer Moore\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 2309.85, \"channel\": \"ach\", \"counterparty\": \"ZLYRZ Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-15\", \"notes\": \"\"}, {\"amount\": 3912.06, \"channel\": \"wire\", \"counterparty\": \"RIQ Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 1791.79, \"channel\": \"cash\", \"counterparty\": \"Mary Johnson\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 1493.98, \"channel\": \"ach\", \"counterparty\": \"JLN Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 2396.89, \"channel\": \"cash\", \"counterparty\": \"Susan Smith\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 3300.81, \"channel\": \"ach\", \"counterparty\": \"XGK Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-02-28\", \"notes\": \"\"}, {\"amount\": 2770.25, \"channel\": \"wire\", \"counterparty\": \"FYVY Services LLC\", \"currency\": \"USD\", \"date\": \"2026-02-03\", \"notes\": \"\"}, {\"amount\": 1684.5, \"channel\": \"ach\", \"counterparty\": \"YAYVD Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 4706.11, \"channel\": \"cash\", \"counterparty\": \"Joshua Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-08\", \"notes\": \"\"}, {\"amount\": 3308.04, \"channel\": \"ach\", \"counterparty\": \"KGCB Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}, {\"amount\": 2394.72, \"channel\": \"ach\", \"counterparty\": \"SCF Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 1734.78, \"channel\": \"ach\", \"counterparty\": \"SHV Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-05\", \"notes\": \"\"}, {\"amount\": 1860.12, \"channel\": \"cash\", \"counterparty\": \"Patricia White\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 3756.58, \"channel\": \"wire\", \"counterparty\": \"BC Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 2000.88, \"channel\": \"wire\", \"counterparty\": \"HTPPC Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-25\", \"notes\": \"\"}, {\"amount\": 4253.35, \"channel\": \"wire\", \"counterparty\": \"JNMK Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 3434.77, \"channel\": \"ach\", \"counterparty\": \"QX Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-04\", \"notes\": \"\"}, {\"amount\": 4970.61, \"channel\": \"ach\", \"counterparty\": \"JKUCJ Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}, {\"amount\": 2010.17, \"channel\": \"cash\", \"counterparty\": \"Andrew Taylor\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_fd66b718\", \"entity_type\": \"business\", \"expected_monthly_volume\": 17865, \"business_purpose\": \"Professional / B2B services firm; primarily card and wire receipts; declared monthly volume ~$17,865.\", \"risk_rating\": \"enhanced\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute.\", \"label\": \"neutral\", \"reasoning\": \"Statute identifier is \\\"\\\" (empty), indicating no statutory provision.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The passage does not contain any policy excerpts.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. The bundle's _regulatory_frame is \"benign\". That suggests no SAR. Also _typology_inferred is \"none\". So likely not suspicious. Must set is_suspicious=false and suspicious_activity_report empty string.\n\nCheck constraints: When false, report must be empty string. Provide JSON only.\n\nThus output: {\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}\n\nMake sure no extra whitespace? Probably fine.\n</think>\n{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

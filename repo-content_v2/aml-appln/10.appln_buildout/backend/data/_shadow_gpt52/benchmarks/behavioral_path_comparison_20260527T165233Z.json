@@ -1,0 +1,415 @@
+{
+  "ran_at": "2026-05-27T16:52:33.769070+00:00",
+  "demo_size": 200,
+  "demo_version": "v3.1 (prod-mimic v2)",
+  "notes": "Behavioral-mode A vs B vs baseline; 200-case prod-mimic v2; custom NIM aml-custom-task-nim-1",
+  "endpoints": [
+    {
+      "label": "Baseline",
+      "eval_path": "data/eval_baseline.json",
+      "traces_dir": "data/traces_custom_v3p1",
+      "n_total_keys": 200
+    },
+    {
+      "label": "PathA_python_only",
+      "eval_path": "data/eval_pathA.json",
+      "traces_dir": "data/traces_custom_pathA",
+      "n_total_keys": 200
+    },
+    {
+      "label": "PathB_python_metrics_llm_summary",
+      "eval_path": "data/eval_pathB.json",
+      "traces_dir": "data/traces_custom_pathB",
+      "n_total_keys": 200
+    }
+  ],
+  "coverage": [
+    {
+      "field": "n_scored",
+      "values": {
+        "Baseline": 200,
+        "PathA_python_only": 198,
+        "PathB_python_metrics_llm_summary": 200
+      }
+    },
+    {
+      "field": "n_parse_failures",
+      "values": {
+        "Baseline": 0,
+        "PathA_python_only": 1,
+        "PathB_python_metrics_llm_summary": 0
+      }
+    },
+    {
+      "field": "n_errors",
+      "values": {
+        "Baseline": 0,
+        "PathA_python_only": 1,
+        "PathB_python_metrics_llm_summary": 0
+      }
+    }
+  ],
+  "headline_metrics": [
+    {
+      "metric": "f1",
+      "higher_is_better": true,
+      "values": {
+        "Baseline": 0.52,
+        "PathA_python_only": 0.769,
+        "PathB_python_metrics_llm_summary": 0.714
+      },
+      "winner_label": "PathA_python_only"
+    },
+    {
+      "metric": "precision",
+      "higher_is_better": true,
+      "values": {
+        "Baseline": 0.371,
+        "PathA_python_only": 0.694,
+        "PathB_python_metrics_llm_summary": 0.625
+      },
+      "winner_label": "PathA_python_only"
+    },
+    {
+      "metric": "recall",
+      "higher_is_better": true,
+      "values": {
+        "Baseline": 0.867,
+        "PathA_python_only": 0.862,
+        "PathB_python_metrics_llm_summary": 0.833
+      },
+      "winner_label": "Baseline"
+    },
+    {
+      "metric": "near_miss_specificity",
+      "higher_is_better": true,
+      "values": {
+        "Baseline": 0.6,
+        "PathA_python_only": 0.767,
+        "PathB_python_metrics_llm_summary": 0.767
+      },
+      "winner_label": null
+    },
+    {
+      "metric": "clean_fpr",
+      "higher_is_better": false,
+      "values": {
+        "Baseline": 0.229,
+        "PathA_python_only": 0.029,
+        "PathB_python_metrics_llm_summary": 0.057
+      },
+      "winner_label": "PathA_python_only"
+    }
+  ],
+  "confusion": [
+    {
+      "label": "Baseline",
+      "tp": 26,
+      "fp": 44,
+      "tn": 126,
+      "fn": 4
+    },
+    {
+      "label": "PathA_python_only",
+      "tp": 25,
+      "fp": 11,
+      "tn": 158,
+      "fn": 4
+    },
+    {
+      "label": "PathB_python_metrics_llm_summary",
+      "tp": 25,
+      "fp": 15,
+      "tn": 155,
+      "fn": 5
+    }
+  ],
+  "per_typology_recall": [
+    {
+      "typology": "elder_exploitation",
+      "values": {
+        "Baseline": 0.75,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 0.75
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 3,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": "PathA_python_only"
+    },
+    {
+      "typology": "human_trafficking",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 0.75,
+        "PathB_python_metrics_llm_summary": 0.75
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": "Baseline"
+    },
+    {
+      "typology": "layering",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "shell_company",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "smurfing",
+      "values": {
+        "Baseline": 0.667,
+        "PathA_python_only": 0.667,
+        "PathB_python_metrics_llm_summary": 0.667
+      },
+      "n_per_endpoint": {
+        "Baseline": 3,
+        "PathA_python_only": 3,
+        "PathB_python_metrics_llm_summary": 3
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "structuring",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 3,
+        "PathA_python_only": 3,
+        "PathB_python_metrics_llm_summary": 3
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "terrorist_financing",
+      "values": {
+        "Baseline": 0.5,
+        "PathA_python_only": 0.5,
+        "PathB_python_metrics_llm_summary": 0.5
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "trade_based_ml",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    }
+  ],
+  "per_typology_nm_specificity": [
+    {
+      "typology": "elder_exploitation",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "human_trafficking",
+      "values": {
+        "Baseline": 1.0,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 3,
+        "PathA_python_only": 3,
+        "PathB_python_metrics_llm_summary": 3
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "layering",
+      "values": {
+        "Baseline": 0.75,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "shell_company",
+      "values": {
+        "Baseline": 0.25,
+        "PathA_python_only": 0.75,
+        "PathB_python_metrics_llm_summary": 0.5
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": "PathA_python_only"
+    },
+    {
+      "typology": "smurfing",
+      "values": {
+        "Baseline": 0.667,
+        "PathA_python_only": 0.667,
+        "PathB_python_metrics_llm_summary": 0.667
+      },
+      "n_per_endpoint": {
+        "Baseline": 3,
+        "PathA_python_only": 3,
+        "PathB_python_metrics_llm_summary": 3
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "structuring",
+      "values": {
+        "Baseline": 0.25,
+        "PathA_python_only": 0.5,
+        "PathB_python_metrics_llm_summary": 0.5
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "terrorist_financing",
+      "values": {
+        "Baseline": 0.75,
+        "PathA_python_only": 1.0,
+        "PathB_python_metrics_llm_summary": 1.0
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": null
+    },
+    {
+      "typology": "trade_based_ml",
+      "values": {
+        "Baseline": 0.25,
+        "PathA_python_only": 0.25,
+        "PathB_python_metrics_llm_summary": 0.5
+      },
+      "n_per_endpoint": {
+        "Baseline": 4,
+        "PathA_python_only": 4,
+        "PathB_python_metrics_llm_summary": 4
+      },
+      "winner_label": "PathB_python_metrics_llm_summary"
+    }
+  ],
+  "narrative_stats": [
+    {
+      "field": "n_non_empty",
+      "values": {
+        "Baseline": 200,
+        "PathA_python_only": 198,
+        "PathB_python_metrics_llm_summary": 200
+      }
+    },
+    {
+      "field": "mean_chars",
+      "values": {
+        "Baseline": 743.7,
+        "PathA_python_only": 700.6,
+        "PathB_python_metrics_llm_summary": 696.1
+      }
+    },
+    {
+      "field": "median_chars",
+      "values": {
+        "Baseline": 744.5,
+        "PathA_python_only": 697.5,
+        "PathB_python_metrics_llm_summary": 695.0
+      }
+    },
+    {
+      "field": "min_chars",
+      "values": {
+        "Baseline": 590,
+        "PathA_python_only": 552,
+        "PathB_python_metrics_llm_summary": 565
+      }
+    },
+    {
+      "field": "max_chars",
+      "values": {
+        "Baseline": 948,
+        "PathA_python_only": 837,
+        "PathB_python_metrics_llm_summary": 829
+      }
+    }
+  ],
+  "wall_clock_ms": [
+    {
+      "field": "mean",
+      "values": {
+        "Baseline": 9462.5,
+        "PathA_python_only": 7736.5,
+        "PathB_python_metrics_llm_summary": 9051.7
+      }
+    },
+    {
+      "field": "median",
+      "values": {
+        "Baseline": 8636.0,
+        "PathA_python_only": 7332.9,
+        "PathB_python_metrics_llm_summary": 8337.8
+      }
+    }
+  ]
+}

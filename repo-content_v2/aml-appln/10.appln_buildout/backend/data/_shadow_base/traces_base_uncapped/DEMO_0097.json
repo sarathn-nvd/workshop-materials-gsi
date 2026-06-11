@@ -1,0 +1,171 @@
+{
+  "case_id": "DEMO_0097",
+  "alert_id": "ALT_2480090",
+  "entity_id": "SYN_45add36a",
+  "started_at": "2026-05-23T12:09:48.755104+00:00",
+  "finished_at": "2026-05-23T12:10:13.048558+00:00",
+  "wall_clock_ms": 24293.5,
+  "transactions": [
+    {
+      "amount": 2620.19,
+      "channel": "wire",
+      "counterparty": "James Anderson (family member)",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 579.17,
+      "channel": "wire",
+      "counterparty": "MD Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 2253.73,
+      "channel": "ach",
+      "counterparty": "SSHX Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    },
+    {
+      "amount": 1520.55,
+      "channel": "ach",
+      "counterparty": "RVKC Industries LLC",
+      "currency": "USD",
+      "date": "2026-03-17",
+      "notes": ""
+    },
+    {
+      "amount": 2608.92,
+      "channel": "wire",
+      "counterparty": "HCBZ Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 2383.75,
+      "channel": "ach",
+      "counterparty": "ENGB Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_45add36a",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2234.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,234.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "ach": 0.5
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'ach': 0.5})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_45add36a, individual, expected monthly volume 2234.0 USD, low risk, US-FL.\n\nTransactions list: 6 entries.\n\nWe need to compute:\n\n- tx_count: number of transactions = 6.\n\n- tx_total_usd: sum of amounts (all USD). Let's sum:\n\n2620.19\n579.17\n2253.73\n1520.55\n2608.92\n2383.75\n\nAdd:\n\n2620.19 + 579.17 = 3199.36\n+ 2253.73 = 5453.09\n+ 1520.55 = 6973.64\n+ 2608.92 = 9582.56\n+ 2383.75 = 11966.31\n\nSo tx_total_usd = 11966.3"
+    },
+    "numeric": {
+      "error": "schema",
+      "detail": "1 validation error for NumericFinding\nevidence\n  Input should be a valid string [type=string_type, input_value=['2620.19', '579.17', '22...', '2608.92', '2383.75'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type",
+      "raw_payload": {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "$11,966.31 total transaction volume, about 5.4× the declared $2,234 monthly volume.",
+        "calculation": "1. Sum the transaction amounts: 2620.19 + 579.17 + 2253.73 + 1520.55 + 2608.92 + 2383.75 = 11966.31\n2. Divide by the declared monthly volume: 11966.31 / 2234 ≈ 5.36, indicating the observed volume is roughly 5.4 times higher.",
+        "evidence": [
+          "2620.19",
+          "579.17",
+          "2253.73",
+          "1520.55",
+          "2608.92",
+          "2383.75"
+        ]
+      }
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "The conduct cannot be determined to fall within any statute.",
+      "label": "neutral",
+      "reasoning": "Statute identifier is empty."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "The conduct cannot be determined to fall within any statute.",
+        "label": "neutral",
+        "reasoning": "Statute identifier is empty."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2620.19, \"channel\": \"wire\", \"counterparty\": \"James Anderson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 579.17, \"channel\": \"wire\", \"counterparty\": \"MD Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 2253.73, \"channel\": \"ach\", \"counterparty\": \"SSHX Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}, {\"amount\": 1520.55, \"channel\": \"ach\", \"counterparty\": \"RVKC Industries LLC\", \"currency\": \"USD\", \"date\": \"2026-03-17\", \"notes\": \"\"}, {\"amount\": 2608.92, \"channel\": \"wire\", \"counterparty\": \"HCBZ Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 2383.75, \"channel\": \"ach\", \"counterparty\": \"ENGB Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_45add36a\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2234, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,234.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"The conduct cannot be determined to fall within any statute.\", \"label\": \"neutral\", \"reasoning\": \"Statute identifier is empty.\"}], \"behavioral\": [], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"(no policy excerpts available)\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since regulatory_frame is \"benign\", decision should be not suspicious. So is_suspicious = false, suspicious_activity_report = \"\" (empty string). Must output JSON only.\n\nCheck constraints: When false, report must be empty string. Provide JSON object.\n\nThus output: {\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}\n</think>\n{\"is_suspicious\":false,\"suspicious_activity_report\":\"\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

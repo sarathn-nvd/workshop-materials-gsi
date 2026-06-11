@@ -1,0 +1,207 @@
+{
+  "case_id": "DEMO_0065",
+  "alert_id": "ALT_2476460",
+  "entity_id": "SYN_742388c5",
+  "started_at": "2026-05-27T16:06:17.242317+00:00",
+  "finished_at": "2026-05-27T16:06:24.503347+00:00",
+  "wall_clock_ms": 7261.1,
+  "transactions": [
+    {
+      "amount": 3460.58,
+      "channel": "wire",
+      "counterparty": "Joshua Jackson (family member)",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 538.73,
+      "channel": "wire",
+      "counterparty": "ECQFE Group LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 2030.87,
+      "channel": "ach",
+      "counterparty": "KIC Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-19",
+      "notes": ""
+    },
+    {
+      "amount": 1530.59,
+      "channel": "card",
+      "counterparty": "Maria Smith",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": ""
+    },
+    {
+      "amount": 615.46,
+      "channel": "card",
+      "counterparty": "Sarah Miller",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 1601.18,
+      "channel": "wire",
+      "counterparty": "BGE Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_742388c5",
+    "entity_type": "individual",
+    "expected_monthly_volume": 2187.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$2,187.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "card": 0.333,
+      "ach": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'ach': 0.16666666666666666, 'card': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 5 with a tx_total_usd of 9777.41. The channel_mix shows a distribution including wire: 0.4, indicating a reliance on non-cash methods. Activity peaked with a velocity_24h_max of 2. Over the last week, the account interacted with unique_counterparties_7d of 3. The vs_declared_volume_ratio is 14.03, which is significantly higher than the expected monthly volume. This rapid movement of funds is consistent with a high-risk profile and warrants further review.",
+      "metrics": {
+        "tx_count": 5,
+        "tx_total_usd": 9777.41,
+        "channel_mix": {
+          "wire": 0.4,
+          "card": 0.4,
+          "ach": 0.2
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.25,
+        "unique_counterparties_7d": 3,
+        "amount_z_score_max": 1.6,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 14.03
+      },
+      "evidence": "transactions[0..4]; kyc_profile.expected_monthly_volume; kyc_profile.risk_rating"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 9777.41",
+      "calculation": "1. Identify all transaction amounts: 3460.58 (2026-04-16), 538.73 (2026-04-19), 2030.87 (2026-04-19), 1530.59 (2026-04-03), 615.46 (2026-03-04), 1601.18 (2026-04-22). 2. Sum the amounts: 3460.58 + 538.73 + 2030.87 + 1530.59 + 615.46 + 1601.18 = 9777.41.",
+      "evidence": "transactions[0..5].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral as there is no legal framework to apply."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral as there is no legal framework to apply."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account recorded a tx_count of 5 with a tx_total_usd of 9777.41. The channel_mix shows a distribution including wire: 0.4, indicating a reliance on non-cash methods. Activity peaked with a velocity_24h_max of 2. Over the last week, the account interacted with unique_counterparties_7d of 3. The vs_declared_volume_ratio is 14.03, which is significantly higher than the expected monthly volume. This rapid movement of funds is consistent with a high-risk profile and warrants further review.",
+        "metrics": {
+          "tx_count": 5,
+          "tx_total_usd": 9777.41,
+          "channel_mix": {
+            "wire": 0.4,
+            "card": 0.4,
+            "ach": 0.2
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.25,
+          "unique_counterparties_7d": 3,
+          "amount_z_score_max": 1.6,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 14.03
+        },
+        "evidence": "transactions[0..4]; kyc_profile.expected_monthly_volume; kyc_profile.risk_rating"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 9777.41",
+        "calculation": "1. Identify all transaction amounts: 3460.58 (2026-04-16), 538.73 (2026-04-19), 2030.87 (2026-04-19), 1530.59 (2026-04-03), 615.46 (2026-03-04), 1601.18 (2026-04-22). 2. Sum the amounts: 3460.58 + 538.73 + 2030.87 + 1530.59 + 615.46 + 1601.18 = 9777.41.",
+        "evidence": "transactions[0..5].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3460.58, \"channel\": \"wire\", \"counterparty\": \"Joshua Jackson (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 538.73, \"channel\": \"wire\", \"counterparty\": \"ECQFE Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 2030.87, \"channel\": \"ach\", \"counterparty\": \"KIC Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-19\", \"notes\": \"\"}, {\"amount\": 1530.59, \"channel\": \"card\", \"counterparty\": \"Maria Smith\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"\"}, {\"amount\": 615.46, \"channel\": \"card\", \"counterparty\": \"Sarah Miller\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 1601.18, \"channel\": \"wire\", \"counterparty\": \"BGE Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_742388c5\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 2187.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$2,187.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to analyze, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral as there is no legal framework to apply.\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The account recorded a tx_count of 5 with a tx_total_usd of 9777.41. The channel_mix shows a distribution including wire: 0.4, indicating a reliance on non-cash methods. Activity peaked with a velocity_24h_max of 2. Over the last week, the account interacted with unique_counterparties_7d of 3. The vs_declared_volume_ratio is 14.03, which is significantly higher than the expected monthly volume. This rapid movement of funds is consistent with a high-risk profile and warrants further review.\", \"metrics\": {\"tx_count\": 5, \"tx_total_usd\": 9777.41, \"channel_mix\": {\"wire\": 0.4, \"card\": 0.4, \"ach\": 0.2}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.25, \"unique_counterparties_7d\": 3, \"amount_z_score_max\": 1.6, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 14.03}, \"evidence\": \"transactions[0..4]; kyc_profile.expected_monthly_volume; kyc_profile.risk_rating\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 9777.41\", \"calculation\": \"1. Identify all transaction amounts: 3460.58 (2026-04-16), 538.73 (2026-04-19), 2030.87 (2026-04-19), 1530.59 (2026-04-03), 615.46 (2026-03-04), 1601.18 (2026-04-22). 2. Sum the amounts: 3460.58 + 538.73 + 2030.87 + 1530.59 + 615.46 + 1601.18 = 9777.41.\", \"evidence\": \"transactions[0..5].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a high volume of activity, with a total transaction volume of $9,777.41 across five transactions between 2026-03-04 and 2026-04-22, resulting in a vs_declared_volume_ratio of 14.03. This activity triggered an alert based on the volume exceeding the expected monthly throughput of $2,187. However, the transactions consist of small, benign payments to family members (e.g., $3,460.58 to Joshua Jackson) and standard living expenses (e.g., $1,530.59 to Maria Smith and $615.46 to Sarah Miller). The activity is consistent with the personal spending patterns of a retired individual and does not exhibit patterns of layering or structuring. No SAR warranted; the activity is consistent with declared business. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a high volume of activity, with a total transaction volume of $9,777.41 across five transactions between 2026-03-04 and 2026-04-22, resulting in a vs_declared_volume_ratio of 14.03. This activity triggered an alert based on the volume exceeding the expected monthly throughput of $2,187. However, the transactions consist of small, benign payments to family members (e.g., $3,460.58 to Joshua Jackson) and standard living expenses (e.g., $1,530.59 to Maria Smith and $615.46 to Sarah Miller). The activity is consistent with the personal spending patterns of a retired individual and does not exhibit patterns of layering or structuring. No SAR warranted; the activity is consistent with declared business. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a high volume of activity, with a total transaction volume of $9,777.41 across five transactions between 2026-03-04 and 2026-04-22, resulting in a vs_declared_volume_ratio of 14.03. This activity triggered an alert based on the volume exceeding the expected monthly throughput of $2,187. However, the transactions consist of small, benign payments to family members (e.g., $3,460.58 to Joshua Jackson) and standard living expenses (e.g., $1,530.59 to Maria Smith and $615.46 to Sarah Miller). The activity is consistent with the personal spending patterns of a retired individual and does not exhibit patterns of layering or structuring. No SAR warranted; the activity is consistent with declared business. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

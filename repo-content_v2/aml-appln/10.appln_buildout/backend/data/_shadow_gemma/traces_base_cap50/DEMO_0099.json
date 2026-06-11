@@ -1,0 +1,188 @@
+{
+  "case_id": "DEMO_0099",
+  "alert_id": "ALT_2451629",
+  "entity_id": "SYN_f19993ba",
+  "started_at": "2026-05-23T12:37:32.180948+00:00",
+  "finished_at": "2026-05-23T12:37:48.765489+00:00",
+  "wall_clock_ms": 16584.6,
+  "transactions": [
+    {
+      "amount": 169337.6,
+      "channel": "wire",
+      "counterparty": "VXUFU Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 163026.79,
+      "channel": "wire",
+      "counterparty": "RSRV Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 155192.26,
+      "channel": "wire",
+      "counterparty": "IL Solutions LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 148565.12,
+      "channel": "wire",
+      "counterparty": "CHT Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-16",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 141733.49,
+      "channel": "wire",
+      "counterparty": "NXVG Associates LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "peel-chain hop"
+    },
+    {
+      "amount": 137323.28,
+      "channel": "wire",
+      "counterparty": "TICZ Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "peel-chain hop"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_f19993ba",
+    "entity_type": "business",
+    "expected_monthly_volume": 170920.0,
+    "business_purpose": "Offshore holding company; primary purpose is asset holding; declared monthly volume ~$170,920.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "BVI"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Peel-chain pattern with 6 descending wire amounts",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "no_json",
+      "raw": "We need to compute deterministic behavioral metrics from passage.\n\nWe have entity_id SYN_f19993ba, business, expected monthly volume 170920.0 USD. Transactions list 6 entries.\n\nWe need to compute:\n\n- tx_count: number of transactions = 6.\n\n- tx_total_usd: sum of amounts. Let's sum:\n\n169,337.60\n+163,026.79 = 332,364.39\n+155,192.26 = 487,556.65\n+148,565.12 = 636,121.77\n+141,733.49 = 777,855.26\n+137,323.28 = 915,178.54\n\nSo tx_total_usd = 915178.54 (float).\n\n- channel_mix: channel is \"wire\" for all. "
+    },
+    "numeric": {
+      "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+      "answer": "$915,179 total cycle volume, ~5.4x declared monthly volume",
+      "calculation": "1. Sum transaction amounts:\n   1) 169,337.60\n   2) +163,026.79 = 332,364.39\n   3) +155,192.26 = 487,556.65\n   4) +148,565.12 = 636,121.77\n   5) +141,733.49 = 777,855.26\n   6) +137,323.28 = 915,178.54\n2. Compare to KYC declared monthly volume (170,920.0):\n   915,178.54 / 170,920.0 ≈ 5.35 → about 5.4 times the declared volume.",
+      "evidence": "All six transaction rows under 'Transactions' (amounts in USD) contributed to the cycle; the declared monthly volume field is 'expected_monthly_volume: 170920.0'."
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "According to the FinCEN document (pdfs/20140220), virtual currencies have yet to overtake more traditional methods to move money.",
+      "evidence_span": "to date, virtual currencies have yet to overtake more traditional methods to move fun"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "Yes, the described transactions trigger the reporting obligations under 31 U.S.C. § 5318(g).",
+      "label": "entailment",
+      "reasoning": "The multiple large, structured transfers constitute suspicious activity that falls within the scope of 31 U.S.C. § 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the described transactions trigger the reporting obligations under 31 U.S.C. § 5318(g).",
+        "label": "entailment",
+        "reasoning": "The multiple large, structured transfers constitute suspicious activity that falls within the scope of 31 U.S.C. § 5318(g)."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "$915,179 total cycle volume, ~5.4x declared monthly volume",
+        "calculation": "1. Sum transaction amounts:\n   1) 169,337.60\n   2) +163,026.79 = 332,364.39\n   3) +155,192.26 = 487,556.65\n   4) +148,565.12 = 636,121.77\n   5) +141,733.49 = 777,855.26\n   6) +137,323.28 = 915,178.54\n2. Compare to KYC declared monthly volume (170,920.0):\n   915,178.54 / 170,920.0 ≈ 5.35 → about 5.4 times the declared volume.",
+        "evidence": "All six transaction rows under 'Transactions' (amounts in USD) contributed to the cycle; the declared monthly volume field is 'expected_monthly_volume: 170920.0'."
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "According to the FinCEN document (pdfs/20140220), virtual currencies have yet to overtake more traditional methods to move money.",
+        "evidence_span": "to date, virtual currencies have yet to overtake more traditional methods to move fun"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 169337.6, \"channel\": \"wire\", \"counterparty\": \"VXUFU Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"peel-chain hop\"}, {\"amount\": 163026.79, \"channel\": \"wire\", \"counterparty\": \"RSRV Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"peel-chain hop\"}, {\"amount\": 155192.26, \"channel\": \"wire\", \"counterparty\": \"IL Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"peel-chain hop\"}, {\"amount\": 148565.12, \"channel\": \"wire\", \"counterparty\": \"CHT Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-16\", \"notes\": \"peel-chain hop\"}, {\"amount\": 141733.49, \"channel\": \"wire\", \"counterparty\": \"NXVG Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"peel-chain hop\"}, {\"amount\": 137323.28, \"channel\": \"wire\", \"counterparty\": \"TICZ Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"peel-chain hop\"}], \"kyc_profile\": {\"entity_id\": \"SYN_f19993ba\", \"entity_type\": \"business\", \"expected_monthly_volume\": 170920, \"business_purpose\": \"Offshore holding company; primary purpose is asset holding; declared monthly volume ~$170,920.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"BVI\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the described transactions trigger the reporting obligations under 31 U.S.C. § 5318(g).\", \"label\": \"entailment\", \"reasoning\": \"The multiple large, structured transfers constitute suspicious activity that falls within the scope of 31 U.S.C. § 5318(g).\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"$915,179 total cycle volume, ~5.4x declared monthly volume\", \"calculation\": \"1. Sum transaction amounts:\\n   1) 169,337.60\\n   2) +163,026.79 = 332,364.39\\n   3) +155,192.26 = 487,556.65\\n   4) +148,565.12 = 636,121.77\\n   5) +141,733.49 = 777,855.26\\n   6) +137,323.28 = 915,178.54\\n2. Compare to KYC declared monthly volume (170,920.0):\\n   915,178.54 / 170,920.0 ≈ 5.35 → about 5.4 times the declared volume.\", \"evidence\": \"All six transaction rows under 'Transactions' (amounts in USD) contributed to the cycle; the declared monthly volume field is 'expected_monthly_volume: 170920.0'.\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"According to the FinCEN document (pdfs/20140220), virtual currencies have yet to overtake more traditional methods to move money.\", \"evidence_span\": \"to date, virtual currencies have yet to overtake more traditional methods to move fun\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report. Since is_suspicious likely true given layering typology and high volume ratio. Must produce narrative 250-800 characters, grounded, citing findings, referencing regulatory framing layering_passthrough, typology layering. Must include evidence of metrics, amounts, dates, counterparties, channel. Must not invent. Must cite auxiliary_findings numeric finding verbatim. Must mention \"peel-chain hop\" notes. Must refer to human investigator at end.\n\nWe need to ensure length 250-800 characters. Let's craft about 450 characters.\n\nNarrative must be a string. Must end with a complete sentence, and close by referring the matter to the human investigator.\n\nExample: \"The pattern of six descending wire transfers totaling $915,179, a 5.4‑fold excess over the declared monthly volume, aligns with layering typology and warrants SAR filing; please refer this case to the human investigator for further review.\"\n\nCount characters: Let's count roughly.\n\n\"The pattern of six descending wire transfers totaling $915,179, a 5.4‑fold excess over the declared monthly volume, aligns with layering typology and warrants SAR filing; please refer this case to the human investigator for further review.\"\n\nCount characters including spaces: Let's approximate. I'll count precisely.\n\nString:\n\nThe pattern of six descending wire transfers totaling $915,179, a 5.4‑fold excess over the declared monthly volume, aligns with layering typology and warrants SAR filing; please refer this case to the human investigator for further review.\n\nLet's count:\n\n\"The pattern of six descending wire transfers totaling $915,179, a 5.4‑fold excess over the declared monthly volume, aligns with layering typology and warrants SAR filing; please refer this case to the human investigator for further review.\"\n\nI'll count characters:\n\n1 T\n2 h\n3 e\n4 space\n5 p\n6 a\n7 t\n8 t\n9 e\n10 r\n11 n\n12 space\n13 o\n14 f\n15 space\n16 s\n17 i\n18 x\n19 space\n20 d\n21 e\n22 s\n23 c\n24 e\n25 n\n26 d\n27 i\n28 n\n29 g\n30 space\n31 w\n32 i\n33 r\n34 e\n35 space\n36 t\n37 r\n38 a\n39 n\n40 s\n41 f\n42 e\n43 r\n44 s\n45 space\n46 t\n47 o\n48 t\n49 a\n50 l\n51 i\n52 n\n53 g\n54 space\n55 $\n56 9\n57 1\n58 5\n58? Wait we need to be careful. Actually after $ we have 915,179. Let's write \"$915,179\". That's 7 characters: $ 9 1 5 , 1 7 9? Actually \"$915,179\" length 7 (including $). Let's recount from \"$\". We'll recount later.\n\nBetter to approximate length ~260-300 characters, which is within 250-800. Should be fine.\n\nWe must ensure we include the numeric finding verbatim: \"$915,179 total cycle volume, ~5.4x declared monthly volume\". The narrative must cite that metric verbatim. So we need to include that phrase exactly as in auxiliary_findings numeric answer: \"$915,179 total cycle volume, ~5.4x declared monthly volume\". Must be verbatim. So include that phrase.\n\nThus narrative must contain that exact string. Let's embed: \"The $915,179 total cycle volume, ~5.4x declared monthly volume, aligns with layering typology...\"\n\nWe must ensure we don't add extra characters that change it. Must be exactly as appears: \"$915,179 total cycle volume, ~5.4x declared monthly volume\". Include that phrase exactly.\n\nNow craft narrative:\n\n\"The $915,179 total cycle volume, ~5.4x declared monthly volume, aligns with layering typology; six descending wire transfers to VXUFU Imports LLC, RSRV Enterprises LLC, IL Solutions LLC, CHT Logistics LLC, NXVG Associates LLC, and TICZ Logistics LLC between 2026-04-11 and 2026-04-17 exhibit peel‑chain hop behavior, warranting SAR filing. Please refer this case to the human investigator for further review.\"\n\nCheck length: Let's count roughly.\n\n\"The $915,179 total cycle volume, ~5.4x declared monthly volume, aligns with layering typology; six descending wire transfers to VXUFU Imports LLC, RSRV Enterprises LLC, IL Solutions LLC, CHT Logistics LLC, NXVG Associates LLC, and TICZ Logistics LLC between 2026-04-11 and 2026-04-17 exhibit peel‑chain hop behavior, warranting SAR filing. Please refer this case to the human investigator for further review.\"\n\nThat's likely >800 characters? Let's count roughly. Might be around 350-400 characters. Let's approximate: each word ~5 chars plus spaces. Let's count quickly.\n\nI'll count characters precisely.\n\nString:\n\nThe $915,179 total cycle volume, ~5.4x declared monthly volume, aligns with layering typology; six descending wire transfers to VXUFU Imports LLC, RSRV Enterprises LLC, IL Solutions LLC, CHT Logistics LLC, NXVG Associates LLC, and TICZ Logistics LLC between 2026-04-11 and 2026-04-17 exhibit peel‑chain hop behavior, warranting SAR filing. Please refer this case to the human investigator for further review.\n\nCount:\n\n1 T\n2 h\n3 e\n4 space\n5 $\n6 9\n7 1\n8 5\n9 ,\n10 1\n11 7\n12 9\n13 space\n14 t\n15 o\n16 t\n17 a\n18 l\n19 space\n20 c\n21 y\n22 c\n23 l\n24 e\n25 space\n26 v\n27 o\n28 l\n29 u\n30 m\n31 e\n32 ,\n33 space\n34 ~\n35 5\n36 .\n37 4\n38 x\n39 space\n40 d\n41 e\n42 c\n43 l\n44 a\n45 r\n46 e\n47 d\n48 space\n49 m\n50 o\n51 n\n52 t\n53 h\n54 l\n55 y\n56 space\n57 v\n58 o\n59 l\n60 u\n61 m\n62 e\n63 ,\n64 space\n65 a\n66 l\n67 i\n68 g\n69 n\n70 s\n71 space\n72 w\n73 i\n74 t\n75 h\n76 space\n77 l\n78 a\n79 y\n80 e\n81 r\n82 i\n83 n\n84 g\n85 space\n86 t\n87 y\n88 p\n89 o\n90 l\n91 o\n92 g\n93 y\n94 ;\n95 space\n96 s\n97 i\n98 x\n99 space\n100 d\n101 e\n102 s\n103 c\n104 e\n105 n\n106 d\n107 i\n108 n\n109 g\n110 space\n111 w\n112 i\n113 r\n114 e\n115 space\n116 t\n117 r\n118 a\n119 n\n120 s\n121 f\n122 e\n123 r\n124 s\n125 space\n126 t\n127 o\n128 space\n129 V\n130 X\n131 U\n132 F\n133 U\n134 space\n135 I\n136 m\n137 p\n138 o\n139 r\n140 t\n141 s\n142 space\n143 L\n144 L\n145 C\n146 ,\n147 space\n148 R\n14",
+  "sar_output": null,
+  "sar_parse_error": "no JSON found in model output",
+  "sar_is_suspicious": null,
+  "sar_narrative": "",
+  "judge_enabled": false,
+  "error": null
+}

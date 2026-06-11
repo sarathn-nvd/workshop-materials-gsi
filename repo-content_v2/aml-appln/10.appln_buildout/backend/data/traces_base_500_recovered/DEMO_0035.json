@@ -1,0 +1,202 @@
+{
+  "case_id": "DEMO_0035",
+  "alert_id": "ALT_2438985",
+  "entity_id": "SYN_7acdab71",
+  "started_at": "2026-05-29T02:59:18.386443+00:00",
+  "finished_at": "2026-05-29T02:59:51.234478+00:00",
+  "wall_clock_ms": 32848.1,
+  "transactions": [
+    {
+      "amount": 1864.81,
+      "channel": "wire",
+      "counterparty": "Elizabeth Taylor (new payee)",
+      "currency": "USD",
+      "date": "2026-04-10",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 4568.71,
+      "channel": "wire",
+      "counterparty": "Elizabeth Taylor (new payee)",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 19601.33,
+      "channel": "wire",
+      "counterparty": "Elizabeth Taylor (new payee)",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 17791.43,
+      "channel": "wire",
+      "counterparty": "Elizabeth Taylor (new payee)",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "wire to newly-added payee"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_7acdab71",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1313.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,313.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Peel-chain pattern with 4 descending wire amounts",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_7acdab71 executed 4 transactions totaling $43,826.28 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.57. Volume vs declared monthly is 143.05x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 4,
+        "tx_total_usd": 43826.28,
+        "channel_mix": {
+          "wire": 1.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.57,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.16,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 143.05
+      },
+      "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys question, answer, calculation, evidence.\n\nWe must compute total volume passing through any detected cycle; compare to KYC declared monthly volume.\n\nWe have transactions list with amounts: 1,864.81; 4,568.71; 19,601.33; 17,791.43. All USD. Likely these are part of a cycle? The question: \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\"\n\nWe need to compute total volume passing through any detected cycle. Probably"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The passage says it was involved in laundering more than $6 billion, in laundering more.",
+      "evidence_span": "it was involved in laundering more than $6 billion"
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 31 U.S.C. § 5318(g) — Suspicious activity reporting requirements?",
+      "answer": "Yes, it requires reporting of suspicious activity",
+      "label": "entailment",
+      "reasoning": "31 U.S.C. § 5318(g) requires reporting of suspicious activity; the four wire transfers to a newly added payee total $44,826.28, exceeding the expected monthly volume of $1,313 and include amounts above $10,000, indicating possible structuring; the pattern of multiple transactions to a new payee raises a reason to suspect suspicious activity, satisfying the statutory trigger."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_7acdab71 executed 4 transactions totaling $43,826.28 USD with channel mix {\"wire\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.57. Volume vs declared monthly is 143.05x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 4,
+          "tx_total_usd": 43826.28,
+          "channel_mix": {
+            "wire": 1.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.57,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.16,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 143.05
+        },
+        "evidence": "transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The passage says it was involved in laundering more than $6 billion, in laundering more.",
+        "evidence_span": "it was involved in laundering more than $6 billion"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 31 U.S.C. § 5318(g) — Suspicious activity reporting requirements?",
+        "answer": "Yes, it requires reporting of suspicious activity",
+        "label": "entailment",
+        "reasoning": "31 U.S.C. § 5318(g) requires reporting of suspicious activity; the four wire transfers to a newly added payee total $44,826.28, exceeding the expected monthly volume of $1,313 and include amounts above $10,000, indicating possible structuring; the pattern of multiple transactions to a new payee raises a reason to suspect suspicious activity, satisfying the statutory trigger."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1864.81, \"channel\": \"wire\", \"counterparty\": \"Elizabeth Taylor (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-10\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 4568.71, \"channel\": \"wire\", \"counterparty\": \"Elizabeth Taylor (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 19601.33, \"channel\": \"wire\", \"counterparty\": \"Elizabeth Taylor (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 17791.43, \"channel\": \"wire\", \"counterparty\": \"Elizabeth Taylor (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"wire to newly-added payee\"}], \"kyc_profile\": {\"entity_id\": \"SYN_7acdab71\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1313.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,313.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN\\u2019s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. \\u00a7 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. \\u00a7 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                \\u00a7 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. \\u00a7 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. \\u00a7 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation\\u2019s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO\\u2019s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A\\u2192B\\u2192C\\u2192A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with \\u22653% trim.\"}], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_7acdab71 executed 4 transactions totaling $43,826.28 USD with channel mix {\\\"wire\\\": 1.0}. The 24-hour velocity peak is 1 against a 30-day average of 0.57. Volume vs declared monthly is 143.05x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 4, \"tx_total_usd\": 43826.28, \"channel_mix\": {\"wire\": 1.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.57, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.16, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 143.05}, \"evidence\": \"transactions[0..3]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The passage says it was involved in laundering more than $6 billion, in laundering more.\", \"evidence_span\": \"it was involved in laundering more than $6 billion\"}], \"statutory\": [{\"question\": \"Does the conduct described fall within 31 U.S.C. \\u00a7 5318(g) \\u2014 Suspicious activity reporting requirements?\", \"answer\": \"Yes, it requires reporting of suspicious activity\", \"label\": \"entailment\", \"reasoning\": \"31 U.S.C. \\u00a7 5318(g) requires reporting of suspicious activity; the four wire transfers to a newly added payee total $44,826.28, exceeding the expected monthly volume of $1,313 and include amounts above $10,000, indicating possible structuring; the pattern of multiple transactions to a new payee raises a reason to suspect suspicious activity, satisfying the statutory trigger.\"}]}}",
+  "sar_raw_text": "We need to produce JSON with is_suspicious bool and suspicious_activity_report string (400-800 chars). Must decide based on evidence.\n\nWe have transactions: 4 wires to new payee \"Elizabeth Taylor (new payee)\" amounts: 1864.81, 4568.71, 19601.33, 17791.43. Total 43826.28. Expected monthly volume 1313. Ratio 143x. Channel mix all wire. This is high volume relative to declared. Also amounts include >10k (19601, 17791). This suggests structuring? Actually structuring is sub-10k to avoid CTR; here amounts are >10k, so not structuring; but multiple wires to new payee could be layering/peel chain. There's auxiliary behavioral finding: velocity_24h_max=1 vs avg 0.57; volume vs declared 143x; channel_mix wire 1.0; etc. Also statutory finding says \"Yes, it requires reporting of suspicious activity\" because amounts exceed expected monthly volume and include >10k, pattern of multiple transactions to new payee raises reason to suspect.\n\nSanctions_pep_hits empty. No policy excerpt about structuring but we have policy excerpts about SARs and FinCEN etc. Also SOP excerpt about peel chains etc.\n\nThus evidence suggests SAR warranted. So is_suspicious = true.\n\nNow need to write narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive? Probably length of string. Must be between 400 and 800 characters. Let's craft about 550 characters.\n\nWe must include most salient evidence: multiple wires to new payee, total $43,826, ratio 143x declared volume, amounts >10k, velocity spike, channel mix all wire, behavioral metric. Also cite regulatory framing: layering/peel chain, FinCEN SAR requirement, 31 USC 5318(g). Must not exceed 800 characters.\n\nLet's draft ~600 characters.\n\nCount characters roughly. We'll write:\n\n\"Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143‑fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24‑hour velocity peak of 1 versus a 30‑day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner’s profile. The pattern aligns with peel‑chain layering guidance (SOP‑LAYERING‑01) and triggers FinCEN SAR obligations under 31 U.S.C. §5318(g).\"\n\nNow count characters. Let's count manually.\n\nI'll count characters including spaces.\n\nString:\n\n\"Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143‑fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24‑hour velocity peak of 1 versus a 30‑day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner’s profile. The pattern aligns with peel‑chain layering guidance (SOP‑LAYERING-01) and triggers FinCEN SAR obligations under 31 U.S.C. §5318(g).\"\n\nLet's count approximate characters. Use rough estimate: each word ~5 chars plus spaces. But better to count precisely.\n\nI'll copy into a counting mental.\n\nI'll count characters including punctuation.\n\nI'll write with indices.\n\n\"Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143‑fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24‑hour velocity peak of 1 versus a 30‑day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner’s profile. The pattern aligns with peel‑chain layering guidance (SOP‑LAYERING-01) and triggers FinCEN SAR obligations under 31 U.S.C. §5318(g).\"\n\nLet's count using groups.\n\nI'll count characters manually:\n\n1-10: \"Four succes\" (10) actually \"Four \" =5, \"successive\" =10? Let's do systematic.\n\nI'll write the string and count using approximate but ensure >400 and <800. Likely around 500-560 characters. Should be fine.\n\nBut need to ensure it's within 400-800 characters. Let's approximate length: The sentence is long but likely under 800. Let's quickly estimate: The string length maybe ~560. Should be okay.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<the narrative>\"\n}\n\nMake sure no extra whitespace? It's okay.\n\nNow ensure narrative is exactly the string we crafted, no extra quotes inside? The JSON string must escape quotes. We have single quotes inside narrative; JSON string uses double quotes, so we can include single quotes fine. But we have apostrophe in \"pensioner’s\" (smart apostrophe). That might be considered a character but fine. However JSON string must not contain unescaped double quotes. We have none. We have single quotes around 'Elizabeth Taylor' and 'pensioner’s' includes an apostrophe (curly). That's fine.\n\nBut we have an apostrophe in \"pensioner’s\". That's a Unicode apostrophe, not a double quote. It's okay.\n\nWe also have an apostrophe in \"FinCEN SAR obligations under 31 U.S.C. §5318(g).\" No quotes.\n\nWe have a hyphen in \"SOP‑LAYERING-01\" with maybe an en dash? It's a hyphen. Fine.\n\nWe have an en dash in \"143‑fold\" and \"24‑hour\" and \"30‑day\". Those are Unicode hyphens. Fine.\n\nWe have a special character \" \" (narrow no-break space) before §? There's a narrow no-break space after \"31\". That might be a Unicode character but okay.\n\nBut to be safe, we can simplify to plain ASCII characters. Use plain hyphen and apostrophe. Let's rewrite with plain ASCII.\n\nSimplify:\n\n\"Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143-fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24-hour velocity peak of 1 versus a 30-day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner's profile. The pattern aligns with peel-chain layering guidance (SOP-LAYERING-01) and triggers FinCEN SAR obligations under 31 USC §5318(g).\"\n\nNow count characters again roughly. Should be similar.\n\nNow produce JSON.\n\nMake sure narrative length is between 400-800 characters. Let's approximate length: This is maybe ~500 characters. Good.\n\nNow output exactly JSON object, no extra text.\n\nLet's craft final answer.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143-fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24-hour velocity peak of 1 versus a 30-day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner's profile. The pattern aligns with peel-chain layering guidance (SOP-LAYERING-01) and triggers FinCEN SAR obligations under 31 USC §5318(g).\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143-fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24-hour velocity peak of 1 versus a 30-day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner's profile. The pattern aligns with peel-chain layering guidance (SOP-LAYERING-01) and triggers FinCEN SAR obligations under 31 USC §5318(g)."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Four successive wires to a newly added payee 'Elizabeth Taylor' total $43,826.28, a 143-fold excess over the $1,313 expected monthly volume. All transfers are wire, with two above $10,000 and a 24-hour velocity peak of 1 versus a 30-day average of 0.57, indicating rapid, concentrated movement inconsistent with a retired pensioner's profile. The pattern aligns with peel-chain layering guidance (SOP-LAYERING-01) and triggers FinCEN SAR obligations under 31 USC §5318(g).",
+  "judge_enabled": false,
+  "error": null
+}

@@ -1,0 +1,319 @@
+{
+  "case_id": "DEMO_0309",
+  "alert_id": "ALT_3219824",
+  "entity_id": "SYN_42e6a292",
+  "started_at": "2026-05-28T11:13:24.023868+00:00",
+  "finished_at": "2026-05-28T11:13:59.112154+00:00",
+  "wall_clock_ms": 35088.3,
+  "transactions": [
+    {
+      "amount": 8787.34,
+      "channel": "ach",
+      "counterparty": "EZUL Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 12065.04,
+      "channel": "card",
+      "counterparty": "Patricia White",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 21627.19,
+      "channel": "ach",
+      "counterparty": "ZC Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-11",
+      "notes": ""
+    },
+    {
+      "amount": 11610.61,
+      "channel": "ach",
+      "counterparty": "UTYJR Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-05",
+      "notes": ""
+    },
+    {
+      "amount": 7593.88,
+      "channel": "ach",
+      "counterparty": "BXL Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 9082.95,
+      "channel": "card",
+      "counterparty": "Elizabeth Wilson",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 10209.29,
+      "channel": "ach",
+      "counterparty": "WKGWA Capital LLC",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 8436.08,
+      "channel": "wire",
+      "counterparty": "ND Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-25",
+      "notes": ""
+    },
+    {
+      "amount": 10268.64,
+      "channel": "ach",
+      "counterparty": "WWEK Holdings LLC",
+      "currency": "USD",
+      "date": "2026-04-07",
+      "notes": ""
+    },
+    {
+      "amount": 6176.49,
+      "channel": "ach",
+      "counterparty": "JRQY Group LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    },
+    {
+      "amount": 10774.05,
+      "channel": "wire",
+      "counterparty": "XXA Holdings LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 22010.03,
+      "channel": "ach",
+      "counterparty": "FUR Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 14697.72,
+      "channel": "wire",
+      "counterparty": "USJRE Group LLC",
+      "currency": "USD",
+      "date": "2026-04-08",
+      "notes": ""
+    },
+    {
+      "amount": 18399.1,
+      "channel": "wire",
+      "counterparty": "VU Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 11528.34,
+      "channel": "wire",
+      "counterparty": "PQ Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 16959.8,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-03-13",
+      "notes": ""
+    },
+    {
+      "amount": 9228.7,
+      "channel": "ach",
+      "counterparty": "SIHZ Imports LLC",
+      "currency": "USD",
+      "date": "2026-04-22",
+      "notes": ""
+    },
+    {
+      "amount": 11362.99,
+      "channel": "ach",
+      "counterparty": "JRK Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-31",
+      "notes": ""
+    },
+    {
+      "amount": 13798.48,
+      "channel": "ach",
+      "counterparty": "PUYF Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-25",
+      "notes": ""
+    },
+    {
+      "amount": 11994.21,
+      "channel": "card",
+      "counterparty": "Christopher Thomas",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    },
+    {
+      "amount": 13100.35,
+      "channel": "wire",
+      "counterparty": "REYV Trading LLC",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_42e6a292",
+    "entity_type": "individual",
+    "expected_monthly_volume": 78068.0,
+    "business_purpose": "Self-employed proprietor; small-business cash flow; expected monthly throughput ~$78,068.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-TX"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.524,
+      "wire": 0.286,
+      "card": 0.19
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'ach': 0.5238095238095238, 'card': 0.19047619047619047, 'wire': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_42e6a292 executed 21 transactions totaling $259,711.28 USD with channel mix {\"ach\": 0.524, \"wire\": 0.286, \"card\": 0.19}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.2x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 21,
+        "tx_total_usd": 259711.28,
+        "channel_mix": {
+          "ach": 0.524,
+          "wire": 0.286,
+          "card": 0.19
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.7,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 2.3,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.2
+      },
+      "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to compute numeric finding. Likely sum of transaction amounts? Or maybe total volume? The question: summarize transaction volumes and compare to KYC declared monthly volume. So we need to compute total transaction amount (maybe sum of amounts) and compare to expected monthly volume of 78,068.0 USD.\n\nWe need to produce answer n"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "no statute mapped",
+      "label": "neutral",
+      "reasoning": "0 U.S.C. § 0 provides no basis; no statute mapped"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "no statute mapped",
+        "label": "neutral",
+        "reasoning": "0 U.S.C. § 0 provides no basis; no statute mapped"
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_42e6a292 executed 21 transactions totaling $259,711.28 USD with channel mix {\"ach\": 0.524, \"wire\": 0.286, \"card\": 0.19}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.2x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 21,
+          "tx_total_usd": 259711.28,
+          "channel_mix": {
+            "ach": 0.524,
+            "wire": 0.286,
+            "card": 0.19
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.7,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 2.3,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.2
+        },
+        "evidence": "transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 8787.34, \"channel\": \"ach\", \"counterparty\": \"EZUL Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 12065.04, \"channel\": \"card\", \"counterparty\": \"Patricia White\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 21627.19, \"channel\": \"ach\", \"counterparty\": \"ZC Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-11\", \"notes\": \"\"}, {\"amount\": 11610.61, \"channel\": \"ach\", \"counterparty\": \"UTYJR Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-05\", \"notes\": \"\"}, {\"amount\": 7593.88, \"channel\": \"ach\", \"counterparty\": \"BXL Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 9082.95, \"channel\": \"card\", \"counterparty\": \"Elizabeth Wilson\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 10209.29, \"channel\": \"ach\", \"counterparty\": \"WKGWA Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 8436.08, \"channel\": \"wire\", \"counterparty\": \"ND Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-25\", \"notes\": \"\"}, {\"amount\": 10268.64, \"channel\": \"ach\", \"counterparty\": \"WWEK Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-04-07\", \"notes\": \"\"}, {\"amount\": 6176.49, \"channel\": \"ach\", \"counterparty\": \"JRQY Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}, {\"amount\": 10774.05, \"channel\": \"wire\", \"counterparty\": \"XXA Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 22010.03, \"channel\": \"ach\", \"counterparty\": \"FUR Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 14697.72, \"channel\": \"wire\", \"counterparty\": \"USJRE Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-08\", \"notes\": \"\"}, {\"amount\": 18399.1, \"channel\": \"wire\", \"counterparty\": \"VU Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 11528.34, \"channel\": \"wire\", \"counterparty\": \"PQ Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 16959.8, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-03-13\", \"notes\": \"\"}, {\"amount\": 9228.7, \"channel\": \"ach\", \"counterparty\": \"SIHZ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-22\", \"notes\": \"\"}, {\"amount\": 11362.99, \"channel\": \"ach\", \"counterparty\": \"JRK Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-31\", \"notes\": \"\"}, {\"amount\": 13798.48, \"channel\": \"ach\", \"counterparty\": \"PUYF Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-25\", \"notes\": \"\"}, {\"amount\": 11994.21, \"channel\": \"card\", \"counterparty\": \"Christopher Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}, {\"amount\": 13100.35, \"channel\": \"wire\", \"counterparty\": \"REYV Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_42e6a292\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 78068.0, \"business_purpose\": \"Self-employed proprietor; small-business cash flow; expected monthly throughput ~$78,068.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-TX\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"no statute mapped\", \"label\": \"neutral\", \"reasoning\": \"0 U.S.C. § 0 provides no basis; no statute mapped\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_42e6a292 executed 21 transactions totaling $259,711.28 USD with channel mix {\\\"ach\\\": 0.524, \\\"wire\\\": 0.286, \\\"card\\\": 0.19}. The 24-hour velocity peak is 2 against a 30-day average of 0.7. Volume vs declared monthly is 1.2x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 21, \"tx_total_usd\": 259711.28, \"channel_mix\": {\"ach\": 0.524, \"wire\": 0.286, \"card\": 0.19}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.7, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 2.3, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.2}, \"evidence\": \"transactions[0..20]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive is_suspicious based on evidence.\n\nWe have kyc_profile: individual, expected monthly volume 78,068, business purpose: self-employed proprietor; small-business cash flow; expected monthly throughput ~$78,068. Risk rating medium. Incorporation US-TX.\n\nTransactions: 21 transactions total $259,711.28. Channel mix: ach 0.524, wire 0.286, card 0.19. 24h velocity peak 2 vs avg 0.7. Volume vs declared monthly is 1.2x. So total is about 1.2x expected monthly volume. That's within 0.5-1.5x range, which is not necessarily suspicious; but combined with other factors? There's no sanctions hits. No policy excerpts. Auxiliary findings: behavioral summary includes metrics. No numeric or citation findings.\n\nWe need to decide if SAR warranted. The volume is 1.2x declared monthly, which is within 0.5-1.5x range, not necessarily suspicious. No structuring pattern (no sub-10k cash). Channels are mix of ACH, wire, card. Not all cash. No high-risk counterparties. No PEP hits. So likely not suspicious. However, there is a 24h velocity peak of 2 vs avg 0.7, which is a spike but not huge. Could be considered some velocity anomaly but not enough.\n\nGiven the rules: Set is_suspicious=false when surface red flag resolved. Here no surface red flag; no sanctions hit. So likely false.\n\nWe need to produce a narrative 400-800 characters, grounded, citing evidence. Must name the surface red flag? There is none. But we still need to produce a disposition rationale. The narrative must name the surface red flag explicitly. But there is no red flag. However the instruction says: \"A negative narrative is NOT a placeholder. It is a grounded disposition rationale that an analyst reviewing the alert would write in the case file. Structure: 1. NAME the surface red flag explicitly. Be specific — quote the transaction count, the sanctions-list match, the channel pattern, or whatever element of the bundle triggered the alert.\" If there is no red flag, maybe we still need to name something? The alert probably triggered something? The user didn't mention an alert; we just have the bundle. But we must still produce a negative narrative that names the surface red flag. Perhaps we can note that the surface trigger was the high transaction volume (1.2x declared) but that is resolved by context. So we can name that as the surface red flag: \"Transaction volume 1.2x declared monthly\". Then explain that it's within expected range.\n\nThus narrative: \"Surface red flag: 21 transactions totaling $259,711.28, which is 1.2x the declared monthly volume of $78,068. The KYC profile indicates the entity is a self‑employed proprietor with expected monthly throughput ~$78k, and the observed volume falls within the 0.5–1.5× range considered normal for such customers. No sanctions or PEP hits are present, and the channel mix (52% ACH, 29% wire, 19% card) is consistent with a mixed‑payment small‑business pattern. The 24‑hour velocity peak of 2 is modest relative to the 30‑day average of 0.7 and does not indicate structuring. Accordingly, the activity is consistent with the declared business purpose and no SAR is warranted.\" Need 400-800 characters.\n\nLet's count approximate characters. We'll craft around 550 characters.\n\nNeed to ensure narrative is 400-800 characters inclusive. Let's draft ~560 characters.\n\nCount characters manually? Let's approximate.\n\nDraft:\n\n\"Surface red flag: 21 transactions totaling $259,711.28, which equals 1.2× the declared monthly volume of $78,068. The KYC profile identifies the entity as a self‑employed proprietor with expected monthly cash flow ~ $78k, and the observed activity matches that profile. No sanctions or PEP hits appear, and the channel mix (52% ACH, 29% wire, 19% card) aligns with a typical small‑business pattern. The 24‑hour velocity peak of 2 is modest versus a 30‑day average of 0.7, showing no structuring. Therefore the activity is consistent with the declared purpose and no SAR is warranted.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nI'll copy text and count manually approximate.\n\n\"Surface red flag: 21 transactions totaling $259,711.28, which equals 1.2× the declared monthly volume of $78,068. The KYC profile identifies the entity as a self‑employed proprietor with expected monthly cash flow ~ $78k, and the observed activity matches that profile. No sanctions or PEP hits appear, and the channel mix (52% ACH, 29% wire, 19% card) aligns with a typical small‑business pattern. The 24‑hour velocity peak of 2 is modest versus a 30‑day average of 0.7, showing no structuring. Therefore the activity is consistent with the declared purpose and no SAR is warranted.\"\n\nLet's count using rough method: I'll count words and approximate characters. Better to use an estimate: average 5 chars per word plus space. Let's count words.\n\nWords list:\n\nSurface(6) red(3) flag:(5) 21(2) transactions(12) totaling(8) $259,711.28,(13) which(5) equals(6) 1.2×(4) the(3) declared(8) monthly(7) volume(6) of(2) $78,068.(7) The(3) KYC(3) profile(7) identifies(9) the(3) entity(6) as(2) a(1) self‑employed(12) proprietor(10) with(4) expected(8) monthly(7) cash(4) flow(4) ~(1) $78k,(5) and(3) the(3) observed(8) activity(8) matches(7) that(4) profile.(7) No(2) sanctions(9) or(2) PEP(3) hits(4) appear,(7) and(3) the(3) channel(7) mix(4) (52%(5) ACH,(5) 29%(4) wire,(5) 19%(4) card)%(5) aligns(6) with(5) a(1) typical(7) small‑business(13) pattern.(8) The(3) 24‑hour(8) velocity(8) peak(5) of(2) 2(1) is(2) modest(6) versus(8) a(1) 30‑day(7) average(8) of(2) 0.7,(3) showing(7) no(2) structuring.(11) Therefore(9) the(3) activity(8) is(2) consistent(10) with(5) the(3) declared(8) purpose(7) and(3) no(2) SAR(3) is(2) warranted.(9)\n\nNow sum characters including spaces? This is too messy.\n\nBetter to approximate length: The paragraph seems around 560-600 characters. Should be within 400-800. Likely okay.\n\nWe must output JSON with is_suspicious false and the narrative string.\n\nMake sure no extra fields.\n\nThus final output:\n\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: 21 transactions totaling $259,711.28, which equals 1.2× the declared monthly volume of $78,068. The KYC profile identifies the entity as a self‑employed proprietor with expected monthly cash flow ~ $78k, and the observed activity matches that profile. No sanctions or PEP hits appear, and the channel mix (52% ACH, 29% wire, 19% card) aligns with a typical small‑business pattern. The 24‑hour velocity peak of 2 is modest versus a 30‑day average of 0.7, showing no structuring. Therefore the activity is consistent with the declared purpose and no SAR is warranted.\"\n}\n\nCheck character count: Let's quickly count characters roughly. I'll count using approximate: The string length maybe around 620 characters. Should be fine.\n\nMake sure no extra punctuation at end? It's okay.\n\nNow produce final JSON without markdown.\n</think>\n{\n  \"is_suspicious\": false,\n  \"suspicious_activity_report\": \"Surface red flag: 21 transactions totaling $259,711.28, which equals 1.2× the declared monthly volume of $78,068. The KYC profile identifies the entity as a self‑employed proprietor with expected monthly cash flow ~ $78k, and the observed activity matches that profile. No sanctions or PEP hits appear, and the channel mix (52% ACH, 29% wire, 19% card) aligns with a typical small‑business pattern. The 24‑hour velocity peak of 2 is modest versus a 30‑day average of 0.7, showing no structuring. Therefore the activity is consistent with the declared purpose and no SAR is warranted.\"\n}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "Surface red flag: 21 transactions totaling $259,711.28, which equals 1.2× the declared monthly volume of $78,068. The KYC profile identifies the entity as a self‑employed proprietor with expected monthly cash flow ~ $78k, and the observed activity matches that profile. No sanctions or PEP hits appear, and the channel mix (52% ACH, 29% wire, 19% card) aligns with a typical small‑business pattern. The 24‑hour velocity peak of 2 is modest versus a 30‑day average of 0.7, showing no structuring. Therefore the activity is consistent with the declared purpose and no SAR is warranted."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "Surface red flag: 21 transactions totaling $259,711.28, which equals 1.2× the declared monthly volume of $78,068. The KYC profile identifies the entity as a self‑employed proprietor with expected monthly cash flow ~ $78k, and the observed activity matches that profile. No sanctions or PEP hits appear, and the channel mix (52% ACH, 29% wire, 19% card) aligns with a typical small‑business pattern. The 24‑hour velocity peak of 2 is modest versus a 30‑day average of 0.7, showing no structuring. Therefore the activity is consistent with the declared purpose and no SAR is warranted.",
+  "judge_enabled": false,
+  "error": null
+}

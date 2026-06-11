@@ -1,0 +1,193 @@
+{
+  "case_id": "DEMO_0123",
+  "alert_id": "ALT_2414404",
+  "entity_id": "SYN_c617d66d",
+  "started_at": "2026-05-27T15:24:51.347201+00:00",
+  "finished_at": "2026-05-27T15:25:18.146164+00:00",
+  "wall_clock_ms": 26799.0,
+  "transactions": [
+    {
+      "amount": 2597.58,
+      "channel": "wire",
+      "counterparty": "Islamic Relief USA",
+      "currency": "USD",
+      "date": "2026-04-03",
+      "notes": "charitable donation (benign: 501(c)(3) recipient, single occurrence)"
+    },
+    {
+      "amount": 5444.73,
+      "channel": "ach",
+      "counterparty": "WWBMG Exports LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 4613.03,
+      "channel": "card",
+      "counterparty": "Christopher Jackson",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 2004.03,
+      "channel": "ach",
+      "counterparty": "CMIZT Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 3982.32,
+      "channel": "ach",
+      "counterparty": "VU Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-14",
+      "notes": ""
+    },
+    {
+      "amount": 3379.94,
+      "channel": "card",
+      "counterparty": "James White",
+      "currency": "USD",
+      "date": "2026-04-23",
+      "notes": ""
+    },
+    {
+      "amount": 3737.95,
+      "channel": "ach",
+      "counterparty": "VIT Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-16",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_c617d66d",
+    "entity_type": "individual",
+    "expected_monthly_volume": 7618.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$7,618.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "card": 0.286,
+      "wire": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "match",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.14285714285714285, 'ach': 0.5714285714285714, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=5444.73, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 transactions with a tx_total_usd of 25759.58. The channel_mix shows a distribution of {'wire': 1, 'ach': 4, 'card': 2}, indicating a reliance on electronic transfers. A velocity_24h_max of 5444.73 was observed, reflecting the highest single-day movement. The entity interacted with unique_counterparties_7d of 7 distinct parties over the period. The vs_declared_volume_ratio is 1.13, suggesting activity slightly above the expected monthly throughput. This pattern of rapid movement across multiple electronic channels warrants further review for consistency with the declared business purpose.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 25759.58,
+          "channel_mix": {
+            "wire": 1,
+            "ach": 4,
+            "card": 2
+          },
+          "velocity_24h_max": 5444.73,
+          "unique_counterparties_7d": 7,
+          "vs_declared_volume_ratio": 1.13
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 25759.58 vs expected monthly volume 7618.0",
+      "calculation": "1. Sum all transaction amounts: 2597.58 (transactions[0]) + 5444.73 (transactions[1]) + 4613.03 (transactions[2]) + 2004.03 (transactions[3]) + 3982.32 (transactions[4]) + 3379.94 (transactions[5]) + 3737.95 (transactions[6]) = 25759.58. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 7618.0.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 25759.58 vs expected monthly volume 7618.0",
+        "calculation": "1. Sum all transaction amounts: 2597.58 (transactions[0]) + 5444.73 (transactions[1]) + 4613.03 (transactions[2]) + 2004.03 (transactions[3]) + 3982.32 (transactions[4]) + 3379.94 (transactions[5]) + 3737.95 (transactions[6]) = 25759.58. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 7618.0.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2597.58, \"channel\": \"wire\", \"counterparty\": \"Islamic Relief USA\", \"currency\": \"USD\", \"date\": \"2026-04-03\", \"notes\": \"charitable donation (benign: 501(c)(3) recipient, single occurrence)\"}, {\"amount\": 5444.73, \"channel\": \"ach\", \"counterparty\": \"WWBMG Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 4613.03, \"channel\": \"card\", \"counterparty\": \"Christopher Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 2004.03, \"channel\": \"ach\", \"counterparty\": \"CMIZT Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 3982.32, \"channel\": \"ach\", \"counterparty\": \"VU Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-14\", \"notes\": \"\"}, {\"amount\": 3379.94, \"channel\": \"card\", \"counterparty\": \"James White\", \"currency\": \"USD\", \"date\": \"2026-04-23\", \"notes\": \"\"}, {\"amount\": 3737.95, \"channel\": \"ach\", \"counterparty\": \"VIT Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-16\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_c617d66d\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 7618.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$7,618.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 25759.58 vs expected monthly volume 7618.0\", \"calculation\": \"1. Sum all transaction amounts: 2597.58 (transactions[0]) + 5444.73 (transactions[1]) + 4613.03 (transactions[2]) + 2004.03 (transactions[3]) + 3982.32 (transactions[4]) + 3379.94 (transactions[5]) + 3737.95 (transactions[6]) = 25759.58. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 7618.0.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The alert was triggered by a total transaction volume of $25,759.58 across seven transactions between 2026-02-02 and 2026-04-23, which exceeds the expected monthly volume of $7,618.00. However, this total spans approximately three months of activity. The average monthly volume is approximately $8,586.53, which is within 1.13x of the declared monthly throughput for this salaried wage earner. The transactions consist of standard ACH, card, and a single charitable wire to Islamic Relief USA, which are consistent with the profile of an individual. No sanctions hits or high-risk patterns were identified. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The alert was triggered by a total transaction volume of $25,759.58 across seven transactions between 2026-02-02 and 2026-04-23, which exceeds the expected monthly volume of $7,618.00. However, this total spans approximately three months of activity. The average monthly volume is approximately $8,586.53, which is within 1.13x of the declared monthly throughput for this salaried wage earner. The transactions consist of standard ACH, card, and a single charitable wire to Islamic Relief USA, which are consistent with the profile of an individual. No sanctions hits or high-risk patterns were identified. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The alert was triggered by a total transaction volume of $25,759.58 across seven transactions between 2026-02-02 and 2026-04-23, which exceeds the expected monthly volume of $7,618.00. However, this total spans approximately three months of activity. The average monthly volume is approximately $8,586.53, which is within 1.13x of the declared monthly throughput for this salaried wage earner. The transactions consist of standard ACH, card, and a single charitable wire to Islamic Relief USA, which are consistent with the profile of an individual. No sanctions hits or high-risk patterns were identified. The activity is consistent with declared business; no SAR warranted. Final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

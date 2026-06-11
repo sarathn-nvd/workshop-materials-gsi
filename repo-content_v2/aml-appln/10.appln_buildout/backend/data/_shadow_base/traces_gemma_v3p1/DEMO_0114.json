@@ -1,0 +1,194 @@
+{
+  "case_id": "DEMO_0114",
+  "alert_id": "ALT_2434803",
+  "entity_id": "SYN_3f52b506",
+  "started_at": "2026-05-27T15:24:33.745569+00:00",
+  "finished_at": "2026-05-27T15:24:58.512980+00:00",
+  "wall_clock_ms": 24767.4,
+  "transactions": [
+    {
+      "amount": 1022.29,
+      "channel": "wire",
+      "counterparty": "Jennifer Wilson (family, abroad)",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": "remittance to family (benign: documented diaspora support)"
+    },
+    {
+      "amount": 2142.9,
+      "channel": "ach",
+      "counterparty": "UU Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 2542.93,
+      "channel": "card",
+      "counterparty": "John Harris",
+      "currency": "USD",
+      "date": "2026-03-24",
+      "notes": ""
+    },
+    {
+      "amount": 1422.73,
+      "channel": "ach",
+      "counterparty": "TPZVI Services LLC",
+      "currency": "USD",
+      "date": "2026-03-10",
+      "notes": ""
+    },
+    {
+      "amount": 2614.95,
+      "channel": "card",
+      "counterparty": "Susan Martin",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 1536.58,
+      "channel": "ach",
+      "counterparty": "HMT Services LLC",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 2828.88,
+      "channel": "ach",
+      "counterparty": "RFFW Capital LLC",
+      "currency": "USD",
+      "date": "2026-04-13",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_3f52b506",
+    "entity_type": "individual",
+    "expected_monthly_volume": 3491.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$3,491.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.571,
+      "card": 0.286,
+      "wire": 0.143
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.14285714285714285, 'ach': 0.5714285714285714, 'card': 0.2857142857142857})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=2828.88, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 7 transactions with a tx_total_usd of 14081.26. The channel_mix shows a predominance of ach transactions. Activity is characterized by a velocity_24h_max of 2828.88, indicating the highest single-day movement. There are unique_counterparties_7d of 1, reflecting recent activity with a single entity. The vs_declared_volume_ratio is 1.21, suggesting volume slightly above the expected monthly throughput. This pattern of rapid movement is consistent with the provided KYC profile for a salaried wage earner.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 14081.26,
+          "channel_mix": {
+            "wire": 1,
+            "ach": 4,
+            "card": 2,
+            "cash": 0
+          },
+          "velocity_24h_max": 2828.88,
+          "unique_counterparties_7d": 1,
+          "vs_declared_volume_ratio": 1.21
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 14111.26 vs expected monthly volume 3491.0",
+      "calculation": "1. Sum all transaction amounts: 1022.29 (transactions[0]) + 2142.90 (transactions[1]) + 2542.93 (transactions[2]) + 1422.73 (transactions[3]) + 2614.95 (transactions[4]) + 1536.58 (transactions[5]) + 2828.88 (transactions[6]) = 14111.26. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 3491.0.",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 14111.26 vs expected monthly volume 3491.0",
+        "calculation": "1. Sum all transaction amounts: 1022.29 (transactions[0]) + 2142.90 (transactions[1]) + 2542.93 (transactions[2]) + 1422.73 (transactions[3]) + 2614.95 (transactions[4]) + 1536.58 (transactions[5]) + 2828.88 (transactions[6]) = 14111.26. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 3491.0.",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 1022.29, \"channel\": \"wire\", \"counterparty\": \"Jennifer Wilson (family, abroad)\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"remittance to family (benign: documented diaspora support)\"}, {\"amount\": 2142.9, \"channel\": \"ach\", \"counterparty\": \"UU Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 2542.93, \"channel\": \"card\", \"counterparty\": \"John Harris\", \"currency\": \"USD\", \"date\": \"2026-03-24\", \"notes\": \"\"}, {\"amount\": 1422.73, \"channel\": \"ach\", \"counterparty\": \"TPZVI Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-10\", \"notes\": \"\"}, {\"amount\": 2614.95, \"channel\": \"card\", \"counterparty\": \"Susan Martin\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 1536.58, \"channel\": \"ach\", \"counterparty\": \"HMT Services LLC\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 2828.88, \"channel\": \"ach\", \"counterparty\": \"RFFW Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-04-13\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_3f52b506\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 3491.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$3,491.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 14111.26 vs expected monthly volume 3491.0\", \"calculation\": \"1. Sum all transaction amounts: 1022.29 (transactions[0]) + 2142.90 (transactions[1]) + 2542.93 (transactions[2]) + 1422.73 (transactions[3]) + 2614.95 (transactions[4]) + 1536.58 (transactions[5]) + 2828.88 (transactions[6]) = 14111.26. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 3491.0.\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The alert was triggered by a total transaction volume of $14,111.26 across seven transactions between 2026-02-20 and 2026-04-13, which exceeds the expected monthly volume of $3,491.00. However, this total spans approximately two months of activity. The monthly average is roughly $7,055, which is approximately 2x the declared volume. The transactions consist of standard ACH payments to service providers (e.g., UU Solutions LLC, TPZVI Services LLC), card payments to individuals, and a documented family remittance of $1,022.29 to Jennifer Wilson. The activity is consistent with a salaried individual's spending patterns and does not exhibit layering or structuring. No SAR warranted; final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The alert was triggered by a total transaction volume of $14,111.26 across seven transactions between 2026-02-20 and 2026-04-13, which exceeds the expected monthly volume of $3,491.00. However, this total spans approximately two months of activity. The monthly average is roughly $7,055, which is approximately 2x the declared volume. The transactions consist of standard ACH payments to service providers (e.g., UU Solutions LLC, TPZVI Services LLC), card payments to individuals, and a documented family remittance of $1,022.29 to Jennifer Wilson. The activity is consistent with a salaried individual's spending patterns and does not exhibit layering or structuring. No SAR warranted; final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The alert was triggered by a total transaction volume of $14,111.26 across seven transactions between 2026-02-20 and 2026-04-13, which exceeds the expected monthly volume of $3,491.00. However, this total spans approximately two months of activity. The monthly average is roughly $7,055, which is approximately 2x the declared volume. The transactions consist of standard ACH payments to service providers (e.g., UU Solutions LLC, TPZVI Services LLC), card payments to individuals, and a documented family remittance of $1,022.29 to Jennifer Wilson. The activity is consistent with a salaried individual's spending patterns and does not exhibit layering or structuring. No SAR warranted; final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

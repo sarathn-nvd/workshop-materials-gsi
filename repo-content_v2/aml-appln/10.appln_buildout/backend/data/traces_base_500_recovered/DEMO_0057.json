@@ -1,0 +1,213 @@
+{
+  "case_id": "DEMO_0057",
+  "alert_id": "ALT_2440988",
+  "entity_id": "SYN_abc944c6",
+  "started_at": "2026-05-29T03:00:12.009400+00:00",
+  "finished_at": "2026-05-29T03:01:10.382303+00:00",
+  "wall_clock_ms": 58372.9,
+  "transactions": [
+    {
+      "amount": 64327.63,
+      "channel": "wire",
+      "counterparty": "IW Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": "outbound wire"
+    },
+    {
+      "amount": 64327.63,
+      "channel": "wire",
+      "counterparty": "IW Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-02",
+      "notes": "returned wire (benign: cancelled invoice)"
+    },
+    {
+      "amount": 5145.47,
+      "channel": "wire",
+      "counterparty": "QRB Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-21",
+      "notes": ""
+    },
+    {
+      "amount": 4325.27,
+      "channel": "ach",
+      "counterparty": "SQDK Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-02",
+      "notes": ""
+    },
+    {
+      "amount": 5580.36,
+      "channel": "ach",
+      "counterparty": "DD Services LLC",
+      "currency": "USD",
+      "date": "2026-03-29",
+      "notes": ""
+    },
+    {
+      "amount": 3024.23,
+      "channel": "ach",
+      "counterparty": "GQG Solutions LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 4882.63,
+      "channel": "ach",
+      "counterparty": "WR Exports LLC",
+      "currency": "USD",
+      "date": "2026-04-18",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_abc944c6",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5237.0,
+    "business_purpose": "Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,237.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.4286,
+      "ach": 0.5714
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.42857142857142855, 'ach': 0.5714285714285714})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_abc944c6 executed 7 transactions totaling $151,613.22 USD with channel mix {\"ach\": 0.571, \"wire\": 0.429}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 11.58x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 7,
+        "tx_total_usd": 151613.22,
+        "channel_mix": {
+          "ach": 0.571,
+          "wire": 0.429
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.23,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 1.58,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 11.58
+      },
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "volume comparison ratio 28.96",
+      "calculation": "1. transactions[0..6] amount values\n2. Sum of these amounts = 151613.22\n3. kyc_profile.expected_monthly_volume = 5237.0\n4. 151613.22 / 5237.0 = 28.96",
+      "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "There are no policy excerpts available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No applicable statute",
+      "label": "neutral",
+      "reasoning": "Statute cited: § 0; however, no statutory elements are defined, so the facts cannot satisfy any provision. No applicable statute"
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "deterministic_sft_replay",
+      "override": true
+    }
+  ],
+  "auxiliary_findings": {
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_abc944c6 executed 7 transactions totaling $151,613.22 USD with channel mix {\"ach\": 0.571, \"wire\": 0.429}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 11.58x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 7,
+          "tx_total_usd": 151613.22,
+          "channel_mix": {
+            "ach": 0.571,
+            "wire": 0.429
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.23,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 1.58,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 11.58
+        },
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "volume comparison ratio 28.96",
+        "calculation": "1. transactions[0..6] amount values\n2. Sum of these amounts = 151613.22\n3. kyc_profile.expected_monthly_volume = 5237.0\n4. 151613.22 / 5237.0 = 28.96",
+        "evidence": "transactions[0..6]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "There are no policy excerpts available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ],
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No applicable statute",
+        "label": "neutral",
+        "reasoning": "Statute cited: § 0; however, no statutory elements are defined, so the facts cannot satisfy any provision. No applicable statute"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 64327.63, \"channel\": \"wire\", \"counterparty\": \"IW Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"outbound wire\"}, {\"amount\": 64327.63, \"channel\": \"wire\", \"counterparty\": \"IW Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-02\", \"notes\": \"returned wire (benign: cancelled invoice)\"}, {\"amount\": 5145.47, \"channel\": \"wire\", \"counterparty\": \"QRB Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-21\", \"notes\": \"\"}, {\"amount\": 4325.27, \"channel\": \"ach\", \"counterparty\": \"SQDK Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-02\", \"notes\": \"\"}, {\"amount\": 5580.36, \"channel\": \"ach\", \"counterparty\": \"DD Services LLC\", \"currency\": \"USD\", \"date\": \"2026-03-29\", \"notes\": \"\"}, {\"amount\": 3024.23, \"channel\": \"ach\", \"counterparty\": \"GQG Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 4882.63, \"channel\": \"ach\", \"counterparty\": \"WR Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-04-18\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_abc944c6\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5237.0, \"business_purpose\": \"Salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,237.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_abc944c6 executed 7 transactions totaling $151,613.22 USD with channel mix {\\\"ach\\\": 0.571, \\\"wire\\\": 0.429}. The 24-hour velocity peak is 1 against a 30-day average of 0.23. Volume vs declared monthly is 11.58x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 7, \"tx_total_usd\": 151613.22, \"channel_mix\": {\"ach\": 0.571, \"wire\": 0.429}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.23, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 1.58, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 11.58}, \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"volume comparison ratio 28.96\", \"calculation\": \"1. transactions[0..6] amount values\\n2. Sum of these amounts = 151613.22\\n3. kyc_profile.expected_monthly_volume = 5237.0\\n4. 151613.22 / 5237.0 = 28.96\", \"evidence\": \"transactions[0..6]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"There are no policy excerpts available.\", \"evidence_span\": \"(no policy excerpts available)\"}], \"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No applicable statute\", \"label\": \"neutral\", \"reasoning\": \"Statute cited: \\u00a7 0; however, no statutory elements are defined, so the facts cannot satisfy any provision. No applicable statute\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious bool and suspicious_activity_report string (400-800 characters). Must decide based on evidence.\n\nWe have transactions: 7 transactions total $151,613.22. Channel mix: 4 ACH? Actually list: wire amounts: 64327.63 (twice), 5145.47, plus ACH amounts: 4325.27, 5580.36, 3024.23, 4882.63. That's 7 total. Sum matches 151,613.22.\n\nKYC: individual, expected monthly volume $5,237, business purpose: salaried wage earner; primary income from service-industry employer; expected monthly throughput ~$5,237. Risk low.\n\nSanctions hits empty. No policy excerpts. Auxiliary findings: behavioral summary says volume vs declared monthly is 11.58x (but earlier numeric says ratio 28.96? Wait behavioral metrics says vs_declared_volume_ratio 11.58. Numeric says ratio 28.96. Let's compute: total 151,613.22 / 5237 = 28.96 indeed. So behavioral says 11.58x maybe miscalc. But we must derive from evidence. The ratio is 28.96, which is >1.5-2x, so it's high. However, the business purpose is salaried wage earner, expected monthly volume $5,237. Observed total $151k over some period? Not specified timeframe; maybe within some period (maybe 30 days?). The transactions dates range from 2026-02-02 to 2026-04-18, spanning ~2 months. So monthly average would be about $75k per month? Actually total over ~2 months ~ $151k, so monthly ~ $75k, which is ~14x expected. So high.\n\nBut we need to decide if SAR warranted. The pattern: multiple wires to same counterparty IW Logistics LLC with same amount 64327.63, one returned. That looks like maybe invoice cancellation. Not obviously suspicious. There's a high volume relative to expected, but the entity is an individual with low risk, expected monthly $5k, but observed $151k over maybe 2 months, which is high. However, the business purpose is salaried wage earner; could be receiving large payments? Possibly legitimate? The channel mix: 57% ACH, 43% wire. There's a 24h velocity peak of 1 (i.e., one transaction in 24h?) vs avg 0.23, meaning spikes.\n\nBut we need to see if there is any red flag that warrants SAR. The evidence includes a high volume ratio, but also the business purpose is \"salaried wage earner; primary income from service-industry employer\". That suggests low volume cash business, not high-value wires. So large wires may be suspicious. However, there is no sanctions hit, no PEP, no known high-risk jurisdiction. The KYC risk rating is low.\n\nThe question: Should we file SAR? The instructions: Set is_suspicious=true only when the bundle evidence, on its own, warrants filing a SAR. Strong-positive signals include confident sanctions hit, peel-chain, rapid-pass-through, structuring pattern inconsistent with declared activity, etc. Here we have high volume ratio but not necessarily structuring (no sub-10k cash). It's wires, not cash. Could be layering. But we need to see if there is a pattern inconsistent with declared business purpose. The declared purpose is salaried wage earner; expected monthly $5k. Observed $151k over maybe 2 months, which is far higher. That could be suspicious. But is it enough to warrant SAR? Possibly yes, but we must ground narrative.\n\nBut we must also consider that the auxiliary numeric finding says ratio 28.96, which is huge. The behavioral summary says ratio 11.58x (maybe they considered something else). The narrative must be 400-800 characters.\n\nWe need to decide is_suspicious. The instructions: \"Set `is_suspicious=true` only when the bundle evidence, on its own, warrants filing a SAR.\" The evidence includes high volume ratio, but also the business purpose is low-risk individual. That might be suspicious. However, there is also \"unique_counterparties_7d\": 1, meaning only one counterparty? Actually unique_counterparties_7d is 1, but we see multiple counterparties: IW Logistics LLC, QRB Solutions LLC, SQDK Enterprises LLC, DD Services LLC, GQG Solutions LLC, WR Exports LLC. That's 6 distinct counterparties. But the metric says unique_counterparties_7d: 1, maybe they considered only within last 7 days? Let's check transactions: dates: 2026-03-30, 2026-04-02, 2026-03-21, 2026-02-02, 2026-03-29, 2026-03-22, 2026-04-18. Within any 7-day window maybe only one? Not sure.\n\nBut the key is: The pattern includes multiple wires to IW Logistics LLC with same amount, one returned. That could be a circular payment? But not necessarily suspicious.\n\nGiven the high volume ratio, I think we might deem it suspicious, but need to check if there is any disambiguating context that resolves it. The KYC says expected monthly volume $5,237, but observed $151k over maybe 2 months, which is far above. That is inconsistent. So likely suspicious.\n\nBut the instructions also say: \"Set `is_suspicious=false` when the surface evidence triggered the alert but the bundle context resolves it.\" Here the surface evidence is high volume ratio; does bundle context resolve it? The business purpose is salaried wage earner; maybe they have other income? But expected monthly volume is $5k, so $151k is way above; no resolution.\n\nThus I think is_suspicious = true.\n\nNow we need to craft a narrative 400-800 characters, grounded, citing evidence.\n\nWe must include most salient evidence: high volume ratio (28.96x) vs declared monthly, channel mix, multiple wires to same counterparty, 24h velocity peak. Also mention that there is no sanctions hit. Must close with deferring final filing decision to human investigator.\n\nLength 400-800 characters. Let's craft about 550 characters.\n\nCount characters roughly. We'll write:\n\n\"On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. No sanctions or PEP matches appear. The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. Final filing decision is referred to the compliance officer.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\n\"On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. No sanctions or PEP matches appear. The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. Final filing decision is referred to the compliance officer.\"\n\nLet's count characters. I'll approximate using a tool mentally: It's probably around 500-560 characters. Let's count precisely.\n\nI'll copy into a counting mental:\n\n\"On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. No sanctions or PEP matches appear. The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. Final filing decision is referred to the compliance officer.\"\n\nLet's count characters including spaces.\n\nI'll count per segment.\n\nSegment1: \"On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). \"\n\nCount characters:\n\n\"On\"=2, space=1 =>3\n\"2026‑02‑02\"=8? Actually characters: 2 0 2 6 – 0 2 – 0 2 = 8? Let's count: 2(1)0(2)2(3)6(4)‑(5)0(6)2(7)‑(8)0(9)2(10) =>10? Wait the dash is a special char but count as one. So \"2026‑02‑02\" length 10. Then space=1 => total 11. \"through\"=7 =>18, space=1 =>19, \"2026‑04‑18\" length 10 =>29, space=1 =>30, \"the\"=3 =>33, space=1 =>34, \"individual\"=10 =>44, space=1 =>45, \"SYN_abc944c6\"=12? S(1)Y2 N3 _(4)a5 b6 c7 9 8 4 4 8 6 9? Actually let's count: S1 Y2 N3 _4 a5 b6 c7 9 8 9 4? Hmm easier: \"SYN_abc944c6\" length 12 (S=1,Y2,N3,_,4,a5,b6,c7,9=8,4=9,4=10,c=11,6=12). So add 12 =>57, space=1 =>58, \"executed\"=8 =>66, space=1 =>67, \"seven\"=5 =>72, space=1 =>73, \"transfers\"=9 =>82, space=1 =>83, \"totaling\"=8 =>91, space=1 =>92, \"$151,613.22\" length? $1=1,1=2,5=3,1=4,6=5,1=6,3=7, .=8,2=9,2=10 =>10? Actually \"$151,613.22\" is 10 characters. So 92+10=102, \",\"=1 =>103, space=1 =>104, \"of\"=2 =>106, space=1 =>107, \"which\"=5 =>112, space=1 =>113, \"42\"=2 =>115, \" %\"? There's a narrow no-break space? It shows \"42 %\" includes a narrow space maybe but count as space? We'll count as space then \"%\". So space=1 =>116, \"%\"=1 =>117, space=1 =>118, \"were\"=4 =>122, space=1 =>123, \"wires\"=5 =>128, space=1 =>129, \"to\"=2 =>131, space=1 =>132, \"IW\"=2 =>134, space=1 =>135, \"Logistics\"=9 =>144, space=1 =>145, \"LLC\"=3 =>148, space=1 =>149, \"(two\"=4 =>153, space=1 =>154, \"$64,327.63\" length? $1=1,6=2,4=3, ,=4,3=5,2=6,7=7, .=8,6=9,3=10 =>10 =>164, space=1 =>165, \"payments,\"=9? p1 a2 y3 m4 e5 n6 t7 s8 ,9 =>9 =>174, space=1 =>175, \"one\"=3 =>178, space=1 =>179, \"returned).\" length? \"returned)\"=9? r1 e2 t3 u4 r5 n6 e7 d8 )9 =>9 =>188, space=1 =>189.\n\nSo segment1 length ~189 characters.\n\nSegment2: \"The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. \"\n\nCount: start with space? Actually after period we have space then \"The\". We'll count from \"The\". Let's count characters including leading space? We'll just count the text.\n\n\"The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23.\"\n\nCount:\n\n\"The\"=3, space=1 =>4, \"activity\"=8 =>12, space=1 =>13, \"represents\"=10 =>23, space=1 =>24, \"a\"=1 =>25, space=1 =>26, \"28.96‑fold\" length? \"28.96‑fold\" characters: 2 8 . 9 6 ‑ f o l d = 8? Actually \"28.96‑fold\": 2(1)8(2).(3)9(4)6(5)‑(6)f(7)o(8)l(9)d(10) =>10. So add 10 =>36, space=1 =>37, \"excess\"=6 =>43, space=1 =>44, \"over\"=4 =>48, space=1 =>49, \"the\"=3 =>52, space=1 =>53, \"KYC‑declared\" length? \"KYC‑declared\": K1 Y2 C3 ‑4 d5 e6 c7 l8 a9 i10 r11 e12 d13 =>13. So 53+13=66, space=1 =>67, \"declared\"=8 =>75, space=1 =>76, \"monthly\"=7 =>83, space=1 =>84, \"volume\"=6 =>90, space=1 =>91, \"of\"=2 =>93, space=1 =>94, \"$5,237\" length? $1=1,5=2, ,=3,2=4,3=5,7=6 =>6 =>100, space=1 =>101, \"and\"=3 =>104, space=1 =>105, \"shows\"=5 =>110, space=1 =>111, \"a\"=1 =>112, space=1 =>113, \"24‑hour\" length? \"24‑hour\": 2(1)4(2)‑(3)h(4)o(5)u(6)r(7) =>7 =>120, space=1 =>121, \"velocity\"=8 =>129, space=1 =>130, \"peak\"=4 =>134, space=1 =>135, \"of\"=2 =>137, space=1 =>138, \"1\"=1 =>139, space=1 =>140, \"versus\"=6 =>146, space=1 =>147, \"a\"=1 =>148, space=1 =>149, \"30‑day\" length? \"30‑day\": 3(1)0(2)‑(3)d(4)a(5)y(6) =>6 =>155, space=1 =>156, \"average\"=7 =>163, space=1 =>164, \"of\"=2 =>166, space=1 =>167, \"0.23\"=4 =>171, \".\"=1 =>172\n\nSo segment2 length ~172 characters.\n\nSegment3: \" No sanctions or PEP matches appear. \"\n\nInclude leading space? There's a space before \"No\". Let's count from \"No\". Actually after period there is space then \"No\". We'll count the text including leading space? We'll just count characters of \" No sanctions or PEP matches appear.\" including leading space.\n\nSpace=1 =>173, \"No\"=2 =>175, space=1 =>176, \"sanctions\"=9 =>185, space=1 =>186, \"or\"=2 =>188, space=1 =>189, \"PEP\"=3 =>192, space=1 =>193, \"matches\"=7 =>200, space=1 =>201, \"appear.\"=7 (a1 p2 p3 e4 a5 r6 .7) =>208, space? Actually after period there is space before next sentence. We'll include space after period? There's a space before \"The\". So add 1 =>209.\n\nSegment4: \" The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. \"\n\nCount: space=1 =>210, \"The\"=3 =>213, space=1 =>214, \"pattern\"=7 =>221, space=1 =>222, \"deviates\"=8 =>230, space=1 =>231, \"sharply\"=7 =>238, space=1 =>239, \"from\"=4 =>243, space=1 =>244, \"the\"=3 =>247, space=1 =>248, \"low‑risk,\" length? \"low‑risk,\" characters: l1 o2 w3 ‑4 r5 i6 s7 k8 ,9 =>9 =>257, space=1 =>258, \"salaried‑earner\" length? \"salaried‑earner\": s1 a2 l3 a4 r5 i6 e7 d8 ‑9 e10 a11 r12 n13 e14 r15 =>15 =>273, space=1 =>274, \"profile\"=7 =>281, space=1 =>282, \"and\"=3 =>285, space=1 =>286, \"therefore\"=9 =>295, space=1 =>296, \"warrants\"=8 =>304, space=1 =>305, \"SAR\"=3 =>308, space=1 =>309, \"consideration.\"=13? c1 o2 n3 s4 i5 d6 e7 r8 a9 t10 i11 o12 n13 .14? Actually \"consideration.\" length 13? Let's count: c1 o2 n3 s4 i5 d6 e7 r8 a9 t10 i12? Wait need accurate: \"consideration\" is 13 letters? Let's count: c1 o2 n3 s4 i5 d6 e7 r8 a9 t10 i11 o12 n13. Then \".\" =14. So 14 characters. So 309+14=323.\n\nSegment5: \" Final filing decision is referred to the compliance officer.\"\n\nCount: space=1 =>324, \"Final\"=5 =>329, space=1 =>330, \"filing\"=6 =>336, space=1 =>337, \"decision\"=8 =>345, space=1 =>346, \"is\"=2 =>348, space=1 =>349, \"referred\"=8 =>357, space=1 =>358, \"to\"=2 =>360, space=1 =>361, \"the\"=3 =>364, space=1 =>365, \"compliance\"=10 =>375, space=1 =>376, \"officer.\"=8? o1 f2 f3 i4 c5 e6 r7 .8 =>384.\n\nSo total approx 384 characters. That's within 400-800? Actually it's 384, which is below 400. Need 400-800 characters. Must be at least 400 characters. So we need to add more content to reach at least 400 characters. Currently we have ~384. Need to add about 20-30 characters.\n\nWe can add a phrase at end: \" The analyst recommends SAR filing for further review.\" That's about 45 characters maybe.\n\nAdd after \"officer.\" maybe a space then \"The analyst recommends SAR filing for further review.\" Let's count that.\n\nAdd space before \"The\"? Already ended with period. We'll add space then phrase.\n\nPhrase: \" The analyst recommends SAR filing for further review.\"\n\nCount characters: leading space =1, \"The\"=3 =>4, space=1 =>5, \"analyst\"=7 =>12, space=1 =>13, \"recommends\"=10 =>23, space=1 =>24, \"SAR\"=3 =>27, space=1 =>28, \"filing\"=6 =>34, space=1 =>35, \"for\"=3 =>38, space=1 =>39, \"further\"=7 =>46, space=1 =>47, \"review.\"=7 =>54.\n\nSo adding 54 characters to 384 gives 438, which is within 400-800. Good.\n\nNow final narrative length ~438 characters.\n\nNow we need to output JSON with is_suspicious true and the narrative string.\n\nMake sure narrative is exactly the string we crafted, no extra quotes inside? Must be a JSON string, so we need to escape any double quotes inside. Our narrative contains double quotes? It contains \"SAR\" but that's fine, no double quotes. It contains apostrophes? No. It contains hyphens and special characters but fine. It contains a narrow space? We used normal spaces. It contains \"‑\" (en dash) maybe. That's okay as a character but must be within JSON string; it's fine.\n\nWe must ensure the JSON is valid: {\"is_suspicious\": true, \"suspicious_activity_report\": \"...\"}.\n\nNow produce final answer.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. No sanctions or PEP matches appear. The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. Final filing decision is referred to the compliance officer. The analyst recommends SAR filing for further review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. No sanctions or PEP matches appear. The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. Final filing decision is referred to the compliance officer. The analyst recommends SAR filing for further review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑02‑02 through 2026‑04‑18 the individual SYN_abc944c6 executed seven transfers totaling $151,613.22, of which 42 % were wires to IW Logistics LLC (two $64,327.63 payments, one returned). The activity represents a 28.96‑fold excess over the KYC‑declared monthly volume of $5,237 and shows a 24‑hour velocity peak of 1 versus a 30‑day average of 0.23. No sanctions or PEP matches appear. The pattern deviates sharply from the low‑risk, salaried‑earner profile and therefore warrants SAR consideration. Final filing decision is referred to the compliance officer. The analyst recommends SAR filing for further review.",
+  "judge_enabled": false,
+  "error": null
+}

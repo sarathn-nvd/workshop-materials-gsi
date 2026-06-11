@@ -1,0 +1,185 @@
+{
+  "case_id": "DEMO_0106",
+  "alert_id": "ALT_2439294",
+  "entity_id": "SYN_ae8b7ec2",
+  "started_at": "2026-05-27T15:24:18.223817+00:00",
+  "finished_at": "2026-05-27T15:24:43.395984+00:00",
+  "wall_clock_ms": 25172.2,
+  "transactions": [
+    {
+      "amount": 2505.92,
+      "channel": "wire",
+      "counterparty": "Michael Martin (family member)",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 3328.13,
+      "channel": "card",
+      "counterparty": "Robert Martin",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 3215.31,
+      "channel": "ach",
+      "counterparty": "MJHOE Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 3776.38,
+      "channel": "wire",
+      "counterparty": "XFT Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-02-11",
+      "notes": ""
+    },
+    {
+      "amount": 3380.8,
+      "channel": "wire",
+      "counterparty": "VP Ventures LLC",
+      "currency": "USD",
+      "date": "2026-02-10",
+      "notes": ""
+    },
+    {
+      "amount": 1600.63,
+      "channel": "ach",
+      "counterparty": "OZMU Group LLC",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_ae8b7ec2",
+    "entity_type": "individual",
+    "expected_monthly_volume": 3603.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$3,603.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.5,
+      "ach": 0.333,
+      "card": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.5, 'card': 0.16666666666666666, 'ach': 0.3333333333333333})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "error": "schema",
+      "detail": "1 validation error for BehavioralFinding\nmetrics.velocity_24h_max\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=3776.38, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float",
+      "raw_payload": {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The account exhibits a tx_count of 6 with a tx_total_usd of 17807.17. The channel_mix includes wire: 3, indicating a reliance on electronic transfers. A velocity_24h_max of 3776.38 was observed, reflecting the highest single-day movement. There are unique_counterparties_7d of 1, suggesting limited recent activity. The vs_declared_volume_ratio of 1.37 indicates that actual throughput exceeds the expected monthly volume. This pattern of rapid movement is consistent with a pass-through profile given the entity's declared fixed pension income.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 17807.17,
+          "channel_mix": {
+            "wire": 3,
+            "card": 1,
+            "ach": 2
+          },
+          "velocity_24h_max": 3776.38,
+          "unique_counterparties_7d": 1,
+          "vs_declared_volume_ratio": 1.37
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+      }
+    },
+    "numeric": {
+      "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+      "answer": "total transaction volume 17807.17 vs expected monthly volume 3603.0",
+      "calculation": "1. Sum all transaction amounts: transactions[0] (2,505.92) + transactions[1] (3,328.13) + transactions[2] (3,215.31) + transactions[3] (3,776.38) + transactions[4] (3,380.80) + transactions[5] (1,600.63) = 17,807.17. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 3,603.0.",
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "No policy excerpts were provided for analysis.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute was provided for analysis.",
+      "label": "neutral",
+      "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute was provided for analysis.",
+        "label": "neutral",
+        "reasoning": "Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern."
+      }
+    ],
+    "behavioral": [],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "total transaction volume 17807.17 vs expected monthly volume 3603.0",
+        "calculation": "1. Sum all transaction amounts: transactions[0] (2,505.92) + transactions[1] (3,328.13) + transactions[2] (3,215.31) + transactions[3] (3,776.38) + transactions[4] (3,380.80) + transactions[5] (1,600.63) = 17,807.17. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 3,603.0.",
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No policy excerpts were provided for analysis.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2505.92, \"channel\": \"wire\", \"counterparty\": \"Michael Martin (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 3328.13, \"channel\": \"card\", \"counterparty\": \"Robert Martin\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 3215.31, \"channel\": \"ach\", \"counterparty\": \"MJHOE Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 3776.38, \"channel\": \"wire\", \"counterparty\": \"XFT Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-02-11\", \"notes\": \"\"}, {\"amount\": 3380.8, \"channel\": \"wire\", \"counterparty\": \"VP Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-02-10\", \"notes\": \"\"}, {\"amount\": 1600.63, \"channel\": \"ach\", \"counterparty\": \"OZMU Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_ae8b7ec2\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 3603.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$3,603.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute was provided for analysis.\", \"label\": \"neutral\", \"reasoning\": \"Because no statute was provided, it is impossible to determine applicability. Since no statute was provided, there are no statutory elements to compare against the fact pattern.\"}], \"behavioral\": [], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"total transaction volume 17807.17 vs expected monthly volume 3603.0\", \"calculation\": \"1. Sum all transaction amounts: transactions[0] (2,505.92) + transactions[1] (3,328.13) + transactions[2] (3,215.31) + transactions[3] (3,776.38) + transactions[4] (3,380.80) + transactions[5] (1,600.63) = 17,807.17. 2. Identify declared monthly volume from kyc_profile.expected_monthly_volume = 3,603.0.\", \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No policy excerpts were provided for analysis.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The alert was triggered by a total transaction volume of $17,807.17 across six transactions between 2026-02-10 and 2026-04-17, which exceeds the expected monthly volume of $3,603.00. However, the activity spans approximately three months (February, March, and April). The average monthly volume is approximately $5,935.72, which is roughly 1.6x the declared amount. The transactions consist of a mix of wires, ACH, and card payments to various entities (e.g., MJHOE Solutions LLC, XFT Enterprises LLC) and a family member. Given the low risk rating and the lack of rapid pass-through or structuring patterns, the activity is not sufficiently anomalous to warrant a SAR. No SAR warranted; final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The alert was triggered by a total transaction volume of $17,807.17 across six transactions between 2026-02-10 and 2026-04-17, which exceeds the expected monthly volume of $3,603.00. However, the activity spans approximately three months (February, March, and April). The average monthly volume is approximately $5,935.72, which is roughly 1.6x the declared amount. The transactions consist of a mix of wires, ACH, and card payments to various entities (e.g., MJHOE Solutions LLC, XFT Enterprises LLC) and a family member. Given the low risk rating and the lack of rapid pass-through or structuring patterns, the activity is not sufficiently anomalous to warrant a SAR. No SAR warranted; final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The alert was triggered by a total transaction volume of $17,807.17 across six transactions between 2026-02-10 and 2026-04-17, which exceeds the expected monthly volume of $3,603.00. However, the activity spans approximately three months (February, March, and April). The average monthly volume is approximately $5,935.72, which is roughly 1.6x the declared amount. The transactions consist of a mix of wires, ACH, and card payments to various entities (e.g., MJHOE Solutions LLC, XFT Enterprises LLC) and a family member. Given the low risk rating and the lack of rapid pass-through or structuring patterns, the activity is not sufficiently anomalous to warrant a SAR. No SAR warranted; final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

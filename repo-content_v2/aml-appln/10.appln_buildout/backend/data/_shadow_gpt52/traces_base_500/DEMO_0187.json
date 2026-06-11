@@ -1,0 +1,221 @@
+{
+  "case_id": "DEMO_0187",
+  "alert_id": "ALT_2494780",
+  "entity_id": "SYN_e1d9beb4",
+  "started_at": "2026-05-28T11:08:13.714701+00:00",
+  "finished_at": "2026-05-28T11:09:12.002178+00:00",
+  "wall_clock_ms": 58287.5,
+  "transactions": [
+    {
+      "amount": 14862467.03,
+      "channel": "wire",
+      "counterparty": "XASY Solutions LLC, Germany",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": "trade-finance wire (benign: matches declared invoice value)"
+    },
+    {
+      "amount": 18613774.33,
+      "channel": "wire",
+      "counterparty": "OEABP Trading LLC",
+      "currency": "USD",
+      "date": "2026-02-19",
+      "notes": ""
+    },
+    {
+      "amount": 16665200.56,
+      "channel": "wire",
+      "counterparty": "UIE Ventures LLC",
+      "currency": "USD",
+      "date": "2026-04-09",
+      "notes": ""
+    },
+    {
+      "amount": 7086387.69,
+      "channel": "wire",
+      "counterparty": "UWW Holdings LLC",
+      "currency": "USD",
+      "date": "2026-03-14",
+      "notes": ""
+    },
+    {
+      "amount": 21851384.61,
+      "channel": "wire",
+      "counterparty": "II Logistics LLC",
+      "currency": "USD",
+      "date": "2026-03-20",
+      "notes": ""
+    },
+    {
+      "amount": 23849968.77,
+      "channel": "ach",
+      "counterparty": "EZSY Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_e1d9beb4",
+    "entity_type": "business",
+    "expected_monthly_volume": 23845943.0,
+    "business_purpose": "Securities broker / dealer firm; intermediary capital flows; declared monthly volume ~$23,845,943.",
+    "risk_rating": "high",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.833,
+      "ach": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Peel-chain pattern with 6 descending wire amounts",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_e1d9beb4 executed 6 transactions totaling $102,929,182.99 USD with channel mix {\"wire\": 0.833, \"ach\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.4x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 102929182.99,
+        "channel_mix": {
+          "wire": 0.833,
+          "ach": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.86,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.4
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nWe must compute total volume passing through any detected cycle; compare to KYC declared monthly volume. The input is a transaction bundle with multiple transactions. We need to detect cycles? Probably we need to sum amounts? The question: \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\"\n\nWe need to produce a numeric finding. Likely we need to sum amounts of transacti"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The excerpt notes that the activity involved laundering more than $6 billion over several years.",
+      "evidence_span": "it was involved in laundering more than $6 billion over several years."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "yes, it falls within § 5318(g) requires",
+      "label": "entailment",
+      "reasoning": "The entity is a U.S.-based business with a high risk rating and declared monthly volume matching $23,845,943; it executed six large wire/ACH transfers totaling close to that volume, including amounts over $14 million, which suggests possible structuring or concealment of source; under 31 U.S.C. § 5318(g), such suspicious activity must be reported, and § 5318(g) requires filing of suspicious activity reports, which the facts satisfy."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "yes, it falls within § 5318(g) requires",
+        "label": "entailment",
+        "reasoning": "The entity is a U.S.-based business with a high risk rating and declared monthly volume matching $23,845,943; it executed six large wire/ACH transfers totaling close to that volume, including amounts over $14 million, which suggests possible structuring or concealment of source; under 31 U.S.C. § 5318(g), such suspicious activity must be reported, and § 5318(g) requires filing of suspicious activity reports, which the facts satisfy."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_e1d9beb4 executed 6 transactions totaling $102,929,182.99 USD with channel mix {\"wire\": 0.833, \"ach\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.4x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 102929182.99,
+          "channel_mix": {
+            "wire": 0.833,
+            "ach": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.86,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.4
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The excerpt notes that the activity involved laundering more than $6 billion over several years.",
+        "evidence_span": "it was involved in laundering more than $6 billion over several years."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 14862467.03, \"channel\": \"wire\", \"counterparty\": \"XASY Solutions LLC, Germany\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"trade-finance wire (benign: matches declared invoice value)\"}, {\"amount\": 18613774.33, \"channel\": \"wire\", \"counterparty\": \"OEABP Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-02-19\", \"notes\": \"\"}, {\"amount\": 16665200.56, \"channel\": \"wire\", \"counterparty\": \"UIE Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-04-09\", \"notes\": \"\"}, {\"amount\": 7086387.69, \"channel\": \"wire\", \"counterparty\": \"UWW Holdings LLC\", \"currency\": \"USD\", \"date\": \"2026-03-14\", \"notes\": \"\"}, {\"amount\": 21851384.61, \"channel\": \"wire\", \"counterparty\": \"II Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-03-20\", \"notes\": \"\"}, {\"amount\": 23849968.77, \"channel\": \"ach\", \"counterparty\": \"EZSY Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_e1d9beb4\", \"entity_type\": \"business\", \"expected_monthly_volume\": 23845943.0, \"business_purpose\": \"Securities broker / dealer firm; intermediary capital flows; declared monthly volume ~$23,845,943.\", \"risk_rating\": \"high\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"yes, it falls within § 5318(g) requires\", \"label\": \"entailment\", \"reasoning\": \"The entity is a U.S.-based business with a high risk rating and declared monthly volume matching $23,845,943; it executed six large wire/ACH transfers totaling close to that volume, including amounts over $14 million, which suggests possible structuring or concealment of source; under 31 U.S.C. § 5318(g), such suspicious activity must be reported, and § 5318(g) requires filing of suspicious activity reports, which the facts satisfy.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_e1d9beb4 executed 6 transactions totaling $102,929,182.99 USD with channel mix {\\\"wire\\\": 0.833, \\\"ach\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.4x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 102929182.99, \"channel_mix\": {\"wire\": 0.833, \"ach\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.86, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.4}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The excerpt notes that the activity involved laundering more than $6 billion over several years.\", \"evidence_span\": \"it was involved in laundering more than $6 billion over several years.\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string (400-800 chars). Must derive is_suspicious based on evidence.\n\nWe have transactions: 6 wires/ACH, total $102,929,182.99, channel mix mostly wire, high volume relative to declared monthly volume 2.4x. KYC profile: business, expected monthly volume $23,845,943, high risk rating, incorporation US-NY. Sanctions_pep_hits empty. Policy excerpts include FinCEN, FFIEC, FATF. Auxiliary findings: statutory entailment says yes, it falls within §5318(g). Behavioral summary includes metrics: tx_total_usd 102,929,182.99, vs_declared_volume_ratio 2.4x, velocity_24h_max 1 vs avg 0.2, etc. Also mentions loop_detected false, etc.\n\nWe need to decide is_suspicious true or false. The evidence includes high volume relative to declared volume (2.4x), high risk rating, large wires, but no sanctions hit. The policy excerpt about SAR filing: \"requires filing of suspicious activity reports\". The statutory finding says yes, it falls within §5318(g). Also behavioral summary indicates volume vs declared is 2.4x, which is above 1.5x maybe suspicious. Also velocity spike. So likely is_suspicious = true.\n\nWe must produce a narrative 400-800 characters, grounded, citing evidence. Must be exactly JSON with two fields.\n\nWe must ensure narrative length 400-800 characters (including spaces). Let's craft about 550 characters.\n\nNarrative: \"The entity SYN_e1d9beb4, a high‑risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 × its declared monthly volume of $23,845,943. Velocity spikes to a 24‑hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire‑dominant (83 % of transfers). These patterns align with structuring and layering concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\n\"The entity SYN_e1d9beb4, a high‑risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 × its declared monthly volume of $23,845,943. Velocity spikes to a 24‑hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire‑dominant (83 % of transfers). These patterns align with structuring and layering concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n\nLet's count precisely. I'll approximate using a tool mentally? Let's count manually.\n\nI'll copy the text and count characters.\n\nI'll write it with indices.\n\nBut maybe easier: aim for ~560 characters. Let's approximate length.\n\nI'll count using rough method: each word ~5 chars plus space. Let's count characters directly.\n\nI'll write the string and count.\n\n\"The entity SYN_e1d9beb4, a high‑risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 × its declared monthly volume of $23,845,943. Velocity spikes to a 24‑hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire‑dominant (83 % of transfers). These patterns align with structuring and layering concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n\nLet's count characters including spaces.\n\nI'll use a systematic count: I'll write each segment length.\n\nSegment1: \"The entity SYN_e1d9beb4, a high‑risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 × its declared monthly volume of $23,845,943.\"\n\nCount characters:\n\nI'll count using groups.\n\nI'll write with index numbers.\n\nI'll copy into a counting mental.\n\nBetter: approximate length: This segment is about 180 characters? Let's approximate.\n\nBut we need total 400-800 characters. So we can be safe with ~560.\n\nLet's count more precisely.\n\nI'll write the whole string and count using manual method: I'll number characters.\n\nI'll write the string with each character count.\n\nBut maybe easier: we can trust it's within range. Let's approximate length: The narrative is about 560 characters. Should be fine.\n\nNow ensure we include only evidence from bundle. We referenced \"high‑risk U.S. securities broker\" (from kyc_profile business_purpose). We referenced \"declared monthly volume of $23,845,943\" (from kyc_profile expected_monthly_volume). We referenced \"six wire/ACH transfers totaling $102,929,182.99\" (from transactions). We referenced \"wire‑dominant (83 % of transfers)\" (from behavioral metrics channel_mix). We referenced \"velocity spikes to a 24‑hour peak of 1 versus an average of 0.2\" (from behavioral metrics). We referenced \"31 U.S.C. § 5318(g)\" (from statutory finding). We referenced \"FinCEN guidance\" (policy excerpt). All are present.\n\nWe must not mention anything not in bundle. We used \"high‑risk\" from risk_rating high. That's okay.\n\nWe must not mention \"layering\" maybe okay as it's in policy excerpt? Actually policy excerpt includes \"layering\" concept? The policy excerpt includes \"layering\" maybe not directly but we can mention \"layering concerns\" as it's part of regulatory framing? The policy excerpt includes \"layering\" maybe not explicit but we can refer to \"layering concerns\" as part of regulatory framing derived from evidence. It's okay as we are deriving from evidence; but we must ensure we don't claim something not present. The policy excerpt includes \"layering\" maybe not directly but we can refer to \"layering concerns\" as part of regulatory framing derived from evidence; but we must not assert that the policy excerpt mentions layering. However we can say \"under 31 U.S.C. § 5318(g) and FinCEN guidance\" which is present. Mentioning \"layering concerns\" is an interpretation; but we must keep it grounded. Might be okay.\n\nBut to be safe, we can avoid \"layering\" and just say \"structuring concerns\". That's supported by statutory finding. So we can say \"structuring concerns\". Let's adjust.\n\nNarrative: \"The entity SYN_e1d9beb4, a high‑risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 × its declared monthly volume of $23,845,943. Velocity spikes to a 24‑hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire‑dominant (83 % of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n\nNow count characters.\n\nLet's count precisely.\n\nI'll write the string exactly as we will output (including quotes? No, just the string value). Ensure no extra line breaks.\n\nString:\n\nThe entity SYN_e1d9beb4, a high‑risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 × its declared monthly volume of $23,845,943. Velocity spikes to a 24‑hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire‑dominant (83 % of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\n\nNow count characters.\n\nI'll count using groups.\n\nI'll copy into a counting tool mentally: Let's count each character including spaces.\n\nI'll write with index numbers.\n\nI'll count manually:\n\nStart counting:\n\n1 T\n2 h\n3 e\n4 space\n5 e\n6 n\n7 t\n8 i\n9 t\n10 y\n11 space\n12 S\n13 Y\n14 N\n15 _\n16 e\n17 1\n18 d\n19 9\n20 b\n21 e\n22 b\n23 4\n24 ,\n25 space\n26 a\n27 space\n28 h\n29 i\n30 g\n31 h\n32 ‑ (hyphen? actually \"high‑risk\" includes an en dash? It's a special hyphen; but we can treat as one char)\n33 r\n34 i\n35 s\n36 k\n37 space\n38 U\n39 S\n40 .\n41 space\n42 s\n43 e\n44 c\n45 u\n46 r\n47 i\n48 t\n49 i\n50 e\n51 s\n52 space\n53 b\n54 r\n55 o\n56 k\n57 e\n58 r\n59 ,\n60 space\n61 p\n62 r\n63 o\n64 c\n65 e\n66 s\n67 s\n68 e\n69 d\n70 space\n71 s\n72 i\n73 x\n74 space\n75 w\n76 i\n77 r\n78 e\n79 /\n80 A\n81 C\n82 H\n83 space\n84 t\n85 r\n86 a\n87 n\n88 s\n89 f\n90 e\n91 r\n92 s\n93 space\n94 t\n95 o\n96 t\n97 a\n98 l\n99 i\n100 n\n101 g\n102 space\n103 $\n104 1\n105 0\n106 2\n107 ,\n108 9\n109 2\n110 9\n111 ,\n112 1\n113 8\n114 2\n115 .\n116 9\n117 9\n118 space\n119 b\n120 e\n121 t\n122 w\n123 e\n124 e\n125 n\n126 space\n127 F\n128 e\n129 b\n130 r\n131 u\n132 a\n133 r\n134 y\n135 space\n136 a\n137 n\n138 d\n139 space\n140 A\n141 p\n142 r\n143 i\n144 l\n145 space\n146 2\n147 0\n148 2\n149 6\n150 ,\n151 space\n152 w\n153 h\n154 i\n155 c\n156 h\n157 space\n158 i\n159 s\n160 space\n161 r\n162 o\n163 u\n164 g\n165 h\n166 l\n167 y\n168 space\n169 2\n170 .\n171 4\n172  (non-breaking space? but count as char)\n173 ×\n174 space\n175 i\n176 t\n177 s\n178 space\n179 d\n180 e\n181 c\n182 l\n183 a\n184 r\n185 e\n186 d\n187 space\n188 m\n189 o\n190 n\n191 t\n192 h\n193 l\n194 y\n195 space\n196 v\n197 o\n198 l\n199 u\n200 m\n201 e\n202 space\n203 o\n204 f\n205 space\n206 $\n207 2\n208 3\n209 ,\n210 8\n211 4\n212 5\n213 ,\n214 9\n215 4\n216 3\n217 .\n218 space\n219 V\n220 e\n221 l\n222 o\n223 c\n224 i\n225 t\n226 y\n227 space\n228 s\n229 p\n230 i\n231 k\n232 e\n233 s\n234 space\n235 t\n236 o\n237 space\n238 a\n239 space\n240 2\n241 4\n242 ‑ (en dash)\n243 h\n244 o\n245 u\n246 r\n247 space\n248 p\n249 e\n250 a\n251 k\n252 space\n253 o\n254 f\n255 space\n256 1\n257 space\n258 v\n259 e\n260 s\n261 u\n262 s\n263 space\n264 a\n265 n\n266 space\n267 a\n268 v\n269 e\n270 r\n271 a\n272 g\n273 e\n274 space\n275 o\n276 f\n277 space\n278 0\n279 .\n280 2\n281 space\n282 o\n283 v\n284 e\n285 r\n286 space\n287 3\n288 0\n289  (non-breaking space)\n290 d\n291 a\n292 y\n293 s\n294 ,\n295 space\n296 a\n297 n\n298 d\n299 space\n300 a\n301 l\n302 l\n303 space\n304 a\n305 c\n306 t\n307 i\n308 v\n309 i\n310 t\n311 y\n312 space\n313 i\n314 s\n315 space\n316 w\n317 i\n318 r\n319 e\n320 ‑\n321 d\n322 o\n323 m\n324 i\n325 n\n326 a\n327 n\n328 t\n329 space\n330 (\n331 8\n332 3\n333  (non-breaking space)\n334 %\n335 space\n336 o\n337 f\n338 space\n339 t\n340 r\n341 a\n342 n\n343 s\n344 f\n345 e\n346 r\n347 s\n348 )\n349 .\n350 space\n351 T\n352 h\n353 e\n354 s\n355 e\n356 space\n357 p\n358 a\n359 t\n360 t\n361 e\n362 r\n363 n\n364 s\n365 space\n366 a\n367 l\n368 i\n369 g\n370 n\n371 space\n372 w\n373 i\n374 t\n375 h\n376 space\n377 s\n378 t\n379 r\n380 u\n381 c\n382 t\n383 u\n384 r\n385 i\n386 n\n387 g\n388 space\n389 c\n390 o\n391 n\n392 c\n393 e\n394 r\n395 n\n396 s\n397 space\n398 u\n399 n\n400 d\n401 e\n402 r\n403 space\n404 3\n405 1\n406  (non-breaking space)\n405? Actually we already at 404? Let's continue.\n\nWe need to continue counting after \"31\". Actually we wrote \"31 U.S.C. § 5318(g)\". Let's continue from 403.\n\nWe had \"under \" up to char 398? Let's re-evaluate after char 397 space.\n\nWe had \"under \" (5 letters + space). Let's continue.\n\nWe had char 398 u, 399 n, 400 d, 401 e, 402 r, 403 space. Actually we counted up to 403 space. Then \"31\" starts.\n\n404 3\n405 1\n406  (non-breaking space)\n407 U\n408 .\n409 S\n410 .\n411 C\n412 .\n413  (non-breaking space)\n414 §\n415  (non-breaking space)\n416 5\n417 3\n418 1\n419 8\n420 .\n421 g\n422 )\n423 space\n424 a\n425 n\n426 d\n427 space\n428 F\n429 i\n430 n\n431 C\n432 E\n433 N\n434 space\n435 g\n436 u\n437 i\n438 d\n439 a\n440 n\n441 c\n442 e\n443 ,\n444 space\n445 w\n446 a\n447 r\n448 r\n449 a\n450 n\n451 t\n452 i\n453 n\n454 g\n455 space\n456 S\n457 A\n458 R\n459 space\n460 r\n461 e\n462 v\n463 i\n464 e\n465 w\n466 ;\n467 space\n468 f\n469 i\n470 n\n471 a\n472 l\n473 space\n474 f\n475 i\n476 l\n477 i\n478 n\n479 g\n480 space\n481 d\n482 e\n483 c\n484 i\n485 s\n486 i\n487 o\n488 n\n489 space\n490 s\n491 h\n492 o\n493 u\n494 l\n495 d\n496 space\n497 b\n498 e\n499 space\n500 l\n501 e\n502 f\n503 t\n504 space\n505 t\n506 o\n507 space\n508 t\n509 h\n510 e\n511 space\n512 h\n513 u\n514 m\n515 a\n516 n\n517 space\n518 i\n519 n\n520 v\n521 e\n522 s\n523 t\n524 i\n525 g\n526 a\n527 t\n528 o\n529 r\n530 .\n531 (end)\n\nSo total characters ~530. That's within 400-800. Good.\n\nNow ensure we didn't include any characters not allowed. We used non-breaking spaces and en dashes; they are characters but okay. The narrative must be plain text; using special characters is okay as long as they are part of the string. The instruction says output language English only, but special Unicode characters are okay? Probably fine. But to be safe, we could replace en dash with hyphen \"-\". That would be simpler. Let's replace \"high‑risk\" with \"high-risk\" (hyphen). Also \"24‑hour\" with \"24-hour\". Also \"83 %\" maybe keep as \"83%\". Also \"31 U.S.C.\" maybe keep as \"31 U.S.C.\" but we can keep as \"31 U.S.C.\" with normal spaces. The special characters might be okay but to avoid issues, we can simplify to plain ASCII characters. The instruction didn't forbid Unicode, but safe to use plain ASCII.\n\nLet's rewrite narrative with plain ASCII characters:\n\n\"The entity SYN_e1d9beb4, a high-risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 x its declared monthly volume of $23,845,943. Velocity spikes to a 24-hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire-dominant (83% of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n\nNow count characters again roughly. Should still be within range.\n\nLet's count quickly approximate: This version likely ~540 characters. Good.\n\nNow ensure we didn't mention any evidence not present: We referenced \"high-risk\" from risk_rating high. That's present. \"U.S. securities broker\" from business_purpose. \"six wire/ACH transfers totaling $102,929,182.99\" from transactions. \"2.4 x its declared monthly volume of $23,845,943\" from kyc_profile expected_monthly_volume. \"Velocity spikes to a 24-hour peak of 1 versus an average of 0.2 over 30 days\" from behavioral metrics (velocity_24h_max 1, velocity_24h_avg_30d 0.2). \"83% of transfers\" from channel_mix wire 0.833 approx 83%. \"structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance\" from statutory finding and policy excerpts. All good.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The entity SYN_e1d9beb4, a high-risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 x its declared monthly volume of $23,845,943. Velocity spikes to a 24-hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire-dominant (83% of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n}\n\nMake sure JSON is valid, no extra whitespace? It's fine.\n\nNow output exactly that JSON, no markdown.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"The entity SYN_e1d9beb4, a high-risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 x its declared monthly volume of $23,845,943. Velocity spikes to a 24-hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire-dominant (83% of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "The entity SYN_e1d9beb4, a high-risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 x its declared monthly volume of $23,845,943. Velocity spikes to a 24-hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire-dominant (83% of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "The entity SYN_e1d9beb4, a high-risk U.S. securities broker, processed six wire/ACH transfers totaling $102,929,182.99 between February and April 2026, which is roughly 2.4 x its declared monthly volume of $23,845,943. Velocity spikes to a 24-hour peak of 1 versus an average of 0.2 over 30 days, and all activity is wire-dominant (83% of transfers). These patterns align with structuring concerns under 31 U.S.C. § 5318(g) and FinCEN guidance, warranting SAR review; final filing decision should be left to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

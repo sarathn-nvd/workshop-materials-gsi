@@ -1,0 +1,137 @@
+{
+  "case_id": "DEMO_0084",
+  "entity_id": "SYN_d5639af6",
+  "started_at": "2026-05-23T13:14:46.860260+00:00",
+  "finished_at": "",
+  "wall_clock_ms": 152.7,
+  "sar_is_suspicious": false,
+  "sar_parse_error": null,
+  "sar_narrative": "",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": ""
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2682.54, \"channel\": \"wire\", \"counterparty\": \"Elizabeth Walker (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 4365.25, \"channel\": \"ach\", \"counterparty\": \"OGHKW Trading LLC\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 3355.31, \"channel\": \"card\", \"counterparty\": \"Michael Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-06\", \"notes\": \"\"}, {\"amount\": 1727.78, \"channel\": \"cheque\", \"counterparty\": \"VDL Enterprises LLC\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 1846.43, \"channel\": \"wire\", \"counterparty\": \"VGX Ventures LLC\", \"currency\": \"USD\", \"date\": \"2026-03-28\", \"notes\": \"\"}, {\"amount\": 1377.01, \"channel\": \"card\", \"counterparty\": \"Karen Moore\", \"currency\": \"USD\", \"date\": \"2026-02-09\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_d5639af6\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 4256, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$4,256.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-FL\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [], \"behavioral\": [{\"question\": \"\", \"summary\": \"The account of SYN_d5639af6, a retired individual with a low risk rating, shows a total of 6 transactions amounting to $15,354.32. Activity is spread across multiple channels including wire, ACH, card, and cheque. The highest single transaction was $4,365.25 via ACH to OGHKW Trading LLC. The account exhibits a high velocity with a 24h max of 2 transactions and a 30d average of 0.67. The channel mix is diverse, with wire (0.33), ACH (0.17), card (0.33), and cheque (0.17). The observed volume is 3.61x the declared monthly volume of $4,256.00.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 15354.32, \"channel_mix\": {\"wire\": 0.333, \"ach\": 0.167, \"card\": 0.333, \"cheque\": 0.167}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 6, \"amount_z_score_max\": 1.41, \"country_risk_max\": 0.0, \"loop_detected\": false, \"vs_declared_volume_ratio\": 3.61}, \"evidence\": \"transactions[0..5]\"}], \"numeric\": [{\"question\": \"Summarize transaction volumes and compare to KYC declared monthly volume.\", \"answer\": \"The total transaction volume for the provided period is $15,354.32, which exceeds the expected monthly volume of $4,256.00.\", \"calculation\": \"1. Identify all transaction amounts: 2682.54, 4365.25, 3355.31, 1727.78, 1846.43, 1377.01.\\n2. Sum the amounts: 2682.54 + 4365.25 + 3355.31 + 1727.78 + 1846.43 + 1377.01 = 15,354.32.\\n3. Compare to KYC profile: 15,354.32 > 4,256.00.\", \"evidence\": \"Transaction list rows with amounts: 2026-04-20=2682.54, 2026-03-22=4365.25, 2026-04-06=3355.31, 2026-03-30=1727.78, 2026-03-28=1846.43, 2026-02-09=1377.01; KYC profile expected_monthly_volume=4256.0\"}], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"No relevant passage was provided to extract a citation from.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}, \"_regulatory_frame\": \"benign\", \"_typology_inferred\": \"none\"}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"\"}",
+  "transactions": [
+    {
+      "amount": 2682.54,
+      "channel": "wire",
+      "counterparty": "Elizabeth Walker (family member)",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 4365.25,
+      "channel": "ach",
+      "counterparty": "OGHKW Trading LLC",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 3355.31,
+      "channel": "card",
+      "counterparty": "Michael Garcia",
+      "currency": "USD",
+      "date": "2026-04-06",
+      "notes": ""
+    },
+    {
+      "amount": 1727.78,
+      "channel": "cheque",
+      "counterparty": "VDL Enterprises LLC",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 1846.43,
+      "channel": "wire",
+      "counterparty": "VGX Ventures LLC",
+      "currency": "USD",
+      "date": "2026-03-28",
+      "notes": ""
+    },
+    {
+      "amount": 1377.01,
+      "channel": "card",
+      "counterparty": "Karen Moore",
+      "currency": "USD",
+      "date": "2026-02-09",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_d5639af6",
+    "entity_type": "individual",
+    "expected_monthly_volume": 4256.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$4,256.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-FL"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 0.333,
+      "card": 0.333,
+      "ach": 0.167,
+      "cheque": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "auxiliary_findings": {
+    "statutory": [],
+    "behavioral": [
+      {
+        "question": "",
+        "summary": "The account of SYN_d5639af6, a retired individual with a low risk rating, shows a total of 6 transactions amounting to $15,354.32. Activity is spread across multiple channels including wire, ACH, card, and cheque. The highest single transaction was $4,365.25 via ACH to OGHKW Trading LLC. The account exhibits a high velocity with a 24h max of 2 transactions and a 30d average of 0.67. The channel mix is diverse, with wire (0.33), ACH (0.17), card (0.33), and cheque (0.17). The observed volume is 3.61x the declared monthly volume of $4,256.00.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 15354.32,
+          "channel_mix": {
+            "wire": 0.333,
+            "ach": 0.167,
+            "card": 0.333,
+            "cheque": 0.167
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 6,
+          "amount_z_score_max": 1.41,
+          "country_risk_max": 0.0,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 3.61
+        },
+        "evidence": "transactions[0..5]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Summarize transaction volumes and compare to KYC declared monthly volume.",
+        "answer": "The total transaction volume for the provided period is $15,354.32, which exceeds the expected monthly volume of $4,256.00.",
+        "calculation": "1. Identify all transaction amounts: 2682.54, 4365.25, 3355.31, 1727.78, 1846.43, 1377.01.\n2. Sum the amounts: 2682.54 + 4365.25 + 3355.31 + 1727.78 + 1846.43 + 1377.01 = 15,354.32.\n3. Compare to KYC profile: 15,354.32 > 4,256.00.",
+        "evidence": "Transaction list rows with amounts: 2026-04-20=2682.54, 2026-03-22=4365.25, 2026-04-06=3355.31, 2026-03-30=1727.78, 2026-03-28=1846.43, 2026-02-09=1377.01; KYC profile expected_monthly_volume=4256.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "No relevant passage was provided to extract a citation from.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "_compare_meta": {
+    "model": "aml-custom-task-nim-1",
+    "endpoint": "http://localhost:8088/v1"
+  }
+}

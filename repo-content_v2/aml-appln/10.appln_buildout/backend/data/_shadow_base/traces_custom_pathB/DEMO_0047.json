@@ -1,0 +1,323 @@
+{
+  "case_id": "DEMO_0047",
+  "alert_id": "ALT_2413917",
+  "entity_id": "SYN_295469da",
+  "started_at": "2026-05-27T16:48:57.426366+00:00",
+  "finished_at": "2026-05-27T16:49:04.856799+00:00",
+  "wall_clock_ms": 7430.5,
+  "transactions": [
+    {
+      "amount": 19303.55,
+      "channel": "cash",
+      "counterparty": "Jennifer Johnson",
+      "currency": "USD",
+      "date": "2026-04-26",
+      "notes": ""
+    },
+    {
+      "amount": 16132.01,
+      "channel": "card",
+      "counterparty": "Patricia Thomas",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 29267.96,
+      "channel": "cash",
+      "counterparty": "Maria Jackson",
+      "currency": "USD",
+      "date": "2026-02-23",
+      "notes": ""
+    },
+    {
+      "amount": 7968.82,
+      "channel": "card",
+      "counterparty": "Karen Harris",
+      "currency": "USD",
+      "date": "2026-02-15",
+      "notes": ""
+    },
+    {
+      "amount": 25827.82,
+      "channel": "card",
+      "counterparty": "Karen Thomas",
+      "currency": "USD",
+      "date": "2026-04-24",
+      "notes": ""
+    },
+    {
+      "amount": 21047.67,
+      "channel": "cash",
+      "counterparty": "James Thomas",
+      "currency": "USD",
+      "date": "2026-03-30",
+      "notes": ""
+    },
+    {
+      "amount": 23165.02,
+      "channel": "ach",
+      "counterparty": "CTOW Partners LLC",
+      "currency": "USD",
+      "date": "2026-04-14",
+      "notes": ""
+    },
+    {
+      "amount": 9355.16,
+      "channel": "ach",
+      "counterparty": "TJ Imports LLC",
+      "currency": "USD",
+      "date": "2026-03-18",
+      "notes": ""
+    },
+    {
+      "amount": 7810.21,
+      "channel": "card",
+      "counterparty": "Elizabeth Anderson",
+      "currency": "USD",
+      "date": "2026-03-03",
+      "notes": ""
+    },
+    {
+      "amount": 7187.82,
+      "channel": "cash",
+      "counterparty": "James Anderson",
+      "currency": "USD",
+      "date": "2026-02-17",
+      "notes": ""
+    },
+    {
+      "amount": 29685.38,
+      "channel": "card",
+      "counterparty": "Jennifer Thompson",
+      "currency": "USD",
+      "date": "2026-02-20",
+      "notes": ""
+    },
+    {
+      "amount": 26189.21,
+      "channel": "cash",
+      "counterparty": "Andrew Garcia",
+      "currency": "USD",
+      "date": "2026-04-15",
+      "notes": ""
+    },
+    {
+      "amount": 12093.29,
+      "channel": "card",
+      "counterparty": "Michael Anderson",
+      "currency": "USD",
+      "date": "2026-03-22",
+      "notes": ""
+    },
+    {
+      "amount": 25833.74,
+      "channel": "ach",
+      "counterparty": "BCEV Exports LLC",
+      "currency": "USD",
+      "date": "2026-03-04",
+      "notes": ""
+    },
+    {
+      "amount": 8822.71,
+      "channel": "ach",
+      "counterparty": "GJX Group LLC",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    },
+    {
+      "amount": 20438.44,
+      "channel": "cash",
+      "counterparty": "Mary Walker",
+      "currency": "USD",
+      "date": "2026-02-18",
+      "notes": ""
+    },
+    {
+      "amount": 18224.78,
+      "channel": "card",
+      "counterparty": "Jennifer Davis",
+      "currency": "USD",
+      "date": "2026-03-08",
+      "notes": ""
+    },
+    {
+      "amount": 22443.31,
+      "channel": "wire",
+      "counterparty": "GD Partners LLC",
+      "currency": "USD",
+      "date": "2026-03-26",
+      "notes": ""
+    },
+    {
+      "amount": 21667.12,
+      "channel": "ach",
+      "counterparty": "WKY Capital LLC",
+      "currency": "USD",
+      "date": "2026-02-24",
+      "notes": ""
+    },
+    {
+      "amount": 21565.42,
+      "channel": "cash",
+      "counterparty": "Maria Lewis",
+      "currency": "USD",
+      "date": "2026-03-12",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_295469da",
+    "entity_type": "business",
+    "expected_monthly_volume": 105245.0,
+    "business_purpose": "Retail jewelry store; mixed cash and card receipts; declared monthly volume ~$105,245.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-NY"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "cash": 0.35,
+      "card": 0.35,
+      "ach": 0.25,
+      "wire": 0.05
+    },
+    "cash_present": true,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'cash': 0.35, 'card': 0.35, 'ach': 0.25, 'wire': 0.05})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The account recorded a tx_count of 20 with a tx_total_usd of 374029.44. The channel_mix indicates a significant reliance on cash at 0.35, which warrants monitoring for potential structuring or CTR compliance under 31 USC 5324. Transactional intensity peaked with a velocity_24h_max of 2. Activity is concentrated, as evidenced by unique_counterparties_7d of 2. The vs_declared_volume_ratio of 1.52 suggests volume exceeds the expected monthly profile. These patterns, combined with a loop_detected status of false, appear consistent with the declared business purpose of a retail jewelry store.",
+      "metrics": {
+        "tx_count": 20,
+        "tx_total_usd": 374029.44,
+        "channel_mix": {
+          "cash": 0.35,
+          "card": 0.35,
+          "ach": 0.25,
+          "wire": 0.05
+        },
+        "velocity_24h_max": 2,
+        "velocity_24h_avg_30d": 0.67,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.59,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 1.52
+      },
+      "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.business_purpose"
+    },
+    "numeric": {
+      "question": "",
+      "answer": "total transaction volume 443333.11",
+      "calculation": "1. Sum all transaction amounts from the [transactions] block: 19303.55 + 16132.01 + 29267.96 + 7968.82 + 25827.82 + 21047.67 + 23165.02 + 9355.16 + 7810.21 + 7187.82 + 29685.38 + 26189.21 + 12093.29 + 25833.74 + 8822.71 + 20438.44 + 18224.78 + 22443.31 + 21667.12 + 21565.42 = 443333.11",
+      "evidence": "transactions[0..20].amount"
+    },
+    "citation": {
+      "question": "",
+      "answer": "No policy excerpts were retrieved; respond accordingly.",
+      "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+    },
+    "statutory": {
+      "question": "",
+      "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+      "label": "neutral",
+      "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "",
+        "answer": "No statute is provided for this typology; therefore, no legal applicability can be determined.",
+        "label": "neutral",
+        "reasoning": "The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_295469da executed 20 transactions totaling $374,029.44 USD with channel mix {\"cash\": 0.35, \"card\": 0.35, \"ach\": 0.25, \"wire\": 0.05}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.52x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 20,
+          "tx_total_usd": 374029.44,
+          "channel_mix": {
+            "cash": 0.35,
+            "card": 0.35,
+            "ach": 0.25,
+            "wire": 0.05
+          },
+          "velocity_24h_max": 2,
+          "velocity_24h_avg_30d": 0.67,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.59,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 1.52
+        },
+        "evidence": "transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "",
+        "answer": "total transaction volume 443333.11",
+        "calculation": "1. Sum all transaction amounts from the [transactions] block: 19303.55 + 16132.01 + 29267.96 + 7968.82 + 25827.82 + 21047.67 + 23165.02 + 9355.16 + 7810.21 + 7187.82 + 29685.38 + 26189.21 + 12093.29 + 25833.74 + 8822.71 + 20438.44 + 18224.78 + 22443.31 + 21667.12 + 21565.42 = 443333.11",
+        "evidence": "transactions[0..20].amount"
+      }
+    ],
+    "citation": [
+      {
+        "question": "",
+        "answer": "No policy excerpts were retrieved; respond accordingly.",
+        "evidence_span": "No policy excerpts were retrieved; respond accordingly."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 19303.55, \"channel\": \"cash\", \"counterparty\": \"Jennifer Johnson\", \"currency\": \"USD\", \"date\": \"2026-04-26\", \"notes\": \"\"}, {\"amount\": 16132.01, \"channel\": \"card\", \"counterparty\": \"Patricia Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 29267.96, \"channel\": \"cash\", \"counterparty\": \"Maria Jackson\", \"currency\": \"USD\", \"date\": \"2026-02-23\", \"notes\": \"\"}, {\"amount\": 7968.82, \"channel\": \"card\", \"counterparty\": \"Karen Harris\", \"currency\": \"USD\", \"date\": \"2026-02-15\", \"notes\": \"\"}, {\"amount\": 25827.82, \"channel\": \"card\", \"counterparty\": \"Karen Thomas\", \"currency\": \"USD\", \"date\": \"2026-04-24\", \"notes\": \"\"}, {\"amount\": 21047.67, \"channel\": \"cash\", \"counterparty\": \"James Thomas\", \"currency\": \"USD\", \"date\": \"2026-03-30\", \"notes\": \"\"}, {\"amount\": 23165.02, \"channel\": \"ach\", \"counterparty\": \"CTOW Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-04-14\", \"notes\": \"\"}, {\"amount\": 9355.16, \"channel\": \"ach\", \"counterparty\": \"TJ Imports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-18\", \"notes\": \"\"}, {\"amount\": 7810.21, \"channel\": \"card\", \"counterparty\": \"Elizabeth Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-03\", \"notes\": \"\"}, {\"amount\": 7187.82, \"channel\": \"cash\", \"counterparty\": \"James Anderson\", \"currency\": \"USD\", \"date\": \"2026-02-17\", \"notes\": \"\"}, {\"amount\": 29685.38, \"channel\": \"card\", \"counterparty\": \"Jennifer Thompson\", \"currency\": \"USD\", \"date\": \"2026-02-20\", \"notes\": \"\"}, {\"amount\": 26189.21, \"channel\": \"cash\", \"counterparty\": \"Andrew Garcia\", \"currency\": \"USD\", \"date\": \"2026-04-15\", \"notes\": \"\"}, {\"amount\": 12093.29, \"channel\": \"card\", \"counterparty\": \"Michael Anderson\", \"currency\": \"USD\", \"date\": \"2026-03-22\", \"notes\": \"\"}, {\"amount\": 25833.74, \"channel\": \"ach\", \"counterparty\": \"BCEV Exports LLC\", \"currency\": \"USD\", \"date\": \"2026-03-04\", \"notes\": \"\"}, {\"amount\": 8822.71, \"channel\": \"ach\", \"counterparty\": \"GJX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}, {\"amount\": 20438.44, \"channel\": \"cash\", \"counterparty\": \"Mary Walker\", \"currency\": \"USD\", \"date\": \"2026-02-18\", \"notes\": \"\"}, {\"amount\": 18224.78, \"channel\": \"card\", \"counterparty\": \"Jennifer Davis\", \"currency\": \"USD\", \"date\": \"2026-03-08\", \"notes\": \"\"}, {\"amount\": 22443.31, \"channel\": \"wire\", \"counterparty\": \"GD Partners LLC\", \"currency\": \"USD\", \"date\": \"2026-03-26\", \"notes\": \"\"}, {\"amount\": 21667.12, \"channel\": \"ach\", \"counterparty\": \"WKY Capital LLC\", \"currency\": \"USD\", \"date\": \"2026-02-24\", \"notes\": \"\"}, {\"amount\": 21565.42, \"channel\": \"cash\", \"counterparty\": \"Maria Lewis\", \"currency\": \"USD\", \"date\": \"2026-03-12\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_295469da\", \"entity_type\": \"business\", \"expected_monthly_volume\": 105245.0, \"business_purpose\": \"Retail jewelry store; mixed cash and card receipts; declared monthly volume ~$105,245.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-NY\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"\", \"answer\": \"No statute is provided for this typology; therefore, no legal applicability can be determined.\", \"label\": \"neutral\", \"reasoning\": \"The request explicitly states that no statute is mapped for this typology. Without a specific statute to evaluate, it is impossible to determine if the facts satisfy any legal elements. Consequently, the response is neutral.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_295469da executed 20 transactions totaling $374,029.44 USD with channel mix {\\\"cash\\\": 0.35, \\\"card\\\": 0.35, \\\"ach\\\": 0.25, \\\"wire\\\": 0.05}. The 24-hour velocity peak is 2 against a 30-day average of 0.67. Volume vs declared monthly is 1.52x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 20, \"tx_total_usd\": 374029.44, \"channel_mix\": {\"cash\": 0.35, \"card\": 0.35, \"ach\": 0.25, \"wire\": 0.05}, \"velocity_24h_max\": 2, \"velocity_24h_avg_30d\": 0.67, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.59, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 1.52}, \"evidence\": \"transactions[0..19]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [{\"question\": \"\", \"answer\": \"total transaction volume 443333.11\", \"calculation\": \"1. Sum all transaction amounts from the [transactions] block: 19303.55 + 16132.01 + 29267.96 + 7968.82 + 25827.82 + 21047.67 + 23165.02 + 9355.16 + 7810.21 + 7187.82 + 29685.38 + 26189.21 + 12093.29 + 25833.74 + 8822.71 + 20438.44 + 18224.78 + 22443.31 + 21667.12 + 21565.42 = 443333.11\", \"evidence\": \"transactions[0..20].amount\"}], \"citation\": [{\"question\": \"\", \"answer\": \"No policy excerpts were retrieved; respond accordingly.\", \"evidence_span\": \"No policy excerpts were retrieved; respond accordingly.\"}]}}",
+  "sar_raw_text": "{\"is_suspicious\": false, \"suspicious_activity_report\": \"The account exhibited a high volume of transactions, totaling $374,029.44 across 20 events, which represents 1.52x the declared monthly volume of $105,245. This activity triggered an alert based on volume and velocity. However, the KYC profile identifies the entity as a retail jewelry store with a business purpose involving mixed cash and card receipts. The observed channel mix of cash (35%), card (35%), ACH (25%), and wire (5%) is consistent with the declared business archetype. While the total exceeds the expected monthly volume, the activity is consistent with declared business operations for a retail entity. No SAR warranted; final disposition is deferred to the human investigator.\"}",
+  "sar_output": {
+    "is_suspicious": false,
+    "suspicious_activity_report": "The account exhibited a high volume of transactions, totaling $374,029.44 across 20 events, which represents 1.52x the declared monthly volume of $105,245. This activity triggered an alert based on volume and velocity. However, the KYC profile identifies the entity as a retail jewelry store with a business purpose involving mixed cash and card receipts. The observed channel mix of cash (35%), card (35%), ACH (25%), and wire (5%) is consistent with the declared business archetype. While the total exceeds the expected monthly volume, the activity is consistent with declared business operations for a retail entity. No SAR warranted; final disposition is deferred to the human investigator."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": false,
+  "sar_narrative": "The account exhibited a high volume of transactions, totaling $374,029.44 across 20 events, which represents 1.52x the declared monthly volume of $105,245. This activity triggered an alert based on volume and velocity. However, the KYC profile identifies the entity as a retail jewelry store with a business purpose involving mixed cash and card receipts. The observed channel mix of cash (35%), card (35%), ACH (25%), and wire (5%) is consistent with the declared business archetype. While the total exceeds the expected monthly volume, the activity is consistent with declared business operations for a retail entity. No SAR warranted; final disposition is deferred to the human investigator.",
+  "judge_enabled": false,
+  "error": null
+}

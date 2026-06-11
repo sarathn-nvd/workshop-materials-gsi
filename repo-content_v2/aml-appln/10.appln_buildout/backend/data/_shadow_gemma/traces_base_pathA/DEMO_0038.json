@@ -1,0 +1,202 @@
+{
+  "case_id": "DEMO_0038",
+  "alert_id": "ALT_2457619",
+  "entity_id": "SYN_95cc23e7",
+  "started_at": "2026-05-27T16:57:09.469844+00:00",
+  "finished_at": "2026-05-27T16:57:45.494038+00:00",
+  "wall_clock_ms": 36024.2,
+  "transactions": [
+    {
+      "amount": 3660.57,
+      "channel": "wire",
+      "counterparty": "Michael Thomas (family member)",
+      "currency": "USD",
+      "date": "2026-04-17",
+      "notes": "wire to family (benign)"
+    },
+    {
+      "amount": 1638.6,
+      "channel": "card",
+      "counterparty": "Christopher Walker",
+      "currency": "USD",
+      "date": "2026-02-16",
+      "notes": ""
+    },
+    {
+      "amount": 6722.24,
+      "channel": "ach",
+      "counterparty": "FXWD Logistics LLC",
+      "currency": "USD",
+      "date": "2026-04-12",
+      "notes": ""
+    },
+    {
+      "amount": 4868.43,
+      "channel": "ach",
+      "counterparty": "EU Associates LLC",
+      "currency": "USD",
+      "date": "2026-03-01",
+      "notes": ""
+    },
+    {
+      "amount": 6185.39,
+      "channel": "cheque",
+      "counterparty": "QBRGF Solutions LLC",
+      "currency": "USD",
+      "date": "2026-02-07",
+      "notes": ""
+    },
+    {
+      "amount": 6747.85,
+      "channel": "ach",
+      "counterparty": "CQX Group LLC",
+      "currency": "USD",
+      "date": "2026-04-04",
+      "notes": ""
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_95cc23e7",
+    "entity_type": "individual",
+    "expected_monthly_volume": 5850.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$5,850.",
+    "risk_rating": "low",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [],
+  "sop_excerpts": [],
+  "semantic_profile": {
+    "channel_mix": {
+      "ach": 0.5,
+      "wire": 0.167,
+      "card": 0.167,
+      "cheque": 0.167
+    },
+    "cash_present": false,
+    "regulatory_frame": "benign",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "none"
+  },
+  "typology_hypothesis": "none",
+  "activity_descriptor": "No suspicious pattern (channel mix {'wire': 0.16666666666666666, 'card': 0.16666666666666666, 'ach': 0.5, 'cheque': 0.16666666666666666})",
+  "decision_target": "not_suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+      "summary": "Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+      "metrics": {
+        "tx_count": 6,
+        "tx_total_usd": 29823.08,
+        "channel_mix": {
+          "ach": 0.5,
+          "wire": 0.167,
+          "card": 0.167,
+          "cheque": 0.167
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.2,
+        "unique_counterparties_7d": 2,
+        "amount_z_score_max": 1.8,
+        "country_risk_max": 0.1,
+        "loop_detected": false,
+        "vs_declared_volume_ratio": 2.22
+      },
+      "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+    },
+    "numeric": {
+      "error": "no_json",
+      "raw": "We need to output JSON with keys: question, answer, calculation, evidence.\n\nUser asks: \"Summarize transaction volumes and compare to KYC declared monthly volume.\"\n\nWe need to compute sum of amounts from transactions block. Let's sum amounts:\n\nList amounts:\n3,660.57\n1,638.60\n6,722.24\n4,868.43\n6,185.39\n6,747.85\n\nSum: Let's add.\n\n3,660.57 + 1,638.60 = 5,299.17\n+ 6,722.24 = 12,021.41\n+ 4,868.43 = 16,889.84\n+ 6,185.39 = 23,075.23\n+ 6,747.85 = 29,823.08\n\nTotal sum = 29,823.08 USD.\n\nNow compare to KYC "
+    },
+    "citation": {
+      "question": "No policy excerpts were retrieved; respond accordingly.",
+      "answer": "The appropriate response is to note that no policy excerpts are available.",
+      "evidence_span": "(no policy excerpts available)"
+    },
+    "statutory": {
+      "question": "No statute mapped for this typology; respond accordingly.",
+      "answer": "No statute provided.",
+      "label": "neutral",
+      "reasoning": "N/A No statute provided leads to neutral classification."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled",
+      "override": "deterministic_sft_replay"
+    },
+    {
+      "task": "numeric",
+      "used": false,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "No statute mapped for this typology; respond accordingly.",
+        "answer": "No statute provided.",
+        "label": "neutral",
+        "reasoning": "N/A No statute provided leads to neutral classification."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Analyze the transactional activity bundle and produce a behavioral summary.",
+        "summary": "Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.",
+        "metrics": {
+          "tx_count": 6,
+          "tx_total_usd": 29823.08,
+          "channel_mix": {
+            "ach": 0.5,
+            "wire": 0.167,
+            "card": 0.167,
+            "cheque": 0.167
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.2,
+          "unique_counterparties_7d": 2,
+          "amount_z_score_max": 1.8,
+          "country_risk_max": 0.1,
+          "loop_detected": false,
+          "vs_declared_volume_ratio": 2.22
+        },
+        "evidence": "transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction"
+      }
+    ],
+    "numeric": [],
+    "citation": [
+      {
+        "question": "No policy excerpts were retrieved; respond accordingly.",
+        "answer": "The appropriate response is to note that no policy excerpts are available.",
+        "evidence_span": "(no policy excerpts available)"
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 3660.57, \"channel\": \"wire\", \"counterparty\": \"Michael Thomas (family member)\", \"currency\": \"USD\", \"date\": \"2026-04-17\", \"notes\": \"wire to family (benign)\"}, {\"amount\": 1638.6, \"channel\": \"card\", \"counterparty\": \"Christopher Walker\", \"currency\": \"USD\", \"date\": \"2026-02-16\", \"notes\": \"\"}, {\"amount\": 6722.24, \"channel\": \"ach\", \"counterparty\": \"FXWD Logistics LLC\", \"currency\": \"USD\", \"date\": \"2026-04-12\", \"notes\": \"\"}, {\"amount\": 4868.43, \"channel\": \"ach\", \"counterparty\": \"EU Associates LLC\", \"currency\": \"USD\", \"date\": \"2026-03-01\", \"notes\": \"\"}, {\"amount\": 6185.39, \"channel\": \"cheque\", \"counterparty\": \"QBRGF Solutions LLC\", \"currency\": \"USD\", \"date\": \"2026-02-07\", \"notes\": \"\"}, {\"amount\": 6747.85, \"channel\": \"ach\", \"counterparty\": \"CQX Group LLC\", \"currency\": \"USD\", \"date\": \"2026-04-04\", \"notes\": \"\"}], \"kyc_profile\": {\"entity_id\": \"SYN_95cc23e7\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 5850.0, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$5,850.\", \"risk_rating\": \"low\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [], \"sop_excerpts\": [], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"No statute mapped for this typology; respond accordingly.\", \"answer\": \"No statute provided.\", \"label\": \"neutral\", \"reasoning\": \"N/A No statute provided leads to neutral classification.\"}], \"behavioral\": [{\"question\": \"Analyze the transactional activity bundle and produce a behavioral summary.\", \"summary\": \"Entity SYN_95cc23e7 executed 6 transactions totaling $29,823.08 USD with channel mix {\\\"ach\\\": 0.5, \\\"wire\\\": 0.167, \\\"card\\\": 0.167, \\\"cheque\\\": 0.167}. The 24-hour velocity peak is 1 against a 30-day average of 0.2. Volume vs declared monthly is 2.22x. country_risk_max is 0.1; loop_detected is false.\", \"metrics\": {\"tx_count\": 6, \"tx_total_usd\": 29823.08, \"channel_mix\": {\"ach\": 0.5, \"wire\": 0.167, \"card\": 0.167, \"cheque\": 0.167}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.2, \"unique_counterparties_7d\": 2, \"amount_z_score_max\": 1.8, \"country_risk_max\": 0.1, \"loop_detected\": false, \"vs_declared_volume_ratio\": 2.22}, \"evidence\": \"transactions[0..5]; kyc_profile.expected_monthly_volume; kyc_profile.incorporation_jurisdiction\"}], \"numeric\": [], \"citation\": [{\"question\": \"No policy excerpts were retrieved; respond accordingly.\", \"answer\": \"The appropriate response is to note that no policy excerpts are available.\", \"evidence_span\": \"(no policy excerpts available)\"}]}}",
+  "sar_raw_text": "We need to output JSON with is_suspicious and suspicious_activity_report string 400-800 characters. Must derive is_suspicious based on evidence.\n\nWe have transactions: 6 transactions total $29,823.08. KYC expected monthly volume $5,850. Ratio 2.22x. Channel mix: ach 0.5, wire 0.167, card 0.167, cheque 0.167. 24h velocity peak 1 vs avg 0.2. No sanctions hits. No policy excerpts. Behavioral findings: metrics include vs_declared_volume_ratio 2.22, etc.\n\nWe need to decide if suspicious. The ratio is >1, but not extremely high; but it's 2.22x declared volume, which could be suspicious if declared volume is low and activity is higher. However the KYC says retired individual on fixed pension income; expected monthly throughput ~$5,850. The observed total $29,823 is about 5x monthly expected. That's high. Also channel mix includes ACH and wires, not just cash. No structuring. No sanctions. But the ratio and velocity may be suspicious.\n\nBut we must consider if there are any red flags that resolve. The KYC says retired individual with pension; transactions include wires to family member, ACH to logistics, etc. Could be legitimate. However the ratio is high; but maybe it's a one-time spike? The 24h velocity peak is 1 vs avg 0.2, meaning a burst of activity. That could be suspicious.\n\nGiven the evidence, I think it's suspicious enough to warrant SAR? The instructions: set is_suspicious=true only when evidence warrants filing a SAR. Strong-positive signals include confident sanctions hit, peel-chain, structuring, TBML, etc. Here we have no sanctions, no structuring, but high volume vs declared and velocity spike. Could be considered suspicious, especially if the activity is inconsistent with declared purpose (retired individual). The channel mix includes ACH and wires, not typical for a retired individual? Could be.\n\nThus I think is_suspicious = true.\n\nNow need to write a narrative 400-800 characters, grounded, citing evidence. Must be 400-800 characters inclusive. Let's craft about 550 characters.\n\nNarrative must start with most salient evidence: maybe the volume vs declared ratio and velocity spike. Then cite transaction facts: amounts, dates, counterparties. Then cite the behavioral metric: vs_declared_volume_ratio 2.22x, 24h velocity peak 1 vs avg 0.2. Then cite regulatory framework: maybe \"FinCEN CTR structuring\" or \"layering\" but we need to choose appropriate framing based on channel mix: mixed cash? Actually channels: wire, card, ach, cheque. No cash. So it's non-cash, so layering / rapid-movement framing. Use that.\n\nWe must not invent regulation not in policy_excerpts; but we can cite \"FinCEN Advisory FIN-2022-A002\" only if present; not present. We can cite \"layering / rapid-movement\" but must be derived from channel mix. We can mention \"layering / rapid-movement framing\" as derived from channel mix. That's okay as we are not citing a specific regulation text; but we must not claim a regulation number unless present. The policy_excerpts is empty, so we cannot cite any regulation. But we can still mention \"layering / rapid-movement\" as a framing, but must be derived from channel mix. That's okay.\n\nWe must not mention any regulation that is not in policy_excerpts. So we can just say \"consistent with layering / rapid-movement patterns under FinCEN guidance for mixed-channel activity\" but that might be considered citing regulation? It's not a specific regulation excerpt. Might be okay as general framing.\n\nBut the instruction: \"Cite the regulatory framework that applies (see REGULATORY FRAMING below).\" We can refer to the appropriate framing without naming a regulation number. That should be fine.\n\nNow craft narrative ~550 characters.\n\nLet's count approximate characters. We'll write:\n\n\"On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC and a $6,747.85 ACH to CQX Group LLC were recorded, followed by a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17. The six transactions total $29,823.08, 2.22 × the declared monthly volume of $5,850 and show a 24‑hour velocity peak of 1 versus a 30‑day average of 0.2, indicating a sudden surge inconsistent with a retired pensioner’s expected activity; the mixed‑channel pattern (ACH, wire, card, cheque) aligns with layering/rapid‑movement typologies, warranting SAR consideration.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\n\"On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC were recorded, followed by a $6,747.85 ACH to CQX Group LLC on 2026‑04‑12 and a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17. The six transactions total $29,823.08, 2.22 × the declared monthly volume of $5,850 and show a 24‑hour velocity peak of 1 versus a 30‑day average of 0.2, indicating a sudden surge inconsistent with a retired pensioner’s expected activity; the mixed‑channel pattern (ACH, wire, card, cheque) aligns with layering/rapid‑movement typologies, warranting SAR consideration.\"\n\nLet's count using approximate. I'll count manually.\n\nI'll copy into a counting tool mentally? Let's approximate: It's likely around 500-600 characters. Need 400-800, so okay.\n\nBut need to ensure it's within 400-800 characters. Let's count more precisely.\n\nI'll count characters including spaces.\n\nI'll write it with indices.\n\nI'll count using groups.\n\n\"On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC were recorded, followed by a $6,747.85 ACH to CQX Group LLC on 2026‑04‑12 and a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17. The six transactions total $29,823.08, 2.22 × the declared monthly volume of $5,850 and show a 24‑hour velocity peak of 1 versus a 30‑day average of 0.2, indicating a sudden surge inconsistent with a retired pensioner’s expected activity; the mixed‑channel pattern (ACH, wire, card, cheque) aligns with layering/rapid‑movement typologies, warranting SAR consideration.\"\n\nLet's count characters.\n\nI'll count each segment.\n\nSegment1: \"On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC were recorded, followed by a $6,747.85 ACH to CQX Group LLC on 2026‑04‑12 and a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17.\"\n\nCount length.\n\nI'll count characters including spaces.\n\nI'll write with index numbers.\n\nI'll use a rough method: count words length? Better to approximate.\n\nBut we need to be within 400-800, likely okay.\n\nLet's approximate length: The whole string maybe ~620 characters. Should be fine.\n\nNow ensure we didn't mention any regulation not in policy_excerpts. We mentioned \"layering/rapid‑movement typologies\" which is a framing, not a specific regulation. That's okay.\n\nNow produce JSON:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"<narrative>\"\n}\n\nMake sure narrative is a string, no line breaks? It can have line breaks but still part of string. Probably fine.\n\nNow output exactly JSON with no extra text.\n\nLet's craft final narrative with proper escaping of quotes? Not needed as we are not using quotes inside. We have apostrophe ’ in pensioner’s; that's a Unicode apostrophe, but it's okay. JSON string can contain Unicode. No need to escape.\n\nBut we must ensure no newline characters? It's okay.\n\nNow produce final answer.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC and a $6,747.85 ACH to CQX Group LLC were recorded, followed by a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17. The six transactions total $29,823.08, 2.22 × the declared monthly volume of $5,850 and show a 24‑hour velocity peak of 1 versus a 30‑day average of 0.2, indicating a sudden surge inconsistent with a retired pensioner’s expected activity; the mixed‑channel pattern (ACH, wire, card, cheque) aligns with layering/rapid‑movement typologies, warranting SAR consideration.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC and a $6,747.85 ACH to CQX Group LLC were recorded, followed by a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17. The six transactions total $29,823.08, 2.22 × the declared monthly volume of $5,850 and show a 24‑hour velocity peak of 1 versus a 30‑day average of 0.2, indicating a sudden surge inconsistent with a retired pensioner’s expected activity; the mixed‑channel pattern (ACH, wire, card, cheque) aligns with layering/rapid‑movement typologies, warranting SAR consideration."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "On 2026‑04‑12 a $6,722.24 ACH payment to FXWD Logistics LLC and a $6,747.85 ACH to CQX Group LLC were recorded, followed by a $4,868.43 cheque to QBRGF Solutions LLC on 2026‑02‑07 and a $3,660.57 wire to family member Michael Thomas on 2026‑04‑17. The six transactions total $29,823.08, 2.22 × the declared monthly volume of $5,850 and show a 24‑hour velocity peak of 1 versus a 30‑day average of 0.2, indicating a sudden surge inconsistent with a retired pensioner’s expected activity; the mixed‑channel pattern (ACH, wire, card, cheque) aligns with layering/rapid‑movement typologies, warranting SAR consideration.",
+  "judge_enabled": false,
+  "error": null
+}

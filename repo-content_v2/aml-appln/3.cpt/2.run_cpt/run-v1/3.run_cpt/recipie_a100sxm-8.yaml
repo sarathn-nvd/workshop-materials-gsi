@@ -1,0 +1,200 @@
+# CPT Phase 1 recipe -- 8 x A100 SXM (80 GB / GPU, NVSwitch mesh), BF16.
+# A100 has NO FP8 hardware (Ampere SM_80) and DeepEP is Hopper-only, so this
+# recipe runs BF16-only with the torch dispatcher. There is effectively only
+# one tier on A100. See A100_SXM_OPTIMIZATION.md for context.
+#
+# PRE-REQUISITES
+#
+# A. SSH into the 8-GPU A100 SXM node from the base host. The training repo
+#    lives at /sadata/swaminathanb/gsi-training on that node; cd into it after
+#    login so the HOST_WORKSPACE bind-mount in step 1 below resolves correctly:
+#
+# ssh swaminathanb@exp-blr-dgxa100-02
+# cd /sadata/swaminathanb/gsi-training
+# export HOST_WORKSPACE=/sadata/swaminathanb/gsi-training
+#
+# B. Authenticate the Docker daemon against NGC (nvcr.io) so the
+#    `nvcr.io/nvidia/nemo-automodel:26.04` image can be pulled. Use your NGC
+#    API key as the password; the username is the literal string $oauthtoken:
+#
+# docker login nvcr.io
+#   Username: $oauthtoken
+#   Password: <NGC_API_KEY>
+#
+# C. Export the secrets the container expects at runtime. The training image
+#    pulls the gated `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16` weights
+#    + tokenizer from Hugging Face, so HF_TOKEN MUST be a token with access to
+#    that repo. It is forwarded into the container via `-e HF_TOKEN=$HF_TOKEN`
+#    in step 1; if it is unset the container will fail with a 401 on first
+#    `from_pretrained`:
+#
+# export HF_TOKEN=hf_xxx_your_token   # required (gated NVIDIA repo)
+#
+# RUN COMMANDS
+#
+# 0. (Optional) archive the previous run's log:
+#
+# mv /workspace/3.run_cpt/run.log \
+#    /workspace/3.run_cpt/run.$(date +%Y%m%d-%H%M%S).log
+#
+# 1. Launch the training container detached. HOST_WORKSPACE bind-mounts the
+#    repo root at /workspace. (Rootless: omit `--user`/`--group-add 0`.)
+#
+# docker run -d --gpus all \
+#   --name cpt-phase1 \
+#   --shm-size=64g --ipc=host \
+#   --ulimit memlock=-1 \
+#   --workdir /workspace/3.run_cpt \
+#   -e HOME=/tmp \
+#   -e HF_HOME=/workspace/3.run_cpt/hf_cache \
+#   -e HF_TOKEN=$HF_TOKEN \
+#   -e PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+#   -v $HOST_WORKSPACE:/workspace \
+#   nvcr.io/nvidia/nemo-automodel:26.04 \
+#   torchrun --nproc-per-node=8 \
+#     /workspace/3.run_cpt/pretrain.py \
+#     --config /workspace/3.run_cpt/recipie_a100sxm-8.yaml
+#
+# 2. Stream container stdout/stderr to a file in the background. Run from
+#    $HOST_WORKSPACE so the redirect path resolves on the host:
+#
+# nohup docker logs -f cpt-phase1 > 3.run_cpt/run.log 2>&1 &
+# disown
+#
+# 3. Verify the container is running:
+#
+# docker ps --filter name=cpt-phase1
+#
+# OPS COMMANDS
+#
+# Tail live log:        tail -f $HOST_WORKSPACE/3.run_cpt/run.log
+# Last 200 log lines:   docker logs --tail 200 cpt-phase1
+# GPU snapshot:         nvidia-smi --query-gpu=index,memory.used,memory.free,utilization.gpu,power.draw --format=csv
+# Verify NVLink mesh:   nvidia-smi topo -m   (expect NV12 between every GPU pair on A100 SXM)
+# Graceful stop:        docker stop cpt-phase1 && docker rm cpt-phase1
+# Resume from latest ckpt: just re-run step 1 above (NeMo auto-resumes).
+
+model:
+  _target_: nemo_automodel.NeMoAutoModelForCausalLM.from_pretrained
+  # MUST be the BF16 base. The "-FP8" sibling is a Stage-4 inference
+  # quantization that produces near-random initial loss for CPT.
+  pretrained_model_name_or_path: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16
+  trust_remote_code: true
+  torch_dtype: auto
+  use_mamba_kernels: true
+  backend:
+    _target_: nemo_automodel.components.models.common.BackendConfig
+    # `linear: te` keeps Transformer Engine BF16 attention paths (FlashAttention).
+    # TE on A100 falls back to BF16 cleanly -- no FP8 path is exercised.
+    linear: te
+    rms_norm: torch_fp32
+    # FORCED: A100 SXM has full NVSwitch mesh (DeepEP topology check would pass)
+    # but DeepEP kernels are Hopper-only. Stay on torch dispatcher.
+    experts: torch_mm
+    dispatcher: torch
+    enable_hf_state_dict_adapter: true
+    enable_fsdp_optimizations: true
+
+# DISABLED on A100 -- no FP8 tensor cores in Ampere (SM_80). Leaving enabled
+# either fails the Float8Linear conversion or silently produces dummy ops.
+fp8:
+  enabled: false
+
+dataset:
+  _target_: nemo_automodel.components.datasets.llm.megatron_dataset.MegatronPretraining
+  paths: /workspace/2.prepare_megatroncore_dataset/data/processed_data_*_text_document*
+  index_mapping_dir: /workspace/3.run_cpt/mapping_dir
+  tokenizer:
+    _target_: transformers.AutoTokenizer.from_pretrained
+    pretrained_model_name_or_path: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16
+    trust_remote_code: true
+  seq_length: 4096
+  split: "0.99, 0.01, 0.00"
+  splits_to_build: "train"
+
+validation_dataset:
+  _target_: nemo_automodel.components.datasets.llm.megatron_dataset.MegatronPretraining
+  paths: /workspace/2.prepare_megatroncore_dataset/data/processed_data_*_text_document*
+  index_mapping_dir: /workspace/3.run_cpt/mapping_dir
+  tokenizer:
+    _target_: transformers.AutoTokenizer.from_pretrained
+    pretrained_model_name_or_path: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16
+    trust_remote_code: true
+  seq_length: 4096
+  split: "0.99, 0.01, 0.00"
+  splits_to_build: "validation"
+  num_val_samples: 2048
+
+step_scheduler:
+  global_batch_size: 256
+  # 80 GB ceiling + no FP8 dense savings = tighter than H100 SXM. If step 1 or
+  # the first val pass OOMs, drop to 1.
+  local_batch_size: 2
+  ckpt_every_steps: 100
+  val_every_steps: 190
+  num_epochs: 1
+  max_steps: 1800
+
+dist_env:
+  backend: nccl
+  timeout_minutes: 30
+
+rng:
+  _target_: nemo_automodel.components.training.rng.StatefulRNG
+  seed: 1111
+  ranked: true
+
+checkpoint:
+  enabled: true
+  checkpoint_dir: /workspace/3.run_cpt/checkpoints/
+  model_save_format: safetensors
+  save_consolidated: true
+
+distributed:
+  strategy: fsdp2
+  dp_size: 8
+  dp_replicate_size: 1
+  tp_size: 1
+  cp_size: 1
+  pp_size: 1
+  # ep_size=8 forced by MoE optimizer-state memory (lower ep won't fit on 80 GB).
+  ep_size: 8
+  # Mandatory on 80 GB. Disabling needs ~125 GiB peak -- OOMs.
+  activation_checkpointing: true
+  sequence_parallel: false
+
+loss_fn:
+  _target_: nemo_automodel.components.loss.masked_ce.MaskedCrossEntropy
+
+dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: torch.utils.data.default_collate
+  num_workers: 4
+  prefetch_factor: 2
+
+validation_dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: torch.utils.data.default_collate
+  num_workers: 4
+  prefetch_factor: 2
+
+optimizer:
+  _target_: torch.optim.AdamW
+  betas: [0.9, 0.95]
+  lr: 2.0e-5
+  weight_decay: 0.1
+  eps: 1.0e-8
+
+# WSD (Warmup-Stable-Decay): warmup 100 + stable 1270 + decay 430 = 1800 steps.
+# `lr_decay_style` is case-sensitive in nemo_automodel.OptimizerParamScheduler
+# (must be the exact string "WSD"); lowercase "wsd" silently falls through to
+# the unsupported-style raise.
+lr_scheduler:
+  lr_decay_style: WSD
+  lr_warmup_steps: 100
+  # Total schedule horizon (warmup + stable + decay). wsd_anneal_start =
+  # lr_decay_steps - wsd_decay_steps = 1370, so stable phase is steps 100-1369.
+  lr_decay_steps: 1800
+  wsd_decay_steps: 430
+  lr_wsd_decay_style: cosine
+  min_lr: 2.0e-6

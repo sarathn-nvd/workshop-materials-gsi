@@ -1,0 +1,214 @@
+{
+  "case_id": "DEMO_0167",
+  "alert_id": "ALT_2451712",
+  "entity_id": "SYN_9970daac",
+  "started_at": "2026-05-23T12:18:07.975438+00:00",
+  "finished_at": "2026-05-23T12:18:36.039441+00:00",
+  "wall_clock_ms": 28064.0,
+  "transactions": [
+    {
+      "amount": 2719.74,
+      "channel": "wire",
+      "counterparty": "John Smith (new payee)",
+      "currency": "USD",
+      "date": "2026-04-11",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 8728.33,
+      "channel": "wire",
+      "counterparty": "John Smith (new payee)",
+      "currency": "USD",
+      "date": "2026-04-20",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 30790.01,
+      "channel": "wire",
+      "counterparty": "John Smith (new payee)",
+      "currency": "USD",
+      "date": "2026-04-27",
+      "notes": "wire to newly-added payee"
+    },
+    {
+      "amount": 27428.69,
+      "channel": "wire",
+      "counterparty": "John Smith (new payee)",
+      "currency": "USD",
+      "date": "2026-04-28",
+      "notes": "wire to newly-added payee"
+    }
+  ],
+  "kyc_profile": {
+    "entity_id": "SYN_9970daac",
+    "entity_type": "individual",
+    "expected_monthly_volume": 1018.0,
+    "business_purpose": "Retired individual on fixed pension income; expected monthly throughput ~$1,018.",
+    "risk_rating": "medium",
+    "incorporation_jurisdiction": "US-CA"
+  },
+  "sanctions_pep_hits": [],
+  "policy_excerpts": [
+    {
+      "source": "FinCEN",
+      "section": "pdfs/20140220",
+      "url": "",
+      "text": "is certainly worthy of FinCEN’s attention.\nThat being said, it is also important to put virtual currency in perspective as a payment\nsystem. The U.S. government indictment and proposed special measures issued last May against\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\nAdministrators of other major centralized virtual currencies report processing similar transaction\nvolumes to what Liberty Reserve did.\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\nthis measure may be artificially high due to the extensive use of automated layering in many\nBitcoin transactions.\nBy way of comparison, according to information reported publicly, in 2012 Western\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\nThis relative volume of transactions becomes important when you consider that,\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\nall global criminal proceeds available for laundering through the financial system in 2009 was\n$1.6 trillion.\nWhile of growing concern, to date, virtual currencies have yet to overtake more\ntraditional methods to move fun"
+    },
+    {
+      "source": "FFIEC",
+      "section": "courtlistener-00000",
+      "url": "",
+      "text": "vo.    See Las Vegas Sands\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\n                910 (2014).\n                              The Bank Secrecy Act governs requirements over financial\n                institutions to assist governmental agencies, specifically in providing\n                \"certain reports or records where they have a high degree of usefulness in\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\n                of intelligence or counterintelligence activities, including analysis, to\n                protect against international terrorism.\" 31 U.S.C. § 5311. Pursuant to\n                the Act, if a bank reports a suspicious transaction to the government, the\n                bank may not \"notify any person involved in the transaction that the\n                transaction has been reported.\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\n                regulations have been promulgated under the Act, such as 12 C.F.R.\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \"SAR.\" \"A\nSUPREME COURT\n        OF\n     NEVADA\n                                                      6\n(0) 1947A\n\f                SAR, and any information that would reveal the existence of a SAR are\n                confidential, and shall not be disclosed.\" 12 C.F.R. § 21.11(k). Further, if\n         "
+    },
+    {
+      "source": "FATF",
+      "section": "pdfs/BPP-Combating-TF-Abuse-NPO-R8",
+      "url": "",
+      "text": "shareholders,\ndirectors and managers against worldwide sanctions databases.\nEnhanced due diligence is applied when goods or services are procured above a\nhigher value threshold or in regions where there is a need for higher risk services\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\nadhered to and check supporting documents for red flags.\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\nitself as well as its owners. This includes the application of open-source information\nto build a profile of these entities and then determine their level of risk. This\ninformation includes sentiment analysis from news reports, court cases,\nbankruptcy/registration/licensing checks, social media network analysis, global\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\nhigh level of confidence that the vendors are who they say they are.\nLevel 3: Where additional risk is identified, retention of an external corporate\nintelligence firm to perform background checks on the vendor.\nCash distribution controls\nThe NPO’s priority for cash distribution services is to use established banking\nfacilities for transferring funds. In those locations where informal money transfer\nsystems remains the only viable means for the NPO to operate, the organisation has\ndeveloped specific processes for risk identification and mitig"
+    }
+  ],
+  "sop_excerpts": [
+    {
+      "sop_id": "SOP-LAYERING-01",
+      "section": "Investigation Steps",
+      "text": "1. Pull all wire and ACH transactions for the entity in the prior 90 days.\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\n3. Compute total volume into/out of cycle members; compare to declared volume.\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim."
+    }
+  ],
+  "semantic_profile": {
+    "channel_mix": {
+      "wire": 1.0
+    },
+    "cash_present": false,
+    "regulatory_frame": "layering_passthrough",
+    "declared_volume_band": "over",
+    "geo_risk": "low",
+    "typology_inferred": "layering"
+  },
+  "typology_hypothesis": "layering",
+  "activity_descriptor": "Peel-chain pattern with 4 descending wire amounts",
+  "decision_target": "suspicious",
+  "planner_plan": null,
+  "orchestrator_calls": [],
+  "aux_responses_raw": {
+    "behavioral": {
+      "question": "Provide a behavioral summary with the metrics described in the schema.",
+      "summary": "The entity executed 4 transactions (tx_count: 4) totaling $69666.77 (tx_total_usd: 69666.77), with a channel mix of 1.0 wire, 0.0 ach, and 0.0 cash (channel_mix: {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}). Its peak 24‑hour velocity was 1 (velocity_24h_max: 1) and the 30‑day average daily velocity was 0.1333 (velocity_24h_avg_30d: 0.1333), while unique counterparties in the last 7 days were 1 (unique_counterparties_7d: 1) and the highest amount‑z‑score was 0.97 (amount_z_score_max: 0.97). The maximum country risk score is 0.5 (country_risk_max: 0.5), a loop pattern was detected (loop_detected: true), and the observed‑to‑declared volume ratio is 68.44 (vs_declared_volume_ratio: 68.44).",
+      "metrics": {
+        "tx_count": 4,
+        "tx_total_usd": 69666.77,
+        "channel_mix": {
+          "wire": 1.0,
+          "ach": 0.0,
+          "cash": 0.0
+        },
+        "velocity_24h_max": 1,
+        "velocity_24h_avg_30d": 0.1333,
+        "unique_counterparties_7d": 1,
+        "amount_z_score_max": 0.97,
+        "country_risk_max": 0.5,
+        "loop_detected": true,
+        "vs_declared_volume_ratio": 68.44
+      },
+      "evidence": "transactions[0..3]"
+    },
+    "numeric": {
+      "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+      "answer": "$69,666.77, about 68.4x declared",
+      "calculation": "1. Extract transaction amounts: 2719.74, 8728.33, 30790.01, 27428.69.\n2. Sum the amounts: 2719.74 + 8728.33 + 30790.01 + 27428.69 = 69666.77.\n3. Retrieve KYC declared monthly volume: 1018.0.\n4. Compute ratio: 69666.77 / 1018.0 ≈ 68.44 (≈68.4x).",
+      "evidence": "Transaction rows with amounts 2719.74, 8728.33, 30790.01, 27428.69; KYC field expected_monthly_volume = 1018.0"
+    },
+    "citation": {
+      "question": "What does pdfs/20140220 say about the activity described?",
+      "answer": "The passage states that virtual currency activity is certainly worthy of FinCEN’s attention.",
+      "evidence_span": "is certainly worthy of FinCEN’s attention."
+    },
+    "statutory": {
+      "question": "Does the conduct described fall within 5318(g)?",
+      "answer": "Yes, the described transactions constitute suspicious activity subject to the reporting requirement of 31 U.S.C. § 5318(g).",
+      "label": "entailment",
+      "reasoning": "The transactions exhibit patterns (large, rapid transfers to a newly added payee) that trigger the suspicious activity reporting obligations under 31 U.S.C. § 5318(g)."
+    }
+  },
+  "aux_gate_decisions": [
+    {
+      "task": "behavioral",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "numeric",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "citation",
+      "used": true,
+      "reason": "gate-disabled"
+    },
+    {
+      "task": "statutory",
+      "used": true,
+      "reason": "gate-disabled"
+    }
+  ],
+  "auxiliary_findings": {
+    "statutory": [
+      {
+        "question": "Does the conduct described fall within 5318(g)?",
+        "answer": "Yes, the described transactions constitute suspicious activity subject to the reporting requirement of 31 U.S.C. § 5318(g).",
+        "label": "entailment",
+        "reasoning": "The transactions exhibit patterns (large, rapid transfers to a newly added payee) that trigger the suspicious activity reporting obligations under 31 U.S.C. § 5318(g)."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Provide a behavioral summary with the metrics described in the schema.",
+        "summary": "The entity executed 4 transactions (tx_count: 4) totaling $69666.77 (tx_total_usd: 69666.77), with a channel mix of 1.0 wire, 0.0 ach, and 0.0 cash (channel_mix: {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}). Its peak 24‑hour velocity was 1 (velocity_24h_max: 1) and the 30‑day average daily velocity was 0.1333 (velocity_24h_avg_30d: 0.1333), while unique counterparties in the last 7 days were 1 (unique_counterparties_7d: 1) and the highest amount‑z‑score was 0.97 (amount_z_score_max: 0.97). The maximum country risk score is 0.5 (country_risk_max: 0.5), a loop pattern was detected (loop_detected: true), and the observed‑to‑declared volume ratio is 68.44 (vs_declared_volume_ratio: 68.44).",
+        "metrics": {
+          "tx_count": 4,
+          "tx_total_usd": 69666.77,
+          "channel_mix": {
+            "wire": 1.0,
+            "ach": 0.0,
+            "cash": 0.0
+          },
+          "velocity_24h_max": 1,
+          "velocity_24h_avg_30d": 0.1333,
+          "unique_counterparties_7d": 1,
+          "amount_z_score_max": 0.97,
+          "country_risk_max": 0.5,
+          "loop_detected": true,
+          "vs_declared_volume_ratio": 68.44
+        },
+        "evidence": "transactions[0..3]"
+      }
+    ],
+    "numeric": [
+      {
+        "question": "Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.",
+        "answer": "$69,666.77, about 68.4x declared",
+        "calculation": "1. Extract transaction amounts: 2719.74, 8728.33, 30790.01, 27428.69.\n2. Sum the amounts: 2719.74 + 8728.33 + 30790.01 + 27428.69 = 69666.77.\n3. Retrieve KYC declared monthly volume: 1018.0.\n4. Compute ratio: 69666.77 / 1018.0 ≈ 68.44 (≈68.4x).",
+        "evidence": "Transaction rows with amounts 2719.74, 8728.33, 30790.01, 27428.69; KYC field expected_monthly_volume = 1018.0"
+      }
+    ],
+    "citation": [
+      {
+        "question": "What does pdfs/20140220 say about the activity described?",
+        "answer": "The passage states that virtual currency activity is certainly worthy of FinCEN’s attention.",
+        "evidence_span": "is certainly worthy of FinCEN’s attention."
+      }
+    ]
+  },
+  "sar_user_message": "{\"task_type\": \"sar_judgment\", \"transactions\": [{\"amount\": 2719.74, \"channel\": \"wire\", \"counterparty\": \"John Smith (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-11\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 8728.33, \"channel\": \"wire\", \"counterparty\": \"John Smith (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-20\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 30790.01, \"channel\": \"wire\", \"counterparty\": \"John Smith (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-27\", \"notes\": \"wire to newly-added payee\"}, {\"amount\": 27428.69, \"channel\": \"wire\", \"counterparty\": \"John Smith (new payee)\", \"currency\": \"USD\", \"date\": \"2026-04-28\", \"notes\": \"wire to newly-added payee\"}], \"kyc_profile\": {\"entity_id\": \"SYN_9970daac\", \"entity_type\": \"individual\", \"expected_monthly_volume\": 1018, \"business_purpose\": \"Retired individual on fixed pension income; expected monthly throughput ~$1,018.\", \"risk_rating\": \"medium\", \"incorporation_jurisdiction\": \"US-CA\"}, \"sanctions_pep_hits\": [], \"policy_excerpts\": [{\"source\": \"FinCEN\", \"section\": \"pdfs/20140220\", \"url\": \"\", \"text\": \"is certainly worthy of FinCEN’s attention.\\nThat being said, it is also important to put virtual currency in perspective as a payment\\nsystem. The U.S. government indictment and proposed special measures issued last May against\\nLiberty Reserve allege it was involved in laundering more than $6 billion over several years.\\nAdministrators of other major centralized virtual currencies report processing similar transaction\\nvolumes to what Liberty Reserve did.\\nIn the case of Bitcoin, it has been publicly reported that its users processed transactions\\nworth approximately $8 billion over the twelve-month period preceding October 2013; however,\\nthis measure may be artificially high due to the extensive use of automated layering in many\\nBitcoin transactions.\\nBy way of comparison, according to information reported publicly, in 2012 Western\\nUnion made remittances totaling approximately $81 billion, PayPal processed approximately\\n$145 billion in online payments, the Automated Clearing House Network processed $36.9\\ntrillion in transactions, and Bank of America processed $244.4 trillion in wire transfers.\\nThis relative volume of transactions becomes important when you consider that,\\naccording to the United Nations Office on Drugs and Crime, the best estimate for the amount of\\nall global criminal proceeds available for laundering through the financial system in 2009 was\\n$1.6 trillion.\\nWhile of growing concern, to date, virtual currencies have yet to overtake more\\ntraditional methods to move fun\"}, {\"source\": \"FFIEC\", \"section\": \"courtlistener-00000\", \"url\": \"\", \"text\": \"vo.    See Las Vegas Sands\\n                Corp. v. Eighth Judicial Dist. Court, 130 Nev., Adv. Op. 69, 331 P.3d 905,\\n                910 (2014).\\n                              The Bank Secrecy Act governs requirements over financial\\n                institutions to assist governmental agencies, specifically in providing\\n                \\\"certain reports or records where they have a high degree of usefulness in\\n                criminal, tax, or regulatory investigations or proceedings, or in the conduct\\n                of intelligence or counterintelligence activities, including analysis, to\\n                protect against international terrorism.\\\" 31 U.S.C. § 5311. Pursuant to\\n                the Act, if a bank reports a suspicious transaction to the government, the\\n                bank may not \\\"notify any person involved in the transaction that the\\n                transaction has been reported.\\\" 31 U.S.C. § 5318(g)(2)(A)(i). Numerous\\n                regulations have been promulgated under the Act, such as 12 C.F.R.\\n                § 21.11 et seq. from the Office of the Comptroller of the Currency. 12\\n                C.F.R. § 21.11(b)(3) refers to a suspicious activity report as a \\\"SAR.\\\" \\\"A\\nSUPREME COURT\\n        OF\\n     NEVADA\\n                                                      6\\n(0) 1947A\\n\\f                SAR, and any information that would reveal the existence of a SAR are\\n                confidential, and shall not be disclosed.\\\" 12 C.F.R. § 21.11(k). Further, if\\n         \"}, {\"source\": \"FATF\", \"section\": \"pdfs/BPP-Combating-TF-Abuse-NPO-R8\", \"url\": \"\", \"text\": \"shareholders,\\ndirectors and managers against worldwide sanctions databases.\\nEnhanced due diligence is applied when goods or services are procured above a\\nhigher value threshold or in regions where there is a need for higher risk services\\nsuch as cash transfer and distribution, and consists of 3 levels of due diligence:\\nLevel 1: Confirm that the organisation’s Standard Operating Procedures have been\\nadhered to and check supporting documents for red flags.\\nLevel 2: Enhanced due diligence to determine and confirm the bona fides of the entity\\nitself as well as its owners. This includes the application of open-source information\\nto build a profile of these entities and then determine their level of risk. This\\ninformation includes sentiment analysis from news reports, court cases,\\nbankruptcy/registration/licensing checks, social media network analysis, global\\nsearches, discreet inquiries to peer agencies etc. Its purpose is to determine with a\\nhigh level of confidence that the vendors are who they say they are.\\nLevel 3: Where additional risk is identified, retention of an external corporate\\nintelligence firm to perform background checks on the vendor.\\nCash distribution controls\\nThe NPO’s priority for cash distribution services is to use established banking\\nfacilities for transferring funds. In those locations where informal money transfer\\nsystems remains the only viable means for the NPO to operate, the organisation has\\ndeveloped specific processes for risk identification and mitig\"}], \"sop_excerpts\": [{\"sop_id\": \"SOP-LAYERING-01\", \"section\": \"Investigation Steps\", \"text\": \"1. Pull all wire and ACH transactions for the entity in the prior 90 days.\\n2. Detect cycles (A→B→C→A) and peel chains (descending amounts hop-by-hop) in the counterparty graph.\\n3. Compute total volume into/out of cycle members; compare to declared volume.\\n4. Identify high-risk jurisdiction nexus (FATF blacklist, sanctioned corridors).\\n5. Escalate to SAR review if cycle exists or peel-chain >3 hops with ≥3% trim.\"}], \"auxiliary_findings\": {\"statutory\": [{\"question\": \"Does the conduct described fall within 5318(g)?\", \"answer\": \"Yes, the described transactions constitute suspicious activity subject to the reporting requirement of 31 U.S.C. § 5318(g).\", \"label\": \"entailment\", \"reasoning\": \"The transactions exhibit patterns (large, rapid transfers to a newly added payee) that trigger the suspicious activity reporting obligations under 31 U.S.C. § 5318(g).\"}], \"behavioral\": [{\"question\": \"Provide a behavioral summary with the metrics described in the schema.\", \"summary\": \"The entity executed 4 transactions (tx_count: 4) totaling $69666.77 (tx_total_usd: 69666.77), with a channel mix of 1.0 wire, 0.0 ach, and 0.0 cash (channel_mix: {\\\"wire\\\": 1.0, \\\"ach\\\": 0.0, \\\"cash\\\": 0.0}). Its peak 24‑hour velocity was 1 (velocity_24h_max: 1) and the 30‑day average daily velocity was 0.1333 (velocity_24h_avg_30d: 0.1333), while unique counterparties in the last 7 days were 1 (unique_counterparties_7d: 1) and the highest amount‑z‑score was 0.97 (amount_z_score_max: 0.97). The maximum country risk score is 0.5 (country_risk_max: 0.5), a loop pattern was detected (loop_detected: true), and the observed‑to‑declared volume ratio is 68.44 (vs_declared_volume_ratio: 68.44).\", \"metrics\": {\"tx_count\": 4, \"tx_total_usd\": 69666.77, \"channel_mix\": {\"wire\": 1.0, \"ach\": 0.0, \"cash\": 0.0}, \"velocity_24h_max\": 1, \"velocity_24h_avg_30d\": 0.1333, \"unique_counterparties_7d\": 1, \"amount_z_score_max\": 0.97, \"country_risk_max\": 0.5, \"loop_detected\": true, \"vs_declared_volume_ratio\": 68.44}, \"evidence\": \"transactions[0..3]\"}], \"numeric\": [{\"question\": \"Compute the total volume passing through any detected cycle; compare to KYC declared monthly volume.\", \"answer\": \"$69,666.77, about 68.4x declared\", \"calculation\": \"1. Extract transaction amounts: 2719.74, 8728.33, 30790.01, 27428.69.\\n2. Sum the amounts: 2719.74 + 8728.33 + 30790.01 + 27428.69 = 69666.77.\\n3. Retrieve KYC declared monthly volume: 1018.0.\\n4. Compute ratio: 69666.77 / 1018.0 ≈ 68.44 (≈68.4x).\", \"evidence\": \"Transaction rows with amounts 2719.74, 8728.33, 30790.01, 27428.69; KYC field expected_monthly_volume = 1018.0\"}], \"citation\": [{\"question\": \"What does pdfs/20140220 say about the activity described?\", \"answer\": \"The passage states that virtual currency activity is certainly worthy of FinCEN’s attention.\", \"evidence_span\": \"is certainly worthy of FinCEN’s attention.\"}]}, \"_regulatory_frame\": \"layering_passthrough\", \"_typology_inferred\": \"layering\"}",
+  "sar_raw_text": "We need to output JSON with is_suspicious boolean and suspicious_activity_report string. Since is_suspicious likely true given layering typology and high ratio. Must produce narrative 250-800 characters, grounded, citing metrics from auxiliary_findings.behavioral.metrics verbatim, and referencing regulatory framing layering_passthrough. Must not invent figures. Must use only data present. Must end with a complete sentence and refer matter to human investigator.\n\nWe need to craft narrative 250-800 characters. Let's compute length roughly. Aim ~400 characters.\n\nWe must include evidence: mention transactions amounts, dates, counterparty, channel wire, newly added payee. Must cite metrics: \"tx_count: 4\", \"tx_total_usd: 69666.77\", \"channel_mix: {\\\"wire\\\": 1.0, \\\"ach\\\": 0.0, \\\"cash\\\": 0.0}\", \"velocity_24h_max: 1\", \"velocity_24h_avg_30d: 0.1333\", \"unique_counterparties_7d: 1\", \"amount_z_score_max: 0.97\", \"country_risk_max: 0.5\", \"loop_detected: true\", \"vs_declared_volume_ratio: 68.44\". Must use verbatim from metrics. Also mention loop_detected true maybe.\n\nWe must reference regulatory framing layering_passthrough and use terms \"layering\", \"pass-through\", \"rapid movement\", \"circular flow\". Not mention $10k CTR threshold. Not cite 31 USC 5324(a). Must be consistent.\n\nWe must end with a sentence referring to human investigator, e.g., \"The case should be referred to a senior AML analyst for further review.\" That's a complete sentence.\n\nWe must ensure narrative length 250-800 characters. Let's draft ~450 characters.\n\nDraft:\n\n\"Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review.\"\n\nNow count characters. Let's count roughly.\n\nI'll count characters including spaces.\n\nString:\n\n\"Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review.\"\n\nLet's count approximate characters. Use rough estimate: each word ~5 chars plus spaces. But better to count precisely? Let's approximate length: It's probably around 400-450 characters. Should be within 250-800. Likely okay.\n\nWe must ensure we didn't add any invented metric values. All values are from auxiliary_findings.behavioral.metrics, which includes those exact keys and values. We used them verbatim. Good.\n\nWe must ensure we didn't add any extra claims not grounded. We said \"indicating rapid, circular movement consistent with layering pass‑through.\" That's allowed as interpretation but must be grounded: we are citing loop_detected true and high ratio, which suggests layering. That's okay.\n\nWe must not mention any policy_excerpts or sanctions. Not needed.\n\nWe must output JSON with is_suspicious true and suspicious_activity_report as the narrative string.\n\nMake sure no extra whitespace, no markdown.\n\nThus final output:\n\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review.\"\n}\n\nCheck length of narrative: Let's count characters more precisely.\n\nI'll count manually:\n\n\"Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review.\"\n\nCount characters including spaces. Let's approximate using a quick method: I'll copy into a counting tool mentally? Let's approximate: It's likely around 420-460 characters. Should be fine.\n\nMake sure we didn't exceed 800 characters. It's okay.\n\nNow produce final JSON.\n</think>\n{\n  \"is_suspicious\": true,\n  \"suspicious_activity_report\": \"Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review.\"\n}",
+  "sar_output": {
+    "is_suspicious": true,
+    "suspicious_activity_report": "Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review."
+  },
+  "sar_parse_error": null,
+  "sar_is_suspicious": true,
+  "sar_narrative": "Four wire transfers to a newly‑added payee total $69,666.77, representing tx_count: 4 and tx_total_usd: 69666.77; channel_mix shows 1.0 wire, 0.0 ach, 0.0 cash. Velocity spikes to velocity_24h_max: 1 with a 30‑day average of 0.1333, unique_counterparties_7d: 1, amount_z_score_max: 0.97, country_risk_max: 0.5, loop_detected: true, and vs_declared_volume_ratio: 68.44, indicating rapid, circular movement consistent with layering pass‑through. The pattern warrants a SAR; the matter should be referred to a senior AML analyst for further review.",
+  "judge_enabled": false,
+  "error": null
+}
