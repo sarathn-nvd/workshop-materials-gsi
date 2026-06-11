@@ -1,0 +1,74 @@
+# Single-GPU DPO recipe (workshop). Mirrors 4.sdg_rl/dpo_run production override.
+# Inherits defaults from the container base config (production inherits the 30B MoE recipe).
+defaults: /opt/nemo-rl/examples/configs/dpo.yaml
+
+policy:
+  model_name: Qwen/Qwen2.5-0.5B
+  tokenizer:
+    name: Qwen/Qwen2.5-0.5B
+  train_global_batch_size: 2
+  train_micro_batch_size: 1
+  max_total_sequence_length: 2048
+  dtensor_cfg:
+    activation_checkpointing: true
+    tensor_parallel_size: 1
+    env_vars:
+      PYTORCH_CUDA_ALLOC_CONF: expandable_segments:True
+  automodel_kwargs:
+    trust_remote_code: true
+    force_hf: true
+
+data:
+  max_input_seq_length: 2048
+  shuffle: true
+  num_workers: 0
+  train:
+    data_path: /workspace/data/dpo_train.jsonl
+    dataset_name: PreferenceDataset
+  validation:
+    data_path: /workspace/data/dpo_val.jsonl
+    dataset_name: PreferenceDataset
+  default:
+    dataset_name: PreferenceDataset
+    prompt_file: null
+    system_prompt_file: null
+  val_data_paths:
+    workshop: /workspace/data/dpo_val.jsonl
+
+dpo:
+  max_num_epochs: 1
+  max_num_steps: 20
+  val_period: 10
+  val_at_start: true
+  val_at_end: true
+  val_batches: 4
+  val_global_batch_size: 4
+  val_micro_batch_size: 1
+  reference_policy_kl_penalty: 0.05
+  preference_loss_weight: 1
+  sft_loss_weight: 0
+  preference_average_log_probs: false
+  sft_average_log_probs: false
+  seed: 42
+
+checkpointing:
+  enabled: true
+  checkpoint_dir: /workspace/work/dpo_checkpoints
+  save_period: 10
+  keep_top_k: 2
+  save_optimizer: true
+  higher_is_better: false
+  metric_name: "val:validation-workshop_loss"
+
+logger:
+  log_dir: /workspace/work/dpo_logs
+  monitor_gpus: true
+  num_val_samples_to_print: 1
+  tensorboard_enabled: false
+  wandb_enabled: false
+  mlflow_enabled: false
+  swanlab_enabled: false
+
+cluster:
+  num_nodes: 1
+  gpus_per_node: 1

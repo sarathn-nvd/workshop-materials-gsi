@@ -1,0 +1,24 @@
+# Per-notebook uv envs (recreated by notebook_env.py)
+**/.venv/
+
+# Training / curation outputs (written to /data/workshop/... at runtime)
+**/work/
+
+# Jupyter autosave
+**/.ipynb_checkpoints/
+
+# Python
+**/__pycache__/
+*.py[cod]
+
+# Eval run artifacts
+**/eval_results/
+
+# Logs and OS junk
+*.log
+.DS_Store
+._*
+
+# Secrets — never commit
+.env
+.env.*

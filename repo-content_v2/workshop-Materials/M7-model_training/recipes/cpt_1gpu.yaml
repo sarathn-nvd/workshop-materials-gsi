@@ -1,0 +1,104 @@
+# Single-GPU CPT recipe (workshop). Mirrors gsi-training/3.cpt/2.run_cpt/run-v2
+# scaled to 1 GPU + a small dense Nemotron. Driven by recipes/pretrain.py.
+model:
+  _target_: nemo_automodel.NeMoAutoModelForCausalLM.from_pretrained
+  pretrained_model_name_or_path: nvidia/Nemotron-Mini-4B-Instruct
+  trust_remote_code: true
+  torch_dtype: bfloat16
+  # NOTE: no `use_mamba_kernels` -- that flag is only for the Mamba-hybrid
+  # Nemotron-H (30B production model); a dense NemotronForCausalLM rejects it.
+  # backend:
+  #   _target_: nemo_automodel.components.models.common.BackendConfig
+  #   linear: te
+  #   rms_norm: torch_fp32
+  #   enable_hf_state_dict_adapter: true
+  #   enable_fsdp_optimizations: true
+
+fp8:
+  enabled: false                  # BF16 so the same recipe runs on A100 (no FP8 HW)
+
+dataset:
+  _target_: nemo_automodel.components.datasets.llm.megatron_dataset.MegatronPretraining
+  paths:
+    - /workspace/work/cpt_data/native_processed_data_text_document
+  index_mapping_dir: /workspace/work/cpt_mapping
+  tokenizer:
+    _target_: transformers.AutoTokenizer.from_pretrained
+    pretrained_model_name_or_path: nvidia/Nemotron-Mini-4B-Instruct
+    trust_remote_code: true
+  seq_length: 1024
+  split: "0.9, 0.1, 0.0"
+  splits_to_build: "train"
+
+validation_dataset:
+  _target_: nemo_automodel.components.datasets.llm.megatron_dataset.MegatronPretraining
+  paths:
+    - /workspace/work/cpt_data/native_processed_data_text_document
+  index_mapping_dir: /workspace/work/cpt_mapping
+  tokenizer:
+    _target_: transformers.AutoTokenizer.from_pretrained
+    pretrained_model_name_or_path: nvidia/Nemotron-Mini-4B-Instruct
+    trust_remote_code: true
+  seq_length: 1024
+  split: "0.9, 0.1, 0.0"
+  splits_to_build: "validation"
+  num_val_samples: 32
+
+step_scheduler:
+  global_batch_size: 4            # effective batch (grad-accum = GBS / (LBS * dp))
+  local_batch_size: 1
+  ckpt_every_steps: 20
+  val_every_steps: 20
+  num_epochs: 1
+  max_steps: 40                   # mini-run; production = thousands
+
+dist_env:
+  backend: nccl
+  timeout_minutes: 30
+
+rng:
+  _target_: nemo_automodel.components.training.rng.StatefulRNG
+  seed: 1111
+  ranked: true
+
+checkpoint:
+  enabled: true
+  checkpoint_dir: /workspace/work/cpt_checkpoints/
+  model_save_format: safetensors
+  save_consolidated: true
+
+distributed:
+  strategy: fsdp2
+  dp_size: 1                      # single GPU (was dp_size: 8)
+  dp_replicate_size: 1
+  tp_size: 1
+  cp_size: 1
+  pp_size: 1
+  activation_checkpointing: true  # memory: recompute activations in backward
+  sequence_parallel: false
+
+loss_fn:
+  _target_: nemo_automodel.components.loss.masked_ce.MaskedCrossEntropy
+
+dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: torch.utils.data.default_collate
+  num_workers: 0
+
+validation_dataloader:
+  _target_: torchdata.stateful_dataloader.StatefulDataLoader
+  collate_fn: torch.utils.data.default_collate
+  num_workers: 0
+
+optimizer:
+  _target_: torch.optim.AdamW
+  betas: [0.9, 0.95]              # pretraining convention (lower beta2)
+  lr: 1.0e-5                      # small LR: nudge, don't overwrite
+  weight_decay: 0.1
+  eps: 1.0e-8
+
+lr_scheduler:
+  lr_decay_style: cosine
+  lr_warmup_steps: 5
+  lr_decay_steps: 40
+  min_lr: 1.0e-6
