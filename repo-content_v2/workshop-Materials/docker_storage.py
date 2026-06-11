@@ -50,6 +50,32 @@ def _sudo(cmd: list[str], *, check: bool = True) -> subprocess.CompletedProcess:
     return _run(["sudo", "-n", *cmd], check=check)
 
 
+def _sudo_path_exists(path: Path) -> bool:
+    """Existence check that works on root-owned paths (e.g. docker data-root)."""
+    return _sudo(["test", "-e", str(path)], check=False).returncode == 0
+
+
+def _sudo_dir_nonempty(path: Path) -> bool:
+    return (
+        _sudo(
+            ["find", str(path), "-mindepth", "1", "-print", "-quit"],
+            check=False,
+        ).returncode
+        == 0
+    )
+
+
+def _target_has_docker_data(target: Path) -> bool:
+    """True when target already holds docker storage (marker or daemon layout)."""
+    marker = target / ".migration_complete"
+    if _sudo_path_exists(marker) and _sudo_dir_nonempty(target):
+        return True
+    return any(
+        _sudo_path_exists(target / name)
+        for name in ("overlay2", "containers", "image")
+    )
+
+
 def _disk_stats(path: Path) -> dict:
     usage = shutil.disk_usage(path)
     return {
@@ -106,7 +132,8 @@ def _start_docker() -> None:
 def _set_daemon_data_root(data_root: Path) -> None:
     cfg = _read_daemon_config()
     cfg["data-root"] = str(data_root)
-    tmp = DAEMON_JSON.with_suffix(".json.tmp")
+    tmp = CACHE_ROOT / "tmp" / "daemon.json.tmp"
+    tmp.parent.mkdir(parents=True, exist_ok=True)
     tmp.write_text(json.dumps(cfg, indent=4) + "\n")
     _sudo(["cp", str(tmp), str(DAEMON_JSON)])
     tmp.unlink(missing_ok=True)
@@ -120,8 +147,10 @@ def _migrate_docker_data(target: Path) -> None:
         return
 
     marker = target / ".migration_complete"
-    if marker.exists() and any(target.iterdir()):
+    if _target_has_docker_data(target):
         _LOG.info("docker data already present at %s", target)
+        if not _sudo_path_exists(marker):
+            _sudo(["touch", str(marker)])
     else:
         _LOG.info("migrating %s -> %s (rsync) ...", LEGACY_DOCKER_ROOT, target)
         _sudo(
@@ -132,7 +161,7 @@ def _migrate_docker_data(target: Path) -> None:
                 f"{target}/",
             ]
         )
-        marker.touch()
+        _sudo(["touch", str(marker)])
         _LOG.info("rsync complete")
 
     backup = LEGACY_DOCKER_ROOT.with_suffix(".docker.bak")
