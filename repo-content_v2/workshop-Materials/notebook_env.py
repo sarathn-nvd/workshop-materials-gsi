@@ -51,11 +51,58 @@ def _uv() -> str:
     return uv
 
 
+def _python_version(py: Path) -> tuple[int, int]:
+    cp = subprocess.run(
+        [
+            str(py),
+            "-c",
+            "import sys; print(sys.version_info.major, sys.version_info.minor)",
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    major, minor = cp.stdout.split()
+    return int(major), int(minor)
+
+
+def _venv_site_packages(venv_dir: Path) -> Path | None:
+    """Return the venv site-packages dir (kernel Python version may differ)."""
+    lib = venv_dir / "lib"
+    if not lib.is_dir():
+        return None
+    for site in sorted(lib.glob("python*/site-packages")):
+        if site.is_dir():
+            return site
+    return None
+
+
+def _wire_venv_site(venv_dir: Path) -> None:
+    site = _venv_site_packages(venv_dir)
+    if site is None:
+        return
+    site_str = str(site)
+    if site_str not in sys.path:
+        sys.path.insert(0, site_str)
+
+
 def bootstrap_notebook_env(nb_dir: Path | None = None) -> Path:
     """Create or reuse a notebook-local ``.venv`` and wire it into this kernel."""
     nb_dir = (nb_dir or Path.cwd()).resolve()
     venv_dir = nb_dir / ".venv"
     py = venv_dir / "bin" / "python"
+    kernel_ver = (sys.version_info.major, sys.version_info.minor)
+
+    if py.exists():
+        venv_ver = _python_version(py)
+        if venv_ver != kernel_ver:
+            print(
+                f"recreating venv: Jupyter kernel is Python {kernel_ver[0]}."
+                f"{kernel_ver[1]} but {venv_dir.name}/ is Python {venv_ver[0]}."
+                f"{venv_ver[1]}"
+            )
+            shutil.rmtree(venv_dir)
+            py = venv_dir / "bin" / "python"
 
     if not py.exists():
         print(f"creating uv venv: {venv_dir}")
@@ -65,21 +112,12 @@ def bootstrap_notebook_env(nb_dir: Path | None = None) -> Path:
                 "venv",
                 str(venv_dir),
                 "--python",
-                f"{sys.version_info.major}.{sys.version_info.minor}",
+                f"{kernel_ver[0]}.{kernel_ver[1]}",
                 "--allow-existing",
             ]
         )
 
-    site = (
-        venv_dir
-        / "lib"
-        / f"python{sys.version_info.major}.{sys.version_info.minor}"
-        / "site-packages"
-    )
-    if site.is_dir():
-        site_str = str(site)
-        if site_str not in sys.path:
-            sys.path.insert(0, site_str)
+    _wire_venv_site(venv_dir)
 
     bin_dir = str(venv_dir / "bin")
     path_parts = os.environ.get("PATH", "").split(":")
@@ -127,3 +165,4 @@ def ensure(
         cmd.append("-q")
     subprocess.check_call(cmd)
     importlib.invalidate_caches()
+    _wire_venv_site(Path(os.environ.get("VIRTUAL_ENV", Path(sys.executable).resolve().parent.parent)))

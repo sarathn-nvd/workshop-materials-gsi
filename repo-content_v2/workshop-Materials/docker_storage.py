@@ -179,6 +179,7 @@ def _ensure_user_caches() -> None:
         "UV_CACHE_DIR": CACHE_ROOT / "uv",
         "HF_HOME": CACHE_ROOT / "hf",
         "XDG_CACHE_HOME": CACHE_ROOT / "xdg",
+        "LOCAL_NIM_CACHE": CACHE_ROOT / "nim",
     }
     for name, path in dirs.items():
         path.mkdir(parents=True, exist_ok=True)
@@ -253,6 +254,50 @@ def workshop_work_dir(module_name: str) -> Path:
     work_dir = DEFAULT_WORK_ROOT / module_name / "work"
     work_dir.mkdir(parents=True, exist_ok=True)
     return work_dir
+
+
+def workshop_module_name(nb_dir: Path | None = None) -> str:
+    """Notebook folder name, e.g. ``M7-model_training``."""
+    return (nb_dir or Path.cwd()).resolve().name
+
+
+def workshop_nim_cache_dir() -> Path:
+    """Host path for NIM container cache bind-mounts."""
+    path = CACHE_ROOT / "nim"
+    path.mkdir(parents=True, exist_ok=True)
+    os.environ["LOCAL_NIM_CACHE"] = str(path)
+    return path
+
+
+def legacy_work_dir(nb_dir: Path) -> Path:
+    """Repo-local ``work/`` kept for read-only fallback after migration."""
+    return nb_dir.resolve() / "work"
+
+
+def setup_workshop_paths(
+    nb_dir: Path | None = None,
+    *,
+    module_name: str | None = None,
+    min_free_gb: float = 20.0,
+) -> tuple[Path, Path]:
+    """Ensure ``/data`` storage and return ``(notebook_dir, work_dir)``."""
+    ensure_docker_storage(min_free_gb=min_free_gb)
+    nb_dir = (nb_dir or Path.cwd()).resolve()
+    work_dir = workshop_work_dir(module_name or workshop_module_name(nb_dir))
+    workshop_nim_cache_dir()
+    return nb_dir, work_dir
+
+
+def glob_work_paths(
+    work_dir: Path,
+    nb_dir: Path,
+    pattern: str,
+) -> list[Path]:
+    """Glob on ``/data`` work dir, then fall back to legacy repo ``work/``."""
+    hits = sorted(work_dir.glob(pattern))
+    if hits:
+        return hits
+    return sorted(legacy_work_dir(nb_dir).glob(pattern))
 
 
 def docker_workspace_volumes(nb_dir: Path, work_dir: Path) -> list[str]:
