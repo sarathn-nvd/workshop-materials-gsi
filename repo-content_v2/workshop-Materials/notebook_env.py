@@ -14,6 +14,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from docker_storage import workshop_cache_root, workshop_storage_root
+
 
 _UV_INSTALL_CMD = "curl -LsSf https://astral.sh/uv/install.sh | sh"
 _UV_BIN_DIRS = (
@@ -86,8 +88,25 @@ def _wire_venv_site(venv_dir: Path) -> None:
         sys.path.insert(0, site_str)
 
 
+def _ensure_workshop_caches() -> None:
+    """Route uv/pip temp files through the spacious volume when available."""
+    cache = workshop_cache_root()
+    for name, sub in (
+        ("TMPDIR", "tmp"),
+        ("PIP_CACHE_DIR", "pip"),
+        ("UV_CACHE_DIR", "uv"),
+        ("HF_HOME", "hf"),
+        ("XDG_CACHE_HOME", "xdg"),
+    ):
+        path = cache / sub
+        path.mkdir(parents=True, exist_ok=True)
+        os.environ.setdefault(name, str(path))
+
+
 def bootstrap_notebook_env(nb_dir: Path | None = None) -> Path:
     """Create or reuse a notebook-local ``.venv`` and wire it into this kernel."""
+    _ensure_workshop_caches()
+    storage = workshop_storage_root()
     nb_dir = (nb_dir or Path.cwd()).resolve()
     venv_dir = nb_dir / ".venv"
     py = venv_dir / "bin" / "python"
@@ -126,7 +145,7 @@ def bootstrap_notebook_env(nb_dir: Path | None = None) -> Path:
 
     sys.executable = str(py)
     os.environ["VIRTUAL_ENV"] = str(venv_dir)
-    print(f"notebook env: {venv_dir} (python {py})")
+    print(f"notebook env: {venv_dir} (python {py}, storage {storage})")
     return py
 
 
