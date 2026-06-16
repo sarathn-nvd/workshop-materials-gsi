@@ -431,6 +431,16 @@ def glob_work_paths(
     return sorted(legacy_work_dir(nb_dir).glob(pattern))
 
 
+def docker_passwd_workaround_env() -> list[str]:
+    """`-e` flags so PyTorch works when ``docker run -u <host-uid>`` has no /etc/passwd entry."""
+    return [
+        "-e",
+        "USER=workshop",
+        "-e",
+        "TORCHINDUCTOR_CACHE_DIR=/tmp/torchinductor",
+    ]
+
+
 def docker_workspace_volumes(nb_dir: Path, work_dir: Path) -> list[str]:
     """Split bind-mounts: small inputs from notebook dir, large outputs on spacious volume."""
     nb_dir = nb_dir.resolve()
