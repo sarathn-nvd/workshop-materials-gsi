@@ -1,0 +1,30 @@
+Frontend:
+ 
+# 1. Download and import the NodeSource setup script for Node.js 20.x
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+ 
+# 2. Install Node.js (this automatically installs npm as well)
+sudo apt-get install -y nodejs
+systemctl restart networkd-dispatcher.service
+node -v
+npm -v
+ 
+cd ~/workshop-materials-gsi/repo-content_v2/aml-appln/10.appln_buildout/frontend
+npm install
+ 
+Change port to 9111 in ~/workshop-materials-gsi/repo-content_v2/aml-appln/10.appln_buildout/frontend/next.config.mjs
+npm run dev
+ 
+ 
+ 
+ 
+Backend:
+ 
+sudo apt install dos2unix
+cd ~/workshop-materials-gsi/repo-content_v2/aml-appln/10.appln_buildout/backend
+dos2unix launch_nat_e2e.sh
+python -m venv env
+source env/bin/activate
+pip install -e ./src/
+chmod +x launch_nat_e2e.sh
+./launch_nat_e2e.sh
